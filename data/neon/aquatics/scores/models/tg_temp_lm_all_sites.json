@@ -1,0 +1,102 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [],
+  "type": "Feature",
+  "id": "tg_temp_lm_all_sites",
+  "bbox": [
+    -156.6194,
+    17.9696,
+    -66.7987,
+    71.2824
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -156.6194,
+          17.9696
+        ],
+        [
+          -66.7987,
+          17.9696
+        ],
+        [
+          -66.7987,
+          71.2824
+        ],
+        [
+          -156.6194,
+          71.2824
+        ],
+        [
+          -156.6194,
+          17.9696
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "description": "# A linear relationship between air temperature and the variable of interest. Calculated collectively across all sites, with an additive factor for site ID\n\nSites: ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, TOOK",
+    "start_datetime": "2023-01-25",
+    "end_datetime": "2023-08-01",
+    "providers": [
+      {
+        "url": "aslewis@vt.edu",
+        "name": "Abby Lewis",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ]
+      },
+      {
+        "url": "https://ecoforecast.org",
+        "name": "Ecoforecast Challenge",
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "license": "CC0-1.0",
+    "keywords": [
+      "Forecasting",
+      "oxygen, temperature, chla"
+    ]
+  },
+  "collection": "scores",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Aquatics Scores"
+    },
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "EFI Forecast Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Aquatics Scores"
+    },
+    {
+      "rel": "self",
+      "href": "tg_temp_lm_all_sites.json",
+      "type": "application/json",
+      "title": "Model Scores"
+    }
+  ],
+  "assets": {
+    "parquet_items": {
+      "href": "s3://anonymous@bio230014-bucket01/neon4cast-forecasts/parquet/aquatics/model_id=tg_temp_lm_all_sites?endpoint_override=sdsc.osn.xsede.org",
+      "type": "application/x-parquet",
+      "title": "Database Access",
+      "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copy URL from \"URL for Amazon S3\" button above and save as object named \"url_for_s3\" \n# Use in code below\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
+    }
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "EFI_avg_null",
+  "bbox": [
+    -156.6194,
+    17.9696,
+    -66.7987,
+    71.2824
+  ],
+  "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+      [-122.3303, 45.7624],
+      [-156.6194, 71.2824],
+      [-71.2874, 44.0639],
+      [-78.0418, 39.0337],
+      [-147.5026, 65.154],
+      [-97.57, 33.4012],
+      [-104.7456, 40.8155],
+      [-99.1066, 47.1617],
+      [-145.7514, 63.8811],
+      [-87.8039, 32.5417],
+      [-81.4362, 28.1251],
+      [-83.5019, 35.689],
+      [-66.8687, 17.9696],
+      [-72.1727, 42.5369],
+      [-149.2133, 63.8758],
+      [-84.4686, 31.1948],
+      [-106.8425, 32.5907],
+      [-96.6129, 39.1104],
+      [-96.5631, 39.1008],
+      [-67.0769, 18.0213],
+      [-88.1612, 31.8539],
+      [-80.5248, 37.3783],
+      [-109.3883, 38.2483],
+      [-105.5824, 40.0543],
+      [-100.9154, 46.7697],
+      [-99.0588, 35.4106],
+      [-112.4524, 40.1776],
+      [-84.2826, 35.9641],
+      [-81.9934, 29.6893],
+      [-155.3173, 19.5531],
+      [-105.546, 40.2759],
+      [-78.1395, 38.8929],
+      [-76.56, 38.8901],
+      [-119.7323, 37.1088],
+      [-119.2622, 37.0334],
+      [-110.8355, 31.9107],
+      [-89.5864, 45.5089],
+      [-103.0293, 40.4619],
+      [-87.3933, 32.9505],
+      [-119.006, 37.0058],
+      [-149.3705, 68.6611],
+      [-89.5857, 45.4937],
+      [-95.1921, 39.0404],
+      [-89.5373, 46.2339],
+      [-99.2413, 47.1282],
+      [-121.9519, 45.8205],
+      [-110.5391, 44.9535]
+    ]
+  },
+  "properties": {
+    "description": "\nmodel info: pending\n\nSites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL\n\nVariables: abundance, richness",
+    "start_datetime": "2020-01-06",
+    "end_datetime": "2020-12-21",
+    "providers": [
+      {
+        "url": "pending",
+        "name": "pending",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ]
+      },
+      {
+        "url": "https://ecoforecast.org",
+        "name": "Ecoforecast Challenge",
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "license": "CC0-1.0",
+    "keywords": [
+      "Forecasting",
+      "NEON",
+      "abundance",
+      "richness"
+    ],
+    "table:columns": [
+      {
+        "name": "target_id",
+        "type": "string",
+        "description": {}
+      },
+      {
+        "name": "datetime",
+        "type": "timestamp[us]",
+        "description": "ISO 8601(ISO 2019)datetime the forecast starts from (a.k.a. issue time); Only needed if more than one reference_datetime is stored in a single file. Forecast lead time is thus datetime-reference_datetime. In a hindcast the reference_datetime will be earlier than the time the hindcast was actually produced (see pubDate in Section3). Date times are allowed to be earlier than the reference_datetime if a reanalysis/reforecast is run before the start of the forecast period. This variable was called start_time before v0.5 of the EFI standard."
+      },
+      {
+        "name": "parameter",
+        "type": "string",
+        "description": "ensemble member"
+      },
+      {
+        "name": "variable",
+        "type": "string",
+        "description": "forecast variable"
+      },
+      {
+        "name": "prediction",
+        "type": "double",
+        "description": "predicted forecast value"
+      },
+      {
+        "name": "family",
+        "type": "string",
+        "description": "For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as avariable attribute if the file format being used supports this (e.g.,netCDF)."
+      },
+      {
+        "name": "site_id",
+        "type": "string",
+        "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model."
+      },
+      {
+        "name": "model_id",
+        "type": "string",
+        "description": {}
+      },
+      {
+        "name": "date",
+        "type": "string",
+        "description": "ISO 8601 (ISO 2019) datetime being predicted; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5 of the EFI convention. For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
+      }
+    ]
+  },
+  "collection": "forecasts",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Forecasts"
+    },
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "EFI Forecast Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Forecasts"
+    },
+    {
+      "rel": "self",
+      "href": "EFI_avg_null.json",
+      "type": "application/json",
+      "title": "Model Forecast"
+    }
+  ],
+  "assets": {
+    "1": {
+      "href": "s3://anonymous@bio230014-bucket01/neon4cast-forecasts/parquet/beetles/model_id=EFI_avg_null?endpoint_override=sdsc.osn.xsede.org",
+      "type": "application/x-parquet",
+      "title": "Database Access",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this model within the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(s3://anonymous@bio230014-bucket01/neon4cast-forecasts/parquet/beetles/model_id=EFI_avg_null?endpoint_override=sdsc.osn.xsede.org)\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+    },
+    "2": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/ABBY/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for ABBY",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "3": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/BARR/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BARR",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "4": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/BART/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BART",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "5": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/BLAN/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BLAN",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "6": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/BONA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BONA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "7": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/CLBJ/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for CLBJ",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "8": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/CPER/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for CPER",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "9": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/DCFS/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for DCFS",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "10": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/DEJU/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for DEJU",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "11": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/DELA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for DELA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "12": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/DSNY/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for DSNY",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "13": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/GRSM/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for GRSM",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "14": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/GUAN/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for GUAN",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "15": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/HARV/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for HARV",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "16": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/HEAL/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for HEAL",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "17": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/JERC/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for JERC",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "18": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/JORN/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for JORN",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "19": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/KONA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for KONA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "20": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/KONZ/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for KONZ",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "21": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/LAJA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for LAJA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "22": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/LENO/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for LENO",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "23": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/MLBS/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for MLBS",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "24": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/MOAB/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for MOAB",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "25": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/NIWO/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for NIWO",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "26": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/NOGP/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for NOGP",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "27": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/OAES/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for OAES",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "28": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/ONAQ/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for ONAQ",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "29": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/ORNL/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for ORNL",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "30": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/OSBS/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for OSBS",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "31": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/PUUM/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for PUUM",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "32": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/RMNP/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for RMNP",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "33": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/SCBI/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SCBI",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "34": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/SERC/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SERC",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "35": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/SJER/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SJER",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "36": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/SOAP/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SOAP",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "37": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/SRER/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SRER",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "38": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/STEI/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for STEI",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "39": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/STER/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for STER",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "40": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/TALL/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TALL",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "41": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/TEAK/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TEAK",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "42": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/TOOL/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TOOL",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "43": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/TREE/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TREE",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "44": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/UKFS/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for UKFS",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "45": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/UNDE/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for UNDE",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "46": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/WOOD/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for WOOD",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "47": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/WREF/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for WREF",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "48": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/beetles/EFI_avg_null/YELL/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for YELL",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  }
+}

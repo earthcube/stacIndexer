@@ -1,0 +1,467 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "tg_arima",
+  "bbox": [
+    -156.6194,
+    17.9696,
+    -66.7987,
+    71.2824
+  ],
+  "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+      [-102.4471, 39.7582],
+      [-82.0084, 29.676],
+      [-119.2575, 37.0597],
+      [-110.5871, 44.9501],
+      [-96.6242, 34.4442],
+      [-87.7982, 32.5415],
+      [-147.504, 65.1532],
+      [-105.5442, 40.035],
+      [-89.4737, 46.2097],
+      [-66.9868, 18.1135],
+      [-84.4374, 31.1854],
+      [-66.7987, 18.1741],
+      [-72.3295, 42.4719],
+      [-96.6038, 39.1051],
+      [-83.5038, 35.6904],
+      [-77.9832, 39.0956],
+      [-89.7048, 45.9983],
+      [-121.9338, 45.7908],
+      [-87.4077, 32.9604],
+      [-96.443, 38.9459],
+      [-122.1655, 44.2596],
+      [-149.143, 68.6698],
+      [-78.1473, 38.8943],
+      [-97.7823, 33.3785],
+      [-99.1139, 47.1591],
+      [-99.2531, 47.1298],
+      [-111.7979, 40.7839],
+      [-82.0177, 29.6878],
+      [-111.5081, 33.751],
+      [-119.0274, 36.9559],
+      [-88.1589, 31.8534],
+      [-149.6106, 68.6307],
+      [-84.2793, 35.9574],
+      [-105.9154, 39.8914]
+    ]
+  },
+  "properties": {
+    "description": "\nmodel info: Auto.arima() function for each variable\n\nSites: ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU\n\nVariables: chla, oxygen, temperature",
+    "start_datetime": "2021-12-18",
+    "end_datetime": "2023-09-08",
+    "providers": [
+      {
+        "url": "aslewis@vt.edu",
+        "name": "Abigail Lewis",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ]
+      },
+      {
+        "url": "https://ecoforecast.org",
+        "name": "Ecoforecast Challenge",
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "license": "CC0-1.0",
+    "keywords": [
+      "Forecasting",
+      "NEON",
+      "chla",
+      "oxygen",
+      "temperature"
+    ],
+    "table:columns": [
+      {
+        "name": "datetime",
+        "type": "timestamp[us, tz=UTC]",
+        "description": "ISO 8601(ISO 2019)datetime the forecast starts from (a.k.a. issue time); Only needed if more than one reference_datetime is stored in a single file. Forecast lead time is thus datetime-reference_datetime. In a hindcast the reference_datetime will be earlier than the time the hindcast was actually produced (see pubDate in Section3). Date times are allowed to be earlier than the reference_datetime if a reanalysis/reforecast is run before the start of the forecast period. This variable was called start_time before v0.5 of the EFI standard."
+      },
+      {
+        "name": "site_id",
+        "type": "string",
+        "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model."
+      },
+      {
+        "name": "family",
+        "type": "string",
+        "description": "For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as avariable attribute if the file format being used supports this (e.g.,netCDF)."
+      },
+      {
+        "name": "parameter",
+        "type": "string",
+        "description": "ensemble member"
+      },
+      {
+        "name": "variable",
+        "type": "string",
+        "description": "aquatic forecast variable"
+      },
+      {
+        "name": "prediction",
+        "type": "double",
+        "description": "predicted forecast value"
+      },
+      {
+        "name": "pubDate",
+        "type": "string",
+        "description": "date of publication"
+      },
+      {
+        "name": "date",
+        "type": "string",
+        "description": "ISO 8601 (ISO 2019) datetime being predicted; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5 of the EFI convention. For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
+      }
+    ]
+  },
+  "collection": "forecasts",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Forecasts"
+    },
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "EFI Forecast Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Forecasts"
+    },
+    {
+      "rel": "self",
+      "href": "tg_arima.json",
+      "type": "application/json",
+      "title": "Model Forecast"
+    }
+  ],
+  "assets": {
+    "1": {
+      "href": "s3://anonymous@bio230014-bucket01/neon4cast-forecasts/parquet/aquatics/model_id=tg_arima?endpoint_override=sdsc.osn.xsede.org",
+      "type": "application/x-parquet",
+      "title": "Database Access",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this model within the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(s3://anonymous@bio230014-bucket01/neon4cast-forecasts/parquet/aquatics/model_id=tg_arima?endpoint_override=sdsc.osn.xsede.org)\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+    },
+    "2": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/ARIK/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for ARIK",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "3": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/BARC/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BARC",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "4": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/BIGC/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BIGC",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "5": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/BLDE/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BLDE",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "6": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/BLUE/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BLUE",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "7": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/BLWA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for BLWA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "8": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/CARI/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for CARI",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "9": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/COMO/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for COMO",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "10": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/CRAM/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for CRAM",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "11": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/CUPE/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for CUPE",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "12": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/FLNT/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for FLNT",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "13": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/GUIL/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for GUIL",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "14": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/HOPB/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for HOPB",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "15": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/KING/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for KING",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "16": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/LECO/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for LECO",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "17": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/LEWI/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for LEWI",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "18": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/LIRO/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for LIRO",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "19": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/MART/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for MART",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "20": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/MAYF/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for MAYF",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "21": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/MCDI/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for MCDI",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "22": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/MCRA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for MCRA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "23": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/OKSR/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for OKSR",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "24": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/POSE/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for POSE",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "25": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/PRIN/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for PRIN",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "26": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/PRLA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for PRLA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "27": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/PRPO/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for PRPO",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "28": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/REDB/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for REDB",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "29": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/SUGG/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SUGG",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "30": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/SYCA/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for SYCA",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "31": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/TECR/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TECR",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "32": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/TOMB/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TOMB",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "33": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/TOOK/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for TOOK",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "34": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/WALK/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for WALK",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "35": {
+      "href": "https://data.ecoforecast.org/neon4cast-catalog/aquatics/tg_arima/WLOU/latest_forecast.png",
+      "type": "image/png",
+      "title": "Latest Results for WLOU",
+      "description": "Image from s3 storage",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  }
+}

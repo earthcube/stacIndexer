@@ -1,0 +1,644 @@
+{
+  "id": "aquatics-scores",
+  "description": "The catalog contains scores for the NEON Ecological Forecasting aquatics theme.  The scores are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). You can access the scores at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the scores catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the scores for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.",
+  "stac_version": "1.0.0",
+  "license": "CC0-1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/Aquaers.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/BBTW.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/BTW.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/EFInull.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_Chloe_precip.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_JRabaey_mod.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_JRabaey_temp_physics.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_Kaelin.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_RW.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_SN.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm_CHL_MS.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm_Cayelan.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm_CayelanTest.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm_DaveRichardson_lag3.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm_Joe_Rabaey_Wind.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_lm_lag_1day.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_physics.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_poly3.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/GLEON_temp_name.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/IW_example.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/IW_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/LSAMP_AWPC.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/Linear_regression.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/MSU_ARIMA.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/Martins_Oxy_Forecast_Test.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/NDWaterTempDO.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/USGSHABs1.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/VT_Aquaers.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/VTaquatics.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/air2waterSat.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/air2waterSat_2.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/baseline_ensemble.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/cb_TCN.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/cb_prophet.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/climatology.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/empirical.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/example_null.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/fARIMA.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/fARIMA_clim_ensemble.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/fTSLM_lag.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/fable_ARIMA.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/fable_TSLM_lagged.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flareGLM.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flareGLM_noDA.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flareGOTM.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flareGOTM_noDA.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flareSimstrat.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flareSimstrat_noDA.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flare_ensemble.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flare_ler.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/flare_ler_baselines.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/humidity_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/humidity_lm_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/neon4cast_example.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/null.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/persistenceRW.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/precip_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/precip_mod.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procBlanchardMonod.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procBlanchardSteele.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procCTMIMonod.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procCTMISteele.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procEppleyNorbergMonod.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procEppleyNorbergSteele.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procHinshelwoodMonod.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/procHinshelwoodSteele.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/temp_ESR13.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/temp_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/temp_lm_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/temp_name.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_arima.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_bag_mlp.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_ets.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_humidity_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_humidity_lm_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_lasso.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_lasso_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_precip_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_precip_lm_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_randfor.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_tbats.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_temp_lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tg_temp_lm_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/tslm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/wbears_gp.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/wbears_rnn.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/wtemp_RW_model.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/wtemp_clim_model.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/wtemp_lm_model.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_parallel.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_temp_oxygen.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_temp_oxygen_chla_parallel.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_temp_oxygen_chla_parallel2.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_temp_oxygen_chla_sequential.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_temp_oxygen_parallel.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/xgboost_temp_oxygen_sequential.json"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../collection.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../collection.json"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "collection.json"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1002/fee.2616"
+    },
+    {
+      "rel": "about",
+      "href": "https://projects.ecoforecast.org/neon4cast-docs/",
+      "type": "text/html",
+      "title": "NEON Ecological Forecasting Challenge Documentation"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://projects.ecoforecast.org/neon4cast-dashboard/",
+      "title": "NEON Ecological Forecast Challenge Dashboard",
+      "type": "text/html"
+    }
+  ],
+  "title": "Scores",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [-149.6106, 29.676, -82.0084, 68.6307]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-08-27T00:00:00Z",
+          "2023-09-12T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "table:columns": [
+    {
+      "name": "reference_datetime",
+      "type": "string",
+      "description": "ISO 8601(ISO 2019) datetime the forecast starts from (a.k.a. issue time); Only needed if more than one reference_datetime is stored in a single file. Forecast lead time is thus datetime-reference_datetime. In a hindcast the reference_date time will be earlier than the time the hindcast was actually produced (see pubDate in Section 3). Datetimes are allowed to be earlier than the reference_datetime if analysis/reforecast is run before the start of the forecast period. This variable was called start_time before v0.5 of the EFI standard."
+    },
+    {
+      "name": "site_id",
+      "type": "string",
+      "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model."
+    },
+    {
+      "name": "datetime",
+      "type": "timestamp[us, tz=UTC]",
+      "description": "ISO 8601(ISO 2019) datetime the forecast starts from (a.k.a. issue time); Only needed if more than one reference_datetime is stored in a single file. Forecast lead time is thus datetime-reference_datetime. In a hindcast the reference_date time will be earlier than the time the hindcast was actually produced (see pubDate in Section 3). Datetimes are allowed to be earlier than the reference_datetime if analysis/reforecast is run before the start of the forecast period. This variable was called start_time before v0.5 of the EFI standard."
+    },
+    {
+      "name": "family",
+      "type": "string",
+      "description": "For ensembles: “ensemble.” Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.” For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
+    },
+    {
+      "name": "variable",
+      "type": "string",
+      "description": "aquatic forecast variable"
+    },
+    {
+      "name": "pubDate",
+      "type": "string",
+      "description": "ISO 8601 (ISO 2019) datetime being predicted; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5of the EFI convention.For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
+    },
+    {
+      "name": "observation",
+      "type": "double",
+      "description": "observational data"
+    },
+    {
+      "name": "crps",
+      "type": "double",
+      "description": "crps forecast score"
+    },
+    {
+      "name": "logs",
+      "type": "double",
+      "description": "logs forecast score"
+    },
+    {
+      "name": "mean",
+      "type": "double",
+      "description": "mean forecast prediction for all ensemble members"
+    },
+    {
+      "name": "median",
+      "type": "double",
+      "description": "median forecast prediction for all ensemble members"
+    },
+    {
+      "name": "sd",
+      "type": "double",
+      "description": "standard deviation of all enemble member forecasts"
+    },
+    {
+      "name": "quantile97.5",
+      "type": "double",
+      "description": "upper 97.5 percentile value of ensemble member forecasts"
+    },
+    {
+      "name": "quantile02.5",
+      "type": "double",
+      "description": "upper 2.5 percentile value of ensemble member forecasts"
+    },
+    {
+      "name": "quantile90",
+      "type": "double",
+      "description": "upper 90 percentile value of ensemble member forecasts"
+    },
+    {
+      "name": "quantile10",
+      "type": "double",
+      "description": "upper 10 percentile value of ensemble member forecasts"
+    },
+    {
+      "name": "date",
+      "type": "string",
+      "description": "ISO 8601 (ISO 2019) datetime being predicted; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5of the EFI convention. For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "s3://anonymous@bio230014-bucket01/neon4cast-scores/parquet/aquatics?endpoint_override=sdsc.osn.xsede.org",
+      "type": "application/x-parquet",
+      "title": "Database Access",
+      "roles": [
+        "data"
+      ],
+      "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(s3://anonymous@bio230014-bucket01/neon4cast-scores/parquet/aquatics?endpoint_override=sdsc.osn.xsede.org)\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+    }
+  }
+}

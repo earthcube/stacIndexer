@@ -1,0 +1,119 @@
+{
+  "id": "efi-beetles",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "child",
+      "type": "application/json",
+      "href": "forecasts/collection.json",
+      "title": "forecast item"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "href": "scores/collection.json",
+      "title": "scores item"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../catalog.json",
+      "title": "parent"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../catalog.json",
+      "title": "root"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "collection.json",
+      "title": "self"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1002/fee.2616",
+      "title": "citation"
+    },
+    {
+      "rel": "about",
+      "href": "https://projects.ecoforecast.org/neon4cast-docs/",
+      "type": "text/html",
+      "title": "NEON Forecast Challenge Documentation"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://projects.ecoforecast.org/neon4cast-dashboard/",
+      "title": "NEON Forecast Challenge Dashboard",
+      "type": "text/html"
+    }
+  ],
+  "title": "Beetles",
+  "assets": {
+    "thumbnail": {
+      "href": "https://www.neonscience.org/sites/default/files/styles/max_width_1170px/public/image-content-images/Beetles_pinned.jpg",
+      "type": "image/JPEG",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Beetle Image"
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -149.6106,
+          18.1135,
+          -66.7987,
+          68.6698
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2019-08-12T00:00:00Z",
+          "2024-08-12T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC0-1.0",
+  "keywords": [
+    "Forecasting",
+    "Data",
+    "Ecology"
+  ],
+  "providers": [
+    {
+      "url": "https://data.ecoforecast.org",
+      "name": "Ecoforecast Data",
+      "roles": [
+        "producer",
+        "processor",
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://ecoforecast.org",
+      "name": "Ecoforecast",
+      "roles": [
+        "host"
+      ]
+    }
+  ],
+  "description": "The catalog contains forecasts and scores for the NEON Ecological Forecasting Beetles theme.  The forecasts are the raw forecasts that include all ensemble members (if a forecast represents uncertainty using an ensemble).  The scores are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). Due to the size of the raw forecasts, we recommend accessing the scores to analyze forecasts (unless you need the individual ensemble members).\nYou can access the forecasts or the scores at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available.  The code to access the entire dataset is provided as an asset in the forecast or scores catalog. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level.  For quicker access to the forecasts and scores for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "publications": {
+    "doi": "https://doi.org/10.1002/fee.2616",
+    "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+  }
+}

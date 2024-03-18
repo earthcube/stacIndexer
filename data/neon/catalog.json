@@ -1,0 +1,56 @@
+{
+  "type": "Catalog",
+  "id": "efi-stac",
+  "title": "Ecological Forecasting Initiative STAC API",
+  "description": "Searchable spatiotemporal metadata describing forecasts by the Ecological Forecasting Initiative",
+  "stac_version": "1.0.0",
+  "conformsTo": "conformsTo",
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "catalog.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Aquatics Forecast Challenge",
+      "href": "aquatics/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "NEON Site Information",
+      "href": "sites/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Phenology Forecast Challenge",
+      "href": "phenology/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Beetles Forecast Challenge",
+      "href": "beetles/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Terrestrial Forecast Challenge (30min)",
+      "href": "terrestrial_30min/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Ticks Forecast Challenge",
+      "href": "ticks/collection.json"
+    }
+  ]
+}

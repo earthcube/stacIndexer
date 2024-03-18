@@ -1,0 +1,14 @@
+Use `arrow` for remote access to the database.
+
+### R
+
+```{r}
+# Copy URL from "URL for Amazon S3" button above and save as object named "url_for_s3" 
+# Use in code below
+
+fcst <- arrow::open_dataset(url_for_s3)
+df <- fcst |> dplyr::collect()
+
+```
+
+Now use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.

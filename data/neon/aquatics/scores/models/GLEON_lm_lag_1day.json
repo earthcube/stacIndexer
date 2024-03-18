@@ -1,0 +1,102 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [],
+  "type": "Feature",
+  "id": "GLEON_lm_lag_1day",
+  "bbox": [
+    -156.6194,
+    17.9696,
+    -66.7987,
+    71.2824
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -156.6194,
+          17.9696
+        ],
+        [
+          -66.7987,
+          17.9696
+        ],
+        [
+          -66.7987,
+          71.2824
+        ],
+        [
+          -156.6194,
+          71.2824
+        ],
+        [
+          -156.6194,
+          17.9696
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "description": "# To predict water temperature, the model uses a multilinear regression with air temperature and water temperature from the previous day.\nwater_temperature(t) ~ air_temperature(t) + water_temperature(t-1)\nFirts, the model is used to fill the gaps until day t0 = last day with air_temperature observation.\nThen we use the last water_temperature observation to predict the first day of water_temperature\nThen we use iterativelly the predictions to forecast the upcoming day.\n\nOxygen concentration is predicted assuming air-water equilibrium only.\n\nSites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK",
+    "start_datetime": "2022-10-30",
+    "end_datetime": "2023-04-14",
+    "providers": [
+      {
+        "url": "camille.minaudo@ub.edu",
+        "name": "Camille Minaudo",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ]
+      },
+      {
+        "url": "https://ecoforecast.org",
+        "name": "Ecoforecast Challenge",
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "license": "CC0-1.0",
+    "keywords": [
+      "Forecasting",
+      "temperature, oxygen"
+    ]
+  },
+  "collection": "scores",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Aquatics Scores"
+    },
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "EFI Forecast Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Aquatics Scores"
+    },
+    {
+      "rel": "self",
+      "href": "GLEON_lm_lag_1day.json",
+      "type": "application/json",
+      "title": "Model Scores"
+    }
+  ],
+  "assets": {
+    "parquet_items": {
+      "href": "s3://anonymous@bio230014-bucket01/neon4cast-forecasts/parquet/aquatics/model_id=GLEON_lm_lag_1day?endpoint_override=sdsc.osn.xsede.org",
+      "type": "application/x-parquet",
+      "title": "Database Access",
+      "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copy URL from \"URL for Amazon S3\" button above and save as object named \"url_for_s3\" \n# Use in code below\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
+    }
+  }
+}
