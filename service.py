@@ -1,12 +1,3 @@
-
-
-
-# "potentialAction": {
-#
-#     "@type": "https://schema.org/Action"
-#
-#   },
-
 # Add in provider as an Org or Person
 
 def offer(url):
