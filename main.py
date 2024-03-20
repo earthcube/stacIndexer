@@ -100,21 +100,24 @@ def save_dict_to_file(root, collection, item, asset):
     varmes = []
 
     if asset["type"] == "application/x-parquet":
-    # if asset["type"] == "image/png":
+        # if asset["type"] == "image/png":
         ext = item.stac_extensions
         if 'https://stac-extensions.github.io/table/v1.2.0/schema.json' in ext:
-            cols = item.ext.table.columns
-            if len(cols) > 0:
-                for col in cols:
-                    col_dc = col.to_dict()
-                    prop = {}
-                    prop["@type"] = "PropertyValue"
-                    prop["name"] = col_dc["name"]
-                    prop["description"] = col_dc["description"]
-                    varmes.append(prop)
-                    # print(col_dc["type"])  # mimetype
-
-            doc["variableMeasured"] = varmes
+            try:
+                cols = item.ext.table.columns
+            except AttributeError:
+                print("'Item' object has no attribute 'ext'. Continuing...")
+            else:
+                if len(cols) > 0:
+                    for col in cols:
+                        col_dc = col.to_dict()
+                        prop = {}
+                        prop["@type"] = "PropertyValue"
+                        prop["name"] = col_dc["name"]
+                        prop["description"] = col_dc["description"]
+                        varmes.append(prop)
+                doc["variableMeasured"] = varmes
+    # Rest of code remains unchanged...
 
     # if asset["type"] == "application/x-parquet":
         # read_parquet(asset["href"])

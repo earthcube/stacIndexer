@@ -1,6 +1,6 @@
 #!/bin/bash
 
-urls=$(curl -L   -H "Accept: application/vnd.github+json"    -H "X-GitHub-Api-Version: 2022-11-28"   https://api.github.com/repos/earthcube/stacIndexer/contents/data/output | jq '.[].download_url'
+urls=$(curl -L   -H "Accept: application/vnd.github+json"    -H "X-GitHub-Api-Version: 2022-11-28"   https://api.github.com/repos/earthcube/stacIndexer/contents/data/snapshot | jq '.[].download_url'
 )
 
   # Create a filename based on the URL (remove special characters)
