@@ -41,6 +41,7 @@ def save_dict_to_file(root, collection, item, asset):
     # ic(root.description)
     #
     # ic(collection.to_dict())
+    # ic(collection.description)
     #
     # ic(item.geometry)
     # ic(item.bbox)
@@ -82,7 +83,7 @@ def save_dict_to_file(root, collection, item, asset):
     doc["@type"] = "Dataset"
     doc["@id"] = "https://example.org/id/{}".format(idshort_hash)
     doc["name"] = root.id
-    doc["description"] = root.description
+    doc["description"] = root.description + " " +  collection.description
     doc["offers"] = offer(root_catalog_url)
 
     dist = {"@type": "DataDownload" }
