@@ -1,5 +1,10 @@
 # Compare
 
+## Examples
+
+https://github.com/earthcube/stacIndexer/blob/master/data/output/28f2974cf5.json
+
+
 
 ## Connections
 
@@ -12,6 +17,11 @@ Also, there is the leveraging of WikiData connections
 
 Exploring the use of the Offer / PortentialAction connection 
 to express interop via CODATA emerging patterns
+
+### Huggingface
+
+* https://huggingface.co/datasets/eco4cast/neon4cast-scores
+* https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true
 
 ### FAIR Digital Objects
 

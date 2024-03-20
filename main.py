@@ -30,7 +30,7 @@ def save_dict_to_file(root, collection, item, asset):
     # At this point I have three elements:  root_catalog, item and asset (from below)
     #
 
-    # WARNING
+    # TODO WARNING
     # this is hard coded here, need to pass down from the main, but I would like to make
     # the whole process https based, so just bring this value here to test in the JSON-LD
     root_catalog_url = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
@@ -90,8 +90,12 @@ def save_dict_to_file(root, collection, item, asset):
     dist["contentUrl"] = asset["href"]
     dist["encodingFormat"] = asset["type"]
 
+    # TODO WARNING static element
+    dist["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
+
     doc["distribution"] = dist
     doc["spatialCoverage"] = sdo_box(convert_array_to_string(item.bbox), cells)
+
 
     varmes = []
 
