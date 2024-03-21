@@ -11,23 +11,34 @@ In converting the STAC catalog to an RDF (JSON-LD) based representation we reall
 only changed from one catalog to another. So the question can be asked; what is the value
 of doing this?
 
-The STAC approach is more focused on the spatial workflow and has discovery and
-interface like those at
+The STAC approach is more focused on the spatial workflow.  Discovery and other related 
+facaets are best represented by interface like those at
 [Ecological Forecasting Initiative STAC API](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json?.language=en) or it's top level 
-entry point at [STAC Browser](https://radiantearth.github.io/stac-browser/#/).
+with the top level entry point at [STAC Browser](https://radiantearth.github.io/stac-browser/#/).
 
-However, it can be noted that these resource are not something that can be located 
+However, it shuld be noted that these resource are not something that can be located 
 at [Google DataSet Search](https://datasetsearch.research.google.com/search?src=0&query=NEON%20Ecological%20Forecasting%20Challenge&docid=L2cvMTF2NGh6ZzBkag%3D%3D) or
 [data.gov](https://catalog.data.gov/dataset?q=NEON+Ecological+Forecasting+Challenge).
 
 Given, that, one could see converting STAC to JSON-LD + schema.org as a means to get 
-search in some of these more generalist indexes.  
+representation in some of these more generalist indexes and leverage the structured
+data on the web approach.  
 
 There are [STAC Extensions](https://stac-extensions.github.io/ ) but these don't look
 like they allow, currently, for more general resource linking like in DCAT or 
 [schema.org/Dataset](https://schema.org/Dataset).  
 
-> Question:  Are UNESCO SDGs worthly links?
+### Classic data on web best practices 
+
+* link the datasets
+* link to things like huggingace
+* link publications (dois if there)
+* link people (orcids if there)
+* principles
+* etc
+
+* look to link to the broader open science graph community
+
 
 ### Proto-OKN
 
@@ -46,6 +57,8 @@ One interesting factor though is the use of [S2 grids](http://s2geometry.io/)  w
 a type of [OGC Discrete Grid](https://docs.ogc.org/as/20-040r3/20-040r3.html) approach.
 
 > Note: Also, there is the leveraging of WikiData connections which should be explored
+
+> Question:  Are UNESCO SDGs worthly links?
 
 To do this I took the bounding box values in the STAC files and converted them to 
 level 13 S2 Cell ids.  These level 13 cells are about 1 km on a side and used by
@@ -163,6 +176,9 @@ do not currently know how that is best handled.
 
 ### Service links and CODATA CDIF
 
+> Need to also link in the software here as well and think about how that relates to CDIF
+> OIH patterns and also to FDOs
+
 Also, the [CODATA CDIF](https://codata.org/cross-domain-interoperability-framework-cdif-discovery-module-v01-draft-for-public-consultation/) work may be of interest.   I added the section:
 
 ```json
@@ -189,8 +205,14 @@ be considered a FDOs.
 
 ### FAIR Digital Objects
 
+> either make the current web site enabled with signposting and or make a new repo that can be placed in zemodo that 
+> is also signposted or a FDO object in some manner.  Would be nice if this was a model that worked for both neon
+> and also the hydrography group as well. 
+
 It is also interesting to explore how this approach, JSON-LD, compares
-to the STAC approach in the context of FAIR data principles.  
+to the STAC approach in the context of FAIR data principles and other factors.
+
+This is, it seems, a simialar issue to the notebooks and research / scholarly objects discusion.  
 
 
 #### STAC vs. FAIR Digital Objects
@@ -203,3 +225,5 @@ to the STAC approach in the context of FAIR data principles.
 | **Properties**           | Extensive properties for Earth observation data | Core properties focus on identification, access, reuse |
 | **Extensions**           | Supports extensions for specific domains | Can be extended through profiles |
 | **Community**            | Earth science community            | Broad scientific community   |
+
+
