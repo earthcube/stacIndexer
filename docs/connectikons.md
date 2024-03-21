@@ -5,18 +5,42 @@
 * [eco4cast / neon4cast](https://github.com/eco4cast/neon4cast)
 * [eco4cast / neon4cast-catalog](https://github.com/eco4cast/neon4cast-catalog)
 
-## About
+## Given that
+
+We can now convert the [neon4cast-catalog STAC catalog.json](https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json) to JSON-LD ([example](./workingExample.json))
+with an associated [sitemap.xml](../data/sitemap.xml) such that it could be indexed
+by DeCODER, Google Dataset Search, or any other consumer using this approach.  
+
+At present there are around 150 datasets generated, but this might be low due to some issues
+I had with resolving all the assets of the various catalogs.  
+
+An early view of the data follows and shows a typical case where datasets are well described
+as atomic units but don't currently express any shared entities in a manner aligned
+with graph analytics.  
+
+![graph one](./images/neongraph1.png)
+
+## DeCODER and General Structured Data on the Web
 
 In converting the STAC catalog to an RDF (JSON-LD) based representation we really have
-only changed from one catalog to another. So the question can be asked; what is the value
-of doing this?
+only changed from one catalog to another. So the question can be asked; __what is the value
+of doing this?__
 
-The STAC approach is more focused on the spatial workflow.  Discovery and other related 
-facaets are best represented by interface like those at
+The STAC approach is more aligned for spatial analytics, so there seems little initial benefit
+in the process.  However, exploring some of the features of linked open data may expose some
+worthy value add concpets.  
+
+It should be noted these approaches are not exclusionary and actually should be able to work together
+to provide richer approach to things such as FAIR principles together. 
+
+My inspection doesn't expose a great deal of web scale discovery for STAC catalogs.  Class web searches
+can find them or there are community resources such as the [Radiant Earth STAC browser](https://radiantearth.github.io/stac-browser/#/).
+
+These approaches would lead people to things such as 
 [Ecological Forecasting Initiative STAC API](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json?.language=en) or it's top level 
 with the top level entry point at [STAC Browser](https://radiantearth.github.io/stac-browser/#/).
 
-However, it shuld be noted that these resource are not something that can be located 
+However, it should be noted that these resource are not something that can be located 
 at [Google DataSet Search](https://datasetsearch.research.google.com/search?src=0&query=NEON%20Ecological%20Forecasting%20Challenge&docid=L2cvMTF2NGh6ZzBkag%3D%3D) or
 [data.gov](https://catalog.data.gov/dataset?q=NEON+Ecological+Forecasting+Challenge).
 
@@ -24,41 +48,46 @@ Given, that, one could see converting STAC to JSON-LD + schema.org as a means to
 representation in some of these more generalist indexes and leverage the structured
 data on the web approach.  
 
+One of the strength the RDF based approach would have over the STAC + extension approach
+is in the area of linking to other resources in a linked open data manner.  Though it
+is interesting to consider a STAC extension that addresses some of these discovery 
+aspects.
+
 There are [STAC Extensions](https://stac-extensions.github.io/ ) but these don't look
 like they allow, currently, for more general resource linking like in DCAT or 
 [schema.org/Dataset](https://schema.org/Dataset).  
 
 ### Classic data on web best practices 
 
-* link the datasets
-* link to things like huggingace
-* link publications (dois if there)
-* link people (orcids if there)
-* principles
-* etc
+Some concepts we might think about bringing to the previously linked
+([example](./workingExample.json)) file include connections to;
 
-* look to link to the broader open science graph community
+* related datasets or metadata (like those at Hugging Face)
+* publications 
+* people
+* principles like UN SDGs
+
+In general, the goal would be to express connections to the 
+broader open science graph community.  
+
+> Question:  Are UNESCO SDGs worthy links?
 
 
 ### Proto-OKN
 
 ref: [Proto-OKN](https://www.proto-okn.net/)
 
-One of the strength the RDF based approach would have over the STAC + extension approach
-is in the area of linking to other resources in a linked open data manner.  Though it
-is interesting to consider a STAC extension that addresses some of these discovery 
-aspects.  
+A possible more formal connection target might be the current NSF, and broader, funded
+effort for Open Knowledge Networks (OKNs).  
 
 One example of this we can explore due to the spatial nature of STAC is connecting 
-with [KnowWhereGraph](https://knowwheregraph.org/) (KWG).  KWG is big and it is 
-out of scope to introdcue it here.  You can check [https://knowwheregraph.org/graph/](https://knowwheregraph.org/graph/) for information about what is in KWG.
+with [KnowWhereGraph](https://knowwheregraph.org/) (KWG).  Introducing KWG is out of scope for this document.
+You can check [https://knowwheregraph.org/graph/](https://knowwheregraph.org/graph/) for more information about what is in KWG.
 
-One interesting factor though is the use of [S2 grids](http://s2geometry.io/)  which are
-a type of [OGC Discrete Grid](https://docs.ogc.org/as/20-040r3/20-040r3.html) approach.
+As a very basic level we can leverage the use of  [S2 grids](http://s2geometry.io/)  which are
+a type of [OGC Discrete Grid](https://docs.ogc.org/as/20-040r3/20-040r3.html) approach and are used by KWG.  
 
 > Note: Also, there is the leveraging of WikiData connections which should be explored
-
-> Question:  Are UNESCO SDGs worthly links?
 
 To do this I took the bounding box values in the STAC files and converted them to 
 level 13 S2 Cell ids.  These level 13 cells are about 1 km on a side and used by
