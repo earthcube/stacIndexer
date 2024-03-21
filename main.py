@@ -9,6 +9,7 @@ import hashlib
 from s2cells import bb2s2
 from spatial import sdo_box
 from service import service_instance, offer
+from citation import citation
 
 from pystac import Catalog, get_stac_version
 from pystac.extensions.eo import EOExtension
@@ -83,6 +84,7 @@ def save_dict_to_file(root, collection, item, asset):
     doc["name"] = root.id
     doc["description"] = root.description + " " +  collection.description
     doc["offers"] = offer(root_catalog_url)
+    doc["citation"] = citation()
 
     dist = {"@type": "DataDownload" }
     dist["contentUrl"] = asset["href"]
