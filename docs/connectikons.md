@@ -93,9 +93,7 @@ To do this I took the bounding box values in the STAC files and converted them t
 level 13 S2 Cell ids.  These level 13 cells are about 1 km on a side and used by
 KWG in their graph.  Example links from cells related to NEON resources would look like: 
 
-```
-https://stko-kwg.geog.ucsb.edu/browse/#kwgr:s2.level11.9291041754864156672
-```
+* https://stko-kwg.geog.ucsb.edu/browse/#kwgr:s2.level11.9291041754864156672
 
 These would link out to resources expressed in the KWG graph.  Often these are
 either historical weather events or socio-economic references.  However, this is 
@@ -105,9 +103,7 @@ growing and could be anything.
 
 An example link to smoke plume data follows:
 
-```
-https://stko-kwg.geog.ucsb.edu/browse/#kwgr:smokeplumesnapshot.3135.2018-08-02.7
-```
+* https://stko-kwg.geog.ucsb.edu/browse/#kwgr:smokeplumesnapshot.3135.2018-08-02.7
 
 Further, this sorts of relations can be done via the SPARQL query endpoints on the 
 triplestores. Example SPARQL queries follow and can also be seen in action in the 
@@ -126,8 +122,7 @@ WHERE {
   ?sp schema:geo ?geo .
   ?geo schema:name "s2Level13" .
   ?geo schema:value ?s2l13 .  
-    BIND (STR(?s2l13) AS ?strings2l13)
-
+  BIND (STR(?s2l13) AS ?strings2l13)
 }    
 ```
 
@@ -143,7 +138,7 @@ WHERE {
 | 8 | "9291041754864156672"^^<http://www.w3.org/2001/XMLSchema#integer> |
 
 
-
+KWG SPARQL call (as a service for later use in federation call)
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -152,14 +147,14 @@ PREFIX schema: <https://schema.org/>
 SELECT ?kwgs WHERE {
 
   SERVICE <https://stko-kwg.geog.ucsb.edu/workbench/repositories/KWG> {
-            select ?kwgs where {
-	        ?kwgs ?kwgp "9291047252422295552" .
-        }  
-	}
-  
-}  
+    select ?kwgs where {
+        ?kwgs ?kwgp "9291047252422295552" . 
+    }
+  }
+}
 ```
 
+Example SPARQL Federation Call
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -174,11 +169,10 @@ SELECT ?s2l13 ?kwgs WHERE {
   BIND (STR(?s2l13) AS ?strings2l13)
   
   SERVICE <https://stko-kwg.geog.ucsb.edu/workbench/repositories/KWG> {
-            select ?kwgs where {
-	        ?kwgs ?kwgp ?strings2l13 .
-        }  
-	}
-  
+    select ?kwgs where {
+        ?kwgs ?kwgp ?strings2l13 .
+    } 
+  }
 }    
 ```
 
@@ -202,13 +196,17 @@ do not currently know how that is best handled.
 * https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true
 
 
-
 ### Service links and CODATA CDIF
 
-> Need to also link in the software here as well and think about how that relates to CDIF
-> OIH patterns and also to FDOs
+Another approach we can explore so to enable the Datasets to act as discovery proxies for the
+STAC catalogs and also the software.  In this approach a discovery in the webspace might be 
+able to expose the service in OGC space that is more appropriate for some users.  
 
-Also, the [CODATA CDIF](https://codata.org/cross-domain-interoperability-framework-cdif-discovery-module-v01-draft-for-public-consultation/) work may be of interest.   I added the section:
+> NOTE: the [CODATA CDIF](https://codata.org/cross-domain-interoperability-framework-cdif-discovery-module-v01-draft-for-public-consultation/) work may be of interest.  
+
+The following section shows how we might express a link from the JSON-LD document back to the STAC catalog.
+One could also put in the Radiant Earth browser link.  It might be interested to see if these links are typed
+and also express that in the document.
 
 ```json
     "offers": {
@@ -224,24 +222,22 @@ Also, the [CODATA CDIF](https://codata.org/cross-domain-interoperability-framewo
     },
 ```
 
-to the JSON-LD files.  
-
 This is more placeholder than finished product.  It attempts to lay
 the groundwork to enable the dataset to act as a discovery vector for the service.
-Do so begin to lay the foundation for something like the service layer of the FAIR 
-Digital Objects concept.  It raises the question of if resources like these can
+Doing so begins to lay the foundation for something like the service layer of the FAIR 
+Digital Objects concept and so raises the question of if resources like these can
 be considered a FDOs.  
 
 ### FAIR Digital Objects
 
-> either make the current web site enabled with signposting and or make a new repo that can be placed in zemodo that 
+> Either make the current website enabled with signposting and or make a new repo that can be placed in Zenodo that 
 > is also signposted or a FDO object in some manner.  Would be nice if this was a model that worked for both neon
 > and also the hydrography group as well. 
 
 It is also interesting to explore how this approach, JSON-LD, compares
 to the STAC approach in the context of FAIR data principles and other factors.
 
-This is, it seems, a simialar issue to the notebooks and research / scholarly objects discusion.  
+This is, it seems, a similar issue to the notebooks and research / scholarly objects discusion.  
 
 
 #### STAC vs. FAIR Digital Objects
