@@ -5,8 +5,12 @@ c: croissant
 jld: JSON-LD \n schema.org/Dataset
 sw: NEON Challenge Software
 sb: STAC Browser
+sm: sitemap.xml
 
 stac -> jld: used to generate
+stac -> sm: used to generate
+
+sm -> jld: points to
 
 jld -> stac: points back to
 jld -> sw: references software that can use the data
