@@ -1,9 +1,12 @@
+# Notes
 
 See:  workingExample.json
 
 Need to look at ODI-IN:
 * https://github.com/iodepo/odis-in/blob/master/dataGraphs%2Fthematics%2Fservices%2Fgraphs%2Fservice.json
 * https://docs.google.com/document/d/1ojBHA1_924lKTVK5LumVhL2UaQ-NWm15paIdx2gjHqU/edit
+* https://github.com/iodepo/odis-arch/issues/222#issuecomment-2020733768
+
 
 
 * Maybe I should make a DataCatalog at the top level, and link to the
