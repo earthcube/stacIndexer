@@ -11,6 +11,14 @@ We can now convert the [neon4cast-catalog STAC catalog.json](https://raw.githubu
 with an associated [sitemap.xml](../data/sitemap.xml) such that it could be indexed
 by DeCODER, Google Dataset Search, or any other consumer using this approach.  
 
+### relations
+
+Some relations between the various documents are seen in the following.
+
+![relations](./images/relations.svg)
+
+### status
+
 At present there are around 150 datasets generated, but this might be low due to some issues
 I had with resolving all the assets of the various catalogs.  
 

@@ -77,7 +77,6 @@ def save_dict_to_file(root, collection, item, asset):
     idhash_string = idhash_obj.hexdigest()
     idshort_hash = idhash_string[:10]
 
-
     doc["@context"] = context
     doc["@type"] = "Dataset"
     doc["@id"] = "https://example.org/id/{}".format(idshort_hash)
@@ -162,8 +161,16 @@ def walk_collection(root_catalog, collection):
 def walk_stac():
     # Use a breakpoint in the code line below to debug your script.
 
-    root_catalog_url = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
-    root_catalog = Catalog.from_file('/home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json')
+    # Bad file
+    # cf = "https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json"
+    cf = "/home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json"
+    # cf = "/home/fils/src/Projects/DeCODER/stacIndexer/data/challenge/catalog.json"
+
+    # Correct files
+    # cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/catalog.json"
+    # cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
+
+    root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)
 
     collections = list(root_catalog.get_collections())
@@ -171,7 +178,7 @@ def walk_stac():
     print(f"Number of collections: {len(collections)}")
     print("Collections IDs:")
     for collection in collections:
-        # print(f"- {collection.id}")
+        print(f"- {collection.id}")
         walk_collection(root_catalog, collection)
 
 if __name__ == '__main__':

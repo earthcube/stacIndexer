@@ -18,6 +18,27 @@
         }
     },
 
+
+includedInDataCatalog {
+    DataCatalog {
+        mimetype  app/x-stac
+        url "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
+
+         "offers": {
+        "@type": "Offer",
+        "itemOffered": {
+            "@type": "Service",
+            "description": "A STAC Catalog Service",
+            "potentialAction": {
+                "@type": "Action",
+                "target": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json?.language=en"
+            }
+        }
+    },
+
+    }
+}
+
     "author": {
         "@id": "https://www.sample-data-repository.org/person/51317",
         "@type": "Person",
@@ -27,12 +48,14 @@
         "url": "https://www.sample-data-repository.org/person/51317"
     },
 
-    "exampleOfWork" : {
-        "@type": "SoftwareSourceCode",
-        "codeRepository" : "https://github.com/eco4cast"
-    },
 
-    "citation": {
+    "citation": [
+        {
+            "@type": "SoftwareSourceCode",
+            "codeRepository" : "https://github.com/eco4cast"
+        }
+
+        {
         "@type": "CreativeWork",
         "@id": " https://doi.org/10.1002/ecs2.4686",
         "url": "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4686",
@@ -46,7 +69,7 @@
             "value": "doi:10.1002/ecs2.4686",
             "url": "https://doi.org/10.1002/ecs2.4686"
           }
-    },
+    }],
 
     "creditText": "Your text here",
 
