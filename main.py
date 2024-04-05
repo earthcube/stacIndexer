@@ -5,6 +5,7 @@ import string
 from icecream import ic
 import pandas as pd
 import hashlib
+import argparse
 
 from s2cells import bb2s2
 from spatial import sdo_box
@@ -158,17 +159,8 @@ def walk_collection(root_catalog, collection):
         # print(f"- {item.id}")
         walk_item(root_catalog, collection, item.id)
 
-def walk_stac():
+def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
-
-    # Bad file
-    # cf = "https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json"
-    cf = "/home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json"
-    # cf = "/home/fils/src/Projects/DeCODER/stacIndexer/data/challenge/catalog.json"
-
-    # Correct files
-    # cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/catalog.json"
-    # cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
 
     root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)
@@ -182,4 +174,11 @@ def walk_stac():
         walk_collection(root_catalog, collection)
 
 if __name__ == '__main__':
-    walk_stac()
+    parser = argparse.ArgumentParser(description='Read the config file.')
+    parser.add_argument('--configfile', type=str, help='The config file')
+
+    args = parser.parse_args()
+
+    configfile = args.configfile
+
+    walk_stac(configfile)

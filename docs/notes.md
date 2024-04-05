@@ -1,5 +1,29 @@
 # Notes
 
+
+## Commands
+
+Config files to work with
+
+Bad file
+
+This one works, but is wrong:
+/home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json
+
+
+This one should be correct, but doesn't work
+/home/fils/src/Projects/DeCODER/stacIndexer/data/challenge/catalog.json
+
+
+
+cf = "https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json"
+
+Correct files
+cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/catalog.json"
+cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
+
+
+
 See:  workingExample.json
 
 Need to look at ODI-IN:
