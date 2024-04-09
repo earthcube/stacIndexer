@@ -49,8 +49,14 @@ sw: NEON Challenge Software
 sb: STAC Browser
 sm: sitemap.xml
 
+cdapi: CODATA \n CDIF API descriptor
+
 stac -> jld: used to generate
 stac -> sm: used to generate
+
+stac -> cdapi: used to generate
+
+cdapi <- jld:  references
 
 sm -> jld: points to
 # sm <- jld: used to generate
@@ -77,9 +83,14 @@ con_*.class: kgclass
 
 jld -> kg
 
+        kwg: KnowWhere Graph
+
 kg -> con_sdg
 kg -> con_gc
 kg -> con_dec
 kg -> con_gds
 kg -> con_okn
 kg -> con_pub
+kg -> kwg -> Historical weather events
+
+con_dec -> search for water temp
