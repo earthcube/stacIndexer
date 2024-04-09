@@ -1,0 +1,75 @@
+{
+    "description": "NEON model challenge",
+    "distribution": 
+    {
+        "@type": [
+            "DataDownload",
+            "WebAPI"
+        ],
+        "name": "NEON Challenge STAC catalog",
+        "serviceType": "STAC API",
+        "documentation": "https://example.org/api-docs/#/",
+        "termsOfService": "http://example.org/api-constraints.html",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": 
+                "https://argovis.colorado.edu/selection/profiles?startDate={start}&endDate={end}&shape={shape}&presRange={presRng}",
+                "description": "download profiles within a bounding box for specified start/end dates",
+                "httpMethod": [
+                    "GET"
+                ]
+            },
+            "query-input": [
+                {
+                    "@type": "PropertyValueSpecification",
+                    "valueName": "shape",
+                    "description": "list of lists containing [lon, lat] coordinates that define a polygon.",
+                    "valueRequired": true
+                },
+                {
+                    "@type": "PropertyValueSpecification",
+                    "valueName": "start",
+                    "description": "string formatted as 'YYYY-MM-DD'",
+                    "valueRequired": true
+                },
+            ],
+            "result": {
+                "@type": "Dataset",
+                "encodingFormat": "application/json"
+            }
+        }
+    },
+    "@type": [
+        "CreativeWork",
+        "Product",
+        "SoftwareApplication"
+    ],
+    "supportingData": {
+        "@type": "DataFeed",
+        "name": "Input Data Type specification", 
+        "position": "input",
+        "encodingFormat": [
+            "http://www.opengis.net/doc/CS/las/1.4",
+            "application/octet-stream;type=ASPRS-LAS",
+            "text/plain; application=esri-asciigrid",
+            "application/vnd.esri-asciigrid",
+            "Point Cloud Data"
+        ]
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "propertyID": "<http://cor.esipfed.org/ont/earthcube/ECRRO_0000503>",
+        "name": "Interface specification",
+        "url": "https://docs.opendap.org/index.php?title=DAP4:_Specification_Volume_1",
+        "value": [
+            {
+                "@type": "PropertyValue",
+                "name": "OpenDAP v4",
+                "identifier": "http://n2t.net/ark:/23942/g2805006"
+            }
+        ]
+    }
+}
+
