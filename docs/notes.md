@@ -79,3 +79,4 @@ could be evaluated for FAIR (Fuji for example) or FDO (via shacl) or
 something like this more appropriate. 
 
 
+![relationsEvolved.svg](images%2FrelationsEvolved.svg)
