@@ -1,14 +1,15 @@
-from pystac import Catalog, get_stac_version
+from pystac import Catalog
 from icecream import ic
 import hashlib
-from s2cells import bb2s2
-from service import service_instance, offer
-from citation import citation
-from spatial import sdo_box
+from archive.s2cells import bb2s2
+from archive.service import offer
+from archive.spatial import sdo_box
 import json
 
 # from convertas import convert_array_to_string
 from defs import convertas
+from defs import datacitation
+
 
 def save_dict_to_file(root, collection, item, asset):
     # At this point I have three elements:  root_catalog, item and asset (from below)
@@ -66,7 +67,7 @@ def save_dict_to_file(root, collection, item, asset):
     doc["name"] = root.id
     doc["description"] = root.description + " " +  collection.description
     doc["offers"] = offer(root_catalog_url)
-    doc["citation"] = citation()
+    doc["citation"] = datacitation.citation()
 
     dist = {"@type": "DataDownload" }
     dist["contentUrl"] = asset["href"]
