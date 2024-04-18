@@ -1,6 +1,4 @@
 
-
-
 def citation():
     citation_data = {
         "@type": "CreativeWork",
@@ -18,5 +16,3 @@ def citation():
     }
 
     return citation_data
-
-

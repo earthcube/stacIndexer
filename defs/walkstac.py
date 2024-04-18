@@ -14,29 +14,24 @@ from defs import datacitation
 def save_dict_to_file(root, collection, item, asset):
     # At this point I have three elements:  root_catalog, item and asset (from below)
 
-    # TODO WARNING
-    # this is hard coded here, need to pass down from the main, but I would like to make
-    # the whole process https based, so just bring this value here to test in the JSON-LD
-    root_catalog_url = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
+    ic(root.id)
+    ic(root.title)
+    ic(root.description)
 
-    # ic(root.id)
-    # ic(root.title)
-    # ic(root.description)
-    #
-    # ic(collection.to_dict())
-    # ic(collection.description)
-    #
-    # ic(item.geometry)
-    # ic(item.bbox)
-    # ic(item.datetime)
-    # ic(item.collection_id)
-    # ic(item.get_collection())
-    # ic(item.common_metadata.instruments)
-    # ic(item.common_metadata.platform)
-    # ic(item.common_metadata.gsd)
-    # ic(item.stac_extensions)
-    #
-    # ic(asset)
+    ic(collection.to_dict())
+    ic(collection.description)
+
+    ic(item.geometry)
+    ic(item.bbox)
+    ic(item.datetime)
+    ic(item.collection_id)
+    ic(item.get_collection())
+    ic(item.common_metadata.instruments)
+    ic(item.common_metadata.platform)
+    ic(item.common_metadata.gsd)
+    ic(item.stac_extensions)
+
+    ic(asset)
 
     max_lng, max_lat, min_lng, min_lat = item.bbox
     level = 13
@@ -66,15 +61,21 @@ def save_dict_to_file(root, collection, item, asset):
     doc["@id"] = "https://example.org/id/{}".format(idshort_hash)
     doc["name"] = root.id
     doc["description"] = root.description + " " +  collection.description
-    doc["offers"] = offer(root_catalog_url)
+
+    # TODO WARNING
+    # this is hard coded here, need to pass down from the main, but I would like to make
+    # the whole process https based, so just bring this value here to test in the JSON-LD
+    # root_catalog_url = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
+    # doc["offers"] = offer(root_catalog_url)   ## comment back in when the catalog URL properly passed up from main
+
     doc["citation"] = datacitation.citation()
 
     dist = {"@type": "DataDownload" }
     dist["contentUrl"] = asset["href"]
     dist["encodingFormat"] = asset["type"]
 
-    # TODO WARNING static element
-    doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
+    # TODO WARNING static element, comment out for now
+    # doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
     doc["distribution"] = dist
     doc["spatialCoverage"] = sdo_box(convertas.convert_array_to_string(item.bbox), cells)
 
