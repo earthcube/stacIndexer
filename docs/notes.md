@@ -3,26 +3,33 @@
 
 ## Commands
 
-Config files to work with
+The following works, but this is not the URL we should be using
+```bash
+python main.py --configfile /home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json
+```
 
-Bad file
+This one should be correct, but doesn't work.
+```bash
+python main.py --configfile /home/fils/src/Projects/DeCODER/stacIndexer/data/challenge/catalog.json
+```
 
-This one works, but is wrong:
-/home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json
+URL test this time
+```bash
+python main.py --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
+```
+
+Broken: URL test this time
+```bash
+python main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/catalog.json
+```
+
+Broken: URL test this time
+```bash
+python main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json
+```
 
 
-This one should be correct, but doesn't work
-/home/fils/src/Projects/DeCODER/stacIndexer/data/challenge/catalog.json
-
-
-
-cf = "https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json"
-
-Correct files
-cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/catalog.json"
-cf = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
-
-
+## Errata 
 
 See:  workingExample.json
 
