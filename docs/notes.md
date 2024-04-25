@@ -5,12 +5,12 @@
 
 The following works, but this is not the URL we should be using
 ```bash
-python main.py --configfile /home/fils/src/Projects/DeCODER/stacIndexer/data/neon/catalog.json
+python main.py --configfile ./data/neon/catalog.json
 ```
 
 This one should be correct, but doesn't work.
 ```bash
-python main.py --configfile /home/fils/src/Projects/DeCODER/stacIndexer/data/challenge/catalog.json
+python main.py --configfile ./data/challenge/catalog.json
 ```
 
 URL test this time
