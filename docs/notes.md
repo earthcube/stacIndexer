@@ -3,27 +3,27 @@
 
 ## Commands
 
-The following works, but this is not the URL we should be using
+1) The following works, but this is not the URL we should be using
 ```bash
 python main.py --configfile ./data/neon/catalog.json
 ```
 
-This one should be correct, but doesn't work.
+2) This is the correct catalog, but does not work, is a local copy of the catalog in the third command
 ```bash
 python main.py --configfile ./data/challenge/catalog.json
 ```
 
-URL test this time
+3) URL test this time
 ```bash
 python main.py --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
 ```
 
-Broken: URL test this time
+4) Broken: URL test this time
 ```bash
 python main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/catalog.json
 ```
 
-Broken: URL test this time
+5) Broken: URL test this time
 ```bash
 python main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json
 ```
