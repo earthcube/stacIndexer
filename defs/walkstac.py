@@ -1,13 +1,18 @@
 import logging
 
+import pystac
 from pystac import Catalog
 from icecream import ic
 import hashlib
+
+from pystac.validation import stac_validator
+
 from archive.s2cells import bb2s2
 from archive.service import offer
 from archive.spatial import sdo_box
 import json
 from pystac_client import Client
+from stac_validator import stac_validator as stac_validator_module
 
 # from convertas import convert_array_to_string
 from defs import convertas
@@ -146,10 +151,6 @@ def walk_collection(root_catalog, collection):
         # print(f"- {item.id}")
         walk_item(root_catalog, collection, item.id)
 
-# Set up basic configuration for logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
-
 def safe_convert_to_int(value):
     """ Attempts to convert a value to an integer, handling errors gracefully. """
     try:
@@ -161,29 +162,43 @@ def safe_convert_to_int(value):
 import json
 import requests
 
-def read_temporal_from_collection(file_path):
+def validate_collection(file_path):
+    collection = pystac.Collection.from_file(file_path)
+
+    # Validate the collection
     try:
-        # Read the contents of the file
-        with open(file_path, "r") as f:
-            collection_json = json.load(f)
-
-        # Access the temporal information from the parsed JSON
-        extent = collection_json.get("extent", {})
-        temporal = extent.get("temporal", {})
-        interval = temporal.get("interval", [])
-
-        if len(interval) == 1:
-            start_date, end_date = interval[0]
-            print("Temporal Interval:")
-            print("Start Date:", start_date)
-            print("End Date:", end_date)
-        else:
-            print("Temporal interval not found or invalid format.")
+        collection.validate()
+        print(f"    The collection is valid according to the STAC specifications.")
     except Exception as e:
-        print(f"Error reading temporal information from {file_path}: {e}")
-def process_item(item):
-    """ Processes each item, focusing on handling temporal data. """
-    read_temporal_from_collection(item)
+        print(f"    Validation error:", e)
+    # stac = stac_validator_module.StacValidate(file_path, extensions=True)
+    # stac.run()
+    # print(stac.message)
+    # [
+    #     {
+    #         "version": "1.0.0-beta.1",
+    #         "path": file_path,
+    #         "schema": [
+    #             "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    #             "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    #             "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    #         ],
+    #         "valid_stac": True,
+    #         "asset_type": "COLLECTION",
+    #         "validation_method": "extensions"
+    #     }
+    # ]
+
+def validate_catalog(file_path):
+    catalog = pystac.Catalog.from_file(file_path)
+
+    # Validate the collection
+    try:
+        catalog.validate()
+        return "VALID catalog"
+    except Exception as e:
+        logging.error("Validation error:", e)
+        return "INVALID catalog"
 
 def process_catalog(catalog, base):
     try:
@@ -198,9 +213,9 @@ def process_catalog(catalog, base):
             if item.rel=="child":
                 print(f"Processing item: {base}/{item.target}")
                 filepath = f"{base}/{item.target}"
-                process_item(filepath)
+                validate_collection(filepath)
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"    An error occurred: {e}")
 
 def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
@@ -210,11 +225,13 @@ def walk_stac(cf):
 
     child_catalogs = list(root_catalog.get_children())
 
+    # Debugging for challenge only
     print(f"Number of child catalogs: {len(child_catalogs)}")
     for child in child_catalogs:
         print(f"  - {child.id}")
         child_cf = f"data/challenge/{child.id}/catalog.json"
-        print(f"    - {child_cf}")
+        print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
+
         child_catalog = Catalog.from_file(href=child_cf)
         process_catalog(child_catalog, f"data/challenge/{child.id}")
 
