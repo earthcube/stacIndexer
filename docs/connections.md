@@ -240,7 +240,7 @@ and also express that in the document.
             "description": "A STAC Catalog Service",
             "potentialAction": {
                 "@type": "Action",
-                "target": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
+                "target": "https://raw.githubusercontent.com/eco4cast/neon4cast-stac-catalog/main/stac/catalog.json"
             }
         }
     },

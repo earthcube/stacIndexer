@@ -1,3 +1,5 @@
+import logging
+
 from pystac import Catalog
 from icecream import ic
 import hashlib
@@ -5,6 +7,7 @@ from archive.s2cells import bb2s2
 from archive.service import offer
 from archive.spatial import sdo_box
 import json
+from pystac_client import Client
 
 # from convertas import convert_array_to_string
 from defs import convertas
@@ -143,14 +146,79 @@ def walk_collection(root_catalog, collection):
         # print(f"- {item.id}")
         walk_item(root_catalog, collection, item.id)
 
+# Set up basic configuration for logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+def safe_convert_to_int(value):
+    """ Attempts to convert a value to an integer, handling errors gracefully. """
+    try:
+        return int(value)
+    except ValueError:
+        logging.error(f"Invalid data for conversion to int: {value}")
+        return None  # or return a default value, or raise a custom error
+
+import json
+import requests
+
+def read_temporal_from_collection(file_path):
+    try:
+        # Read the contents of the file
+        with open(file_path, "r") as f:
+            collection_json = json.load(f)
+
+        # Access the temporal information from the parsed JSON
+        extent = collection_json.get("extent", {})
+        temporal = extent.get("temporal", {})
+        interval = temporal.get("interval", [])
+
+        if len(interval) == 1:
+            start_date, end_date = interval[0]
+            print("Temporal Interval:")
+            print("Start Date:", start_date)
+            print("End Date:", end_date)
+        else:
+            print("Temporal interval not found or invalid format.")
+    except Exception as e:
+        print(f"Error reading temporal information from {file_path}: {e}")
+def process_item(item):
+    """ Processes each item, focusing on handling temporal data. """
+    read_temporal_from_collection(item)
+
+def process_catalog(catalog, base):
+    try:
+        # Check if the catalog has a method or attribute to get its href (URL or path)
+        catalog_url = catalog.get_self_href()  # This is just an example; adjust based on actual methods available
+
+        # Now open a client with the correct URL or path
+        client = Client.open(catalog_url)
+
+        # Process items
+        for item in client.get_child_links():
+            if item.rel=="child":
+                print(f"Processing item: {base}/{item.target}")
+                filepath = f"{base}/{item.target}"
+                process_item(filepath)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
 
     root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)
 
-    collections = list(root_catalog.get_collections())
+    child_catalogs = list(root_catalog.get_children())
 
+    print(f"Number of child catalogs: {len(child_catalogs)}")
+    for child in child_catalogs:
+        print(f"  - {child.id}")
+        child_cf = f"data/challenge/{child.id}/catalog.json"
+        print(f"    - {child_cf}")
+        child_catalog = Catalog.from_file(href=child_cf)
+        process_catalog(child_catalog, f"data/challenge/{child.id}")
+
+    collections = list(root_catalog.get_collections())
     print(f"Number of collections: {len(collections)}")
     print("Collections IDs:")
     for collection in collections:
