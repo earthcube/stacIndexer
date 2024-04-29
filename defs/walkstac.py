@@ -168,9 +168,9 @@ def validate_collection(file_path):
     # Validate the collection
     try:
         collection.validate()
-        print(f"    The collection is valid according to the STAC specifications.")
+        print(f"      The collection is valid according to the STAC specifications.")
     except Exception as e:
-        print(f"    Validation error:", e)
+        print(f"      Validation error:", e)
     # stac = stac_validator_module.StacValidate(file_path, extensions=True)
     # stac.run()
     # print(stac.message)
@@ -211,7 +211,7 @@ def process_catalog(catalog, base):
         # Process items
         for item in client.get_child_links():
             if item.rel=="child":
-                print(f"Processing item: {base}/{item.target}")
+                print(f"    Processing item: {base}/{item.target}")
                 filepath = f"{base}/{item.target}"
                 validate_collection(filepath)
     except Exception as e:
@@ -226,16 +226,16 @@ def walk_stac(cf):
     child_catalogs = list(root_catalog.get_children())
 
     # Debugging for challenge only
-    print(f"Number of child catalogs: {len(child_catalogs)}")
-    for child in child_catalogs:
-        print(f"  - {child.id}")
-        child_cf = f"data/challenge/{child.id}/catalog.json"
-        print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
+    # print(f"Number of child catalogs: {len(child_catalogs)}")
+    # for child in child_catalogs:
+    #     print(f"  - {child.id}")
+    #     child_cf = f"data/challenge/{child.id}/catalog.json"
+    #     print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
+    #
+    #     child_catalog = Catalog.from_file(href=child_cf)
+    #     process_catalog(child_catalog, f"data/challenge/{child.id}")
 
-        child_catalog = Catalog.from_file(href=child_cf)
-        process_catalog(child_catalog, f"data/challenge/{child.id}")
-
-    collections = list(root_catalog.get_collections())
+    collections = list(root_catalog.get_all_collections())
     print(f"Number of collections: {len(collections)}")
     print("Collections IDs:")
     for collection in collections:
