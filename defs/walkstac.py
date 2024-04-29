@@ -242,8 +242,7 @@ def walk_stac(cf):
             for l2 in l2_child_catalogs:
                 process_catalog(l2, l2.get_self_href())
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
-           # collections = list(child.get_all_collections())
-            collections = list(child.get_collections())
+            collections = list(child.get_all_collections())
             print(f"Number of collections: {len(collections)}")
             print("Collections IDs:")
             for collection in collections:
