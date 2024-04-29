@@ -1,7 +1,7 @@
 import logging
 
 import pystac
-from pystac import Catalog
+from pystac import Catalog, STACObjectType
 from icecream import ic
 import hashlib
 
@@ -234,10 +234,18 @@ def walk_stac(cf):
     #
     #     child_catalog = Catalog.from_file(href=child_cf)
     #     process_catalog(child_catalog, f"data/challenge/{child.id}")
-
-    collections = list(root_catalog.get_all_collections())
-    print(f"Number of collections: {len(collections)}")
-    print("Collections IDs:")
-    for collection in collections:
-        print(f"- {collection.id}")
-        walk_collection(root_catalog, collection)
+    for child in child_catalogs:
+        if child.STAC_OBJECT_TYPE == STACObjectType.ITEM: # aka Feature
+            logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
+        elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
+            l2_child_catalogs = list(child.get_children())
+            process_catalog(l2_child_catalogs, child.href)
+        elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
+            collections = list(child.get_all_collections())
+            print(f"Number of collections: {len(collections)}")
+            print("Collections IDs:")
+            for collection in collections:
+                print(f"- {collection.id}")
+                walk_collection(child, collection)
+        else:
+            logging.error(f"uknonwn type")
