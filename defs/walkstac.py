@@ -239,7 +239,8 @@ def walk_stac(cf):
             logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
         elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
             l2_child_catalogs = list(child.get_children())
-            process_catalog(l2_child_catalogs, child.href)
+            for l2 in l2_child_catalogs:
+                process_catalog(l2, l2.get_self_href())
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
            # collections = list(child.get_all_collections())
             collections = list(child.get_collections())
