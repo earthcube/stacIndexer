@@ -216,31 +216,15 @@ def process_catalog(catalog, base):
                 validate_collection(filepath)
     except Exception as e:
         print(f"    An error occurred: {e}")
-
-def walk_stac(cf):
-    # Use a breakpoint in the code line below to debug your script.
-
-    root_catalog = Catalog.from_file(href=cf)
-    ic(root_catalog)
-
-    child_catalogs = list(root_catalog.get_children())
-
-    # Debugging for challenge only
-    # print(f"Number of child catalogs: {len(child_catalogs)}")
-    # for child in child_catalogs:
-    #     print(f"  - {child.id}")
-    #     child_cf = f"data/challenge/{child.id}/catalog.json"
-    #     print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
-    #
-    #     child_catalog = Catalog.from_file(href=child_cf)
-    #     process_catalog(child_catalog, f"data/challenge/{child.id}")
-    for child in child_catalogs:
+def walk_catalog(root_catalog):
+    child_items = list(root_catalog.get_children())
+    for child in child_items:
         if child.STAC_OBJECT_TYPE == STACObjectType.ITEM: # aka Feature
             logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
         elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
             l2_child_catalogs = list(child.get_children())
             for l2 in l2_child_catalogs:
-                process_catalog(l2, l2.get_self_href())
+                walk_catalog(child)
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
             collections = list(child.get_all_collections())
             print(f"Number of collections: {len(collections)}")
@@ -250,3 +234,39 @@ def walk_stac(cf):
                 walk_collection(child, collection)
         else:
             logging.error(f"uknonwn type")
+def walk_stac(cf):
+    # Use a breakpoint in the code line below to debug your script.
+
+    root_catalog = Catalog.from_file(href=cf)
+    ic(root_catalog)
+
+    #child_catalogs = list(root_catalog.get_children())
+    walk_catalog(root_catalog)
+    # Debugging for challenge only
+    # print(f"Number of child catalogs: {len(child_catalogs)}")
+    # for child in child_catalogs:
+    #     print(f"  - {child.id}")
+    #     child_cf = f"data/challenge/{child.id}/catalog.json"
+    #     print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
+    #
+    #     child_catalog = Catalog.from_file(href=child_cf)
+    #     process_catalog(child_catalog, f"data/challenge/{child.id}")
+    #
+    # original block
+    # for child in child_catalogs:
+    #     if child.STAC_OBJECT_TYPE == STACObjectType.ITEM: # aka Feature
+    #         logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
+    #     elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
+    #         l2_child_catalogs = list(child.get_children())
+    #         for l2 in l2_child_catalogs:
+    #             process_catalog(l2, l2.get_self_href())
+    #     elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
+    #        # collections = list(child.get_all_collections())
+    #         collections = list(child.get_collections())
+    #         print(f"Number of collections: {len(collections)}")
+    #         print("Collections IDs:")
+    #         for collection in collections:
+    #             print(f"- {collection.id}")
+    #             walk_collection(child, collection)
+    #     else:
+    #         logging.error(f"uknonwn type")

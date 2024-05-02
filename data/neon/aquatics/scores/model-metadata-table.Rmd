@@ -3,7 +3,7 @@
 library(readr)
 library(reactable)
 
-model_metadata_info <- readr::read_csv('../../../NEON_Challenge_Registration_2023-05-23.csv')
+model_metadata_info <- readr::read_csv('../../NEON_Challenge_Registration_2023-05-23.csv')
 
 metadata_reactable <- reactable(model_metadata_info)
 
