@@ -132,6 +132,7 @@ def walk_item(root_catalog, collection, itemid):
         item = root_catalog.get_item(itemid, recursive=True)
     except Exception as e:
         # print(f"An error occurred: {e}")  # Prints the error message
+
         return  # Leaves the function early
 
     for asset_key in item.assets:
@@ -139,14 +140,15 @@ def walk_item(root_catalog, collection, itemid):
         save_dict_to_file(root_catalog, collection, item, asset.to_dict())
 
 def walk_collection(root_catalog, collection):
-    collectionid = root_catalog.get_child(collection.id)
-    if collectionid is None:
-        print("Collection is Empty. Check your downloads and try again.")
-        return
-    else:
-        print("Collection has a root child. You may proceed to the following steps.")
-
-    items = list(collectionid.get_all_items())
+    # collectionid = root_catalog.get_child(collection.id,recursive=True)
+    # if collectionid is None:
+    #     print("Collection is Empty. Check your downloads and try again.")
+    #     return
+    # else:
+    #     print("Collection has a root child. You may proceed to the following steps.")
+    #
+    # items = list(collectionid.get_all_items())
+    items = list(collection.get_all_items())
     for item in items:
         # print(f"- {item.id}")
         walk_item(root_catalog, collection, item.id)
