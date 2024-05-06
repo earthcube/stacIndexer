@@ -14,6 +14,7 @@ changed to a valid empty href.
       "title": "Link for Model Code"
     }
 
+https://github.com/earthcube/stacIndexer/blob/yl/data/challenge/neon4cast-stac/forecasts/models/model_items/GLEON_physics.json
 ```
 
 should not generate an asset, or may point to example.com
