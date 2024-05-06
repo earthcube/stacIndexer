@@ -51,3 +51,11 @@ https://github.com/earthcube/stacIndexer/blob/8a64765c652a85438c54a5b773d0e5a095
 2:
 
 ))
+
+the bbox should be 
+"bbox": [
+      -156.6194,
+      71.2824,
+      -66.7987,
+      71.2824
+  ],
