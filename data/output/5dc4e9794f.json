@@ -1,0 +1,134 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://example.org/id/96d27644ae",
+    "name": "daily-scores",
+    "description": "The catalog contains scores for the NEON Ecological Forecasting Challenge. The scores are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). You can access the scores at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the scores catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the scores for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model. This page includes variables for the Aquatics group.",
+    "citation": {
+        "@type": "CreativeWork",
+        "@id": "https://doi.org/10.1002/ecs2.4686",
+        "url": "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4686",
+        "name": "A community convention for ecological forecasting: Output files and metadata version 1.0",
+        "description": "This paper summarizes the open community conventions developed by the Ecological Forecasting Initiative (EFI) for the common formatting and archiving of ecological forecasts and the metadata associated with these forecasts. ",
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "https://registry.identifiers.org/registry/doi",
+            "value": "doi:10.1002/ecs2.4686",
+            "url": "https://doi.org/10.1002/ecs2.4686"
+        }
+    },
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/example_BK.json",
+        "encodingFormat": "application/json",
+        "datePublished": "2022-01-01",
+        "keywords": "neon4cast"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": [
+            {
+                "@type": "GeoShape",
+                "box": "-156.6194 71.2824 -66.7987 71.2824"
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291041754864156672
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291043953887412224
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291044503643226112
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291045878032760832
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291047252422295552
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291047802178109440
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291051650468806656
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291052200224620544
+            }
+        ]
+    }
+}
