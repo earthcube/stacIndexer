@@ -81,6 +81,8 @@ def save_dict_to_file(root, collection, item, asset):
     dist = {"@type": "DataDownload" }
     dist["contentUrl"] = asset["href"]
     dist["encodingFormat"] = asset["type"]
+    dist["datePublished"] = "2022-01-01"
+    dist["keywords"] = "neon4cast"
 
     # TODO WARNING static element, comment out for now
     # doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
