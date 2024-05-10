@@ -69,6 +69,8 @@ def save_dict_to_file(root, collection, item, asset):
     doc["@id"] = "https://example.org/id/{}".format(idshort_hash)
     doc["name"] = root.id
     doc["description"] = root.description + " " +  collection.description
+    doc["datePublished"] = "2022-01-01"
+    doc["keywords"] = "neon4cast"
 
     # TODO WARNING
     # this is hard coded here, need to pass down from the main, but I would like to make
@@ -81,8 +83,6 @@ def save_dict_to_file(root, collection, item, asset):
     dist = {"@type": "DataDownload" }
     dist["contentUrl"] = asset["href"]
     dist["encodingFormat"] = asset["type"]
-    dist["datePublished"] = "2022-01-01"
-    dist["keywords"] = "neon4cast"
 
     # TODO WARNING static element, comment out for now
     # doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
