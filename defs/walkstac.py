@@ -1,4 +1,5 @@
 import logging
+import os
 
 import pystac
 from pystac import Catalog, STACObjectType
@@ -220,6 +221,7 @@ def process_catalog(catalog, base):
                 validate_collection(filepath)
     except Exception as e:
         print(f"    An error occurred: {e}")
+
 def walk_catalog(root_catalog):
     child_items = list(root_catalog.get_children())
     for child in child_items:
@@ -238,6 +240,29 @@ def walk_catalog(root_catalog):
                 walk_collection(child, collection)
         else:
             logging.error(f"uknonwn type")
+
+def generate_sitemap():
+    # Specify the directory you want to list
+    folder_path = './data/output/'
+    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/yl_dv/data/output/'
+    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+
+    # List all files and directories in the folder
+    items = os.listdir(folder_path)
+
+    # Print the items
+    for item in items:
+        xml_content += '    <url><loc>'+base_url + item + '</loc></url>\n'
+
+    xml_content += '</urlset>'
+    # Path to the file
+    file_path = './data/output/sitemap.xml'
+
+    # Write to the file
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(xml_content)
+
 def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
 
@@ -274,3 +299,4 @@ def walk_stac(cf):
     #             walk_collection(child, collection)
     #     else:
     #         logging.error(f"uknonwn type")
+    generate_sitemap()
