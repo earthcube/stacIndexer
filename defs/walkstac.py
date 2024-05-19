@@ -1,5 +1,6 @@
 import logging
 import os
+import shutil
 
 import pystac
 from pystac import Catalog, STACObjectType
@@ -20,8 +21,10 @@ from defs import convertas
 from defs import datacitation
 
 
-def save_dict_to_file(root, collection, item, asset):
+def save_dict_to_file(repo, root, collection, item):
     # At this point I have three elements:  root_catalog, item and asset (from below)
+    props = item.properties
+    assets = item.assets
 
     ic(root.id)
     ic(root.title)
@@ -40,7 +43,7 @@ def save_dict_to_file(root, collection, item, asset):
     ic(item.common_metadata.gsd)
     ic(item.stac_extensions)
 
-    ic(asset)
+    #ic(asset)
 
     max_lng, max_lat, min_lng, min_lat = item.bbox
     level = 13
@@ -61,17 +64,17 @@ def save_dict_to_file(root, collection, item, asset):
     context = {"@vocab": "https://schema.org/"}
 
     idhash_obj = hashlib.sha256()
-    idhash_obj.update(asset["href"].encode())
+    #idhash_obj.update(asset["href"].encode())
     idhash_string = idhash_obj.hexdigest()
     idshort_hash = idhash_string[:10]
 
     doc["@context"] = context
     doc["@type"] = "Dataset"
     doc["@id"] = "https://example.org/id/{}".format(idshort_hash)
-    doc["name"] = root.id
-    doc["description"] = root.description + " " +  collection.description
+    doc["name"] = item.id + " " + item.collection_id
+    doc["description"] = root.description + " " + collection.description + " " + str(props.get("description"))
     doc["datePublished"] = "2022-01-01"
-    doc["keywords"] = "neon4cast"
+    doc["keywords"] = ', '.join(props.get("keywords"))
 
     # TODO WARNING
     # this is hard coded here, need to pass down from the main, but I would like to make
@@ -81,35 +84,41 @@ def save_dict_to_file(root, collection, item, asset):
 
     doc["citation"] = datacitation.citation()
 
-    dist = {"@type": "DataDownload" }
-    dist["contentUrl"] = asset["href"]
-    dist["encodingFormat"] = asset["type"]
+    dists = []
+    for asset_key in assets:
+        asset = assets[asset_key].to_dict()
+        dist = {"@type": "DataDownload"}
+        dist["contentUrl"] = asset.get("href")
+        dist["encodingFormat"] = asset["type"]
+        dist["description"] = asset["description"]
+
+        varmes = []
+        if asset.get("type") == "application/x-parquet":
+            # if asset["type"] == "image/png":
+            ext = item.stac_extensions
+            if 'https://stac-extensions.github.io/table/v1.2.0/schema.json' in ext:
+                try:
+                    cols = item.ext.table.columns
+                except AttributeError:
+                    print("'Item' object has no attribute 'ext'. Continuing...")
+                else:
+                    if len(cols) > 0:
+                        for col in cols:
+                            col_dc = col.to_dict()
+                            prop = {}
+                            prop["@type"] = "PropertyValue"
+                            prop["name"] = col_dc["name"]
+                            prop["description"] = col_dc["description"]
+                            varmes.append(prop)
+                    doc["variableMeasured"] = varmes
+
+        dists.append(dist)
 
     # TODO WARNING static element, comment out for now
     # doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
-    doc["distribution"] = dist
+    doc["distribution"] = dists
     doc["spatialCoverage"] = sdo_box(convertas.convert_array_to_string(item.bbox), cells)
 
-    varmes = []
-
-    if asset["type"] == "application/x-parquet":
-        # if asset["type"] == "image/png":
-        ext = item.stac_extensions
-        if 'https://stac-extensions.github.io/table/v1.2.0/schema.json' in ext:
-            try:
-                cols = item.ext.table.columns
-            except AttributeError:
-                print("'Item' object has no attribute 'ext'. Continuing...")
-            else:
-                if len(cols) > 0:
-                    for col in cols:
-                        col_dc = col.to_dict()
-                        prop = {}
-                        prop["@type"] = "PropertyValue"
-                        prop["name"] = col_dc["name"]
-                        prop["description"] = col_dc["description"]
-                        varmes.append(prop)
-                doc["variableMeasured"] = varmes
     # Rest of code remains unchanged...
 
     # if asset["type"] == "application/x-parquet":
@@ -125,12 +134,13 @@ def save_dict_to_file(root, collection, item, asset):
     hash_string = hash_obj.hexdigest()
     short_hash = hash_string[:10]
 
-    filename = "./data/output/{}.json".format(short_hash)
+    create_folder_if_not_exist("./data/output/" + repo.id)
+    filename = "./data/output/" + repo.id + "/{}.json".format(short_hash)
     with open(filename, 'w') as f:
         f.write(dataset_string)
     # print(f"Dictionary saved to file: {filename}")
 
-def walk_item(root_catalog, collection, itemid):
+def walk_item(repo, root_catalog, collection, itemid):
     try:
         item = root_catalog.get_item(itemid, recursive=True)
     except Exception as e:
@@ -138,11 +148,9 @@ def walk_item(root_catalog, collection, itemid):
 
         return  # Leaves the function early
 
-    for asset_key in item.assets:
-        asset = item.assets[asset_key]
-        save_dict_to_file(root_catalog, collection, item, asset.to_dict())
+    save_dict_to_file(repo, root_catalog, collection, item)
 
-def walk_collection(root_catalog, collection):
+def walk_collection(repo, root_catalog, collection):
     # collectionid = root_catalog.get_child(collection.id,recursive=True)
     # if collectionid is None:
     #     print("Collection is Empty. Check your downloads and try again.")
@@ -154,7 +162,7 @@ def walk_collection(root_catalog, collection):
     items = list(collection.get_all_items())
     for item in items:
         # print(f"- {item.id}")
-        walk_item(root_catalog, collection, item.id)
+        walk_item(repo, root_catalog, collection, item.id)
 
 def safe_convert_to_int(value):
     """ Attempts to convert a value to an integer, handling errors gracefully. """
@@ -232,24 +240,28 @@ def walk_catalog(root_catalog):
             for l2 in l2_child_catalogs:
                 walk_catalog(child)
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
-            collections = list(child.get_all_collections())
-            print(f"Number of collections: {len(collections)}")
-            print("Collections IDs:")
-            for collection in collections:
-                print(f"- {collection.id}")
-                walk_collection(child, collection)
+            try:
+                collections = list(child.get_all_collections())
+                print(f"Number of collections: {len(collections)}")
+                print("Collections IDs:")
+                for collection in collections:
+                    print(f"- {collection.id}")
+                    walk_collection(root_catalog, child, collection)
+            except Exception as e:
+                print(f"    An error occurred: {e}")
         else:
             logging.error(f"uknonwn type")
 
-def generate_sitemap():
+def generate_sitemap(folder_path):
+    if not os.path.exists("." + folder_path):
+        return
     # Specify the directory you want to list
-    folder_path = './data/output/'
-    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/yl_dv/data/output/'
+    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/yl_dv' + folder_path + '/'
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
     # List all files and directories in the folder
-    items = os.listdir(folder_path)
+    items = os.listdir("." + folder_path)
 
     # Print the items
     for item in items:
@@ -257,14 +269,26 @@ def generate_sitemap():
 
     xml_content += '</urlset>'
     # Path to the file
-    file_path = './data/output/sitemap.xml'
+    file_path = '.' + folder_path + '/sitemap.xml'
 
     # Write to the file
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(xml_content)
 
+def clear_output_folder(folder_path):
+    # Check if the folder exists
+    if os.path.exists(folder_path):
+        # Remove all the contents of the folder
+        shutil.rmtree(folder_path)
+    # Create the folder (it will also recreate if it was deleted)
+    os.makedirs(folder_path)
+
+def create_folder_if_not_exist(folder_path):
+    os.makedirs(folder_path, exist_ok=True)
+
 def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
+    clear_output_folder("./data/output/")
 
     root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)
@@ -299,4 +323,6 @@ def walk_stac(cf):
     #             walk_collection(child, collection)
     #     else:
     #         logging.error(f"uknonwn type")
-    generate_sitemap()
+    generate_sitemap("/data/output/neon4cast-stac")
+    generate_sitemap("/data/output/vera4cast-stac")
+    generate_sitemap("/data/output/usgsrc4cast-stac")
