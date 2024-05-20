@@ -230,6 +230,7 @@ def process_catalog(catalog, base):
     except Exception as e:
         print(f"    An error occurred: {e}")
 
+
 def walk_catalog(root_catalog):
     child_items = list(root_catalog.get_children())
     for child in child_items:
@@ -252,7 +253,10 @@ def walk_catalog(root_catalog):
         else:
             logging.error(f"uknonwn type")
 
-def generate_sitemap(folder_path):
+
+
+
+def generate_sitemap(folder_path, sitemap_path, repo):
     if not os.path.exists("." + folder_path):
         return
     # Specify the directory you want to list
@@ -269,7 +273,8 @@ def generate_sitemap(folder_path):
 
     xml_content += '</urlset>'
     # Path to the file
-    file_path = '.' + folder_path + '/sitemap.xml'
+    file_path = '.' + sitemap_path + '/sitemap_' + repo + '.xml'
+    create_folder_if_not_exist('.' + sitemap_path)
 
     # Write to the file
     with open(file_path, 'w', encoding='utf-8') as file:
@@ -287,6 +292,7 @@ def create_folder_if_not_exist(folder_path):
     os.makedirs(folder_path, exist_ok=True)
 
 def walk_stac(cf):
+
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
 
@@ -323,6 +329,6 @@ def walk_stac(cf):
     #             walk_collection(child, collection)
     #     else:
     #         logging.error(f"uknonwn type")
-    generate_sitemap("/data/output/neon4cast-stac")
-    generate_sitemap("/data/output/vera4cast-stac")
-    generate_sitemap("/data/output/usgsrc4cast-stac")
+    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast")
+    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast")
+    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast")
