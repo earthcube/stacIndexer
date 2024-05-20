@@ -18,7 +18,7 @@ noaa_description_create <- data.frame(site_id = 'For forecasts that are not on a
                                           height = 'variable height',
                                           horizon = 'number of days in forecast',
                                           parameter = 'ensemble member or distribution parameter',
-                                          family = 'For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”',
+                                          family = 'For ensembles: `ensemble.` Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.`For summary statistics: `summary.`',
                                           reference_datetime = 'datetime that the forecast was initiated (horizon = 0)',
                                           forecast_valid = 'date when forecast is valid',
                                           datetime = 'datetime of the forecasted value (ISO 8601)',

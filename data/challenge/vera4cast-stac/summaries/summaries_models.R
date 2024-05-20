@@ -15,7 +15,7 @@ catalog_config <- config$catalog_config
 summaries_description_create <- data.frame(reference_datetime = 'datetime that the forecast was initiated (horizon = 0)',
                                           site_id = 'For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)',
                                           datetime = 'datetime of the forecasted value (ISO 8601)',
-                                          family = 'For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”',
+                                          family = 'For ensembles: `ensemble.` Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.`For summary statistics: `summary.`',
                                           pub_datetime = 'datetime that forecast was submitted',
                                           depth_m = 'depth (meters) in water column of prediction',
                                           mean = 'mean forecast prediction',

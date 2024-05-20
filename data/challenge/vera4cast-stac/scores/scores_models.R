@@ -16,7 +16,7 @@ catalog_config <- config$catalog_config
 scores_description_create <- data.frame(reference_datetime ='datetime that the forecast was initiated (horizon = 0)',
                                  site_id = 'For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model.',
                                  datetime = 'datetime of the forecasted value (ISO 8601)',
-                                 family = 'For ensembles: “ensemble.” Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.” For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF).',
+                                 family = 'For ensembles: `ensemble.` Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.` For summary statistics: `summary.`If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF).',
                                  variable = 'name of forecasted variable',
                                  observation = 'observed value for variable',
                                  crps = 'crps forecast score',

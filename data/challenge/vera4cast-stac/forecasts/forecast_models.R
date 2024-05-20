@@ -14,7 +14,7 @@ catalog_config <- config$catalog_config
 ## CREATE table for column descriptions
 forecast_description_create <- data.frame(datetime = 'datetime of the forecasted value (ISO 8601)',
                                           site_id = 'For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)',
-                                          family = 'For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”',
+                                          family = 'For ensembles: `ensemble.` Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.`For summary statistics: `summary.`',
                                           parameter = 'ensemble member or distribution parameter',
                                           variable = 'name of forecasted variable',
                                           prediction = 'predicted value for variable',
