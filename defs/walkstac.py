@@ -64,13 +64,13 @@ def save_dict_to_file(repo, root, collection, item):
     context = {"@vocab": "https://schema.org/"}
 
     idhash_obj = hashlib.sha256()
-    #idhash_obj.update(asset["href"].encode())
+    idhash_obj.update(item.id + "_" + item.collection_id)
     idhash_string = idhash_obj.hexdigest()
     idshort_hash = idhash_string[:10]
 
     doc["@context"] = context
     doc["@type"] = "Dataset"
-    doc["@id"] = "https://example.org/id/{}".format(idshort_hash)
+    doc["@id"] = "urn:" + repo + "{}".format(idshort_hash)
     doc["name"] = item.id + " " + item.collection_id
     doc["description"] = root.description + " " + collection.description + " " + str(props.get("description"))
     doc["datePublished"] = "2022-01-01"
