@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "mlp1_wtempforecast_LF",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-149.6106, 29.676, -82.0084, 68.6307]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-82.0084, 29.676],
@@ -29,7 +23,7 @@
   "properties": {
     "description": "\nmodel info: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01.\n\nSites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK\n\nVariables: Daily Water_temperature",
     "start_datetime": "2024-03-01",
-    "end_datetime": "2024-05-28",
+    "end_datetime": "2024-06-26",
     "providers": [
       {
         "url": "pending",
@@ -132,7 +126,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },

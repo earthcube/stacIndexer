@@ -9,7 +9,13 @@
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "https://doi.org/10.1002/fee.2616",
+  "sci:doi": "10.1002/fee.2616",
+  "sci:publications": [
+    {
+      "doi": "10.1002/fee.2616",
+      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+    }
+  ],
   "links": [
     {
       "rel": "item",
@@ -168,7 +174,7 @@
     },
     {
       "rel": "cite-as",
-      "href": "http://example.com/broke"
+      "href": "https://doi.org/10.1002/fee.2616"
     },
     {
       "rel": "about",
@@ -194,7 +200,7 @@
       "interval": [
         [
           "2023-09-21T00:00:00Z",
-          "2024-04-25T00:00:00Z"
+          "2024-04-12T00:00:00Z"
         ]
       ]
     }
@@ -218,7 +224,7 @@
     {
       "name": "family",
       "type": "string",
-      "description": "For ensembles: `ensemble.` Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.` For summary statistics: `summary.`If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
+      "description": "For ensembles: “ensemble.” Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.” For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
     },
     {
       "name": "pub_datetime",

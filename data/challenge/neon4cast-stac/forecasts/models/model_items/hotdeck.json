@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "hotdeck",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-147.504, 18.1135, -66.7987, 65.1532]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-82.0084, 29.676],
@@ -22,7 +16,6 @@
       [-88.1589, 31.8534],
       [-87.7982, 32.5415],
       [-84.4374, 31.1854],
-      [-122.1655, 44.2596],
       [-96.6038, 39.1051],
       [-111.5081, 33.751],
       [-78.1473, 38.8943],
@@ -30,6 +23,7 @@
       [-87.4077, 32.9604],
       [-77.9832, 39.0956],
       [-83.5038, 35.6904],
+      [-122.1655, 44.2596],
       [-102.4471, 39.7582],
       [-72.3295, 42.4719],
       [-111.7979, 40.7839],
@@ -44,13 +38,15 @@
       [-96.6242, 34.4442],
       [-66.9868, 18.1135],
       [-66.7987, 18.1741],
-      [-84.2793, 35.9574]
+      [-84.2793, 35.9574],
+      [-99.1139, 47.1591],
+      [-99.2531, 47.1298]
     ]
   },
   "properties": {
-    "description": "\nmodel info: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h.\n\nSites: BARC, SUGG, TOMB, BLWA, FLNT, MCRA, KING, SYCA, POSE, PRIN, MAYF, LEWI, LECO, ARIK, HOPB, REDB, TECR, BLDE, COMO, WLOU, BIGC, CRAM, LIRO, CARI, BLUE, CUPE, GUIL, WALK\n\nVariables: Daily Water_temperature, Daily Dissolved_oxygen",
+    "description": "\nmodel info: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h.\n\nSites: BARC, SUGG, TOMB, BLWA, FLNT, KING, SYCA, POSE, PRIN, MAYF, LEWI, LECO, MCRA, ARIK, HOPB, REDB, TECR, BLDE, COMO, WLOU, BIGC, CRAM, LIRO, CARI, BLUE, CUPE, GUIL, WALK, PRLA, PRPO\n\nVariables: Daily Water_temperature, Daily Dissolved_oxygen",
     "start_datetime": "2024-02-28",
-    "end_datetime": "2024-05-25",
+    "end_datetime": "2024-06-23",
     "providers": [
       {
         "url": "pending",
@@ -154,7 +150,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },

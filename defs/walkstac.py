@@ -72,7 +72,7 @@ def save_dict_to_file(repo, root, collection, item):
     doc["@type"] = "Dataset"
     doc["@id"] = "urn:" + repo.id + ":{}".format(idshort_hash)
     doc["name"] = item.id + " " + item.collection_id
-    doc["description"] = root.description + " " + collection.description + " " + str(props.get("description"))
+    doc["description"] = str(props.get("description"))
     doc["datePublished"] = "2022-01-01"
     doc["keywords"] = ', '.join(props.get("keywords"))
 

@@ -132,7 +132,7 @@ build_model <- function(model_id,
       ),
       list(
         "rel"= "root",
-        'href' = '../../catalog.json',
+        'href' = '../../../catalog.json',
         "type"= "application/json",
         "title"= "Forecast Catalog"
       ),

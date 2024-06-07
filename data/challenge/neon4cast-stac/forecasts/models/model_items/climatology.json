@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "climatology",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    -156.6194, 17.9696, -66.7987, 71.2824
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-82.0084, 29.676],
@@ -97,22 +91,13 @@
       [-84.2793, 35.9574],
       [-105.9154, 39.8914],
       [-147.504, 65.1532],
-      [-149.143, 68.6698],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      []
+      [-149.143, 68.6698]
     ]
   },
   "properties": {
     "description": "\nmodel info: NA\n\nSites: BARC, BLWA, FLNT, SUGG, TOMB, CRAM, LIRO, PRPO, PRLA, TOOK, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ARIK, BIGC, BLDE, BLUE, COMO, CUPE, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SYCA, TECR, WALK, WLOU, CARI, OKSR, USGS-01427510, USGS-01463500, USGS-05543010, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720\n\nVariables: Daily Chlorophyll_a, Daily Net_ecosystem_exchange, 30min Net_ecosystem_exchange, Daily Green_chromatic_coordinate, Daily latent_heat_flux, 30min latent_heat_flux, Daily Dissolved_oxygen, Daily Water_temperature, Daily Red_chromatic_coordinate",
     "start_datetime": "2023-01-02",
-    "end_datetime": "2024-05-31",
+    "end_datetime": "2024-06-29",
     "providers": [
       {
         "url": "pending",
@@ -223,7 +208,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -241,7 +226,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -256,7 +241,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {

@@ -18,7 +18,7 @@ noaa_description_create <- data.frame(site_id = 'For forecasts that are not on a
                                           height = 'variable height',
                                           horizon = 'number of days in forecast',
                                           parameter = 'ensemble member or distribution parameter',
-                                          family = 'For ensembles: `ensemble.` Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.`For summary statistics: `summary.`',
+                                          family = 'For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”',
                                           reference_datetime = 'datetime that the forecast was initiated (horizon = 0)',
                                           forecast_valid = 'date when forecast is valid',
                                           datetime = 'datetime of the forecasted value (ISO 8601)',
@@ -28,11 +28,15 @@ noaa_description_create <- data.frame(site_id = 'For forecasts that are not on a
 
 noaa_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$noaa_forecast_bucket,"/stage2/reference_datetime=2024-02-21/site_id=feea"), endpoint_override = config$noaa_endpoint, anonymous = TRUE))
 
-noaa_theme_dates <- arrow::open_dataset(arrow::s3_bucket(paste0(config$noaa_forecast_bucket,"/stage2/"), endpoint_override = config$noaa_endpoint, anonymous = TRUE)) |>
-  dplyr::summarise(min(datetime),max(datetime)) |>
-  collect()
-noaa_min_date <- noaa_theme_dates$`min(datetime)`
-noaa_max_date <- noaa_theme_dates$`max(datetime)`
+# noaa_theme_dates <- arrow::open_dataset(arrow::s3_bucket(paste0(config$noaa_forecast_bucket,"/stage2/"), endpoint_override = config$noaa_endpoint, anonymous = TRUE)) |>
+#   dplyr::summarise(min(datetime),max(datetime)) |>
+#   collect()
+#
+# noaa_min_date <- noaa_theme_dates$`min(datetime)`
+# noaa_max_date <- noaa_theme_dates$`max(datetime)`
+
+noaa_min_date <- as.Date('2020-01-01')
+noaa_max_date <- Sys.Date()
 
 build_description <- paste0("NOAA Global Ensemble Forecasting System weather forecasts that have been downloaded and processed for the forecasted sites.")
 
@@ -51,6 +55,7 @@ stac4cast::build_forecast_scores(table_schema = noaa_theme_df,
                                  link_items = stac4cast::generate_group_values(group_values = config$noaa_forecast_groups),
                                  thumbnail_link = catalog_config$noaa_thumbnail,
                                  thumbnail_title = catalog_config$noaa_thumbnail_title,
+                                 group_sites = catalog_config$noaa_sites,
                                  model_child = FALSE)
 
 

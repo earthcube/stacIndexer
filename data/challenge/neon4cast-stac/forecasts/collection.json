@@ -41,12 +41,6 @@
       "title": "Ticks"
     },
     {
-      "rel": "child",
-      "type": "application/json",
-      "href": "models/collection.json",
-      "title": "group item"
-    },
-    {
       "rel": "parent",
       "type": "application/json",
       "href": "../catalog.json"
@@ -63,7 +57,7 @@
     },
     {
       "rel": "cite-as",
-      "href": "10.1002/fee.2616"
+      "href": "https://doi.org/10.1002/fee.2616"
     },
     {
       "rel": "about",
@@ -82,24 +76,24 @@
   "extent": {
     "spatial": {
       "bbox": [
-        [
-          -156.6194,
-          17.9696,
-          -66.7987,
-          71.2824
-        ]
+        -156.6194, 17.9696, -66.7987, 71.2824
       ]
     },
     "temporal": {
       "interval": [
         [
           "2022-01-01T00:00:00Z",
-          "2026-12-20T00:00:00Z"
+          "2026-12-27T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
+    {
+      "name": "13 columns",
+      "type": null,
+      "description": {}
+    },
     {
       "name": "datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -159,11 +153,6 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "reference_date",
-      "type": "string",
-      "description": "date that the forecast was initiated"
     }
   ],
   "assets": {

@@ -48,7 +48,8 @@ for(i in 1:nrow(registered_models)){
     metadata$uncertainty$initial_conditions$data_driven <- FALSE
     metadata$uncertainty$initial_conditions$progagates$type <- progagates_method
   }else if(registered_models$`Do your forecasts include uncertainty from initial conditions?`[i] == "No"){
-    if(registered_models$`Is your forecast model dynamic? (i.e. is tomorrow’s forecast dependent on today’s forecast)?`[i] == "Yes"){
+    #if(registered_models$`Is your forecast model dynamic? (i.e. is tomorrow’s forecast dependent on today’s forecast)?`[i] == "Yes"){
+    if(registered_models[i,3][[1]] == "Yes"){
       metadata$uncertainty$initial_conditions$present <- TRUE
       metadata$uncertainty$initial_conditions$data_driven <- FALSE
     }else{
@@ -71,7 +72,7 @@ for(i in 1:nrow(registered_models)){
        metadata$uncertainty$parameters$data_driven <- TRUE
     }else  if(registered_models$`Does your model include parameters?`[i] == "Yes and they are not estimated from data"){
        metadata$uncertainty$parameters$data_driven <- FALSE
-    }            
+    }
     metadata$uncertainty$parameters$progagates$type <- progagates_method
   }else if(registered_models$`Does your forecast include uncertainty from the model parameters?`[i] == "No"){
     if(registered_models$`Does your model include parameters?`[i] == "Yes"){

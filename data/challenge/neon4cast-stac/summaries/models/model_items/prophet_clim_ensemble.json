@@ -5,60 +5,54 @@
   ],
   "type": "Feature",
   "id": "prophet_clim_ensemble",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-155.3173, 17.9696, -66.8687, 47.1617]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-122.3303, 45.7624],
-      [-83.5019, 35.689],
-      [-88.1612, 31.8539],
-      [-80.5248, 37.3783],
-      [-105.5824, 40.0543],
-      [-100.9154, 46.7697],
-      [-84.2826, 35.9641],
-      [-119.2622, 37.0334],
-      [-119.006, 37.0058],
-      [-89.5857, 45.4937],
-      [-121.9519, 45.8205],
+      [-71.2874, 44.0639],
       [-78.0418, 39.0337],
+      [-97.57, 33.4012],
+      [-104.7456, 40.8155],
+      [-99.1066, 47.1617],
+      [-87.8039, 32.5417],
       [-81.4362, 28.1251],
+      [-83.5019, 35.689],
       [-66.8687, 17.9696],
       [-72.1727, 42.5369],
+      [-84.4686, 31.1948],
+      [-106.8425, 32.5907],
+      [-96.6129, 39.1104],
+      [-96.5631, 39.1008],
       [-67.0769, 18.0213],
+      [-88.1612, 31.8539],
+      [-80.5248, 37.3783],
       [-109.3883, 38.2483],
+      [-105.5824, 40.0543],
+      [-100.9154, 46.7697],
+      [-99.0588, 35.4106],
+      [-112.4524, 40.1776],
+      [-84.2826, 35.9641],
+      [-81.9934, 29.6893],
       [-155.3173, 19.5531],
+      [-105.546, 40.2759],
+      [-78.1395, 38.8929],
       [-76.56, 38.8901],
       [-119.7323, 37.1088],
-      [-99.2413, 47.1282],
-      [-97.57, 33.4012],
-      [-99.1066, 47.1617],
-      [-106.8425, 32.5907],
-      [-96.5631, 39.1008],
-      [-99.0588, 35.4106],
-      [-78.1395, 38.8929],
+      [-119.2622, 37.0334],
+      [-110.8355, 31.9107],
       [-89.5864, 45.5089],
       [-103.0293, 40.4619],
-      [-95.1921, 39.0404],
-      [-110.5391, 44.9535],
-      [-71.2874, 44.0639],
-      [-104.7456, 40.8155],
-      [-87.8039, 32.5417],
-      [-84.4686, 31.1948],
-      [-96.6129, 39.1104],
-      [-112.4524, 40.1776],
-      [-81.9934, 29.6893],
-      [-105.546, 40.2759],
-      [-110.8355, 31.9107],
       [-87.3933, 32.9505],
-      [-89.5373, 46.2339]
+      [-119.006, 37.0058],
+      [-89.5857, 45.4937],
+      [-95.1921, 39.0404],
+      [-89.5373, 46.2339],
+      [-99.2413, 47.1282],
+      [-121.9519, 45.8205],
+      [-110.5391, 44.9535]
     ]
   },
   "properties": {
@@ -187,7 +181,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -205,7 +199,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -220,14 +214,14 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {
       "type": "application/x-parquet",
       "title": "Database Access for Daily Red_chromatic_coordinate",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=prophet_clim_ensemble?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=prophet_clim_ensemble?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "href": "s3://anonymous@project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=prophet_clim_ensemble?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=prophet_clim_ensemble?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     }
   }
 }
