@@ -5,71 +5,65 @@
   ],
   "type": "Feature",
   "id": "mean",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-156.6194, 17.9696, -66.8687, 71.2824]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
-      [-155.3173, 19.5531],
-      [-119.7323, 37.1088],
-      [-76.56, 38.8901],
-      [-81.4362, 28.1251],
-      [-78.0418, 39.0337],
-      [-99.2413, 47.1282],
+      [-145.7514, 63.8811],
+      [-87.8039, 32.5417],
       [-109.3883, 38.2483],
-      [-66.8687, 17.9696],
-      [-67.0769, 18.0213],
-      [-72.1727, 42.5369],
-      [-100.9154, 46.7697],
-      [-89.5857, 45.4937],
-      [-121.9519, 45.8205],
       [-105.5824, 40.0543],
-      [-119.2622, 37.0334],
-      [-88.1612, 31.8539],
-      [-80.5248, 37.3783],
-      [-84.2826, 35.9641],
-      [-83.5019, 35.689],
+      [-103.0293, 40.4619],
+      [-87.3933, 32.9505],
+      [-66.8687, 17.9696],
+      [-72.1727, 42.5369],
+      [-149.2133, 63.8758],
+      [-99.0588, 35.4106],
+      [-112.4524, 40.1776],
+      [-84.4686, 31.1948],
+      [-155.3173, 19.5531],
+      [-105.546, 40.2759],
+      [-110.8355, 31.9107],
+      [-89.5864, 45.5089],
+      [-100.9154, 46.7697],
       [-119.006, 37.0058],
       [-122.3303, 45.7624],
-      [-147.5026, 65.154],
-      [-97.57, 33.4012],
-      [-99.0588, 35.4106],
-      [-110.5391, 44.9535],
-      [-99.1066, 47.1617],
-      [-145.7514, 63.8811],
-      [-78.1395, 38.8929],
-      [-95.1921, 39.0404],
-      [-96.5631, 39.1008],
-      [-106.8425, 32.5907],
-      [-89.5864, 45.5089],
-      [-103.0293, 40.4619],
-      [-149.3705, 68.6611],
-      [-105.546, 40.2759],
-      [-104.7456, 40.8155],
-      [-112.4524, 40.1776],
-      [-81.9934, 29.6893],
-      [-87.3933, 32.9505],
+      [-119.7323, 37.1088],
+      [-119.2622, 37.0334],
       [-89.5373, 46.2339],
-      [-87.8039, 32.5417],
-      [-96.6129, 39.1104],
-      [-110.8355, 31.9107],
-      [-149.2133, 63.8758],
-      [-84.4686, 31.1948],
+      [-99.2413, 47.1282],
+      [-97.57, 33.4012],
+      [-104.7456, 40.8155],
       [-156.6194, 71.2824],
-      [-71.2874, 44.0639]
+      [-71.2874, 44.0639],
+      [-83.5019, 35.689],
+      [-78.1395, 38.8929],
+      [-76.56, 38.8901],
+      [-78.0418, 39.0337],
+      [-147.5026, 65.154],
+      [-67.0769, 18.0213],
+      [-88.1612, 31.8539],
+      [-121.9519, 45.8205],
+      [-99.1066, 47.1617],
+      [-84.2826, 35.9641],
+      [-81.9934, 29.6893],
+      [-149.3705, 68.6611],
+      [-106.8425, 32.5907],
+      [-95.1921, 39.0404],
+      [-96.6129, 39.1104],
+      [-96.5631, 39.1008],
+      [-89.5857, 45.4937],
+      [-80.5248, 37.3783],
+      [-81.4362, 28.1251],
+      [-110.5391, 44.9535]
     ]
   },
   "properties": {
     "description": [],
     "start_datetime": "2023-11-20",
-    "end_datetime": "2025-04-14",
+    "end_datetime": "2025-05-12",
     "providers": [
       {
         "url": "pending",
@@ -92,8 +86,8 @@
     "keywords": [
       "Forecasting",
       "neon4cast",
-      "Weekly beetle_community_richness",
-      "Weekly beetle_community_abundance"
+      "Weekly beetle_community_abundance",
+      "Weekly beetle_community_richness"
     ],
     "table:columns": [
       {
@@ -193,7 +187,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -211,7 +205,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -226,20 +220,20 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {
       "type": "application/x-parquet",
-      "title": "Database Access for Weekly beetle_community_richness",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1W/variable=richness/model_id=mean?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1W/variable=richness/model_id=mean?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "title": "Database Access for Weekly beetle_community_abundance",
+      "href": "s3://anonymous@project_id=neon4cast/duration=P1W/variable=abundance/model_id=mean?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=neon4cast/duration=P1W/variable=abundance/model_id=mean?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "4": {
       "type": "application/x-parquet",
-      "title": "Database Access for Weekly beetle_community_abundance",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1W/variable=abundance/model_id=mean?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1W/variable=abundance/model_id=mean?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "title": "Database Access for Weekly beetle_community_richness",
+      "href": "s3://anonymous@project_id=neon4cast/duration=P1W/variable=richness/model_id=mean?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=neon4cast/duration=P1W/variable=richness/model_id=mean?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     }
   }
 }

@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "fARIMA_clim_ensemble",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    -147.504, 18.1135, -66.7987, 65.1532
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-102.4471, 39.7582],
@@ -47,13 +41,14 @@
       [-119.0274, 36.9559],
       [-89.7048, 45.9983],
       [-99.2531, 47.1298],
-      [-99.1139, 47.1591]
+      [-99.1139, 47.1591],
+      [-147.504, 65.1532]
     ]
   },
   "properties": {
-    "description": "\nmodel info: NA\n\nSites: ARIK, BARC, BLDE, BLUE, BLWA, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, POSE, PRIN, REDB, SUGG, SYCA, WALK, WLOU, MCRA, TOMB, BIGC, TECR, LIRO, PRPO, PRLA\n\nVariables: Daily Water_temperature",
+    "description": "\nmodel info: NA\n\nSites: ARIK, BARC, BLDE, BLUE, BLWA, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, POSE, PRIN, REDB, SUGG, SYCA, WALK, WLOU, MCRA, TOMB, BIGC, TECR, LIRO, PRPO, PRLA, CARI\n\nVariables: Daily Water_temperature",
     "start_datetime": "2023-11-10",
-    "end_datetime": "2024-04-05",
+    "end_datetime": "2024-05-12",
     "providers": [
       {
         "url": "pending",
@@ -191,7 +186,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -209,7 +204,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -224,7 +219,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {

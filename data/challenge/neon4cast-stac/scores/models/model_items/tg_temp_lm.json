@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "tg_temp_lm",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    -156.6194, 17.9696, -66.7987, 71.2824
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-82.0084, 29.676],
@@ -27,28 +21,6 @@
       [-82.0177, 29.6878],
       [-88.1589, 31.8534],
       [-149.6106, 68.6307],
-      [-99.0588, 35.4106],
-      [-112.4524, 40.1776],
-      [-84.2826, 35.9641],
-      [-81.9934, 29.6893],
-      [-155.3173, 19.5531],
-      [-105.546, 40.2759],
-      [-78.1395, 38.8929],
-      [-76.56, 38.8901],
-      [-119.7323, 37.1088],
-      [-119.2622, 37.0334],
-      [-110.8355, 31.9107],
-      [-89.5864, 45.5089],
-      [-103.0293, 40.4619],
-      [-87.3933, 32.9505],
-      [-119.006, 37.0058],
-      [-149.3705, 68.6611],
-      [-89.5857, 45.4937],
-      [-95.1921, 39.0404],
-      [-89.5373, 46.2339],
-      [-99.2413, 47.1282],
-      [-121.9519, 45.8205],
-      [-110.5391, 44.9535],
       [-122.3303, 45.7624],
       [-156.6194, 71.2824],
       [-71.2874, 44.0639],
@@ -74,6 +46,29 @@
       [-109.3883, 38.2483],
       [-105.5824, 40.0543],
       [-100.9154, 46.7697],
+      [-99.0588, 35.4106],
+      [-112.4524, 40.1776],
+      [-84.2826, 35.9641],
+      [-81.9934, 29.6893],
+      [-155.3173, 19.5531],
+      [-105.546, 40.2759],
+      [-78.1395, 38.8929],
+      [-76.56, 38.8901],
+      [-119.7323, 37.1088],
+      [-119.2622, 37.0334],
+      [-110.8355, 31.9107],
+      [-89.5864, 45.5089],
+      [-103.0293, 40.4619],
+      [-87.3933, 32.9505],
+      [-119.006, 37.0058],
+      [-149.3705, 68.6611],
+      [-89.5857, 45.4937],
+      [-95.1921, 39.0404],
+      [-89.5373, 46.2339],
+      [-99.2413, 47.1282],
+      [-121.9519, 45.8205],
+      [-110.5391, 44.9535],
+      [-105.9154, 39.8914],
       [-102.4471, 39.7582],
       [-119.2575, 37.0597],
       [-110.5871, 44.9501],
@@ -96,12 +91,11 @@
       [-111.7979, 40.7839],
       [-111.5081, 33.751],
       [-119.0274, 36.9559],
-      [-84.2793, 35.9574],
-      [-105.9154, 39.8914]
+      [-84.2793, 35.9574]
     ]
   },
   "properties": {
-    "description": "\nmodel info: NA\n\nSites: BARC, BLWA, CRAM, FLNT, LIRO, PRLA, PRPO, SUGG, TOMB, TOOK, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, ARIK, BIGC, BLDE, BLUE, CARI, COMO, CUPE, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, REDB, SYCA, TECR, WALK, WLOU\n\nVariables: Daily Chlorophyll_a, Daily Green_chromatic_coordinate, Daily latent_heat_flux, Daily Net_ecosystem_exchange, Daily Dissolved_oxygen, Daily Red_chromatic_coordinate, Daily Water_temperature, Weekly beetle_community_abundance, Weekly beetle_community_richness",
+    "description": "\nmodel info: NA\n\nSites: BARC, BLWA, CRAM, FLNT, LIRO, PRLA, PRPO, SUGG, TOMB, TOOK, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, WLOU, ARIK, BIGC, BLDE, BLUE, CARI, COMO, CUPE, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, REDB, SYCA, TECR, WALK\n\nVariables: Daily Chlorophyll_a, Daily Green_chromatic_coordinate, Daily latent_heat_flux, Daily Net_ecosystem_exchange, Daily Dissolved_oxygen, Daily Red_chromatic_coordinate, Weekly beetle_community_abundance, Weekly beetle_community_richness, Daily Water_temperature",
     "start_datetime": "2023-11-14",
     "end_datetime": "2024-02-16",
     "providers": [
@@ -132,9 +126,9 @@
       "Daily Net_ecosystem_exchange",
       "Daily Dissolved_oxygen",
       "Daily Red_chromatic_coordinate",
-      "Daily Water_temperature",
       "Weekly beetle_community_abundance",
-      "Weekly beetle_community_richness"
+      "Weekly beetle_community_richness",
+      "Daily Water_temperature"
     ],
     "table:columns": [
       {
@@ -249,7 +243,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -267,7 +261,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -282,7 +276,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {
@@ -323,21 +317,21 @@
     },
     "9": {
       "type": "application/x-parquet",
-      "title": "Database Access for Daily Water_temperature",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    },
-    "10": {
-      "type": "application/x-parquet",
       "title": "Database Access for Weekly beetle_community_abundance",
       "href": "s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
       "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
-    "11": {
+    "10": {
       "type": "application/x-parquet",
       "title": "Database Access for Weekly beetle_community_richness",
       "href": "s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=richness/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
       "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=richness/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+    },
+    "11": {
+      "type": "application/x-parquet",
+      "title": "Database Access for Daily Water_temperature",
+      "href": "s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     }
   }
 }

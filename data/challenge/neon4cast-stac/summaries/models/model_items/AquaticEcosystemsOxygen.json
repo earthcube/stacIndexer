@@ -5,25 +5,21 @@
   ],
   "type": "Feature",
   "id": "AquaticEcosystemsOxygen",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-105.9154, 29.676, -82.0084, 39.8914]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
-      [-82.0084, 29.676]
+      [-82.0084, 29.676],
+      [-102.4471, 39.7582],
+      [-105.9154, 39.8914]
     ]
   },
   "properties": {
-    "description": "\nmodel info: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package\n\nSites: BARC\n\nVariables: Daily Dissolved_oxygen",
+    "description": "\nmodel info: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package\n\nSites: BARC, ARIK, WLOU\n\nVariables: Daily Dissolved_oxygen",
     "start_datetime": "2024-04-18",
-    "end_datetime": "2024-05-23",
+    "end_datetime": "2024-06-21",
     "providers": [
       {
         "url": "pending",
@@ -146,7 +142,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -185,8 +181,8 @@
     "3": {
       "type": "application/x-parquet",
       "title": "Database Access for Daily Dissolved_oxygen",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "href": "s3://anonymous@project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     }
   }
 }

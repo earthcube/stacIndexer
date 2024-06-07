@@ -5,52 +5,46 @@
   ],
   "type": "Feature",
   "id": "example_faasr",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-149.6106, 18.1135, -66.7987, 68.6698]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-102.4471, 39.7582],
+      [-66.9868, 18.1135],
+      [-84.4374, 31.1854],
       [-66.7987, 18.1741],
+      [-72.3295, 42.4719],
+      [-96.6038, 39.1051],
+      [-83.5038, 35.6904],
       [-77.9832, 39.0956],
-      [-82.0084, 29.676],
-      [-96.443, 38.9459],
-      [-149.143, 68.6698],
-      [-97.7823, 33.3785],
-      [-82.0177, 29.6878],
-      [-149.6106, 68.6307],
-      [-147.504, 65.1532],
-      [-105.5442, 40.035],
       [-89.7048, 45.9983],
       [-121.9338, 45.7908],
+      [-87.4077, 32.9604],
+      [-82.0084, 29.676],
+      [-96.443, 38.9459],
+      [-122.1655, 44.2596],
+      [-149.143, 68.6698],
+      [-78.1473, 38.8943],
+      [-97.7823, 33.3785],
       [-99.1139, 47.1591],
       [-99.2531, 47.1298],
       [-111.7979, 40.7839],
-      [-119.0274, 36.9559],
-      [-88.1589, 31.8534],
-      [-105.9154, 39.8914],
-      [-83.5038, 35.6904],
+      [-82.0177, 29.6878],
       [-111.5081, 33.751],
       [-119.2575, 37.0597],
+      [-119.0274, 36.9559],
+      [-88.1589, 31.8534],
+      [-149.6106, 68.6307],
       [-84.2793, 35.9574],
+      [-105.9154, 39.8914],
       [-110.5871, 44.9501],
       [-96.6242, 34.4442],
-      [-89.4737, 46.2097],
-      [-66.9868, 18.1135],
-      [-84.4374, 31.1854],
-      [-72.3295, 42.4719],
-      [-96.6038, 39.1051],
-      [-87.4077, 32.9604],
-      [-122.1655, 44.2596],
-      [-78.1473, 38.8943],
-      [-87.7982, 32.5415]
+      [-87.7982, 32.5415],
+      [-147.504, 65.1532],
+      [-105.5442, 40.035],
+      [-89.4737, 46.2097]
     ]
   },
   "properties": {
@@ -180,7 +174,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -198,7 +192,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -213,20 +207,20 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {
       "type": "application/x-parquet",
       "title": "Database Access for Daily Water_temperature",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=temperature/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=temperature/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "href": "s3://anonymous@project_id=neon4cast/duration=P1D/variable=temperature/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=neon4cast/duration=P1D/variable=temperature/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "4": {
       "type": "application/x-parquet",
       "title": "Database Access for Daily Dissolved_oxygen",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "href": "s3://anonymous@project_id=neon4cast/duration=P1D/variable=oxygen/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=neon4cast/duration=P1D/variable=oxygen/model_id=example_faasr?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     }
   }
 }

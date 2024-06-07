@@ -10,6 +10,16 @@
   ],
   "type": "Collection",
   "sci:doi": "10.1002/fee.2616",
+  "sci:publications": [
+    {
+      "doi": "10.1002/fee.2616",
+      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+    },
+    {
+      "doi": "10.1002/ecs2.4686",
+      "citation": "Dietze, M., R.Q. Thomas, J. Peters, C. Boettiger, A. Shiklomanov, and J. Ashander. 2023. A community convention for ecological forecasting: output files and metadata v1.0. Ecosphere 14: e4686 https://doi.org/10.1002/ecs2.4686"
+    }
+  ],
   "links": [
     {
       "rel": "child",
@@ -34,7 +44,7 @@
     {
       "rel": "root",
       "type": "application/json",
-      "href": "../catalog.json"
+      "href": "../collection.json"
     },
     {
       "rel": "self",
@@ -62,19 +72,24 @@
   "extent": {
     "spatial": {
       "bbox": [
-        [-149.6106, 18.1135, -66.7987, 68.6698]
+        -149.6106, 18.1135, -66.7987, 68.6698
       ]
     },
     "temporal": {
       "interval": [
         [
           "2022-01-01T00:00:00Z",
-          "2026-12-20T00:00:00Z"
+          "2026-12-27T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
+    {
+      "name": "13 columns",
+      "type": null,
+      "description": {}
+    },
     {
       "name": "datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -134,22 +149,17 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "reference_date",
-      "type": "string",
-      "description": "date that the forecast was initiated"
     }
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/?endpoint_override=sdsc.osn.xsede.org",
+      "href": "s3://anonymous@bio230014-bucket01/challenges/scores/parquet/?endpoint_override=sdsc.osn.xsede.org",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |>\n dplyr::filter(variable %in% c(\"oxygen\", \"temperature\", \"chla\")) |>\n dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |>\n dplyr::filter(variable %in% c(\"oxygen\", \"temperature\", \"chla\")) |>\n dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
       "href": "https://projects.ecoforecast.org/neon4cast-catalog/img/neon_buoy.jpg",

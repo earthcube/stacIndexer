@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "baseline_ensemble",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    -156.6194, 17.9696, -66.7987, 71.2824
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-122.3303, 45.7624],
@@ -94,13 +88,14 @@
       [-89.4737, 46.2097],
       [-89.7048, 45.9983],
       [-99.2531, 47.1298],
-      [-99.1139, 47.1591]
+      [-99.1139, 47.1591],
+      [-147.504, 65.1532]
     ]
   },
   "properties": {
-    "description": "\nmodel info: NA\n\nSites: ABBY, BART, BLAN, CLBJ, CPER, DCFS, DELA, DSNY, GRSM, GUAN, HARV, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TREE, UKFS, UNDE, WOOD, WREF, YELL, BONA, DEJU, HEAL, TOOL, BARR, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, CRAM, LIRO, PRPO, PRLA\n\nVariables: Daily Red_chromatic_coordinate, Daily Water_temperature",
+    "description": "\nmodel info: NA\n\nSites: ABBY, BART, BLAN, CLBJ, CPER, DCFS, DELA, DSNY, GRSM, GUAN, HARV, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TREE, UKFS, UNDE, WOOD, WREF, YELL, BONA, DEJU, HEAL, TOOL, BARR, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, CRAM, LIRO, PRPO, PRLA, CARI\n\nVariables: Daily Red_chromatic_coordinate, Daily Water_temperature",
     "start_datetime": "2023-11-14",
-    "end_datetime": "2024-04-06",
+    "end_datetime": "2024-05-12",
     "providers": [
       {
         "url": "pending",
@@ -239,7 +234,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -257,7 +252,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -272,7 +267,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {

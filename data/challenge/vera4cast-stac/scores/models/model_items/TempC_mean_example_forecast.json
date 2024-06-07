@@ -4,25 +4,19 @@
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Feature",
-  "id": "TempC_mean_example_forecast",
+  "id": "TempC_mean_example_forecast_DO_mgL_mean_P1D_scores",
   "bbox":
-    [
-      -79.8441,
-      37.3217,
-      -79.8146,
-      37.3217
-    ]
+    ["Inf", "Inf", "-Inf", "-Inf"]
   ,
   "geometry": {
     "type": "MultiPoint",
-    "coordinates": [
-      [-79.8372, 37.3032]
-    ]
+    "coordinates": []
   },
   "properties": {
+    "title": "TempC_mean_example_forecast",
     "description": [],
-    "start_datetime": "2023-11-07",
-    "end_datetime": "2024-04-24",
+    "start_datetime": "Inf",
+    "end_datetime": "-Inf",
     "providers": [
       {
         "url": "pending",
@@ -44,10 +38,14 @@
     "license": "CC0-1.0",
     "keywords": [
       "Forecasting",
-      "vera4cast",
-      "Daily Water_temperature"
+      "vera4cast"
     ],
     "table:columns": [
+      {
+        "name": "21 columns",
+        "type": null,
+        "description": {}
+      },
       {
         "name": "reference_datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -66,7 +64,7 @@
       {
         "name": "family",
         "type": "string",
-        "description": "For ensembles: `ensemble.` Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.` For summary statistics: `summary.`If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
+        "description": "For ensembles: “ensemble.” Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.” For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
       },
       {
         "name": "pub_datetime",
@@ -147,11 +145,6 @@
         "name": "model_id",
         "type": "string",
         "description": "unique model identifier"
-      },
-      {
-        "name": "date",
-        "type": "string",
-        "description": "ISO 8601 (ISO 2019) date of the predicted value; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5of the EFI convention. For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
       }
     ]
   },
@@ -165,7 +158,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -183,7 +176,7 @@
     },
     {
       "rel": "item",
-      ]"href": "https://example.com/",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -198,14 +191,20 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      ]"href": "https://example.com/",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {
       "type": "application/x-parquet",
-      "title": "Database Access for Daily Water_temperature",
-      "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=TempC_mean_example_forecast?endpoint_override=renc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=TempC_mean_example_forecast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "title": "Database Access for NA",
+      "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=NA/duration=NA/variable=NA/model_id=TempC_mean_example_forecast?endpoint_override=renc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=NA/duration=NA/variable=NA/model_id=TempC_mean_example_forecast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+    },
+    "4": {
+      "type": "application/x-parquet",
+      "title": "Database Access for ",
+      "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=/duration=/variable=/model_id=TempC_mean_example_forecast?endpoint_override=renc.osn.xsede.org",
+      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=/duration=/variable=/model_id=TempC_mean_example_forecast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     }
   }
 }

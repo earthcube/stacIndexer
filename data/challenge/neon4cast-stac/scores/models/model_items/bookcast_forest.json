@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "bookcast_forest",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    -87.3933, 29.6893, -81.9934, 32.9505
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-87.3933, 32.9505],
@@ -24,7 +18,7 @@
   "properties": {
     "description": "\nmodel info: A simple daily timestep process-based model of a terrestrial carbon cycle.  It includes leaves, wood, and soil pools.  It uses a light-use efficiency GPP model to convert PAR to carbon. The model is derived from https://github.com/mdietze/FluxCourseForecast.\n\nSites: TALL, OSBS\n\nVariables: Daily Net_ecosystem_exchange",
     "start_datetime": "2024-01-10",
-    "end_datetime": "2024-03-18",
+    "end_datetime": "2024-05-06",
     "providers": [
       {
         "url": "pending",
@@ -162,7 +156,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },

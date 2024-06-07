@@ -1,6 +1,6 @@
 {
   "id": "Daily_oxygen_concentration",
-  "description": "This page includes all models for the Daily_oxygen_concentration variable.",
+  "description": "All models for the Daily_oxygen_concentration variable.",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
@@ -9,52 +9,87 @@
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "https://doi.org/10.1002/fee.2616",
+  "sci:doi": "10.1002/fee.2616",
+  "sci:publications": [
+    {
+      "doi": "10.1002/fee.2616",
+      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+    },
+    {
+      "doi": "10.5194/bg-20-5211-2023",
+      "citation": "Delany, A., Ladwig, R., Buelo, C., Albright, E., and Hanson, P. C.: The influence of carbon cycling on oxygen depletion in north-temperate lakes, Biogeosciences, 20, 5211–5228, https://doi.org/10.5194/bg-20-5211-2023, 2023."
+    }
+  ],
   "links": [
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/asl.auto.arima.json"
+      "href": "./models/asl.auto.arima.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/asl.ets.json"
+      "href": "./models/asl.ets.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/asl.tbats.json"
+      "href": "./models/asl.met.lm.step.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/climatology.json"
+      "href": "./models/asl.met.lm.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/gfs_seamless.json"
+      "href": "./models/asl.tbats.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/glm_aed_v1.json"
+      "href": "./models/asl.temp.lm.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/historic_mean.json"
+      "href": "./models/climatology.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/monthly_mean.json"
+      "href": "./models/fableNNETAR.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/persistenceRW.json"
+      "href": "./models/fableNNETAR_focal.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/gfs_seamless.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/glm_aed_v1.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/historic_mean.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/monthly_mean.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/persistenceRW.json"
     },
     {
       "rel": "parent",
@@ -73,7 +108,7 @@
     },
     {
       "rel": "cite-as",
-      "href": "http://example.com/broke"
+      "href": "https://doi.org/10.1002/fee.2616"
     },
     {
       "rel": "about",
@@ -99,12 +134,17 @@
       "interval": [
         [
           "2023-10-14T00:00:00Z",
-          "2024-04-24T00:00:00Z"
+          "2024-06-05T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
+    {
+      "name": "21 columns",
+      "type": null,
+      "description": {}
+    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -123,7 +163,7 @@
     {
       "name": "family",
       "type": "string",
-      "description": "For ensembles: `ensemble.` Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The `sample` distribution is synonymous with `ensemble.` For summary statistics: `summary.`If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
+      "description": "For ensembles: “ensemble.” Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.” For summary statistics: “summary.”If this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
     },
     {
       "name": "pub_datetime",
@@ -204,11 +244,6 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "date",
-      "type": "string",
-      "description": "ISO 8601 (ISO 2019) date of the predicted value; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5of the EFI convention. For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
     }
   ],
   "assets": {
@@ -222,12 +257,12 @@
       "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
-      "href": "pending",
+      "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/bvr_platform_green.jpg",
       "type": "image/JPEG",
       "roles": [
         "thumbnail"
       ],
-      "title": "pending"
+      "title": "Thumbnail Image"
     }
   }
 }

@@ -10,121 +10,122 @@
   ],
   "type": "Collection",
   "sci:doi": "10.1002/fee.2616",
+  "sci:publications": {},
   "links": [
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/mean.json"
+      "href": "./models/mean.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_arima.json"
+      "href": "./models/tg_arima.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_ets.json"
+      "href": "./models/tg_ets.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_humidity_lm.json"
+      "href": "./models/tg_humidity_lm.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_lasso.json"
+      "href": "./models/tg_lasso.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_precip_lm.json"
+      "href": "./models/tg_precip_lm.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_randfor.json"
+      "href": "./models/tg_randfor.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_tbats.json"
+      "href": "./models/tg_tbats.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_temp_lm_all_sites.json"
+      "href": "./models/tg_temp_lm_all_sites.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_humidity_lm_all_sites.json"
+      "href": "./models/tg_humidity_lm_all_sites.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_temp_lm.json"
+      "href": "./models/tg_temp_lm.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_lasso_all_sites.json"
+      "href": "./models/tg_lasso_all_sites.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_precip_lm_all_sites.json"
+      "href": "./models/tg_precip_lm_all_sites.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_randfor_all_sites.json"
+      "href": "./models/tg_randfor_all_sites.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/tg_auto_adam.json"
+      "href": "./models/tg_auto_adam.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_lm_temp2m_mod_temp.json"
+      "href": "./models/bet_lm_temp2m_mod_temp.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_example_lm_temp2m_CMCC_CM2_VHR4.json"
+      "href": "./models/bet_lm_precip_clim_ensemble.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_example_mod_naive.json"
+      "href": "./models/bet_lm_temp_clim_ensemble.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_example_mod_null.json"
+      "href": "./models/bet_example_lm_temp2m_CMCC_CM2_VHR4.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_lm_precip_clim_ensemble.json"
+      "href": "./models/bet_example_mod_naive.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_lm_temp_clim_ensemble.json"
+      "href": "./models/bet_example_mod_null.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_lm_temp_precip_clim_ensemble.json"
+      "href": "./models/bet_lm_temp_precip_clim_ensemble.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "../../models/model_items/bet_abund_example_tslm_temp.json"
+      "href": "./models/bet_abund_example_tslm_temp.json"
     },
     {
       "rel": "parent",
@@ -161,7 +162,7 @@
   "title": "Weekly_beetle_community_abundance",
   "extent": {
     "spatial": {
-      "bbox": [
+      "bbox":
         [-156.6194, 17.9696, -66.8687, 71.2824]
       ]
     },
@@ -169,12 +170,17 @@
       "interval": [
         [
           "2022-01-01T00:00:00Z",
-          "2025-04-14T00:00:00Z"
+          "2025-05-26T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
+    {
+      "name": "13 columns",
+      "type": null,
+      "description": {}
+    },
     {
       "name": "datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -234,11 +240,6 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "reference_date",
-      "type": "string",
-      "description": "date that the forecast was initiated"
     }
   ],
   "assets": {

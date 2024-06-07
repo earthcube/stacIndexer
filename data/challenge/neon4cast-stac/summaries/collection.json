@@ -41,12 +41,6 @@
       "title": "Ticks"
     },
     {
-      "rel": "child",
-      "type": "application/json",
-      "href": "models/collection.json",
-      "title": "group item"
-    },
-    {
       "rel": "parent",
       "type": "application/json",
       "href": "../catalog.json"
@@ -63,7 +57,7 @@
     },
     {
       "rel": "cite-as",
-      "href": "10.1002/fee.2616"
+      "href": "https://doi.org/10.1002/fee.2616"
     },
     {
       "rel": "about",
@@ -82,24 +76,24 @@
   "extent": {
     "spatial": {
       "bbox": [
-        [
-          -156.6194,
-          17.9696,
-          -66.7987,
-          71.2824
-        ]
+        -156.6194, 17.9696, -66.7987, 71.2824
       ]
     },
     "temporal": {
       "interval": [
         [
           "2022-01-01T00:00:00Z",
-          "2026-12-20T00:00:00Z"
+          "2026-12-27T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
+    {
+      "name": "17 columns",
+      "type": null,
+      "description": {}
+    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -179,22 +173,17 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "reference_date",
-      "type": "string",
-      "description": "date that the forecast was initiated"
     }
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/?endpoint_override=sdsc.osn.xsede.org",
+      "href": "s3://anonymous@?endpoint_override=sdsc.osn.xsede.org",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for the Forecasting Challenge.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries/?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for the Forecasting Challenge.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
       "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/thumbnail_plots/neon_desert.jpg",

@@ -5,16 +5,10 @@
   ],
   "type": "Feature",
   "id": "tg_humidity_lm_all_sites",
-  "bbox": [
-
-      -156.6194,
-      71.2824,
-      -66.7987,
-      71.2824
-
-  ],
-  "geometry":
-     {
+  "bbox":
+    [-156.6194, 17.9696, -66.7987, 71.2824]
+  ,
+  "geometry": {
     "type": "MultiPoint",
     "coordinates": [
       [-82.0084, 29.676],
@@ -74,15 +68,6 @@
       [-99.2413, 47.1282],
       [-121.9519, 45.8205],
       [-110.5391, 44.9535],
-      [-66.7987, 18.1741],
-      [-72.3295, 42.4719],
-      [-96.6038, 39.1051],
-      [-83.5038, 35.6904],
-      [-77.9832, 39.0956],
-      [-121.9338, 45.7908],
-      [-87.4077, 32.9604],
-      [-96.443, 38.9459],
-      [-122.1655, 44.2596],
       [-149.143, 68.6698],
       [-78.1473, 38.8943],
       [-97.7823, 33.3785],
@@ -97,11 +82,20 @@
       [-96.6242, 34.4442],
       [-147.504, 65.1532],
       [-105.5442, 40.035],
-      [-66.9868, 18.1135]
+      [-66.9868, 18.1135],
+      [-66.7987, 18.1741],
+      [-72.3295, 42.4719],
+      [-96.6038, 39.1051],
+      [-83.5038, 35.6904],
+      [-77.9832, 39.0956],
+      [-121.9338, 45.7908],
+      [-87.4077, 32.9604],
+      [-96.443, 38.9459],
+      [-122.1655, 44.2596]
     ]
   },
   "properties": {
-    "description": "\nmodel info: NA\n\nSites: BARC, BLWA, CRAM, FLNT, LIRO, PRLA, PRPO, SUGG, TOMB, TOOK, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, REDB, SYCA, TECR, WALK, WLOU, ARIK, BIGC, BLDE, BLUE, CARI, COMO, CUPE\n\nVariables: Daily Chlorophyll_a, Daily Green_chromatic_coordinate, Daily latent_heat_flux, Daily Net_ecosystem_exchange, Daily Dissolved_oxygen, Daily Red_chromatic_coordinate, Daily Water_temperature, Weekly beetle_community_abundance, Weekly beetle_community_richness",
+    "description": "\nmodel info: NA\n\nSites: BARC, BLWA, CRAM, FLNT, LIRO, PRLA, PRPO, SUGG, TOMB, TOOK, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, OKSR, POSE, PRIN, REDB, SYCA, TECR, WALK, WLOU, ARIK, BIGC, BLDE, BLUE, CARI, COMO, CUPE, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA\n\nVariables: Daily Chlorophyll_a, Daily Green_chromatic_coordinate, Daily latent_heat_flux, Daily Net_ecosystem_exchange, Daily Dissolved_oxygen, Daily Red_chromatic_coordinate, Daily Water_temperature, Weekly beetle_community_abundance, Weekly beetle_community_richness",
     "start_datetime": "2023-11-14",
     "end_datetime": "2024-02-16",
     "providers": [
@@ -249,7 +243,7 @@
     },
     {
       "rel": "root",
-      "href": "../../catalog.json",
+      "href": "../../../catalog.json",
       "type": "application/json",
       "title": "Forecast Catalog"
     },
@@ -267,7 +261,7 @@
     },
     {
       "rel": "item",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -282,7 +276,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "https://github.com/radiantearth",
+      "href": "example.com",
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {
