@@ -291,32 +291,53 @@ def clear_output_folder(folder_path):
 def create_folder_if_not_exist(folder_path):
     os.makedirs(folder_path, exist_ok=True)
 
+def adjust_bbox(bbox):
+    # Check if the bbox has an extra pair of square brackets
+    if isinstance(bbox, list) and len(bbox) == 1 and isinstance(bbox[0], list):
+        # Flatten the list by removing the outer list
+        return bbox[0]
+    return bbox
 
-def replace_in_file(file_path, old_string, new_string):
-    print(file_path)
-    # Read the contents of the file
-    with open(file_path, 'r') as file:
-        content = file.read()
 
-    # Replace the target string
-    new_content = content.replace(old_string, new_string)
+def process_file(file_path, old_string, new_string):
+    try:
+        # Read the contents of the file
+        with open(file_path, 'r') as file:
+            content = file.read()
 
-    # Write the modified content back to the file
-    with open(file_path, 'w') as file:
-        file.write(new_content)
+        # Replace the target string
+        new_content = content.replace(old_string, new_string)
+
+        # Ensure the content is valid JSON after replacement
+        try:
+            json_content = json.loads(new_content)
+        except json.JSONDecodeError as e:
+            print(f"Skipping invalid JSON file after replacement: {file_path} ({e})")
+            return
+
+        # Check if 'bbox' is in the JSON and adjust if necessary
+        if "bbox" in json_content:
+            json_content["bbox"] = adjust_bbox(json_content["bbox"])
+
+        # Write the modified JSON back to the file
+        with open(file_path, 'w') as file:
+            json.dump(json_content, file, indent=4)
+
+    except Exception as e:
+        print(f"An error occurred while processing {file_path}: {e}")
 
 
 def replace_in_folder(folder_path, old_string, new_string):
     # Walk through all files in the directory
     for root, _, files in os.walk(folder_path):
         for file_name in files:
+            # Check if the file is a JSON file
             if file_name.endswith('.json'):
                 # Construct full file path
                 file_path = os.path.join(root, file_name)
 
-                # Replace in file
-                replace_in_file(file_path, old_string, new_string)
-                print(f"Updated {file_path}")
+                # Process the file
+                process_file(file_path, old_string, new_string)
 
 def walk_stac(cf):
 
