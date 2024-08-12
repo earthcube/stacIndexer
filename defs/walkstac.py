@@ -215,9 +215,7 @@ def validate_catalog(file_path):
 def process_catalog(catalog, base):
     try:
         # Check if the catalog has a method or attribute to get its href (URL or path)
-        print("xxx")
         catalog_url = catalog.get_self_href()  # This is just an example; adjust based on actual methods available
-        print(catalog_url)
 
         # Now open a client with the correct URL or path
         client = Client.open(catalog_url)
@@ -229,7 +227,7 @@ def process_catalog(catalog, base):
                 filepath = f"{base}/{item.target}"
                 validate_collection(filepath)
     except Exception as e:
-        print(f"    *An error occurred: {e}")
+        print(f"    An error occurred: {e}")
 
 
 def walk_catalog(root_catalog):
@@ -242,8 +240,6 @@ def walk_catalog(root_catalog):
             for l2 in l2_child_catalogs:
                 walk_catalog(child)
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
-            print("xxx")
-            print(child.id)
             try:
                 collections = list(child.get_all_collections())
                 print(f"Number of collections: {len(collections)}")
@@ -252,7 +248,7 @@ def walk_catalog(root_catalog):
                     print(f"- {collection.id}")
                     walk_collection(root_catalog, child, collection)
             except Exception as e:
-                print(f"    **An error occurred: {e}")
+                print(f"    An error occurred: {e}")
         else:
             logging.error(f"uknonwn type")
 
@@ -354,9 +350,6 @@ def walk_stac(cf):
     replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
     replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
     replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
-    replace_in_folder('./data/challenge', r'\"', '`')
-    replace_in_folder('./data/challenge', r"\u201d", '`')
-    replace_in_folder('./data/challenge', r"\u201c", '`')
 
 
     root_catalog = Catalog.from_file(href=cf)
