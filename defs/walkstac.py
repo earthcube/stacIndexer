@@ -291,10 +291,41 @@ def clear_output_folder(folder_path):
 def create_folder_if_not_exist(folder_path):
     os.makedirs(folder_path, exist_ok=True)
 
+
+def replace_in_file(file_path, old_string, new_string):
+    print(file_path)
+    # Read the contents of the file
+    with open(file_path, 'r') as file:
+        content = file.read()
+
+    # Replace the target string
+    new_content = content.replace(old_string, new_string)
+
+    # Write the modified content back to the file
+    with open(file_path, 'w') as file:
+        file.write(new_content)
+
+
+def replace_in_folder(folder_path, old_string, new_string):
+    # Walk through all files in the directory
+    for root, _, files in os.walk(folder_path):
+        for file_name in files:
+            if file_name.endswith('.json'):
+                # Construct full file path
+                file_path = os.path.join(root, file_name)
+
+                # Replace in file
+                replace_in_file(file_path, old_string, new_string)
+                print(f"Updated {file_path}")
+
 def walk_stac(cf):
 
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
+
+    # Call the function
+    replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', '"href": null', '"href": "www.example.com"')
 
     root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)
