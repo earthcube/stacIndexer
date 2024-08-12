@@ -5,25 +5,24 @@
   ],
   "type": "Feature",
   "id": "climatology_Temp_C_mean_P1D_summaries",
-  "bbox":
-    [-79.8372, 37.3032, -79.8159, 37.3129]
-  ,
+  "bbox": [-79.8372, 37.3032, -79.8159, 37.3129],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
-      [-79.8159, 37.3129],
+      [-79.8357, 37.3078],
       [-79.8372, 37.3032],
-      [-79.8357, 37.3078]
+      [-79.8159, 37.3129]
     ]
   },
   "properties": {
     "title": "climatology",
     "description": "Historical DOY mean and sd.  Assumes normal distribution",
-    "start_datetime": "2023-09-21",
-    "end_datetime": "2024-07-11",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2023-09-21T00:00:00Z",
+    "end_datetime": "2024-09-05T00:00:00Z",
     "providers": [
       {
-        "url": "rqthomas@vt.edu",
+        "url": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
         "name": "Quinn Thomas",
         "roles": [
           "producer",
@@ -48,16 +47,12 @@
       "Water_temperature",
       "Temp_C_mean",
       "Daily",
-      "bvre",
+      "P1D",
+      "tubr",
       "fcre",
-      "tubr"
+      "bvre"
     ],
     "table:columns": [
-      {
-        "name": "18 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "reference_datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -70,7 +65,7 @@
       },
       {
         "name": "datetime",
-        "type": "date32[day]",
+        "type": "timestamp[us, tz=UTC]",
         "description": "datetime of the forecasted value (ISO 8601)"
       },
       {

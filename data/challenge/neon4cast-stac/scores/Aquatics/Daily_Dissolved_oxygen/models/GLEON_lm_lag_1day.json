@@ -5,9 +5,7 @@
   ],
   "type": "Feature",
   "id": "GLEON_lm_lag_1day_oxygen_P1D_scores",
-  "bbox":
-    [-149.6106, 29.676, -82.0084, 68.6307]
-  ,
+  "bbox": [-149.6106, 29.676, -82.0084, 68.6307],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -22,13 +20,14 @@
   },
   "properties": {
     "title": "GLEON_lm_lag_1day",
-    "description": "This page includes scores for the Daily_Dissolved_oxygen variable for the GLEON_lm_lag_1day model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). We provide the code to access the scores data as an asset",
-    "start_datetime": "2023-11-14",
-    "end_datetime": "2024-02-02",
+    "description": "All scores for the Daily_Dissolved_oxygen variable for the GLEON_lm_lag_1day model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2022-11-01T00:00:00Z",
+    "end_datetime": "2024-02-02T00:00:00Z",
     "providers": [
       {
-        "url": "pending",
-        "name": "pending",
+        "url": "https://projects.ecoforecast.org/neon4cast-ci/",
+        "name": "NEON Ecological Forecasting Project",
         "roles": [
           "producer",
           "processor",
@@ -52,6 +51,7 @@
       "Dissolved_oxygen",
       "oxygen",
       "Daily",
+      "P1D",
       "BARC",
       "CRAM",
       "LIRO",
@@ -61,11 +61,6 @@
       "TOOK"
     ],
     "table:columns": [
-      {
-        "name": "20 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "reference_datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -142,14 +137,14 @@
         "description": "upper 10 percentile value of forecast"
       },
       {
-        "name": "project_id",
-        "type": "string",
-        "description": "unique project identifier"
-      },
-      {
         "name": "duration",
         "type": "string",
         "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+      },
+      {
+        "name": "model_id",
+        "type": "string",
+        "description": "unique model identifier"
       },
       {
         "name": "variable",
@@ -157,9 +152,9 @@
         "description": "name of forecasted variable"
       },
       {
-        "name": "model_id",
+        "name": "project_id",
         "type": "string",
-        "description": "unique model identifier"
+        "description": "unique project identifier"
       }
     ]
   },
@@ -191,7 +186,7 @@
     },
     {
       "rel": "item",
-      "href": "example.com",
+      "href": null,
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -206,7 +201,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "example.com",
+      "href": null,
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {

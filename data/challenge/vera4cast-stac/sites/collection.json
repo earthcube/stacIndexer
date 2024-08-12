@@ -27,11 +27,11 @@
     },
     {
       "rel": "cite-as",
-      "href": "https://doi.org/10.1002/fee.2616"
+      "href": "10.1002/fee.2616"
     },
     {
       "rel": "about",
-      "href": "www.ltreb-reservoirs.org/vera4cast",
+      "href": "https://www.ltreb-reservoirs.org/vera4cast/",
       "type": "text/html",
       "title": "VERA Forecasting Challenge Documentation"
     },
@@ -46,19 +46,19 @@
   "extent": {
     "spatial": {
       "bbox": [
-
+        [
           -79.8441,
           37.3022,
           -79.8146,
           37.3217
-
+        ]
       ]
     },
     "temporal": {
       "interval": [
         [
           "2013-03-07T00:00:00Z",
-          "2024-06-05T00:00:00Z"
+          "2024-08-10T00:00:00Z"
         ]
       ]
     }
@@ -103,7 +103,7 @@
       "roles": [
         "data"
       ],
-      "description": "This R code will return results for the site metadata.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv\nsites <- readr::read_csv(url, show_col_types = FALSE)\n```"
+      "description": "This R code will return results for the site metadata.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv\"\nsites <- readr::read_csv(url, show_col_types = FALSE)\n```"
     },
     "thumbnail": {
       "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/thumbnail_plots/fcr_scenic.jpg",

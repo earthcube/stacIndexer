@@ -1,40 +1,47 @@
 {
   "id": "Daily_oxygen_concentration",
-  "description": "All models for the Daily_oxygen_concentration variable.",
+  "description": "All models for the Daily_oxygen_concentration variable. This variable describes the daily mean oxygen in milligrams per liter from EXO;  focal depths bvre = 1.5 m, fcre = 1.6 m, measured using EXO and RDO",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "10.1002/fee.2616",
-  "sci:publications": [
-    {
-      "doi": "10.1002/fee.2616",
-      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
-    },
-    {
-      "doi": "10.5194/bg-20-5211-2023",
-      "citation": "Delany, A., Ladwig, R., Buelo, C., Albright, E., and Hanson, P. C.: The influence of carbon cycling on oxygen depletion in north-temperate lakes, Biogeosciences, 20, 5211–5228, https://doi.org/10.5194/bg-20-5211-2023, 2023."
-    }
-  ],
   "links": [
     {
       "rel": "item",
       "type": "application/json",
+      "href": "./models/asl.met.lm.step.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/asl.met.lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/asl.tbats.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/asl.temp.lm.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/fableNNETAR_focal.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/fableNNETAR.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
       "href": "./models/glm_aed_v1.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/climatology.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/historic_mean.json"
     },
     {
       "rel": "item",
@@ -49,47 +56,22 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.auto.arima.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/asl.ets.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.tbats.json"
+      "href": "./models/climatology.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/gfs_seamless.json"
+      "href": "./models/historic_mean.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/fableNNETAR.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/fableNNETAR_focal.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/asl.met.lm.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/asl.met.lm.step.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/asl.temp.lm.json"
+      "href": "./models/asl.auto.arima.json"
     },
     {
       "rel": "parent",
@@ -134,17 +116,12 @@
       "interval": [
         [
           "2023-10-14T00:00:00Z",
-          "2024-07-11T00:00:00Z"
+          "2024-09-05T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "18 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -157,7 +134,7 @@
     },
     {
       "name": "datetime",
-      "type": "date32[day]",
+      "type": "timestamp[us, tz=UTC]",
       "description": "datetime of the forecasted value (ISO 8601)"
     },
     {
@@ -233,13 +210,13 @@
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean?endpoint_override=renc.osn.xsede.org",
+      "href": "\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/project_id=vera4cast/duration=Daily/variable=DO_mgL_mean?endpoint_override=renc.osn.xsede.org\"",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/project_id=vera4cast/duration=Daily/variable=DO_mgL_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
       "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/bvr_platform_green.jpg",

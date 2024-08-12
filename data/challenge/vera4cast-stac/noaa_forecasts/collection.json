@@ -4,8 +4,6 @@
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
@@ -76,24 +74,19 @@
   "extent": {
     "spatial": {
       "bbox": [
-        -79.8372, 37.3032, -79.8372, 37.3032
+        [-79.8372, 37.3032, -79.8372, 37.3032]
       ]
     },
     "temporal": {
       "interval": [
         [
           "2020-01-01T00:00:00Z",
-          "2024-06-06T00:00:00Z"
+          "2024-08-11T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "5 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "parameter",
       "type": "double",

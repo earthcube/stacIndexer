@@ -5,24 +5,23 @@
   ],
   "type": "Feature",
   "id": "fableNNETAR_DO_mgL_mean_P1D_summaries",
-  "bbox":
-    [-79.8372, 37.3032, -79.8159, 37.3129]
-  ,
+  "bbox": [-79.8372, 37.3032, -79.8159, 37.3129],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
-      [-79.8159, 37.3129],
-      [-79.8372, 37.3032]
+      [-79.8372, 37.3032],
+      [-79.8159, 37.3129]
     ]
   },
   "properties": {
     "title": "fableNNETAR",
     "description": "autoregressive neural net fit using the NNETAR() function in the fable R package",
-    "start_datetime": "2024-04-26",
-    "end_datetime": "2024-06-03",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2024-04-26T00:00:00Z",
+    "end_datetime": "2024-06-03T00:00:00Z",
     "providers": [
       {
-        "url": "melofton@vt.edu",
+        "url": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableNNETAR.R",
         "name": "Mary Lofton",
         "roles": [
           "producer",
@@ -47,15 +46,11 @@
       "oxygen_concentration",
       "DO_mgL_mean",
       "Daily",
-      "bvre",
-      "fcre"
+      "P1D",
+      "fcre",
+      "bvre"
     ],
     "table:columns": [
-      {
-        "name": "18 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "reference_datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -68,7 +63,7 @@
       },
       {
         "name": "datetime",
-        "type": "date32[day]",
+        "type": "timestamp[us, tz=UTC]",
         "description": "datetime of the forecasted value (ISO 8601)"
       },
       {

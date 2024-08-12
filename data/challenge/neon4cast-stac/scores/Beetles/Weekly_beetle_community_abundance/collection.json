@@ -1,21 +1,17 @@
 {
   "id": "Weekly_beetle_community_abundance",
-  "description": "This page includes all models for the Weekly_beetle_community_abundance variable.",
+  "description": "All models for the Weekly_beetle_community_abundance variable. The variable description is as follows: Total number of carabid individuals per trap-night, estimated each week of the year at each NEON site",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "10.1002/fee.2616",
-  "sci:publications": {},
   "links": [
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/tg_ets.json"
+      "href": "./models/tg_arima.json"
     },
     {
       "rel": "item",
@@ -30,7 +26,27 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/tg_lasso_all_sites.json"
+      "href": "./models/tg_lasso.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_ets.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_tbats.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_randfor.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_temp_lm.json"
     },
     {
       "rel": "item",
@@ -45,87 +61,7 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/tg_randfor.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_randfor_all_sites.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_tbats.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_temp_lm.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/tg_temp_lm_all_sites.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_abund_example_tslm_temp.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_example_lm_temp2m_CMCC_CM2_VHR4.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_example_mod_naive.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_example_mod_null.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_lm_precip_clim_ensemble.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_lm_temp2m_mod_temp.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_lm_temp_clim_ensemble.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/bet_lm_temp_precip_clim_ensemble.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/mean.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_arima.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_auto_adam.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_lasso.json"
     },
     {
       "rel": "parent",
@@ -169,18 +105,13 @@
     "temporal": {
       "interval": [
         [
-          "2023-01-02T00:00:00Z",
-          "2024-05-13T00:00:00Z"
+          "2019-08-12T00:00:00Z",
+          "2024-07-15T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "20 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -257,14 +188,14 @@
       "description": "upper 10 percentile value of forecast"
     },
     {
-      "name": "project_id",
-      "type": "string",
-      "description": "unique project identifier"
-    },
-    {
       "name": "duration",
       "type": "string",
       "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+    },
+    {
+      "name": "model_id",
+      "type": "string",
+      "description": "unique model identifier"
     },
     {
       "name": "variable",
@@ -272,28 +203,28 @@
       "description": "name of forecasted variable"
     },
     {
-      "name": "model_id",
+      "name": "project_id",
       "type": "string",
-      "description": "unique model identifier"
+      "description": "unique project identifier"
     }
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=abundance?endpoint_override=sdsc.osn.xsede.org",
+      "href": "\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=abundance/project_id=neon4cast/duration=Weekly/variable=abundance?endpoint_override=sdsc.osn.xsede.org\"",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=abundance?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=abundance/project_id=neon4cast/duration=Weekly/variable=abundance?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
-      "href": "pending",
+      "href": "https://www.neonscience.org/sites/default/files/styles/max_width_1170px/public/image-content-images/Beetles_pinned.jpg",
       "type": "image/JPEG",
       "roles": [
         "thumbnail"
       ],
-      "title": "pending"
+      "title": "Thumbnail Image"
     }
   }
 }

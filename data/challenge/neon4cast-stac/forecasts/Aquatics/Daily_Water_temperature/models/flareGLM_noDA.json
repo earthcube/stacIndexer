@@ -5,9 +5,7 @@
   ],
   "type": "Feature",
   "id": "flareGLM_noDA_temperature_P1D_forecast",
-  "bbox":
-    [-149.6106, 29.676, -82.0084, 68.6307]
-  ,
+  "bbox": [-149.6106, 29.676, -82.0084, 68.6307],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -22,12 +20,13 @@
   },
   "properties": {
     "title": "flareGLM_noDA",
-    "description": "This page includes forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: TOOK, BARC, CRAM, LIRO, PRLA, PRPO, SUGG.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members). We provide the code to access the forecast data as an asset",
-    "start_datetime": "2023-03-02",
-    "end_datetime": "2024-07-09",
+    "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: TOOK, BARC, CRAM, LIRO, PRLA, PRPO, SUGG.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2023-03-02T00:00:00Z",
+    "end_datetime": "2024-08-06T00:00:00Z",
     "providers": [
       {
-        "url": "freyao@vt.edu",
+        "url": "https://github.com/FLARE-forecast/NEON-forecast-code/workflows/default",
         "name": "Freya Olsson",
         "roles": [
           "producer",
@@ -52,6 +51,7 @@
       "Water_temperature",
       "temperature",
       "Daily",
+      "P1D",
       "TOOK",
       "BARC",
       "CRAM",
@@ -61,11 +61,6 @@
       "SUGG"
     ],
     "table:columns": [
-      {
-        "name": "13 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -102,9 +97,14 @@
         "description": "datetime that forecast was submitted"
       },
       {
-        "name": "date",
-        "type": "date32[day]",
-        "description": {}
+        "name": "duration",
+        "type": "string",
+        "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+      },
+      {
+        "name": "model_id",
+        "type": "string",
+        "description": "unique model identifier"
       },
       {
         "name": "project_id",
@@ -112,19 +112,9 @@
         "description": "unique identifier for the forecast project"
       },
       {
-        "name": "duration",
+        "name": "reference_date",
         "type": "string",
-        "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-      },
-      {
-        "name": "variable",
-        "type": "string",
-        "description": "name of forecasted variable"
-      },
-      {
-        "name": "model_id",
-        "type": "string",
-        "description": "unique model identifier"
+        "description": "date that the forecast was initiated"
       }
     ]
   },
