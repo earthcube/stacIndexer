@@ -173,7 +173,6 @@ def safe_convert_to_int(value):
         return None  # or return a default value, or raise a custom error
 
 import json
-import requests
 
 def validate_collection(file_path):
     collection = pystac.Collection.from_file(file_path)
@@ -344,9 +343,13 @@ def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
 
-    # Call the function
+    # Resolve schema issues
     replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')
     replace_in_folder('./data/challenge', '"href": null', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', '"href": {}', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', 'InfT00:00:00Z', 'Inf')
+    replace_in_folder('./data/challenge', '-InfT00:00:00Z', '-Inf')
+    replace_in_folder('./data/challenge', '\\"', '`')
 
     root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)
