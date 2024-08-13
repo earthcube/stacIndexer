@@ -5,9 +5,7 @@
   ],
   "type": "Feature",
   "id": "procCTMIMonod_chla_P1D_forecast",
-  "bbox":
-    [-149.6106, 29.676, -82.0084, 68.6307]
-  ,
+  "bbox": [-149.6106, 29.676, -82.0084, 68.6307],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -22,13 +20,14 @@
   },
   "properties": {
     "title": "procCTMIMonod",
-    "description": "This page includes forecasts for the Daily_Chlorophyll_a variable for the procCTMIMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members). We provide the code to access the forecast data as an asset",
-    "start_datetime": "2023-11-13",
-    "end_datetime": "2024-03-06",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the procCTMIMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2023-11-13T00:00:00Z",
+    "end_datetime": "2024-03-06T00:00:00Z",
     "providers": [
       {
-        "url": "pending",
-        "name": "pending",
+        "url": "https://projects.ecoforecast.org/neon4cast-ci/",
+        "name": "NEON Ecological Forecasting Project",
         "roles": [
           "producer",
           "processor",
@@ -52,6 +51,7 @@
       "Chlorophyll_a",
       "chla",
       "Daily",
+      "P1D",
       "BARC",
       "CRAM",
       "LIRO",
@@ -61,11 +61,6 @@
       "TOOK"
     ],
     "table:columns": [
-      {
-        "name": "13 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -102,9 +97,14 @@
         "description": "datetime that forecast was submitted"
       },
       {
-        "name": "date",
-        "type": "date32[day]",
-        "description": {}
+        "name": "duration",
+        "type": "string",
+        "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+      },
+      {
+        "name": "model_id",
+        "type": "string",
+        "description": "unique model identifier"
       },
       {
         "name": "project_id",
@@ -112,19 +112,9 @@
         "description": "unique identifier for the forecast project"
       },
       {
-        "name": "duration",
+        "name": "reference_date",
         "type": "string",
-        "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-      },
-      {
-        "name": "variable",
-        "type": "string",
-        "description": "name of forecasted variable"
-      },
-      {
-        "name": "model_id",
-        "type": "string",
-        "description": "unique model identifier"
+        "description": "date that the forecast was initiated"
       }
     ]
   },
@@ -156,7 +146,7 @@
     },
     {
       "rel": "item",
-      "href": "example.com",
+      "href": null,
       "type": "text/html",
       "title": "Link for Model Code"
     }
@@ -171,7 +161,7 @@
     "2": {
       "type": "text/html",
       "title": "Link for Model Code",
-      "href": "example.com",
+      "href": null,
       "description": "The link to the model code provided by the model submission team"
     },
     "3": {

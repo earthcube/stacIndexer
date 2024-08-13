@@ -5,9 +5,7 @@
   ],
   "type": "Feature",
   "id": "asl.met.lm.step_Temp_C_mean_P1D_summaries",
-  "bbox":
-    [-79.8372, 37.3032, -79.8159, 37.3129]
-  ,
+  "bbox": [-79.8372, 37.3032, -79.8159, 37.3129],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -18,11 +16,12 @@
   "properties": {
     "title": "asl.met.lm.step",
     "description": "Linear regression with air temp, humidity, precip, and wind speed. Model selected using AIC",
-    "start_datetime": "2024-05-06",
-    "end_datetime": "2024-06-19",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2024-05-06T00:00:00Z",
+    "end_datetime": "2024-06-19T00:00:00Z",
     "providers": [
       {
-        "url": "aslewis@vt.edu",
+        "url": "https://github.com/abbylewis/vera_meteor_strike",
         "name": "Abigail Lewis",
         "roles": [
           "producer",
@@ -47,15 +46,11 @@
       "Water_temperature",
       "Temp_C_mean",
       "Daily",
+      "P1D",
       "bvre",
       "fcre"
     ],
     "table:columns": [
-      {
-        "name": "18 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "reference_datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -68,7 +63,7 @@
       },
       {
         "name": "datetime",
-        "type": "date32[day]",
+        "type": "timestamp[us, tz=UTC]",
         "description": "datetime of the forecasted value (ISO 8601)"
       },
       {

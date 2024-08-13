@@ -1,16 +1,12 @@
 {
   "id": "Weekly_beetle_community_richness",
-  "description": "This page includes all models for the Weekly_beetle_community_richness variable.",
+  "description": "All models for the Weekly_beetle_community_richness variable. The variable description is as follows: Total number of unique ‘species’ in a sampling bout for each NEON site each week.",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "10.1002/fee.2616",
-  "sci:publications": {},
   "links": [
     {
       "rel": "item",
@@ -40,22 +36,12 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/mean.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/tg_arima.json"
     },
     {
       "rel": "item",
       "type": "application/json",
       "href": "./models/tg_humidity_lm_all_sites.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_lasso_all_sites.json"
     },
     {
       "rel": "item",
@@ -70,22 +56,12 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/tg_randfor_all_sites.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/tg_temp_lm_all_sites.json"
     },
     {
       "rel": "item",
       "type": "application/json",
       "href": "./models/tg_precip_lm.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_auto_adam.json"
     },
     {
       "rel": "parent",
@@ -122,25 +98,20 @@
   "title": "Weekly_beetle_community_richness",
   "extent": {
     "spatial": {
-      "bbox":[
-        -156.6194, 17.9696, -66.8687, 71.2824
+      "bbox": [
+        [-156.6194, 17.9696, -66.8687, 71.2824]
       ]
     },
     "temporal": {
       "interval": [
         [
           "2023-01-02T00:00:00Z",
-          "2025-05-26T00:00:00Z"
+          "2025-06-23T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "13 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -177,9 +148,14 @@
       "description": "datetime that forecast was submitted"
     },
     {
-      "name": "date",
-      "type": "date32[day]",
-      "description": {}
+      "name": "duration",
+      "type": "string",
+      "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+    },
+    {
+      "name": "model_id",
+      "type": "string",
+      "description": "unique model identifier"
     },
     {
       "name": "project_id",
@@ -187,38 +163,28 @@
       "description": "unique identifier for the forecast project"
     },
     {
-      "name": "duration",
+      "name": "reference_date",
       "type": "string",
-      "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-    },
-    {
-      "name": "variable",
-      "type": "string",
-      "description": "name of forecasted variable"
-    },
-    {
-      "name": "model_id",
-      "type": "string",
-      "description": "unique model identifier"
+      "description": "date that the forecast was initiated"
     }
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=richness?endpoint_override=sdsc.osn.xsede.org",
+      "href": "\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=richness/project_id=neon4cast/duration=Weekly/variable=richness?endpoint_override=sdsc.osn.xsede.org\"",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=richness?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=richness/project_id=neon4cast/duration=Weekly/variable=richness?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
-      "href": "pending",
+      "href": "https://www.neonscience.org/sites/default/files/styles/max_width_1170px/public/image-content-images/Beetles_pinned.jpg",
       "type": "image/JPEG",
       "roles": [
         "thumbnail"
       ],
-      "title": "pending"
+      "title": "Thumbnail Image"
     }
   }
 }

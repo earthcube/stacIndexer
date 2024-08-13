@@ -3,6 +3,7 @@ import os
 import shutil
 
 import pystac
+import requests
 from pystac import Catalog, STACObjectType
 from icecream import ic
 import hashlib
@@ -173,7 +174,6 @@ def safe_convert_to_int(value):
         return None  # or return a default value, or raise a custom error
 
 import json
-import requests
 
 def validate_collection(file_path):
     collection = pystac.Collection.from_file(file_path)
@@ -291,10 +291,100 @@ def clear_output_folder(folder_path):
 def create_folder_if_not_exist(folder_path):
     os.makedirs(folder_path, exist_ok=True)
 
+def adjust_bbox(bbox):
+    # Check if the bbox has an extra pair of square brackets
+    while isinstance(bbox, list) and len(bbox) == 1 and isinstance(bbox[0], list):
+        # Flatten the list by removing the outer list
+        return bbox[0]
+    return bbox
+
+
+def process_file(file_path, old_string, new_string):
+    try:
+        # Read the contents of the file
+        with open(file_path, 'r') as file:
+            content = file.read()
+
+        # Replace the target string
+        new_content = content.replace(old_string, new_string)
+
+        # Ensure the content is valid JSON after replacement
+        try:
+            json_content = json.loads(new_content)
+        except json.JSONDecodeError as e:
+            print(f"Skipping invalid JSON file after replacement: {file_path} ({e})")
+            return
+
+        # Check if 'bbox' is in the JSON and adjust if necessary
+        if "bbox" in json_content:
+            json_content["bbox"] = adjust_bbox(json_content["bbox"])
+
+        # Write the modified JSON back to the file
+        with open(file_path, 'w') as file:
+            json.dump(json_content, file, indent=4)
+
+    except Exception as e:
+        print(f"An error occurred while processing {file_path}: {e}")
+
+
+def replace_in_folder(folder_path, old_string, new_string):
+    # Walk through all files in the directory
+    for root, _, files in os.walk(folder_path):
+        for file_name in files:
+            # Check if the file is a JSON file
+            if file_name.endswith('.json'):
+                # Construct full file path
+                file_path = os.path.join(root, file_name)
+
+                # Process the file
+                process_file(file_path, old_string, new_string)
+
+def download_file_from_github(file_url, local_path):
+    response = requests.get(file_url)
+    if response.status_code == 200:
+        with open(local_path, 'wb') as file:
+            file.write(response.content)
+        print(f"File downloaded: {local_path}")
+    else:
+        print(f"Failed to download file: {response.status_code}")
+
+def download_folder_from_github(repo, folder_path, local_folder_path):
+    clear_output_folder(local_folder_path)
+
+    api_url = f"https://api.github.com/repos/{repo}/contents/{folder_path}"
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        contents = response.json()
+        for item in contents:
+            if item['type'] == 'file':
+                file_url = item['download_url']
+                local_file_path = os.path.join(local_folder_path, item['name'])
+                download_file_from_github(file_url, local_file_path)
+            elif item['type'] == 'dir':
+                new_local_folder_path = os.path.join(local_folder_path, item['name'])
+                os.makedirs(new_local_folder_path, exist_ok=True)
+                download_folder_from_github(repo, item['path'], new_local_folder_path)
+    else:
+        print(f"Failed to retrieve folder contents: {response.status_code}")
+        return
+
 def walk_stac(cf):
 
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
+
+    download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-ci")
+    download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+    download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
+
+    # Resolve schema issues
+    replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', '"href": null', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', '"href": {}', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
+    replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
+    replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
+
 
     root_catalog = Catalog.from_file(href=cf)
     ic(root_catalog)

@@ -34,7 +34,7 @@ forecast_description_create <- data.frame(datetime = 'datetime of the forecasted
 # site_id <- 'fcre'
 # model_id <- 'climatology'
 
-forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$forecasts_bucket, endpoint_override = config$endpoint, anonymous = TRUE)) #|>
+forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) #|>
   #filter(model_id == model_id, site_id = site_id, reference_datetime = reference_datetime)
 # NOTE IF NOT USING FILTER -- THE stac4cast::build_table_columns() NEEDS TO BE UPDATED
     #(USE strsplit(forecast_theme_df$ToString(), "\n") INSTEAD OF strsplit(forecast_theme_df[[1]]$ToString(), "\n"))
@@ -44,25 +44,6 @@ forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$forecasts_bucke
 forecast_data_df <- duckdbfs::open_dataset(glue::glue("s3://{config$inventory_bucket}/catalog/forecasts"),
                                   s3_endpoint = config$endpoint, anonymous=TRUE) |>
   collect()
-
-# forecast_data_df <- duckdbfs::open_dataset(glue::glue("s3://{config$inventory_bucket}/catalog"),
-#                                   s3_endpoint = config$endpoint, anonymous=TRUE) |>
-#   collect()
-
-# forecast_s3 <- arrow::s3_bucket(glue::glue("{config$inventory_bucket}/catalog/forecasts/project_id={config$project_id}"),
-#                               endpoint_override = config$endpoint,
-#                               anonymous=TRUE)
-#
-# forecast_data_df <- arrow::open_dataset(forecast_s3) |>
-#   collect()
-
-# forecast_s3 <- arrow::s3_bucket(glue::glue("{config$inventory_bucket}/catalog/forecasts/"),
-#                               endpoint_override = "sdsc.osn.xsede.org",
-#                               anonymous=TRUE)
-#
-# forecast_data_df <- arrow::open_dataset(forecast_s3) |>
-#   filter(project_id == config$project_id) |>
-#   collect()
 
 theme_models <- forecast_data_df |>
   distinct(model_id)
@@ -94,95 +75,13 @@ stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       group_sites = forecast_sites$site_id,
                       model_child = FALSE)
 
-# ## create separate JSON for model landing page
-#
-# stac4cast::build_group_variables(table_schema = forecast_theme_df,
-#                       table_description = forecast_description_create,
-#                       start_date = forecast_min_date,
-#                       end_date = forecast_max_date,
-#                       id_value = "models",
-#                       description_string = build_description,
-#                       about_string = catalog_config$about_string,
-#                       about_title = catalog_config$about_title,
-#                       dashboard_string = catalog_config$dashboard_url,
-#                       dashboard_title = catalog_config$dashboard_title,
-#                       theme_title = "Models",
-#                       destination_path = paste0(catalog_config$forecast_path,"models"),
-#                       aws_download_path = catalog_config$aws_download_path,
-#                       group_var_items = stac4cast::generate_model_items(model_list = theme_models$model_id),
-#                       thumbnail_link = 'pending',
-#                       thumbnail_title = 'pending',
-#                       group_var_vector = NULL,
-#                       group_sites = NULL)
-
-## CREATE MODELS
+## READ IN GSHEET FILES
 variable_gsheet <- gsheet2tbl(config$target_metadata_gsheet)
-
-## READ IN MODEL METADATA
-# googlesheets4::gs4_deauth()
-#
-# registered_model_id <- googlesheets4::read_sheet(config$model_metadata_gsheet)
+target_metadata <- gsheet2tbl(config$target_metadata_gsheet)
 
 # read in model metadata and filter for the relevant project
 registered_model_id <- gsheet2tbl(config$model_metadata_gsheet) |>
   filter(`What forecasting challenge are you registering for?` == config$project_id)
-
-#forecast_sites <- c()
-
-# ## LOOP OVER MODEL IDS AND CREATE JSONS
-# for (m in theme_models$model_id){
-#
-#   # make model items directory
-#   if (!dir.exists(paste0(catalog_config$forecast_path,"models/model_items"))){
-#     dir.create(paste0(catalog_config$forecast_path,"models/model_items"))
-#   }
-#
-#   print(m)
-#   model_date_range <- forecast_data_df |> filter(model_id == m) |> dplyr::summarise(min(date),max(date))
-#   model_min_date <- model_date_range$`min(date)`
-#   model_max_date <- model_date_range$`max(date)`
-#
-#   model_var_duration_df <- forecast_data_df |> filter(model_id == m) |> distinct(variable,duration, project_id) |>
-#     mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
-#     mutate(duration_name = ifelse(duration == 'PT1H', 'Hourly', duration_name)) |>
-#     mutate(duration_name = ifelse(duration == 'PT30M', '30min', duration_name)) |>
-#     mutate(duration_name = ifelse(duration == 'P1W', 'Weekly', duration_name))
-#
-#   model_var_full_name <- model_var_duration_df |>
-#     left_join((variable_gsheet |>
-#                  select(variable = `"official" targets name`, full_name = `Variable name`) |>
-#                  distinct(variable, .keep_all = TRUE)), by = c('variable'))
-#
-#   model_sites <- forecast_data_df |> filter(model_id == m) |> distinct(site_id)
-#
-#   model_vars <- forecast_data_df |> filter(model_id == m) |> distinct(variable) |> left_join(model_var_full_name, by = 'variable')
-#   model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)
-#
-#   forecast_sites <- append(forecast_sites,  stac4cast::get_site_coords(site_metadata = catalog_config$site_metadata_url,
-#                                                                        sites = model_sites$site_id))
-#
-#   idx = which(registered_model_id$model_id == m)
-#
-#   stac4cast::build_model(model_id = m,
-#               team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
-#               model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
-#               start_date = model_min_date,
-#               end_date = model_max_date,
-#               var_values = model_vars$var_duration_name,
-#               duration_names = model_var_duration_df$duration,
-#               site_values = model_sites$site_id,
-#               site_table = catalog_config$site_metadata_url,
-#               model_documentation = registered_model_id,
-#               destination_path = paste0(catalog_config$forecast_path,"models/model_items"),
-#               aws_download_path = catalog_config$aws_download_path_forecasts, # CHANGE THIS BUCKET NAME
-#               collection_name = 'forecasts',
-#               thumbnail_image_name = NULL,
-#               table_schema = forecast_theme_df,
-#               table_description = forecast_description_create,
-#               full_var_df = model_vars,
-#               code_web_link = registered_model_id$`Web link to model code`[idx])
-#               #code_web_link = 'pending')
-# }
 
 ## BUILD VARIABLE GROUPS
 
@@ -216,7 +115,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
   var_name_full <- var_gsheet_arrange[which(var_gsheet_arrange$`"official" targets name` %in% var_values),1][[1]]
 
   ## CREATE VARIABLE GROUP JSONS
-  group_description <- paste0('All variables for the ',names(config$variable_groups[i]),' group.')
+  group_description <- paste0('All ',names(config$variable_groups[i]),' variables for the forecasting challenge')
+
 
   ## find group sites
   find_group_sites <- forecast_data_df |>
@@ -224,8 +124,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
     distinct(site_id)
 
   ## create empty vector to track publication information
-  citation_build <- c()
-  doi_build <- c()
+  citation_build <- c(catalog_config$citation_text)
+  doi_build <- c(catalog_config$citation_doi)
 
   ## create empty vector to track variable information
   variable_name_build <- c()
@@ -271,13 +171,21 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       var_min_date <- var_date_range$`min(date)`
       var_max_date <- var_date_range$`max(date)`
 
-      var_models <- var_data |> distinct(model_id)
+      var_models <- var_data |>
+        distinct(model_id) |>
+        filter(model_id %in% registered_model_id$model_id,
+               !grepl("example",model_id))
 
       find_var_sites <- forecast_data_df |>
         filter(variable == var_name) |>
         distinct(site_id)
 
-      var_description <- paste0('All models for the ',var_formal_name,' variable.')
+      var_metadata <- variable_gsheet |>
+        filter(`"official" targets name` == var_name,
+               duration == duration_name)
+
+      var_description <- paste0('All models for the ',var_formal_name,' variable. This variable describes the ',
+                                var_metadata$Description)
 
       #var_path <- gsub('forecasts','scores',var_data$path[1])
 
@@ -310,16 +218,13 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                        thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
                                        thumbnail_title = "Thumbnail Image",
                                        group_var_vector = NULL,
+                                       single_var_name = var_name,
+                                       group_duration_value = duration_value,
                                        group_sites = find_var_sites$site_id,
                                        citation_values = var_citations,
-                                       doi_values = var_doi)#,
-      #citation_values = var_citations,
-      #doi_values = doi_citations)
+                                       doi_values = var_doi)
 
       forecast_sites <- c()
-
-      var_models <- var_models |>
-        filter(model_id %in% registered_model_id$model_id)
 
       ## LOOP OVER MODEL IDS AND CREATE JSONS
       for (m in var_models$model_id){
@@ -389,12 +294,27 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                     The model predicts this variable at the following sites: ',
                                     model_site_text,
                                     '.
-                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members). We provide the code to access the forecast data as an asset')
+                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)')
 
+        model_type <- registered_model_id$`Which category best matches your modeling approach?`[idx]
 
-        model_keywords <- c(list('Forecasts',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value),
-                                 as.list(model_sites$site_id))
+        if(model_type %in% c('Empirical (a statistical model)', 'Empirical', 'empirical')){
+          model_type_keyword <- "empirical"
+        } else if(model_type %in% c('Machine Learning', 'ML', 'Machine learning', 'machine learning')){
+          model_type_keyword <- 'machine learning'
+        } else if (model_type %in% c('Process Based', 'Process based', 'process based')){
+          model_type_keyword <- 'process based'
+        } else{
+          model_type_keyword <- NA
+        }
 
+        if (is.na(model_type_keyword)){
+          model_keywords <- c(list('Forecasts',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
+                              as.list(model_sites$site_id))
+        }else{
+          model_keywords <- c(list('Forecasts',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
+                              as.list(model_sites$site_id), model_type_keyword)
+        }
 
         stac4cast::build_model(model_id = m,
                                stac_id = stac_id,
@@ -405,6 +325,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                end_date = model_max_date,
                                var_values = model_vars$var_duration_name,
                                duration_names = model_var_duration_df$duration,
+                               duration_value = duration_name,
                                site_values = model_sites$site_id,
                                site_table = catalog_config$site_metadata_url,
                                model_documentation = registered_model_id,
@@ -434,12 +355,14 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                    dashboard_string = catalog_config$dashboard_url,
                                    dashboard_title = catalog_config$dashboard_title,
                                    theme_title = names(config$variable_groups[i]),
-                                   destination_path = file.path(catalog_config$scores_path,names(config$variable_groups)[i]),
-                                   aws_download_path = catalog_config$aws_download_path_scores,
+                                   destination_path = file.path(catalog_config$forecast_path,names(config$variable_groups)[i]),
+                                   aws_download_path = catalog_config$aws_download_path_forecasts,
                                    group_var_items = stac4cast::generate_group_variable_items(variables = variable_name_build),
                                    thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
                                    thumbnail_title = config$variable_groups[[i]]$thumbnail_title,
                                    group_var_vector = unique(var_values),
+                                   single_var_name = NULL,
+                                   group_duration_value = NULL,
                                    group_sites = find_group_sites$site_id,
                                    citation_values = citation_build,
                                    doi_values = doi_build)

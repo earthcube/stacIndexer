@@ -1,6 +1,6 @@
 {
   "id": "aquatics",
-  "description": "This page includes variables for the aquatics group.",
+  "description": "All variables for the aquatics group.",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
@@ -9,6 +9,8 @@
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
+  "sci:doi": "10.1002/fee.2616",
+  "sci:publications": {},
   "links": [
     {
       "rel": "child",
@@ -42,7 +44,7 @@
     },
     {
       "rel": "describedby",
-      "href": "https://projects.ecoforecast.org/usgsrc4cast-docs/",
+      "href": "https://projects.ecoforecast.org/usgsrc4cast-ci/",
       "title": "EFI-USGS River Chlorophyll Forecast Challenge Dashboard",
       "type": "text/html"
     }
@@ -51,14 +53,14 @@
   "extent": {
     "spatial": {
       "bbox": [
-        ["Inf", "Inf", "-Inf", "-Inf"]
+        [-122.6692, 39.6328, -74.7781, 45.5175]
       ]
     },
     "temporal": {
       "interval": [
         [
           "2024-02-07T00:00:00Z",
-          "2024-02-12T00:00:00Z"
+          "2024-07-08T00:00:00Z"
         ]
       ]
     }
@@ -158,11 +160,6 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "date",
-      "type": "string",
-      "description": "ISO 8601 (ISO 2019) date of the predicted value; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate. This variable was called time before v0.5of the EFI convention. For time-integrated variables (e.g., cumulative net primary productivity), one should specify the start_datetime and end_datetime as two variables, instead of the single datetime. If this is not provided the datetime is assumed to be the MIDPOINT of the integration period."
     }
   ],
   "assets": {

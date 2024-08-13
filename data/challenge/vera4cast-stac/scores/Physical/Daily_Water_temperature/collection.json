@@ -1,32 +1,13 @@
 {
   "id": "Daily_Water_temperature",
-  "description": "All models for the Daily_Water_temperature variable.",
+  "description": "All models for the Daily_Water_temperature variable. This variable describes the daily mean water temperature in degrees C, focal depths bvre = 1.5 m, fcre = 1.6 m, measured using EXO and thermistor",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "10.1002/fee.2616",
-  "sci:publications": {},
   "links": [
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/TESTclimatology.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/TempC_mean_example_forecast.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/Temp_C_mean.json"
-    },
     {
       "rel": "item",
       "type": "application/json",
@@ -35,12 +16,12 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.ets.json"
+      "href": "./models/asl.met.lm.step.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.met.lm.step.json"
+      "href": "./models/asl.ets.json"
     },
     {
       "rel": "item",
@@ -55,37 +36,12 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.temp.lm.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/climatology.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/climatology2.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ID.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_forecast.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/fableNNETAR.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/fableNNETAR_focal.json"
     },
     {
       "rel": "item",
@@ -100,7 +56,7 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/gfs_seamless.json"
+      "href": "./models/fableNNETAR_focal.json"
     },
     {
       "rel": "item",
@@ -115,12 +71,12 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/inflow_gefsClimAED.json"
+      "href": "./models/monthly_mean.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/monthly_mean.json"
+      "href": "./models/inflow_gefsClimAED.json"
     },
     {
       "rel": "item",
@@ -131,6 +87,11 @@
       "rel": "item",
       "type": "application/json",
       "href": "./models/persistenceRW.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/asl.temp.lm.json"
     },
     {
       "rel": "parent",
@@ -175,17 +136,12 @@
       "interval": [
         [
           "2023-09-21T00:00:00Z",
-          "2024-06-05T00:00:00Z"
+          "2024-08-09T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "21 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -267,35 +223,35 @@
       "description": "upper 10 percentile value of forecast"
     },
     {
-      "name": "project_id",
-      "type": "string",
-      "description": "unique project identifier"
-    },
-    {
       "name": "duration",
       "type": "string",
       "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
     },
     {
-      "name": "variable",
-      "type": "string",
-      "description": "name of forecasted variable"
-    },
-    {
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
+    },
+    {
+      "name": "project_id",
+      "type": "string",
+      "description": "unique project identifier"
+    },
+    {
+      "name": "variable",
+      "type": "string",
+      "description": "name of forecasted variable"
     }
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org",
+      "href": "\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\"",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
       "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/fcr_catwalk.jpg",

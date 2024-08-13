@@ -1,42 +1,13 @@
 {
   "id": "Daily_Secchi",
-  "description": "All models for the Daily_Secchi variable.",
+  "description": "All models for the Daily_Secchi variable. This variable describes the Secchi depth in meters",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "10.1002/fee.2616",
-  "sci:publications": {},
   "links": [
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/glm_aed_v1.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/climatology.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/historic_mean.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/monthly_mean.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/persistenceRW.json"
-    },
     {
       "rel": "item",
       "type": "application/json",
@@ -45,22 +16,17 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.ets.json"
+      "href": "./models/asl.met.lm.step.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.tbats.json"
+      "href": "./models/asl.temp.lm.json"
     },
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/gfs_seamless.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/secchi_example_forecast.json"
+      "href": "./models/climatology.json"
     },
     {
       "rel": "item",
@@ -75,7 +41,32 @@
     {
       "rel": "item",
       "type": "application/json",
+      "href": "./models/glm_aed_v1.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/historic_mean.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/monthly_mean.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
       "href": "./models/secchi_last3obs_mean.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/persistenceRW.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/asl.ets.json"
     },
     {
       "rel": "item",
@@ -85,12 +76,7 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/asl.met.lm.step.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/asl.temp.lm.json"
+      "href": "./models/asl.tbats.json"
     },
     {
       "rel": "parent",
@@ -135,17 +121,12 @@
       "interval": [
         [
           "2023-10-14T00:00:00Z",
-          "2024-07-11T00:00:00Z"
+          "2024-09-05T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "18 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -158,7 +139,7 @@
     },
     {
       "name": "datetime",
-      "type": "date32[day]",
+      "type": "timestamp[us, tz=UTC]",
       "description": "datetime of the forecasted value (ISO 8601)"
     },
     {
@@ -234,13 +215,13 @@
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample?endpoint_override=renc.osn.xsede.org",
+      "href": "\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/project_id=vera4cast/duration=Daily/variable=Secchi_m_sample?endpoint_override=renc.osn.xsede.org\"",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/project_id=vera4cast/duration=Daily/variable=Secchi_m_sample?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
       "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/fcr_catwalk.jpg",

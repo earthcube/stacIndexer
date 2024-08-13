@@ -1,15 +1,28 @@
 {
   "id": "Chemical",
-  "description": "This page includes variables for the Chemical group.",
+  "description": "All Chemical variables for the forecasting challenge",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "https://doi.org/10.1002/fee.2616",
+  "sci:doi": "10.1002/fee.2616",
+  "sci:publications": [
+    {
+      "doi": "10.1002/fee.2616",
+      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+    },
+    {
+      "doi": "10.1002/fee.2616",
+      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+    },
+    {
+      "doi": "10.5194/bg-20-5211-2023",
+      "citation": "Delany, A., Ladwig, R., Buelo, C., Albright, E., and Hanson, P. C.: The influence of carbon cycling on oxygen depletion in north-temperate lakes, Biogeosciences, 20, 5211–5228, https://doi.org/10.5194/bg-20-5211-2023, 2023."
+    }
+  ],
   "links": [
     {
       "rel": "child",
@@ -33,7 +46,7 @@
     },
     {
       "rel": "cite-as",
-      "href": "example.com"
+      "href": "https://doi.org/10.1002/fee.2616"
     },
     {
       "rel": "about",
@@ -51,15 +64,15 @@
   "title": "Chemical",
   "extent": {
     "spatial": {
-      "bbox":
+      "bbox": [
         [-79.8372, 37.3032, -79.8159, 37.3129]
-
+      ]
     },
     "temporal": {
       "interval": [
         [
           "2023-09-21T00:00:00Z",
-          "2024-06-09T00:00:00Z"
+          "2470-04-25T00:00:00Z"
         ]
       ]
     }
@@ -124,22 +137,17 @@
       "name": "model_id",
       "type": "string",
       "description": "unique model identifier"
-    },
-    {
-      "name": "reference_date",
-      "type": "string",
-      "description": "date that the forecast was initiated"
     }
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@?endpoint_override=renc.osn.xsede.org",
+      "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet?endpoint_override=renc.osn.xsede.org",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |>\n dplyr::filter(variable %in% c(\"DO_mgL_mean\")) |>\n dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |>\n dplyr::filter(variable %in% c(\"DO_mgL_mean\")) |>\n dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
       "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/bvr_platform_green.jpg",

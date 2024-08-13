@@ -5,9 +5,7 @@
   ],
   "type": "Feature",
   "id": "monthly_mean_Temp_C_mean_P1D_summaries",
-  "bbox":
-    [-79.8372, 37.3032, -79.8159, 37.3129]
-  ,
+  "bbox": [-79.8372, 37.3032, -79.8159, 37.3129],
   "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -19,11 +17,12 @@
   "properties": {
     "title": "monthly_mean",
     "description": "This model calculates a monthly mean from the historic data and assigns this as the mean prediction for any day within that month. The standard deviation of the observations for that month is given as the standard deviation of the forecast.",
-    "start_datetime": "2024-02-06",
-    "end_datetime": "2024-07-11",
+    "datetime": "2024-08-11T00:00:00Z",
+    "start_datetime": "2024-02-06T00:00:00Z",
+    "end_datetime": "2024-09-05T00:00:00Z",
     "providers": [
       {
-        "url": "freyao@vt.edu",
+        "url": "https://github.com/OlssonF/vera4cast/blob/main/R/MonthlyMeanModelFunction.R",
         "name": "Freya Olsson",
         "roles": [
           "producer",
@@ -48,16 +47,12 @@
       "Water_temperature",
       "Temp_C_mean",
       "Daily",
+      "P1D",
       "tubr",
       "fcre",
       "bvre"
     ],
     "table:columns": [
-      {
-        "name": "18 columns",
-        "type": null,
-        "description": {}
-      },
       {
         "name": "reference_datetime",
         "type": "timestamp[us, tz=UTC]",
@@ -70,7 +65,7 @@
       },
       {
         "name": "datetime",
-        "type": "date32[day]",
+        "type": "timestamp[us, tz=UTC]",
         "description": "datetime of the forecasted value (ISO 8601)"
       },
       {

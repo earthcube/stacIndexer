@@ -1,26 +1,23 @@
 {
   "id": "Daily_Water_temperature",
-  "description": "This page includes all models for the Daily_Water_temperature variable.",
+  "description": "All models for the Daily_Water_temperature variable. The variable description is as follows: Surface Mean Daily Water Temperature (Celsius)",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
   ],
   "type": "Collection",
-  "sci:doi": "10.1002/fee.2616",
-  "sci:publications": [
+  "links": [
     {
-      "doi": "10.1002/fee.2616",
-      "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113."
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_arima.json"
     },
     {
-      "doi": "10.1002/ecs2.4686",
-      "citation": "Dietze, M., R.Q. Thomas, J. Peters, C. Boettiger, A. Shiklomanov, and J. Ashander. 2023. A community convention for ecological forecasting: output files and metadata v1.0. Ecosphere 14: e4686 https://doi.org/10.1002/ecs2.4686"
-    }
-  ],
-  "links": [
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_ets.json"
+    },
     {
       "rel": "item",
       "type": "application/json",
@@ -39,17 +36,7 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/flareGOTM.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/flareGOTM_noDA.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/flareSimstrat.json"
     },
     {
       "rel": "item",
@@ -74,26 +61,6 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/tg_arima.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_bag_mlp.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_ets.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_lasso_all_sites.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/tg_precip_lm.json"
     },
     {
@@ -105,11 +72,6 @@
       "rel": "item",
       "type": "application/json",
       "href": "./models/tg_randfor.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_randfor_all_sites.json"
     },
     {
       "rel": "item",
@@ -139,36 +101,6 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/tg_temp_lm_all_sites.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/cb_f1.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/cb_prophet.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/climatology.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/fARIMA.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/fARIMA_clim_ensemble.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/GLEON_JRabaey_temp_physics.json"
     },
     {
@@ -189,17 +121,27 @@
     {
       "rel": "item",
       "type": "application/json",
+      "href": "./models/cb_prophet.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/climatology.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/fARIMA_clim_ensemble.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
+      "href": "./models/tg_temp_lm_all_sites.json"
+    },
+    {
+      "rel": "item",
+      "type": "application/json",
       "href": "./models/GLEON_physics.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tg_auto_adam.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/neon4cast_example.json"
     },
     {
       "rel": "item",
@@ -209,87 +151,7 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/null.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ID.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_BK.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ID_VickeryFirstForecast.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_RW.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_climatology.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/new_example_ID.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_BKandel.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_faasr.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ACP_sp24.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ID_airtempANDprecipadjusted.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/mkricheldorf_example.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_mkricheldorf_w_uncertainty.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ID_VickeryFirstForecast_wUC.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/sujan_ID.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/example_ID_airtempANDprecipadjusted_wuncertainty.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/MAL_model_unc.json"
+      "href": "./models/hotdeck.json"
     },
     {
       "rel": "item",
@@ -309,22 +171,7 @@
     {
       "rel": "item",
       "type": "application/json",
-      "href": "./models/MALM.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/Sujan_forecast.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
       "href": "./models/TSLM_seasonal_JM.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/hotdeck.json"
     },
     {
       "rel": "item",
@@ -335,16 +182,6 @@
       "rel": "item",
       "type": "application/json",
       "href": "./models/mlp1_wtempforecast_LF.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tidymodels_lm.json"
-    },
-    {
-      "rel": "item",
-      "type": "application/json",
-      "href": "./models/tidymodels_ML.json"
     },
     {
       "rel": "item",
@@ -399,17 +236,12 @@
       "interval": [
         [
           "2023-01-01T00:00:00Z",
-          "2024-11-28T00:00:00Z"
+          "2024-12-31T00:00:00Z"
         ]
       ]
     }
   },
   "table:columns": [
-    {
-      "name": "17 columns",
-      "type": null,
-      "description": {}
-    },
     {
       "name": "reference_datetime",
       "type": "timestamp[us, tz=UTC]",
@@ -493,21 +325,21 @@
   ],
   "assets": {
     "data": {
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=temperature?endpoint_override=sdsc.osn.xsede.org",
+      "href": "\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=temperature/project_id=neon4cast/duration=Daily/variable=temperature?endpoint_override=sdsc.osn.xsede.org\"",
       "type": "application/x-parquet",
       "title": "Database Access",
       "roles": [
         "data"
       ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=temperature?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+      "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=temperature/project_id=neon4cast/duration=Daily/variable=temperature?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
     },
     "thumbnail": {
-      "href": "pending",
+      "href": "https://projects.ecoforecast.org/neon4cast-catalog/img/neon_buoy.jpg",
       "type": "image/JPEG",
       "roles": [
         "thumbnail"
       ],
-      "title": "pending"
+      "title": "Thumbnail Image"
     }
   }
 }
