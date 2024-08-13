@@ -3,6 +3,7 @@ import os
 import shutil
 
 import pystac
+import requests
 from pystac import Catalog, STACObjectType
 from icecream import ic
 import hashlib
@@ -338,10 +339,43 @@ def replace_in_folder(folder_path, old_string, new_string):
                 # Process the file
                 process_file(file_path, old_string, new_string)
 
+def download_file_from_github(file_url, local_path):
+    response = requests.get(file_url)
+    if response.status_code == 200:
+        with open(local_path, 'wb') as file:
+            file.write(response.content)
+        print(f"File downloaded: {local_path}")
+    else:
+        print(f"Failed to download file: {response.status_code}")
+
+def download_folder_from_github(repo, folder_path, local_folder_path):
+    clear_output_folder(local_folder_path)
+
+    api_url = f"https://api.github.com/repos/{repo}/contents/{folder_path}"
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        contents = response.json()
+        for item in contents:
+            if item['type'] == 'file':
+                file_url = item['download_url']
+                local_file_path = os.path.join(local_folder_path, item['name'])
+                download_file_from_github(file_url, local_file_path)
+            elif item['type'] == 'dir':
+                new_local_folder_path = os.path.join(local_folder_path, item['name'])
+                os.makedirs(new_local_folder_path, exist_ok=True)
+                download_folder_from_github(repo, item['path'], new_local_folder_path)
+    else:
+        print(f"Failed to retrieve folder contents: {response.status_code}")
+        return
+
 def walk_stac(cf):
 
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
+
+    download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-ci")
+    download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+    download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
     # Resolve schema issues
     replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')
