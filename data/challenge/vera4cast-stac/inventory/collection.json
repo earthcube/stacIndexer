@@ -1,171 +1,171 @@
 {
-  "id": "inventory",
-  "description": "Inventories are look-up tables for discovering what has been forecasted",
-  "stac_version": "1.0.0",
-  "license": "CC0-1.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ],
-  "type": "Collection",
-  "links": [
-    {
-      "rel": "parent",
-      "type": "application/json",
-      "href": "../catalog.json"
+    "id": "inventory",
+    "description": "Inventories are look-up tables for discovering what has been forecasted",
+    "stac_version": "1.0.0",
+    "license": "CC0-1.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Collection",
+    "links": [
+        {
+            "rel": "parent",
+            "type": "application/json",
+            "href": "../catalog.json"
+        },
+        {
+            "rel": "root",
+            "type": "application/json",
+            "href": "../catalog.json"
+        },
+        {
+            "rel": "self",
+            "type": "application/json",
+            "href": "collection.json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "10.1002/fee.2616"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast/",
+            "type": "text/html",
+            "title": "VERA Forecasting Challenge Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast",
+            "title": "VERA Forecast Challenge Dashboard",
+            "type": "text/html"
+        }
+    ],
+    "title": "Inventory",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -79.8441,
+                    37.3022,
+                    -79.8146,
+                    37.3217
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2023-09-21T00:00:00Z",
+                    "2024-09-05T00:00:00Z"
+                ]
+            ]
+        }
     },
-    {
-      "rel": "root",
-      "type": "application/json",
-      "href": "../catalog.json"
-    },
-    {
-      "rel": "self",
-      "type": "application/json",
-      "href": "collection.json"
-    },
-    {
-      "rel": "cite-as",
-      "href": "10.1002/fee.2616"
-    },
-    {
-      "rel": "about",
-      "href": "https://www.ltreb-reservoirs.org/vera4cast/",
-      "type": "text/html",
-      "title": "VERA Forecasting Challenge Documentation"
-    },
-    {
-      "rel": "describedby",
-      "href": "https://www.ltreb-reservoirs.org/vera4cast",
-      "title": "VERA Forecast Challenge Dashboard",
-      "type": "text/html"
+    "table:columns": [
+        {
+            "name": "duration",
+            "type": "string",
+            "description": "sample duration code for variable"
+        },
+        {
+            "name": "model_id",
+            "type": "string",
+            "description": "unique model identifier"
+        },
+        {
+            "name": "site_id",
+            "type": "string",
+            "description": "unique site identifier"
+        },
+        {
+            "name": "reference_date",
+            "type": "date32[day]",
+            "description": "date that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "name": "variable",
+            "type": "string",
+            "description": "forecast variable"
+        },
+        {
+            "name": "date",
+            "type": "date32[day]",
+            "description": "date of the predicted value"
+        },
+        {
+            "name": "project_id",
+            "type": "string",
+            "description": "unique project identifier"
+        },
+        {
+            "name": "pub_date",
+            "type": "date32[day]",
+            "description": {}
+        },
+        {
+            "name": "path",
+            "type": null,
+            "description": "storage path for forecast data"
+        },
+        {
+            "name": "path_full",
+            "type": null,
+            "description": {}
+        },
+        {
+            "name": "path_summaries",
+            "type": null,
+            "description": {}
+        },
+        {
+            "name": "path_bundled",
+            "type": null,
+            "description": {}
+        },
+        {
+            "name": "path_bundled_summaries",
+            "type": null,
+            "description": {}
+        },
+        {
+            "name": "endpoint",
+            "type": "string",
+            "description": "storage location for forecast data"
+        },
+        {
+            "name": "latitude",
+            "type": "double",
+            "description": {}
+        }
+    ],
+    "assets": {
+        "data": {
+            "href": "s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/forecasts/project_id=vera4cast?endpoint_override=renc.osn.xsede.org",
+            "type": "application/x-parquet",
+            "title": "Forecast Inventory Access",
+            "roles": [
+                "data"
+            ],
+            "description": "Use `arrow` for remote access to the database. This R code will return results for the forecast challenge inventory bucket.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/forecasts/project_id=vera4cast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        },
+        "data.1": {
+            "href": "s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/scores/project_id=vera4cast?endpoint_override=renc.osn.xsede.org",
+            "type": "application/x-parquet",
+            "title": "Scores Inventory Access",
+            "roles": [
+                "data"
+            ],
+            "description": "Use `arrow` for remote access to the database. This R code will return results for the forecast challenge inventory bucket.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/scores/project_id=vera4cast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        },
+        "thumbnail": {
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/thumbnail_plots/bvr_low.JPG",
+            "type": "image/JPEG",
+            "roles": [
+                "thumbnail"
+            ],
+            "title": "BVRE Reservoir Image"
+        }
     }
-  ],
-  "title": "Inventory",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -79.8441,
-          37.3022,
-          -79.8146,
-          37.3217
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          "2023-09-21T00:00:00Z",
-          "2024-09-05T00:00:00Z"
-        ]
-      ]
-    }
-  },
-  "table:columns": [
-    {
-      "name": "duration",
-      "type": "string",
-      "description": "sample duration code for variable"
-    },
-    {
-      "name": "model_id",
-      "type": "string",
-      "description": "unique model identifier"
-    },
-    {
-      "name": "site_id",
-      "type": "string",
-      "description": "unique site identifier"
-    },
-    {
-      "name": "reference_date",
-      "type": "date32[day]",
-      "description": "date that the forecast was initiated (horizon = 0)"
-    },
-    {
-      "name": "variable",
-      "type": "string",
-      "description": "forecast variable"
-    },
-    {
-      "name": "date",
-      "type": "date32[day]",
-      "description": "date of the predicted value"
-    },
-    {
-      "name": "project_id",
-      "type": "string",
-      "description": "unique project identifier"
-    },
-    {
-      "name": "pub_date",
-      "type": "date32[day]",
-      "description": {}
-    },
-    {
-      "name": "path",
-      "type": null,
-      "description": "storage path for forecast data"
-    },
-    {
-      "name": "path_full",
-      "type": null,
-      "description": {}
-    },
-    {
-      "name": "path_summaries",
-      "type": null,
-      "description": {}
-    },
-    {
-      "name": "path_bundled",
-      "type": null,
-      "description": {}
-    },
-    {
-      "name": "path_bundled_summaries",
-      "type": null,
-      "description": {}
-    },
-    {
-      "name": "endpoint",
-      "type": "string",
-      "description": "storage location for forecast data"
-    },
-    {
-      "name": "latitude",
-      "type": "double",
-      "description": {}
-    }
-  ],
-  "assets": {
-    "data": {
-      "href": "s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/forecasts/project_id=vera4cast?endpoint_override=renc.osn.xsede.org",
-      "type": "application/x-parquet",
-      "title": "Forecast Inventory Access",
-      "roles": [
-        "data"
-      ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for the forecast challenge inventory bucket.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/forecasts/project_id=vera4cast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    },
-    "data.1": {
-      "href": "s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/scores/project_id=vera4cast?endpoint_override=renc.osn.xsede.org",
-      "type": "application/x-parquet",
-      "title": "Scores Inventory Access",
-      "roles": [
-        "data"
-      ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for the forecast challenge inventory bucket.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/inventory/catalog/scores/project_id=vera4cast?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    },
-    "thumbnail": {
-      "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/thumbnail_plots/bvr_low.JPG",
-      "type": "image/JPEG",
-      "roles": [
-        "thumbnail"
-      ],
-      "title": "BVRE Reservoir Image"
-    }
-  }
 }

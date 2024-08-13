@@ -1,264 +1,408 @@
 {
-  "stac_version": "1.0.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ],
-  "type": "Feature",
-  "id": "bet_example_mod_null_abundance_P1W_forecast",
-  "bbox": [
-    [-156.6194, 17.9696, -66.8687, 71.2824]
-  ],
-  "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-      [-110.5391, 44.9535],
-      [-121.9519, 45.8205],
-      [-99.2413, 47.1282],
-      [-89.5373, 46.2339],
-      [-95.1921, 39.0404],
-      [-89.5857, 45.4937],
-      [-149.3705, 68.6611],
-      [-119.006, 37.0058],
-      [-87.3933, 32.9505],
-      [-103.0293, 40.4619],
-      [-89.5864, 45.5089],
-      [-110.8355, 31.9107],
-      [-119.2622, 37.0334],
-      [-119.7323, 37.1088],
-      [-76.56, 38.8901],
-      [-78.1395, 38.8929],
-      [-105.546, 40.2759],
-      [-155.3173, 19.5531],
-      [-81.9934, 29.6893],
-      [-84.2826, 35.9641],
-      [-112.4524, 40.1776],
-      [-99.0588, 35.4106],
-      [-100.9154, 46.7697],
-      [-105.5824, 40.0543],
-      [-109.3883, 38.2483],
-      [-80.5248, 37.3783],
-      [-88.1612, 31.8539],
-      [-67.0769, 18.0213],
-      [-96.5631, 39.1008],
-      [-96.6129, 39.1104],
-      [-106.8425, 32.5907],
-      [-84.4686, 31.1948],
-      [-149.2133, 63.8758],
-      [-72.1727, 42.5369],
-      [-66.8687, 17.9696],
-      [-83.5019, 35.689],
-      [-81.4362, 28.1251],
-      [-87.8039, 32.5417],
-      [-145.7514, 63.8811],
-      [-99.1066, 47.1617],
-      [-104.7456, 40.8155],
-      [-97.57, 33.4012],
-      [-147.5026, 65.154],
-      [-78.0418, 39.0337],
-      [-71.2874, 44.0639],
-      [-156.6194, 71.2824],
-      [-122.3303, 45.7624]
-    ]
-  },
-  "properties": {
-    "title": "bet_example_mod_null",
-    "description": "This page includes forecasts for the Weekly_beetle_community_abundance variable for the bet_example_mod_null model. Information for the model is provided as follows: .\n                                    The model predicts this variable at the following sites: YELL, WREF, WOOD, UNDE, UKFS, TREE, TOOL, TEAK, TALL, STER, STEI, SRER, SOAP, SJER, SERC, SCBI, RMNP, PUUM, OSBS, ORNL, ONAQ, OAES, NOGP, NIWO, MOAB, MLBS, LENO, LAJA, KONZ, KONA, JORN, JERC, HEAL, HARV, GUAN, GRSM, DSNY, DELA, DEJU, DCFS, CPER, CLBJ, BONA, BLAN, BART, BARR, ABBY.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members). We provide the code to access the forecast data as an asset",
-    "start_datetime": "2022-01-03",
-    "end_datetime": "2024-12-02",
-    "providers": [
-      {
-        "url": "pending",
-        "name": "pending",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ]
-      },
-      {
-        "url": "https://www.ecoforecastprojectvt.org",
-        "name": "Ecoforecast Challenge",
-        "roles": [
-          "host"
-        ]
-      }
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "license": "CC0-1.0",
-    "keywords": [
-      "Forecasts",
-      "neon4cast",
-      "Beetles",
-      "bet_example_mod_null",
-      "beetle_community_abundance",
-      "abundance",
-      "Weekly",
-      "YELL",
-      "WREF",
-      "WOOD",
-      "UNDE",
-      "UKFS",
-      "TREE",
-      "TOOL",
-      "TEAK",
-      "TALL",
-      "STER",
-      "STEI",
-      "SRER",
-      "SOAP",
-      "SJER",
-      "SERC",
-      "SCBI",
-      "RMNP",
-      "PUUM",
-      "OSBS",
-      "ORNL",
-      "ONAQ",
-      "OAES",
-      "NOGP",
-      "NIWO",
-      "MOAB",
-      "MLBS",
-      "LENO",
-      "LAJA",
-      "KONZ",
-      "KONA",
-      "JORN",
-      "JERC",
-      "HEAL",
-      "HARV",
-      "GUAN",
-      "GRSM",
-      "DSNY",
-      "DELA",
-      "DEJU",
-      "DCFS",
-      "CPER",
-      "CLBJ",
-      "BONA",
-      "BLAN",
-      "BART",
-      "BARR",
-      "ABBY"
+    "type": "Feature",
+    "id": "bet_example_mod_null_abundance_P1W_forecast",
+    "bbox": [
+        -156.6194,
+        17.9696,
+        -66.8687,
+        71.2824
     ],
-    "table:columns": [
-      {
-        "name": "13 columns",
-        "type": null,
-        "description": {}
-      },
-      {
-        "name": "datetime",
-        "type": "timestamp[us, tz=UTC]",
-        "description": "datetime of the forecasted value (ISO 8601)"
-      },
-      {
-        "name": "site_id",
-        "type": "string",
-        "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
-      },
-      {
-        "name": "prediction",
-        "type": "double",
-        "description": "predicted value for variable"
-      },
-      {
-        "name": "parameter",
-        "type": "string",
-        "description": "ensemble member or distribution parameter"
-      },
-      {
-        "name": "family",
-        "type": "string",
-        "description": "For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”"
-      },
-      {
-        "name": "reference_datetime",
-        "type": "timestamp[us, tz=UTC]",
-        "description": "datetime that the forecast was initiated (horizon = 0)"
-      },
-      {
-        "name": "pub_datetime",
-        "type": "timestamp[us, tz=UTC]",
-        "description": "datetime that forecast was submitted"
-      },
-      {
-        "name": "date",
-        "type": "date32[day]",
-        "description": {}
-      },
-      {
-        "name": "project_id",
-        "type": "string",
-        "description": "unique identifier for the forecast project"
-      },
-      {
-        "name": "duration",
-        "type": "string",
-        "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-      },
-      {
-        "name": "variable",
-        "type": "string",
-        "description": "name of forecasted variable"
-      },
-      {
-        "name": "model_id",
-        "type": "string",
-        "description": "unique model identifier"
-      }
-    ]
-  },
-  "collection": "forecasts",
-  "links": [
-    {
-      "rel": "collection",
-      "href": "../collection.json",
-      "type": "application/json",
-      "title": "bet_example_mod_null"
+    "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -96.6129,
+                39.1104
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -84.4686,
+                31.1948
+            ],
+            [
+                -149.2133,
+                63.8758
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -122.3303,
+                45.7624
+            ]
+        ]
     },
-    {
-      "rel": "root",
-      "href": "../../../catalog.json",
-      "type": "application/json",
-      "title": "Forecast Catalog"
+    "properties": {
+        "title": "bet_example_mod_null",
+        "description": "This page includes forecasts for the Weekly_beetle_community_abundance variable for the bet_example_mod_null model. Information for the model is provided as follows: .\n                                    The model predicts this variable at the following sites: YELL, WREF, WOOD, UNDE, UKFS, TREE, TOOL, TEAK, TALL, STER, STEI, SRER, SOAP, SJER, SERC, SCBI, RMNP, PUUM, OSBS, ORNL, ONAQ, OAES, NOGP, NIWO, MOAB, MLBS, LENO, LAJA, KONZ, KONA, JORN, JERC, HEAL, HARV, GUAN, GRSM, DSNY, DELA, DEJU, DCFS, CPER, CLBJ, BONA, BLAN, BART, BARR, ABBY.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members). We provide the code to access the forecast data as an asset",
+        "start_datetime": "2022-01-03",
+        "end_datetime": "2024-12-02",
+        "providers": [
+            {
+                "url": "pending",
+                "name": "pending",
+                "roles": [
+                    "producer",
+                    "processor",
+                    "licensor"
+                ]
+            },
+            {
+                "url": "https://www.ecoforecastprojectvt.org",
+                "name": "Ecoforecast Challenge",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "license": "CC0-1.0",
+        "keywords": [
+            "Forecasts",
+            "neon4cast",
+            "Beetles",
+            "bet_example_mod_null",
+            "beetle_community_abundance",
+            "abundance",
+            "Weekly",
+            "YELL",
+            "WREF",
+            "WOOD",
+            "UNDE",
+            "UKFS",
+            "TREE",
+            "TOOL",
+            "TEAK",
+            "TALL",
+            "STER",
+            "STEI",
+            "SRER",
+            "SOAP",
+            "SJER",
+            "SERC",
+            "SCBI",
+            "RMNP",
+            "PUUM",
+            "OSBS",
+            "ORNL",
+            "ONAQ",
+            "OAES",
+            "NOGP",
+            "NIWO",
+            "MOAB",
+            "MLBS",
+            "LENO",
+            "LAJA",
+            "KONZ",
+            "KONA",
+            "JORN",
+            "JERC",
+            "HEAL",
+            "HARV",
+            "GUAN",
+            "GRSM",
+            "DSNY",
+            "DELA",
+            "DEJU",
+            "DCFS",
+            "CPER",
+            "CLBJ",
+            "BONA",
+            "BLAN",
+            "BART",
+            "BARR",
+            "ABBY"
+        ],
+        "table:columns": [
+            {
+                "name": "13 columns",
+                "type": null,
+                "description": {}
+            },
+            {
+                "name": "datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime of the forecasted value (ISO 8601)"
+            },
+            {
+                "name": "site_id",
+                "type": "string",
+                "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            },
+            {
+                "name": "prediction",
+                "type": "double",
+                "description": "predicted value for variable"
+            },
+            {
+                "name": "parameter",
+                "type": "string",
+                "description": "ensemble member or distribution parameter"
+            },
+            {
+                "name": "family",
+                "type": "string",
+                "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+            },
+            {
+                "name": "reference_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that the forecast was initiated (horizon = 0)"
+            },
+            {
+                "name": "pub_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that forecast was submitted"
+            },
+            {
+                "name": "date",
+                "type": "date32[day]",
+                "description": {}
+            },
+            {
+                "name": "project_id",
+                "type": "string",
+                "description": "unique identifier for the forecast project"
+            },
+            {
+                "name": "duration",
+                "type": "string",
+                "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+            },
+            {
+                "name": "variable",
+                "type": "string",
+                "description": "name of forecasted variable"
+            },
+            {
+                "name": "model_id",
+                "type": "string",
+                "description": "unique model identifier"
+            }
+        ]
     },
-    {
-      "rel": "parent",
-      "href": "../collection.json",
-      "type": "application/json",
-      "title": "bet_example_mod_null"
-    },
-    {
-      "rel": "self",
-      "href": "bet_example_mod_null.json",
-      "type": "application/json",
-      "title": "Model Forecast"
-    },
-    {
-      "rel": "item",
-      "href": [],
-      "type": "text/html",
-      "title": "Link for Model Code"
+    "collection": "forecasts",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "bet_example_mod_null"
+        },
+        {
+            "rel": "root",
+            "href": "../../../catalog.json",
+            "type": "application/json",
+            "title": "Forecast Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "bet_example_mod_null"
+        },
+        {
+            "rel": "self",
+            "href": "bet_example_mod_null.json",
+            "type": "application/json",
+            "title": "Model Forecast"
+        },
+        {
+            "rel": "item",
+            "href": "www.example.com",
+            "type": "text/html",
+            "title": "Link for Model Code"
+        }
+    ],
+    "assets": {
+        "1": {
+            "type": "application/json",
+            "title": "Model Metadata",
+            "href": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/bet_example_mod_null.json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/bet_example_mod_null.json\")\n\n"
+        },
+        "2": {
+            "type": "text/html",
+            "title": "Link for Model Code",
+            "href": "www.example.com",
+            "description": "The link to the model code provided by the model submission team"
+        },
+        "3": {
+            "type": "application/x-parquet",
+            "title": "Database Access for Weekly beetle_community_abundance",
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=bet_example_mod_null?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=bet_example_mod_null?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        }
     }
-  ],
-  "assets": {
-    "1": {
-      "type": "application/json",
-      "title": "Model Metadata",
-      "href": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/bet_example_mod_null.json",
-      "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/bet_example_mod_null.json\")\n\n"
-    },
-    "2": {
-      "type": "text/html",
-      "title": "Link for Model Code",
-      "href": [],
-      "description": "The link to the model code provided by the model submission team"
-    },
-    "3": {
-      "type": "application/x-parquet",
-      "title": "Database Access for Weekly beetle_community_abundance",
-      "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=bet_example_mod_null?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=bet_example_mod_null?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    }
-  }
 }

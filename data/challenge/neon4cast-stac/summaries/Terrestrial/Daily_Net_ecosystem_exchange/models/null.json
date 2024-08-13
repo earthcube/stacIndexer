@@ -1,194 +1,197 @@
 {
-  "stac_version": "1.0.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ],
-  "type": "Feature",
-  "id": "null_nee_P1D_summaries",
-  "bbox": [
-    ["Inf", "Inf", "-Inf", "-Inf"]
-  ],
-  "geometry": {
-    "type": "MultiPoint",
-    "coordinates": []
-  },
-  "properties": {
-    "title": "null",
-    "description": "This page includes summaries for the Daily_Net_ecosystem_exchange variable for the null model. Information for the model is provided as follows: .\n                                    The model predicts this variable at the following sites: .\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals). We provide the code to access the scores data as an asset",
-    "start_datetime": "Inf",
-    "end_datetime": "-Inf",
-    "providers": [
-      {
-        "url": "pending",
-        "name": "pending",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ]
-      },
-      {
-        "url": "https://www.ecoforecastprojectvt.org",
-        "name": "Ecoforecast Challenge",
-        "roles": [
-          "host"
-        ]
-      }
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "license": "CC0-1.0",
-    "keywords": [
-      "Summaries",
-      "neon4cast",
-      "Terrestrial",
-      "null",
-      "Net_ecosystem_exchange",
-      "Daily"
+    "type": "Feature",
+    "id": "null_nee_P1D_summaries",
+    "bbox": [
+        "Inf",
+        "Inf",
+        "-Inf",
+        "-Inf"
     ],
-    "table:columns": [
-      {
-        "name": "17 columns",
-        "type": null,
-        "description": {}
-      },
-      {
-        "name": "reference_datetime",
-        "type": "timestamp[us, tz=UTC]",
-        "description": "datetime that the forecast was initiated (horizon = 0)"
-      },
-      {
-        "name": "site_id",
-        "type": "string",
-        "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
-      },
-      {
-        "name": "datetime",
-        "type": "timestamp[us, tz=UTC]",
-        "description": "datetime of the forecasted value (ISO 8601)"
-      },
-      {
-        "name": "family",
-        "type": "string",
-        "description": "For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”"
-      },
-      {
-        "name": "pub_datetime",
-        "type": "timestamp[us, tz=UTC]",
-        "description": "datetime that forecast was submitted"
-      },
-      {
-        "name": "mean",
-        "type": "double",
-        "description": "mean forecast prediction"
-      },
-      {
-        "name": "median",
-        "type": "double",
-        "description": "median forecast prediction"
-      },
-      {
-        "name": "sd",
-        "type": "double",
-        "description": "standard deviation forecasts"
-      },
-      {
-        "name": "quantile97.5",
-        "type": "double",
-        "description": "upper 97.5 percentile value of forecast"
-      },
-      {
-        "name": "quantile02.5",
-        "type": "double",
-        "description": "upper 2.5 percentile value of forecast"
-      },
-      {
-        "name": "quantile90",
-        "type": "double",
-        "description": "upper 90 percentile value of forecast"
-      },
-      {
-        "name": "quantile10",
-        "type": "double",
-        "description": "upper 10 percentile value of forecast"
-      },
-      {
-        "name": "project_id",
-        "type": "string",
-        "description": "unique identifier for the forecast project"
-      },
-      {
-        "name": "duration",
-        "type": "string",
-        "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-      },
-      {
-        "name": "variable",
-        "type": "string",
-        "description": "name of forecasted variable"
-      },
-      {
-        "name": "model_id",
-        "type": "string",
-        "description": "unique model identifier"
-      }
-    ]
-  },
-  "collection": "summaries",
-  "links": [
-    {
-      "rel": "collection",
-      "href": "../collection.json",
-      "type": "application/json",
-      "title": "null"
+    "geometry": {
+        "type": "MultiPoint",
+        "coordinates": []
     },
-    {
-      "rel": "root",
-      "href": "../../../catalog.json",
-      "type": "application/json",
-      "title": "Forecast Catalog"
+    "properties": {
+        "title": "null",
+        "description": "This page includes summaries for the Daily_Net_ecosystem_exchange variable for the null model. Information for the model is provided as follows: .\n                                    The model predicts this variable at the following sites: .\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals). We provide the code to access the scores data as an asset",
+        "start_datetime": "Inf",
+        "end_datetime": "-Inf",
+        "providers": [
+            {
+                "url": "pending",
+                "name": "pending",
+                "roles": [
+                    "producer",
+                    "processor",
+                    "licensor"
+                ]
+            },
+            {
+                "url": "https://www.ecoforecastprojectvt.org",
+                "name": "Ecoforecast Challenge",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "license": "CC0-1.0",
+        "keywords": [
+            "Summaries",
+            "neon4cast",
+            "Terrestrial",
+            "null",
+            "Net_ecosystem_exchange",
+            "Daily"
+        ],
+        "table:columns": [
+            {
+                "name": "17 columns",
+                "type": null,
+                "description": {}
+            },
+            {
+                "name": "reference_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that the forecast was initiated (horizon = 0)"
+            },
+            {
+                "name": "site_id",
+                "type": "string",
+                "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            },
+            {
+                "name": "datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime of the forecasted value (ISO 8601)"
+            },
+            {
+                "name": "family",
+                "type": "string",
+                "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+            },
+            {
+                "name": "pub_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that forecast was submitted"
+            },
+            {
+                "name": "mean",
+                "type": "double",
+                "description": "mean forecast prediction"
+            },
+            {
+                "name": "median",
+                "type": "double",
+                "description": "median forecast prediction"
+            },
+            {
+                "name": "sd",
+                "type": "double",
+                "description": "standard deviation forecasts"
+            },
+            {
+                "name": "quantile97.5",
+                "type": "double",
+                "description": "upper 97.5 percentile value of forecast"
+            },
+            {
+                "name": "quantile02.5",
+                "type": "double",
+                "description": "upper 2.5 percentile value of forecast"
+            },
+            {
+                "name": "quantile90",
+                "type": "double",
+                "description": "upper 90 percentile value of forecast"
+            },
+            {
+                "name": "quantile10",
+                "type": "double",
+                "description": "upper 10 percentile value of forecast"
+            },
+            {
+                "name": "project_id",
+                "type": "string",
+                "description": "unique identifier for the forecast project"
+            },
+            {
+                "name": "duration",
+                "type": "string",
+                "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+            },
+            {
+                "name": "variable",
+                "type": "string",
+                "description": "name of forecasted variable"
+            },
+            {
+                "name": "model_id",
+                "type": "string",
+                "description": "unique model identifier"
+            }
+        ]
     },
-    {
-      "rel": "parent",
-      "href": "../collection.json",
-      "type": "application/json",
-      "title": "null"
-    },
-    {
-      "rel": "self",
-      "href": "null.json",
-      "type": "application/json",
-      "title": "Model Forecast"
-    },
-    {
-      "rel": "item",
-      "href": [],
-      "type": "text/html",
-      "title": "Link for Model Code"
+    "collection": "summaries",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "null"
+        },
+        {
+            "rel": "root",
+            "href": "../../../catalog.json",
+            "type": "application/json",
+            "title": "Forecast Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "null"
+        },
+        {
+            "rel": "self",
+            "href": "null.json",
+            "type": "application/json",
+            "title": "Model Forecast"
+        },
+        {
+            "rel": "item",
+            "href": "www.example.com",
+            "type": "text/html",
+            "title": "Link for Model Code"
+        }
+    ],
+    "assets": {
+        "1": {
+            "type": "application/json",
+            "title": "Model Metadata",
+            "href": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/null.json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/null.json\")\n\n"
+        },
+        "2": {
+            "type": "text/html",
+            "title": "Link for Model Code",
+            "href": "www.example.com",
+            "description": "The link to the model code provided by the model submission team"
+        },
+        "3": {
+            "type": "application/x-parquet",
+            "title": "Database Access for NA",
+            "href": "s3://anonymous@project_id=NA/duration=NA/variable=NA/model_id=null?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=NA/duration=NA/variable=NA/model_id=null?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        },
+        "4": {
+            "type": "application/x-parquet",
+            "title": "Database Access for ",
+            "href": "s3://anonymous@project_id=/duration=/variable=/model_id=null?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=/duration=/variable=/model_id=null?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        }
     }
-  ],
-  "assets": {
-    "1": {
-      "type": "application/json",
-      "title": "Model Metadata",
-      "href": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/null.json",
-      "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/null.json\")\n\n"
-    },
-    "2": {
-      "type": "text/html",
-      "title": "Link for Model Code",
-      "href": [],
-      "description": "The link to the model code provided by the model submission team"
-    },
-    "3": {
-      "type": "application/x-parquet",
-      "title": "Database Access for NA",
-      "href": "s3://anonymous@project_id=NA/duration=NA/variable=NA/model_id=null?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=NA/duration=NA/variable=NA/model_id=null?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    },
-    "4": {
-      "type": "application/x-parquet",
-      "title": "Database Access for ",
-      "href": "s3://anonymous@project_id=/duration=/variable=/model_id=null?endpoint_override=sdsc.osn.xsede.org",
-      "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@project_id=/duration=/variable=/model_id=null?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    }
-  }
 }

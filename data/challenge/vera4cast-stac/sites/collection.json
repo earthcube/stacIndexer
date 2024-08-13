@@ -1,117 +1,117 @@
 {
-  "id": "sites",
-  "description": "The catalog contains site metadata for the Virginia Ecoforecast Reservoir Analysis",
-  "stac_version": "1.0.0",
-  "license": "CC0-1.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ],
-  "type": "Collection",
-  "links": [
-    {
-      "rel": "parent",
-      "type": "application/json",
-      "href": "../catalog.json"
+    "id": "sites",
+    "description": "The catalog contains site metadata for the Virginia Ecoforecast Reservoir Analysis",
+    "stac_version": "1.0.0",
+    "license": "CC0-1.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Collection",
+    "links": [
+        {
+            "rel": "parent",
+            "type": "application/json",
+            "href": "../catalog.json"
+        },
+        {
+            "rel": "root",
+            "type": "application/json",
+            "href": "../catalog.json"
+        },
+        {
+            "rel": "self",
+            "type": "application/json",
+            "href": "collection.json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "10.1002/fee.2616"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast/",
+            "type": "text/html",
+            "title": "VERA Forecasting Challenge Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast",
+            "title": "VERA Forecast Challenge Dashboard",
+            "type": "text/html"
+        }
+    ],
+    "title": "Site Metadata",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -79.8441,
+                    37.3022,
+                    -79.8146,
+                    37.3217
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2013-03-07T00:00:00Z",
+                    "2024-08-11T00:00:00Z"
+                ]
+            ]
+        }
     },
-    {
-      "rel": "root",
-      "type": "application/json",
-      "href": "../catalog.json"
-    },
-    {
-      "rel": "self",
-      "type": "application/json",
-      "href": "collection.json"
-    },
-    {
-      "rel": "cite-as",
-      "href": "10.1002/fee.2616"
-    },
-    {
-      "rel": "about",
-      "href": "https://www.ltreb-reservoirs.org/vera4cast/",
-      "type": "text/html",
-      "title": "VERA Forecasting Challenge Documentation"
-    },
-    {
-      "rel": "describedby",
-      "href": "https://www.ltreb-reservoirs.org/vera4cast",
-      "title": "VERA Forecast Challenge Dashboard",
-      "type": "text/html"
+    "table:columns": [
+        {
+            "name": "site",
+            "type": "character",
+            "description": "unique site name"
+        },
+        {
+            "name": "site_id",
+            "type": "character",
+            "description": "unique site identifier"
+        },
+        {
+            "name": "max_depth_m",
+            "type": "numeric",
+            "description": "maximum depth of the site in meters"
+        },
+        {
+            "name": "surface_area_km2",
+            "type": "numeric",
+            "description": "surface area of the site in square kilometers"
+        },
+        {
+            "name": "latitude",
+            "type": "numeric",
+            "description": "site latitude"
+        },
+        {
+            "name": "longitude",
+            "type": "numeric",
+            "description": "site longitude"
+        }
+    ],
+    "assets": {
+        "data": {
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv",
+            "type": "application/x-parquet",
+            "title": "Site Metadata Access",
+            "roles": [
+                "data"
+            ],
+            "description": "This R code will return results for the site metadata.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv\"\nsites <- readr::read_csv(url, show_col_types = FALSE)\n```"
+        },
+        "thumbnail": {
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/thumbnail_plots/fcr_scenic.jpg",
+            "type": "image/JPEG",
+            "roles": [
+                "thumbnail"
+            ],
+            "title": "Falling Creek Reservoir Image"
+        }
     }
-  ],
-  "title": "Site Metadata",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -79.8441,
-          37.3022,
-          -79.8146,
-          37.3217
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          "2013-03-07T00:00:00Z",
-          "2024-08-10T00:00:00Z"
-        ]
-      ]
-    }
-  },
-  "table:columns": [
-    {
-      "name": "site",
-      "type": "character",
-      "description": "unique site name"
-    },
-    {
-      "name": "site_id",
-      "type": "character",
-      "description": "unique site identifier"
-    },
-    {
-      "name": "max_depth_m",
-      "type": "numeric",
-      "description": "maximum depth of the site in meters"
-    },
-    {
-      "name": "surface_area_km2",
-      "type": "numeric",
-      "description": "surface area of the site in square kilometers"
-    },
-    {
-      "name": "latitude",
-      "type": "numeric",
-      "description": "site latitude"
-    },
-    {
-      "name": "longitude",
-      "type": "numeric",
-      "description": "site longitude"
-    }
-  ],
-  "assets": {
-    "data": {
-      "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv",
-      "type": "application/x-parquet",
-      "title": "Site Metadata Access",
-      "roles": [
-        "data"
-      ],
-      "description": "This R code will return results for the site metadata.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv\"\nsites <- readr::read_csv(url, show_col_types = FALSE)\n```"
-    },
-    "thumbnail": {
-      "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/thumbnail_plots/fcr_scenic.jpg",
-      "type": "image/JPEG",
-      "roles": [
-        "thumbnail"
-      ],
-      "title": "Falling Creek Reservoir Image"
-    }
-  }
 }
