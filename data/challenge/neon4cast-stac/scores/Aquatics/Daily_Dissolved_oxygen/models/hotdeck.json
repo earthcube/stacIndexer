@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -111.5081,
+                33.751
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -27,8 +31,16 @@
                 44.9501
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -96.6038,
                 39.1051
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -122.1655,
@@ -41,18 +53,6 @@
             [
                 -82.0177,
                 29.6878
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -89.7048,
-                45.9983
             ],
             [
                 -77.9832,
@@ -74,8 +74,8 @@
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: BARC, BIGC, BLDE, KING, MCRA, REDB, SUGG, SYCA, CRAM, LIRO, LEWI, MAYF, POSE, PRIN.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-12T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: SYCA, BARC, BIGC, BLDE, CRAM, KING, LIRO, MCRA, REDB, SUGG, LEWI, MAYF, POSE, PRIN.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-13T00:00:00Z",
         "start_datetime": "2024-04-05T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -106,16 +106,16 @@
             "oxygen",
             "Daily",
             "P1D",
+            "SYCA",
             "BARC",
             "BIGC",
             "BLDE",
+            "CRAM",
             "KING",
+            "LIRO",
             "MCRA",
             "REDB",
             "SUGG",
-            "SYCA",
-            "CRAM",
-            "LIRO",
             "LEWI",
             "MAYF",
             "POSE",
