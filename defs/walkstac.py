@@ -348,7 +348,9 @@ def download_folder_from_github(repo, folder_path, local_folder_path):
 
     api_url = f"https://api.github.com/repos/{repo}/contents/{folder_path}"
 
-    response = requests.get(api_url)
+    github_token = os.getenv('GITHUB_TOKEN')
+    headers = {'Authorization': f'token {github_token}'}
+    response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
         contents = response.json()
         for item in contents:
@@ -369,9 +371,9 @@ def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
 
-    #download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
-    #download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
-    #download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
+    download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
+    download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+    download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
     # Resolve schema issues
     replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')
