@@ -31,6 +31,12 @@ jobs:
           git config core.sparseCheckout true
           echo "path/to/folder1" >> .git/info/sparse-checkout
           git pull origin main
+
+          # Debugging: List the contents of the repo
+          echo "Contents of temp-repo1:"
+          ls -R
+
+          # Move the folder to the destination (adjust the path if needed)
           mv path/to/folder1 ../data/challenge/neon4cast-stac/
           cd ..
           rm -rf temp-repo1
