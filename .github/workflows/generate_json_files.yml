@@ -5,6 +5,9 @@ on:
     branches: [ yl_dv ]
   pull_request:
     branches: [ yl_dv ]
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
 
 jobs:
   run-script:
