@@ -10,7 +10,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  run-script:
+  update-sitemap-and-jsonlds:
     runs-on: ubuntu-latest
 
     steps:
@@ -47,7 +47,7 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
+        git add data/output
         git commit -m "Automated commit: Generate folder"
         git push origin yl_dv
       env:
