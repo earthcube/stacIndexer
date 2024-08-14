@@ -18,39 +18,60 @@ jobs:
 
       - name: Download folder from Repo 1
         run: |
+          # Clean the destination folder
           if [ -d "data/challenge/neon4cast-stac" ]; then
             rm -rf data/challenge/neon4cast-stac/*
           fi
+          
+          # Clone the specific folder from Repo 1
+          mkdir -p temp-repo1
+          cd temp-repo1
           git init
-          git remote add -f origin https://github.com/eco4cast/neon4cast-ci.git
+          git remote add origin https://github.com/eco4cast/neon4cast-ci.git
           git config core.sparseCheckout true
           echo "path/to/folder1" >> .git/info/sparse-checkout
           git pull origin main
-          mv catalog data/challenge/neon4cast-stac
+          mv path/to/folder1 ../data/challenge/neon4cast-stac/
+          cd ..
+          rm -rf temp-repo1
 
       - name: Download folder from Repo 2
         run: |
+          # Clean the destination folder
           if [ -d "data/challenge/vera4cast-stac" ]; then
             rm -rf data/challenge/vera4cast-stac/*
           fi
+          
+          # Clone the specific folder from Repo 2
+          mkdir -p temp-repo2
+          cd temp-repo2
           git init
-          git remote add -f origin https://github.com/LTREB-reservoirs/vera4cast.git
+          git remote add origin https://github.com/LTREB-reservoirs/vera4cast.git
           git config core.sparseCheckout true
           echo "path/to/folder2" >> .git/info/sparse-checkout
           git pull origin main
-          mv catalog data/challenge/vera4cast-stac
+          mv path/to/folder2 ../data/challenge/vera4cast-stac/
+          cd ..
+          rm -rf temp-repo2
 
       - name: Download folder from Repo 3
         run: |
+          # Clean the destination folder
           if [ -d "data/challenge/usgsrc4cast-stac" ]; then
             rm -rf data/challenge/usgsrc4cast-stac/*
           fi
+          
+          # Clone the specific folder from Repo 3
+          mkdir -p temp-repo3
+          cd temp-repo3
           git init
-          git remote add -f origin https://github.com/eco4cast/usgsrc4cast-ci.git
+          git remote add origin https://github.com/eco4cast/usgsrc4cast-ci.git
           git config core.sparseCheckout true
-          echo "path/to/folder2" >> .git/info/sparse-checkout
+          echo "path/to/folder3" >> .git/info/sparse-checkout
           git pull origin main
-          mv catalog data/challenge/usgsrc4cast-stac
+          mv path/to/folder3 ../data/challenge/usgsrc4cast-stac/
+          cd ..
+          rm -rf temp-repo3
 
   run-script:
     runs-on: ubuntu-latest
