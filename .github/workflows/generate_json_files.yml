@@ -26,6 +26,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Clean up the target folder (if exists)
+      run: |
+        if [ -d "data/output" ]; then
+          rm -rf data/output/*
+        else
+          mkdir -p data/output
+        fi
+
     - name: Run main.py with configfile
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
