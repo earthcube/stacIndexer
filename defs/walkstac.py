@@ -8,14 +8,9 @@ from pystac import Catalog, STACObjectType
 from icecream import ic
 import hashlib
 
-from pystac.validation import stac_validator
-
 from archive.s2cells import bb2s2
-from archive.service import offer
 from archive.spatial import sdo_box
-import json
 from pystac_client import Client
-from stac_validator import stac_validator as stac_validator_module
 
 # from convertas import convert_array_to_string
 from defs import convertas
@@ -352,6 +347,7 @@ def download_folder_from_github(repo, folder_path, local_folder_path):
     clear_output_folder(local_folder_path)
 
     api_url = f"https://api.github.com/repos/{repo}/contents/{folder_path}"
+
     response = requests.get(api_url)
     if response.status_code == 200:
         contents = response.json()
@@ -373,9 +369,9 @@ def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
 
-    download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
-    download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
-    download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
+    #download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
+    #download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+    #download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
     # Resolve schema issues
     replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')

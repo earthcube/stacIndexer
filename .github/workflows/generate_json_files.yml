@@ -10,6 +10,48 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
+  download-multiple-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v3
+
+      - name: Download folder from Repo 1
+        run: |
+          if [ -d "data/challenge/neon4cast-stac" ]; then
+            rm -rf data/challenge/neon4cast-stac/*
+          fi
+          git init
+          git remote add -f origin https://github.com/eco4cast/neon4cast-ci.git
+          git config core.sparseCheckout true
+          echo "path/to/folder1" >> .git/info/sparse-checkout
+          git pull origin main
+          mv catalog data/challenge/neon4cast-stac
+
+      - name: Download folder from Repo 2
+        run: |
+          if [ -d "data/challenge/vera4cast-stac" ]; then
+            rm -rf data/challenge/vera4cast-stac/*
+          fi
+          git init
+          git remote add -f origin https://github.com/LTREB-reservoirs/vera4cast.git
+          git config core.sparseCheckout true
+          echo "path/to/folder2" >> .git/info/sparse-checkout
+          git pull origin main
+          mv catalog data/challenge/vera4cast-stac
+
+      - name: Download folder from Repo 3
+        run: |
+          if [ -d "data/challenge/usgsrc4cast-stac" ]; then
+            rm -rf data/challenge/usgsrc4cast-stac/*
+          fi
+          git init
+          git remote add -f origin https://github.com/eco4cast/usgsrc4cast-ci.git
+          git config core.sparseCheckout true
+          echo "path/to/folder2" >> .git/info/sparse-checkout
+          git pull origin main
+          mv catalog data/challenge/usgsrc4cast-stac
+
   run-script:
     runs-on: ubuntu-latest
 
