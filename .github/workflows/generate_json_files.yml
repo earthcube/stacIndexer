@@ -2,9 +2,7 @@ name: Run main.py with Config
 
 on:
   push:
-    branches: [ yl_dv ]
-  pull_request:
-    branches: [ yl_dv ]
+    branches: [ master ]
   schedule:
     # Runs at 00:00 UTC every day
     - cron: '0 0 * * *'

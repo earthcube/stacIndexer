@@ -87,6 +87,7 @@ def save_dict_to_file(repo, root, collection, item):
         dist["contentUrl"] = asset.get("href")
         dist["encodingFormat"] = asset["type"]
         dist["description"] = asset["description"]
+        dist["name"] = asset["title"]
 
         varmes = []
         if asset.get("type") == "application/x-parquet":
