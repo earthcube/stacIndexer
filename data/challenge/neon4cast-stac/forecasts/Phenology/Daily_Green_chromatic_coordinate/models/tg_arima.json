@@ -15,22 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
                 -122.3303,
                 45.7624
             ],
@@ -201,13 +185,29 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -110.5391,
+                44.9535
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-13T00:00:00Z",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-08-16T00:00:00Z",
         "start_datetime": "2023-01-07T00:00:00Z",
         "end_datetime": "2024-08-02T00:00:00Z",
         "providers": [
@@ -238,10 +238,6 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "UNDE",
-            "WOOD",
-            "WREF",
-            "YELL",
             "ABBY",
             "BARR",
             "BART",
@@ -284,7 +280,11 @@
             "TEAK",
             "TOOL",
             "TREE",
-            "UKFS"
+            "UKFS",
+            "UNDE",
+            "WOOD",
+            "WREF",
+            "YELL"
         ],
         "table:columns": [
             {

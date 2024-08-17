@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -119.006,
+                37.0058
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
                 -89.5857,
                 45.4937
             ],
@@ -193,21 +201,13 @@
             [
                 -87.3933,
                 32.9505
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -149.3705,
-                68.6611
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-14T00:00:00Z",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-17T00:00:00Z",
         "start_datetime": "2023-01-07T00:00:00Z",
         "end_datetime": "2024-07-21T00:00:00Z",
         "providers": [
@@ -238,6 +238,8 @@
             "le",
             "Daily",
             "P1D",
+            "TEAK",
+            "TOOL",
             "TREE",
             "UKFS",
             "UNDE",
@@ -282,9 +284,7 @@
             "SRER",
             "STEI",
             "STER",
-            "TALL",
-            "TEAK",
-            "TOOL"
+            "TALL"
         ],
         "table:columns": [
             {
