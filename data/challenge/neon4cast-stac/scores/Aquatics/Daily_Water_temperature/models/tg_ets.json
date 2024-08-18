@@ -15,20 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -96.6038,
                 39.1051
             ],
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
             ],
             [
                 -149.143,
@@ -47,10 +39,6 @@
                 68.6307
             ],
             [
-                -119.2575,
-                37.0597
-            ],
-            [
                 -147.504,
                 65.1532
             ],
@@ -59,12 +47,56 @@
                 40.035
             ],
             [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
                 -102.4471,
                 39.7582
             ],
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -119.2575,
+                37.0597
             ],
             [
                 -110.5871,
@@ -103,6 +135,10 @@
                 39.0956
             ],
             [
+                -121.9338,
+                45.7908
+            ],
+            [
                 -87.4077,
                 32.9604
             ],
@@ -113,49 +149,13 @@
             [
                 -122.1655,
                 44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: CRAM, KING, LIRO, MART, OKSR, PRLA, PRPO, TOOK, BIGC, CARI, COMO, ARIK, BARC, BLDE, BLUE, BLWA, CUPE, FLNT, GUIL, HOPB, LECO, LEWI, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-17T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: KING, LIRO, OKSR, PRLA, PRPO, TOOK, CARI, COMO, SYCA, CRAM, POSE, PRIN, REDB, SUGG, TECR, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CUPE, FLNT, GUIL, HOPB, LECO, LEWI, MART, MAYF, MCDI, MCRA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-18T00:00:00Z",
         "start_datetime": "2022-08-06T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -186,19 +186,27 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
             "KING",
             "LIRO",
-            "MART",
             "OKSR",
             "PRLA",
             "PRPO",
             "TOOK",
-            "BIGC",
             "CARI",
             "COMO",
+            "SYCA",
+            "CRAM",
+            "POSE",
+            "PRIN",
+            "REDB",
+            "SUGG",
+            "TECR",
+            "TOMB",
+            "WALK",
+            "WLOU",
             "ARIK",
             "BARC",
+            "BIGC",
             "BLDE",
             "BLUE",
             "BLWA",
@@ -208,18 +216,10 @@
             "HOPB",
             "LECO",
             "LEWI",
+            "MART",
             "MAYF",
             "MCDI",
-            "MCRA",
-            "POSE",
-            "PRIN",
-            "REDB",
-            "SUGG",
-            "SYCA",
-            "TECR",
-            "TOMB",
-            "WALK",
-            "WLOU"
+            "MCRA"
         ],
         "table:columns": [
             {

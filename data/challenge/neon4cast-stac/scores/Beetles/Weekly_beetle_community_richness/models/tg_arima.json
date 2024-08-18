@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
                 -88.1612,
                 31.8539
             ],
@@ -123,12 +131,16 @@
                 44.9535
             ],
             [
-                -122.3303,
-                45.7624
-            ],
-            [
                 -156.6194,
                 71.2824
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -122.3303,
+                45.7624
             ],
             [
                 -71.2874,
@@ -137,10 +149,6 @@
             [
                 -78.0418,
                 39.0337
-            ],
-            [
-                -147.5026,
-                65.154
             ],
             [
                 -97.57,
@@ -193,21 +201,13 @@
             [
                 -96.6129,
                 39.1104
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -67.0769,
-                18.0213
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-17T00:00:00Z",
+        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, BARR, BONA, ABBY, BART, BLAN, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-18T00:00:00Z",
         "start_datetime": "2021-05-17T00:00:00Z",
         "end_datetime": "2024-07-15T00:00:00Z",
         "providers": [
@@ -238,6 +238,8 @@
             "richness",
             "Weekly",
             "P1W",
+            "KONZ",
+            "LAJA",
             "LENO",
             "MLBS",
             "MOAB",
@@ -265,11 +267,11 @@
             "WOOD",
             "WREF",
             "YELL",
-            "ABBY",
             "BARR",
+            "BONA",
+            "ABBY",
             "BART",
             "BLAN",
-            "BONA",
             "CLBJ",
             "CPER",
             "DCFS",
@@ -282,9 +284,7 @@
             "HEAL",
             "JERC",
             "JORN",
-            "KONA",
-            "KONZ",
-            "LAJA"
+            "KONA"
         ],
         "table:columns": [
             {

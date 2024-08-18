@@ -15,32 +15,28 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -102.4471,
-                39.7582
+                -78.1473,
+                38.8943
             ],
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -102.4471,
+                39.7582
             ],
             [
                 -119.2575,
@@ -55,8 +51,12 @@
                 34.4442
             ],
             [
-                -105.5442,
-                40.035
+                -87.7982,
+                32.5415
+            ],
+            [
+                -147.504,
+                65.1532
             ],
             [
                 -66.9868,
@@ -87,6 +87,10 @@
                 39.0956
             ],
             [
+                -89.7048,
+                45.9983
+            ],
+            [
                 -121.9338,
                 45.7908
             ],
@@ -95,48 +99,16 @@
                 32.9604
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
                 -122.1655,
                 44.2596
             ],
             [
-                -78.1473,
-                38.8943
+                -149.143,
+                68.6698
             ],
             [
                 -97.7823,
                 33.3785
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -149.143,
-                68.6698
             ],
             [
                 -99.1139,
@@ -147,15 +119,43 @@
                 47.1298
             ],
             [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -105.9154,
+                39.8914
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SUGG, SYCA, TECR, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, TOMB, CRAM, BLWA, CARI, LIRO, OKSR, PRLA, PRPO, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-16T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: POSE, BARC, COMO, MCDI, CRAM, ARIK, BIGC, BLDE, BLUE, BLWA, CARI, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCRA, OKSR, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-17T00:00:00Z",
         "start_datetime": "2021-05-01T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -186,17 +186,17 @@
             "oxygen",
             "Daily",
             "P1D",
-            "SUGG",
-            "SYCA",
-            "TECR",
-            "WALK",
-            "WLOU",
-            "ARIK",
+            "POSE",
             "BARC",
+            "COMO",
+            "MCDI",
+            "CRAM",
+            "ARIK",
             "BIGC",
             "BLDE",
             "BLUE",
-            "COMO",
+            "BLWA",
+            "CARI",
             "CUPE",
             "FLNT",
             "GUIL",
@@ -204,22 +204,22 @@
             "KING",
             "LECO",
             "LEWI",
+            "LIRO",
             "MART",
             "MAYF",
-            "MCDI",
             "MCRA",
-            "POSE",
-            "PRIN",
-            "REDB",
-            "TOMB",
-            "CRAM",
-            "BLWA",
-            "CARI",
-            "LIRO",
             "OKSR",
+            "PRIN",
             "PRLA",
             "PRPO",
-            "TOOK"
+            "REDB",
+            "SUGG",
+            "SYCA",
+            "TECR",
+            "TOMB",
+            "TOOK",
+            "WALK",
+            "WLOU"
         ],
         "table:columns": [
             {
