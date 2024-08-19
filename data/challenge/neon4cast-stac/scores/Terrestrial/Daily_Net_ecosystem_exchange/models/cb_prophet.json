@@ -15,34 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -149.2133,
                 63.8758
             ],
@@ -83,6 +55,10 @@
                 46.7697
             ],
             [
+                -99.0588,
+                35.4106
+            ],
+            [
                 -112.4524,
                 40.1776
             ],
@@ -97,6 +73,10 @@
             [
                 -155.3173,
                 19.5531
+            ],
+            [
+                -105.546,
+                40.2759
             ],
             [
                 -78.1395,
@@ -187,12 +167,32 @@
                 40.8155
             ],
             [
-                -99.0588,
-                35.4106
+                -99.1066,
+                47.1617
             ],
             [
-                -105.546,
-                40.2759
+                -145.7514,
+                63.8811
+            ],
+            [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -81.4362,
+                28.1251
             ],
             [
                 -88.1612,
@@ -202,8 +202,8 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, MLBS, MOAB, NIWO, NOGP, ONAQ, ORNL, OSBS, PUUM, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, OAES, RMNP, LENO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-18T00:00:00Z",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: HEAL, JERC, JORN, KONA, KONZ, LAJA, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, GRSM, GUAN, HARV, DSNY, LENO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-19T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-03-04T00:00:00Z",
         "providers": [
@@ -234,13 +234,6 @@
             "nee",
             "Daily",
             "P1D",
-            "DCFS",
-            "DEJU",
-            "DELA",
-            "DSNY",
-            "GRSM",
-            "GUAN",
-            "HARV",
             "HEAL",
             "JERC",
             "JORN",
@@ -251,10 +244,12 @@
             "MOAB",
             "NIWO",
             "NOGP",
+            "OAES",
             "ONAQ",
             "ORNL",
             "OSBS",
             "PUUM",
+            "RMNP",
             "SCBI",
             "SERC",
             "SJER",
@@ -277,8 +272,13 @@
             "BONA",
             "CLBJ",
             "CPER",
-            "OAES",
-            "RMNP",
+            "DCFS",
+            "DEJU",
+            "DELA",
+            "GRSM",
+            "GUAN",
+            "HARV",
+            "DSNY",
             "LENO"
         ],
         "table:columns": [
