@@ -15,6 +15,58 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -149.2133,
                 63.8758
             ],
@@ -37,6 +89,10 @@
             [
                 -67.0769,
                 18.0213
+            ],
+            [
+                -88.1612,
+                31.8539
             ],
             [
                 -80.5248,
@@ -139,71 +195,15 @@
                 45.8205
             ],
             [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
                 -147.5026,
                 65.154
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -104.7456,
-                40.8155
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -88.1612,
-                31.8539
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: HEAL, JERC, JORN, KONA, KONZ, LAJA, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, GRSM, GUAN, HARV, DSNY, LENO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-19T00:00:00Z",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, BONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-20T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-03-04T00:00:00Z",
         "providers": [
@@ -234,12 +234,26 @@
             "nee",
             "Daily",
             "P1D",
+            "ABBY",
+            "BARR",
+            "BART",
+            "BLAN",
+            "CLBJ",
+            "CPER",
+            "DCFS",
+            "DEJU",
+            "DELA",
+            "DSNY",
+            "GRSM",
+            "GUAN",
+            "HARV",
             "HEAL",
             "JERC",
             "JORN",
             "KONA",
             "KONZ",
             "LAJA",
+            "LENO",
             "MLBS",
             "MOAB",
             "NIWO",
@@ -265,21 +279,7 @@
             "UNDE",
             "WOOD",
             "WREF",
-            "ABBY",
-            "BARR",
-            "BART",
-            "BLAN",
-            "BONA",
-            "CLBJ",
-            "CPER",
-            "DCFS",
-            "DEJU",
-            "DELA",
-            "GRSM",
-            "GUAN",
-            "HARV",
-            "DSNY",
-            "LENO"
+            "BONA"
         ],
         "table:columns": [
             {

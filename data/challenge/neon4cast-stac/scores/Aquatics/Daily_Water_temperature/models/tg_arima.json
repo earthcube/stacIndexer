@@ -15,16 +15,32 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -147.504,
+                65.1532
             ],
             [
                 -105.5442,
                 40.035
             ],
             [
-                -149.143,
-                68.6698
+                -121.9338,
+                45.7908
             ],
             [
                 -102.4471,
@@ -33,10 +49,6 @@
             [
                 -82.0084,
                 29.676
-            ],
-            [
-                -119.2575,
-                37.0597
             ],
             [
                 -110.5871,
@@ -49,10 +61,6 @@
             [
                 -87.7982,
                 32.5415
-            ],
-            [
-                -147.504,
-                65.1532
             ],
             [
                 -89.4737,
@@ -91,20 +99,12 @@
                 45.9983
             ],
             [
-                -121.9338,
-                45.7908
-            ],
-            [
                 -87.4077,
                 32.9604
             ],
             [
                 -96.443,
                 38.9459
-            ],
-            [
-                -122.1655,
-                44.2596
             ],
             [
                 -78.1473,
@@ -154,8 +154,8 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: TOOK, COMO, OKSR, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-19T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MCRA, OKSR, TOOK, BIGC, CARI, COMO, MART, ARIK, BARC, BLDE, BLUE, BLWA, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MAYF, MCDI, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-20T00:00:00Z",
         "start_datetime": "2021-12-18T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -186,16 +186,18 @@
             "temperature",
             "Daily",
             "P1D",
-            "TOOK",
-            "COMO",
+            "MCRA",
             "OKSR",
+            "TOOK",
+            "BIGC",
+            "CARI",
+            "COMO",
+            "MART",
             "ARIK",
             "BARC",
-            "BIGC",
             "BLDE",
             "BLUE",
             "BLWA",
-            "CARI",
             "CRAM",
             "CUPE",
             "FLNT",
@@ -205,10 +207,8 @@
             "LECO",
             "LEWI",
             "LIRO",
-            "MART",
             "MAYF",
             "MCDI",
-            "MCRA",
             "POSE",
             "PRIN",
             "PRLA",
