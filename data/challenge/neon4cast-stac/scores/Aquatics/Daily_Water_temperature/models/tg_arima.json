@@ -15,12 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -149.143,
-                68.6698
+                -119.0274,
+                36.9559
             ],
             [
                 -149.6106,
@@ -39,8 +35,36 @@
                 40.035
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
                 -121.9338,
                 45.7908
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.5081,
+                33.751
             ],
             [
                 -102.4471,
@@ -61,10 +85,6 @@
             [
                 -87.7982,
                 32.5415
-            ],
-            [
-                -89.4737,
-                46.2097
             ],
             [
                 -66.9868,
@@ -95,10 +115,6 @@
                 39.0956
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -87.4077,
                 32.9604
             ],
@@ -115,28 +131,12 @@
                 33.3785
             ],
             [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -111.7979,
                 40.7839
             ],
             [
                 -82.0177,
                 29.6878
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.0274,
-                36.9559
             ],
             [
                 -88.1589,
@@ -154,8 +154,8 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MCRA, OKSR, TOOK, BIGC, CARI, COMO, MART, ARIK, BARC, BLDE, BLUE, BLWA, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MAYF, MCDI, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-20T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: TECR, TOOK, BIGC, CARI, COMO, CRAM, LIRO, MART, MCRA, OKSR, PRLA, PRPO, SYCA, ARIK, BARC, BLDE, BLUE, BLWA, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MAYF, MCDI, POSE, PRIN, REDB, SUGG, TOMB, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-21T00:00:00Z",
         "start_datetime": "2021-12-18T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -186,19 +186,24 @@
             "temperature",
             "Daily",
             "P1D",
-            "MCRA",
-            "OKSR",
+            "TECR",
             "TOOK",
             "BIGC",
             "CARI",
             "COMO",
+            "CRAM",
+            "LIRO",
             "MART",
+            "MCRA",
+            "OKSR",
+            "PRLA",
+            "PRPO",
+            "SYCA",
             "ARIK",
             "BARC",
             "BLDE",
             "BLUE",
             "BLWA",
-            "CRAM",
             "CUPE",
             "FLNT",
             "GUIL",
@@ -206,17 +211,12 @@
             "KING",
             "LECO",
             "LEWI",
-            "LIRO",
             "MAYF",
             "MCDI",
             "POSE",
             "PRIN",
-            "PRLA",
-            "PRPO",
             "REDB",
             "SUGG",
-            "SYCA",
-            "TECR",
             "TOMB",
             "WALK",
             "WLOU"

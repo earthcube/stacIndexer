@@ -19,10 +19,6 @@
                 46.2097
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -82.0084,
                 29.676
             ],
@@ -31,12 +27,16 @@
                 47.1591
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -82.0177,
                 29.6878
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -149.6106,
@@ -46,8 +46,8 @@
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: CRAM, PRPO, BARC, PRLA, LIRO, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-19T00:00:00Z",
+        "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: CRAM, BARC, PRLA, SUGG, PRPO, LIRO, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-08-20T00:00:00Z",
         "start_datetime": "2024-02-29T00:00:00Z",
         "end_datetime": "2024-08-05T00:00:00Z",
         "providers": [
@@ -79,11 +79,11 @@
             "Daily",
             "P1D",
             "CRAM",
-            "PRPO",
             "BARC",
             "PRLA",
-            "LIRO",
             "SUGG",
+            "PRPO",
+            "LIRO",
             "TOOK"
         ],
         "table:columns": [
@@ -138,9 +138,9 @@
                 "description": "unique identifier for the forecast project"
             },
             {
-                "name": "reference_date",
+                "name": "variable",
                 "type": "string",
-                "description": "date that the forecast was initiated"
+                "description": "name of forecasted variable"
             }
         ]
     },
