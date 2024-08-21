@@ -70,7 +70,7 @@ def save_dict_to_file(repo, root, collection, item):
     doc["name"] = item.id + " " + item.collection_id
     doc["description"] = str(props.get("description"))
     doc["datePublished"] = "2022-01-01"
-    doc["keywords"] = ', '.join(props.get("keywords"))
+    doc["keywords"] = props.get("keywords", [])
 
     # TODO WARNING
     # this is hard coded here, need to pass down from the main, but I would like to make
