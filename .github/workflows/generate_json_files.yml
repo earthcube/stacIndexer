@@ -1,8 +1,8 @@
-name: Run main.py with Config
+name: Update sitemap and jsonlds
 
 on:
   push:
-    branches: [ yl_dv ]
+    branches: [ master ]
   schedule:
     # Runs at 00:00 UTC every day
     - cron: '0 0 * * *'
@@ -15,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        ref: yl_dv  # Check out the `yl_dv` branch
+        ref: master  # Check out the `yl_dv` branch
 
     - name: Set up Python
       uses: actions/setup-python@v4

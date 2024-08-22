@@ -1,0 +1,350 @@
+{
+    "id": "Daily_Water_temperature",
+    "description": "All models for the Daily_Water_temperature variable. The variable description is as follows: Surface Mean Daily Water Temperature (Celsius)",
+    "stac_version": "1.0.0",
+    "license": "CC0-1.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Collection",
+    "links": [
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_arima.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_ets.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/fTSLM_lag.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareGLM.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareGLM_noDA.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareGOTM_noDA.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareSimstrat_noDA.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flare_ler.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flare_ler_baselines.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/persistenceRW.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_precip_lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_precip_lm_all_sites.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_randfor.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_tbats.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_temp_lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_temp_lm_all_sites.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_humidity_lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_humidity_lm_all_sites.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_lasso.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/fARIMA_clim_ensemble.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/climatology.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/cb_prophet.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/GLEON_JRabaey_temp_physics.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/GLEON_lm_lag_1day.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/air2waterSat_2.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/baseline_ensemble.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/GLEON_physics.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/precip_mod.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/lm_AT_WTL_WS.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/mlp1_wtempforecast_LF.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/zimmerman_proj1.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/hotdeck.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/GAM_air_wind.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/TSLM_seasonal_JM.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/bee_bake_RFModel_2024.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/mkricheldorf_w_lag.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/acp_fableLM.json"
+        },
+        {
+            "rel": "parent",
+            "type": "application/json",
+            "href": "../collection.json"
+        },
+        {
+            "rel": "root",
+            "type": "application/json",
+            "href": "../collection.json"
+        },
+        {
+            "rel": "self",
+            "type": "application/json",
+            "href": "collection.json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.1002/fee.2616"
+        },
+        {
+            "rel": "about",
+            "href": "https://projects.ecoforecast.org/neon4cast-docs/",
+            "type": "text/html",
+            "title": "NEON Ecological Forecasting Challenge Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://projects.ecoforecast.org/neon4cast-docs/",
+            "title": "NEON Forecast Challenge Dashboard",
+            "type": "text/html"
+        }
+    ],
+    "title": "Daily_Water_temperature",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -149.6106,
+                    18.1135,
+                    -66.7987,
+                    68.6698
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2023-01-01T00:00:00Z",
+                    "2024-12-31T00:00:00Z"
+                ]
+            ]
+        }
+    },
+    "table:columns": [
+        {
+            "name": "reference_datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "name": "site_id",
+            "type": "string",
+            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+        },
+        {
+            "name": "datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime of the forecasted value (ISO 8601)"
+        },
+        {
+            "name": "family",
+            "type": "string",
+            "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+        },
+        {
+            "name": "pub_datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime that forecast was submitted"
+        },
+        {
+            "name": "mean",
+            "type": "double",
+            "description": "mean forecast prediction"
+        },
+        {
+            "name": "median",
+            "type": "double",
+            "description": "median forecast prediction"
+        },
+        {
+            "name": "sd",
+            "type": "double",
+            "description": "standard deviation forecasts"
+        },
+        {
+            "name": "quantile97.5",
+            "type": "double",
+            "description": "upper 97.5 percentile value of forecast"
+        },
+        {
+            "name": "quantile02.5",
+            "type": "double",
+            "description": "upper 2.5 percentile value of forecast"
+        },
+        {
+            "name": "quantile90",
+            "type": "double",
+            "description": "upper 90 percentile value of forecast"
+        },
+        {
+            "name": "quantile10",
+            "type": "double",
+            "description": "upper 10 percentile value of forecast"
+        },
+        {
+            "name": "project_id",
+            "type": "string",
+            "description": "unique identifier for the forecast project"
+        },
+        {
+            "name": "duration",
+            "type": "string",
+            "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+        },
+        {
+            "name": "variable",
+            "type": "string",
+            "description": "name of forecasted variable"
+        },
+        {
+            "name": "model_id",
+            "type": "string",
+            "description": "unique model identifier"
+        }
+    ],
+    "assets": {
+        "data": {
+            "href": "\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=temperature/project_id=neon4cast/duration=Daily/variable=temperature?endpoint_override=sdsc.osn.xsede.org\"",
+            "type": "application/x-parquet",
+            "title": "Database Access",
+            "roles": [
+                "data"
+            ],
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=temperature/project_id=neon4cast/duration=Daily/variable=temperature?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        },
+        "thumbnail": {
+            "href": "https://projects.ecoforecast.org/neon4cast-catalog/img/neon_buoy.jpg",
+            "type": "image/JPEG",
+            "roles": [
+                "thumbnail"
+            ],
+            "title": "Thumbnail Image"
+        }
+    }
+}

@@ -1,0 +1,230 @@
+{
+    "id": "Daily_Water_temperature",
+    "description": "All models for the Daily_Water_temperature variable. This variable describes the daily mean water temperature in degrees C, focal depths bvre = 1.5 m, fcre = 1.6 m, measured using EXO and thermistor",
+    "stac_version": "1.0.0",
+    "license": "CC0-1.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Collection",
+    "links": [
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.auto.arima.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.ets.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.met.lm.step.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.met.lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/climatology.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.temp.lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/fableNNETAR_focal.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/fableNNETAR.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareGOTM.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareSimstrat.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/historic_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/glm_aed_v1.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/inflow_gefsClimAED.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/monthly_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/persistenceRW.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.tbats.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/persistenceFO.json"
+        },
+        {
+            "rel": "parent",
+            "type": "application/json",
+            "href": "../collection.json"
+        },
+        {
+            "rel": "root",
+            "type": "application/json",
+            "href": "../collection.json"
+        },
+        {
+            "rel": "self",
+            "type": "application/json",
+            "href": "collection.json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.1002/fee.2616"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast/",
+            "type": "text/html",
+            "title": "VERA Forecasting Challenge Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast",
+            "title": "VERA Forecast Challenge Dashboard",
+            "type": "text/html"
+        }
+    ],
+    "title": "Daily_Water_temperature",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -79.8372,
+                    37.3032,
+                    -79.8159,
+                    37.3129
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2023-09-21T00:00:00Z",
+                    "2024-09-05T00:00:00Z"
+                ]
+            ]
+        }
+    },
+    "table:columns": [
+        {
+            "name": "site_id",
+            "type": "string",
+            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+        },
+        {
+            "name": "reference_datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "name": "datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime of the forecasted value (ISO 8601)"
+        },
+        {
+            "name": "depth_m",
+            "type": "double",
+            "description": "depth (meters) in water column of prediction"
+        },
+        {
+            "name": "family",
+            "type": "string",
+            "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+        },
+        {
+            "name": "parameter",
+            "type": "string",
+            "description": "ensemble member or distribution parameter"
+        },
+        {
+            "name": "prediction",
+            "type": "double",
+            "description": "predicted value for variable"
+        },
+        {
+            "name": "pub_datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime that forecast was submitted"
+        },
+        {
+            "name": "project_id",
+            "type": "string",
+            "description": "unique identifier for the forecast project"
+        },
+        {
+            "name": "duration",
+            "type": "string",
+            "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+        },
+        {
+            "name": "variable",
+            "type": "string",
+            "description": "name of forecasted variable"
+        },
+        {
+            "name": "model_id",
+            "type": "string",
+            "description": "unique model identifier"
+        }
+    ],
+    "assets": {
+        "data": {
+            "href": "\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\"",
+            "type": "application/x-parquet",
+            "title": "Database Access",
+            "roles": [
+                "data"
+            ],
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        },
+        "thumbnail": {
+            "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/fcr_catwalk.jpg",
+            "type": "image/JPEG",
+            "roles": [
+                "thumbnail"
+            ],
+            "title": "Thumbnail Image"
+        }
+    }
+}

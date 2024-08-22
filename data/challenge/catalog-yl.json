@@ -1,0 +1,38 @@
+{
+    "type": "Catalog",
+    "id": "eco4cast-stac",
+    "title": "Ecological Forecasting Initiative Forecasting Challenges Catalog",
+    "description": "A STAC (Spatiotemporal Asset Catalog) describing forecasts and forecast scores for ecological forecasting challenges",
+    "stac_version": "1.0.0",
+    "conformsTo": "conformsTo",
+    "links": [
+        {
+            "rel": "self",
+            "type": "application/json",
+            "href": "catalog.json"
+        },
+        {
+            "rel": "root",
+            "type": "application/json",
+            "href": "catalog.json"
+        },
+        {
+            "rel": "child",
+            "type": "application/json",
+            "title": "neon4cast",
+            "href": "neon4cast-stac/catalog.json"
+        },
+        {
+            "rel": "child",
+            "type": "application/json",
+            "title": "vera4cast-LTREB-reservoirs",
+            "href": "vera4cast-stac/catalog.json"
+        },
+        {
+            "rel": "child",
+            "type": "application/json",
+            "title": "vera4cast-eco4cast",
+            "href": "usgsrc4cast-stac/catalog.json"
+        }
+    ]
+}
