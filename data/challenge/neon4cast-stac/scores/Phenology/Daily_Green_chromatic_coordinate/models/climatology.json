@@ -15,6 +15,26 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -67,24 +87,28 @@
                 47.1282
             ],
             [
-                -71.2874,
-                44.0639
+                -119.2622,
+                37.0334
             ],
             [
-                -97.57,
-                33.4012
+                -103.0293,
+                40.4619
             ],
             [
-                -104.7456,
-                40.8155
+                -87.3933,
+                32.9505
             ],
             [
-                -87.8039,
-                32.5417
+                -119.006,
+                37.0058
             ],
             [
-                -81.4362,
-                28.1251
+                -149.3705,
+                68.6611
+            ],
+            [
+                -89.5857,
+                45.4937
             ],
             [
                 -89.5373,
@@ -177,36 +201,12 @@
             [
                 -119.7323,
                 37.1088
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -149.3705,
-                68.6611
-            ],
-            [
-                -89.5857,
-                45.4937
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: GRSM, HARV, JORN, KONZ, MLBS, OAES, ONAQ, SCBI, SERC, SRER, STEI, UKFS, WOOD, BART, CLBJ, CPER, DELA, DSNY, UNDE, WREF, YELL, ABBY, BARR, BLAN, BONA, DCFS, DEJU, GUAN, HEAL, JERC, KONA, LAJA, LENO, MOAB, NIWO, NOGP, ORNL, OSBS, PUUM, RMNP, SJER, SOAP, STER, TALL, TEAK, TOOL, TREE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BART, CLBJ, CPER, DELA, DSNY, GRSM, HARV, JORN, KONZ, MLBS, OAES, ONAQ, SCBI, SERC, SRER, STEI, UKFS, WOOD, SOAP, STER, TALL, TEAK, TOOL, TREE, UNDE, WREF, YELL, ABBY, BARR, BLAN, BONA, DCFS, DEJU, GUAN, HEAL, JERC, KONA, LAJA, LENO, MOAB, NIWO, NOGP, ORNL, OSBS, PUUM, RMNP, SJER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-22T00:00:00Z",
         "start_datetime": "2021-01-01T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
@@ -238,6 +238,11 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "BART",
+            "CLBJ",
+            "CPER",
+            "DELA",
+            "DSNY",
             "GRSM",
             "HARV",
             "JORN",
@@ -251,11 +256,12 @@
             "STEI",
             "UKFS",
             "WOOD",
-            "BART",
-            "CLBJ",
-            "CPER",
-            "DELA",
-            "DSNY",
+            "SOAP",
+            "STER",
+            "TALL",
+            "TEAK",
+            "TOOL",
+            "TREE",
             "UNDE",
             "WREF",
             "YELL",
@@ -278,13 +284,7 @@
             "OSBS",
             "PUUM",
             "RMNP",
-            "SJER",
-            "SOAP",
-            "STER",
-            "TALL",
-            "TEAK",
-            "TOOL",
-            "TREE"
+            "SJER"
         ],
         "table:columns": [
             {
