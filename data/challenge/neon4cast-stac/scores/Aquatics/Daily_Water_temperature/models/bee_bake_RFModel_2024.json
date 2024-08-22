@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
@@ -41,13 +33,21 @@
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-20T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, SUGG, TOOK, BARC, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-21T00:00:00Z",
         "start_datetime": "2024-02-29T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -78,13 +78,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "BARC",
-            "CRAM",
             "LIRO",
             "PRLA",
             "PRPO",
             "SUGG",
-            "TOOK"
+            "TOOK",
+            "BARC",
+            "CRAM"
         ],
         "table:columns": [
             {

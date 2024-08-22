@@ -15,6 +15,26 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
                 -102.4471,
                 39.7582
             ],
@@ -49,10 +69,6 @@
             [
                 -89.4737,
                 46.2097
-            ],
-            [
-                -66.9868,
-                18.1135
             ],
             [
                 -84.4374,
@@ -99,6 +115,10 @@
                 44.2596
             ],
             [
+                -149.143,
+                68.6698
+            ],
+            [
                 -78.1473,
                 38.8943
             ],
@@ -123,28 +143,8 @@
                 29.6878
             ],
             [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -149.143,
-                68.6698
+                -66.9868,
+                18.1135
             ],
             [
                 -149.6106,
@@ -154,8 +154,8 @@
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, OKSR, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-20T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: SYCA, TECR, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, CUPE, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-21T00:00:00Z",
         "start_datetime": "2023-01-02T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -186,6 +186,11 @@
             "temperature",
             "Daily",
             "P1D",
+            "SYCA",
+            "TECR",
+            "TOMB",
+            "WALK",
+            "WLOU",
             "ARIK",
             "BARC",
             "BIGC",
@@ -195,7 +200,6 @@
             "CARI",
             "COMO",
             "CRAM",
-            "CUPE",
             "FLNT",
             "GUIL",
             "HOPB",
@@ -207,18 +211,14 @@
             "MAYF",
             "MCDI",
             "MCRA",
+            "OKSR",
             "POSE",
             "PRIN",
             "PRLA",
             "PRPO",
             "REDB",
             "SUGG",
-            "SYCA",
-            "TECR",
-            "TOMB",
-            "WALK",
-            "WLOU",
-            "OKSR",
+            "CUPE",
             "TOOK"
         ],
         "table:columns": [

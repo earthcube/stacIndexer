@@ -243,6 +243,11 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       ## LOOP OVER MODEL IDS AND CREATE JSONS
       for (m in var_models$model_id){
 
+        if (!(m %in% registered_model_id$model_id)){
+          message(paste0('Omitting model_id "',m,'" due to missing registration'))
+          next
+        }
+
         # make model items directory
         if (!dir.exists(paste0(catalog_config$forecast_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"))){
           dir.create(paste0(catalog_config$forecast_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"))
@@ -297,7 +302,9 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
 
         stac_id <- paste0(m,'_',var_name,'_',duration_name,'_forecast')
 
-        if (is.null(registered_model_id$`Web link to model code`[idx])){
+        if (is.null(registered_model_id$`Web link to model code`[idx]) |
+            identical(registered_model_id$`Web link to model code`[idx], character(0)) |
+            is.na(registered_model_id$`Web link to model code`[idx])){
           model_code_link <- 'https://projects.ecoforecast.org/neon4cast-ci/'
         } else{
           model_code_link <- registered_model_id$`Web link to model code`[idx]
