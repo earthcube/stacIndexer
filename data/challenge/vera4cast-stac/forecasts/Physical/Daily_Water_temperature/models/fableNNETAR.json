@@ -1,0 +1,181 @@
+{
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Feature",
+    "id": "fableNNETAR_Temp_C_mean_P1D_forecast",
+    "bbox": [
+        -79.8372,
+        37.3032,
+        -79.8159,
+        37.3129
+    ],
+    "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+            [
+                -79.8372,
+                37.3032
+            ],
+            [
+                -79.8159,
+                37.3129
+            ]
+        ]
+    },
+    "properties": {
+        "title": "fableNNETAR",
+        "description": "All forecasts for the Daily_Water_temperature variable for the fableNNETAR model. Information for the model is provided as follows: autoregressive neural net fit using the NNETAR() function in the fable R package.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-08-21T00:00:00Z",
+        "start_datetime": "2024-04-26T00:00:00Z",
+        "end_datetime": "2024-06-03T00:00:00Z",
+        "providers": [
+            {
+                "url": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableNNETAR.R",
+                "name": "Mary Lofton",
+                "roles": [
+                    "producer",
+                    "processor",
+                    "licensor"
+                ]
+            },
+            {
+                "url": "http://ecoforecast.centers.vt.edu/",
+                "name": "Virginia Tech Center for Ecosystem Forecasting",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "license": "CC0-1.0",
+        "keywords": [
+            "Forecasts",
+            "vera4cast",
+            "Physical",
+            "fableNNETAR",
+            "Water_temperature",
+            "Temp_C_mean",
+            "Daily",
+            "P1D",
+            "fcre",
+            "bvre",
+            "machine learning"
+        ],
+        "table:columns": [
+            {
+                "name": "site_id",
+                "type": "string",
+                "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            },
+            {
+                "name": "reference_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that the forecast was initiated (horizon = 0)"
+            },
+            {
+                "name": "datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime of the forecasted value (ISO 8601)"
+            },
+            {
+                "name": "depth_m",
+                "type": "double",
+                "description": "depth (meters) in water column of prediction"
+            },
+            {
+                "name": "family",
+                "type": "string",
+                "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+            },
+            {
+                "name": "parameter",
+                "type": "string",
+                "description": "ensemble member or distribution parameter"
+            },
+            {
+                "name": "prediction",
+                "type": "double",
+                "description": "predicted value for variable"
+            },
+            {
+                "name": "pub_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that forecast was submitted"
+            },
+            {
+                "name": "project_id",
+                "type": "string",
+                "description": "unique identifier for the forecast project"
+            },
+            {
+                "name": "duration",
+                "type": "string",
+                "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+            },
+            {
+                "name": "variable",
+                "type": "string",
+                "description": "name of forecasted variable"
+            },
+            {
+                "name": "model_id",
+                "type": "string",
+                "description": "unique model identifier"
+            }
+        ]
+    },
+    "collection": "forecasts",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "fableNNETAR"
+        },
+        {
+            "rel": "root",
+            "href": "../../../catalog.json",
+            "type": "application/json",
+            "title": "Forecast Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "fableNNETAR"
+        },
+        {
+            "rel": "self",
+            "href": "fableNNETAR.json",
+            "type": "application/json",
+            "title": "Model Forecast"
+        },
+        {
+            "rel": "item",
+            "href": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableNNETAR.R",
+            "type": "text/html",
+            "title": "Link for Model Code"
+        }
+    ],
+    "assets": {
+        "1": {
+            "type": "application/json",
+            "title": "Model Metadata",
+            "href": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableNNETAR.json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableNNETAR.json\")\n\n"
+        },
+        "2": {
+            "type": "text/html",
+            "title": "Link for Model Code",
+            "href": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableNNETAR.R",
+            "description": "The link to the model code provided by the model submission team"
+        },
+        "3": {
+            "type": "application/x-parquet",
+            "title": "Database Access for Daily Water_temperature",
+            "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquetproject_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=fableNNETAR?endpoint_override=renc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquetproject_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=fableNNETAR?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        }
+    }
+}

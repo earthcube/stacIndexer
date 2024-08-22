@@ -1,0 +1,59 @@
+name: Update sitemap and jsonlds
+
+on:
+  push:
+    branches: [ yl_dv ]
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+
+jobs:
+  update-sitemap-and-jsonlds:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: yl_dv  # Check out the `yl_dv` branch
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'  # Specify the Python version you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Clean up the target folder (if exists)
+      run: |
+        if [ -d "data/output" ]; then
+          rm -rf data/output/*
+        else
+          mkdir -p data/output
+        fi
+
+    - name: Run main.py with configfile
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python main.py --configfile ./data/challenge/catalog-yl.json
+
+    - name: Stage changes in the data folder
+      run: |
+        git add data  # Stage only the `data` folder
+
+    - name: Commit and push changes if any
+      run: |
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+        else
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Automated commit: Update data folder"
+          git push origin yl_dv
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

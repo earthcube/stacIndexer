@@ -16,12 +16,9 @@ generate_model_assets <- function(m_vars, m_duration, aws_path){
     "1"= list(
       'type'= 'application/json',
       'title' = 'Model Metadata',
-      'href' = paste0("https://", config$endpoint,"/",
-                      config$model_metadata_bucket,"/",
-                      "project_id=",config$project_id, "/",
-                      m,".json"),
+      'href' = paste0("https://", config$endpoint,"/", config$model_metadata_bucket,"/",m,".json"),
       'description' = paste0("Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.
-      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(",paste0('"','https://', config$endpoint,'/', config$model_metadata_bucket,'/', 'project_id=', config$project_id, '/', m,'.json"'),")\n\n")
+      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(",paste0('"','https://', config$endpoint,'/', config$model_metadata_bucket,'/',m,'.json"'),")\n\n")
     )
   )
 
@@ -37,10 +34,10 @@ generate_model_assets <- function(m_vars, m_duration, aws_path){
                       "/model_id=", m,
                       "?endpoint_override=",config$endpoint),
       'description' = paste0("Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(",paste0("s3://anonymous@",
-                                                                                                                                                                                                                                                                       aws_path,
-                                                                                                                                                                                                                                                                       "/parquet/duration=P1D/variable=", m_vars[i],
-                                                                                                                                                                                                                                                                       "/model_id=", m,
-                                                                                                                                                                                                                                                       "?endpoint_override=",config$endpoint),")\ndf <- all_results |> dplyr::collect()\n\n```
+                                                                                                                                                                                                                                          aws_path,
+                                                                                                                                                                                                                                          "/parquet/duration=P1D/variable=", m_vars[i],
+                                                                                                                                                                                                                                          "/model_id=", m,
+                                                                                                                                                                                                                                          "?endpoint_override=",config$endpoint),")\ndf <- all_results |> dplyr::collect()\n\n```
        \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n")
     )
   )
@@ -91,9 +88,9 @@ build_model <- function(model_id,
     "id"= model_id,
     "bbox"=
       list(list(as.numeric(catalog_config$bbox$min_lon),
-           as.numeric(catalog_config$bbox$max_lat),
-           as.numeric(catalog_config$bbox$max_lon),
-           as.numeric(catalog_config$bbox$max_lat))),
+                as.numeric(catalog_config$bbox$max_lat),
+                as.numeric(catalog_config$bbox$max_lon),
+                as.numeric(catalog_config$bbox$max_lat))),
     "geometry"= list(
       "type"= catalog_config$site_type,
       "coordinates"=  get_site_coords(sites = site_values)
@@ -108,51 +105,51 @@ build_model <- function(model_id,
 
     Variables: {variables_reformat}
 '),
-      "start_datetime" = start_date,
-      "end_datetime" = end_date,
-      "providers"= c(generate_authors(metadata_table = model_documentation),list(
-        list(
-          "url"= catalog_config$host_url,
-          "name"= catalog_config$host_name,
-          "roles"= list(
-            "host"
-          )
-        )
-      )
-      ),
-      "license"= "CC0-1.0",
-      "keywords"= c(preset_keywords, variables_reformat),
-      #"table:columns" = stac4cast::build_table_columns_full_bucket(table_schema, table_description)
-      "table:columns" = build_table_columns_full_bucket(table_schema, table_description)
+"start_datetime" = start_date,
+"end_datetime" = end_date,
+"providers"= c(generate_authors(metadata_table = model_documentation),list(
+  list(
+    "url"= catalog_config$host_url,
+    "name"= catalog_config$host_name,
+    "roles"= list(
+      "host"
+    )
+  )
+)
+),
+"license"= "CC0-1.0",
+"keywords"= c(preset_keywords, variables_reformat),
+#"table:columns" = stac4cast::build_table_columns_full_bucket(table_schema, table_description)
+"table:columns" = build_table_columns_full_bucket(table_schema, table_description)
     ),
-    "collection"= collection_name,
-    "links"= list(
-      list(
-        "rel"= "collection",
-        'href' = '../collection.json',
-        "type"= "application/json",
-        "title"= theme_title
-      ),
-      list(
-        "rel"= "root",
-        'href' = '../../../catalog.json',
-        "type"= "application/json",
-        "title"= "Forecast Catalog"
-      ),
-      list(
-        "rel"= "parent",
-        'href' = '../collection.json',
-        "type"= "application/json",
-        "title"= theme_title
-      ),
-      list(
-        "rel"= "self",
-        "href" = paste0(model_id,'.json'),
-        "type"= "application/json",
-        "title"= "Model Forecast"
-      )),
-    "assets"= generate_model_assets(var_values, duration_names, aws_download_path)#,
-    #pull_images(theme_id,model_id,thumbnail_image_name)
+"collection"= collection_name,
+"links"= list(
+  list(
+    "rel"= "collection",
+    'href' = '../collection.json',
+    "type"= "application/json",
+    "title"= theme_title
+  ),
+  list(
+    "rel"= "root",
+    'href' = '../../../catalog.json',
+    "type"= "application/json",
+    "title"= "Forecast Catalog"
+  ),
+  list(
+    "rel"= "parent",
+    'href' = '../collection.json',
+    "type"= "application/json",
+    "title"= theme_title
+  ),
+  list(
+    "rel"= "self",
+    "href" = paste0(model_id,'.json'),
+    "type"= "application/json",
+    "title"= "Model Forecast"
+  )),
+"assets"= generate_model_assets(var_values, duration_names, aws_download_path)#,
+#pull_images(theme_id,model_id,thumbnail_image_name)
   )
 
 
@@ -381,9 +378,9 @@ build_forecast_scores <- function(table_schema,
     "extent" = list(
       "spatial" = list(
         'bbox' = list(list(as.numeric(catalog_config$bbox$min_lon),
-                      as.numeric(catalog_config$bbox$max_lat),
-                      as.numeric(catalog_config$bbox$max_lon),
-                      as.numeric(catalog_config$bbox$max_lat)))),
+                           as.numeric(catalog_config$bbox$max_lat),
+                           as.numeric(catalog_config$bbox$max_lon),
+                           as.numeric(catalog_config$bbox$max_lat)))),
       "temporal" = list(
         'interval' = list(list(
           paste0(start_date,"T00:00:00Z"),
@@ -475,9 +472,9 @@ build_group_variables <- function(table_schema,
 ){
 
   aws_asset_link <-  paste0("s3://anonymous@",
-                     aws_download_path,
-                     #"/model_id=", model_id,
-                     "?endpoint_override=",config$endpoint)
+                            aws_download_path,
+                            #"/model_id=", model_id,
+                            "?endpoint_override=",config$endpoint)
 
   aws_asset_description <-   aws_asset_description <- paste0("Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(",aws_asset_link,")\ndf <- all_results |> dplyr::collect()\n\n```
        \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n")
@@ -519,8 +516,8 @@ build_group_variables <- function(table_schema,
                   ),
                   list(
                     "rel" = "describedby",
-                    "href" = "https://ltreb-reservoirs.github.io/vera4cast/", # TODO: update this to something?
-                    "title" = "EFI-USGS Forecast Challenge Dashboard",
+                    "href" = "https://ltreb-reservoirs.github.io/vera4cast/",
+                    "title" = "VERA Forecast Challenge Dashboard",
                     "type" = "text/html"
                   )
                 )),
@@ -528,9 +525,9 @@ build_group_variables <- function(table_schema,
     "extent" = list(
       "spatial" = list(
         'bbox' = list(list(as.numeric(catalog_config$bbox$min_lon),
-                      as.numeric(catalog_config$bbox$max_lat),
-                      as.numeric(catalog_config$bbox$max_lon),
-                      as.numeric(catalog_config$bbox$max_lat)))),
+                           as.numeric(catalog_config$bbox$max_lat),
+                           as.numeric(catalog_config$bbox$max_lon),
+                           as.numeric(catalog_config$bbox$max_lat)))),
       "temporal" = list(
         'interval' = list(list(
           paste0(start_date,"T00:00:00Z"),

@@ -1,0 +1,400 @@
+{
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Feature",
+    "id": "tg_tbats_abundance_P1W_forecast",
+    "bbox": [
+        -156.6194,
+        17.9696,
+        -66.8687,
+        71.2824
+    ],
+    "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -149.2133,
+                63.8758
+            ],
+            [
+                -84.4686,
+                31.1948
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -96.6129,
+                39.1104
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -110.5391,
+                44.9535
+            ]
+        ]
+    },
+    "properties": {
+        "title": "tg_tbats",
+        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-08-21T00:00:00Z",
+        "start_datetime": "2023-01-02T00:00:00Z",
+        "end_datetime": "2025-06-23T00:00:00Z",
+        "providers": [
+            {
+                "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
+                "name": "Abigail Lewis",
+                "roles": [
+                    "producer",
+                    "processor",
+                    "licensor"
+                ]
+            },
+            {
+                "url": "https://www.ecoforecastprojectvt.org",
+                "name": "Ecoforecast Challenge",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "license": "CC0-1.0",
+        "keywords": [
+            "Forecasts",
+            "neon4cast",
+            "Beetles",
+            "tg_tbats",
+            "beetle_community_abundance",
+            "abundance",
+            "Weekly",
+            "P1W",
+            "ABBY",
+            "BARR",
+            "BART",
+            "BLAN",
+            "BONA",
+            "CLBJ",
+            "CPER",
+            "DCFS",
+            "DEJU",
+            "DELA",
+            "DSNY",
+            "GRSM",
+            "GUAN",
+            "HARV",
+            "HEAL",
+            "JERC",
+            "JORN",
+            "KONA",
+            "KONZ",
+            "LAJA",
+            "LENO",
+            "MLBS",
+            "MOAB",
+            "NIWO",
+            "NOGP",
+            "OAES",
+            "ONAQ",
+            "ORNL",
+            "OSBS",
+            "PUUM",
+            "RMNP",
+            "SCBI",
+            "SERC",
+            "SJER",
+            "SOAP",
+            "SRER",
+            "STEI",
+            "STER",
+            "TALL",
+            "TEAK",
+            "TOOL",
+            "TREE",
+            "UKFS",
+            "UNDE",
+            "WOOD",
+            "WREF",
+            "YELL"
+        ],
+        "table:columns": [
+            {
+                "name": "datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime of the forecasted value (ISO 8601)"
+            },
+            {
+                "name": "site_id",
+                "type": "string",
+                "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            },
+            {
+                "name": "prediction",
+                "type": "double",
+                "description": "predicted value for variable"
+            },
+            {
+                "name": "parameter",
+                "type": "string",
+                "description": "ensemble member or distribution parameter"
+            },
+            {
+                "name": "family",
+                "type": "string",
+                "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+            },
+            {
+                "name": "reference_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that the forecast was initiated (horizon = 0)"
+            },
+            {
+                "name": "pub_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that forecast was submitted"
+            },
+            {
+                "name": "duration",
+                "type": "string",
+                "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+            },
+            {
+                "name": "model_id",
+                "type": "string",
+                "description": "unique model identifier"
+            },
+            {
+                "name": "project_id",
+                "type": "string",
+                "description": "unique identifier for the forecast project"
+            },
+            {
+                "name": "variable",
+                "type": "string",
+                "description": "name of forecasted variable"
+            }
+        ]
+    },
+    "collection": "forecasts",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "tg_tbats"
+        },
+        {
+            "rel": "root",
+            "href": "../../../catalog.json",
+            "type": "application/json",
+            "title": "Forecast Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "tg_tbats"
+        },
+        {
+            "rel": "self",
+            "href": "tg_tbats.json",
+            "type": "application/json",
+            "title": "Model Forecast"
+        },
+        {
+            "rel": "item",
+            "href": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
+            "type": "text/html",
+            "title": "Link for Model Code"
+        }
+    ],
+    "assets": {
+        "1": {
+            "type": "application/json",
+            "title": "Model Metadata",
+            "href": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_tbats.json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_tbats.json\")\n\n"
+        },
+        "2": {
+            "type": "text/html",
+            "title": "Link for Model Code",
+            "href": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
+            "description": "The link to the model code provided by the model submission team"
+        },
+        "3": {
+            "type": "application/x-parquet",
+            "title": "Database Access for Weekly beetle_community_abundance",
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        }
+    }
+}

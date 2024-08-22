@@ -3,14 +3,8 @@ library(dplyr)
 library(gsheet)
 library(readr)
 
-#source('catalog/R/stac_functions.R')
 config <- yaml::read_yaml('challenge_configuration.yaml')
 catalog_config <- config$catalog_config
-
-# names(config$variable_groups)
-# variable_groups <- names(config$variable_groups)
-# variable_list <- config$variable_groups
-
 
 ## CREATE table for column descriptions
 scores_description_create <- data.frame(reference_datetime ='datetime that the forecast was initiated (horizon = 0)',
@@ -36,20 +30,8 @@ scores_description_create <- data.frame(reference_datetime ='datetime that the f
                                  project_id = 'unique project identifier')
 
 
-## just read in example forecast to extract schema information -- ask about better ways of doing this
-# theme <- 'daily'
-# reference_datetime <- '2023-09-01'
-# site_id <- 'fcre'
-# model_id <- 'climatology'
-
 print('FIND SCORES TABLE SCHEMA')
-scores_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$scores_bucket, endpoint_override = config$endpoint, anonymous = TRUE)) #|>
-  #filter(model_id == model_id, site_id = site_id, reference_datetime = reference_datetime)
-
-## identify model ids from bucket -- used in generate model items function
-# scores_data_df <- duckdbfs::open_dataset(glue::glue("s3://{config$inventory_bucket}/catalog/forecasts/project_id={config$project_id}"),
-#                                   s3_endpoint = config$endpoint, anonymous=TRUE) |>
-#   collect()
+scores_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$scores_bucket, endpoint_override = config$endpoint, anonymous = TRUE))
 
 print('FIND INVENTORY BUCKET')
 scores_s3 <- arrow::s3_bucket(glue::glue("{config$inventory_bucket}/catalog/scores/project_id={config$project_id}"),
@@ -70,8 +52,8 @@ scores_max_date <- scores_date_range$`max(date)`
 
 build_description <- paste0("The catalog contains scores for the ", config$challenge_long_name,". The scores are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). You can access the scores at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the scores catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the scores for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
-#variable_group <- c('test_daily')
-
+scores_sites <- scores_data_df |>
+  distinct(site_id)
 
 stac4cast::build_forecast_scores(table_schema = scores_theme_df,
                       #theme_id = 'Scores',
@@ -88,40 +70,13 @@ stac4cast::build_forecast_scores(table_schema = scores_theme_df,
                       link_items = stac4cast::generate_group_values(group_values = names(config$variable_groups)),
                       thumbnail_link = catalog_config$scores_thumbnail,
                       thumbnail_title = catalog_config$scores_thumbnail_title,
-                      model_child = TRUE)
-
-## create separate JSON for model landing page
-## create separate JSON for model landing page
-if (!dir.exists(paste0(catalog_config$scores_path,"models"))){
-  dir.create(paste0(catalog_config$scores_path,"models"))
-}
-
-stac4cast::build_group_variables(table_schema = scores_theme_df,
-                      #theme_id = 'models',
-                      table_description = scores_description_create,
-                      start_date = scores_min_date,
-                      end_date = scores_max_date,
-                      id_value = "models",
-                      description_string = build_description,
-                      about_string = catalog_config$about_string,
-                      about_title = catalog_config$about_title,
-                      dashboard_string = catalog_config$dashboard_url,
-                      dashboard_title = catalog_config$dashboard_title,
-                      theme_title = "Models",
-                      destination_path = paste0(catalog_config$scores_path,"models"),
-                      aws_download_path = catalog_config$aws_download_path_scores,
-                      group_var_items = stac4cast::generate_model_items(model_list = theme_models$model_id),
-                      thumbnail_link = 'pending',
-                      thumbnail_title = 'pending',
-                      group_var_vector = NULL,
-                      group_sites = NULL)
+                      group_sites = scores_sites$site_id,
+                      model_child = FALSE)
 
 ## CREATE MODELS
 
 ## READ IN MODEL METADATA
 variable_gsheet <- gsheet2tbl(config$target_metadata_gsheet)
-
-#registered_model_id <- gsheet2tbl(config$model_metadata_gsheet)
 
 # read in model metadata and filter for the relevant project
 gsheet_read <- gsheet2tbl(config$model_metadata_gsheet)
@@ -131,72 +86,7 @@ registered_model_id <- gsheet_read |>
   filter(`What forecasting challenge are you registering for?` == config$project_id) |>
   rename(project_id = `What forecasting challenge are you registering for?`) |>
   arrange(row_non_na) |>
-  distinct(model_id, project_id, .keep_all = TRUE) #|>
-  #filter(row_non_na > 20) ## estimate based on current number of rows assuming everything (minus model and project) are empty
-
-scores_sites <- c()
-
-## loop over model ids and extract components if present in metadata table
-
-for (m in theme_models$model_id){
-
-  # make model items directory
-  if (!dir.exists(file.path(catalog_config$scores_path,"models/model_items"))){
-    dir.create(file.path(catalog_config$scores_path,"models/model_items"))
-  }
-
-  print(m)
-  model_date_range <- scores_data_df |> filter(model_id == m) |> dplyr::summarise(min(date),max(date))
-  model_min_date <- model_date_range$`min(date)`
-  model_max_date <- model_date_range$`max(date)`
-
-  model_sites <- scores_data_df |> filter(model_id == m) |> distinct(site_id)
-  model_vars <- scores_data_df |> filter(model_id == m) |> distinct(variable)
-
-  model_var_duration_df <- scores_data_df |> filter(model_id == m) |> distinct(variable,duration, project_id) |>
-    mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
-    mutate(duration_name = ifelse(duration == 'PT1H', 'Hourly', duration_name)) |>
-    mutate(duration_name = ifelse(duration == 'PT30M', '30min', duration_name)) |>
-    mutate(duration_name = ifelse(duration == 'P1W', 'Weekly', duration_name))
-
-  model_var_full_name <- model_var_duration_df |>
-    left_join((variable_gsheet |>
-                 select(variable = `"official" targets name`, full_name = `Variable name`) |>
-                 distinct(variable, .keep_all = TRUE)), by = c('variable'))
-
-  model_sites <- scores_data_df |> filter(model_id == m) |> distinct(site_id)
-
-  model_vars <- scores_data_df |> filter(model_id == m) |> distinct(variable) |> left_join(model_var_full_name, by = 'variable')
-  model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)
-
-  #model_var_duration_df$full_variable_name <- paste0(model_var_duration_df$variable, "_", model_var_duration_df$duration_name)
-
-  scores_sites <- append(scores_sites,  stac4cast::get_site_coords(site_metadata = catalog_config$site_metadata_url,
-                                                                   sites = model_sites$site_id))
-
-  idx = which(registered_model_id$model_id == m)
-
-  stac4cast::build_model(model_id = m,
-              team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
-              model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
-              start_date = model_min_date,
-              end_date = model_max_date,
-              var_values = model_vars$var_duration_name,
-              duration_names = model_var_duration_df$duration,
-              site_values = model_sites$site_id,
-              site_table = catalog_config$site_metadata_url,
-              model_documentation = registered_model_id,
-              destination_path = file.path(catalog_config$scores_path,"models/model_items"),
-              aws_download_path = catalog_config$aws_download_path_scores, # CHANGE THIS BUCKET NAME
-              collection_name = 'scores',
-              thumbnail_image_name = NULL,
-              table_schema = scores_theme_df,
-              table_description = scores_description_create,
-              full_var_df = model_vars,
-              code_web_link = registered_model_id$`Web link to model code`[idx])
-              #code_web_link = 'pending')
-}
-
+  distinct(model_id, project_id, .keep_all = TRUE)
 
 ## BUILD VARIABLE GROUPS
 
@@ -230,7 +120,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
   var_name_full <- var_gsheet_arrange[which(var_gsheet_arrange$`"official" targets name` %in% var_values),1][[1]]
 
   ## CREATE VARIABLE GROUP JSONS
-  group_description <- paste0('This page includes variables for the ',names(config$variable_groups[i]),' group.')
+  group_description <- paste0('All variables for the ',names(config$variable_groups[i]),' group.')
 
   ## find group sites
   find_group_sites <- scores_data_df |>
@@ -285,13 +175,21 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         var_min_date <- var_date_range$`min(date)`
         var_max_date <- var_date_range$`max(date)`
 
-        var_models <- var_data |> distinct(model_id)
+        var_models <- var_data |>
+          distinct(model_id) |>
+          filter(model_id %in% registered_model_id$model_id,
+                 !grepl("example",model_id))
 
         find_var_sites <- scores_data_df |>
             filter(variable == var_name) |>
             distinct(site_id)
 
-        var_description <- paste0('This page includes all models for the ',var_formal_name,' variable.')
+        var_metadata <- variable_gsheet |>
+          filter(`"official" targets name` == var_name,
+                 duration == duration_name)
+
+        var_description <- paste0('All models for the ',var_formal_name,' variable. The variable description is as follows: ',
+                                  var_metadata$Description)
 
         var_path <- gsub('forecasts','scores',var_data$path[1])
 
@@ -302,7 +200,9 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         #update group list of publication information
         citation_build <- append(citation_build, var_citations)
         doi_build <- append(doi_build, doi_citations)
-      
+
+        #variable_name_build <- append(variable_name_build, var_formal_name)
+
         variable_name_build <- append(variable_name_build, var_formal_name)
 
         stac4cast::build_group_variables(table_schema = scores_theme_df,
@@ -320,12 +220,120 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                         destination_path = file.path(catalog_config$scores_path,names(config$variable_groups)[i],var_formal_name),
                                         aws_download_path = var_path,
                                         group_var_items = stac4cast::generate_variable_model_items(model_list = var_models$model_id),
-                                        thumbnail_link = 'pending',
-                                        thumbnail_title = 'pending',
+                                        thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
+                                        thumbnail_title = "Thumbnail Image",
                                         group_var_vector = NULL,
-                                        group_sites = find_var_sites$site_id)#,
-                                        #citation_values = var_citations,
-                                        #doi_values = doi_citations)
+                                        single_var_name = var_name,
+                                        group_duration_value = duration_value,
+                                        group_sites = find_var_sites$site_id,
+                                        citation_values = var_citations,
+                                        doi_values = doi_citations)
+
+
+        scores_sites <- c()
+
+
+        ## loop over model ids and extract components if present in metadata table
+
+        for (m in var_models$model_id){
+
+          # make model directory
+          if (!dir.exists(paste0(catalog_config$scores_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"))){
+            dir.create(paste0(catalog_config$scores_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"))
+          }
+
+          print(m)
+          model_date_range <- scores_data_df |>
+            filter(model_id == m,
+                   variable == var_name,
+                   duration == duration_name) |>
+            dplyr::summarise(min(date),max(date))
+
+          model_min_date <- model_date_range$`min(date)`
+          model_max_date <- model_date_range$`max(date)`
+
+          model_var_duration_df <- scores_data_df |>
+            filter(model_id == m,
+                   variable == var_name,
+                   duration == duration_name) |>
+            distinct(variable,duration, project_id) |>
+            mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
+            mutate(duration_name = ifelse(duration == 'PT1H', 'Hourly', duration_name)) |>
+            mutate(duration_name = ifelse(duration == 'PT30M', '30min', duration_name)) |>
+            mutate(duration_name = ifelse(duration == 'P1W', 'Weekly', duration_name))
+
+          model_var_full_name <- model_var_duration_df |>
+            left_join((variable_gsheet |>
+                         select(variable = `"official" targets name`, full_name = `Variable name`) |>
+                         distinct(variable, .keep_all = TRUE)), by = c('variable'))
+
+          model_sites <- scores_data_df |>
+            filter(model_id == m,
+                   variable == var_name,
+                   duration == duration_name) |>
+            distinct(site_id)
+
+          model_site_text <- paste(as.character(model_sites$site_id), sep="' '", collapse=", ")
+
+          model_vars <- scores_data_df |>
+            filter(model_id == m,
+                   variable == var_name,
+                   duration == duration_name) |>
+            distinct(variable) |>
+            left_join(model_var_full_name, by = 'variable')
+
+          model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)
+
+          scores_sites <- append(scores_sites,  stac4cast::get_site_coords(site_metadata = catalog_config$site_metadata_url,
+                                                                           sites = model_sites$site_id))
+          stac_id <- paste0(m,'_',var_name,'_',duration_name,'_scores')
+
+          idx = which(registered_model_id$model_id == m)
+
+          if (is.null(registered_model_id$`Web link to model code`[idx])){
+            model_code_link <- 'https://projects.ecoforecast.org/neon4cast-ci/'
+          } else{
+            model_code_link <- registered_model_id$`Web link to model code`[idx]
+          }
+
+          model_description <- paste0("All scores for the ",
+                                      var_formal_name,
+                                      ' variable for the ',
+                                      m,
+                                      ' model. Information for the model is provided as follows: ',
+                                      registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
+                                      '.
+                                    The model predicts this variable at the following sites: ',
+                                    model_site_text,
+                                    '.
+                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)')
+
+          model_keywords <- c(list('Scores',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
+                              as.list(model_sites$site_id))
+
+          stac4cast::build_model(model_id = m,
+                                 stac_id = stac_id,
+                                 team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
+                                 model_description = model_description,
+                                 start_date = model_min_date,
+                                 end_date = model_max_date,
+                                 var_values = model_vars$var_duration_name,
+                                 duration_names = model_var_duration_df$duration,
+                                 duration_value = duration_name,
+                                 site_values = model_sites$site_id,
+                                 site_table = catalog_config$site_metadata_url,
+                                 model_documentation = registered_model_id,
+                                 destination_path = paste0(catalog_config$scores_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"),
+                                 aws_download_path = catalog_config$aws_download_path_scores, # CHANGE THIS BUCKET NAME
+                                 collection_name = 'scores',
+                                 thumbnail_image_name = NULL,
+                                 table_schema = scores_theme_df,
+                                 table_description = scores_description_create,
+                                 full_var_df = model_vars,
+                                 code_web_link = model_code_link,
+                                 model_keywords = model_keywords)
+        } ## end model loop
+
             } ## end duration loop
 
   } ## end variable loop
@@ -348,7 +356,9 @@ stac4cast::build_group_variables(table_schema = scores_theme_df,
                     thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
                     thumbnail_title = config$variable_groups[[i]]$thumbnail_title,
                     group_var_vector = unique(var_values),
-                    group_sites = find_group_sites$site_id)#,
-                    #citation_values = citation_build,
-                    #doi_build = doi_build)
+                    group_duration_value = NULL,
+                    single_var_name = NULL,
+                    group_sites = find_group_sites$site_id,
+                    citation_values = citation_build,
+                    doi_values = doi_build)
 } # end group loop

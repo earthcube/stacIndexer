@@ -1,107 +1,107 @@
 {
-  "id": "Pseudo",
-  "description": "NOAA Global Ensemble Forecasting System weather forecasts that have been downloaded and processed for the forecasted sites.",
-  "stac_version": "1.0.0",
-  "license": "CC0-1.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ],
-  "type": "Collection",
-  "links": [
-    {
-      "rel": "parent",
-      "type": "application/json",
-      "href": "../collection.json"
+    "id": "Pseudo",
+    "description": "NOAA Global Ensemble Forecasting System weather forecasts that have been downloaded and processed for the forecasted sites.",
+    "stac_version": "1.0.0",
+    "license": "CC0-1.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Collection",
+    "links": [
+        {
+            "rel": "parent",
+            "type": "application/json",
+            "href": "../collection.json"
+        },
+        {
+            "rel": "root",
+            "type": "application/json",
+            "href": "../../catalog.json"
+        },
+        {
+            "rel": "self",
+            "type": "application/json",
+            "href": "collection.json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "10.1002/fee.2616"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast/",
+            "title": "VERA Forecasting Challenge Documentation",
+            "type": "text/html"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.ltreb-reservoirs.org/vera4cast",
+            "title": "VERA Forecast Challenge Dashboard",
+            "type": "text/html"
+        }
+    ],
+    "title": "Pseudo",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -79.8372,
+                    37.3032,
+                    -79.8159,
+                    37.3129
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2020-01-01T00:00:00Z",
+                    "2024-08-21T00:00:00Z"
+                ]
+            ]
+        }
     },
-    {
-      "rel": "root",
-      "type": "application/json",
-      "href": "../../catalog.json"
-    },
-    {
-      "rel": "self",
-      "type": "application/json",
-      "href": "collection.json"
-    },
-    {
-      "rel": "cite-as",
-      "href": "https://doi.org/10.1002/fee.2616"
-    },
-    {
-      "rel": "about",
-      "href": "https://www.ltreb-reservoirs.org/vera4cast/",
-      "title": "VERA Forecasting Challenge Documentation",
-      "type": "text/html"
-    },
-    {
-      "rel": "describedby",
-      "href": "https://www.ltreb-reservoirs.org/vera4cast",
-      "title": "VERA Forecast Challenge Dashboard",
-      "type": "text/html"
+    "table:columns": [
+        {
+            "name": "parameter",
+            "type": "double",
+            "description": "ensemble member or distribution parameter"
+        },
+        {
+            "name": "datetime",
+            "type": "timestamp[us, tz=UTC]",
+            "description": "datetime of the forecasted value (ISO 8601)"
+        },
+        {
+            "name": "variable",
+            "type": "string",
+            "description": "name of forecasted variable"
+        },
+        {
+            "name": "prediction",
+            "type": "double",
+            "description": "predicted value for variable"
+        }
+    ],
+    "assets": {
+        "data": {
+            "href": "s3://anonymous@bio230121-bucket01/flare/drivers/met/gefs-v12/pseudo/parquet?endpoint_override=renc.osn.xsede.org",
+            "type": "application/x-parquet",
+            "title": "Database Access",
+            "roles": [
+                "data"
+            ],
+            "description": "Use `arrow` for remote access to the database. This R code will return results for NEON forecasts associated with the forecasting challenge.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/flare/drivers/met/gefs-v12/pseudo/parquet?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+        },
+        "thumbnail": {
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/dashboard/img/banner-2.jpg",
+            "type": "image/JPEG",
+            "roles": [
+                "thumbnail"
+            ],
+            "title": "Falling Creek Reservoir"
+        }
     }
-  ],
-  "title": "Pseudo",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [-79.8372, 37.3032, -79.8159, 37.3129]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          "2024-02-16T00:00:00Z",
-          "2024-05-29T00:00:00Z"
-        ]
-      ]
-    }
-  },
-  "table:columns": [
-    {
-      "name": "parameter",
-      "type": "double",
-      "description": "ensemble member or distribution parameter"
-    },
-    {
-      "name": "datetime",
-      "type": "timestamp[us, tz=UTC]",
-      "description": "datetime of the forecasted value (ISO 8601)"
-    },
-    {
-      "name": "variable",
-      "type": "string",
-      "description": "name of forecasted variable"
-    },
-    {
-      "name": "prediction",
-      "type": "double",
-      "description": "predicted value for variable"
-    },
-    {
-      "name": "family",
-      "type": "string",
-      "description": "For ensembles: “ensemble.” Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The “sample” distribution is synonymous with “ensemble.”For summary statistics: “summary.”"
-    }
-  ],
-  "assets": {
-    "data": {
-      "href": "s3://anonymous@bio230121-bucket01/flare/drivers/met/gefs-v12/pseudo/parquet?endpoint_override=renc.osn.xsede.org",
-      "type": "application/x-parquet",
-      "title": "Database Access",
-      "roles": [
-        "data"
-      ],
-      "description": "Use `arrow` for remote access to the database. This R code will return results for NEON forecasts associated with the forecasting challenge.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/flare/drivers/met/gefs-v12/pseudo/parquet?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
-    },
-    "thumbnail": {
-      "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/dashboard/img/banner-2.jpg",
-      "type": "image/JPEG",
-      "roles": [
-        "thumbnail"
-      ],
-      "title": "Falling Creek Reservoir"
-    }
-  }
 }

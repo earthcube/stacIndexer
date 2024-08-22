@@ -18,14 +18,9 @@
 
 
 def sdo_box(bbox, cells):
-
     doc = {}
-    geo_a = []
-
-    geo = {}
-    geo["@type"] = "GeoShape"
-    geo["box"] = bbox
-    geo_a.append(geo)
+    additional_property = []
+    geo = {"@type": "GeoShape", "box": bbox}
 
     for c in cells:
         geos2 = {}
@@ -34,10 +29,10 @@ def sdo_box(bbox, cells):
         geos2["name"] = "s2Level13"
         geos2["description"] = "S2 cell at level 13"
         geos2["value"] = c
-        geo_a.append(geos2)
-
+        additional_property.append(geos2)
 
     doc['@type'] = 'Place'
-    doc['geo'] = geo_a
+    doc['geo'] = geo
+    doc['additionalProperty'] = additional_property
 
     return doc
