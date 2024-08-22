@@ -377,9 +377,9 @@ def walk_stac(cf):
     download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
     # Resolve schema issues
-    replace_in_folder('./data/challenge', '"href": []', '"href": "www.example.com"')
-    replace_in_folder('./data/challenge', '"href": null', '"href": "www.example.com"')
-    replace_in_folder('./data/challenge', '"href": {}', '"href": "www.example.com"')
+    replace_in_folder('./data/challenge', '"href": []', '"href": "https://github.com/radiantearth"')
+    replace_in_folder('./data/challenge', '"href": null', '"href": "https://github.com/radiantearth"')
+    replace_in_folder('./data/challenge', '"href": {}', '"href": "https://github.com/radiantearth"')
     replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
     replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
     replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
