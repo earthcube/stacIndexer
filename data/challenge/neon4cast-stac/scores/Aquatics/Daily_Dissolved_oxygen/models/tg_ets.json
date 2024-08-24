@@ -15,20 +15,20 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -149.143,
-                68.6698
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
             [
-                -78.1473,
-                38.8943
+                -149.143,
+                68.6698
             ],
             [
-                -97.7823,
-                33.3785
+                -89.4737,
+                46.2097
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -99.1139,
@@ -37,34 +37,6 @@
             [
                 -99.2531,
                 47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
             ],
             [
                 -102.4471,
@@ -99,10 +71,6 @@
                 40.035
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -66.9868,
                 18.1135
             ],
@@ -131,10 +99,6 @@
                 39.0956
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -121.9338,
                 45.7908
             ],
@@ -149,13 +113,49 @@
             [
                 -122.1655,
                 44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -105.9154,
+                39.8914
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: OKSR, TOOK, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-22T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: TOOK, OKSR, CRAM, LIRO, PRLA, PRPO, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-23T00:00:00Z",
         "start_datetime": "2022-09-21T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -186,19 +186,12 @@
             "oxygen",
             "Daily",
             "P1D",
-            "OKSR",
             "TOOK",
-            "POSE",
-            "PRIN",
+            "OKSR",
+            "CRAM",
+            "LIRO",
             "PRLA",
             "PRPO",
-            "REDB",
-            "SUGG",
-            "SYCA",
-            "TECR",
-            "TOMB",
-            "WALK",
-            "WLOU",
             "ARIK",
             "BARC",
             "BIGC",
@@ -207,7 +200,6 @@
             "BLWA",
             "CARI",
             "COMO",
-            "CRAM",
             "CUPE",
             "FLNT",
             "GUIL",
@@ -215,11 +207,19 @@
             "KING",
             "LECO",
             "LEWI",
-            "LIRO",
             "MART",
             "MAYF",
             "MCDI",
-            "MCRA"
+            "MCRA",
+            "POSE",
+            "PRIN",
+            "REDB",
+            "SUGG",
+            "SYCA",
+            "TECR",
+            "TOMB",
+            "WALK",
+            "WLOU"
         ],
         "table:columns": [
             {
@@ -350,6 +350,18 @@
             "href": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
             "type": "text/html",
             "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/Aquatics/Daily_Dissolved_oxygen/models/tg_ets.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/Aquatics/Daily_Dissolved_oxygen/models/tg_ets.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
         }
     ],
     "assets": {

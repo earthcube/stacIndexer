@@ -23,7 +23,7 @@
     "properties": {
         "title": "flareSimstrat",
         "description": "All scores for the Daily_Water_temperature variable for the flareSimstrat model. Information for the model is provided as follows: FLARE-Simstrat combines the 1D process-based model Simstrat, a data assimilation algorithm (EnKF) and NOAA driver weather data to make predictions of water column temperatures..\n                                    The model predicts this variable at the following sites: fcre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-21T00:00:00Z",
+        "datetime": "2024-08-23T00:00:00Z",
         "start_datetime": "2024-01-21T00:00:00Z",
         "end_datetime": "2024-08-15T00:00:00Z",
         "providers": [
@@ -54,7 +54,8 @@
             "Temp_C_mean",
             "Daily",
             "P1D",
-            "fcre"
+            "fcre",
+            "process based"
         ],
         "table:columns": [
             {
@@ -190,6 +191,18 @@
             "href": "https://github.com/FLARE-forecast/FCRE-forecast-code/blob/main/workflows/ler/combined_workflow_Simstrat.R",
             "type": "text/html",
             "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/scores/Physical/Daily_Water_temperature/models/flareSimstrat.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/scores/Physical/Daily_Water_temperature/models/flareSimstrat.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
         }
     ],
     "assets": {

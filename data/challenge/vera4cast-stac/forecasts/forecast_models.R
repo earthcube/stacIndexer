@@ -316,6 +316,17 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                               as.list(model_sites$site_id), model_type_keyword)
         }
 
+        ## build radiantearth stac and raw json link
+        stac_link <- paste0('https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/forecasts/',
+                            names(config$variable_groups)[i],'/',
+                            var_formal_name, '/models/',
+                            m,'.json')
+
+        json_link <- paste0('https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/forecasts/',
+                            names(config$variable_groups)[i],'/',
+                            var_formal_name, '/models/',
+                            m,'.json')
+
         stac4cast::build_model(model_id = m,
                                stac_id = stac_id,
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
@@ -337,7 +348,9 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                table_description = forecast_description_create,
                                full_var_df = model_vars,
                                code_web_link = registered_model_id$`Web link to model code`[idx],
-                               model_keywords = model_keywords)
+                               model_keywords = model_keywords,
+                               stac_web_link = stac_link,
+                               raw_json_link = json_link)
       } ## end model loop
     } ## end duration loop
 

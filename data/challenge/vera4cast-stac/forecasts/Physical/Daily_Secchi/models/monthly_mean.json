@@ -27,7 +27,7 @@
     "properties": {
         "title": "monthly_mean",
         "description": "All forecasts for the Daily_Secchi variable for the monthly_mean model. Information for the model is provided as follows: This model calculates a monthly mean from the historic data and assigns this as the mean prediction for any day within that month. The standard deviation of the observations for that month is given as the standard deviation of the forecast..\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-21T00:00:00Z",
+        "datetime": "2024-08-23T00:00:00Z",
         "start_datetime": "2024-02-06T00:00:00Z",
         "end_datetime": "2024-09-05T00:00:00Z",
         "providers": [
@@ -156,6 +156,18 @@
             "href": "https://github.com/OlssonF/vera4cast/blob/main/R/MonthlyMeanModelFunction.R",
             "type": "text/html",
             "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/forecasts/Physical/Daily_Secchi/models/monthly_mean.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/forecasts/Physical/Daily_Secchi/models/monthly_mean.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
         }
     ],
     "assets": {

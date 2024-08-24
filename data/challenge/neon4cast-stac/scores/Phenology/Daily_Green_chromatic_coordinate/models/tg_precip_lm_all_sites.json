@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -201,13 +193,21 @@
             [
                 -109.3883,
                 38.2483
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-22T00:00:00Z",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-24T00:00:00Z",
         "start_datetime": "2023-01-01T00:00:00Z",
         "end_datetime": "2024-03-05T00:00:00Z",
         "providers": [
@@ -238,8 +238,6 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "NIWO",
-            "NOGP",
             "OAES",
             "ONAQ",
             "ORNL",
@@ -284,7 +282,9 @@
             "LAJA",
             "LENO",
             "MLBS",
-            "MOAB"
+            "MOAB",
+            "NIWO",
+            "NOGP"
         ],
         "table:columns": [
             {
@@ -415,6 +415,18 @@
             "href": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
             "type": "text/html",
             "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/Phenology/Daily_Green_chromatic_coordinate/models/tg_precip_lm_all_sites.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/Phenology/Daily_Green_chromatic_coordinate/models/tg_precip_lm_all_sites.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
         }
     ],
     "assets": {

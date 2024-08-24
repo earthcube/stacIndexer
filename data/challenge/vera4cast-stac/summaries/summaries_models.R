@@ -57,7 +57,7 @@ stac4cast::build_forecast_scores(table_schema = summaries_theme_df,
                                  about_title = catalog_config$about_title,
                                  theme_title = "Forecast Summaries",
                                  destination_path = catalog_config$summaries_path,
-                                 aws_download_path = catalog_config$summaries_download_path,
+                                 aws_download_path = catalog_config$aws_download_path_summaries,
                                  link_items = stac4cast::generate_group_values(group_values = names(config$variable_groups)),
                                  thumbnail_link = catalog_config$summaries_thumbnail,
                                  thumbnail_title = catalog_config$summaries_thumbnail_title,
@@ -286,6 +286,37 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_keywords <- c(list('Summaries',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
                             as.list(model_sites$site_id))
 
+        model_type <- registered_model_id$`Which category best matches your modeling approach?`[idx]
+
+        if(model_type %in% c('Empirical (a statistical model)', 'Empirical', 'empirical')){
+          model_type_keyword <- "empirical"
+        } else if(model_type %in% c('Machine Learning', 'ML', 'Machine learning', 'machine learning')){
+          model_type_keyword <- 'machine learning'
+        } else if (model_type %in% c('Process Based', 'Process based', 'process based')){
+          model_type_keyword <- 'process based'
+        } else{
+          model_type_keyword <- NA
+        }
+
+        if (is.na(model_type_keyword)){
+          model_keywords <- c(list('Summaries',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
+                              as.list(model_sites$site_id))
+        }else{
+          model_keywords <- c(list('Summaries',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
+                              as.list(model_sites$site_id), model_type_keyword)
+        }
+
+        ## build radiantearth stac and raw json link
+        stac_link <- paste0('https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/summaries/',
+                            names(config$variable_groups)[i],'/',
+                            var_formal_name, '/models/',
+                            m,'.json')
+
+        json_link <- paste0('https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/summaries/',
+                            names(config$variable_groups)[i],'/',
+                            var_formal_name, '/models/',
+                            m,'.json')
+
         stac4cast::build_model(model_id = m,
                                stac_id = stac_id,
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
@@ -299,14 +330,16 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                site_table = catalog_config$site_metadata_url,
                                model_documentation = registered_model_id,
                                destination_path = paste0(catalog_config$summaries_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"),
-                               aws_download_path = catalog_config$summaries_download_path, # USE SCORES BUCKET FOR MODELS
+                               aws_download_path = catalog_config$aws_download_path_summaries, # USE SCORES BUCKET FOR MODELS
                                collection_name = 'forecasts',
                                thumbnail_image_name = NULL,
                                table_schema = summaries_theme_df,
                                table_description = summaries_description_create,
                                full_var_df = model_vars,
                                code_web_link = registered_model_id$`Web link to model code`[idx],
-                               model_keywords = model_keywords)
+                               model_keywords = model_keywords,
+                               stac_web_link = stac_link,
+                               raw_json_link = json_link)
       } # end model loop
 
     } ## end duration loop

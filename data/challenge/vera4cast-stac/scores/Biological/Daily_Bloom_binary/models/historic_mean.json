@@ -27,7 +27,7 @@
     "properties": {
         "title": "historic_mean",
         "description": "All scores for the Daily_Bloom_binary variable for the historic_mean model. Information for the model is provided as follows: Calculates the mean state from the historic timeseries and applies this to the forecast horizon. The model uses the fable R package MEAN() function to fit this model, with the uncertainty generated from the residuals of the fitted model..\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-21T00:00:00Z",
+        "datetime": "2024-08-23T00:00:00Z",
         "start_datetime": "2024-02-09T00:00:00Z",
         "end_datetime": "2024-08-15T00:00:00Z",
         "providers": [
@@ -59,7 +59,8 @@
             "Daily",
             "P1D",
             "bvre",
-            "fcre"
+            "fcre",
+            "empirical"
         ],
         "table:columns": [
             {
@@ -195,6 +196,18 @@
             "href": "https://github.com/OlssonF/vera4cast/blob/main/R/fableMeanModelFunction.R",
             "type": "text/html",
             "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/scores/Biological/Daily_Bloom_binary/models/historic_mean.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/catalog/scores/Biological/Daily_Bloom_binary/models/historic_mean.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
         }
     ],
     "assets": {

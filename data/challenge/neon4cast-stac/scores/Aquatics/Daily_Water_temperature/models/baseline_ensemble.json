@@ -15,12 +15,20 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.5871,
-                44.9501
+                -102.4471,
+                39.7582
             ],
             [
-                -96.6242,
-                34.4442
+                -82.0084,
+                29.676
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
             ],
             [
                 -87.7982,
@@ -107,20 +115,8 @@
                 39.8914
             ],
             [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -88.1589,
-                31.8534
+                -96.6242,
+                34.4442
             ],
             [
                 -99.1139,
@@ -129,6 +125,10 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -88.1589,
+                31.8534
             ],
             [
                 -149.6106,
@@ -154,8 +154,8 @@
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: BLDE, BLUE, BLWA, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, WALK, WLOU, ARIK, BARC, BIGC, TOMB, PRLA, PRPO, TOOK, CARI, CRAM, LIRO, OKSR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-22T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: ARIK, BARC, BIGC, BLDE, BLWA, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, WALK, WLOU, BLUE, PRLA, PRPO, TOMB, TOOK, CARI, CRAM, LIRO, OKSR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-23T00:00:00Z",
         "start_datetime": "2023-01-02T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -186,8 +186,10 @@
             "temperature",
             "Daily",
             "P1D",
+            "ARIK",
+            "BARC",
+            "BIGC",
             "BLDE",
-            "BLUE",
             "BLWA",
             "COMO",
             "CUPE",
@@ -209,12 +211,10 @@
             "TECR",
             "WALK",
             "WLOU",
-            "ARIK",
-            "BARC",
-            "BIGC",
-            "TOMB",
+            "BLUE",
             "PRLA",
             "PRPO",
+            "TOMB",
             "TOOK",
             "CARI",
             "CRAM",
@@ -350,6 +350,18 @@
             "href": "https://github.com/OlssonF/NEON-simple-baselines/blob/main/Models/baseline_ensemble.R",
             "type": "text/html",
             "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/Aquatics/Daily_Water_temperature/models/baseline_ensemble.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/Aquatics/Daily_Water_temperature/models/baseline_ensemble.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
         }
     ],
     "assets": {
