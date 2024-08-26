@@ -63,18 +63,6 @@
                 31.8534
             ],
             [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
                 -102.4471,
                 39.7582
             ],
@@ -149,13 +137,25 @@
             [
                 -82.0177,
                 29.6878
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -105.9154,
+                39.8914
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: CARI, COMO, CRAM, KING, LIRO, OKSR, PRLA, PRPO, TOOK, SYCA, MART, TOMB, TECR, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CUPE, FLNT, GUIL, HOPB, LECO, LEWI, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-25T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: CARI, COMO, CRAM, KING, LIRO, OKSR, PRLA, PRPO, TOOK, SYCA, MART, TOMB, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CUPE, FLNT, GUIL, HOPB, LECO, LEWI, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, TECR, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-26T00:00:00Z",
         "start_datetime": "2022-08-06T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -198,9 +198,6 @@
             "SYCA",
             "MART",
             "TOMB",
-            "TECR",
-            "WALK",
-            "WLOU",
             "ARIK",
             "BARC",
             "BIGC",
@@ -219,7 +216,10 @@
             "POSE",
             "PRIN",
             "REDB",
-            "SUGG"
+            "SUGG",
+            "TECR",
+            "WALK",
+            "WLOU"
         ],
         "table:columns": [
             {

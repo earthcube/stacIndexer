@@ -15,6 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
                 -102.4471,
                 39.7582
             ],
@@ -23,24 +39,40 @@
                 29.676
             ],
             [
-                -119.2575,
-                37.0597
-            ],
-            [
                 -110.5871,
                 44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
             ],
             [
                 -87.7982,
                 32.5415
             ],
             [
+                -147.504,
+                65.1532
+            ],
+            [
                 -105.5442,
                 40.035
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -66.9868,
                 18.1135
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -72.3295,
+                42.4719
             ],
             [
                 -83.5038,
@@ -49,6 +81,14 @@
             [
                 -77.9832,
                 39.0956
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -121.9338,
+                45.7908
             ],
             [
                 -87.4077,
@@ -63,12 +103,20 @@
                 44.2596
             ],
             [
+                -149.143,
+                68.6698
+            ],
+            [
                 -78.1473,
                 38.8943
             ],
             [
-                -97.7823,
-                33.3785
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
             ],
             [
                 -111.7979,
@@ -83,79 +131,31 @@
                 33.751
             ],
             [
-                -119.0274,
-                36.9559
+                -84.4374,
+                31.1854
             ],
             [
                 -84.2793,
                 35.9574
             ],
             [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
                 -96.6038,
                 39.1051
             ],
             [
-                -149.143,
-                68.6698
+                -97.7823,
+                33.3785
             ],
             [
-                -149.6106,
-                68.6307
+                -119.2575,
+                37.0597
             ]
         ]
     },
     "properties": {
         "title": "fARIMA_clim_ensemble",
-        "description": "All scores for the Daily_Water_temperature variable for the fARIMA_clim_ensemble model. Information for the model is provided as follows: The fAMIRA-DOY MME is a multi-model ensemble (MME) composed of two empirical\nmodels: an ARIMA model (fARIMA) and day-of-year model.\n                                    The model predicts this variable at the following sites: ARIK, BARC, BIGC, BLDE, BLWA, COMO, CUPE, LECO, LEWI, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR, WALK, WLOU, FLNT, GUIL, HOPB, MART, BLUE, TOMB, CRAM, LIRO, PRLA, PRPO, CARI, KING, OKSR, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-24T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the fARIMA_clim_ensemble model. Information for the model is provided as follows: The fAMIRA-DOY MME is a multi-model ensemble (MME) composed of two empirical\nmodels: an ARIMA model (fARIMA) and day-of-year model.\n                                    The model predicts this variable at the following sites: TECR, TOMB, TOOK, WLOU, ARIK, BARC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, GUIL, HOPB, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRLA, PRPO, REDB, SUGG, SYCA, FLNT, WALK, KING, PRIN, BIGC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-26T00:00:00Z",
         "start_datetime": "2023-01-02T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -186,40 +186,40 @@
             "temperature",
             "Daily",
             "P1D",
+            "TECR",
+            "TOMB",
+            "TOOK",
+            "WLOU",
             "ARIK",
             "BARC",
-            "BIGC",
             "BLDE",
+            "BLUE",
             "BLWA",
+            "CARI",
             "COMO",
+            "CRAM",
             "CUPE",
+            "GUIL",
+            "HOPB",
             "LECO",
             "LEWI",
+            "LIRO",
+            "MART",
             "MAYF",
             "MCDI",
             "MCRA",
+            "OKSR",
             "POSE",
-            "PRIN",
+            "PRLA",
+            "PRPO",
             "REDB",
             "SUGG",
             "SYCA",
-            "TECR",
-            "WALK",
-            "WLOU",
             "FLNT",
-            "GUIL",
-            "HOPB",
-            "MART",
-            "BLUE",
-            "TOMB",
-            "CRAM",
-            "LIRO",
-            "PRLA",
-            "PRPO",
-            "CARI",
+            "WALK",
             "KING",
-            "OKSR",
-            "TOOK"
+            "PRIN",
+            "BIGC"
         ],
         "table:columns": [
             {

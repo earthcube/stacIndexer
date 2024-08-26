@@ -15,12 +15,32 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -88.1589,
-                31.8534
+                -149.143,
+                68.6698
             ],
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -88.1589,
+                31.8534
             ],
             [
                 -84.2793,
@@ -63,10 +83,6 @@
                 40.035
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -66.9868,
                 18.1135
             ],
@@ -95,10 +111,6 @@
                 39.0956
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -121.9338,
                 45.7908
             ],
@@ -115,24 +127,12 @@
                 44.2596
             ],
             [
-                -149.143,
-                68.6698
-            ],
-            [
                 -78.1473,
                 38.8943
             ],
             [
                 -97.7823,
                 33.3785
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
             ],
             [
                 -111.7979,
@@ -154,8 +154,8 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: TOMB, TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-24T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: OKSR, TOOK, PRLA, LIRO, PRPO, CRAM, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, SUGG, SYCA, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-25T00:00:00Z",
         "start_datetime": "2022-09-21T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -186,8 +186,13 @@
             "oxygen",
             "Daily",
             "P1D",
-            "TOMB",
+            "OKSR",
             "TOOK",
+            "PRLA",
+            "LIRO",
+            "PRPO",
+            "CRAM",
+            "TOMB",
             "WALK",
             "WLOU",
             "ARIK",
@@ -198,7 +203,6 @@
             "BLWA",
             "CARI",
             "COMO",
-            "CRAM",
             "CUPE",
             "FLNT",
             "GUIL",
@@ -206,16 +210,12 @@
             "KING",
             "LECO",
             "LEWI",
-            "LIRO",
             "MART",
             "MAYF",
             "MCDI",
             "MCRA",
-            "OKSR",
             "POSE",
             "PRIN",
-            "PRLA",
-            "PRPO",
             "REDB",
             "SUGG",
             "SYCA",

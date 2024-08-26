@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -29,25 +41,13 @@
             [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
             ]
         ]
     },
     "properties": {
         "title": "GLEON_lm_lag_1day",
-        "description": "All scores for the Daily_Water_temperature variable for the GLEON_lm_lag_1day model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-24T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the GLEON_lm_lag_1day model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: PRPO, SUGG, TOOK, BARC, CRAM, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-25T00:00:00Z",
         "start_datetime": "2022-10-30T00:00:00Z",
         "end_datetime": "2024-02-02T00:00:00Z",
         "providers": [
@@ -78,13 +78,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "PRPO",
+            "SUGG",
+            "TOOK",
             "BARC",
             "CRAM",
             "LIRO",
-            "PRLA",
-            "PRPO",
-            "SUGG",
-            "TOOK"
+            "PRLA"
         ],
         "table:columns": [
             {

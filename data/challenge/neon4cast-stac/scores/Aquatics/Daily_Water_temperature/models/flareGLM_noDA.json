@@ -19,18 +19,6 @@
                 29.676
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -39,15 +27,27 @@
                 47.1298
             ],
             [
+                -82.0177,
+                29.6878
+            ],
+            [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -89.7048,
+                45.9983
             ]
         ]
     },
     "properties": {
         "title": "flareGLM_noDA",
-        "description": "All scores for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: BARC, SUGG, CRAM, LIRO, PRLA, PRPO, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-25T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: BARC, PRLA, PRPO, SUGG, TOOK, CRAM, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-26T00:00:00Z",
         "start_datetime": "2023-03-02T00:00:00Z",
         "end_datetime": "2024-07-27T00:00:00Z",
         "providers": [
@@ -79,12 +79,12 @@
             "Daily",
             "P1D",
             "BARC",
-            "SUGG",
-            "CRAM",
-            "LIRO",
             "PRLA",
             "PRPO",
-            "TOOK"
+            "SUGG",
+            "TOOK",
+            "CRAM",
+            "LIRO"
         ],
         "table:columns": [
             {
