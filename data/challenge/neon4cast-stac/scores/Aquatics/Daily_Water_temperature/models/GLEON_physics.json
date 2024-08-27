@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -31,14 +39,6 @@
                 47.1591
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
                 -149.6106,
                 68.6307
             ]
@@ -46,8 +46,8 @@
     },
     "properties": {
         "title": "GLEON_physics",
-        "description": "All scores for the Daily_Water_temperature variable for the GLEON_physics model. Information for the model is provided as follows: A simple, process-based model was developed to replicate the water temperature dynamics of a\nsurface water layer sensu Chapra (2008). The model focus was only on quantifying the impacts of\natmosphere-water heat flux exchanges on the idealized near-surface water temperature dynamics.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-25T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the GLEON_physics model. Information for the model is provided as follows: A simple, process-based model was developed to replicate the water temperature dynamics of a\nsurface water layer sensu Chapra (2008). The model focus was only on quantifying the impacts of\natmosphere-water heat flux exchanges on the idealized near-surface water temperature dynamics.\n                                    The model predicts this variable at the following sites: PRPO, SUGG, BARC, CRAM, LIRO, PRLA, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-26T00:00:00Z",
         "start_datetime": "2022-11-01T00:00:00Z",
         "end_datetime": "2023-12-22T00:00:00Z",
         "providers": [
@@ -78,12 +78,12 @@
             "temperature",
             "Daily",
             "P1D",
+            "PRPO",
+            "SUGG",
             "BARC",
             "CRAM",
             "LIRO",
             "PRLA",
-            "PRPO",
-            "SUGG",
             "TOOK"
         ],
         "table:columns": [

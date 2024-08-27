@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
                 -87.4077,
                 32.9604
             ],
@@ -25,10 +65,6 @@
             [
                 -122.1655,
                 44.2596
-            ],
-            [
-                -149.143,
-                68.6698
             ],
             [
                 -78.1473,
@@ -65,10 +101,6 @@
             [
                 -88.1589,
                 31.8534
-            ],
-            [
-                -149.6106,
-                68.6307
             ],
             [
                 -84.2793,
@@ -117,45 +149,13 @@
             [
                 -66.9868,
                 18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-25T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: OKSR, TOOK, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-26T00:00:00Z",
         "start_datetime": "2022-09-21T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -186,10 +186,19 @@
             "oxygen",
             "Daily",
             "P1D",
+            "OKSR",
+            "TOOK",
+            "FLNT",
+            "GUIL",
+            "HOPB",
+            "KING",
+            "LECO",
+            "LEWI",
+            "LIRO",
+            "MART",
             "MAYF",
             "MCDI",
             "MCRA",
-            "OKSR",
             "POSE",
             "PRIN",
             "PRLA",
@@ -199,7 +208,6 @@
             "SYCA",
             "TECR",
             "TOMB",
-            "TOOK",
             "WALK",
             "WLOU",
             "ARIK",
@@ -211,15 +219,7 @@
             "CARI",
             "COMO",
             "CRAM",
-            "CUPE",
-            "FLNT",
-            "GUIL",
-            "HOPB",
-            "KING",
-            "LECO",
-            "LEWI",
-            "LIRO",
-            "MART"
+            "CUPE"
         ],
         "table:columns": [
             {

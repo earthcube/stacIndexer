@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -122.3303,
+                45.7624
+            ],
+            [
                 -156.6194,
                 71.2824
             ],
@@ -197,17 +201,13 @@
             [
                 -110.5391,
                 44.9535
-            ],
-            [
-                -122.3303,
-                45.7624
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-26T00:00:00Z",
+        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-27T00:00:00Z",
         "start_datetime": "2023-01-02T00:00:00Z",
         "end_datetime": "2024-02-26T00:00:00Z",
         "providers": [
@@ -238,6 +238,7 @@
             "abundance",
             "Weekly",
             "P1W",
+            "ABBY",
             "BARR",
             "BART",
             "BLAN",
@@ -283,8 +284,7 @@
             "UNDE",
             "WOOD",
             "WREF",
-            "YELL",
-            "ABBY"
+            "YELL"
         ],
         "table:columns": [
             {

@@ -15,12 +15,36 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
             [
+                -111.5081,
+                33.751
+            ],
+            [
                 -88.1589,
                 31.8534
+            ],
+            [
+                -149.6106,
+                68.6307
             ],
             [
                 -84.2793,
@@ -103,59 +127,35 @@
                 44.2596
             ],
             [
+                -149.143,
+                68.6698
+            ],
+            [
                 -78.1473,
                 38.8943
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -119.0274,
-                36.9559
             ],
             [
                 -87.4077,
                 32.9604
             ],
             [
-                -119.2575,
-                37.0597
+                -119.0274,
+                36.9559
             ],
             [
                 -96.6242,
                 34.4442
             ],
             [
-                -111.5081,
-                33.751
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
+                -119.2575,
+                37.0597
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: SUGG, TOMB, WALK, WLOU, ARIK, BARC, BLDE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MCDI, MCRA, POSE, PRIN, PRLA, PRPO, REDB, TECR, MAYF, BIGC, BLUE, SYCA, OKSR, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-25T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TOMB, TOOK, WALK, WLOU, ARIK, BARC, BLDE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MCDI, MCRA, OKSR, POSE, MAYF, TECR, BLUE, BIGC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-27T00:00:00Z",
         "start_datetime": "2021-12-18T00:00:00Z",
         "end_datetime": "2024-03-10T00:00:00Z",
         "providers": [
@@ -186,8 +186,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "PRIN",
+            "PRLA",
+            "PRPO",
+            "REDB",
             "SUGG",
+            "SYCA",
             "TOMB",
+            "TOOK",
             "WALK",
             "WLOU",
             "ARIK",
@@ -208,18 +214,12 @@
             "MART",
             "MCDI",
             "MCRA",
-            "POSE",
-            "PRIN",
-            "PRLA",
-            "PRPO",
-            "REDB",
-            "TECR",
-            "MAYF",
-            "BIGC",
-            "BLUE",
-            "SYCA",
             "OKSR",
-            "TOOK"
+            "POSE",
+            "MAYF",
+            "TECR",
+            "BLUE",
+            "BIGC"
         ],
         "table:columns": [
             {
