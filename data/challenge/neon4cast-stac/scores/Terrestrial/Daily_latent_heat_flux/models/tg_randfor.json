@@ -15,22 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -101,6 +85,22 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -110.5391,
+                44.9535
             ],
             [
                 -122.3303,
@@ -206,8 +206,8 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: UNDE, WOOD, WREF, YELL, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-27T00:00:00Z",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-28T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-03-04T00:00:00Z",
         "providers": [
@@ -238,10 +238,6 @@
             "le",
             "Daily",
             "P1D",
-            "UNDE",
-            "WOOD",
-            "WREF",
-            "YELL",
             "OAES",
             "ONAQ",
             "ORNL",
@@ -260,6 +256,10 @@
             "TOOL",
             "TREE",
             "UKFS",
+            "UNDE",
+            "WOOD",
+            "WREF",
+            "YELL",
             "ABBY",
             "BARR",
             "BART",

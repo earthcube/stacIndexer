@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -193,21 +201,13 @@
             [
                 -145.7514,
                 63.8811
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -81.4362,
-                28.1251
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-27T00:00:00Z",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-28T00:00:00Z",
         "start_datetime": "2023-01-01T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -238,6 +238,8 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "DELA",
+            "DSNY",
             "GRSM",
             "GUAN",
             "HARV",
@@ -282,9 +284,7 @@
             "CLBJ",
             "CPER",
             "DCFS",
-            "DEJU",
-            "DELA",
-            "DSNY"
+            "DEJU"
         ],
         "table:columns": [
             {
