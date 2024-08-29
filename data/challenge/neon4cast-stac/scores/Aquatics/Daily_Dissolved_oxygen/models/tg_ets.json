@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
                 -72.3295,
                 42.4719
             ],
@@ -149,13 +141,21 @@
             [
                 -66.9868,
                 18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.7987,
+                18.1741
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-27T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-28T00:00:00Z",
         "start_datetime": "2022-09-21T00:00:00Z",
         "end_datetime": "2024-07-28T00:00:00Z",
         "providers": [
@@ -186,8 +186,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "FLNT",
-            "GUIL",
             "HOPB",
             "KING",
             "LECO",
@@ -219,7 +217,9 @@
             "CARI",
             "COMO",
             "CRAM",
-            "CUPE"
+            "CUPE",
+            "FLNT",
+            "GUIL"
         ],
         "table:columns": [
             {
