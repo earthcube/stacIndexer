@@ -15,6 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
                 -122.3303,
                 45.7624
             ],
@@ -185,29 +201,13 @@
             [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -110.5391,
-                44.9535
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All summaries for the Daily_Red_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
-        "datetime": "2024-08-30T00:00:00Z",
+        "description": "All summaries for the Daily_Red_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
+        "datetime": "2024-08-31T00:00:00Z",
         "start_datetime": "2023-01-01T00:00:00Z",
         "end_datetime": "2024-08-02T00:00:00Z",
         "providers": [
@@ -238,6 +238,10 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "UNDE",
+            "WOOD",
+            "WREF",
+            "YELL",
             "ABBY",
             "BARR",
             "BART",
@@ -280,11 +284,7 @@
             "TEAK",
             "TOOL",
             "TREE",
-            "UKFS",
-            "UNDE",
-            "WOOD",
-            "WREF",
-            "YELL"
+            "UKFS"
         ],
         "table:columns": [
             {

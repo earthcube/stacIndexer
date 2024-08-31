@@ -8,28 +8,12 @@
     "bbox": [
         -149.6106,
         29.676,
-        -78.1473,
+        -82.0084,
         68.6307
     ],
     "geometry": {
         "type": "MultiPoint",
         "coordinates": [
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
             [
                 -82.0084,
                 29.676
@@ -51,29 +35,33 @@
                 45.9983
             ],
             [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -78.1473,
-                38.8943
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: PRLA, PRPO, SUGG, TOMB, BARC, BLWA, CRAM, FLNT, LIRO, TOOK, USGS-01427510, USGS-01463500, USGS-05543010, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, COMO, MCDI, POSE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-08-29T00:00:00Z",
-        "start_datetime": "2022-01-01T00:00:00Z",
-        "end_datetime": "2024-07-27T00:00:00Z",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BARC, BLWA, CRAM, FLNT, LIRO, PRPO, SUGG, TOMB, PRLA, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-30T00:00:00Z",
+        "start_datetime": "2024-06-13T00:00:00Z",
+        "end_datetime": "2024-08-07T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
@@ -102,28 +90,16 @@
             "chla",
             "Daily",
             "P1D",
-            "PRLA",
-            "PRPO",
-            "SUGG",
-            "TOMB",
             "BARC",
             "BLWA",
             "CRAM",
             "FLNT",
             "LIRO",
-            "TOOK",
-            "USGS-01427510",
-            "USGS-01463500",
-            "USGS-05543010",
-            "USGS-05553700",
-            "USGS-05558300",
-            "USGS-05586300",
-            "USGS-14181500",
-            "USGS-14211010",
-            "USGS-14211720",
-            "COMO",
-            "MCDI",
-            "POSE"
+            "PRPO",
+            "SUGG",
+            "TOMB",
+            "PRLA",
+            "TOOK"
         ],
         "table:columns": [
             {
@@ -212,14 +188,14 @@
                 "description": "unique model identifier"
             },
             {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
-            },
-            {
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
+            },
+            {
+                "name": "variable",
+                "type": "string",
+                "description": "name of forecasted variable"
             }
         ]
     },
