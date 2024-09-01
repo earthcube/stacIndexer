@@ -207,7 +207,7 @@
     "properties": {
         "title": "persistenceRW",
         "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: BARR, BART, BLAN, BONA, SJER, SOAP, SRER, STEI, STER, TALL, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, ABBY, TEAK, TOOL, TREE, UKFS, UNDE, DELA, DSNY, GRSM, GUAN, HARV, HEAL, CLBJ, CPER, DCFS, DEJU, WOOD, WREF, YELL, JERC, JORN, KONA, KONZ, PUUM, RMNP, SCBI, SERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-30T00:00:00Z",
+        "datetime": "2024-09-01T00:00:00Z",
         "start_datetime": "2023-11-15T00:00:00Z",
         "end_datetime": "2024-08-06T00:00:00Z",
         "providers": [
@@ -221,7 +221,7 @@
                 ]
             },
             {
-                "url": "https://www.ecoforecastprojectvt.org",
+                "url": "www.neon4cast.org",
                 "name": "Ecoforecast Challenge",
                 "roles": [
                     "host"
@@ -405,8 +405,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Net_ecosystem_exchange",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }
 }

@@ -15,30 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
                 -104.7456,
                 40.8155
             ],
@@ -201,13 +177,37 @@
             [
                 -110.5391,
                 44.9535
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-30T00:00:00Z",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-01T00:00:00Z",
         "start_datetime": "2023-01-01T00:00:00Z",
         "end_datetime": "2024-08-02T00:00:00Z",
         "providers": [
@@ -221,7 +221,7 @@
                 ]
             },
             {
-                "url": "https://www.ecoforecastprojectvt.org",
+                "url": "www.neon4cast.org",
                 "name": "Ecoforecast Challenge",
                 "roles": [
                     "host"
@@ -238,12 +238,6 @@
             "nee",
             "Daily",
             "P1D",
-            "ABBY",
-            "BARR",
-            "BART",
-            "BLAN",
-            "BONA",
-            "CLBJ",
             "CPER",
             "DCFS",
             "DEJU",
@@ -284,7 +278,13 @@
             "UNDE",
             "WOOD",
             "WREF",
-            "YELL"
+            "YELL",
+            "ABBY",
+            "BARR",
+            "BART",
+            "BLAN",
+            "BONA",
+            "CLBJ"
         ],
         "table:columns": [
             {
@@ -405,8 +405,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Net_ecosystem_exchange",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }
 }
