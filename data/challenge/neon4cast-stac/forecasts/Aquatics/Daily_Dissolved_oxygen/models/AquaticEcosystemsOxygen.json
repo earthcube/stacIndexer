@@ -15,23 +15,23 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
+                -102.4471,
+                39.7582
             ],
             [
                 -105.9154,
                 39.8914
             ],
             [
-                -102.4471,
-                39.7582
+                -82.0084,
+                29.676
             ]
         ]
     },
     "properties": {
         "title": "AquaticEcosystemsOxygen",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: BARC, WLOU, ARIK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-18T00:00:00Z",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: ARIK, WLOU, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-19T00:00:00Z",
         "start_datetime": "2024-04-03T00:00:00Z",
         "end_datetime": "2024-08-04T00:00:00Z",
         "providers": [
@@ -62,9 +62,9 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BARC",
+            "ARIK",
             "WLOU",
-            "ARIK"
+            "BARC"
         ],
         "table:columns": [
             {
@@ -185,7 +185,7 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org",
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org",
             "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }

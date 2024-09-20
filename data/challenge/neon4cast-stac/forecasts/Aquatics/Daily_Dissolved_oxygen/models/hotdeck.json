@@ -23,8 +23,20 @@
                 29.6878
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
                 -96.6038,
                 39.1051
+            ],
+            [
+                -111.5081,
+                33.751
             ],
             [
                 -110.5871,
@@ -41,18 +53,6 @@
             [
                 -111.7979,
                 40.7839
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -89.7048,
-                45.9983
             ],
             [
                 -97.7823,
@@ -74,8 +74,8 @@
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: BARC, SUGG, KING, BLDE, BIGC, MCRA, REDB, SYCA, CRAM, LIRO, PRIN, POSE, MAYF, LEWI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-18T00:00:00Z",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: BARC, SUGG, CRAM, LIRO, KING, SYCA, BLDE, BIGC, MCRA, REDB, PRIN, POSE, MAYF, LEWI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-19T00:00:00Z",
         "start_datetime": "2024-04-05T00:00:00Z",
         "end_datetime": "2024-09-21T00:00:00Z",
         "providers": [
@@ -108,14 +108,14 @@
             "P1D",
             "BARC",
             "SUGG",
+            "CRAM",
+            "LIRO",
             "KING",
+            "SYCA",
             "BLDE",
             "BIGC",
             "MCRA",
             "REDB",
-            "SYCA",
-            "CRAM",
-            "LIRO",
             "PRIN",
             "POSE",
             "MAYF",
@@ -240,7 +240,7 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=hotdeck?endpoint_override=sdsc.osn.xsede.org",
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=hotdeck?endpoint_override=sdsc.osn.xsede.org",
             "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=hotdeck?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }
