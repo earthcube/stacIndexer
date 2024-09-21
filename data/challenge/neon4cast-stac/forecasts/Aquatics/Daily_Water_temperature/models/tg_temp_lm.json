@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
                 -102.4471,
                 39.7582
             ],
@@ -149,13 +137,25 @@
             [
                 -88.1589,
                 31.8534
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -105.9154,
+                39.8914
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-19T00:00:00Z",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-20T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-03-08T00:00:00Z",
         "providers": [
@@ -186,9 +186,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "TOOK",
-            "WALK",
-            "WLOU",
             "ARIK",
             "BARC",
             "BIGC",
@@ -219,7 +216,10 @@
             "SUGG",
             "SYCA",
             "TECR",
-            "TOMB"
+            "TOMB",
+            "TOOK",
+            "WALK",
+            "WLOU"
         ],
         "table:columns": [
             {
