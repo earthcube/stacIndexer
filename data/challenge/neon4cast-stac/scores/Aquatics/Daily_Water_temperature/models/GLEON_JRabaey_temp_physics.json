@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.443,
+                38.9459
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
@@ -117,45 +149,13 @@
             [
                 -87.4077,
                 32.9604
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
             ]
         ]
     },
     "properties": {
         "title": "GLEON_JRabaey_temp_physics",
-        "description": "All scores for the Daily_Water_temperature variable for the GLEON_JRabaey_temp_physics model. Information for the model is provided as follows: The JR-physics model is a simple process model based on the assumption that surface water\ntemperature should trend towards equilibration with air temperature with a lag factor..\n                                    The model predicts this variable at the following sites: SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-09-20T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the GLEON_JRabaey_temp_physics model. Information for the model is provided as follows: The JR-physics model is a simple process model based on the assumption that surface water\ntemperature should trend towards equilibration with air temperature with a lag factor..\n                                    The model predicts this variable at the following sites: MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-09-21T00:00:00Z",
         "start_datetime": "2024-01-02T00:00:00Z",
         "end_datetime": "2024-03-12T00:00:00Z",
         "providers": [
@@ -186,6 +186,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "MCDI",
+            "MCRA",
+            "OKSR",
+            "POSE",
+            "PRIN",
+            "PRLA",
+            "PRPO",
+            "REDB",
             "SUGG",
             "SYCA",
             "TECR",
@@ -211,15 +219,7 @@
             "LEWI",
             "LIRO",
             "MART",
-            "MAYF",
-            "MCDI",
-            "MCRA",
-            "OKSR",
-            "POSE",
-            "PRIN",
-            "PRLA",
-            "PRPO",
-            "REDB"
+            "MAYF"
         ],
         "table:columns": [
             {
