@@ -69,7 +69,7 @@ def save_dict_to_file(repo, root, collection, item):
     doc["@id"] = "urn:" + repo.id + ":{}".format(idshort_hash)
     doc["name"] = str(props.get("title"))
     doc["description"] = str(props.get("description"))
-    doc["datePublished"] = props.get("start_datetime")
+    doc["datePublished"] = props.get("start_datetime")[:10]
     doc["keywords"] = props.get("keywords", [])
 
     # TODO WARNING
