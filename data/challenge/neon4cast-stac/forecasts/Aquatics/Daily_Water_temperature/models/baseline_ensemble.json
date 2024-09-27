@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.443,
+                38.9459
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -87.7982,
                 32.5415
             ],
@@ -83,18 +95,6 @@
                 32.9604
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -97.7823,
                 33.3785
             ],
@@ -131,16 +131,16 @@
                 45.9983
             ],
             [
-                -147.504,
-                65.1532
+                -99.2531,
+                47.1298
             ],
             [
                 -99.1139,
                 47.1591
             ],
             [
-                -99.2531,
-                47.1298
+                -147.504,
+                65.1532
             ],
             [
                 -149.143,
@@ -154,8 +154,8 @@
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All forecasts for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: BLWA, COMO, CUPE, FLNT, GUIL, HOPB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, KING, LECO, LEWI, MART, MAYF, MCDI, MCRA, POSE, PRIN, REDB, ARIK, BARC, BIGC, BLDE, BLUE, CRAM, LIRO, CARI, PRLA, PRPO, OKSR, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-25T00:00:00Z",
+        "description": "All forecasts for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: MCDI, MCRA, POSE, BLWA, COMO, CUPE, FLNT, GUIL, HOPB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, KING, LECO, LEWI, MART, MAYF, PRIN, REDB, ARIK, BARC, BIGC, BLDE, BLUE, CRAM, LIRO, PRPO, PRLA, CARI, OKSR, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-26T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-08-02T00:00:00Z",
         "providers": [
@@ -186,6 +186,9 @@
             "temperature",
             "Daily",
             "P1D",
+            "MCDI",
+            "MCRA",
+            "POSE",
             "BLWA",
             "COMO",
             "CUPE",
@@ -203,9 +206,6 @@
             "LEWI",
             "MART",
             "MAYF",
-            "MCDI",
-            "MCRA",
-            "POSE",
             "PRIN",
             "REDB",
             "ARIK",
@@ -215,9 +215,9 @@
             "BLUE",
             "CRAM",
             "LIRO",
-            "CARI",
-            "PRLA",
             "PRPO",
+            "PRLA",
+            "CARI",
             "OKSR",
             "TOOK"
         ],
