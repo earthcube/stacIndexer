@@ -11,7 +11,32 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/fableNNETAR_focal.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareSimstrat.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/inflow_gefsClimAED.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/glm_aed_v1.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/monthly_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/persistenceFO.json"
         },
         {
             "rel": "item",
@@ -26,7 +51,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.ets.json"
+            "href": "./models/asl.met.lm.json"
         },
         {
             "rel": "item",
@@ -36,17 +61,12 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/asl.temp.lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/asl.persistence.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.met.lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.tbats.json"
         },
         {
             "rel": "item",
@@ -56,7 +76,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.temp.lm.json"
+            "href": "./models/asl.tbats.json"
         },
         {
             "rel": "item",
@@ -66,22 +86,12 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/asl.ets.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/flareGOTM.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/fableNNETAR_focal.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/glm_aed_v1.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/flareSimstrat.json"
         },
         {
             "rel": "item",
@@ -91,17 +101,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/inflow_gefsClimAED.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/asl.climate.window.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/persistenceFO.json"
         },
         {
             "rel": "parent",
@@ -151,7 +151,7 @@
             "interval": [
                 [
                     "2023-09-21T00:00:00Z",
-                    "2024-09-23T00:00:00Z"
+                    "2024-09-24T00:00:00Z"
                 ]
             ]
         }
@@ -238,24 +238,24 @@
             "description": "upper 10 percentile value of forecast"
         },
         {
-            "name": "duration",
-            "type": "string",
-            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
-        },
-        {
-            "name": "model_id",
-            "type": "string",
-            "description": "unique model identifier"
-        },
-        {
             "name": "project_id",
             "type": "string",
             "description": "unique project identifier"
         },
         {
+            "name": "duration",
+            "type": "string",
+            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+        },
+        {
             "name": "variable",
             "type": "string",
             "description": "name of forecasted variable"
+        },
+        {
+            "name": "model_id",
+            "type": "string",
+            "description": "unique model identifier"
         }
     ],
     "assets": {

@@ -7,7 +7,7 @@ build_catalog <- function(){
   catalog <- list(
     "type"= "Catalog",
     "id"= paste0(config$project_id, "-stac"),
-    "title"= paste0(config$challenge_long_name," Catalog"),
+    "title"= config$challenge_long_name,
     "description"= paste0("A STAC (Spatiotemporal Asset Catalog) describing forecasts and forecast scores for the ",config$project_id," Forecasting Challenge"),
     "stac_version"= "1.0.0",
     "conformsTo"= 'conformsTo',

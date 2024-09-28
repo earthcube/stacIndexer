@@ -143,24 +143,24 @@
             "description": "upper 10 percentile value of forecast"
         },
         {
-            "name": "duration",
-            "type": "string",
-            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
-        },
-        {
-            "name": "model_id",
-            "type": "string",
-            "description": "unique model identifier"
-        },
-        {
             "name": "project_id",
             "type": "string",
             "description": "unique project identifier"
         },
         {
+            "name": "duration",
+            "type": "string",
+            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+        },
+        {
             "name": "variable",
             "type": "string",
             "description": "name of forecasted variable"
+        },
+        {
+            "name": "model_id",
+            "type": "string",
+            "description": "unique model identifier"
         }
     ],
     "assets": {

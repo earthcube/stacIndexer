@@ -27,7 +27,7 @@
     "properties": {
         "title": "asl.met.lm.step",
         "description": "All scores for the Daily_Bloom_binary variable for the asl.met.lm.step model. Information for the model is provided as follows: Linear regression with air temp, humidity, precip, and wind speed. Model selected using AIC.\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-09-26T00:00:00Z",
+        "datetime": "2024-09-27T00:00:00Z",
         "start_datetime": "2024-05-14T00:00:00Z",
         "end_datetime": "2024-06-16T00:00:00Z",
         "providers": [
@@ -144,24 +144,24 @@
                 "description": "upper 10 percentile value of forecast"
             },
             {
-                "name": "duration",
-                "type": "string",
-                "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
-            },
-            {
-                "name": "model_id",
-                "type": "string",
-                "description": "unique model identifier"
-            },
-            {
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
             },
             {
+                "name": "duration",
+                "type": "string",
+                "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+            },
+            {
                 "name": "variable",
                 "type": "string",
                 "description": "name of forecasted variable"
+            },
+            {
+                "name": "model_id",
+                "type": "string",
+                "description": "unique model identifier"
             }
         ]
     },
@@ -227,7 +227,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Bloom_binary",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Bloom_binary_mean/model_id=asl.met.lm.step?endpoint_override=renc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquetproject_id=vera4cast/duration=P1D/variable=Bloom_binary_mean/model_id=asl.met.lm.step?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Bloom_binary_mean/model_id=asl.met.lm.step?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }
 }

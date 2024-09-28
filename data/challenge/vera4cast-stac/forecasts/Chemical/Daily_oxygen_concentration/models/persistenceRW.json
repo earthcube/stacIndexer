@@ -27,9 +27,9 @@
     "properties": {
         "title": "persistenceRW",
         "description": "All forecasts for the Daily_oxygen_concentration variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-26T00:00:00Z",
+        "datetime": "2024-09-27T00:00:00Z",
         "start_datetime": "2024-02-06T00:00:00Z",
-        "end_datetime": "2024-10-29T00:00:00Z",
+        "end_datetime": "2024-10-30T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
@@ -187,7 +187,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily oxygen_concentration",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=persistenceRW?endpoint_override=renc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquetproject_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=persistenceRW?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=persistenceRW?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }
 }
