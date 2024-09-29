@@ -15,70 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
                 -102.4471,
                 39.7582
             ],
@@ -139,6 +75,10 @@
                 35.6904
             ],
             [
+                -88.1589,
+                31.8534
+            ],
+            [
                 -149.6106,
                 68.6307
             ],
@@ -149,13 +89,73 @@
             [
                 -105.9154,
                 39.8914
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.0274,
+                36.9559
             ]
         ]
     },
     "properties": {
         "title": "air2waterSat_2",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, TOOK, WALK, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-27T00:00:00Z",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, TOMB, TOOK, WALK, WLOU, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-28T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-03-05T00:00:00Z",
         "providers": [
@@ -186,22 +186,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "LEWI",
-            "LIRO",
-            "MART",
-            "MAYF",
-            "MCDI",
-            "MCRA",
-            "OKSR",
-            "POSE",
-            "PRIN",
-            "PRLA",
-            "PRPO",
-            "REDB",
-            "SUGG",
-            "SYCA",
-            "TECR",
-            "TOMB",
             "ARIK",
             "BARC",
             "BIGC",
@@ -217,9 +201,25 @@
             "HOPB",
             "KING",
             "LECO",
+            "TOMB",
             "TOOK",
             "WALK",
-            "WLOU"
+            "WLOU",
+            "LEWI",
+            "LIRO",
+            "MART",
+            "MAYF",
+            "MCDI",
+            "MCRA",
+            "OKSR",
+            "POSE",
+            "PRIN",
+            "PRLA",
+            "PRPO",
+            "REDB",
+            "SUGG",
+            "SYCA",
+            "TECR"
         ],
         "table:columns": [
             {
@@ -341,7 +341,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=air2waterSat_2?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=air2waterSat_2?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=air2waterSat_2?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         }
     }
 }
