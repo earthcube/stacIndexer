@@ -15,66 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -105.546,
-                40.2759
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
                 -119.2622,
                 37.0334
             ],
@@ -201,13 +141,73 @@
             [
                 -96.5631,
                 39.1008
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-09-28T00:00:00Z",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-09-29T00:00:00Z",
         "start_datetime": "2023-01-07T00:00:00Z",
         "end_datetime": "2024-08-02T00:00:00Z",
         "providers": [
@@ -238,21 +238,6 @@
             "le",
             "Daily",
             "P1D",
-            "LAJA",
-            "LENO",
-            "MLBS",
-            "MOAB",
-            "NIWO",
-            "NOGP",
-            "OAES",
-            "ONAQ",
-            "ORNL",
-            "OSBS",
-            "PUUM",
-            "RMNP",
-            "SCBI",
-            "SERC",
-            "SJER",
             "SOAP",
             "SRER",
             "STEI",
@@ -284,7 +269,22 @@
             "JERC",
             "JORN",
             "KONA",
-            "KONZ"
+            "KONZ",
+            "LAJA",
+            "LENO",
+            "MLBS",
+            "MOAB",
+            "NIWO",
+            "NOGP",
+            "OAES",
+            "ONAQ",
+            "ORNL",
+            "OSBS",
+            "PUUM",
+            "RMNP",
+            "SCBI",
+            "SERC",
+            "SJER"
         ],
         "table:columns": [
             {
