@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -76.56,
-                38.8901
-            ],
-            [
                 -119.7323,
                 37.1088
             ],
@@ -33,14 +29,6 @@
             [
                 -89.5864,
                 45.5089
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -87.3933,
-                32.9505
             ],
             [
                 -119.006,
@@ -85,6 +73,14 @@
             [
                 -71.2874,
                 44.0639
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -87.3933,
+                32.9505
             ],
             [
                 -78.0418,
@@ -155,14 +151,6 @@
                 18.0213
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -105.546,
-                40.2759
-            ],
-            [
                 -88.1612,
                 31.8539
             ],
@@ -201,13 +189,25 @@
             [
                 -155.3173,
                 19.5531
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -76.56,
+                38.8901
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All forecasts for the 30min_latent_heat_flux variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, SCBI, RMNP, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-10-07T00:00:00Z",
+        "description": "All forecasts for the 30min_latent_heat_flux variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SJER, SOAP, SRER, STEI, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, STER, TALL, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-10-08T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-01-09T00:00:00Z",
         "providers": [
@@ -238,13 +238,10 @@
             "le",
             "30min",
             "PT30M",
-            "SERC",
             "SJER",
             "SOAP",
             "SRER",
             "STEI",
-            "STER",
-            "TALL",
             "TEAK",
             "TOOL",
             "TREE",
@@ -256,6 +253,8 @@
             "ABBY",
             "BARR",
             "BART",
+            "STER",
+            "TALL",
             "BLAN",
             "BONA",
             "CLBJ",
@@ -273,8 +272,6 @@
             "KONA",
             "KONZ",
             "LAJA",
-            "SCBI",
-            "RMNP",
             "LENO",
             "MLBS",
             "MOAB",
@@ -284,7 +281,10 @@
             "ONAQ",
             "ORNL",
             "OSBS",
-            "PUUM"
+            "PUUM",
+            "RMNP",
+            "SCBI",
+            "SERC"
         ],
         "table:columns": [
             {
