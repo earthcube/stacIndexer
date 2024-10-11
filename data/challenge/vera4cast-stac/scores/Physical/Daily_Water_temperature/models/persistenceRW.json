@@ -15,25 +15,25 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -79.8357,
+                37.3078
+            ],
+            [
                 -79.8159,
                 37.3129
             ],
             [
                 -79.8372,
                 37.3032
-            ],
-            [
-                -79.8357,
-                37.3078
             ]
         ]
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All scores for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: bvre, fcre, tubr.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-10-09T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: tubr, bvre, fcre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-10-10T00:00:00Z",
         "start_datetime": "2023-09-21T00:00:00Z",
-        "end_datetime": "2024-10-07T00:00:00Z",
+        "end_datetime": "2024-10-08T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
@@ -62,9 +62,9 @@
             "Temp_C_mean",
             "Daily",
             "P1D",
+            "tubr",
             "bvre",
             "fcre",
-            "tubr",
             "empirical"
         ],
         "table:columns": [

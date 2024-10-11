@@ -3,15 +3,15 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:vera4cast-stac:3f3769e511",
-    "name": "fableARIMA",
-    "description": "All forecasts for the Daily_Chlorophyll-a variable for the fableARIMA model. Information for the model is provided as follows: ARIMA fit using the ARIMA() function in the fable R package.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "@id": "urn:vera4cast-stac:62b9434d19",
+    "name": "fableETS",
+    "description": "All forecasts for the Daily_Chlorophyll-a variable for the fableETS model. Information for the model is provided as follows: fable package exponential smoothing model fable::ETS().\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2023-10-01",
     "keywords": [
         "Forecasts",
         "vera4cast",
         "Biological",
-        "fableARIMA",
+        "fableETS",
         "Chlorophyll-a",
         "Chla_ugL_mean",
         "Daily",
@@ -98,23 +98,23 @@
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableARIMA.json",
+            "contentUrl": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableETS.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableARIMA.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableETS.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableARIMA.R",
+            "contentUrl": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableETS.R",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=fableARIMA?endpoint_override=renc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=fableETS?endpoint_override=renc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=fableARIMA?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=fableETS?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n",
             "name": "Database Access for Daily Chlorophyll-a"
         }
     ],

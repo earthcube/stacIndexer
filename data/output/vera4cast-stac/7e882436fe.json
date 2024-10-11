@@ -3,12 +3,12 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:vera4cast-stac:559c036e28",
+    "@id": "urn:vera4cast-stac:5a32e2a36a",
     "name": "fableNNETAR",
-    "description": "All forecasts for the Daily_oxygen_concentration variable for the fableNNETAR model. Information for the model is provided as follows: autoregressive neural net fit using the NNETAR() function in the fable R package.\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "autoregressive neural net fit using the NNETAR() function in the fable R package",
     "datePublished": "2024-04-26",
     "keywords": [
-        "Forecasts",
+        "Summaries",
         "vera4cast",
         "Chemical",
         "fableNNETAR",
@@ -16,8 +16,8 @@
         "DO_mgL_mean",
         "Daily",
         "P1D",
-        "bvre",
         "fcre",
+        "bvre",
         "machine learning"
     ],
     "citation": {
@@ -36,13 +36,13 @@
     "variableMeasured": [
         {
             "@type": "PropertyValue",
-            "name": "site_id",
-            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            "name": "reference_datetime",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
         },
         {
             "@type": "PropertyValue",
-            "name": "reference_datetime",
-            "description": "datetime that the forecast was initiated (horizon = 0)"
+            "name": "site_id",
+            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
         },
         {
             "@type": "PropertyValue",
@@ -51,28 +51,53 @@
         },
         {
             "@type": "PropertyValue",
-            "name": "depth_m",
-            "description": "depth (meters) in water column of prediction"
-        },
-        {
-            "@type": "PropertyValue",
             "name": "family",
             "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
         },
         {
             "@type": "PropertyValue",
-            "name": "parameter",
-            "description": "ensemble member or distribution parameter"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "prediction",
-            "description": "predicted value for variable"
-        },
-        {
-            "@type": "PropertyValue",
             "name": "pub_datetime",
             "description": "datetime that forecast was submitted"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "depth_m",
+            "description": "depth (meters) in water column of prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "mean",
+            "description": "mean forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "median",
+            "description": "median forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "sd",
+            "description": "standard deviation forecasts"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile97.5",
+            "description": "upper 97.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile02.5",
+            "description": "upper 2.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile90",
+            "description": "upper 90 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile10",
+            "description": "upper 10 percentile value of forecast"
         },
         {
             "@type": "PropertyValue",
@@ -112,9 +137,9 @@
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR?endpoint_override=renc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR?endpoint_override=renc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n",
+            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n",
             "name": "Database Access for Daily oxygen_concentration"
         }
     ],
