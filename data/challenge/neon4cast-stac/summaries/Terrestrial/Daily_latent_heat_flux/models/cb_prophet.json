@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -97.57,
-                33.4012
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
                 -81.4362,
                 28.1251
             ],
@@ -45,10 +33,6 @@
             [
                 -66.8687,
                 17.9696
-            ],
-            [
-                -81.9934,
-                29.6893
             ],
             [
                 -71.2874,
@@ -195,15 +179,31 @@
                 37.0058
             ],
             [
+                -97.57,
+                33.4012
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
                 -147.5026,
                 65.154
+            ],
+            [
+                -112.4524,
+                40.1776
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All summaries for the Daily_latent_heat_flux variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: CLBJ, SJER, ONAQ, DSNY, SCBI, MOAB, PUUM, GUAN, OSBS, BART, CPER, HARV, UNDE, STER, KONA, TREE, ABBY, LENO, UKFS, DEJU, KONZ, RMNP, BARR, JORN, SOAP, STEI, TALL, DCFS, TOOL, WOOD, OAES, HEAL, SERC, BLAN, GRSM, ORNL, SRER, NOGP, JERC, DELA, MLBS, NIWO, WREF, LAJA, TEAK, BONA.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
-        "datetime": "2024-10-14T00:00:00Z",
+        "description": "All summaries for the Daily_latent_heat_flux variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: DSNY, SCBI, MOAB, PUUM, GUAN, BART, CPER, HARV, UNDE, STER, KONA, TREE, ABBY, LENO, UKFS, DEJU, KONZ, RMNP, BARR, JORN, SOAP, STEI, TALL, DCFS, TOOL, WOOD, OAES, HEAL, SERC, BLAN, GRSM, ORNL, SRER, NOGP, JERC, DELA, MLBS, NIWO, WREF, LAJA, TEAK, CLBJ, SJER, OSBS, BONA, ONAQ.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
+        "datetime": "2024-10-15T00:00:00Z",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-03-04T00:00:00Z",
         "providers": [
@@ -234,15 +234,11 @@
             "le",
             "Daily",
             "P1D",
-            "CLBJ",
-            "SJER",
-            "ONAQ",
             "DSNY",
             "SCBI",
             "MOAB",
             "PUUM",
             "GUAN",
-            "OSBS",
             "BART",
             "CPER",
             "HARV",
@@ -279,7 +275,11 @@
             "WREF",
             "LAJA",
             "TEAK",
-            "BONA"
+            "CLBJ",
+            "SJER",
+            "OSBS",
+            "BONA",
+            "ONAQ"
         ],
         "table:columns": [
             {
