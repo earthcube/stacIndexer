@@ -15,25 +15,25 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -79.8159,
+                37.3129
+            ],
+            [
                 -79.8357,
                 37.3078
             ],
             [
                 -79.8372,
                 37.3032
-            ],
-            [
-                -79.8159,
-                37.3129
             ]
         ]
     },
     "properties": {
         "title": "historic_mean",
         "description": "Calculates the mean state from the historic timeseries and applies this to the forecast horizon. The model uses the fable R package MEAN() function to fit this model, with the uncertainty generated from the residuals of the fitted model.",
-        "datetime": "2024-10-21T00:00:00Z",
+        "datetime": "2024-10-22T00:00:00Z",
         "start_datetime": "2024-02-06T00:00:00Z",
-        "end_datetime": "2024-11-23T00:00:00Z",
+        "end_datetime": "2024-11-24T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/OlssonF/vera4cast/blob/main/R/fableMeanModelFunction.R",
@@ -62,9 +62,9 @@
             "Temp_C_mean",
             "Daily",
             "P1D",
+            "bvre",
             "tubr",
             "fcre",
-            "bvre",
             "empirical"
         ],
         "table:columns": [
