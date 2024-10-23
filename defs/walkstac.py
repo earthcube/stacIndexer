@@ -116,16 +116,6 @@ def save_dict_to_file(repo, root, collection, item):
     doc["distribution"] = dists
     doc["spatialCoverage"] = sdo_box(convertas.convert_array_to_string(item.bbox), item.geometry, cells)
 
-    # if item.geometry is not None:
-    #     # Ensure 'geo' exists and contains a 'geometries' list
-    #     if "geo" not in doc["spatialCoverage"]:
-    #         doc["spatialCoverage"]["geo"] = {"geometries": []}
-    #     elif "geometries" not in doc["spatialCoverage"]["geo"]:
-    #         doc["spatialCoverage"]["geo"]["geometries"] = []
-    #
-    #     # Append the new geometry to the list
-    #     doc["spatialCoverage"]["geo"]["geometries"].append(item.geometry)
-
     # Rest of code remains unchanged...
 
     # if asset["type"] == "application/x-parquet":
