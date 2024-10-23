@@ -20,11 +20,18 @@
 def sdo_box(bbox, geometry, cells):
     doc = {}
     additional_property = []
+    geo = []
 
     geoshape = {"@type": "GeoShape", "box": bbox}
-    geometry = {"@type": "MultiPoint", "points": geometry.get("coordinates")}
+    geo.append(geoshape)
 
-    geo = [geoshape, geometry]
+    coordinates = geometry.get("coordinates")
+    for c in coordinates:
+        geometry_item = {}
+        geometry_item["@type"] = "GeoCoordinates"
+        geometry_item["latitude"] = c[1]
+        geometry_item["longitude"] = c[0]
+        geo.append(geometry_item)
 
     for c in cells:
         geos2 = {}
