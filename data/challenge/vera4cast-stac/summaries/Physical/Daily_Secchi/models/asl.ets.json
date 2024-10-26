@@ -27,9 +27,10 @@
     "properties": {
         "title": "asl.ets",
         "description": "forecast::ets() function in R, fit individually at each site/depth",
-        "datetime": "2024-10-23T00:00:00Z",
+        "datetime": "2024-10-24",
+        "updated": "2024-10-25",
         "start_datetime": "2024-03-12T00:00:00Z",
-        "end_datetime": "2024-11-26T00:00:00Z",
+        "end_datetime": "2024-11-28T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/abbylewis/vera_meteor_strike",
@@ -212,7 +213,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Secchi",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.ets?endpoint_override=renc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.ets?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.ets?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'renc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.ets\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
