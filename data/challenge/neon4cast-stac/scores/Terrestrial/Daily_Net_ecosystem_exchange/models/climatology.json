@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
@@ -193,21 +201,14 @@
             [
                 -110.5391,
                 44.9535
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -156.6194,
-                71.2824
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-10-23T00:00:00Z",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-07-03",
+        "updated": "2024-07-04",
         "start_datetime": "2024-06-13T00:00:00Z",
         "end_datetime": "2024-08-03T00:00:00Z",
         "providers": [
@@ -238,6 +239,8 @@
             "nee",
             "Daily",
             "P1D",
+            "ABBY",
+            "BARR",
             "BART",
             "BLAN",
             "BONA",
@@ -282,9 +285,7 @@
             "UNDE",
             "WOOD",
             "WREF",
-            "YELL",
-            "ABBY",
-            "BARR"
+            "YELL"
         ],
         "table:columns": [
             {
@@ -446,7 +447,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Net_ecosystem_exchange",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `arrow` for remote access to the database. This R code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=climatology\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
