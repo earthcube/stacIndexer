@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -149.2133,
-                63.8758
-            ],
-            [
-                -84.4686,
-                31.1948
-            ],
-            [
                 -122.3303,
                 45.7624
             ],
@@ -77,6 +65,18 @@
             [
                 -66.8687,
                 17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -149.2133,
+                63.8758
+            ],
+            [
+                -84.4686,
+                31.1948
             ],
             [
                 -106.8425,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: HARV, HEAL, JERC, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,9 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "HARV",
-            "HEAL",
-            "JERC",
             "ABBY",
             "BARR",
             "BART",
@@ -255,6 +252,9 @@
             "DSNY",
             "GRSM",
             "GUAN",
+            "HARV",
+            "HEAL",
+            "JERC",
             "JORN",
             "KONA",
             "KONZ",
