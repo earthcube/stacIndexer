@@ -28,11 +28,6 @@
         {
             "rel": "child",
             "type": "application/json",
-            "href": "Hourly_Water_temperature/collection.json"
-        },
-        {
-            "rel": "child",
-            "type": "application/json",
             "href": "Daily_Secchi/collection.json"
         },
         {
@@ -135,6 +130,11 @@
             "description": "unique identifier for the forecast project"
         },
         {
+            "name": "reference_date",
+            "type": "date32[day]",
+            "description": "date that the forecast was initiated"
+        },
+        {
             "name": "duration",
             "type": "string",
             "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
@@ -143,11 +143,6 @@
             "name": "variable",
             "type": "string",
             "description": "name of forecasted variable"
-        },
-        {
-            "name": "model_id",
-            "type": "string",
-            "description": "unique model identifier"
         }
     ],
     "assets": {
