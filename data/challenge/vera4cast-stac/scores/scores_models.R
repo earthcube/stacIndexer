@@ -30,22 +30,21 @@ scores_description_create <- data.frame(reference_datetime ='datetime that the f
                                  project_id = 'unique project identifier')
 
 print('FIND SCORES TABLE SCHEMA')
-scores_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$scores_bucket, endpoint_override = config$endpoint, anonymous = TRUE))
+scores_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) #|>
 
-print('OPEN INVENTORY BUCKET')
-scores_data_df <- duckdbfs::open_dataset(glue::glue("s3://{config$inventory_bucket}/catalog/scores/"),
-                                  s3_endpoint = config$endpoint, anonymous=TRUE) |>
+theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  distinct(model_id) |>
   collect()
 
-theme_models <- scores_data_df |>
-  distinct(model_id)
+scores_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  distinct(site_id) |>
+  collect()
 
-scores_sites <- scores_data_df |>
-  distinct(site_id)
-
-scores_date_range <- scores_data_df |> dplyr::summarise(min(date),max(date))
-scores_min_date <- scores_date_range$`min(date)`
-scores_max_date <- scores_date_range$`max(date)`
+scores_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+  collect()
+scores_min_date <- scores_date_range$datetime_min
+scores_max_date <- scores_date_range$datetime_max
 
 build_description <- paste0("Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). You can access the scores at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the scores catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the scores for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
@@ -83,13 +82,17 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
   print(names(config$variable_groups)[i])
 
   # check data and skip if no data found
-  var_group_data_check <- scores_data_df |>
-    filter(variable %in% config$variable_groups[[i]]$variable)
+  var_group_data_check <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'),
+                                                               endpoint_override = config$endpoint, anonymous=TRUE)) |>
+    filter(variable %in% c(config$variable_groups[[i]]$variable)) |>
+    summarise(n = n()) |>
+    collect()
 
-  if (nrow(var_group_data_check) == 0){
+  if (var_group_data_check$n == 0){
     print('No data available for group')
     next
   }
+
 
   ## REMOVE STALE OR UNUSED DIRECTORIES
   current_var_path <- paste0(catalog_config$scores_path,names(config$variable_groups[i]))
@@ -112,9 +115,11 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
   group_description <- paste0('All ',names(config$variable_groups[i]),' variables for the forecasting challenge')
 
   ## find group sites
-  find_group_sites <- scores_data_df |>
+  find_group_sites <- duckdbfs::open_dataset(glue::glue("s3://{config$scores_bucket}/bundled-parquet"),
+                                             s3_endpoint = config$endpoint, anonymous=TRUE) |>
     filter(variable %in% var_values) |>
-    distinct(site_id)
+    distinct(site_id) |>
+    collect()
 
   ## create empty vector to track publication information
   citation_build <- c()
@@ -144,10 +149,13 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       var_formal_name <- paste0(duration_value,'_',var_name_full[j])
 
       # check data and skip if no data found
-      var_data_check <- scores_data_df |>
-        filter(variable == var_name)
+      var_data_check <- duckdbfs::open_dataset(glue::glue("s3://{config$forecasts_bucket}/bundled-parquet"),
+                                               s3_endpoint = config$endpoint, anonymous=TRUE) |>
+        filter(variable == var_name, duration == duration_name) |>
+        summarise(n = n()) |>
+        collect()
 
-      if (nrow(var_data_check) == 0){
+      if (var_data_check$n == 0){
         print('No data available for variable')
         next
       }
@@ -156,22 +164,28 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         dir.create(file.path(catalog_config$scores_path,names(config$variable_groups)[i],var_formal_name))
       }
 
-      var_data <- scores_data_df |>
+      var_date_range <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
         filter(variable == var_name,
-               duration == duration_name)
+               duration == duration_name) |>
+        summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+        collect()
 
-      var_date_range <- var_data |> dplyr::summarise(min(date),max(date))
-      var_min_date <- var_date_range$`min(date)`
-      var_max_date <- var_date_range$`max(date)`
+      var_min_date <- var_date_range$datetime_min
+      var_max_date <- var_date_range$datetime_max
 
-      var_models <- var_data |>
+      var_models <- duckdbfs::open_dataset(glue::glue("s3://{config$scores_bucket}/bundled-parquet"),
+                                           s3_endpoint = config$endpoint, anonymous=TRUE) |>
+        filter(variable == var_name, duration == duration_name) |>
         distinct(model_id) |>
+        collect() |>
         filter(model_id %in% registered_model_id$model_id,
                !grepl("example",model_id))
 
-      find_var_sites <- scores_data_df |>
+      find_var_sites <- duckdbfs::open_dataset(glue::glue("s3://{config$scores_bucket}/bundled-parquet"),
+                                               s3_endpoint = config$endpoint, anonymous=TRUE) |>
         filter(variable == var_name) |>
-        distinct(site_id)
+        distinct(site_id) |>
+        collect()
 
       var_metadata <- variable_gsheet |>
         filter(`"official" targets name` == var_name,
@@ -226,46 +240,51 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         }
 
         print(m)
-        model_date_range <- scores_data_df |>
+        model_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
-          dplyr::summarise(min(date),max(date),max(reference_date),max(pub_date))
+          summarize(across(all_of(c('datetime','reference_date','pub_datetime')), list(min = min, max = max))) |>
+          collect()
 
-        model_min_date <- model_date_range$`min(date)`
-        model_max_date <- model_date_range$`max(date)`
+        model_min_date <- model_date_range$datetime_min
+        model_max_date <- model_date_range$datetime_max
 
-        model_reference_date <- model_date_range$`max(reference_date)`
-        model_pub_date <- model_date_range$`max(pub_date)`
+        model_reference_date <- model_date_range$reference_date_max
+        model_pub_date <- model_date_range$pub_datetime_max
 
-        model_var_duration_df <- scores_data_df |>
+        model_var_duration_df <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
           distinct(variable,duration, project_id) |>
+          collect() |>
           mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
           mutate(duration_name = ifelse(duration == 'PT1H', 'Hourly', duration_name)) |>
           mutate(duration_name = ifelse(duration == 'PT30M', '30min', duration_name)) |>
           mutate(duration_name = ifelse(duration == 'P1W', 'Weekly', duration_name))
-
         model_var_full_name <- model_var_duration_df |>
           left_join((variable_gsheet |>
                        select(variable = `"official" targets name`, full_name = `Variable name`) |>
                        distinct(variable, .keep_all = TRUE)), by = c('variable'))
 
-        model_sites <- scores_data_df |>
+        model_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'),
+                                                            endpoint_override = config$endpoint, anonymous=TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
-          distinct(site_id)
+          distinct(site_id) |>
+          collect()
 
         model_site_text <- paste(as.character(model_sites$site_id), sep="' '", collapse=", ")
 
-        model_vars <- scores_data_df |>
+        model_vars <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'),
+                                                           endpoint_override = config$endpoint, anonymous=TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
           distinct(variable) |>
+          collect() |>
           left_join(model_var_full_name, by = 'variable')
 
         model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)

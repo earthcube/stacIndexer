@@ -42,13 +42,6 @@ forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecast
 ## identify model ids from bucket -- used in generate model items function
 
 
-forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max))
-            #across(all_of(c('datetime')), ~ min(.))
-            ) |>
-  collect()
-
-
 # forecast_data_df <- duckdbfs::open_dataset(glue::glue("s3://{config$inventory_bucket}/catalog/forecasts"),
 #                                   s3_endpoint = config$endpoint, anonymous=TRUE) |>
 #   collect()
