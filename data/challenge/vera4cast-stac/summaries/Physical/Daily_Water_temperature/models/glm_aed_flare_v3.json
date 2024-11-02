@@ -24,7 +24,7 @@
         "title": "glm_aed_flare_v3",
         "description": "General Lake Model with Aquatic Ecosystem Dynamics (GLM-AED) library within FLAREr version 3.0.  GLM-AED is a 1-D hydrodynamic model and FLARE adds EnKF-based data assimilation.  Temperature, oxygen, fdom, chla, and secchi depth are assimilated.",
         "datetime": "2024-10-02",
-        "updated": "2024-10-03",
+        "updated": "2024-10-03 04:19:03",
         "start_datetime": "2024-09-25T00:00:00Z",
         "end_datetime": "2024-11-05T00:00:00Z",
         "providers": [
@@ -130,6 +130,11 @@
                 "description": "unique identifier for the forecast project"
             },
             {
+                "name": "reference_date",
+                "type": "date32[day]",
+                "description": "date that the forecast was initiated"
+            },
+            {
                 "name": "duration",
                 "type": "string",
                 "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
@@ -138,11 +143,6 @@
                 "name": "variable",
                 "type": "string",
                 "description": "name of forecasted variable"
-            },
-            {
-                "name": "model_id",
-                "type": "string",
-                "description": "unique model identifier"
             }
         ]
     },

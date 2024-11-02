@@ -23,10 +23,10 @@
     "properties": {
         "title": "glm_aed_v1",
         "description": "GLM-AED with Ensemble Kalman Filter as implemented in FLARE.  This version used DA to update model states but not model parameters.",
-        "datetime": "2024-10-29",
-        "updated": "2024-10-30",
+        "datetime": "2024-10-31",
+        "updated": "2024-11-01 04:18:49",
         "start_datetime": "2023-10-14T00:00:00Z",
-        "end_datetime": "2024-12-02T00:00:00Z",
+        "end_datetime": "2024-12-04T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/FLARE-forecast/FCRE-forecast-code/blob/main/workflows/glm_aed/combined_run_aed.R",
@@ -130,6 +130,11 @@
                 "description": "unique identifier for the forecast project"
             },
             {
+                "name": "reference_date",
+                "type": "date32[day]",
+                "description": "date that the forecast was initiated"
+            },
+            {
                 "name": "duration",
                 "type": "string",
                 "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
@@ -138,11 +143,6 @@
                 "name": "variable",
                 "type": "string",
                 "description": "name of forecasted variable"
-            },
-            {
-                "name": "model_id",
-                "type": "string",
-                "description": "unique model identifier"
             }
         ]
     },

@@ -28,7 +28,7 @@
         "title": "asl.met.lm.step",
         "description": "Linear regression with air temp, humidity, precip, and wind speed. Model selected using AIC",
         "datetime": "2024-05-16",
-        "updated": "2024-05-17",
+        "updated": "2024-05-17 04:09:32",
         "start_datetime": "2024-05-06T00:00:00Z",
         "end_datetime": "2024-06-19T00:00:00Z",
         "providers": [
@@ -135,6 +135,11 @@
                 "description": "unique identifier for the forecast project"
             },
             {
+                "name": "reference_date",
+                "type": "date32[day]",
+                "description": "date that the forecast was initiated"
+            },
+            {
                 "name": "duration",
                 "type": "string",
                 "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
@@ -143,11 +148,6 @@
                 "name": "variable",
                 "type": "string",
                 "description": "name of forecasted variable"
-            },
-            {
-                "name": "model_id",
-                "type": "string",
-                "description": "unique model identifier"
             }
         ]
     },

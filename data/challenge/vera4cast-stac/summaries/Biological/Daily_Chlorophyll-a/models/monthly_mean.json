@@ -15,22 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -79.8372,
-                37.3032
-            ],
-            [
                 -79.8159,
                 37.3129
+            ],
+            [
+                -79.8372,
+                37.3032
             ]
         ]
     },
     "properties": {
         "title": "monthly_mean",
         "description": "This model calculates a monthly mean from the historic data and assigns this as the mean prediction for any day within that month. The standard deviation of the observations for that month is given as the standard deviation of the forecast.",
-        "datetime": "2024-10-29",
-        "updated": "2024-10-29",
+        "datetime": "2024-10-31",
+        "updated": "2024-10-31 12:38:51",
         "start_datetime": "2024-02-06T00:00:00Z",
-        "end_datetime": "2024-12-04T00:00:00Z",
+        "end_datetime": "2024-12-06T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/OlssonF/vera4cast/blob/main/R/MonthlyMeanModelFunction.R",
@@ -59,8 +59,8 @@
             "Chla_ugL_mean",
             "Daily",
             "P1D",
-            "fcre",
             "bvre",
+            "fcre",
             "empirical"
         ],
         "table:columns": [
@@ -135,6 +135,11 @@
                 "description": "unique identifier for the forecast project"
             },
             {
+                "name": "reference_date",
+                "type": "date32[day]",
+                "description": "date that the forecast was initiated"
+            },
+            {
                 "name": "duration",
                 "type": "string",
                 "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
@@ -143,11 +148,6 @@
                 "name": "variable",
                 "type": "string",
                 "description": "name of forecasted variable"
-            },
-            {
-                "name": "model_id",
-                "type": "string",
-                "description": "unique model identifier"
             }
         ]
     },
