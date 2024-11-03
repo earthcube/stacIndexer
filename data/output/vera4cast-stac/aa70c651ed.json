@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "urn:vera4cast-stac:62b9434d19",
     "name": "fableETS",
-    "description": "All forecasts for the Daily_Chlorophyll-a variable for the fableETS model. Information for the model is provided as follows: fable package exponential smoothing model fable::ETS().\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Chlorophyll-a variable for the fableETS model. Information for the model is provided as follows: fable package exponential smoothing model fable::ETS().\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2023-10-01",
     "keywords": [
         "Forecasts",
@@ -16,8 +16,8 @@
         "Chla_ugL_mean",
         "Daily",
         "P1D",
-        "bvre",
         "fcre",
+        "bvre",
         "empirical"
     ],
     "citation": {
@@ -127,13 +127,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3129,
-                "longitude": -79.8159
+                "latitude": 37.3032,
+                "longitude": -79.8372
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3032,
-                "longitude": -79.8372
+                "latitude": 37.3129,
+                "longitude": -79.8159
             }
         ],
         "additionalProperty": [
