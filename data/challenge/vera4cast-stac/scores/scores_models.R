@@ -244,14 +244,14 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
-          summarize(across(all_of(c('datetime','reference_date','pub_datetime')), list(min = min, max = max))) |>
+          summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max))) |>
           collect()
 
         model_min_date <- model_date_range$datetime_min
         model_max_date <- model_date_range$datetime_max
 
-        model_reference_date <- model_date_range$reference_date_max
-        model_pub_date <- model_date_range$pub_datetime_max
+        model_reference_date <- model_date_range$reference_datetime_max
+        model_pub_date <- model_date_range$pub_datetimetime_max
 
         model_var_duration_df <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,

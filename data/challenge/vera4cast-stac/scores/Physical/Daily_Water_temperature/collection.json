@@ -11,7 +11,67 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/asl.persistence.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.temp.lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/glm_aed_flare_v3.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/historic_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/monthly_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/inflow_gefsClimAED.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/asl.auto.arima.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/climatology.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareSimstrat.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.met.lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.tbats.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/persistenceFO.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/flareGOTM.json"
         },
         {
             "rel": "item",
@@ -31,72 +91,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.met.lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.persistence.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.tbats.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.temp.lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/climatology.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/fableNNETAR.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/fableNNETAR_focal.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/flareGOTM.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/flareSimstrat.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/glm_aed_flare_v3.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/glm_aed_v1.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/historic_mean.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/inflow_gefsClimAED.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/monthly_mean.json"
         },
         {
             "rel": "item",
@@ -106,7 +101,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/persistenceFO.json"
+            "href": "./models/fableNNETAR.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/glm_aed_v1.json"
         },
         {
             "rel": "parent",
@@ -156,7 +156,7 @@
             "interval": [
                 [
                     "2023-09-21T00:00:00Z",
-                    "2024-10-28T00:00:00Z"
+                    "2024-11-03T00:00:00Z"
                 ]
             ]
         }
@@ -256,22 +256,17 @@
             "name": "variable",
             "type": "string",
             "description": "name of forecasted variable"
-        },
-        {
-            "name": "model_id",
-            "type": "string",
-            "description": "unique model identifier"
         }
     ],
     "assets": {
         "data": {
-            "href": "\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\"",
+            "href": "\"s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\"",
             "type": "application/x-parquet",
             "title": "Database Access",
             "roles": [
                 "data"
             ],
-            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=Daily/variable=Temp_C_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         },
         "thumbnail": {
             "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/fcr_catwalk.jpg",
