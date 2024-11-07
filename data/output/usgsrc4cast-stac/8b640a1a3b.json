@@ -3,29 +3,29 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:usgsrc4cast-stac:50b6ffa606",
-    "name": "USGSHABs1",
-    "description": "All summaries for the Daily_Chlorophyll_a variable for the USGSHABs1 model. Information for the model is provided as follows: Uses the randomForest::randomForest() R package model to train site-specific models for predicting river chl-a. Uses ensemble Kalman filter to adjust predicted chl-a states..\n                                    The model predicts this variable at the following sites: USGS-14211720, USGS-14181500, USGS-05586300, USGS-14211010, USGS-01463500, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
-    "datePublished": "2024-02-13",
+    "@id": "urn:usgsrc4cast-stac:6b9776fbf5",
+    "name": "climatology",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Forecasts stream chlorophyll-a based on the historic average and standard deviation for that given site and day-of-year..\n                                    The model predicts this variable at the following sites: USGS-01427510, USGS-01463500, USGS-05543010, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, USGS-05549500.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2024-02-07",
     "keywords": [
-        "Summaries",
+        "Forecasts",
         "usgsrc4cast",
         "aquatics",
-        "USGSHABs1",
+        "climatology",
         "Chlorophyll_a",
         "chla",
         "Daily",
         "P1D",
-        "USGS-14211720",
-        "USGS-14181500",
-        "USGS-05586300",
-        "USGS-14211010",
+        "USGS-01427510",
         "USGS-01463500",
-        "USGS-05558300",
-        "USGS-05553700",
         "USGS-05543010",
-        "USGS-05549500",
-        "USGS-01427510"
+        "USGS-05553700",
+        "USGS-05558300",
+        "USGS-05586300",
+        "USGS-14181500",
+        "USGS-14211010",
+        "USGS-14211720",
+        "USGS-05549500"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -43,8 +43,8 @@
     "variableMeasured": [
         {
             "@type": "PropertyValue",
-            "name": "reference_datetime",
-            "description": "datetime that the forecast was initiated (horizon = 0)"
+            "name": "datetime",
+            "description": "datetime of the forecasted value (ISO 8601)"
         },
         {
             "@type": "PropertyValue",
@@ -53,8 +53,13 @@
         },
         {
             "@type": "PropertyValue",
-            "name": "datetime",
-            "description": "datetime of the forecasted value (ISO 8601)"
+            "name": "prediction",
+            "description": "predicted value for variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "parameter",
+            "description": "ensemble member or distribution parameter"
         },
         {
             "@type": "PropertyValue",
@@ -63,48 +68,13 @@
         },
         {
             "@type": "PropertyValue",
+            "name": "reference_datetime",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "@type": "PropertyValue",
             "name": "pub_datetime",
             "description": "datetime that forecast was submitted"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "mean",
-            "description": "mean forecast prediction"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "median",
-            "description": "median forecast prediction"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "sd",
-            "description": "standard deviation forecasts"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "quantile97.5",
-            "description": "upper 97.5 percentile value of forecast"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "quantile02.5",
-            "description": "upper 2.5 percentile value of forecast"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "quantile90",
-            "description": "upper 90 percentile value of forecast"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "quantile10",
-            "description": "upper 10 percentile value of forecast"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "project_id",
-            "description": "unique identifier for the forecast project"
         },
         {
             "@type": "PropertyValue",
@@ -113,35 +83,40 @@
         },
         {
             "@type": "PropertyValue",
-            "name": "variable",
-            "description": "name of forecasted variable"
+            "name": "model_id",
+            "description": "unique model identifier"
         },
         {
             "@type": "PropertyValue",
-            "name": "model_id",
-            "description": "unique model identifier"
+            "name": "project_id",
+            "description": "unique identifier for the forecast project"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "variable",
+            "description": "name of forecasted variable"
         }
     ],
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/USGSHABs1.json",
+            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/climatology.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/USGSHABs1.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/climatology.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://code.usgs.gov/wma/proxies/habs/habs-forecast-chl-usgsrc4cast/-/blob/main/2_model/src/chla_models.R?ref_type=heads",
+            "contentUrl": "https://github.com/eco4cast/usgsrc4cast-ci/blob/main/baseline_models/models/aquatics_climatology.R",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries//project_id=usgsrc4cast/duration=P1D/variable=chla/model_id=USGSHABs1?endpoint_override=sdsc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet//project_id=usgsrc4cast/duration=P1D/variable=chla/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/summaries//project_id=usgsrc4cast/duration=P1D/variable=chla/model_id=USGSHABs1?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/summaries//project_id=usgsrc4cast/duration=P1D/variable=chla/model_id=USGSHABs1\"\ncon.read_parquet(path + \"/**\")",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet//project_id=usgsrc4cast/duration=P1D/variable=chla/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/parquet//project_id=usgsrc4cast/duration=P1D/variable=chla/model_id=climatology\"\ncon.read_parquet(path + \"/**\")",
             "name": "Database Access for Daily Chlorophyll_a"
         }
     ],
@@ -154,23 +129,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 45.5175,
-                "longitude": -122.6692
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 44.7538,
-                "longitude": -122.2974
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.6328,
-                "longitude": -90.6077
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.3793,
-                "longitude": -122.5773
+                "latitude": 41.7567,
+                "longitude": -75.0574
             },
             {
                 "@type": "GeoCoordinates",
@@ -179,8 +139,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 41.1073,
-                "longitude": -89.3562
+                "latitude": 41.2999,
+                "longitude": -88.6142
             },
             {
                 "@type": "GeoCoordinates",
@@ -189,18 +149,33 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 41.2999,
-                "longitude": -88.6142
+                "latitude": 41.1073,
+                "longitude": -89.3562
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.6328,
+                "longitude": -90.6077
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.7538,
+                "longitude": -122.2974
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.3793,
+                "longitude": -122.5773
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5175,
+                "longitude": -122.6692
             },
             {
                 "@type": "GeoCoordinates",
                 "latitude": 42.31,
                 "longitude": -88.2515
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 41.7567,
-                "longitude": -75.0574
             }
         ],
         "additionalProperty": [
