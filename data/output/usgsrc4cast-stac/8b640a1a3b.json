@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "urn:usgsrc4cast-stac:6b9776fbf5",
     "name": "climatology",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Forecasts stream chlorophyll-a based on the historic average and standard deviation for that given site and day-of-year..\n                                    The model predicts this variable at the following sites: USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Forecasts stream chlorophyll-a based on the historic average and standard deviation for that given site and day-of-year..\n                                    The model predicts this variable at the following sites: USGS-01427510, USGS-01463500, USGS-05543010, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, USGS-05549500.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-02-07",
     "keywords": [
         "Forecasts",
@@ -19,13 +19,13 @@
         "USGS-01427510",
         "USGS-01463500",
         "USGS-05543010",
-        "USGS-05549500",
         "USGS-05553700",
         "USGS-05558300",
         "USGS-05586300",
         "USGS-14181500",
         "USGS-14211010",
-        "USGS-14211720"
+        "USGS-14211720",
+        "USGS-05549500"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -144,11 +144,6 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 42.31,
-                "longitude": -88.2515
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 41.3248,
                 "longitude": -88.984
             },
@@ -176,6 +171,11 @@
                 "@type": "GeoCoordinates",
                 "latitude": 45.5175,
                 "longitude": -122.6692
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 42.31,
+                "longitude": -88.2515
             }
         ],
         "additionalProperty": [
