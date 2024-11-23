@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "urn:usgsrc4cast-stac:f797c86281",
     "name": "climatology",
-    "description": "All scores for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Forecasts stream chlorophyll-a based on the historic average and standard deviation for that given site and day-of-year..\n                                    The model predicts this variable at the following sites: USGS-01427510, USGS-01463500, USGS-05543010, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, USGS-05549500.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Forecasts stream chlorophyll-a based on the historic average and standard deviation for that given site and day-of-year..\n                                    The model predicts this variable at the following sites: USGS-14211010, USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2024-02-08",
     "keywords": [
         "Scores",
@@ -16,16 +16,16 @@
         "chla",
         "Daily",
         "P1D",
+        "USGS-14211010",
+        "USGS-14211720",
         "USGS-01427510",
         "USGS-01463500",
         "USGS-05543010",
+        "USGS-05549500",
         "USGS-05553700",
         "USGS-05558300",
         "USGS-05586300",
-        "USGS-14181500",
-        "USGS-14211010",
-        "USGS-14211720",
-        "USGS-05549500"
+        "USGS-14181500"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -169,6 +169,16 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 45.3793,
+                "longitude": -122.5773
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5175,
+                "longitude": -122.6692
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 41.7567,
                 "longitude": -75.0574
             },
@@ -181,6 +191,11 @@
                 "@type": "GeoCoordinates",
                 "latitude": 41.2999,
                 "longitude": -88.6142
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 42.31,
+                "longitude": -88.2515
             },
             {
                 "@type": "GeoCoordinates",
@@ -201,21 +216,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 44.7538,
                 "longitude": -122.2974
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.3793,
-                "longitude": -122.5773
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.5175,
-                "longitude": -122.6692
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 42.31,
-                "longitude": -88.2515
             }
         ],
         "additionalProperty": [
