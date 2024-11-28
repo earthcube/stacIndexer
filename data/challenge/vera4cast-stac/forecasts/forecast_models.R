@@ -134,8 +134,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
 
   ## find group sites
-  find_group_sites <- duckdbfs::open_dataset(glue::glue("s3://{config$forecasts_bucket}/bundled-parquet"),
-                                             s3_endpoint = config$endpoint, anonymous=TRUE) |>
+  find_group_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
     filter(variable %in% var_values) |>
     distinct(site_id) |>
     collect()
@@ -172,8 +171,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       var_formal_name <- paste0(duration_value,'_',var_name_full[j])
 
       # check data and skip if no data found
-      var_data_check <- duckdbfs::open_dataset(glue::glue("s3://{config$forecasts_bucket}/bundled-parquet"),
-                                                 s3_endpoint = config$endpoint, anonymous=TRUE) |>
+      var_data_check <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'),
+                                                             endpoint_override = config$endpoint, anonymous = TRUE)) |>
         filter(variable == var_name, duration == duration_name) |>
         summarise(n = n()) |>
         collect()
@@ -216,8 +215,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       var_max_date <- var_date_range$datetime_max
 
 
-      var_models <- duckdbfs::open_dataset(glue::glue("s3://{config$forecasts_bucket}/bundled-parquet"),
-                                            s3_endpoint = config$endpoint, anonymous=TRUE) |>
+      var_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
         filter(variable == var_name, duration == duration_name) |>
         distinct(model_id) |>
         collect() |>
@@ -229,8 +227,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       #   filter(model_id %in% registered_model_id$model_id,
       #          !grepl("example",model_id))
 
-      find_var_sites <- duckdbfs::open_dataset(glue::glue("s3://{config$forecasts_bucket}/bundled-parquet"),
-                                               s3_endpoint = config$endpoint, anonymous=TRUE) |>
+      find_var_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE))|>
         filter(variable == var_name) |>
         distinct(site_id) |>
         collect()
