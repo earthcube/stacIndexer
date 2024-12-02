@@ -1,3 +1,6 @@
+options("duckdbfs_use_nightly"=TRUE) #temporary duckdb issue: https://github.com/duckdb/duckdb-r/issues/600
+ 
+
 Sys.setenv(AWS_ACCESS_KEY_ID=Sys.getenv("OSN_KEY"),
            AWS_SECRET_ACCESS_KEY=Sys.getenv("OSN_SECRET"))
 
