@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
                 -122.3303,
                 45.7624
             ],
@@ -201,12 +193,20 @@
             [
                 -99.2413,
                 47.1282
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -110.5391,
+                44.9535
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP, SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-03",
         "updated": "2024-08-23",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,8 +239,6 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "WREF",
-            "YELL",
             "ABBY",
             "BARR",
             "BART",
@@ -285,7 +283,9 @@
             "TREE",
             "UKFS",
             "UNDE",
-            "WOOD"
+            "WOOD",
+            "WREF",
+            "YELL"
         ],
         "table:columns": [
             {

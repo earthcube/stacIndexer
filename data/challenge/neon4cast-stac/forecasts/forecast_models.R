@@ -62,6 +62,7 @@ build_description <- paste0("Forecasts are the raw forecasts that includes all e
 
 forecast_sites <- forecast_sites$site_id
 
+print('build forecast...')
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
                       table_description = forecast_description_create,
@@ -79,6 +80,8 @@ stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       thumbnail_title = catalog_config$forecasts_thumbnail_title,
                       group_sites = forecast_sites,
                       model_child = FALSE)
+
+print('build forecast done...')
 
 ## READ IN GSHEET FILES
 variable_gsheet <- gsheet2tbl(config$target_metadata_gsheet)
