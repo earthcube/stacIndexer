@@ -21,12 +21,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.met.lm.json"
+            "href": "./models/asl.auto.arima.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.climate.window.json"
+            "href": "./models/asl.met.lm.json"
         },
         {
             "rel": "item",
@@ -51,12 +51,22 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/climatology.json"
+            "href": "./models/persistenceRW.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.auto.arima.json"
+            "href": "./models/secchi_last3obs_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.climate.window.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/climatology.json"
         },
         {
             "rel": "item",
@@ -82,16 +92,6 @@
             "rel": "item",
             "type": "application/json",
             "href": "./models/monthly_mean.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/persistenceRW.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/secchi_last3obs_mean.json"
         },
         {
             "rel": "parent",
@@ -141,7 +141,7 @@
             "interval": [
                 [
                     "2023-10-14T00:00:00Z",
-                    "2025-01-15T00:00:00Z"
+                    "2025-01-16T00:00:00Z"
                 ]
             ]
         }
