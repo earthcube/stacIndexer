@@ -39,13 +39,17 @@ print('FIND FORECAST TABLE SCHEMA')
 forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$forecasts_bucket, endpoint_override = config$endpoint, anonymous = TRUE)) #|>
 
 print('FIND INVENTORY BUCKET')
-forecast_s3 <- arrow::s3_bucket(glue::glue("{config$inventory_bucket}/catalog/forecasts/project_id={config$project_id}"),
-                              endpoint_override = "sdsc.osn.xsede.org",
-                              anonymous=TRUE)
+# forecast_s3 <- arrow::s3_bucket(glue::glue("{config$inventory_bucket}/catalog/forecasts/project_id={config$project_id}"),
+#                               endpoint_override = "sdsc.osn.xsede.org",
+#                               anonymous=TRUE)
+
+forecast_s3 <- arrow::s3_bucket(glue::glue("{config$forecasts_bucket}/bundled-parquet/project_id={config$project_id}"),
+                                endpoint_override = "sdsc.osn.xsede.org",
+                                anonymous=TRUE)
 
 print('OPEN INVENTORY BUCKET')
 forecast_data_df <- arrow::open_dataset(forecast_s3) |>
-  filter(project_id == config$project_id) |>
+  #filter(project_id == config$project_id) |>
   collect()
 
 theme_models <- forecast_data_df |>
@@ -62,7 +66,6 @@ build_description <- paste0("Forecasts are the raw forecasts that includes all e
 
 forecast_sites <- forecast_sites$site_id
 
-print('build forecast...')
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
                       table_description = forecast_description_create,
@@ -80,8 +83,6 @@ stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       thumbnail_title = catalog_config$forecasts_thumbnail_title,
                       group_sites = forecast_sites,
                       model_child = FALSE)
-
-print('build forecast done...')
 
 ## READ IN GSHEET FILES
 variable_gsheet <- gsheet2tbl(config$target_metadata_gsheet)

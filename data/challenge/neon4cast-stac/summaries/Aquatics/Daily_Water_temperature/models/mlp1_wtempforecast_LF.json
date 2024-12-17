@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0084,
+                29.676
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -89.7048,
                 45.9983
             ],
@@ -33,20 +41,12 @@
             [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -89.4737,
-                46.2097
             ]
         ]
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All summaries for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, SUGG, TOOK, BARC, CRAM.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
+        "description": "All summaries for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
         "datetime": "2024-08-22",
         "updated": "2024-08-23",
         "start_datetime": "2024-03-01T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "BARC",
+            "CRAM",
             "LIRO",
             "PRLA",
             "PRPO",
             "SUGG",
-            "TOOK",
-            "BARC",
-            "CRAM"
+            "TOOK"
         ],
         "table:columns": [
             {

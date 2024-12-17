@@ -33,10 +33,21 @@ inventory_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$inventory_buck
 # inventory_data_df <- arrow::open_dataset(arrow::s3_bucket(config$inventory_bucket, endpoint_override = config$endpoint, anonymous = TRUE)) |>
 #   collect()
 
-inventory_data_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$inventory_bucket,'/catalog/forecasts'),
+# inventory_data_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$inventory_bucket,'/catalog/forecasts'),
+#                                                           endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   filter(variable %in% interest_variables) |>
+#   collect()
+
+# inventory_data_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$inventory_bucket,'/catalog/forecasts/project_id=neon4cast'),
+#                                                           endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   filter(variable %in% interest_variables) |>
+#   collect()
+
+inventory_data_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$summaries_bucket,'/project_id=',config$project_id),
                                                           endpoint_override = config$endpoint, anonymous = TRUE)) |>
   filter(variable %in% interest_variables) |>
-  collect()
+  collect() |>
+  mutate(date = as.Date(datetime))
 
 theme_models <- inventory_data_df |>
   distinct(model_id)
