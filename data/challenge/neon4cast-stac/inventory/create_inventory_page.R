@@ -3,6 +3,10 @@ library(dplyr)
 library(gsheet)
 library(readr)
 
+install.packages("duckdb")
+options("duckdbfs_use_nightly"=FALSE)
+remotes::install_github("cboettig/duckdbfs")
+
 #source('catalog/R/stac_functions.R')
 config <- yaml::read_yaml('challenge_configuration.yaml')
 catalog_config <- config$catalog_config
