@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "urn:vera4cast-stac:36e13f6944",
     "name": "fableNNETAR_focal",
-    "description": "All forecasts for the Daily_Secchi variable for the fableNNETAR_focal model. Information for the model is provided as follows: autoregressive neural net fit using the NNETAR() function in the fable R package for VERA focal variables.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Secchi variable for the fableNNETAR_focal model. Information for the model is provided as follows: autoregressive neural net fit using the NNETAR() function in the fable R package for VERA focal variables.\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-04-26",
     "keywords": [
         "Forecasts",
@@ -16,8 +16,8 @@
         "Secchi_m_sample",
         "Daily",
         "P1D",
-        "fcre",
         "bvre",
+        "fcre",
         "machine learning"
     ],
     "citation": {
@@ -127,13 +127,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3032,
-                "longitude": -79.8372
+                "latitude": 37.3129,
+                "longitude": -79.8159
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3129,
-                "longitude": -79.8159
+                "latitude": 37.3032,
+                "longitude": -79.8372
             }
         ],
         "additionalProperty": [
