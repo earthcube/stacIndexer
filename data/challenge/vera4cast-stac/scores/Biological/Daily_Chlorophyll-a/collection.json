@@ -16,17 +16,17 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.met.lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/asl.persistence.json"
         },
         {
             "rel": "item",
             "type": "application/json",
             "href": "./models/asl.tbats.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.climate.window.json"
         },
         {
             "rel": "item",
@@ -41,6 +41,11 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/asl.met.lm.step.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/climatology.json"
         },
         {
@@ -51,17 +56,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.met.lm.step.json"
+            "href": "./models/fableETS.json"
         },
         {
             "rel": "item",
             "type": "application/json",
             "href": "./models/fableNNETAR.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/fableETS.json"
         },
         {
             "rel": "item",
@@ -76,12 +76,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/monthly_mean.json"
+            "href": "./models/historic_mean.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/historic_mean.json"
+            "href": "./models/monthly_mean.json"
         },
         {
             "rel": "item",
@@ -91,7 +91,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.climate.window.json"
+            "href": "./models/asl.met.lm.json"
         },
         {
             "rel": "parent",
@@ -141,7 +141,7 @@
             "interval": [
                 [
                     "2023-10-01T00:00:00Z",
-                    "2025-01-01T00:00:00Z"
+                    "2025-01-02T00:00:00Z"
                 ]
             ]
         }
@@ -251,7 +251,7 @@
             "roles": [
                 "data"
             ],
-            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=Daily/variable=Chla_ugL_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         },
         "thumbnail": {
             "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/bvr_platform_green_close.jpg",

@@ -30,7 +30,7 @@ inventory_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$inventory_buck
 
 inventory_data_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$inventory_bucket,'/catalog/forecasts'),
                                                           endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  filter(variable %in% interest_variables) |>
+  dplyr::filter(variable %in% unique(interest_variables)) |>
   collect()
 
 theme_models <- inventory_data_df |>
