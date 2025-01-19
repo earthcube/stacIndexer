@@ -3,22 +3,23 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:vera4cast-stac:36e13f6944",
-    "name": "fableNNETAR_focal",
-    "description": "All forecasts for the Daily_Secchi variable for the fableNNETAR_focal model. Information for the model is provided as follows: autoregressive neural net fit using the NNETAR() function in the fable R package for VERA focal variables.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2024-04-26",
+    "@id": "urn:vera4cast-stac:4a184bc7aa",
+    "name": "persistenceRW",
+    "description": "All forecasts for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: bvre, fcre, tubr.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2023-09-21",
     "keywords": [
         "Forecasts",
         "vera4cast",
         "Physical",
-        "fableNNETAR_focal",
-        "Secchi",
-        "Secchi_m_sample",
+        "persistenceRW",
+        "Water_temperature",
+        "Temp_C_mean",
         "Daily",
         "P1D",
-        "fcre",
         "bvre",
-        "machine learning"
+        "fcre",
+        "tubr",
+        "empirical"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -98,24 +99,24 @@
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableNNETAR_focal.json",
+            "contentUrl": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/persistenceRW.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/fableNNETAR_focal.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/metadata/model_id/persistenceRW.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://github.com/addelany/vera4casts/blob/main/code/combined_workflow/nnetar_workflow.R",
+            "contentUrl": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=fableNNETAR_focal?endpoint_override=renc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=persistenceRW?endpoint_override=renc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=fableNNETAR_focal?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'renc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=fableNNETAR_focal\"\ncon.read_parquet(path + \"/**\")",
-            "name": "Database Access for Daily Secchi"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=persistenceRW?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'renc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=persistenceRW\"\ncon.read_parquet(path + \"/**\")",
+            "name": "Database Access for Daily Water_temperature"
         }
     ],
     "spatialCoverage": {
@@ -127,13 +128,18 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 37.3129,
+                "longitude": -79.8159
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 37.3032,
                 "longitude": -79.8372
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3129,
-                "longitude": -79.8159
+                "latitude": 37.3078,
+                "longitude": -79.8357
             }
         ],
         "additionalProperty": [
