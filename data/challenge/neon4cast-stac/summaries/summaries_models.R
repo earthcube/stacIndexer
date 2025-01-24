@@ -72,7 +72,7 @@ stac4cast::build_forecast_scores(table_schema = summaries_theme_df,
                                  link_items = stac4cast::generate_group_values(group_values = names(config$variable_groups)),
                                  thumbnail_link = catalog_config$summaries_thumbnail,
                                  thumbnail_title = catalog_config$summaries_thumbnail_title,
-                                 group_sites = summary_sites$site_id,
+                                 group_sites = summaries_sites$site_id,
                                  model_child = FALSE)
 
 ## CREATE MODELS

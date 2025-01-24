@@ -47,6 +47,11 @@ theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket
   distinct(model_id) |>
   collect()
 
+## TEST DUCKDBFS
+#duck_test <- duckdbfs::open_dataset('s3://bio230014-bucket01/challenges/scores/bundled-parquet/?endpoint_override=sdsc.osn.xsede.org', anonymous = TRUE)
+
+
+
 scores_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
   distinct(site_id) |>
   collect()
@@ -212,7 +217,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         var_description <- paste0('All models for the ',var_formal_name,' variable. The variable description is as follows: ',
                                   var_metadata$Description)
 
-        var_path <- gsub('forecasts','scores',var_data$path[1])
+        #var_path <- gsub('forecasts','scores',var_data$path[1])
+        var_path <- catalog_config$aws_download_path_scores
 
         ## build lists for creating publication items
         var_citations <- config$variable_groups[[i]]$group_vars[[j]]$var_citation
