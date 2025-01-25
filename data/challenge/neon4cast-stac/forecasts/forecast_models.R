@@ -2,6 +2,7 @@ library(arrow)
 library(dplyr)
 library(gsheet)
 library(readr)
+library(duckdbfs)
 
 #source('catalog/R/stac_functions.R')
 config <- yaml::read_yaml('challenge_configuration.yaml')
@@ -52,19 +53,37 @@ print('FIND INVENTORY BUCKET')
 #   #filter(project_id == config$project_id) |>
 #   collect()
 
-theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_scores,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+
+theme_models <- forecast_duck_df |>
   distinct(model_id) |>
-  collect()
+  pull(model_id)
 
-forecast_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+scores_sites <- forecast_duck_df |>
   distinct(site_id) |>
-  collect()
+  pull(site_id)
 
-forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
-  collect()
-forecast_min_date <- forecast_date_range$datetime_min
-forecast_max_date <- forecast_date_range$datetime_max
+scores_date_range <- forecast_duck_df |>
+  summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+scores_min_date <-  scores_date_range |> pull(datetime_min)
+scores_max_date <-  scores_date_range |> pull(datetime_max)
+
+
+
+# theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   distinct(model_id) |>
+#   collect()
+
+# forecast_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   distinct(site_id) |>
+#   collect()
+
+# forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+#   collect()
+# forecast_min_date <- forecast_date_range$datetime_min
+# forecast_max_date <- forecast_date_range$datetime_max
 
 
 build_description <- paste0("Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the scores (summaries of the forecasts) to analyze forecasts (unless you need the individual ensemble members). You can access the forecasts at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
@@ -111,13 +130,12 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
   print(names(config$variable_groups)[i])
 
   # check data and skip if no data found
-  var_group_data_check <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'),
-                                                               endpoint_override = config$endpoint, anonymous=TRUE)) |>
-    filter(variable %in% c(config$variable_groups[[i]]$variable)) |>
+  var_group_data_check <- scores_duck_df |>
+    filter(variable %in% group_var_values) |>
     summarise(n = n()) |>
-    collect()
+    pull(n)
 
-  if (nrow(var_group_data_check) == 0){
+  if (var_group_data_check == 0){
     print('No data available for group')
     next
   }
@@ -143,10 +161,10 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
   group_description <- paste0('All variables for the ',names(config$variable_groups[i]),' group.')
 
   ## find group sites
-  find_group_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  find_group_sites <- scores_duck_df |>
     filter(variable %in% var_values) |>
     distinct(site_id) |>
-    collect()
+    pull(site_id)
 
   ## create empty vector to track publication information
   citation_build <- c()
@@ -176,11 +194,10 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       var_formal_name <- paste0(duration_value,'_',var_name_full[j])
 
       # check data and skip if no data found
-      var_data_check <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'),
-                                                             endpoint_override = config$endpoint, anonymous = TRUE)) |>
+      var_data_check <- scores_duck_df |>
         filter(variable == var_name, duration == duration_name) |>
         summarise(n = n()) |>
-        collect()
+        pull(n)
 
       if (nrow(var_data_check) == 0){
         print('No data available for variable')
@@ -195,26 +212,26 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       #   filter(variable == var_name,
       #          duration == duration_name)
 
-      var_date_range <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+      var_date_range <- scores_duck_df|>
         filter(variable == var_name,
                duration == duration_name) |>
-        summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
-        collect()
+        summarize(across(all_of(c('datetime')), list(min = min, max = max))) #|>
+      #collect()
 
-      var_min_date <- var_date_range$datetime_min
-      var_max_date <- var_date_range$datetime_max
+      var_min_date <- var_date_range |> pull(datetime_min)
+      var_max_date <- var_date_range |> pull(datetime_max)
 
-      var_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+      var_models <- scores_duck_df |>
         filter(variable == var_name, duration == duration_name) |>
         distinct(model_id) |>
-        collect() |>
         filter(model_id %in% registered_model_id$model_id,
-               !grepl("example",model_id))
+               !grepl("example",model_id)) |>
+        pull(model_id)
 
-      find_var_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE))|>
+      find_var_sites <- scores_duck_df |>
         filter(variable == var_name) |>
         distinct(site_id) |>
-        collect()
+        pull(site_id)
 
       var_metadata <- variable_gsheet |>
         filter(`"official" targets name` == var_name,
@@ -252,13 +269,13 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                        theme_title = var_formal_name,
                                        destination_path = file.path(catalog_config$forecast_path,names(config$variable_groups)[i],var_formal_name),
                                        aws_download_path = var_path,
-                                       group_var_items = stac4cast::generate_variable_model_items(model_list = var_models$model_id),
+                                       group_var_items = stac4cast::generate_variable_model_items(model_list = var_models),
                                        thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
                                        thumbnail_title = "Thumbnail Image",
                                        group_var_vector = NULL,
                                        single_var_name = var_name,
                                        group_duration_value = duration_value,
-                                       group_sites = find_var_sites$site_id,
+                                       group_sites = find_var_sites,
                                        citation_values = var_citations,
                                        doi_values = doi_citations)
 
@@ -279,47 +296,45 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
 
         print(m)
 
-        model_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+        model_date_range <- scores_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
-          summarize(across(all_of(c('datetime','reference_date','pub_datetime')), list(min = min, max = max))) |>
-          collect()
+          summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max)))
 
-        model_min_date <- model_date_range$datetime_min
-        model_max_date <- model_date_range$datetime_max
+        model_min_date <- model_date_range |> pull(datetime_min)
+        model_max_date <- model_date_rang |> pull(datetime_max)
 
-        model_reference_date <- model_date_range$reference_date_max
-        model_pub_date <- model_date_range$pub_datetime_max
+        model_reference_date <- model_date_range |> pull(`max(reference_date)`)
+        model_pub_date <- model_date_range |> pull(`max(pub_date)`)
 
-        model_var_duration_df <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+        model_var_duration_df <-  scores_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
           distinct(variable,duration, project_id) |>
-          collect() |>
+          #pull() |>
           mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
           mutate(duration_name = ifelse(duration == 'PT1H', 'Hourly', duration_name)) |>
           mutate(duration_name = ifelse(duration == 'PT30M', '30min', duration_name)) |>
-          mutate(duration_name = ifelse(duration == 'P1W', 'Weekly', duration_name))
+          mutate(duration_name = ifelse(duration == 'P1W', 'Weekly', duration_name)) |>
+          collect()
 
         model_var_full_name <- model_var_duration_df |>
           left_join((variable_gsheet |>
                        select(variable = `"official" targets name`, full_name = `Variable name`) |>
                        distinct(variable, .keep_all = TRUE)), by = c('variable'))
 
-        model_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'),
-                                                            endpoint_override = config$endpoint, anonymous=TRUE)) |>
+        model_sites <- scores_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
           distinct(site_id) |>
-          collect()
+          pull(site_id)
 
         model_site_text <- paste(as.character(model_sites$site_id), sep="' '", collapse=", ")
 
-        model_vars <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'),
-                                                           endpoint_override = config$endpoint, anonymous=TRUE)) |>
+        model_vars <- scores_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
@@ -382,7 +397,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                var_values = model_vars$var_duration_name,
                                duration_names = model_var_duration_df$duration,
                                duration_value = duration_name,
-                               site_values = model_sites$site_id,
+                               site_values = model_sites,
                                site_table = catalog_config$site_metadata_url,
                                model_documentation = registered_model_id,
                                destination_path = paste0(catalog_config$forecast_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"),
@@ -422,7 +437,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                    group_var_vector = unique(var_values),
                                    single_var_name = NULL,
                                    group_duration_value = NULL,
-                                   group_sites = find_group_sites$site_id,
+                                   group_sites = find_group_sites,
                                    citation_values = citation_build,
                                    doi_values = doi_build)
 } # end group loop
