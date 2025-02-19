@@ -387,6 +387,7 @@ def walk_stac(cf):
     replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
     replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
     replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
+    replace_in_folder('./data/challenge', '2017-02-01 15:00:00T00:00:00Z', '2017-02-01T00:00:00Z')
 
 
     root_catalog = Catalog.from_file(href=cf)
