@@ -15,16 +15,20 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -102.4471,
-                39.7582
+                -83.5038,
+                35.6904
             ],
             [
-                -82.0084,
-                29.676
+                -89.4737,
+                46.2097
             ],
             [
                 -119.2575,
                 37.0597
+            ],
+            [
+                -111.5081,
+                33.751
             ],
             [
                 -110.5871,
@@ -35,32 +39,56 @@
                 34.4442
             ],
             [
-                -87.7982,
-                32.5415
+                -84.2793,
+                35.9574
             ],
             [
-                -147.504,
-                65.1532
+                -97.7823,
+                33.3785
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -105.5442,
                 40.035
             ],
             [
-                -89.4737,
-                46.2097
+                -102.4471,
+                39.7582
             ],
             [
-                -66.9868,
-                18.1135
+                -77.9832,
+                39.0956
             ],
             [
-                -84.4374,
-                31.1854
+                -147.504,
+                65.1532
             ],
             [
-                -66.7987,
-                18.1741
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -87.4077,
+                32.9604
             ],
             [
                 -72.3295,
@@ -71,94 +99,66 @@
                 39.1051
             ],
             [
-                -83.5038,
-                35.6904
+                -84.4374,
+                31.1854
             ],
             [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -149.143,
-                68.6698
+                -66.9868,
+                18.1135
             ],
             [
                 -78.1473,
                 38.8943
             ],
             [
-                -97.7823,
-                33.3785
+                -87.7982,
+                32.5415
             ],
             [
-                -99.1139,
-                47.1591
+                -122.1655,
+                44.2596
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -111.5081,
-                33.751
+                -89.7048,
+                45.9983
             ],
             [
                 -119.0274,
                 36.9559
             ],
             [
+                -111.7979,
+                40.7839
+            ],
+            [
                 -88.1589,
                 31.8534
             ],
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -84.2793,
-                35.9574
+                -99.2531,
+                47.1298
             ],
             [
                 -105.9154,
                 39.8914
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "fTSLM_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the fTSLM_lag model. Information for the model is provided as follows: This is a simple time series linear model in which water temperature is a function of air\ntemperature of that day and the previous day\u2019s air temperature.\n                                    The model predicts this variable at the following sites: ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, TOOK, WALK, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-07-03",
-        "updated": "2024-07-04",
-        "start_datetime": "2024-06-13T00:00:00Z",
-        "end_datetime": "2024-08-06T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the fTSLM_lag model. Information for the model is provided as follows: This is a simple time series linear model in which water temperature is a function of air\ntemperature of that day and the previous day\u2019s air temperature.\n                                    The model predicts this variable at the following sites: LECO, CRAM, BIGC, SYCA, BLDE, BLUE, WALK, PRIN, GUIL, SUGG, COMO, ARIK, LEWI, CARI, OKSR, TOOK, BARC, MCDI, MAYF, HOPB, KING, FLNT, CUPE, POSE, BLWA, MCRA, LIRO, TECR, REDB, TOMB, PRPO, WLOU, MART, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-08-11",
+        "updated": "2024-08-23 15:01:03",
+        "start_datetime": "2022-10-21T00:00:00Z",
+        "end_datetime": "2024-09-14T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
-            "ARIK",
-            "BARC",
+            "LECO",
+            "CRAM",
             "BIGC",
+            "SYCA",
             "BLDE",
             "BLUE",
-            "BLWA",
-            "CARI",
-            "COMO",
-            "CRAM",
-            "CUPE",
-            "FLNT",
+            "WALK",
+            "PRIN",
             "GUIL",
+            "SUGG",
+            "COMO",
+            "ARIK",
+            "LEWI",
+            "CARI",
+            "OKSR",
+            "TOOK",
+            "BARC",
+            "MCDI",
+            "MAYF",
             "HOPB",
             "KING",
-            "LECO",
-            "LEWI",
-            "LIRO",
-            "MART",
-            "MAYF",
-            "MCDI",
-            "MCRA",
-            "OKSR",
+            "FLNT",
+            "CUPE",
             "POSE",
-            "PRIN",
-            "PRLA",
-            "PRPO",
-            "REDB",
-            "SUGG",
-            "SYCA",
+            "BLWA",
+            "MCRA",
+            "LIRO",
             "TECR",
+            "REDB",
             "TOMB",
-            "TOOK",
-            "WALK",
-            "WLOU"
+            "PRPO",
+            "WLOU",
+            "MART",
+            "PRLA"
         ],
         "table:columns": [
             {
@@ -312,11 +312,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },

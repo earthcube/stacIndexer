@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
                 -89.4737,
                 46.2097
             ],
@@ -35,22 +31,26 @@
                 47.1298
             ],
             [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
             [
-                -149.6106,
-                68.6307
+                -82.0084,
+                29.676
             ]
         ]
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-07-03",
-        "updated": "2024-07-04",
-        "start_datetime": "2024-06-13T00:00:00Z",
-        "end_datetime": "2024-08-05T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: CRAM, LIRO, PRLA, PRPO, TOOK, SUGG, BARC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-01-28",
+        "updated": "2025-01-28 14:04:18",
+        "start_datetime": "2024-02-29T00:00:00Z",
+        "end_datetime": "2025-01-29T00:00:00Z",
         "providers": [
             {
                 "url": null,
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "BARC",
             "CRAM",
             "LIRO",
             "PRLA",
             "PRPO",
+            "TOOK",
             "SUGG",
-            "TOOK"
+            "BARC"
         ],
         "table:columns": [
             {
@@ -177,11 +177,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },

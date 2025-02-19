@@ -291,7 +291,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
         ## loop over model ids and extract components if present in metadata table
 
-        for (m in var_models$model_id){
+        for (m in var_models){
 
           # make model directory
           if (!dir.exists(paste0(catalog_config$scores_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"))){
@@ -307,10 +307,10 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
             summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max)))
 
           model_min_date <- model_date_range |> pull(datetime_min)
-          model_max_date <- model_date_rang |> pull(datetime_max)
+          model_max_date <- model_date_range |> pull(datetime_max)
 
-          model_reference_date <- model_date_range |> pull(`max(reference_date)`)
-          model_pub_date <- model_date_range |> pull(`max(pub_date)`)
+          model_reference_date <- model_date_range |> pull(reference_datetime_max)
+          model_pub_date <- model_date_range |> pull(pub_datetime_max)
 
           model_var_duration_df <-  scores_duck_df |>
             filter(model_id == m,
@@ -341,7 +341,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
             distinct(site_id) |>
             pull(site_id)
 
-          model_site_text <- paste(as.character(model_sites$site_id), sep="' '", collapse=", ")
+          model_site_text <- paste(as.character(model_sites), sep="' '", collapse=", ")
 
           model_vars <- scores_duck_df |>
             filter(model_id == m,
@@ -354,7 +354,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
           model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)
 
           scores_sites <- append(scores_sites,  stac4cast::get_site_coords(site_metadata = catalog_config$site_metadata_url,
-                                                                           sites = model_sites$site_id))
+                                                                           sites = model_sites))
           stac_id <- paste0(m,'_',var_name,'_',duration_name,'_scores')
 
           idx = which(registered_model_id$model_id == m)
@@ -378,7 +378,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                     Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)')
 
           model_keywords <- c(list('Scores',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
-                              as.list(model_sites$site_id))
+                              as.list(model_sites))
 
           ## build radiantearth stac and raw json link
           stac_link <- paste0('https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/',

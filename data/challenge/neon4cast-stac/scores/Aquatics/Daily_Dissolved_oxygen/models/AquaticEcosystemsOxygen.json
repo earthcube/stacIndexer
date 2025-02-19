@@ -7,13 +7,21 @@
     "id": "AquaticEcosystemsOxygen_oxygen_P1D_scores",
     "bbox": [
         -105.9154,
-        39.8914,
-        -105.9154,
+        29.676,
+        -82.0084,
         39.8914
     ],
     "geometry": {
         "type": "MultiPoint",
         "coordinates": [
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
             [
                 -105.9154,
                 39.8914
@@ -22,11 +30,11 @@
     },
     "properties": {
         "title": "AquaticEcosystemsOxygen",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-07-03",
-        "updated": "2024-07-04",
-        "start_datetime": "2024-06-13T00:00:00Z",
-        "end_datetime": "2024-07-31T00:00:00Z",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: ARIK, BARC, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-07-07",
+        "updated": "2024-08-23 03:49:14",
+        "start_datetime": "2024-04-03T00:00:00Z",
+        "end_datetime": "2024-08-04T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -55,6 +63,8 @@
             "oxygen",
             "Daily",
             "P1D",
+            "ARIK",
+            "BARC",
             "WLOU"
         ],
         "table:columns": [
@@ -147,11 +157,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },

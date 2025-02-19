@@ -6,10 +6,10 @@
     "type": "Feature",
     "id": "bookcast_forest_nee_P1D_scores",
     "bbox": [
-        -81.9934,
+        -87.3933,
         29.6893,
         -81.9934,
-        29.6893
+        32.9505
     ],
     "geometry": {
         "type": "MultiPoint",
@@ -17,16 +17,20 @@
             [
                 -81.9934,
                 29.6893
+            ],
+            [
+                -87.3933,
+                32.9505
             ]
         ]
     },
     "properties": {
         "title": "bookcast_forest",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the bookcast_forest model. Information for the model is provided as follows: A simple daily timestep process-based model of a terrestrial carbon cycle.  It includes leaves, wood, and soil pools.  It uses a light-use efficiency GPP model to convert PAR to carbon. The model is derived from https://github.com/mdietze/FluxCourseForecast..\n                                    The model predicts this variable at the following sites: OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-06-13",
-        "updated": "2024-06-13",
-        "start_datetime": "2024-06-13T00:00:00Z",
-        "end_datetime": "2024-07-12T00:00:00Z",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the bookcast_forest model. Information for the model is provided as follows: A simple daily timestep process-based model of a terrestrial carbon cycle.  It includes leaves, wood, and soil pools.  It uses a light-use efficiency GPP model to convert PAR to carbon. The model is derived from https://github.com/mdietze/FluxCourseForecast..\n                                    The model predicts this variable at the following sites: OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-01-20",
+        "updated": "2025-01-20 22:05:33",
+        "start_datetime": "2024-01-10T00:00:00Z",
+        "end_datetime": "2025-01-20T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/frec-5174/frec-5174-docs",
@@ -55,7 +59,8 @@
             "nee",
             "Daily",
             "P1D",
-            "OSBS"
+            "OSBS",
+            "TALL"
         ],
         "table:columns": [
             {
@@ -147,11 +152,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },

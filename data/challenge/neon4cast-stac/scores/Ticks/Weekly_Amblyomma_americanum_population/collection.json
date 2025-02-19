@@ -11,22 +11,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_tbats.json"
+            "href": "./models/UCLA_2022.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_temp_lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_arima.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/BU_Dem.json"
+            "href": "./models/tg_precip_lm.json"
         },
         {
             "rel": "item",
@@ -36,7 +26,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/NJC_Ticks.json"
+            "href": "./models/BU_Dem.json"
         },
         {
             "rel": "item",
@@ -46,22 +36,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/Ticks_288.json"
+            "href": "./models/tg_temp_lm.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/UCLA_2022.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/VTicks.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_ets.json"
+            "href": "./models/tg_temp_lm_all_sites.json"
         },
         {
             "rel": "item",
@@ -71,17 +51,42 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_humidity_lm_all_sites.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/tg_lasso.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_precip_lm.json"
+            "href": "./models/tg_tbats.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/Ticks_288.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_ets.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_humidity_lm_all_sites.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/VTicks.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_arima.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/NJC_Ticks.json"
         },
         {
             "rel": "item",
@@ -92,11 +97,6 @@
             "rel": "item",
             "type": "application/json",
             "href": "./models/tg_randfor.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_temp_lm_all_sites.json"
         },
         {
             "rel": "parent",
@@ -146,7 +146,7 @@
             "interval": [
                 [
                     "2018-09-03T00:00:00Z",
-                    "2023-12-25T00:00:00Z"
+                    "2024-10-07T00:00:00Z"
                 ]
             ]
         }
@@ -238,11 +238,6 @@
             "description": "unique model identifier"
         },
         {
-            "name": "variable",
-            "type": "string",
-            "description": "name of forecasted variable"
-        },
-        {
             "name": "project_id",
             "type": "string",
             "description": "unique project identifier"
@@ -250,13 +245,13 @@
     ],
     "assets": {
         "data": {
-            "href": "\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/project_id=neon4cast/duration=Weekly/variable=amblyomma_americanum?endpoint_override=sdsc.osn.xsede.org\"",
+            "href": "\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=Weekly/variable=amblyomma_americanum?endpoint_override=sdsc.osn.xsede.org\"",
             "type": "application/x-parquet",
             "title": "Database Access",
             "roles": [
                 "data"
             ],
-            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/project_id=neon4cast/duration=Weekly/variable=amblyomma_americanum?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=Weekly/variable=amblyomma_americanum?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         },
         "thumbnail": {
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/thumbnail_plots/tick_drag.jpg",

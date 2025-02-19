@@ -15,84 +15,52 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -77.9832,
-                39.0956
+                -87.7982,
+                32.5415
             ],
             [
-                -89.7048,
-                45.9983
+                -66.9868,
+                18.1135
             ],
             [
-                -121.9338,
-                45.7908
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
             ],
             [
                 -87.4077,
                 32.9604
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
                 -122.1655,
                 44.2596
-            ],
-            [
-                -149.143,
-                68.6698
             ],
             [
                 -78.1473,
                 38.8943
             ],
             [
-                -97.7823,
-                33.3785
+                -84.4374,
+                31.1854
             ],
             [
-                -99.1139,
-                47.1591
+                -89.4737,
+                46.2097
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -82.0177,
-                29.6878
+                -83.5038,
+                35.6904
             ],
             [
                 -111.5081,
                 33.751
             ],
             [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
                 -84.2793,
                 35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -82.0084,
-                29.676
             ],
             [
                 -119.2575,
@@ -107,58 +75,90 @@
                 34.4442
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
                 -105.5442,
                 40.035
             ],
             [
-                -89.4737,
-                46.2097
+                -77.9832,
+                39.0956
             ],
             [
-                -66.9868,
-                18.1135
+                -97.7823,
+                33.3785
             ],
             [
-                -84.4374,
-                31.1854
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -66.7987,
                 18.1741
             ],
             [
-                -72.3295,
-                42.4719
+                -96.443,
+                38.9459
             ],
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -83.5038,
-                35.6904
+                -102.4471,
+                39.7582
             ],
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -88.1589,
+                31.8534
             ]
         ]
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: LEWI, LIRO, MART, MAYF, MCDI, MCRA, OKSR, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE, BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2024-07-02",
-        "updated": null,
-        "start_datetime": "2024-06-13T00:00:00Z",
-        "end_datetime": "2024-08-01T00:00:00Z",
+        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: BLWA, CUPE, HOPB, KING, MAYF, MCRA, POSE, FLNT, CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE, COMO, LEWI, PRIN, SUGG, BARC, GUIL, MCDI, ARIK, TOOK, CARI, OKSR, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2024-07-03",
+        "updated": "2024-08-22 14:02:17",
+        "start_datetime": "2023-01-02T00:00:00Z",
+        "end_datetime": "2024-08-02T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/OlssonF/NEON-simple-baselines/blob/main/Models/baseline_ensemble.R",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
-            "LEWI",
-            "LIRO",
-            "MART",
+            "BLWA",
+            "CUPE",
+            "HOPB",
+            "KING",
             "MAYF",
-            "MCDI",
             "MCRA",
-            "OKSR",
             "POSE",
-            "PRIN",
-            "PRLA",
-            "PRPO",
-            "REDB",
-            "SUGG",
+            "FLNT",
+            "CRAM",
+            "LECO",
             "SYCA",
-            "TECR",
-            "TOMB",
             "WALK",
-            "WLOU",
-            "ARIK",
-            "BARC",
             "BIGC",
             "BLDE",
             "BLUE",
-            "BLWA",
-            "CARI",
             "COMO",
-            "CRAM",
-            "CUPE",
-            "FLNT",
+            "LEWI",
+            "PRIN",
+            "SUGG",
+            "BARC",
             "GUIL",
-            "HOPB",
-            "KING",
-            "LECO",
-            "TOOK"
+            "MCDI",
+            "ARIK",
+            "TOOK",
+            "CARI",
+            "OKSR",
+            "LIRO",
+            "MART",
+            "PRLA",
+            "PRPO",
+            "REDB",
+            "TECR",
+            "WLOU",
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -312,11 +312,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique project identifier"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
