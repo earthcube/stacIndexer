@@ -243,7 +243,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                 var_metadata$Description)
 
       #var_path <- gsub('forecasts','scores',var_data$path[1])
-      var_path <- var_data$path[1]
+      #var_path <- var_data$path[1]
 
       ## build lists for creating publication items
       var_citations <- config$variable_groups[[i]]$group_vars[[j]]$var_citation
@@ -270,7 +270,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                        dashboard_title = catalog_config$dashboard_title,
                                        theme_title = var_formal_name,
                                        destination_path = file.path(catalog_config$forecast_path,names(config$variable_groups)[i],var_formal_name),
-                                       aws_download_path = var_path,
+                                       aws_download_path = catalog_config$aws_download_path_forecasts,
                                        group_var_items = stac4cast::generate_variable_model_items(model_list = var_models),
                                        thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
                                        thumbnail_title = "Thumbnail Image",

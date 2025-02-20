@@ -15,8 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.1139,
-                47.1591
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -89.7048,
@@ -27,16 +35,8 @@
                 47.1298
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
+                -99.1139,
+                47.1591
             ],
             [
                 -89.4737,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "lm_AT_WTL_WS",
-        "description": "All scores for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: PRLA, LIRO, PRPO, SUGG, BARC, TOOK, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, LIRO, PRPO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-01-28",
         "updated": "2025-01-28 14:04:27",
         "start_datetime": "2024-03-01T00:00:00Z",
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "PRLA",
+            "TOOK",
+            "BARC",
+            "SUGG",
             "LIRO",
             "PRPO",
-            "SUGG",
-            "BARC",
-            "TOOK",
+            "PRLA",
             "CRAM"
         ],
         "table:columns": [

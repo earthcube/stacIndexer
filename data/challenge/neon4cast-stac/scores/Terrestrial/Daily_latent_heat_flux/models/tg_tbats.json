@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
                 -99.1066,
                 47.1617
             ],
@@ -145,6 +61,46 @@
             [
                 -103.0293,
                 40.4619
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
             ],
             [
                 -87.3933,
@@ -201,12 +157,56 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -100.9154,
+                46.7697
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: SJER, PUUM, WOOD, BLAN, GUAN, MOAB, HARV, LAJA, DSNY, SERC, TEAK, ABBY, SOAP, ORNL, LENO, WREF, MLBS, NIWO, GRSM, TREE, NOGP, DCFS, STEI, KONZ, YELL, SCBI, UKFS, BONA, OAES, JORN, CLBJ, DEJU, STER, TALL, OSBS, UNDE, CPER, DELA, ONAQ, JERC, SRER, BART, RMNP, BARR, TOOL, HEAL, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: DCFS, STEI, KONZ, YELL, SCBI, UKFS, BONA, OAES, JORN, CLBJ, DEJU, STER, SJER, PUUM, WOOD, BLAN, GUAN, MOAB, HARV, LAJA, DSNY, SERC, TALL, OSBS, UNDE, CPER, DELA, ONAQ, JERC, SRER, BART, RMNP, BARR, TOOL, HEAL, KONA, TEAK, ABBY, SOAP, ORNL, LENO, WREF, MLBS, NIWO, GRSM, TREE, NOGP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,27 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "SJER",
-            "PUUM",
-            "WOOD",
-            "BLAN",
-            "GUAN",
-            "MOAB",
-            "HARV",
-            "LAJA",
-            "DSNY",
-            "SERC",
-            "TEAK",
-            "ABBY",
-            "SOAP",
-            "ORNL",
-            "LENO",
-            "WREF",
-            "MLBS",
-            "NIWO",
-            "GRSM",
-            "TREE",
-            "NOGP",
             "DCFS",
             "STEI",
             "KONZ",
@@ -272,6 +251,16 @@
             "CLBJ",
             "DEJU",
             "STER",
+            "SJER",
+            "PUUM",
+            "WOOD",
+            "BLAN",
+            "GUAN",
+            "MOAB",
+            "HARV",
+            "LAJA",
+            "DSNY",
+            "SERC",
             "TALL",
             "OSBS",
             "UNDE",
@@ -285,7 +274,18 @@
             "BARR",
             "TOOL",
             "HEAL",
-            "KONA"
+            "KONA",
+            "TEAK",
+            "ABBY",
+            "SOAP",
+            "ORNL",
+            "LENO",
+            "WREF",
+            "MLBS",
+            "NIWO",
+            "GRSM",
+            "TREE",
+            "NOGP"
         ],
         "table:columns": [
             {
