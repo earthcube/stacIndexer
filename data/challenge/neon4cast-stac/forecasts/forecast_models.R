@@ -305,7 +305,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
           summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max)))
 
         model_min_date <- model_date_range |> pull(datetime_min)
-        model_max_date <- model_date_rang |> pull(datetime_max)
+        model_max_date <- model_date_range |> pull(datetime_max)
 
         model_reference_date <- model_date_range |> pull(reference_datetime_max)
         model_pub_date <- model_date_range |> pull(pub_datetime_max)
