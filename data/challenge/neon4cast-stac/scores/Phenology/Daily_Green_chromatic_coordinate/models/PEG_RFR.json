@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -33,6 +29,10 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -83.5019,
+                35.689
             ],
             [
                 -72.1727,
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "PEG_RFR",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG_RFR model. Information for the model is provided as follows: The PEG_RFR model was also a multi-output regression model, which predicted 36 days of GCC (t to t+35 days) using immediate past GCC (last 5 days) and GCC value from the last year, meaning (t-5)th to (t+14)th days GCC from last year.\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG_RFR model. Information for the model is provided as follows: The PEG_RFR model was also a multi-output regression model, which predicted 36 days of GCC (t to t+35 days) using immediate past GCC (last 5 days) and GCC value from the last year, meaning (t-5)th to (t+14)th days GCC from last year.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, GRSM, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-07-20",
         "updated": null,
         "start_datetime": "2021-03-26T00:00:00Z",
@@ -83,11 +83,11 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "GRSM",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
+            "GRSM",
             "HARV",
             "BART",
             "DELA"
@@ -247,7 +247,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

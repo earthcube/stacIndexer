@@ -15,8 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
+                -110.8355,
+                31.9107
             ],
             [
                 -71.2874,
@@ -27,14 +27,14 @@
                 29.6893
             ],
             [
-                -110.8355,
-                31.9107
+                -96.5631,
+                39.1008
             ]
         ]
     },
     "properties": {
         "title": "hist30min",
-        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the hist30min model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, BART, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the hist30min model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SRER, BART, OSBS, KONZ.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2022-05-01",
         "updated": null,
         "start_datetime": "2021-01-01T00:00:00Z",
@@ -67,10 +67,10 @@
             "nee",
             "30min",
             "PT30M",
-            "KONZ",
+            "SRER",
             "BART",
             "OSBS",
-            "SRER"
+            "KONZ"
         ],
         "table:columns": [
             {
@@ -227,7 +227,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for 30min Net_ecosystem_exchange",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=hist30min?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=hist30min?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=hist30min\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=hist30min?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=hist30min\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

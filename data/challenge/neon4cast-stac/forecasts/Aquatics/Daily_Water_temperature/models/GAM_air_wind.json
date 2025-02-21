@@ -15,20 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -89.4737,
-                46.2097
+                -99.1139,
+                47.1591
             ],
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -99.1139,
-                47.1591
             ],
             [
                 -99.2531,
@@ -39,18 +31,26 @@
                 29.6878
             ],
             [
+                -82.0084,
+                29.676
+            ],
+            [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "GAM_air_wind",
-        "description": "All forecasts for the Daily_Water_temperature variable for the GAM_air_wind model. Information for the model is provided as follows: I used a GAM (mgcv) with a linear relationship to air temperature and smoothing for eastward and northward winds..\n                                    The model predicts this variable at the following sites: BARC, CRAM, LIRO, PRLA, PRPO, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-22",
-        "updated": "2024-08-23",
+        "description": "All forecasts for the Daily_Water_temperature variable for the GAM_air_wind model. Information for the model is provided as follows: I used a GAM (mgcv) with a linear relationship to air temperature and smoothing for eastward and northward winds..\n                                    The model predicts this variable at the following sites: PRLA, LIRO, PRPO, SUGG, BARC, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-02-16",
+        "updated": "2025-02-16 14:03:30",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2024-09-25T00:00:00Z",
+        "end_datetime": "2025-02-17T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "BARC",
-            "CRAM",
-            "LIRO",
             "PRLA",
+            "LIRO",
             "PRPO",
             "SUGG",
-            "TOOK"
+            "BARC",
+            "TOOK",
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -137,11 +137,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique identifier for the forecast project"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
@@ -207,7 +202,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GAM_air_wind?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GAM_air_wind?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GAM_air_wind\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GAM_air_wind?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GAM_air_wind\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
