@@ -15,46 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
                 -105.5824,
                 40.0543
             ],
@@ -147,6 +107,46 @@
                 47.1617
             ],
             [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -104.7456,
                 40.8155
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,16 +239,6 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "MOAB",
-            "SERC",
-            "LAJA",
-            "PUUM",
-            "DSNY",
-            "GUAN",
-            "BLAN",
-            "HARV",
-            "SJER",
-            "WOOD",
             "NIWO",
             "MLBS",
             "SOAP",
@@ -272,6 +262,16 @@
             "OAES",
             "STEI",
             "DCFS",
+            "MOAB",
+            "SERC",
+            "LAJA",
+            "PUUM",
+            "DSNY",
+            "GUAN",
+            "BLAN",
+            "HARV",
+            "SJER",
+            "WOOD",
             "CPER",
             "DELA",
             "JERC",

@@ -27,10 +27,6 @@
                 38.8943
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
@@ -49,6 +45,10 @@
             [
                 -105.5442,
                 40.035
+            ],
+            [
+                -89.4737,
+                46.2097
             ],
             [
                 -88.1589,
@@ -70,7 +70,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, POSE, CRAM, TOOK, BARC, SUGG, MCDI, COMO, TOMB, PRLA, LIRO, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, POSE, TOOK, BARC, SUGG, MCDI, COMO, CRAM, TOMB, PRLA, LIRO, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -106,12 +106,12 @@
             "BLWA",
             "FLNT",
             "POSE",
-            "CRAM",
             "TOOK",
             "BARC",
             "SUGG",
             "MCDI",
             "COMO",
+            "CRAM",
             "TOMB",
             "PRLA",
             "LIRO",
