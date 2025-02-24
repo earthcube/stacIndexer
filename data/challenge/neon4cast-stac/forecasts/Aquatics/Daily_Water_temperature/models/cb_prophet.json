@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -77.9832,
                 39.0956
             ],
@@ -117,44 +149,12 @@
             [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA, MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT, LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "MAYF",
+            "HOPB",
+            "POSE",
+            "KING",
+            "BLWA",
+            "CUPE",
+            "MCRA",
+            "FLNT",
             "LEWI",
             "MCDI",
             "BARC",
@@ -212,15 +220,7 @@
             "WLOU",
             "LIRO",
             "PRPO",
-            "PRLA",
-            "MAYF",
-            "HOPB",
-            "POSE",
-            "KING",
-            "BLWA",
-            "CUPE",
-            "MCRA",
-            "FLNT"
+            "PRLA"
         ],
         "table:columns": [
             {

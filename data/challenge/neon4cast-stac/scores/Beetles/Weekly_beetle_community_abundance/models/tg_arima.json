@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -145,6 +61,50 @@
             [
                 -103.0293,
                 40.4619
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -121.9519,
+                45.8205
             ],
             [
                 -110.8355,
@@ -201,12 +161,52 @@
             [
                 -156.6194,
                 71.2824
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -155.3173,
+                19.5531
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SJER, MOAB, LAJA, BLAN, DSNY, SERC, HARV, GUAN, WOOD, PUUM, LENO, GRSM, ORNL, MLBS, SOAP, ABBY, TREE, NOGP, NIWO, TEAK, WREF, OAES, JORN, UKFS, SCBI, KONZ, CLBJ, STEI, DCFS, DEJU, YELL, BONA, STER, SRER, CPER, OSBS, BART, DELA, RMNP, TALL, KONA, JERC, UNDE, HEAL, ONAQ, TOOL, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: OAES, JORN, UKFS, SCBI, KONZ, CLBJ, STEI, DCFS, DEJU, YELL, BONA, STER, LENO, GRSM, ORNL, MLBS, SOAP, ABBY, TREE, NOGP, NIWO, TEAK, WREF, SRER, CPER, OSBS, BART, DELA, RMNP, TALL, KONA, JERC, UNDE, HEAL, ONAQ, TOOL, BARR, SJER, MOAB, LAJA, BLAN, DSNY, SERC, HARV, GUAN, WOOD, PUUM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:00:22",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,27 +239,6 @@
             "abundance",
             "Weekly",
             "P1W",
-            "SJER",
-            "MOAB",
-            "LAJA",
-            "BLAN",
-            "DSNY",
-            "SERC",
-            "HARV",
-            "GUAN",
-            "WOOD",
-            "PUUM",
-            "LENO",
-            "GRSM",
-            "ORNL",
-            "MLBS",
-            "SOAP",
-            "ABBY",
-            "TREE",
-            "NOGP",
-            "NIWO",
-            "TEAK",
-            "WREF",
             "OAES",
             "JORN",
             "UKFS",
@@ -272,6 +251,17 @@
             "YELL",
             "BONA",
             "STER",
+            "LENO",
+            "GRSM",
+            "ORNL",
+            "MLBS",
+            "SOAP",
+            "ABBY",
+            "TREE",
+            "NOGP",
+            "NIWO",
+            "TEAK",
+            "WREF",
             "SRER",
             "CPER",
             "OSBS",
@@ -285,7 +275,17 @@
             "HEAL",
             "ONAQ",
             "TOOL",
-            "BARR"
+            "BARR",
+            "SJER",
+            "MOAB",
+            "LAJA",
+            "BLAN",
+            "DSNY",
+            "SERC",
+            "HARV",
+            "GUAN",
+            "WOOD",
+            "PUUM"
         ],
         "table:columns": [
             {

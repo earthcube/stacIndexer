@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
                 -100.9154,
                 46.7697
             ],
@@ -107,46 +147,6 @@
                 39.0404
             ],
             [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
                 -110.8355,
                 31.9107
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: NOGP, TEAK, GRSM, SOAP, LENO, ORNL, WREF, MLBS, ABBY, NIWO, TREE, JORN, DCFS, YELL, STER, CLBJ, DEJU, OAES, SCBI, STEI, BONA, KONZ, UKFS, HARV, SERC, DSNY, PUUM, WOOD, SJER, BLAN, LAJA, MOAB, GUAN, SRER, CPER, ONAQ, BARR, TOOL, HEAL, OSBS, RMNP, JERC, TALL, DELA, UNDE, BART, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: HARV, SERC, DSNY, PUUM, WOOD, SJER, BLAN, LAJA, MOAB, GUAN, NOGP, TEAK, GRSM, SOAP, LENO, ORNL, WREF, MLBS, ABBY, NIWO, TREE, JORN, DCFS, YELL, STER, CLBJ, DEJU, OAES, SCBI, STEI, BONA, KONZ, UKFS, SRER, CPER, ONAQ, BARR, TOOL, HEAL, OSBS, RMNP, JERC, TALL, DELA, UNDE, BART, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:27",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,16 @@
             "nee",
             "Daily",
             "P1D",
+            "HARV",
+            "SERC",
+            "DSNY",
+            "PUUM",
+            "WOOD",
+            "SJER",
+            "BLAN",
+            "LAJA",
+            "MOAB",
+            "GUAN",
             "NOGP",
             "TEAK",
             "GRSM",
@@ -262,16 +272,6 @@
             "BONA",
             "KONZ",
             "UKFS",
-            "HARV",
-            "SERC",
-            "DSNY",
-            "PUUM",
-            "WOOD",
-            "SJER",
-            "BLAN",
-            "LAJA",
-            "MOAB",
-            "GUAN",
             "SRER",
             "CPER",
             "ONAQ",

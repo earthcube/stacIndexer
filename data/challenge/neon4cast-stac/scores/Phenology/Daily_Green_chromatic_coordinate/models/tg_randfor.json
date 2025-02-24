@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
                 -89.5864,
                 45.5089
             ],
@@ -107,46 +147,6 @@
                 37.0334
             ],
             [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
                 -149.2133,
                 63.8758
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: STEI, YELL, DCFS, CLBJ, JORN, STER, UKFS, OAES, KONZ, SCBI, BONA, DEJU, GRSM, NOGP, MLBS, ABBY, LENO, TEAK, ORNL, WREF, TREE, NIWO, SOAP, BLAN, HARV, PUUM, DSNY, LAJA, MOAB, WOOD, SERC, SJER, GUAN, HEAL, JERC, RMNP, CPER, SRER, TOOL, UNDE, BARR, TALL, ONAQ, BART, DELA, KONA, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLAN, HARV, PUUM, DSNY, LAJA, MOAB, WOOD, SERC, SJER, GUAN, STEI, YELL, DCFS, CLBJ, JORN, STER, UKFS, OAES, KONZ, SCBI, BONA, DEJU, GRSM, NOGP, MLBS, ABBY, LENO, TEAK, ORNL, WREF, TREE, NIWO, SOAP, HEAL, JERC, RMNP, CPER, SRER, TOOL, UNDE, BARR, TALL, ONAQ, BART, DELA, KONA, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:14:00",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "BLAN",
+            "HARV",
+            "PUUM",
+            "DSNY",
+            "LAJA",
+            "MOAB",
+            "WOOD",
+            "SERC",
+            "SJER",
+            "GUAN",
             "STEI",
             "YELL",
             "DCFS",
@@ -262,16 +272,6 @@
             "TREE",
             "NIWO",
             "SOAP",
-            "BLAN",
-            "HARV",
-            "PUUM",
-            "DSNY",
-            "LAJA",
-            "MOAB",
-            "WOOD",
-            "SERC",
-            "SJER",
-            "GUAN",
             "HEAL",
             "JERC",
             "RMNP",
