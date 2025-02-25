@@ -91,6 +91,34 @@
                 68.6698
             ],
             [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
                 -88.1589,
                 31.8534
             ],
@@ -121,40 +149,12 @@
             [
                 -121.9338,
                 45.7908
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -119.2575,
-                37.0597
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, POSE, KING, MAYF, HOPB, MCRA, CUPE, GUIL, MCDI, SUGG, CARI, LEWI, ARIK, TOOK, COMO, BARC, PRIN, OKSR, TOMB, LIRO, PRLA, REDB, WLOU, TECR, PRPO, MART, LECO, WALK, SYCA, CRAM, BLDE, BLUE, BIGC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, POSE, KING, MAYF, HOPB, MCRA, CUPE, GUIL, MCDI, SUGG, CARI, LEWI, ARIK, TOOK, COMO, BARC, PRIN, OKSR, LECO, WALK, SYCA, CRAM, BLDE, BLUE, BIGC, TOMB, LIRO, PRLA, REDB, WLOU, TECR, PRPO, MART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:24:13",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -206,6 +206,13 @@
             "BARC",
             "PRIN",
             "OKSR",
+            "LECO",
+            "WALK",
+            "SYCA",
+            "CRAM",
+            "BLDE",
+            "BLUE",
+            "BIGC",
             "TOMB",
             "LIRO",
             "PRLA",
@@ -213,14 +220,7 @@
             "WLOU",
             "TECR",
             "PRPO",
-            "MART",
-            "LECO",
-            "WALK",
-            "SYCA",
-            "CRAM",
-            "BLDE",
-            "BLUE",
-            "BIGC"
+            "MART"
         ],
         "table:columns": [
             {

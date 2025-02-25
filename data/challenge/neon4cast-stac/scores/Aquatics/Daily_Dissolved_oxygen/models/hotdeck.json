@@ -15,20 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.2575,
-                37.0597
+                -97.7823,
+                33.3785
             ],
             [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
+                -77.9832,
+                39.0956
             ],
             [
                 -82.0177,
@@ -39,20 +31,8 @@
                 29.676
             ],
             [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
                 -96.6038,
                 39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
             ],
             [
                 -87.4077,
@@ -61,6 +41,26 @@
             [
                 -78.1473,
                 38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -119.2575,
+                37.0597
             ],
             [
                 -111.7979,
@@ -74,7 +74,7 @@
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: BIGC, BLDE, SYCA, CRAM, SUGG, BARC, LEWI, PRIN, KING, MCRA, MAYF, POSE, REDB, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: PRIN, LEWI, SUGG, BARC, KING, MAYF, POSE, MCRA, SYCA, CRAM, BLDE, BIGC, REDB, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-04-05T00:00:00Z",
@@ -107,18 +107,18 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BIGC",
-            "BLDE",
-            "SYCA",
-            "CRAM",
+            "PRIN",
+            "LEWI",
             "SUGG",
             "BARC",
-            "LEWI",
-            "PRIN",
             "KING",
-            "MCRA",
             "MAYF",
             "POSE",
+            "MCRA",
+            "SYCA",
+            "CRAM",
+            "BLDE",
+            "BIGC",
             "REDB",
             "LIRO"
         ],
