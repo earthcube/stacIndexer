@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
                 -149.143,
                 68.6698
             ],
@@ -117,44 +149,12 @@
             [
                 -111.7979,
                 40.7839
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -96.6038,
-                39.1051
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: OKSR, GUIL, SUGG, BARC, LEWI, ARIK, PRIN, MCDI, CARI, COMO, TOOK, BIGC, CRAM, WALK, BLUE, SYCA, BLDE, LECO, PRPO, WLOU, TOMB, TECR, MART, LIRO, PRLA, REDB, POSE, BLWA, FLNT, HOPB, MAYF, CUPE, MCRA, KING.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: POSE, BLWA, FLNT, HOPB, MAYF, CUPE, MCRA, KING, OKSR, GUIL, SUGG, BARC, LEWI, ARIK, PRIN, MCDI, CARI, COMO, TOOK, BIGC, CRAM, WALK, BLUE, SYCA, BLDE, LECO, PRPO, WLOU, TOMB, TECR, MART, LIRO, PRLA, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "POSE",
+            "BLWA",
+            "FLNT",
+            "HOPB",
+            "MAYF",
+            "CUPE",
+            "MCRA",
+            "KING",
             "OKSR",
             "GUIL",
             "SUGG",
@@ -212,15 +220,7 @@
             "MART",
             "LIRO",
             "PRLA",
-            "REDB",
-            "POSE",
-            "BLWA",
-            "FLNT",
-            "HOPB",
-            "MAYF",
-            "CUPE",
-            "MCRA",
-            "KING"
+            "REDB"
         ],
         "table:columns": [
             {

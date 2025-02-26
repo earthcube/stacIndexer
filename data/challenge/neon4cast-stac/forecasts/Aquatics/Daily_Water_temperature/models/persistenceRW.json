@@ -15,6 +15,66 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
                 -147.504,
                 65.1532
             ],
@@ -59,38 +119,6 @@
                 33.3785
             ],
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -121,40 +149,12 @@
             [
                 -99.2531,
                 47.1298
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
             ]
         ]
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All forecasts for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: CARI, ARIK, BARC, GUIL, LEWI, MCDI, COMO, OKSR, SUGG, TOOK, PRIN, FLNT, POSE, BLWA, CUPE, HOPB, MAYF, MCRA, KING, PRLA, MART, WLOU, TOMB, TECR, LIRO, REDB, PRPO, WALK, BIGC, CRAM, SYCA, LECO, BLDE, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: WALK, BIGC, CRAM, SYCA, LECO, BLDE, BLUE, FLNT, POSE, BLWA, CUPE, HOPB, MAYF, MCRA, KING, CARI, ARIK, BARC, GUIL, LEWI, MCDI, COMO, OKSR, SUGG, TOOK, PRIN, PRLA, MART, WLOU, TOMB, TECR, LIRO, REDB, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 22:03:59",
         "start_datetime": "2022-08-25T00:00:00Z",
@@ -187,6 +187,21 @@
             "temperature",
             "Daily",
             "P1D",
+            "WALK",
+            "BIGC",
+            "CRAM",
+            "SYCA",
+            "LECO",
+            "BLDE",
+            "BLUE",
+            "FLNT",
+            "POSE",
+            "BLWA",
+            "CUPE",
+            "HOPB",
+            "MAYF",
+            "MCRA",
+            "KING",
             "CARI",
             "ARIK",
             "BARC",
@@ -198,14 +213,6 @@
             "SUGG",
             "TOOK",
             "PRIN",
-            "FLNT",
-            "POSE",
-            "BLWA",
-            "CUPE",
-            "HOPB",
-            "MAYF",
-            "MCRA",
-            "KING",
             "PRLA",
             "MART",
             "WLOU",
@@ -213,14 +220,7 @@
             "TECR",
             "LIRO",
             "REDB",
-            "PRPO",
-            "WALK",
-            "BIGC",
-            "CRAM",
-            "SYCA",
-            "LECO",
-            "BLDE",
-            "BLUE"
+            "PRPO"
         ],
         "table:columns": [
             {

@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
                 -96.5631,
                 39.1008
             ],
@@ -39,18 +27,30 @@
                 39.0404
             ],
             [
+                -84.2826,
+                35.9641
+            ],
+            [
                 -81.9934,
                 29.6893
             ],
             [
                 -87.3933,
                 32.9505
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, ORNL, OSBS, TALL, BLAN, SERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -83,14 +83,14 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "ORNL",
-            "BLAN",
-            "SERC",
             "KONZ",
             "SCBI",
             "UKFS",
+            "ORNL",
             "OSBS",
-            "TALL"
+            "TALL",
+            "BLAN",
+            "SERC"
         ],
         "table:columns": [
             {

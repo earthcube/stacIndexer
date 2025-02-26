@@ -15,36 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.0588,
-                35.4106
-            ],
-            [
                 -96.5631,
                 39.1008
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
             ],
             [
                 -78.1395,
                 38.8929
             ],
             [
-                -89.5864,
-                45.5089
+                -99.0588,
+                35.4106
+            ],
+            [
+                -106.8425,
+                32.5907
             ],
             [
                 -99.1066,
                 47.1617
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
             ],
             [
                 -97.57,
@@ -55,28 +63,64 @@
                 63.8811
             ],
             [
-                -147.5026,
-                65.154
+                -119.7323,
+                37.1088
             ],
             [
-                -106.8425,
-                32.5907
+                -66.8687,
+                17.9696
             ],
             [
-                -80.5248,
-                37.3783
+                -99.2413,
+                47.1282
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -78.0418,
+                39.0337
             ],
             [
                 -119.006,
                 37.0058
             ],
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
                 -83.5019,
                 35.689
             ],
             [
-                -105.5824,
-                40.0543
+                -89.5857,
+                45.4937
             ],
             [
                 -119.2622,
@@ -87,104 +131,24 @@
                 31.8539
             ],
             [
-                -122.3303,
-                45.7624
+                -121.9519,
+                45.8205
             ],
             [
-                -89.5857,
-                45.4937
+                -105.5824,
+                40.0543
+            ],
+            [
+                -80.5248,
+                37.3783
             ],
             [
                 -100.9154,
                 46.7697
             ],
             [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
-                -110.8355,
-                31.9107
-            ],
-            [
-                -84.4686,
-                31.1948
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -149.3705,
-                68.6611
-            ],
-            [
                 -71.2874,
                 44.0639
-            ],
-            [
-                -105.546,
-                40.2759
             ],
             [
                 -104.7456,
@@ -195,18 +159,54 @@
                 63.8758
             ],
             [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
                 -112.4524,
                 40.1776
             ],
             [
+                -87.8039,
+                32.5417
+            ],
+            [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -84.4686,
+                31.1948
+            ],
+            [
+                -156.6194,
+                71.2824
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: OAES, KONZ, STER, UKFS, YELL, SCBI, STEI, DCFS, CLBJ, DEJU, BONA, JORN, MLBS, TEAK, GRSM, NIWO, SOAP, LENO, ABBY, TREE, NOGP, ORNL, WREF, DSNY, GUAN, LAJA, PUUM, SJER, BLAN, HARV, MOAB, SERC, WOOD, BARR, SRER, JERC, OSBS, DELA, TALL, UNDE, TOOL, BART, RMNP, CPER, HEAL, ONAQ, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, OAES, JORN, DCFS, STEI, STER, YELL, UKFS, BONA, CLBJ, DEJU, SJER, GUAN, WOOD, SERC, MOAB, LAJA, HARV, PUUM, DSNY, BLAN, TEAK, ABBY, ORNL, GRSM, TREE, SOAP, LENO, WREF, NIWO, MLBS, NOGP, BART, CPER, HEAL, SRER, TOOL, RMNP, TALL, ONAQ, DELA, KONA, UNDE, OSBS, JERC, BARR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 23:18:50",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,53 +239,53 @@
             "le",
             "Daily",
             "P1D",
-            "OAES",
             "KONZ",
-            "STER",
-            "UKFS",
-            "YELL",
             "SCBI",
-            "STEI",
+            "OAES",
+            "JORN",
             "DCFS",
+            "STEI",
+            "STER",
+            "YELL",
+            "UKFS",
+            "BONA",
             "CLBJ",
             "DEJU",
-            "BONA",
-            "JORN",
-            "MLBS",
+            "SJER",
+            "GUAN",
+            "WOOD",
+            "SERC",
+            "MOAB",
+            "LAJA",
+            "HARV",
+            "PUUM",
+            "DSNY",
+            "BLAN",
             "TEAK",
+            "ABBY",
+            "ORNL",
             "GRSM",
-            "NIWO",
+            "TREE",
             "SOAP",
             "LENO",
-            "ABBY",
-            "TREE",
-            "NOGP",
-            "ORNL",
             "WREF",
-            "DSNY",
-            "GUAN",
-            "LAJA",
-            "PUUM",
-            "SJER",
-            "BLAN",
-            "HARV",
-            "MOAB",
-            "SERC",
-            "WOOD",
-            "BARR",
-            "SRER",
-            "JERC",
-            "OSBS",
-            "DELA",
-            "TALL",
-            "UNDE",
-            "TOOL",
+            "NIWO",
+            "MLBS",
+            "NOGP",
             "BART",
-            "RMNP",
             "CPER",
             "HEAL",
+            "SRER",
+            "TOOL",
+            "RMNP",
+            "TALL",
             "ONAQ",
-            "KONA"
+            "DELA",
+            "KONA",
+            "UNDE",
+            "OSBS",
+            "JERC",
+            "BARR"
         ],
         "table:columns": [
             {
