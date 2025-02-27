@@ -59,52 +59,44 @@
                 37.0334
             ],
             [
-                -95.1921,
-                39.0404
+                -72.1727,
+                42.5369
             ],
             [
-                -106.8425,
-                32.5907
+                -66.8687,
+                17.9696
             ],
             [
-                -78.1395,
-                38.8929
+                -67.0769,
+                18.0213
             ],
             [
-                -99.1066,
-                47.1617
+                -76.56,
+                38.8901
             ],
             [
-                -89.5864,
-                45.5089
+                -81.4362,
+                28.1251
             ],
             [
-                -97.57,
-                33.4012
+                -109.3883,
+                38.2483
             ],
             [
-                -99.0588,
-                35.4106
+                -155.3173,
+                19.5531
             ],
             [
-                -110.5391,
-                44.9535
+                -119.7323,
+                37.1088
             ],
             [
-                -103.0293,
-                40.4619
+                -78.0418,
+                39.0337
             ],
             [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -147.5026,
-                65.154
+                -99.2413,
+                47.1282
             ],
             [
                 -71.2874,
@@ -163,50 +155,58 @@
                 31.9107
             ],
             [
-                -72.1727,
-                42.5369
+                -95.1921,
+                39.0404
             ],
             [
-                -66.8687,
-                17.9696
+                -106.8425,
+                32.5907
             ],
             [
-                -67.0769,
-                18.0213
+                -78.1395,
+                38.8929
             ],
             [
-                -76.56,
-                38.8901
+                -99.1066,
+                47.1617
             ],
             [
-                -81.4362,
-                28.1251
+                -89.5864,
+                45.5089
             ],
             [
-                -109.3883,
-                38.2483
+                -97.57,
+                33.4012
             ],
             [
-                -155.3173,
-                19.5531
+                -99.0588,
+                35.4106
             ],
             [
-                -119.7323,
-                37.1088
+                -110.5391,
+                44.9535
             ],
             [
-                -78.0418,
-                39.0337
+                -103.0293,
+                40.4619
             ],
             [
-                -99.2413,
-                47.1282
+                -145.7514,
+                63.8811
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -147.5026,
+                65.154
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: MLBS, ABBY, LENO, NOGP, TEAK, NIWO, GRSM, WREF, ORNL, TREE, SOAP, UKFS, JORN, SCBI, DCFS, STEI, CLBJ, OAES, YELL, STER, DEJU, KONZ, BONA, BART, CPER, DELA, UNDE, RMNP, KONA, BARR, TALL, OSBS, JERC, TOOL, HEAL, ONAQ, SRER, HARV, GUAN, LAJA, SERC, DSNY, MOAB, PUUM, SJER, BLAN, WOOD.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: MLBS, ABBY, LENO, NOGP, TEAK, NIWO, GRSM, WREF, ORNL, TREE, SOAP, HARV, GUAN, LAJA, SERC, DSNY, MOAB, PUUM, SJER, BLAN, WOOD, BART, CPER, DELA, UNDE, RMNP, KONA, BARR, TALL, OSBS, JERC, TOOL, HEAL, ONAQ, SRER, UKFS, JORN, SCBI, DCFS, STEI, CLBJ, OAES, YELL, STER, DEJU, KONZ, BONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:56:55",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -250,18 +250,16 @@
             "ORNL",
             "TREE",
             "SOAP",
-            "UKFS",
-            "JORN",
-            "SCBI",
-            "DCFS",
-            "STEI",
-            "CLBJ",
-            "OAES",
-            "YELL",
-            "STER",
-            "DEJU",
-            "KONZ",
-            "BONA",
+            "HARV",
+            "GUAN",
+            "LAJA",
+            "SERC",
+            "DSNY",
+            "MOAB",
+            "PUUM",
+            "SJER",
+            "BLAN",
+            "WOOD",
             "BART",
             "CPER",
             "DELA",
@@ -276,16 +274,18 @@
             "HEAL",
             "ONAQ",
             "SRER",
-            "HARV",
-            "GUAN",
-            "LAJA",
-            "SERC",
-            "DSNY",
-            "MOAB",
-            "PUUM",
-            "SJER",
-            "BLAN",
-            "WOOD"
+            "UKFS",
+            "JORN",
+            "SCBI",
+            "DCFS",
+            "STEI",
+            "CLBJ",
+            "OAES",
+            "YELL",
+            "STER",
+            "DEJU",
+            "KONZ",
+            "BONA"
         ],
         "table:columns": [
             {

@@ -15,52 +15,60 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.0418,
-                39.0337
+                -97.57,
+                33.4012
             ],
             [
-                -81.4362,
-                28.1251
+                -78.1395,
+                38.8929
             ],
             [
-                -66.8687,
-                17.9696
+                -89.5864,
+                45.5089
             ],
             [
-                -72.1727,
-                42.5369
+                -95.1921,
+                39.0404
             ],
             [
-                -67.0769,
-                18.0213
+                -147.5026,
+                65.154
             ],
             [
-                -109.3883,
-                38.2483
+                -99.1066,
+                47.1617
             ],
             [
-                -155.3173,
-                19.5531
+                -145.7514,
+                63.8811
             ],
             [
-                -76.56,
-                38.8901
+                -106.8425,
+                32.5907
             ],
             [
-                -119.7323,
-                37.1088
+                -96.5631,
+                39.1008
             ],
             [
-                -99.2413,
-                47.1282
+                -99.0588,
+                35.4106
             ],
             [
-                -122.3303,
-                45.7624
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
             ],
             [
                 -83.5019,
                 35.689
+            ],
+            [
+                -122.3303,
+                45.7624
             ],
             [
                 -88.1612,
@@ -99,68 +107,60 @@
                 45.8205
             ],
             [
-                -147.5026,
-                65.154
+                -72.1727,
+                42.5369
             ],
             [
-                -97.57,
-                33.4012
+                -78.0418,
+                39.0337
             ],
             [
-                -99.1066,
-                47.1617
+                -81.4362,
+                28.1251
             ],
             [
-                -145.7514,
-                63.8811
+                -66.8687,
+                17.9696
             ],
             [
-                -106.8425,
-                32.5907
+                -67.0769,
+                18.0213
             ],
             [
-                -96.5631,
-                39.1008
+                -109.3883,
+                38.2483
             ],
             [
-                -99.0588,
-                35.4106
+                -155.3173,
+                19.5531
             ],
             [
-                -78.1395,
-                38.8929
+                -76.56,
+                38.8901
             ],
             [
-                -89.5864,
-                45.5089
+                -119.7323,
+                37.1088
             ],
             [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -156.6194,
-                71.2824
+                -99.2413,
+                47.1282
             ],
             [
                 -71.2874,
                 44.0639
             ],
             [
-                -104.7456,
-                40.8155
-            ],
-            [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -104.7456,
+                40.8155
             ],
             [
                 -149.2133,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "PEG",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, BONA, DCFS, DEJU, JORN, KONZ, OAES, STER, YELL, GRSM, ABBY, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, HARV, BLAN, DSNY, GUAN, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BART, DELA, BARR, CPER, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-21",
         "updated": "2023-12-22 05:29:14",
         "start_datetime": "2021-02-24T00:00:00Z",
@@ -239,18 +239,20 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "ABBY",
+            "CLBJ",
+            "SCBI",
+            "STEI",
+            "UKFS",
+            "BONA",
+            "DCFS",
+            "DEJU",
+            "JORN",
+            "KONZ",
+            "OAES",
+            "STER",
+            "YELL",
             "GRSM",
+            "ABBY",
             "LENO",
             "MLBS",
             "NIWO",
@@ -260,22 +262,20 @@
             "TEAK",
             "TREE",
             "WREF",
-            "BONA",
-            "CLBJ",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "KONZ",
-            "OAES",
-            "SCBI",
-            "STEI",
-            "STER",
-            "UKFS",
-            "YELL",
-            "BARR",
+            "HARV",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
             "BART",
-            "CPER",
             "DELA",
+            "BARR",
+            "CPER",
             "HEAL",
             "JERC",
             "KONA",

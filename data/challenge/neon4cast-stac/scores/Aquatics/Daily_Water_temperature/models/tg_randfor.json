@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
                 -77.9832,
                 39.0956
             ],
@@ -87,38 +119,6 @@
                 44.9501
             ],
             [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: LEWI, PRIN, TOOK, CARI, MCDI, BARC, SUGG, ARIK, COMO, GUIL, OKSR, CRAM, LECO, WALK, BLUE, SYCA, BIGC, BLDE, MCRA, FLNT, KING, HOPB, MAYF, CUPE, POSE, BLWA, PRLA, MART, REDB, WLOU, TOMB, LIRO, TECR, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: MCRA, FLNT, KING, HOPB, MAYF, CUPE, POSE, BLWA, LEWI, PRIN, TOOK, CARI, MCDI, BARC, SUGG, ARIK, COMO, GUIL, OKSR, CRAM, LECO, WALK, BLUE, SYCA, BIGC, BLDE, PRLA, MART, REDB, WLOU, TOMB, LIRO, TECR, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:24:13",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "MCRA",
+            "FLNT",
+            "KING",
+            "HOPB",
+            "MAYF",
+            "CUPE",
+            "POSE",
+            "BLWA",
             "LEWI",
             "PRIN",
             "TOOK",
@@ -205,14 +213,6 @@
             "SYCA",
             "BIGC",
             "BLDE",
-            "MCRA",
-            "FLNT",
-            "KING",
-            "HOPB",
-            "MAYF",
-            "CUPE",
-            "POSE",
-            "BLWA",
             "PRLA",
             "MART",
             "REDB",
