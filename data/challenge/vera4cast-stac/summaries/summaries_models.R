@@ -363,7 +363,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                model_documentation = registered_model_id,
                                destination_path = paste0(catalog_config$summaries_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"),
                                aws_download_path = catalog_config$aws_download_path_summaries, # USE SCORES BUCKET FOR MODELS
-                               collection_name = 'forecasts',
+                               collection_name = 'summaries',
                                thumbnail_image_name = NULL,
                                table_schema = summaries_theme_df,
                                table_description = summaries_description_create,

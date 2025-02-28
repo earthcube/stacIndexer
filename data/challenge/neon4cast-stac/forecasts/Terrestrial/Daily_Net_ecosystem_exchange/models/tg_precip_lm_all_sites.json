@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
                 -89.5864,
                 45.5089
             ],
@@ -145,6 +61,50 @@
             [
                 -78.1395,
                 38.8929
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
             ],
             [
                 -81.9934,
@@ -201,12 +161,52 @@
             [
                 -149.3705,
                 68.6611
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -78.0418,
+                39.0337
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, WOOD, SERC, DSNY, HARV, SJER, PUUM, GUAN, BLAN, ABBY, WREF, NOGP, ORNL, LENO, SOAP, GRSM, NIWO, MLBS, TEAK, TREE, STEI, CLBJ, BONA, DEJU, JORN, UKFS, KONZ, STER, YELL, DCFS, OAES, SCBI, OSBS, KONA, JERC, UNDE, CPER, DELA, RMNP, BART, ONAQ, TALL, HEAL, BARR, SRER, TOOL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STEI, CLBJ, BONA, DEJU, JORN, UKFS, KONZ, STER, YELL, DCFS, OAES, SCBI, ABBY, WREF, NOGP, ORNL, LENO, SOAP, GRSM, NIWO, MLBS, TEAK, TREE, OSBS, KONA, JERC, UNDE, CPER, DELA, RMNP, BART, ONAQ, TALL, HEAL, BARR, SRER, TOOL, LAJA, MOAB, WOOD, SERC, DSNY, HARV, SJER, PUUM, GUAN, BLAN.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:09",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,27 +239,6 @@
             "nee",
             "Daily",
             "P1D",
-            "LAJA",
-            "MOAB",
-            "WOOD",
-            "SERC",
-            "DSNY",
-            "HARV",
-            "SJER",
-            "PUUM",
-            "GUAN",
-            "BLAN",
-            "ABBY",
-            "WREF",
-            "NOGP",
-            "ORNL",
-            "LENO",
-            "SOAP",
-            "GRSM",
-            "NIWO",
-            "MLBS",
-            "TEAK",
-            "TREE",
             "STEI",
             "CLBJ",
             "BONA",
@@ -272,6 +251,17 @@
             "DCFS",
             "OAES",
             "SCBI",
+            "ABBY",
+            "WREF",
+            "NOGP",
+            "ORNL",
+            "LENO",
+            "SOAP",
+            "GRSM",
+            "NIWO",
+            "MLBS",
+            "TEAK",
+            "TREE",
             "OSBS",
             "KONA",
             "JERC",
@@ -285,7 +275,17 @@
             "HEAL",
             "BARR",
             "SRER",
-            "TOOL"
+            "TOOL",
+            "LAJA",
+            "MOAB",
+            "WOOD",
+            "SERC",
+            "DSNY",
+            "HARV",
+            "SJER",
+            "PUUM",
+            "GUAN",
+            "BLAN"
         ],
         "table:columns": [
             {

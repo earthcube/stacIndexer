@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -35,10 +39,6 @@
                 39.0404
             ],
             [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "VT_Ph_GDD",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the VT_Ph_GDD model. Information for the model is provided as follows: The model was built using a logistic growth process model (Eq. S14) fit in a Bayesian framework to predict spring greenness, where = cumulative growing degree day (GDD) on the \ud835\udc65\ud835\udc61 day being predicted. GDD was calculated using Eq. (S15) on each day a forecast was made, where is the maximum air temperature and is the minimum air temperature on \ud835\udc5a\ud835\udc4e\ud835\udc65\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d \ud835\udc5a\ud835\udc56\ud835\udc5b\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d a given day, and \ud835\udc47 was a constant set at 10\u00b0C.\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the VT_Ph_GDD model. Information for the model is provided as follows: The model was built using a logistic growth process model (Eq. S14) fit in a Bayesian framework to predict spring greenness, where = cumulative growing degree day (GDD) on the \ud835\udc65\ud835\udc61 day being predicted. GDD was calculated using Eq. (S15) on each day a forecast was made, where is the maximum air temperature and is the minimum air temperature on \ud835\udc5a\ud835\udc4e\ud835\udc65\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d \ud835\udc5a\ud835\udc56\ud835\udc5b\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d a given day, and \ud835\udc47 was a constant set at 10\u00b0C.\n                                    The model predicts this variable at the following sites: HARV, GRSM, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-04-25",
         "updated": null,
         "start_datetime": "2021-04-15T00:00:00Z",
@@ -83,12 +83,12 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "HARV",
             "GRSM",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "HARV",
             "BART",
             "DELA"
         ],
