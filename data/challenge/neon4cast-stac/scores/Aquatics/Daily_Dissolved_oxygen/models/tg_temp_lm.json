@@ -15,6 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
                 -97.7823,
                 33.3785
             ],
@@ -59,66 +87,6 @@
                 68.6698
             ],
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
                 -105.9154,
                 39.8914
             ],
@@ -149,12 +117,44 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: PRIN, GUIL, SUGG, LEWI, BARC, TOOK, ARIK, CARI, MCDI, COMO, OKSR, KING, MAYF, HOPB, BLWA, FLNT, POSE, MCRA, CUPE, LECO, BLUE, SYCA, WALK, CRAM, BIGC, BLDE, WLOU, TOMB, MART, PRLA, REDB, TECR, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LECO, BLUE, SYCA, WALK, CRAM, BIGC, BLDE, PRIN, GUIL, SUGG, LEWI, BARC, TOOK, ARIK, CARI, MCDI, COMO, OKSR, WLOU, TOMB, MART, PRLA, REDB, TECR, LIRO, PRPO, KING, MAYF, HOPB, BLWA, FLNT, POSE, MCRA, CUPE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,6 +187,13 @@
             "oxygen",
             "Daily",
             "P1D",
+            "LECO",
+            "BLUE",
+            "SYCA",
+            "WALK",
+            "CRAM",
+            "BIGC",
+            "BLDE",
             "PRIN",
             "GUIL",
             "SUGG",
@@ -198,21 +205,6 @@
             "MCDI",
             "COMO",
             "OKSR",
-            "KING",
-            "MAYF",
-            "HOPB",
-            "BLWA",
-            "FLNT",
-            "POSE",
-            "MCRA",
-            "CUPE",
-            "LECO",
-            "BLUE",
-            "SYCA",
-            "WALK",
-            "CRAM",
-            "BIGC",
-            "BLDE",
             "WLOU",
             "TOMB",
             "MART",
@@ -220,7 +212,15 @@
             "REDB",
             "TECR",
             "LIRO",
-            "PRPO"
+            "PRPO",
+            "KING",
+            "MAYF",
+            "HOPB",
+            "BLWA",
+            "FLNT",
+            "POSE",
+            "MCRA",
+            "CUPE"
         ],
         "table:columns": [
             {

@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -25,14 +33,6 @@
             [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
             ],
             [
                 -88.1612,
@@ -54,7 +54,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, BLAN, SERC, LENO, ORNL, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: BLAN, SERC, KONZ, SCBI, UKFS, LENO, ORNL, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -87,11 +87,11 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
+            "BLAN",
+            "SERC",
             "KONZ",
             "SCBI",
             "UKFS",
-            "BLAN",
-            "SERC",
             "LENO",
             "ORNL",
             "OSBS",
