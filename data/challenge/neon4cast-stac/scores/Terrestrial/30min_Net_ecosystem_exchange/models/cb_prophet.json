@@ -15,52 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.5864,
-                45.5089
+                -155.3173,
+                19.5531
             ],
             [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -78.1395,
-                38.8929
+                -76.56,
+                38.8901
             ],
             [
                 -119.7323,
@@ -93,14 +53,6 @@
             [
                 -109.3883,
                 38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
             ],
             [
                 -119.2622,
@@ -145,6 +97,10 @@
             [
                 -84.2826,
                 35.9641
+            ],
+            [
+                -105.546,
+                40.2759
             ],
             [
                 -110.8355,
@@ -199,14 +155,58 @@
                 29.6893
             ],
             [
-                -105.546,
-                40.2759
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.0588,
+                35.4106
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-05-31",
         "updated": null,
         "start_datetime": "2022-06-08T00:00:00Z",
@@ -239,18 +239,8 @@
             "nee",
             "30min",
             "PT30M",
-            "STEI",
-            "STER",
-            "UKFS",
-            "YELL",
-            "BONA",
-            "CLBJ",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "KONZ",
-            "OAES",
-            "SCBI",
+            "PUUM",
+            "SERC",
             "SJER",
             "WOOD",
             "BLAN",
@@ -259,8 +249,6 @@
             "HARV",
             "LAJA",
             "MOAB",
-            "PUUM",
-            "SERC",
             "SOAP",
             "TEAK",
             "TREE",
@@ -272,6 +260,7 @@
             "NIWO",
             "NOGP",
             "ORNL",
+            "RMNP",
             "SRER",
             "TALL",
             "TOOL",
@@ -285,7 +274,18 @@
             "KONA",
             "ONAQ",
             "OSBS",
-            "RMNP"
+            "SCBI",
+            "STEI",
+            "STER",
+            "UKFS",
+            "YELL",
+            "BONA",
+            "CLBJ",
+            "DCFS",
+            "DEJU",
+            "JORN",
+            "KONZ",
+            "OAES"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for 30min Net_ecosystem_exchange",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=cb_prophet\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=PT30M/variable=nee/model_id=cb_prophet\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

@@ -15,18 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -149.2133,
                 63.8758
+            ],
+            [
+                -72.1727,
+                42.5369
             ]
         ]
     },
     "properties": {
         "title": "ChlorophyllCrusaders",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the ChlorophyllCrusaders model. Information for the model is provided as follows: Our project utilizes a historical GCC data to fit a Dynamic Linear Model (DLM). After this DLM is trained, we utilize forecasted temperature data to predict future GCC data..\n                                    The model predicts this variable at the following sites: HARV, HEAL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the ChlorophyllCrusaders model. Information for the model is provided as follows: Our project utilizes a historical GCC data to fit a Dynamic Linear Model (DLM). After this DLM is trained, we utilize forecasted temperature data to predict future GCC data..\n                                    The model predicts this variable at the following sites: HEAL, HARV.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-06-19",
         "updated": "2024-05-21 22:10:01",
         "start_datetime": "2024-04-26T00:00:00Z",
@@ -59,8 +59,8 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "HARV",
-            "HEAL"
+            "HEAL",
+            "HARV"
         ],
         "table:columns": [
             {
@@ -177,7 +177,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=ChlorophyllCrusaders?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=ChlorophyllCrusaders?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=ChlorophyllCrusaders\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=ChlorophyllCrusaders?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=ChlorophyllCrusaders\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -147.5026,
                 65.154
             ],
@@ -61,46 +101,6 @@
             [
                 -110.5391,
                 44.9535
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
             ],
             [
                 -122.3303,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-28",
         "updated": "2024-07-02 19:59:08",
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -239,6 +239,16 @@
             "abundance",
             "Weekly",
             "P1W",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
             "BONA",
             "CLBJ",
             "DCFS",
@@ -251,16 +261,6 @@
             "STER",
             "UKFS",
             "YELL",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
             "ABBY",
             "GRSM",
             "LENO",
@@ -402,7 +402,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Weekly beetle_community_abundance",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_randfor\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_randfor\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -78.0418,
                 39.0337
             ],
@@ -31,12 +23,12 @@
                 38.8901
             ],
             [
-                -81.9934,
-                29.6893
+                -88.1612,
+                31.8539
             ],
             [
-                -87.3933,
-                32.9505
+                -84.2826,
+                35.9641
             ],
             [
                 -96.5631,
@@ -49,12 +41,20 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -87.3933,
+                32.9505
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, OSBS, TALL, KONZ, SCBI, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: BLAN, SERC, LENO, ORNL, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -87,15 +87,15 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "LENO",
-            "ORNL",
             "BLAN",
             "SERC",
-            "OSBS",
-            "TALL",
+            "LENO",
+            "ORNL",
             "KONZ",
             "SCBI",
-            "UKFS"
+            "UKFS",
+            "OSBS",
+            "TALL"
         ],
         "table:columns": [
             {
@@ -212,7 +212,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Weekly Amblyomma_americanum_population",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

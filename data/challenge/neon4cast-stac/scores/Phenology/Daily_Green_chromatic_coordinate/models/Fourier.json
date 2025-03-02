@@ -35,22 +35,22 @@
                 42.5369
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -83.5019,
+                35.689
             ]
         ]
     },
     "properties": {
         "title": "Fourier",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the Fourier model. Information for the model is provided as follows: The Fourier model captured the time-dependence of the greening process using the Fourier regression method and a set of temporal basis functions.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the Fourier model. Information for the model is provided as follows: The Fourier model captured the time-dependence of the greening process using the Fourier regression method and a set of temporal basis functions.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA, GRSM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-04-26",
         "updated": null,
         "start_datetime": "2021-02-24T00:00:00Z",
@@ -88,9 +88,9 @@
             "STEI",
             "UKFS",
             "HARV",
-            "GRSM",
             "BART",
-            "DELA"
+            "DELA",
+            "GRSM"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=Fourier?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=Fourier?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=Fourier\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=Fourier?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=Fourier\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

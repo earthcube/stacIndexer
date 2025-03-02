@@ -43,6 +43,38 @@
                 44.9501
             ],
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -87,38 +119,6 @@
                 65.1532
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -111.7979,
                 40.7839
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE, BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:34:59",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -194,6 +194,14 @@
             "BIGC",
             "LECO",
             "BLDE",
+            "BLWA",
+            "CUPE",
+            "MAYF",
+            "POSE",
+            "MCRA",
+            "HOPB",
+            "KING",
+            "FLNT",
             "BARC",
             "OKSR",
             "GUIL",
@@ -205,14 +213,6 @@
             "TOOK",
             "COMO",
             "CARI",
-            "BLWA",
-            "CUPE",
-            "MAYF",
-            "POSE",
-            "MCRA",
-            "HOPB",
-            "KING",
-            "FLNT",
             "REDB",
             "LIRO",
             "TECR",
@@ -337,7 +337,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_precip_lm\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_precip_lm\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

@@ -63,90 +63,6 @@
                 47.1617
             ],
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -104.7456,
                 40.8155
             ],
@@ -201,12 +117,96 @@
             [
                 -112.4524,
                 40.1776
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ, NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -251,27 +251,6 @@
             "OAES",
             "STEI",
             "DCFS",
-            "MOAB",
-            "SERC",
-            "LAJA",
-            "PUUM",
-            "DSNY",
-            "GUAN",
-            "BLAN",
-            "HARV",
-            "SJER",
-            "WOOD",
-            "NIWO",
-            "MLBS",
-            "SOAP",
-            "WREF",
-            "ABBY",
-            "TREE",
-            "TEAK",
-            "GRSM",
-            "LENO",
-            "NOGP",
-            "ORNL",
             "CPER",
             "DELA",
             "JERC",
@@ -285,7 +264,28 @@
             "SRER",
             "BART",
             "KONA",
-            "ONAQ"
+            "ONAQ",
+            "NIWO",
+            "MLBS",
+            "SOAP",
+            "WREF",
+            "ABBY",
+            "TREE",
+            "TEAK",
+            "GRSM",
+            "LENO",
+            "NOGP",
+            "ORNL",
+            "MOAB",
+            "SERC",
+            "LAJA",
+            "PUUM",
+            "DSNY",
+            "GUAN",
+            "BLAN",
+            "HARV",
+            "SJER",
+            "WOOD"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Red_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_lasso\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_lasso\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

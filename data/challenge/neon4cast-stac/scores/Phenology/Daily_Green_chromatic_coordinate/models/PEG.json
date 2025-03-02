@@ -15,68 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -97.57,
-                33.4012
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
                 -72.1727,
                 42.5369
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
             ],
             [
                 -67.0769,
@@ -103,12 +43,20 @@
                 47.1282
             ],
             [
-                -83.5019,
-                35.689
+                -78.0418,
+                39.0337
             ],
             [
-                -122.3303,
-                45.7624
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -83.5019,
+                35.689
             ],
             [
                 -88.1612,
@@ -147,32 +95,64 @@
                 45.8205
             ],
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
-                -104.7456,
-                40.8155
-            ],
-            [
-                -149.2133,
-                63.8758
-            ],
-            [
-                -84.4686,
-                31.1948
-            ],
-            [
-                -96.6129,
-                39.1104
             ],
             [
                 -112.4524,
@@ -201,12 +181,32 @@
             [
                 -89.5373,
                 46.2339
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -149.2133,
+                63.8758
+            ],
+            [
+                -84.4686,
+                31.1948
+            ],
+            [
+                -96.6129,
+                39.1104
             ]
         ]
     },
     "properties": {
         "title": "PEG",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, BONA, DCFS, DEJU, JORN, KONZ, OAES, STER, YELL, HARV, BLAN, DSNY, GUAN, LAJA, MOAB, PUUM, SERC, SJER, WOOD, GRSM, ABBY, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BART, DELA, BARR, CPER, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, CLBJ, SCBI, STEI, UKFS, OAES, STER, YELL, BONA, DCFS, DEJU, JORN, KONZ, BART, DELA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, CPER, HEAL, JERC, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-21",
         "updated": "2023-12-22 05:29:14",
         "start_datetime": "2021-02-24T00:00:00Z",
@@ -239,30 +239,17 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "CLBJ",
-            "SCBI",
-            "STEI",
-            "UKFS",
-            "BONA",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "KONZ",
-            "OAES",
-            "STER",
-            "YELL",
             "HARV",
-            "BLAN",
-            "DSNY",
-            "GUAN",
             "LAJA",
             "MOAB",
             "PUUM",
             "SERC",
             "SJER",
             "WOOD",
+            "BLAN",
+            "DSNY",
+            "GUAN",
             "GRSM",
-            "ABBY",
             "LENO",
             "MLBS",
             "NIWO",
@@ -272,20 +259,33 @@
             "TEAK",
             "TREE",
             "WREF",
+            "ABBY",
+            "CLBJ",
+            "SCBI",
+            "STEI",
+            "UKFS",
+            "OAES",
+            "STER",
+            "YELL",
+            "BONA",
+            "DCFS",
+            "DEJU",
+            "JORN",
+            "KONZ",
             "BART",
             "DELA",
-            "BARR",
-            "CPER",
-            "HEAL",
-            "JERC",
-            "KONA",
             "ONAQ",
             "OSBS",
             "RMNP",
             "SRER",
             "TALL",
             "TOOL",
-            "UNDE"
+            "UNDE",
+            "BARR",
+            "CPER",
+            "HEAL",
+            "JERC",
+            "KONA"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

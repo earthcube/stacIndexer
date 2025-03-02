@@ -15,24 +15,48 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.1395,
-                38.8929
+                -122.3303,
+                45.7624
             ],
             [
-                -89.5864,
-                45.5089
+                -83.5019,
+                35.689
             ],
             [
-                -103.0293,
-                40.4619
+                -88.1612,
+                31.8539
             ],
             [
-                -95.1921,
-                39.0404
+                -80.5248,
+                37.3783
             ],
             [
-                -110.5391,
-                44.9535
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
             ],
             [
                 -147.5026,
@@ -63,64 +87,24 @@
                 35.4106
             ],
             [
-                -119.2622,
-                37.0334
+                -78.1395,
+                38.8929
             ],
             [
-                -119.006,
-                37.0058
+                -89.5864,
+                45.5089
             ],
             [
-                -89.5857,
-                45.4937
+                -103.0293,
+                40.4619
             ],
             [
-                -121.9519,
-                45.8205
+                -95.1921,
+                39.0404
             ],
             [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -105.546,
-                40.2759
-            ],
-            [
-                -110.8355,
-                31.9107
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -89.5373,
-                46.2339
+                -110.5391,
+                44.9535
             ],
             [
                 -71.2874,
@@ -155,20 +139,20 @@
                 29.6893
             ],
             [
-                -155.3173,
-                19.5531
+                -105.546,
+                40.2759
             ],
             [
-                -76.56,
-                38.8901
+                -110.8355,
+                31.9107
             ],
             [
-                -119.7323,
-                37.1088
+                -87.3933,
+                32.9505
             ],
             [
-                -99.2413,
-                47.1282
+                -89.5373,
+                46.2339
             ],
             [
                 -78.0418,
@@ -193,12 +177,28 @@
             [
                 -109.3883,
                 38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, RMNP, SRER, TALL, UNDE, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, UNDE, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-28",
         "updated": "2024-07-02 19:54:47",
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -231,22 +231,6 @@
             "abundance",
             "Weekly",
             "P1W",
-            "SCBI",
-            "STEI",
-            "STER",
-            "UKFS",
-            "YELL",
-            "BONA",
-            "CLBJ",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "KONZ",
-            "OAES",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
             "ABBY",
             "GRSM",
             "LENO",
@@ -254,10 +238,22 @@
             "NIWO",
             "NOGP",
             "ORNL",
-            "RMNP",
-            "SRER",
-            "TALL",
-            "UNDE",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF",
+            "BONA",
+            "CLBJ",
+            "DCFS",
+            "DEJU",
+            "JORN",
+            "KONZ",
+            "OAES",
+            "SCBI",
+            "STEI",
+            "STER",
+            "UKFS",
+            "YELL",
             "BART",
             "CPER",
             "DELA",
@@ -266,16 +262,20 @@
             "KONA",
             "ONAQ",
             "OSBS",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
+            "RMNP",
+            "SRER",
+            "TALL",
+            "UNDE",
             "BLAN",
             "DSNY",
             "GUAN",
             "HARV",
             "LAJA",
-            "MOAB"
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD"
         ],
         "table:columns": [
             {
@@ -432,7 +432,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Weekly beetle_community_abundance",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_lasso\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_lasso\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

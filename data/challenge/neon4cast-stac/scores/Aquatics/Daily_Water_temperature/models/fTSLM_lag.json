@@ -15,66 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
                 -147.504,
                 65.1532
             ],
@@ -119,6 +59,38 @@
                 39.0956
             ],
             [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -111.7979,
                 40.7839
             ],
@@ -149,12 +121,40 @@
             [
                 -89.7048,
                 45.9983
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
             ]
         ]
     },
     "properties": {
         "title": "fTSLM_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the fTSLM_lag model. Information for the model is provided as follows: This is a simple time series linear model in which water temperature is a function of air\ntemperature of that day and the previous day\u2019s air temperature.\n                                    The model predicts this variable at the following sites: HOPB, POSE, KING, MAYF, CUPE, BLWA, MCRA, FLNT, SYCA, BLUE, CRAM, LECO, WALK, BIGC, BLDE, CARI, GUIL, TOOK, ARIK, MCDI, PRIN, BARC, COMO, SUGG, OKSR, LEWI, REDB, WLOU, TECR, PRLA, MART, PRPO, TOMB, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the fTSLM_lag model. Information for the model is provided as follows: This is a simple time series linear model in which water temperature is a function of air\ntemperature of that day and the previous day\u2019s air temperature.\n                                    The model predicts this variable at the following sites: CARI, GUIL, TOOK, ARIK, MCDI, PRIN, BARC, COMO, SUGG, OKSR, LEWI, HOPB, POSE, KING, MAYF, CUPE, BLWA, MCRA, FLNT, REDB, WLOU, TECR, PRLA, MART, PRPO, TOMB, LIRO, SYCA, BLUE, CRAM, LECO, WALK, BIGC, BLDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-11",
         "updated": "2024-08-23 15:01:03",
         "start_datetime": "2022-10-21T00:00:00Z",
@@ -187,21 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "HOPB",
-            "POSE",
-            "KING",
-            "MAYF",
-            "CUPE",
-            "BLWA",
-            "MCRA",
-            "FLNT",
-            "SYCA",
-            "BLUE",
-            "CRAM",
-            "LECO",
-            "WALK",
-            "BIGC",
-            "BLDE",
             "CARI",
             "GUIL",
             "TOOK",
@@ -213,6 +198,14 @@
             "SUGG",
             "OKSR",
             "LEWI",
+            "HOPB",
+            "POSE",
+            "KING",
+            "MAYF",
+            "CUPE",
+            "BLWA",
+            "MCRA",
+            "FLNT",
             "REDB",
             "WLOU",
             "TECR",
@@ -220,7 +213,14 @@
             "MART",
             "PRPO",
             "TOMB",
-            "LIRO"
+            "LIRO",
+            "SYCA",
+            "BLUE",
+            "CRAM",
+            "LECO",
+            "WALK",
+            "BIGC",
+            "BLDE"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=fTSLM_lag?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=fTSLM_lag?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       ''');\n       \n\n\n       path = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=fTSLM_lag\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=fTSLM_lag?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=fTSLM_lag\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
