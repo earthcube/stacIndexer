@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -97.7823,
                 33.3785
             ],
@@ -87,38 +119,6 @@
                 34.4442
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -111.7979,
                 40.7839
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: PRIN, CARI, TOOK, BARC, SUGG, MCDI, COMO, ARIK, GUIL, LEWI, OKSR, CRAM, WALK, LECO, BIGC, SYCA, BLDE, BLUE, BLWA, HOPB, KING, CUPE, POSE, MAYF, MCRA, FLNT, REDB, PRLA, TOMB, WLOU, MART, LIRO, TECR, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLWA, HOPB, KING, CUPE, POSE, MAYF, MCRA, FLNT, PRIN, CARI, TOOK, BARC, SUGG, MCDI, COMO, ARIK, GUIL, LEWI, OKSR, CRAM, WALK, LECO, BIGC, SYCA, BLDE, BLUE, REDB, PRLA, TOMB, WLOU, MART, LIRO, TECR, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:24:13",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "BLWA",
+            "HOPB",
+            "KING",
+            "CUPE",
+            "POSE",
+            "MAYF",
+            "MCRA",
+            "FLNT",
             "PRIN",
             "CARI",
             "TOOK",
@@ -205,14 +213,6 @@
             "SYCA",
             "BLDE",
             "BLUE",
-            "BLWA",
-            "HOPB",
-            "KING",
-            "CUPE",
-            "POSE",
-            "MAYF",
-            "MCRA",
-            "FLNT",
             "REDB",
             "PRLA",
             "TOMB",

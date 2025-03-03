@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
@@ -87,38 +119,6 @@
                 34.4442
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
                 -121.9338,
                 45.7908
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: SUGG, CARI, LEWI, BARC, ARIK, OKSR, MCDI, GUIL, COMO, TOOK, PRIN, WALK, BIGC, BLDE, LECO, SYCA, CRAM, BLUE, BLWA, HOPB, MAYF, POSE, MCRA, FLNT, KING, CUPE, MART, WLOU, LIRO, REDB, TOMB, PRPO, PRLA, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLWA, HOPB, MAYF, POSE, MCRA, FLNT, KING, CUPE, SUGG, CARI, LEWI, BARC, ARIK, OKSR, MCDI, GUIL, COMO, TOOK, PRIN, WALK, BIGC, BLDE, LECO, SYCA, CRAM, BLUE, MART, WLOU, LIRO, REDB, TOMB, PRPO, PRLA, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "BLWA",
+            "HOPB",
+            "MAYF",
+            "POSE",
+            "MCRA",
+            "FLNT",
+            "KING",
+            "CUPE",
             "SUGG",
             "CARI",
             "LEWI",
@@ -205,14 +213,6 @@
             "SYCA",
             "CRAM",
             "BLUE",
-            "BLWA",
-            "HOPB",
-            "MAYF",
-            "POSE",
-            "MCRA",
-            "FLNT",
-            "KING",
-            "CUPE",
             "MART",
             "WLOU",
             "LIRO",

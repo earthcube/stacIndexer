@@ -15,12 +15,52 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -121.9519,
-                45.8205
+                -106.8425,
+                32.5907
             ],
             [
-                -122.3303,
-                45.7624
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
             ],
             [
                 -83.5019,
@@ -59,8 +99,12 @@
                 45.4937
             ],
             [
-                -78.0418,
-                39.0337
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
             ],
             [
                 -81.4362,
@@ -99,68 +143,8 @@
                 47.1282
             ],
             [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -104.7456,
-                40.8155
-            ],
-            [
-                -87.8039,
-                32.5417
+                -78.0418,
+                39.0337
             ],
             [
                 -149.2133,
@@ -201,12 +185,28 @@
             [
                 -89.5373,
                 46.2339
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -87.8039,
+                32.5417
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-30",
         "updated": "2023-12-31 05:43:28",
         "start_datetime": "2022-02-01T00:00:00Z",
@@ -239,8 +239,18 @@
             "nee",
             "30min",
             "PT30M",
-            "WREF",
-            "ABBY",
+            "JORN",
+            "KONZ",
+            "OAES",
+            "SCBI",
+            "STEI",
+            "STER",
+            "UKFS",
+            "YELL",
+            "BONA",
+            "CLBJ",
+            "DCFS",
+            "DEJU",
             "GRSM",
             "LENO",
             "MLBS",
@@ -250,7 +260,8 @@
             "SOAP",
             "TEAK",
             "TREE",
-            "BLAN",
+            "WREF",
+            "ABBY",
             "DSNY",
             "GUAN",
             "HARV",
@@ -260,22 +271,7 @@
             "SERC",
             "SJER",
             "WOOD",
-            "YELL",
-            "BONA",
-            "CLBJ",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "KONZ",
-            "OAES",
-            "SCBI",
-            "STEI",
-            "STER",
-            "UKFS",
-            "BARR",
-            "BART",
-            "CPER",
-            "DELA",
+            "BLAN",
             "HEAL",
             "JERC",
             "KONA",
@@ -285,7 +281,11 @@
             "SRER",
             "TALL",
             "TOOL",
-            "UNDE"
+            "UNDE",
+            "BARR",
+            "BART",
+            "CPER",
+            "DELA"
         ],
         "table:columns": [
             {
