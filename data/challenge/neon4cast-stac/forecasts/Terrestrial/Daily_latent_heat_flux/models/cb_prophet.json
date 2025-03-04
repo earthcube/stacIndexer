@@ -59,6 +59,50 @@
                 63.8811
             ],
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
                 -66.8687,
                 17.9696
             ],
@@ -153,56 +197,12 @@
             [
                 -87.3933,
                 32.9505
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -88.1612,
-                31.8539
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: DCFS, STER, CLBJ, BONA, JORN, STEI, UKFS, OAES, KONZ, SCBI, DEJU, GUAN, MOAB, SERC, LAJA, SJER, DSNY, WOOD, BLAN, HARV, PUUM, ONAQ, RMNP, UNDE, HEAL, CPER, OSBS, KONA, DELA, BART, SRER, BARR, JERC, TOOL, TALL, ABBY, TEAK, GRSM, SOAP, NOGP, ORNL, WREF, TREE, MLBS, NIWO, LENO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: DCFS, STER, CLBJ, BONA, JORN, STEI, UKFS, OAES, KONZ, SCBI, DEJU, ABBY, TEAK, GRSM, SOAP, NOGP, ORNL, WREF, TREE, MLBS, NIWO, LENO, GUAN, MOAB, SERC, LAJA, SJER, DSNY, WOOD, BLAN, HARV, PUUM, ONAQ, RMNP, UNDE, HEAL, CPER, OSBS, KONA, DELA, BART, SRER, BARR, JERC, TOOL, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:25:03",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -246,6 +246,17 @@
             "KONZ",
             "SCBI",
             "DEJU",
+            "ABBY",
+            "TEAK",
+            "GRSM",
+            "SOAP",
+            "NOGP",
+            "ORNL",
+            "WREF",
+            "TREE",
+            "MLBS",
+            "NIWO",
+            "LENO",
             "GUAN",
             "MOAB",
             "SERC",
@@ -269,18 +280,7 @@
             "BARR",
             "JERC",
             "TOOL",
-            "TALL",
-            "ABBY",
-            "TEAK",
-            "GRSM",
-            "SOAP",
-            "NOGP",
-            "ORNL",
-            "WREF",
-            "TREE",
-            "MLBS",
-            "NIWO",
-            "LENO"
+            "TALL"
         ],
         "table:columns": [
             {

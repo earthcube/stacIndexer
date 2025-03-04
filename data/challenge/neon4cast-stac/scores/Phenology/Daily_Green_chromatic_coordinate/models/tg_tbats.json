@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -59,44 +99,52 @@
                 46.7697
             ],
             [
-                -109.3883,
-                38.2483
+                -147.5026,
+                65.154
             ],
             [
-                -72.1727,
-                42.5369
+                -103.0293,
+                40.4619
             ],
             [
-                -67.0769,
-                18.0213
+                -96.5631,
+                39.1008
             ],
             [
-                -78.0418,
-                39.0337
+                -99.0588,
+                35.4106
             ],
             [
-                -81.4362,
-                28.1251
+                -95.1921,
+                39.0404
             ],
             [
-                -119.7323,
-                37.1088
+                -106.8425,
+                32.5907
             ],
             [
-                -76.56,
-                38.8901
+                -110.5391,
+                44.9535
             ],
             [
-                -155.3173,
-                19.5531
+                -97.57,
+                33.4012
             ],
             [
-                -99.2413,
-                47.1282
+                -78.1395,
+                38.8929
             ],
             [
-                -66.8687,
-                17.9696
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
             ],
             [
                 -110.8355,
@@ -153,60 +201,12 @@
             [
                 -89.5373,
                 46.2339
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: GRSM, NIWO, MLBS, SOAP, WREF, ORNL, LENO, TEAK, TREE, ABBY, NOGP, MOAB, HARV, LAJA, BLAN, DSNY, SJER, SERC, PUUM, WOOD, GUAN, SRER, BART, HEAL, JERC, CPER, OSBS, DELA, RMNP, KONA, TOOL, BARR, TALL, ONAQ, UNDE, BONA, STER, KONZ, OAES, UKFS, JORN, YELL, CLBJ, SCBI, STEI, DCFS, DEJU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: MOAB, HARV, LAJA, BLAN, DSNY, SJER, SERC, PUUM, WOOD, GUAN, GRSM, NIWO, MLBS, SOAP, WREF, ORNL, LENO, TEAK, TREE, ABBY, NOGP, BONA, STER, KONZ, OAES, UKFS, JORN, YELL, CLBJ, SCBI, STEI, DCFS, DEJU, SRER, BART, HEAL, JERC, CPER, OSBS, DELA, RMNP, KONA, TOOL, BARR, TALL, ONAQ, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:54:26",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "MOAB",
+            "HARV",
+            "LAJA",
+            "BLAN",
+            "DSNY",
+            "SJER",
+            "SERC",
+            "PUUM",
+            "WOOD",
+            "GUAN",
             "GRSM",
             "NIWO",
             "MLBS",
@@ -250,16 +260,18 @@
             "TREE",
             "ABBY",
             "NOGP",
-            "MOAB",
-            "HARV",
-            "LAJA",
-            "BLAN",
-            "DSNY",
-            "SJER",
-            "SERC",
-            "PUUM",
-            "WOOD",
-            "GUAN",
+            "BONA",
+            "STER",
+            "KONZ",
+            "OAES",
+            "UKFS",
+            "JORN",
+            "YELL",
+            "CLBJ",
+            "SCBI",
+            "STEI",
+            "DCFS",
+            "DEJU",
             "SRER",
             "BART",
             "HEAL",
@@ -273,19 +285,7 @@
             "BARR",
             "TALL",
             "ONAQ",
-            "UNDE",
-            "BONA",
-            "STER",
-            "KONZ",
-            "OAES",
-            "UKFS",
-            "JORN",
-            "YELL",
-            "CLBJ",
-            "SCBI",
-            "STEI",
-            "DCFS",
-            "DEJU"
+            "UNDE"
         ],
         "table:columns": [
             {

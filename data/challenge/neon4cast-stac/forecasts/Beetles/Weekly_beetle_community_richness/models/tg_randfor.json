@@ -147,10 +147,6 @@
                 44.9535
             ],
             [
-                -156.6194,
-                71.2824
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
@@ -195,18 +191,22 @@
                 32.9505
             ],
             [
-                -149.3705,
-                68.6611
-            ],
-            [
                 -89.5373,
                 46.2339
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -149.3705,
+                68.6611
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, UNDE, BARR, TOOL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-28",
         "updated": "2024-07-02 19:59:08",
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -272,7 +272,6 @@
             "STER",
             "UKFS",
             "YELL",
-            "BARR",
             "BART",
             "CPER",
             "DELA",
@@ -284,8 +283,9 @@
             "RMNP",
             "SRER",
             "TALL",
-            "TOOL",
-            "UNDE"
+            "UNDE",
+            "BARR",
+            "TOOL"
         ],
         "table:columns": [
             {

@@ -11,7 +11,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.auto.arima.json"
+            "href": "./models/asl.climate.window.json"
         },
         {
             "rel": "item",
@@ -31,7 +31,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.met.lm.step.json"
+            "href": "./models/asl.auto.arima.json"
         },
         {
             "rel": "item",
@@ -41,12 +41,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.climate.window.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/climatology.json"
+            "href": "./models/fableNNETAR.json"
         },
         {
             "rel": "item",
@@ -56,7 +51,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/fableNNETAR.json"
+            "href": "./models/climatology.json"
         },
         {
             "rel": "item",
@@ -71,11 +66,6 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/historic_mean.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/monthly_mean.json"
         },
         {
@@ -86,7 +76,17 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/asl.met.lm.step.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/glm_aed_flare_v3.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/historic_mean.json"
         },
         {
             "rel": "parent",
@@ -136,7 +136,7 @@
             "interval": [
                 [
                     "2023-10-14T00:00:00Z",
-                    "2025-03-01T00:00:00Z"
+                    "2025-03-02T00:00:00Z"
                 ]
             ]
         }
