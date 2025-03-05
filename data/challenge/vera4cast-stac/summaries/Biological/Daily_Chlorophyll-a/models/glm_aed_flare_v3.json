@@ -23,10 +23,10 @@
     "properties": {
         "title": "glm_aed_flare_v3",
         "description": "General Lake Model with Aquatic Ecosystem Dynamics (GLM-AED) library within FLAREr version 3.0.  GLM-AED is a 1-D hydrodynamic model and FLARE adds EnKF-based data assimilation.  Temperature, oxygen, fdom, chla, and secchi depth are assimilated.",
-        "datetime": "2025-03-02",
-        "updated": "2025-03-03 06:30:32",
+        "datetime": "2025-03-03",
+        "updated": "2025-03-04 06:29:42",
         "start_datetime": "2024-09-25T00:00:00Z",
-        "end_datetime": "2025-04-05T00:00:00Z",
+        "end_datetime": "2025-04-06T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -208,7 +208,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll-a",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=glm_aed_flare_v3?endpoint_override=renc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=glm_aed_flare_v3?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'renc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=glm_aed_flare_v3\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=glm_aed_flare_v3?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'renc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=glm_aed_flare_v3\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

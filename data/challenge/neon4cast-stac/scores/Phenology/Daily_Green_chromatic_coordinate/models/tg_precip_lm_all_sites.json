@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
                 -89.5864,
                 45.5089
             ],
@@ -61,90 +101,6 @@
             [
                 -96.5631,
                 39.1008
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -81.4362,
-                28.1251
             ],
             [
                 -96.6129,
@@ -201,12 +157,56 @@
             [
                 -149.2133,
                 63.8758
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -121.9519,
+                45.8205
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STEI, DEJU, OAES, YELL, STER, CLBJ, DCFS, SCBI, BONA, JORN, UKFS, KONZ, SOAP, MLBS, NOGP, NIWO, ORNL, TREE, GRSM, ABBY, TEAK, LENO, WREF, BLAN, WOOD, SERC, PUUM, LAJA, HARV, GUAN, SJER, MOAB, DSNY, KONA, TOOL, RMNP, SRER, ONAQ, DELA, JERC, CPER, UNDE, BARR, TALL, BART, OSBS, HEAL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: BLAN, WOOD, SERC, PUUM, LAJA, HARV, GUAN, SJER, MOAB, DSNY, STEI, DEJU, OAES, YELL, STER, CLBJ, DCFS, SCBI, BONA, JORN, UKFS, KONZ, KONA, TOOL, RMNP, SRER, ONAQ, DELA, JERC, CPER, UNDE, BARR, TALL, BART, OSBS, HEAL, SOAP, MLBS, NOGP, NIWO, ORNL, TREE, GRSM, ABBY, TEAK, LENO, WREF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:13:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "BLAN",
+            "WOOD",
+            "SERC",
+            "PUUM",
+            "LAJA",
+            "HARV",
+            "GUAN",
+            "SJER",
+            "MOAB",
+            "DSNY",
             "STEI",
             "DEJU",
             "OAES",
@@ -251,27 +261,6 @@
             "JORN",
             "UKFS",
             "KONZ",
-            "SOAP",
-            "MLBS",
-            "NOGP",
-            "NIWO",
-            "ORNL",
-            "TREE",
-            "GRSM",
-            "ABBY",
-            "TEAK",
-            "LENO",
-            "WREF",
-            "BLAN",
-            "WOOD",
-            "SERC",
-            "PUUM",
-            "LAJA",
-            "HARV",
-            "GUAN",
-            "SJER",
-            "MOAB",
-            "DSNY",
             "KONA",
             "TOOL",
             "RMNP",
@@ -285,7 +274,18 @@
             "TALL",
             "BART",
             "OSBS",
-            "HEAL"
+            "HEAL",
+            "SOAP",
+            "MLBS",
+            "NOGP",
+            "NIWO",
+            "ORNL",
+            "TREE",
+            "GRSM",
+            "ABBY",
+            "TEAK",
+            "LENO",
+            "WREF"
         ],
         "table:columns": [
             {

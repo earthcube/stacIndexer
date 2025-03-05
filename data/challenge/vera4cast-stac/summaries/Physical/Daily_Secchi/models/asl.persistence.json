@@ -27,10 +27,10 @@
     "properties": {
         "title": "asl.persistence",
         "description": "The random walk persistence model has massive uncertainty at long horizons, but you could instead re-fit the persistence model for every forecast horizon to get a more precise forecast (i.e., not dynamic). I did this for my work at SERC, and am submitting here in case it is helpful",
-        "datetime": "2025-03-02",
-        "updated": "2025-03-03 06:29:06",
+        "datetime": "2025-03-03",
+        "updated": "2025-03-04 06:28:02",
         "start_datetime": "2024-09-05T00:00:00Z",
-        "end_datetime": "2025-04-06T00:00:00Z",
+        "end_datetime": "2025-04-07T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -213,7 +213,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Secchi",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.persistence?endpoint_override=renc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.persistence?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'renc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.persistence\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.persistence?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'renc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=asl.persistence\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
