@@ -15,6 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
                 -149.143,
                 68.6698
             ],
@@ -59,32 +87,36 @@
                 39.0956
             ],
             [
-                -89.4737,
-                46.2097
+                -66.9868,
+                18.1135
             ],
             [
-                -111.5081,
-                33.751
+                -72.3295,
+                42.4719
             ],
             [
-                -119.2575,
-                37.0597
+                -122.1655,
+                44.2596
             ],
             [
-                -83.5038,
-                35.6904
+                -84.4374,
+                31.1854
             ],
             [
-                -96.6242,
-                34.4442
+                -87.7982,
+                32.5415
             ],
             [
-                -110.5871,
-                44.9501
+                -78.1473,
+                38.8943
             ],
             [
-                -84.2793,
-                35.9574
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
             ],
             [
                 -89.7048,
@@ -117,44 +149,12 @@
             [
                 -88.1589,
                 31.8534
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: OKSR, TOOK, CARI, BARC, GUIL, MCDI, SUGG, COMO, PRIN, ARIK, LEWI, CRAM, SYCA, BIGC, LECO, BLUE, BLDE, WALK, LIRO, PRLA, PRPO, REDB, WLOU, MART, TECR, TOMB, CUPE, HOPB, MCRA, FLNT, BLWA, POSE, KING, MAYF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: CRAM, SYCA, BIGC, LECO, BLUE, BLDE, WALK, OKSR, TOOK, CARI, BARC, GUIL, MCDI, SUGG, COMO, PRIN, ARIK, LEWI, CUPE, HOPB, MCRA, FLNT, BLWA, POSE, KING, MAYF, LIRO, PRLA, PRPO, REDB, WLOU, MART, TECR, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:34:07",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,6 +187,13 @@
             "oxygen",
             "Daily",
             "P1D",
+            "CRAM",
+            "SYCA",
+            "BIGC",
+            "LECO",
+            "BLUE",
+            "BLDE",
+            "WALK",
             "OKSR",
             "TOOK",
             "CARI",
@@ -198,21 +205,6 @@
             "PRIN",
             "ARIK",
             "LEWI",
-            "CRAM",
-            "SYCA",
-            "BIGC",
-            "LECO",
-            "BLUE",
-            "BLDE",
-            "WALK",
-            "LIRO",
-            "PRLA",
-            "PRPO",
-            "REDB",
-            "WLOU",
-            "MART",
-            "TECR",
-            "TOMB",
             "CUPE",
             "HOPB",
             "MCRA",
@@ -220,7 +212,15 @@
             "BLWA",
             "POSE",
             "KING",
-            "MAYF"
+            "MAYF",
+            "LIRO",
+            "PRLA",
+            "PRPO",
+            "REDB",
+            "WLOU",
+            "MART",
+            "TECR",
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_tbats\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_tbats\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

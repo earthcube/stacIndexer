@@ -31,12 +31,12 @@
                 39.0404
             ],
             [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -83.5019,
                 35.689
+            ],
+            [
+                -72.1727,
+                42.5369
             ],
             [
                 -71.2874,
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "CSP_Gwave",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the CSP_Gwave model. Information for the model is provided as follows: The CSP-Gwave (\u201cgreenwave\u201d) model represented seasonality using a double logistic\nfunction. Within a single year (growing season), the function consisted of two primary components: one curve for greenup, and another for \u201cbrown-down\u201d. It used a corrected sum of the curves for each year to obtain a single, continuously differentiable curve spanning the time period of interest.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the CSP_Gwave model. Information for the model is provided as follows: The CSP-Gwave (\u201cgreenwave\u201d) model represented seasonality using a double logistic\nfunction. Within a single year (growing season), the function consisted of two primary components: one curve for greenup, and another for \u201cbrown-down\u201d. It used a corrected sum of the curves for each year to obtain a single, continuously differentiable curve spanning the time period of interest.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, GRSM, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-05-21",
         "updated": null,
         "start_datetime": "2021-04-08T00:00:00Z",
@@ -87,8 +87,8 @@
             "SCBI",
             "STEI",
             "UKFS",
-            "HARV",
             "GRSM",
+            "HARV",
             "BART",
             "DELA"
         ],
@@ -247,7 +247,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=CSP_Gwave?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=CSP_Gwave?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=CSP_Gwave\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=CSP_Gwave?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=CSP_Gwave\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

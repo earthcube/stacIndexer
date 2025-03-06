@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -55,56 +63,60 @@
                 47.1617
             ],
             [
-                -145.7514,
-                63.8811
+                -81.4362,
+                28.1251
             ],
             [
-                -106.8425,
-                32.5907
+                -66.8687,
+                17.9696
             ],
             [
-                -88.1612,
-                31.8539
+                -72.1727,
+                42.5369
             ],
             [
-                -80.5248,
-                37.3783
+                -67.0769,
+                18.0213
             ],
             [
-                -105.5824,
-                40.0543
+                -109.3883,
+                38.2483
             ],
             [
-                -100.9154,
-                46.7697
+                -155.3173,
+                19.5531
             ],
             [
-                -84.2826,
-                35.9641
+                -76.56,
+                38.8901
             ],
             [
-                -119.2622,
-                37.0334
+                -119.7323,
+                37.1088
             ],
             [
-                -119.006,
-                37.0058
+                -99.2413,
+                47.1282
             ],
             [
-                -89.5857,
-                45.4937
+                -78.0418,
+                39.0337
             ],
             [
-                -121.9519,
-                45.8205
+                -87.8039,
+                32.5417
             ],
             [
-                -122.3303,
-                45.7624
+                -149.2133,
+                63.8758
             ],
             [
-                -83.5019,
-                35.689
+                -84.4686,
+                31.1948
+            ],
+            [
+                -96.6129,
+                39.1104
             ],
             [
                 -112.4524,
@@ -147,66 +159,54 @@
                 40.8155
             ],
             [
-                -87.8039,
-                32.5417
+                -83.5019,
+                35.689
             ],
             [
-                -149.2133,
-                63.8758
+                -88.1612,
+                31.8539
             ],
             [
-                -84.4686,
-                31.1948
+                -80.5248,
+                37.3783
             ],
             [
-                -96.6129,
-                39.1104
+                -105.5824,
+                40.0543
             ],
             [
-                -67.0769,
-                18.0213
+                -100.9154,
+                46.7697
             ],
             [
-                -109.3883,
-                38.2483
+                -84.2826,
+                35.9641
             ],
             [
-                -155.3173,
-                19.5531
+                -119.2622,
+                37.0334
             ],
             [
-                -76.56,
-                38.8901
+                -119.006,
+                37.0058
             ],
             [
-                -119.7323,
-                37.1088
+                -89.5857,
+                45.4937
             ],
             [
-                -99.2413,
-                47.1282
+                -121.9519,
+                45.8205
             ],
             [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
+                -122.3303,
+                45.7624
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-03-28T00:00:00Z",
@@ -239,6 +239,8 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "DEJU",
+            "JORN",
             "KONZ",
             "OAES",
             "SCBI",
@@ -249,19 +251,20 @@
             "BONA",
             "CLBJ",
             "DCFS",
-            "DEJU",
-            "JORN",
-            "LENO",
-            "MLBS",
-            "NIWO",
-            "NOGP",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
-            "ABBY",
-            "GRSM",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
+            "BLAN",
+            "DELA",
+            "HEAL",
+            "JERC",
+            "KONA",
             "ONAQ",
             "OSBS",
             "RMNP",
@@ -272,20 +275,17 @@
             "BARR",
             "BART",
             "CPER",
-            "DELA",
-            "HEAL",
-            "JERC",
-            "KONA",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV"
+            "GRSM",
+            "LENO",
+            "MLBS",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF",
+            "ABBY"
         ],
         "table:columns": [
             {

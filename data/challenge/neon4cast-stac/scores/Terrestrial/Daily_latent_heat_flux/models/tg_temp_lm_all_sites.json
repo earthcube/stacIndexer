@@ -63,46 +63,6 @@
                 32.5907
             ],
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
                 -100.9154,
                 46.7697
             ],
@@ -145,6 +105,46 @@
             [
                 -105.5824,
                 40.0543
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
             ],
             [
                 -110.8355,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm_all_sites",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: KONZ, OAES, SCBI, BONA, UKFS, STEI, DCFS, CLBJ, YELL, STER, DEJU, JORN, MOAB, SJER, GUAN, SERC, WOOD, DSNY, HARV, PUUM, LAJA, BLAN, NOGP, ORNL, TEAK, LENO, WREF, GRSM, SOAP, TREE, ABBY, MLBS, NIWO, SRER, TOOL, HEAL, OSBS, RMNP, CPER, KONA, TALL, UNDE, BART, DELA, ONAQ, JERC, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: KONZ, OAES, SCBI, BONA, UKFS, STEI, DCFS, CLBJ, YELL, STER, DEJU, JORN, NOGP, ORNL, TEAK, LENO, WREF, GRSM, SOAP, TREE, ABBY, MLBS, NIWO, MOAB, SJER, GUAN, SERC, WOOD, DSNY, HARV, PUUM, LAJA, BLAN, SRER, TOOL, HEAL, OSBS, RMNP, CPER, KONA, TALL, UNDE, BART, DELA, ONAQ, JERC, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 23:31:21",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -251,16 +251,6 @@
             "STER",
             "DEJU",
             "JORN",
-            "MOAB",
-            "SJER",
-            "GUAN",
-            "SERC",
-            "WOOD",
-            "DSNY",
-            "HARV",
-            "PUUM",
-            "LAJA",
-            "BLAN",
             "NOGP",
             "ORNL",
             "TEAK",
@@ -272,6 +262,16 @@
             "ABBY",
             "MLBS",
             "NIWO",
+            "MOAB",
+            "SJER",
+            "GUAN",
+            "SERC",
+            "WOOD",
+            "DSNY",
+            "HARV",
+            "PUUM",
+            "LAJA",
+            "BLAN",
             "SRER",
             "TOOL",
             "HEAL",
@@ -442,7 +442,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily latent_heat_flux",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_temp_lm_all_sites?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_temp_lm_all_sites?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_temp_lm_all_sites\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_temp_lm_all_sites?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_temp_lm_all_sites\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

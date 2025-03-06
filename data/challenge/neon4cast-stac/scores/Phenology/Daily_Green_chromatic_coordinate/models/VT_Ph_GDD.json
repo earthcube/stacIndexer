@@ -35,22 +35,22 @@
                 39.0404
             ],
             [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
-            ],
-            [
-                -72.1727,
-                42.5369
             ]
         ]
     },
     "properties": {
         "title": "VT_Ph_GDD",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the VT_Ph_GDD model. Information for the model is provided as follows: The model was built using a logistic growth process model (Eq. S14) fit in a Bayesian framework to predict spring greenness, where = cumulative growing degree day (GDD) on the \ud835\udc65\ud835\udc61 day being predicted. GDD was calculated using Eq. (S15) on each day a forecast was made, where is the maximum air temperature and is the minimum air temperature on \ud835\udc5a\ud835\udc4e\ud835\udc65\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d \ud835\udc5a\ud835\udc56\ud835\udc5b\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d a given day, and \ud835\udc47 was a constant set at 10\u00b0C.\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, BART, DELA, HARV.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the VT_Ph_GDD model. Information for the model is provided as follows: The model was built using a logistic growth process model (Eq. S14) fit in a Bayesian framework to predict spring greenness, where = cumulative growing degree day (GDD) on the \ud835\udc65\ud835\udc61 day being predicted. GDD was calculated using Eq. (S15) on each day a forecast was made, where is the maximum air temperature and is the minimum air temperature on \ud835\udc5a\ud835\udc4e\ud835\udc65\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d \ud835\udc5a\ud835\udc56\ud835\udc5b\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d a given day, and \ud835\udc47 was a constant set at 10\u00b0C.\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-04-25",
         "updated": null,
         "start_datetime": "2021-04-15T00:00:00Z",
@@ -88,9 +88,9 @@
             "SCBI",
             "STEI",
             "UKFS",
+            "HARV",
             "BART",
-            "DELA",
-            "HARV"
+            "DELA"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=VT_Ph_GDD?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=VT_Ph_GDD?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=VT_Ph_GDD\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=VT_Ph_GDD?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=VT_Ph_GDD\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
