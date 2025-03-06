@@ -23,6 +23,14 @@
                 38.8901
             ],
             [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -41,20 +49,12 @@
             [
                 -87.3933,
                 32.9505
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -84.2826,
-                35.9641
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm_all_sites",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL, LENO, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: BLAN, SERC, LENO, ORNL, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -89,13 +89,13 @@
             "P1W",
             "BLAN",
             "SERC",
+            "LENO",
+            "ORNL",
             "KONZ",
             "SCBI",
             "UKFS",
             "OSBS",
-            "TALL",
-            "LENO",
-            "ORNL"
+            "TALL"
         ],
         "table:columns": [
             {

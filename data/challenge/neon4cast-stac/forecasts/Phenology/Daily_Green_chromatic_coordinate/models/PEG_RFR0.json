@@ -15,22 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -83.5019,
-                35.689
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -45,12 +29,28 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -87.8039,
+                32.5417
             ]
         ]
     },
     "properties": {
         "title": "PEG_RFR0",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the PEG_RFR0 model. Information for the model is provided as follows: The PEG_RFR0 model was a multi-output regression model, which predicted 36 days of GCC (to next 35 days) using immediate past GCC (last 5 days) as well as GCC value from the last year (25 days)..\n                                    The model predicts this variable at the following sites: GRSM, HARV, DELA, BART, CLBJ, SCBI, STEI, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the PEG_RFR0 model. Information for the model is provided as follows: The PEG_RFR0 model was a multi-output regression model, which predicted 36 days of GCC (to next 35 days) using immediate past GCC (last 5 days) as well as GCC value from the last year (25 days)..\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, GRSM, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-07-20",
         "updated": null,
         "start_datetime": "2021-03-26T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "GRSM",
-            "HARV",
-            "DELA",
-            "BART",
             "CLBJ",
             "SCBI",
             "STEI",
-            "UKFS"
+            "UKFS",
+            "HARV",
+            "GRSM",
+            "BART",
+            "DELA"
         ],
         "table:columns": [
             {
@@ -207,7 +207,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR0?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR0?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR0\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR0?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=PEG_RFR0\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

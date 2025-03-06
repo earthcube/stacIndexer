@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
                 -66.7987,
                 18.1741
             ],
@@ -119,6 +87,38 @@
                 37.0597
             ],
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
                 -88.1589,
                 31.8534
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All forecasts for the Daily_Water_temperature variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BLWA, POSE, KING, MAYF, FLNT, HOPB, MCRA, CUPE, GUIL, MCDI, COMO, SUGG, LEWI, BARC, PRIN, ARIK, OKSR, CARI, TOOK, CRAM, LECO, SYCA, WALK, BLDE, BLUE, BIGC, TOMB, TECR, MART, REDB, WLOU, LIRO, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: GUIL, MCDI, COMO, SUGG, LEWI, BARC, PRIN, ARIK, OKSR, CARI, TOOK, CRAM, LECO, SYCA, WALK, BLDE, BLUE, BIGC, BLWA, POSE, KING, MAYF, FLNT, HOPB, MCRA, CUPE, TOMB, TECR, MART, REDB, WLOU, LIRO, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 22:03:23",
         "start_datetime": "2021-05-01T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "BLWA",
-            "POSE",
-            "KING",
-            "MAYF",
-            "FLNT",
-            "HOPB",
-            "MCRA",
-            "CUPE",
             "GUIL",
             "MCDI",
             "COMO",
@@ -213,6 +205,14 @@
             "BLDE",
             "BLUE",
             "BIGC",
+            "BLWA",
+            "POSE",
+            "KING",
+            "MAYF",
+            "FLNT",
+            "HOPB",
+            "MCRA",
+            "CUPE",
             "TOMB",
             "TECR",
             "MART",
@@ -337,7 +337,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=climatology\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=climatology\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

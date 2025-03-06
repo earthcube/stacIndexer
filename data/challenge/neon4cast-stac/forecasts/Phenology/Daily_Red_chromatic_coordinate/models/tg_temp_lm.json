@@ -63,46 +63,6 @@
                 63.8811
             ],
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
                 -119.006,
                 37.0058
             ],
@@ -145,6 +105,46 @@
             [
                 -83.5019,
                 35.689
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
             ],
             [
                 -96.6129,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: KONZ, UKFS, DCFS, JORN, SCBI, YELL, OAES, CLBJ, STER, STEI, BONA, DEJU, MOAB, GUAN, PUUM, WOOD, DSNY, SERC, SJER, HARV, LAJA, BLAN, TEAK, TREE, ORNL, SOAP, LENO, NIWO, MLBS, NOGP, ABBY, WREF, GRSM, KONA, UNDE, JERC, RMNP, HEAL, OSBS, ONAQ, SRER, TALL, BARR, BART, TOOL, DELA, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: KONZ, UKFS, DCFS, JORN, SCBI, YELL, OAES, CLBJ, STER, STEI, BONA, DEJU, TEAK, TREE, ORNL, SOAP, LENO, NIWO, MLBS, NOGP, ABBY, WREF, GRSM, MOAB, GUAN, PUUM, WOOD, DSNY, SERC, SJER, HARV, LAJA, BLAN, KONA, UNDE, JERC, RMNP, HEAL, OSBS, ONAQ, SRER, TALL, BARR, BART, TOOL, DELA, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:59:23",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -251,16 +251,6 @@
             "STEI",
             "BONA",
             "DEJU",
-            "MOAB",
-            "GUAN",
-            "PUUM",
-            "WOOD",
-            "DSNY",
-            "SERC",
-            "SJER",
-            "HARV",
-            "LAJA",
-            "BLAN",
             "TEAK",
             "TREE",
             "ORNL",
@@ -272,6 +262,16 @@
             "ABBY",
             "WREF",
             "GRSM",
+            "MOAB",
+            "GUAN",
+            "PUUM",
+            "WOOD",
+            "DSNY",
+            "SERC",
+            "SJER",
+            "HARV",
+            "LAJA",
+            "BLAN",
             "KONA",
             "UNDE",
             "JERC",
@@ -402,7 +402,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Red_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

@@ -15,6 +15,90 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -61,50 +145,6 @@
             [
                 -145.7514,
                 63.8811
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -100.9154,
-                46.7697
             ],
             [
                 -149.2133,
@@ -161,52 +201,12 @@
             [
                 -96.6129,
                 39.1104
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: KONZ, UKFS, CLBJ, OAES, DCFS, JORN, YELL, BONA, STEI, STER, SCBI, DEJU, NIWO, SOAP, TEAK, TREE, GRSM, ORNL, LENO, MLBS, ABBY, WREF, NOGP, HEAL, OSBS, UNDE, DELA, ONAQ, TOOL, RMNP, BART, BARR, JERC, CPER, TALL, SRER, KONA, GUAN, WOOD, BLAN, DSNY, SJER, SERC, PUUM, MOAB, HARV, LAJA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: NIWO, SOAP, TEAK, TREE, GRSM, ORNL, LENO, MLBS, ABBY, WREF, NOGP, GUAN, WOOD, BLAN, DSNY, SJER, SERC, PUUM, MOAB, HARV, LAJA, KONZ, UKFS, CLBJ, OAES, DCFS, JORN, YELL, BONA, STEI, STER, SCBI, DEJU, HEAL, OSBS, UNDE, DELA, ONAQ, TOOL, RMNP, BART, BARR, JERC, CPER, TALL, SRER, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:02",
         "start_datetime": "2023-01-07T00:00:00Z",
@@ -239,6 +239,27 @@
             "le",
             "Daily",
             "P1D",
+            "NIWO",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "GRSM",
+            "ORNL",
+            "LENO",
+            "MLBS",
+            "ABBY",
+            "WREF",
+            "NOGP",
+            "GUAN",
+            "WOOD",
+            "BLAN",
+            "DSNY",
+            "SJER",
+            "SERC",
+            "PUUM",
+            "MOAB",
+            "HARV",
+            "LAJA",
             "KONZ",
             "UKFS",
             "CLBJ",
@@ -251,17 +272,6 @@
             "STER",
             "SCBI",
             "DEJU",
-            "NIWO",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "GRSM",
-            "ORNL",
-            "LENO",
-            "MLBS",
-            "ABBY",
-            "WREF",
-            "NOGP",
             "HEAL",
             "OSBS",
             "UNDE",
@@ -275,17 +285,7 @@
             "CPER",
             "TALL",
             "SRER",
-            "KONA",
-            "GUAN",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "SJER",
-            "SERC",
-            "PUUM",
-            "MOAB",
-            "HARV",
-            "LAJA"
+            "KONA"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily latent_heat_flux",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_arima?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_arima?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_arima\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_arima?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_arima\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

@@ -15,52 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -97.57,
-                33.4012
+                -109.3883,
+                38.2483
             ],
             [
-                -110.5391,
-                44.9535
+                -78.0418,
+                39.0337
             ],
             [
-                -145.7514,
-                63.8811
+                -155.3173,
+                19.5531
             ],
             [
-                -96.5631,
-                39.1008
+                -119.7323,
+                37.1088
             ],
             [
-                -89.5864,
-                45.5089
+                -81.4362,
+                28.1251
             ],
             [
-                -147.5026,
-                65.154
+                -72.1727,
+                42.5369
             ],
             [
-                -106.8425,
-                32.5907
+                -67.0769,
+                18.0213
             ],
             [
-                -99.0588,
-                35.4106
+                -76.56,
+                38.8901
             ],
             [
-                -99.1066,
-                47.1617
+                -99.2413,
+                47.1282
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
+                -66.8687,
+                17.9696
             ],
             [
                 -88.1612,
@@ -107,44 +99,52 @@
                 35.9641
             ],
             [
-                -109.3883,
-                38.2483
+                -97.57,
+                33.4012
             ],
             [
-                -78.0418,
-                39.0337
+                -110.5391,
+                44.9535
             ],
             [
-                -155.3173,
-                19.5531
+                -145.7514,
+                63.8811
             ],
             [
-                -119.7323,
-                37.1088
+                -96.5631,
+                39.1008
             ],
             [
-                -81.4362,
-                28.1251
+                -89.5864,
+                45.5089
             ],
             [
-                -72.1727,
-                42.5369
+                -147.5026,
+                65.154
             ],
             [
-                -67.0769,
-                18.0213
+                -106.8425,
+                32.5907
             ],
             [
-                -76.56,
-                38.8901
+                -99.0588,
+                35.4106
             ],
             [
-                -99.2413,
-                47.1282
+                -99.1066,
+                47.1617
             ],
             [
-                -66.8687,
-                17.9696
+                -78.1395,
+                38.8929
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
             ],
             [
                 -110.8355,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: CLBJ, YELL, DEJU, KONZ, STEI, BONA, JORN, OAES, DCFS, SCBI, STER, UKFS, LENO, MLBS, TEAK, TREE, WREF, GRSM, SOAP, NIWO, ABBY, NOGP, ORNL, MOAB, BLAN, PUUM, SJER, DSNY, HARV, LAJA, SERC, WOOD, GUAN, SRER, DELA, BART, BARR, KONA, ONAQ, TOOL, OSBS, HEAL, JERC, CPER, TALL, UNDE, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MOAB, BLAN, PUUM, SJER, DSNY, HARV, LAJA, SERC, WOOD, GUAN, LENO, MLBS, TEAK, TREE, WREF, GRSM, SOAP, NIWO, ABBY, NOGP, ORNL, CLBJ, YELL, DEJU, KONZ, STEI, BONA, JORN, OAES, DCFS, SCBI, STER, UKFS, SRER, DELA, BART, BARR, KONA, ONAQ, TOOL, OSBS, HEAL, JERC, CPER, TALL, UNDE, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:02",
         "start_datetime": "2023-01-07T00:00:00Z",
@@ -239,6 +239,27 @@
             "le",
             "Daily",
             "P1D",
+            "MOAB",
+            "BLAN",
+            "PUUM",
+            "SJER",
+            "DSNY",
+            "HARV",
+            "LAJA",
+            "SERC",
+            "WOOD",
+            "GUAN",
+            "LENO",
+            "MLBS",
+            "TEAK",
+            "TREE",
+            "WREF",
+            "GRSM",
+            "SOAP",
+            "NIWO",
+            "ABBY",
+            "NOGP",
+            "ORNL",
             "CLBJ",
             "YELL",
             "DEJU",
@@ -251,27 +272,6 @@
             "SCBI",
             "STER",
             "UKFS",
-            "LENO",
-            "MLBS",
-            "TEAK",
-            "TREE",
-            "WREF",
-            "GRSM",
-            "SOAP",
-            "NIWO",
-            "ABBY",
-            "NOGP",
-            "ORNL",
-            "MOAB",
-            "BLAN",
-            "PUUM",
-            "SJER",
-            "DSNY",
-            "HARV",
-            "LAJA",
-            "SERC",
-            "WOOD",
-            "GUAN",
             "SRER",
             "DELA",
             "BART",

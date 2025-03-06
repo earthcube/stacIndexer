@@ -15,40 +15,64 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -111.5081,
                 33.751
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -83.5038,
-                35.6904
             ],
             [
                 -119.2575,
                 37.0597
             ],
             [
-                -97.7823,
-                33.3785
+                -110.5871,
+                44.9501
             ],
             [
-                -77.9832,
-                39.0956
+                -83.5038,
+                35.6904
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.4077,
+                32.9604
             ],
             [
                 -82.0177,
@@ -59,12 +83,12 @@
                 39.7582
             ],
             [
-                -147.504,
-                65.1532
+                -97.7823,
+                33.3785
             ],
             [
-                -105.5442,
-                40.035
+                -147.504,
+                65.1532
             ],
             [
                 -66.7987,
@@ -75,48 +99,12 @@
                 29.676
             ],
             [
-                -84.4374,
-                31.1854
+                -105.5442,
+                40.035
             ],
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -105.9154,
-                39.8914
+                -77.9832,
+                39.0956
             ],
             [
                 -111.7979,
@@ -131,14 +119,26 @@
                 31.8534
             ],
             [
+                -105.9154,
+                39.8914
+            ],
+            [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: WALK, BLDE, CRAM, SYCA, BLUE, LECO, BIGC, PRIN, LEWI, SUGG, ARIK, CARI, COMO, GUIL, BARC, FLNT, KING, MCRA, MAYF, HOPB, POSE, BLWA, CUPE, LIRO, PRPO, WLOU, REDB, TECR, TOMB, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: SYCA, BIGC, BLDE, LECO, CRAM, WALK, BLUE, KING, POSE, MCRA, CUPE, BLWA, HOPB, FLNT, MAYF, SUGG, ARIK, PRIN, CARI, GUIL, BARC, COMO, LEWI, REDB, TECR, TOMB, WLOU, PRLA, LIRO, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -171,36 +171,36 @@
             "temperature",
             "Daily",
             "P1D",
-            "WALK",
-            "BLDE",
-            "CRAM",
             "SYCA",
-            "BLUE",
-            "LECO",
             "BIGC",
-            "PRIN",
-            "LEWI",
+            "BLDE",
+            "LECO",
+            "CRAM",
+            "WALK",
+            "BLUE",
+            "KING",
+            "POSE",
+            "MCRA",
+            "CUPE",
+            "BLWA",
+            "HOPB",
+            "FLNT",
+            "MAYF",
             "SUGG",
             "ARIK",
+            "PRIN",
             "CARI",
-            "COMO",
             "GUIL",
             "BARC",
-            "FLNT",
-            "KING",
-            "MCRA",
-            "MAYF",
-            "HOPB",
-            "POSE",
-            "BLWA",
-            "CUPE",
-            "LIRO",
-            "PRPO",
-            "WLOU",
+            "COMO",
+            "LEWI",
             "REDB",
             "TECR",
             "TOMB",
-            "PRLA"
+            "WLOU",
+            "PRLA",
+            "LIRO",
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -317,7 +317,7 @@
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=hotdeck?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=hotdeck?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\n\n       con = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=hotdeck\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=hotdeck?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=hotdeck\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

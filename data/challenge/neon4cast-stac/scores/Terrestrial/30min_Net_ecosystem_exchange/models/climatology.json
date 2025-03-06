@@ -15,24 +15,56 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
                 -121.9519,
                 45.8205
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
             ],
             [
                 -122.3303,
@@ -59,64 +91,20 @@
                 46.7697
             ],
             [
-                -97.57,
-                33.4012
+                -84.2826,
+                35.9641
             ],
             [
-                -96.5631,
-                39.1008
+                -119.2622,
+                37.0334
             ],
             [
-                -78.1395,
-                38.8929
+                -119.006,
+                37.0058
             ],
             [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
+                -89.5857,
+                45.4937
             ],
             [
                 -78.0418,
@@ -147,32 +135,24 @@
                 19.5531
             ],
             [
-                -110.8355,
-                31.9107
+                -76.56,
+                38.8901
             ],
             [
-                -87.3933,
-                32.9505
+                -119.7323,
+                37.1088
             ],
             [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -149.3705,
-                68.6611
+                -99.2413,
+                47.1282
             ],
             [
                 -156.6194,
                 71.2824
+            ],
+            [
+                -71.2874,
+                44.0639
             ],
             [
                 -104.7456,
@@ -199,14 +179,34 @@
                 40.1776
             ],
             [
+                -81.9934,
+                29.6893
+            ],
+            [
                 -105.546,
                 40.2759
+            ],
+            [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -89.5373,
+                46.2339
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WREF, ORNL, SOAP, TEAK, TREE, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, CLBJ, KONZ, SCBI, STEI, STER, UKFS, YELL, BONA, DCFS, DEJU, JORN, OAES, SJER, SERC, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SRER, TALL, UNDE, BART, OSBS, TOOL, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-30",
         "updated": "2023-12-31 05:43:28",
         "start_datetime": "2022-02-01T00:00:00Z",
@@ -239,32 +239,29 @@
             "nee",
             "30min",
             "PT30M",
+            "YELL",
+            "BONA",
+            "CLBJ",
+            "DCFS",
+            "DEJU",
+            "JORN",
+            "KONZ",
+            "OAES",
+            "SCBI",
+            "STEI",
+            "STER",
+            "UKFS",
             "WREF",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
             "ABBY",
             "GRSM",
             "LENO",
             "MLBS",
             "NIWO",
             "NOGP",
-            "CLBJ",
-            "KONZ",
-            "SCBI",
-            "STEI",
-            "STER",
-            "UKFS",
-            "YELL",
-            "BONA",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "OAES",
-            "SJER",
-            "SERC",
-            "WOOD",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
             "BLAN",
             "DSNY",
             "GUAN",
@@ -272,20 +269,23 @@
             "LAJA",
             "MOAB",
             "PUUM",
-            "SRER",
-            "TALL",
-            "UNDE",
-            "BART",
-            "OSBS",
-            "TOOL",
+            "SERC",
+            "SJER",
+            "WOOD",
             "BARR",
+            "BART",
             "CPER",
             "DELA",
             "HEAL",
             "JERC",
             "KONA",
             "ONAQ",
-            "RMNP"
+            "OSBS",
+            "RMNP",
+            "SRER",
+            "TALL",
+            "TOOL",
+            "UNDE"
         ],
         "table:columns": [
             {
