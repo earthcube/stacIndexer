@@ -55,50 +55,6 @@
                 19.5531
             ],
             [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
                 -95.1921,
                 39.0404
             ],
@@ -201,12 +157,56 @@
             [
                 -71.2874,
                 44.0639
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -121.9519,
+                45.8205
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: HARV, SERC, WOOD, MOAB, DSNY, BLAN, GUAN, SJER, LAJA, PUUM, ABBY, ORNL, GRSM, NIWO, TEAK, TREE, LENO, NOGP, SOAP, MLBS, WREF, UKFS, DEJU, KONZ, STEI, JORN, STER, DCFS, OAES, CLBJ, YELL, SCBI, BONA, TOOL, TALL, UNDE, ONAQ, RMNP, OSBS, SRER, DELA, KONA, BARR, JERC, HEAL, CPER, BART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: HARV, SERC, WOOD, MOAB, DSNY, BLAN, GUAN, SJER, LAJA, PUUM, UKFS, DEJU, KONZ, STEI, JORN, STER, DCFS, OAES, CLBJ, YELL, SCBI, BONA, TOOL, TALL, UNDE, ONAQ, RMNP, OSBS, SRER, DELA, KONA, BARR, JERC, HEAL, CPER, BART, ABBY, ORNL, GRSM, NIWO, TEAK, TREE, LENO, NOGP, SOAP, MLBS, WREF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:00:22",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -249,17 +249,6 @@
             "SJER",
             "LAJA",
             "PUUM",
-            "ABBY",
-            "ORNL",
-            "GRSM",
-            "NIWO",
-            "TEAK",
-            "TREE",
-            "LENO",
-            "NOGP",
-            "SOAP",
-            "MLBS",
-            "WREF",
             "UKFS",
             "DEJU",
             "KONZ",
@@ -285,7 +274,18 @@
             "JERC",
             "HEAL",
             "CPER",
-            "BART"
+            "BART",
+            "ABBY",
+            "ORNL",
+            "GRSM",
+            "NIWO",
+            "TEAK",
+            "TREE",
+            "LENO",
+            "NOGP",
+            "SOAP",
+            "MLBS",
+            "WREF"
         ],
         "table:columns": [
             {

@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
                 -110.5391,
                 44.9535
             ],
@@ -145,6 +61,50 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -83.5019,
+                35.689
             ],
             [
                 -89.5373,
@@ -201,12 +161,52 @@
             [
                 -81.9934,
                 29.6893
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -119.7323,
+                37.1088
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SERC, LAJA, BLAN, PUUM, HARV, MOAB, GUAN, DSNY, WOOD, SJER, WREF, TREE, ABBY, TEAK, MLBS, SOAP, LENO, NIWO, NOGP, ORNL, GRSM, YELL, JORN, OAES, SCBI, STER, KONZ, BONA, STEI, DCFS, CLBJ, DEJU, UKFS, UNDE, RMNP, ONAQ, BARR, HEAL, SRER, TOOL, BART, KONA, CPER, DELA, JERC, TALL, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: YELL, JORN, OAES, SCBI, STER, KONZ, BONA, STEI, DCFS, CLBJ, DEJU, UKFS, WREF, TREE, ABBY, TEAK, MLBS, SOAP, LENO, NIWO, NOGP, ORNL, GRSM, UNDE, RMNP, ONAQ, BARR, HEAL, SRER, TOOL, BART, KONA, CPER, DELA, JERC, TALL, OSBS, SERC, LAJA, BLAN, PUUM, HARV, MOAB, GUAN, DSNY, WOOD, SJER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:53:57",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,27 +239,6 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "SERC",
-            "LAJA",
-            "BLAN",
-            "PUUM",
-            "HARV",
-            "MOAB",
-            "GUAN",
-            "DSNY",
-            "WOOD",
-            "SJER",
-            "WREF",
-            "TREE",
-            "ABBY",
-            "TEAK",
-            "MLBS",
-            "SOAP",
-            "LENO",
-            "NIWO",
-            "NOGP",
-            "ORNL",
-            "GRSM",
             "YELL",
             "JORN",
             "OAES",
@@ -272,6 +251,17 @@
             "CLBJ",
             "DEJU",
             "UKFS",
+            "WREF",
+            "TREE",
+            "ABBY",
+            "TEAK",
+            "MLBS",
+            "SOAP",
+            "LENO",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "GRSM",
             "UNDE",
             "RMNP",
             "ONAQ",
@@ -285,7 +275,17 @@
             "DELA",
             "JERC",
             "TALL",
-            "OSBS"
+            "OSBS",
+            "SERC",
+            "LAJA",
+            "BLAN",
+            "PUUM",
+            "HARV",
+            "MOAB",
+            "GUAN",
+            "DSNY",
+            "WOOD",
+            "SJER"
         ],
         "table:columns": [
             {

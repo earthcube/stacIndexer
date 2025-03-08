@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -149.143,
+                68.6698
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
                 -110.5871,
                 44.9501
             ],
@@ -75,50 +119,6 @@
                 38.8943
             ],
             [
-                -149.143,
-                68.6698
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
                 -105.9154,
                 39.8914
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLDE, LECO, SYCA, CRAM, WALK, BIGC, BLUE, HOPB, KING, CUPE, MCRA, BLWA, FLNT, MAYF, POSE, OKSR, LEWI, PRIN, COMO, ARIK, MCDI, GUIL, TOOK, BARC, SUGG, CARI, WLOU, LIRO, TOMB, REDB, PRPO, MART, PRLA, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: OKSR, LEWI, PRIN, COMO, ARIK, MCDI, GUIL, TOOK, BARC, SUGG, CARI, BLDE, LECO, SYCA, CRAM, WALK, BIGC, BLUE, HOPB, KING, CUPE, MCRA, BLWA, FLNT, MAYF, POSE, WLOU, LIRO, TOMB, REDB, PRPO, MART, PRLA, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -187,6 +187,17 @@
             "oxygen",
             "Daily",
             "P1D",
+            "OKSR",
+            "LEWI",
+            "PRIN",
+            "COMO",
+            "ARIK",
+            "MCDI",
+            "GUIL",
+            "TOOK",
+            "BARC",
+            "SUGG",
+            "CARI",
             "BLDE",
             "LECO",
             "SYCA",
@@ -202,17 +213,6 @@
             "FLNT",
             "MAYF",
             "POSE",
-            "OKSR",
-            "LEWI",
-            "PRIN",
-            "COMO",
-            "ARIK",
-            "MCDI",
-            "GUIL",
-            "TOOK",
-            "BARC",
-            "SUGG",
-            "CARI",
             "WLOU",
             "LIRO",
             "TOMB",

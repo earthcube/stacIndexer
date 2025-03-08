@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -66.9868,
                 18.1135
             ],
@@ -39,12 +35,16 @@
                 32.9604
             ],
             [
+                -122.1655,
+                44.2596
+            ],
+            [
                 -78.1473,
                 38.8943
             ],
             [
-                -122.1655,
-                44.2596
+                -87.7982,
+                32.5415
             ],
             [
                 -111.5081,
@@ -67,24 +67,28 @@
                 34.4442
             ],
             [
-                -83.5038,
-                35.6904
-            ],
-            [
                 -89.4737,
                 46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
-                -102.4471,
-                39.7582
+                -149.6106,
+                68.6307
             ],
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -147.504,
+                65.1532
             ],
             [
                 -105.5442,
@@ -103,20 +107,24 @@
                 38.9459
             ],
             [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
                 -149.143,
                 68.6698
             ],
             [
-                -149.6106,
-                68.6307
+                -97.7823,
+                33.3785
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
             ],
             [
                 -119.0274,
@@ -131,20 +139,12 @@
                 39.8914
             ],
             [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
+                -121.9338,
+                45.7908
             ],
             [
                 -99.1139,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, OKSR, TOOK, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, BLWA, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, SUGG, TOOK, BARC, CARI, COMO, GUIL, LEWI, MCDI, OKSR, PRIN, ARIK, PRPO, REDB, TECR, TOMB, WLOU, LIRO, MART, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,39 +187,39 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BLWA",
             "CUPE",
             "FLNT",
             "HOPB",
             "KING",
             "MAYF",
-            "POSE",
             "MCRA",
+            "POSE",
+            "BLWA",
             "SYCA",
             "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
-            "LECO",
             "CRAM",
+            "LECO",
             "SUGG",
-            "ARIK",
+            "TOOK",
             "BARC",
+            "CARI",
             "COMO",
             "GUIL",
             "LEWI",
             "MCDI",
-            "PRIN",
-            "CARI",
             "OKSR",
-            "TOOK",
+            "PRIN",
+            "ARIK",
+            "PRPO",
+            "REDB",
             "TECR",
             "TOMB",
             "WLOU",
-            "MART",
-            "REDB",
             "LIRO",
-            "PRPO",
+            "MART",
             "PRLA"
         ],
         "table:columns": [
