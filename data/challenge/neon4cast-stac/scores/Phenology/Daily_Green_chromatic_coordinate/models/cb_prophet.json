@@ -15,46 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
                 -83.5019,
                 35.689
             ],
@@ -99,52 +59,44 @@
                 45.4937
             ],
             [
-                -99.0588,
-                35.4106
+                -99.2413,
+                47.1282
             ],
             [
-                -78.1395,
-                38.8929
+                -81.4362,
+                28.1251
             ],
             [
-                -95.1921,
-                39.0404
+                -72.1727,
+                42.5369
             ],
             [
-                -97.57,
-                33.4012
+                -76.56,
+                38.8901
             ],
             [
-                -106.8425,
-                32.5907
+                -67.0769,
+                18.0213
             ],
             [
-                -96.5631,
-                39.1008
+                -78.0418,
+                39.0337
             ],
             [
-                -89.5864,
-                45.5089
+                -119.7323,
+                37.1088
             ],
             [
-                -110.5391,
-                44.9535
+                -66.8687,
+                17.9696
             ],
             [
-                -145.7514,
-                63.8811
+                -155.3173,
+                19.5531
             ],
             [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -147.5026,
-                65.154
+                -109.3883,
+                38.2483
             ],
             [
                 -87.8039,
@@ -201,12 +153,60 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -147.5026,
+                65.154
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: WOOD, DSNY, HARV, SERC, LAJA, BLAN, SJER, GUAN, PUUM, MOAB, GRSM, MLBS, NOGP, NIWO, TEAK, ORNL, WREF, ABBY, SOAP, LENO, TREE, OAES, SCBI, UKFS, CLBJ, JORN, KONZ, STEI, YELL, DEJU, STER, DCFS, BONA, DELA, ONAQ, CPER, SRER, BART, JERC, HEAL, RMNP, TOOL, OSBS, UNDE, BARR, TALL, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: GRSM, MLBS, NOGP, NIWO, TEAK, ORNL, WREF, ABBY, SOAP, LENO, TREE, WOOD, DSNY, HARV, SERC, LAJA, BLAN, SJER, GUAN, PUUM, MOAB, DELA, ONAQ, CPER, SRER, BART, JERC, HEAL, RMNP, TOOL, OSBS, UNDE, BARR, TALL, KONA, OAES, SCBI, UKFS, CLBJ, JORN, KONZ, STEI, YELL, DEJU, STER, DCFS, BONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:21:21",
         "start_datetime": "2022-05-29T00:00:00Z",
@@ -239,16 +239,6 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "WOOD",
-            "DSNY",
-            "HARV",
-            "SERC",
-            "LAJA",
-            "BLAN",
-            "SJER",
-            "GUAN",
-            "PUUM",
-            "MOAB",
             "GRSM",
             "MLBS",
             "NOGP",
@@ -260,18 +250,16 @@
             "SOAP",
             "LENO",
             "TREE",
-            "OAES",
-            "SCBI",
-            "UKFS",
-            "CLBJ",
-            "JORN",
-            "KONZ",
-            "STEI",
-            "YELL",
-            "DEJU",
-            "STER",
-            "DCFS",
-            "BONA",
+            "WOOD",
+            "DSNY",
+            "HARV",
+            "SERC",
+            "LAJA",
+            "BLAN",
+            "SJER",
+            "GUAN",
+            "PUUM",
+            "MOAB",
             "DELA",
             "ONAQ",
             "CPER",
@@ -285,7 +273,19 @@
             "UNDE",
             "BARR",
             "TALL",
-            "KONA"
+            "KONA",
+            "OAES",
+            "SCBI",
+            "UKFS",
+            "CLBJ",
+            "JORN",
+            "KONZ",
+            "STEI",
+            "YELL",
+            "DEJU",
+            "STER",
+            "DCFS",
+            "BONA"
         ],
         "table:columns": [
             {

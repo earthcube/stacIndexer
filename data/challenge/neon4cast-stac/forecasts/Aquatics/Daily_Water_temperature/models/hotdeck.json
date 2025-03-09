@@ -43,6 +43,38 @@
                 34.4442
             ],
             [
+                -82.0084,
+                29.676
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
                 -72.3295,
                 42.4719
             ],
@@ -101,44 +133,12 @@
             [
                 -105.9154,
                 39.8914
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
             ]
         ]
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: CRAM, BIGC, BLDE, SYCA, WALK, LECO, BLUE, HOPB, KING, POSE, CUPE, MAYF, MCRA, BLWA, FLNT, LIRO, PRLA, REDB, TECR, TOMB, PRPO, WLOU, BARC, CARI, SUGG, COMO, PRIN, ARIK, GUIL, LEWI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: CRAM, BIGC, BLDE, SYCA, WALK, LECO, BLUE, BARC, CARI, SUGG, COMO, PRIN, ARIK, GUIL, LEWI, HOPB, KING, POSE, CUPE, MAYF, MCRA, BLWA, FLNT, LIRO, PRLA, REDB, TECR, TOMB, PRPO, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -178,6 +178,14 @@
             "WALK",
             "LECO",
             "BLUE",
+            "BARC",
+            "CARI",
+            "SUGG",
+            "COMO",
+            "PRIN",
+            "ARIK",
+            "GUIL",
+            "LEWI",
             "HOPB",
             "KING",
             "POSE",
@@ -192,15 +200,7 @@
             "TECR",
             "TOMB",
             "PRPO",
-            "WLOU",
-            "BARC",
-            "CARI",
-            "SUGG",
-            "COMO",
-            "PRIN",
-            "ARIK",
-            "GUIL",
-            "LEWI"
+            "WLOU"
         ],
         "table:columns": [
             {

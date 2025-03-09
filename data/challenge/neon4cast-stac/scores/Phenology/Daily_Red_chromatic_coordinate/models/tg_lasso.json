@@ -15,64 +15,20 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.2622,
-                37.0334
+                -100.9154,
+                46.7697
             ],
             [
                 -121.9519,
                 45.8205
             ],
             [
-                -122.3303,
-                45.7624
+                -84.2826,
+                35.9641
+            ],
+            [
+                -80.5248,
+                37.3783
             ],
             [
                 -89.5857,
@@ -83,6 +39,14 @@
                 37.0058
             ],
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -91,16 +55,20 @@
                 31.8539
             ],
             [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
+                -105.5824,
+                40.0543
             ],
             [
                 -96.5631,
                 39.1008
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -78.1395,
+                38.8929
             ],
             [
                 -145.7514,
@@ -111,52 +79,72 @@
                 33.4012
             ],
             [
+                -99.1066,
+                47.1617
+            ],
+            [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -103.0293,
-                40.4619
             ],
             [
                 -99.0588,
                 35.4106
             ],
             [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
                 -89.5864,
                 45.5089
             ],
             [
-                -99.1066,
-                47.1617
+                -147.5026,
+                65.154
             ],
             [
-                -104.7456,
-                40.8155
+                -67.0769,
+                18.0213
             ],
             [
-                -87.8039,
-                32.5417
+                -109.3883,
+                38.2483
             ],
             [
-                -84.4686,
-                31.1948
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -155.3173,
+                19.5531
             ],
             [
                 -149.2133,
@@ -165,6 +153,22 @@
             [
                 -105.546,
                 40.2759
+            ],
+            [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -96.6129,
+                39.1104
             ],
             [
                 -87.3933,
@@ -179,34 +183,30 @@
                 68.6611
             ],
             [
-                -81.9934,
-                29.6893
+                -112.4524,
+                40.1776
             ],
             [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -110.8355,
-                31.9107
+                -84.4686,
+                31.1948
             ],
             [
                 -71.2874,
                 44.0639
             ],
             [
-                -96.6129,
-                39.1104
+                -87.8039,
+                32.5417
             ],
             [
-                -112.4524,
-                40.1776
+                -81.9934,
+                29.6893
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: NOGP, WREF, ORNL, MLBS, TREE, TEAK, ABBY, SOAP, GRSM, LENO, NIWO, KONZ, JORN, SCBI, DEJU, CLBJ, DCFS, UKFS, OAES, STER, YELL, STEI, BONA, LAJA, MOAB, BLAN, SERC, GUAN, SJER, HARV, WOOD, DSNY, PUUM, HEAL, RMNP, SRER, UNDE, CPER, KONA, TALL, BARR, TOOL, ONAQ, JERC, BART, DELA, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,53 +239,53 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "MOAB",
-            "SERC",
-            "LAJA",
-            "PUUM",
-            "DSNY",
-            "GUAN",
-            "BLAN",
-            "HARV",
-            "SJER",
-            "WOOD",
-            "NIWO",
-            "MLBS",
-            "SOAP",
+            "NOGP",
             "WREF",
-            "ABBY",
+            "ORNL",
+            "MLBS",
             "TREE",
             "TEAK",
+            "ABBY",
+            "SOAP",
             "GRSM",
             "LENO",
-            "NOGP",
-            "ORNL",
+            "NIWO",
             "KONZ",
+            "JORN",
+            "SCBI",
             "DEJU",
             "CLBJ",
-            "UKFS",
-            "SCBI",
-            "JORN",
-            "BONA",
-            "YELL",
-            "STER",
-            "OAES",
-            "STEI",
             "DCFS",
-            "CPER",
-            "DELA",
-            "JERC",
+            "UKFS",
+            "OAES",
+            "STER",
+            "YELL",
+            "STEI",
+            "BONA",
+            "LAJA",
+            "MOAB",
+            "BLAN",
+            "SERC",
+            "GUAN",
+            "SJER",
+            "HARV",
+            "WOOD",
+            "DSNY",
+            "PUUM",
             "HEAL",
             "RMNP",
+            "SRER",
+            "UNDE",
+            "CPER",
+            "KONA",
             "TALL",
             "BARR",
             "TOOL",
-            "OSBS",
-            "UNDE",
-            "SRER",
+            "ONAQ",
+            "JERC",
             "BART",
-            "KONA",
-            "ONAQ"
+            "DELA",
+            "OSBS"
         ],
         "table:columns": [
             {

@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
                 -147.5026,
                 65.154
             ],
@@ -61,50 +105,6 @@
             [
                 -89.5864,
                 45.5089
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -89.5857,
-                45.4937
             ],
             [
                 -67.0769,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: BONA, KONZ, UKFS, DEJU, JORN, OAES, DCFS, YELL, SCBI, CLBJ, STER, STEI, LENO, WREF, NIWO, SOAP, MLBS, TEAK, GRSM, ABBY, NOGP, ORNL, TREE, LAJA, PUUM, GUAN, MOAB, DSNY, SJER, SERC, HARV, WOOD, BLAN, BARR, SRER, CPER, JERC, HEAL, BART, TOOL, DELA, TALL, RMNP, KONA, ONAQ, OSBS, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: LENO, WREF, NIWO, SOAP, MLBS, TEAK, GRSM, ABBY, NOGP, ORNL, TREE, BONA, KONZ, UKFS, DEJU, JORN, OAES, DCFS, YELL, SCBI, CLBJ, STER, STEI, LAJA, PUUM, GUAN, MOAB, DSNY, SJER, SERC, HARV, WOOD, BLAN, BARR, SRER, CPER, JERC, HEAL, BART, TOOL, DELA, TALL, RMNP, KONA, ONAQ, OSBS, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:00:22",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,6 +239,17 @@
             "richness",
             "Weekly",
             "P1W",
+            "LENO",
+            "WREF",
+            "NIWO",
+            "SOAP",
+            "MLBS",
+            "TEAK",
+            "GRSM",
+            "ABBY",
+            "NOGP",
+            "ORNL",
+            "TREE",
             "BONA",
             "KONZ",
             "UKFS",
@@ -251,17 +262,6 @@
             "CLBJ",
             "STER",
             "STEI",
-            "LENO",
-            "WREF",
-            "NIWO",
-            "SOAP",
-            "MLBS",
-            "TEAK",
-            "GRSM",
-            "ABBY",
-            "NOGP",
-            "ORNL",
-            "TREE",
             "LAJA",
             "PUUM",
             "GUAN",

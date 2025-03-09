@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -107,46 +147,6 @@
                 65.154
             ],
             [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
                 -87.3933,
                 32.9505
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: GRSM, ORNL, SOAP, NOGP, ABBY, TREE, TEAK, MLBS, LENO, WREF, NIWO, STEI, CLBJ, DEJU, KONZ, UKFS, DCFS, STER, SCBI, JORN, YELL, OAES, BONA, BLAN, SERC, GUAN, LAJA, PUUM, DSNY, WOOD, SJER, HARV, MOAB, TALL, RMNP, ONAQ, HEAL, OSBS, TOOL, BARR, DELA, UNDE, BART, SRER, JERC, KONA, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: BLAN, SERC, GUAN, LAJA, PUUM, DSNY, WOOD, SJER, HARV, MOAB, GRSM, ORNL, SOAP, NOGP, ABBY, TREE, TEAK, MLBS, LENO, WREF, NIWO, STEI, CLBJ, DEJU, KONZ, UKFS, DCFS, STER, SCBI, JORN, YELL, OAES, BONA, TALL, RMNP, ONAQ, HEAL, OSBS, TOOL, BARR, DELA, UNDE, BART, SRER, JERC, KONA, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:31:54",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,16 @@
             "le",
             "Daily",
             "P1D",
+            "BLAN",
+            "SERC",
+            "GUAN",
+            "LAJA",
+            "PUUM",
+            "DSNY",
+            "WOOD",
+            "SJER",
+            "HARV",
+            "MOAB",
             "GRSM",
             "ORNL",
             "SOAP",
@@ -262,16 +272,6 @@
             "YELL",
             "OAES",
             "BONA",
-            "BLAN",
-            "SERC",
-            "GUAN",
-            "LAJA",
-            "PUUM",
-            "DSNY",
-            "WOOD",
-            "SJER",
-            "HARV",
-            "MOAB",
             "TALL",
             "RMNP",
             "ONAQ",
