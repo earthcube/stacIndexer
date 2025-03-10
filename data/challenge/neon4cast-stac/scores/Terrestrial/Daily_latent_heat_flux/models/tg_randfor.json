@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
                 -122.3303,
                 45.7624
             ],
@@ -161,52 +201,12 @@
             [
                 -156.6194,
                 71.2824
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: ABBY, ORNL, NOGP, TEAK, GRSM, LENO, TREE, MLBS, WREF, NIWO, SOAP, BONA, CLBJ, DEJU, KONZ, JORN, STER, DCFS, OAES, STEI, SCBI, UKFS, YELL, JERC, BART, KONA, UNDE, DELA, RMNP, SRER, OSBS, ONAQ, TALL, HEAL, TOOL, CPER, BARR, PUUM, WOOD, GUAN, MOAB, DSNY, HARV, SERC, LAJA, SJER, BLAN.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: PUUM, WOOD, GUAN, MOAB, DSNY, HARV, SERC, LAJA, SJER, BLAN, ABBY, ORNL, NOGP, TEAK, GRSM, LENO, TREE, MLBS, WREF, NIWO, SOAP, BONA, CLBJ, DEJU, KONZ, JORN, STER, DCFS, OAES, STEI, SCBI, UKFS, YELL, JERC, BART, KONA, UNDE, DELA, RMNP, SRER, OSBS, ONAQ, TALL, HEAL, TOOL, CPER, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:27",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,16 @@
             "le",
             "Daily",
             "P1D",
+            "PUUM",
+            "WOOD",
+            "GUAN",
+            "MOAB",
+            "DSNY",
+            "HARV",
+            "SERC",
+            "LAJA",
+            "SJER",
+            "BLAN",
             "ABBY",
             "ORNL",
             "NOGP",
@@ -275,17 +285,7 @@
             "HEAL",
             "TOOL",
             "CPER",
-            "BARR",
-            "PUUM",
-            "WOOD",
-            "GUAN",
-            "MOAB",
-            "DSNY",
-            "HARV",
-            "SERC",
-            "LAJA",
-            "SJER",
-            "BLAN"
+            "BARR"
         ],
         "table:columns": [
             {

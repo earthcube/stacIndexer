@@ -15,22 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
@@ -41,12 +25,28 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
             ]
         ]
     },
     "properties": {
         "title": "GLEON_lm_lag_1day",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the GLEON_lm_lag_1day model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, CRAM, LIRO, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the GLEON_lm_lag_1day model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, CRAM, BARC, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-29",
         "updated": "2024-01-01 05:08:07",
         "start_datetime": "2022-11-01T00:00:00Z",
@@ -79,13 +79,13 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BARC",
-            "SUGG",
-            "TOOK",
-            "CRAM",
             "LIRO",
             "PRLA",
-            "PRPO"
+            "PRPO",
+            "CRAM",
+            "BARC",
+            "SUGG",
+            "TOOK"
         ],
         "table:columns": [
             {
