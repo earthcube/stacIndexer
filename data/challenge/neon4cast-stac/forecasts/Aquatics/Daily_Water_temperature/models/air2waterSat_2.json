@@ -15,34 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
                 -78.1473,
                 38.8943
             ],
@@ -149,12 +121,40 @@
             [
                 -119.0274,
                 36.9559
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -96.6242,
+                34.4442
             ]
         ]
     },
     "properties": {
         "title": "air2waterSat_2",
-        "description": "All forecasts for the Daily_Water_temperature variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: BIGC, WALK, CRAM, BLDE, SYCA, LECO, BLUE, POSE, FLNT, MCRA, BLWA, MAYF, HOPB, CUPE, KING, TOOK, BARC, COMO, SUGG, MCDI, PRIN, CARI, LEWI, OKSR, ARIK, GUIL, PRPO, WLOU, TOMB, LIRO, REDB, PRLA, MART, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: POSE, FLNT, MCRA, BLWA, MAYF, HOPB, CUPE, KING, TOOK, BARC, COMO, SUGG, MCDI, PRIN, CARI, LEWI, OKSR, ARIK, GUIL, PRPO, WLOU, TOMB, LIRO, REDB, PRLA, MART, TECR, BIGC, WALK, CRAM, BLDE, SYCA, LECO, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-01",
         "updated": "2024-02-02 05:06:19",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,13 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "BIGC",
-            "WALK",
-            "CRAM",
-            "BLDE",
-            "SYCA",
-            "LECO",
-            "BLUE",
             "POSE",
             "FLNT",
             "MCRA",
@@ -220,7 +213,14 @@
             "REDB",
             "PRLA",
             "MART",
-            "TECR"
+            "TECR",
+            "BIGC",
+            "WALK",
+            "CRAM",
+            "BLDE",
+            "SYCA",
+            "LECO",
+            "BLUE"
         ],
         "table:columns": [
             {

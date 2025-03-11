@@ -15,66 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
                 -97.7823,
                 33.3785
             ],
@@ -119,6 +59,34 @@
                 65.1532
             ],
             [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
                 -111.7979,
                 40.7839
             ],
@@ -149,12 +117,44 @@
             [
                 -105.9154,
                 39.8914
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: POSE, KING, HOPB, FLNT, BLWA, MCRA, CUPE, MAYF, SYCA, CRAM, LECO, BIGC, BLDE, BLUE, WALK, PRIN, TOOK, GUIL, LEWI, COMO, SUGG, ARIK, MCDI, OKSR, BARC, CARI, REDB, MART, TECR, TOMB, LIRO, PRPO, PRLA, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: PRIN, TOOK, GUIL, LEWI, COMO, SUGG, ARIK, MCDI, OKSR, BARC, CARI, SYCA, CRAM, LECO, BIGC, BLDE, BLUE, WALK, REDB, MART, TECR, TOMB, LIRO, PRPO, PRLA, WLOU, POSE, KING, HOPB, FLNT, BLWA, MCRA, CUPE, MAYF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:22:53",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,21 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "POSE",
-            "KING",
-            "HOPB",
-            "FLNT",
-            "BLWA",
-            "MCRA",
-            "CUPE",
-            "MAYF",
-            "SYCA",
-            "CRAM",
-            "LECO",
-            "BIGC",
-            "BLDE",
-            "BLUE",
-            "WALK",
             "PRIN",
             "TOOK",
             "GUIL",
@@ -213,6 +198,13 @@
             "OKSR",
             "BARC",
             "CARI",
+            "SYCA",
+            "CRAM",
+            "LECO",
+            "BIGC",
+            "BLDE",
+            "BLUE",
+            "WALK",
             "REDB",
             "MART",
             "TECR",
@@ -220,7 +212,15 @@
             "LIRO",
             "PRPO",
             "PRLA",
-            "WLOU"
+            "WLOU",
+            "POSE",
+            "KING",
+            "HOPB",
+            "FLNT",
+            "BLWA",
+            "MCRA",
+            "CUPE",
+            "MAYF"
         ],
         "table:columns": [
             {

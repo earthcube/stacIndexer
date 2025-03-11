@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
@@ -41,12 +37,16 @@
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "zimmerman_proj1",
-        "description": "All scores for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: CRAM, TOOK, BARC, SUGG, PRPO, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, PRPO, LIRO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 14:04:14",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
             "TOOK",
             "BARC",
             "SUGG",
             "PRPO",
             "LIRO",
-            "PRLA"
+            "PRLA",
+            "CRAM"
         ],
         "table:columns": [
             {
