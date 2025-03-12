@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -105.5442,
                 40.035
             ],
@@ -149,12 +117,44 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: CUPE, FLNT, HOPB, MCRA, KING, MAYF, POSE, BLWA, COMO, TOOK, MCDI, CARI, OKSR, PRIN, LEWI, SUGG, BARC, GUIL, ARIK, LECO, BIGC, BLDE, CRAM, BLUE, SYCA, WALK, LIRO, TECR, PRLA, MART, WLOU, REDB, TOMB, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: COMO, TOOK, MCDI, CARI, OKSR, PRIN, LEWI, SUGG, BARC, GUIL, ARIK, LECO, BIGC, BLDE, CRAM, BLUE, SYCA, WALK, LIRO, TECR, PRLA, MART, WLOU, REDB, TOMB, PRPO, CUPE, FLNT, HOPB, MCRA, KING, MAYF, POSE, BLWA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,14 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "CUPE",
-            "FLNT",
-            "HOPB",
-            "MCRA",
-            "KING",
-            "MAYF",
-            "POSE",
-            "BLWA",
             "COMO",
             "TOOK",
             "MCDI",
@@ -220,7 +212,15 @@
             "WLOU",
             "REDB",
             "TOMB",
-            "PRPO"
+            "PRPO",
+            "CUPE",
+            "FLNT",
+            "HOPB",
+            "MCRA",
+            "KING",
+            "MAYF",
+            "POSE",
+            "BLWA"
         ],
         "table:columns": [
             {

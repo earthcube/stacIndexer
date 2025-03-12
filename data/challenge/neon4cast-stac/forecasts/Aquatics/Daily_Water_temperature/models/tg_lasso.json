@@ -75,38 +75,6 @@
                 35.9574
             ],
             [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
@@ -149,12 +117,44 @@
             [
                 -147.504,
                 65.1532
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -105.9154,
+                39.8914
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: CUPE, FLNT, KING, MCRA, MAYF, BLWA, HOPB, POSE, BLDE, BIGC, SYCA, LECO, CRAM, BLUE, WALK, TOMB, MART, TECR, REDB, PRPO, PRLA, LIRO, WLOU, TOOK, LEWI, ARIK, OKSR, MCDI, PRIN, GUIL, SUGG, BARC, COMO, CARI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: CUPE, FLNT, KING, MCRA, MAYF, BLWA, HOPB, POSE, BLDE, BIGC, SYCA, LECO, CRAM, BLUE, WALK, TOOK, LEWI, ARIK, OKSR, MCDI, PRIN, GUIL, SUGG, BARC, COMO, CARI, TOMB, MART, TECR, REDB, PRPO, PRLA, LIRO, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -202,14 +202,6 @@
             "CRAM",
             "BLUE",
             "WALK",
-            "TOMB",
-            "MART",
-            "TECR",
-            "REDB",
-            "PRPO",
-            "PRLA",
-            "LIRO",
-            "WLOU",
             "TOOK",
             "LEWI",
             "ARIK",
@@ -220,7 +212,15 @@
             "SUGG",
             "BARC",
             "COMO",
-            "CARI"
+            "CARI",
+            "TOMB",
+            "MART",
+            "TECR",
+            "REDB",
+            "PRPO",
+            "PRLA",
+            "LIRO",
+            "WLOU"
         ],
         "table:columns": [
             {

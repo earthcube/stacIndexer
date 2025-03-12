@@ -15,60 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -147.504,
-                65.1532
+                -72.3295,
+                42.4719
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
+                -87.7982,
+                32.5415
             ],
             [
                 -66.9868,
                 18.1135
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
             ],
             [
                 -78.1473,
@@ -79,16 +35,28 @@
                 32.9604
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
                 -84.4374,
                 31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
             ],
             [
                 -110.5871,
@@ -99,62 +67,94 @@
                 34.4442
             ],
             [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -111.5081,
-                33.751
+                -89.4737,
+                46.2097
             ],
             [
                 -119.2575,
                 37.0597
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -121.9338,
-                45.7908
+                -105.9154,
+                39.8914
             ],
             [
                 -111.7979,
                 40.7839
             ],
             [
-                -105.9154,
-                39.8914
+                -99.2531,
+                47.1298
             ],
             [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -119.0274,
-                36.9559
+                -121.9338,
+                45.7908
             ],
             [
                 -89.7048,
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
+                -88.1589,
+                31.8534
             ],
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: CARI, MCDI, ARIK, GUIL, BARC, LEWI, COMO, SUGG, PRIN, OKSR, TOOK, CUPE, KING, MCRA, POSE, MAYF, BLWA, HOPB, FLNT, BLDE, BLUE, LECO, WALK, SYCA, BIGC, CRAM, MART, REDB, WLOU, TOMB, TECR, LIRO, PRPO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: HOPB, BLWA, CUPE, POSE, MAYF, FLNT, KING, MCRA, WALK, LECO, SYCA, BLDE, BLUE, CRAM, BIGC, WLOU, REDB, PRPO, MART, LIRO, TOMB, PRLA, TECR, GUIL, BARC, PRIN, ARIK, SUGG, LEWI, CARI, MCDI, COMO, OKSR, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -187,40 +187,40 @@
             "oxygen",
             "Daily",
             "P1D",
-            "CARI",
-            "MCDI",
-            "ARIK",
-            "GUIL",
-            "BARC",
-            "LEWI",
-            "COMO",
-            "SUGG",
-            "PRIN",
-            "OKSR",
-            "TOOK",
+            "HOPB",
+            "BLWA",
             "CUPE",
-            "KING",
-            "MCRA",
             "POSE",
             "MAYF",
-            "BLWA",
-            "HOPB",
             "FLNT",
+            "KING",
+            "MCRA",
+            "WALK",
+            "LECO",
+            "SYCA",
             "BLDE",
             "BLUE",
-            "LECO",
-            "WALK",
-            "SYCA",
-            "BIGC",
             "CRAM",
-            "MART",
-            "REDB",
+            "BIGC",
             "WLOU",
-            "TOMB",
-            "TECR",
-            "LIRO",
+            "REDB",
             "PRPO",
-            "PRLA"
+            "MART",
+            "LIRO",
+            "TOMB",
+            "PRLA",
+            "TECR",
+            "GUIL",
+            "BARC",
+            "PRIN",
+            "ARIK",
+            "SUGG",
+            "LEWI",
+            "CARI",
+            "MCDI",
+            "COMO",
+            "OKSR",
+            "TOOK"
         ],
         "table:columns": [
             {

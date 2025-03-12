@@ -15,34 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
                 -84.4374,
                 31.1854
             ],
@@ -149,12 +121,40 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -96.6242,
+                34.4442
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: BLDE, LECO, SYCA, BIGC, WALK, CRAM, BLUE, FLNT, CUPE, POSE, MAYF, HOPB, MCRA, KING, BLWA, TOOK, LEWI, BARC, PRIN, MCDI, ARIK, CARI, OKSR, COMO, SUGG, GUIL, PRLA, TECR, LIRO, REDB, TOMB, MART, WLOU, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: FLNT, CUPE, POSE, MAYF, HOPB, MCRA, KING, BLWA, TOOK, LEWI, BARC, PRIN, MCDI, ARIK, CARI, OKSR, COMO, SUGG, GUIL, PRLA, TECR, LIRO, REDB, TOMB, MART, WLOU, PRPO, BLDE, LECO, SYCA, BIGC, WALK, CRAM, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,13 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BLDE",
-            "LECO",
-            "SYCA",
-            "BIGC",
-            "WALK",
-            "CRAM",
-            "BLUE",
             "FLNT",
             "CUPE",
             "POSE",
@@ -220,7 +213,14 @@
             "TOMB",
             "MART",
             "WLOU",
-            "PRPO"
+            "PRPO",
+            "BLDE",
+            "LECO",
+            "SYCA",
+            "BIGC",
+            "WALK",
+            "CRAM",
+            "BLUE"
         ],
         "table:columns": [
             {

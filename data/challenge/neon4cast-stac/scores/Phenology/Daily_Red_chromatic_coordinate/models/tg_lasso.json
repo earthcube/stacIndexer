@@ -15,6 +15,90 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
                 -95.1921,
                 39.0404
             ],
@@ -61,46 +145,6 @@
             [
                 -89.5864,
                 45.5089
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -76.56,
-                38.8901
             ],
             [
                 -105.546,
@@ -157,56 +201,12 @@
             [
                 -156.6194,
                 71.2824
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -105.5824,
-                40.0543
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI, BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,27 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "BLAN",
+            "DSNY",
+            "WOOD",
+            "PUUM",
+            "SJER",
+            "HARV",
+            "GUAN",
+            "MOAB",
+            "LAJA",
+            "SERC",
+            "MLBS",
+            "ORNL",
+            "NOGP",
+            "SOAP",
+            "TREE",
+            "WREF",
+            "ABBY",
+            "TEAK",
+            "GRSM",
+            "LENO",
+            "NIWO",
             "UKFS",
             "BONA",
             "DCFS",
@@ -251,16 +272,6 @@
             "STER",
             "OAES",
             "STEI",
-            "BLAN",
-            "DSNY",
-            "WOOD",
-            "PUUM",
-            "SJER",
-            "HARV",
-            "GUAN",
-            "MOAB",
-            "LAJA",
-            "SERC",
             "RMNP",
             "TALL",
             "TOOL",
@@ -274,18 +285,7 @@
             "ONAQ",
             "OSBS",
             "SRER",
-            "BARR",
-            "MLBS",
-            "ORNL",
-            "NOGP",
-            "SOAP",
-            "TREE",
-            "WREF",
-            "ABBY",
-            "TEAK",
-            "GRSM",
-            "LENO",
-            "NIWO"
+            "BARR"
         ],
         "table:columns": [
             {

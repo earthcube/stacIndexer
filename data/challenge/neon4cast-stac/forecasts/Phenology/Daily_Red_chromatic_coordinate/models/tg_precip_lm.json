@@ -63,50 +63,6 @@
                 32.5907
             ],
             [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
                 -72.1727,
                 42.5369
             ],
@@ -201,12 +157,56 @@
             [
                 -81.9934,
                 29.6893
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -121.9519,
+                45.8205
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: STEI, SCBI, CLBJ, OAES, KONZ, BONA, STER, YELL, DCFS, DEJU, UKFS, JORN, MLBS, NOGP, LENO, ABBY, TREE, SOAP, NIWO, ORNL, TEAK, GRSM, WREF, HARV, SERC, GUAN, PUUM, SJER, WOOD, LAJA, DSNY, BLAN, MOAB, ONAQ, TALL, UNDE, HEAL, SRER, JERC, TOOL, BARR, CPER, RMNP, DELA, KONA, BART, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: STEI, SCBI, CLBJ, OAES, KONZ, BONA, STER, YELL, DCFS, DEJU, UKFS, JORN, HARV, SERC, GUAN, PUUM, SJER, WOOD, LAJA, DSNY, BLAN, MOAB, ONAQ, TALL, UNDE, HEAL, SRER, JERC, TOOL, BARR, CPER, RMNP, DELA, KONA, BART, OSBS, MLBS, NOGP, LENO, ABBY, TREE, SOAP, NIWO, ORNL, TEAK, GRSM, WREF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:56:55",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -251,17 +251,6 @@
             "DEJU",
             "UKFS",
             "JORN",
-            "MLBS",
-            "NOGP",
-            "LENO",
-            "ABBY",
-            "TREE",
-            "SOAP",
-            "NIWO",
-            "ORNL",
-            "TEAK",
-            "GRSM",
-            "WREF",
             "HARV",
             "SERC",
             "GUAN",
@@ -285,7 +274,18 @@
             "DELA",
             "KONA",
             "BART",
-            "OSBS"
+            "OSBS",
+            "MLBS",
+            "NOGP",
+            "LENO",
+            "ABBY",
+            "TREE",
+            "SOAP",
+            "NIWO",
+            "ORNL",
+            "TEAK",
+            "GRSM",
+            "WREF"
         ],
         "table:columns": [
             {
