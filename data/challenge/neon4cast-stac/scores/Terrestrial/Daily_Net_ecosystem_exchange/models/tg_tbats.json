@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
                 -97.57,
                 33.4012
             ],
@@ -61,90 +101,6 @@
             [
                 -106.8425,
                 32.5907
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
             ],
             [
                 -96.6129,
@@ -201,12 +157,56 @@
             [
                 -110.8355,
                 31.9107
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: CLBJ, DCFS, KONZ, STEI, SCBI, UKFS, YELL, DEJU, OAES, STER, BONA, JORN, WOOD, PUUM, DSNY, MOAB, SERC, HARV, LAJA, GUAN, BLAN, SJER, WREF, NIWO, TEAK, LENO, SOAP, ABBY, GRSM, MLBS, TREE, NOGP, ORNL, KONA, TALL, CPER, UNDE, RMNP, BART, ONAQ, DELA, BARR, JERC, TOOL, HEAL, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: WOOD, PUUM, DSNY, MOAB, SERC, HARV, LAJA, GUAN, BLAN, SJER, CLBJ, DCFS, KONZ, STEI, SCBI, UKFS, YELL, DEJU, OAES, STER, BONA, JORN, KONA, TALL, CPER, UNDE, RMNP, BART, ONAQ, DELA, BARR, JERC, TOOL, HEAL, OSBS, SRER, WREF, NIWO, TEAK, LENO, SOAP, ABBY, GRSM, MLBS, TREE, NOGP, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "nee",
             "Daily",
             "P1D",
+            "WOOD",
+            "PUUM",
+            "DSNY",
+            "MOAB",
+            "SERC",
+            "HARV",
+            "LAJA",
+            "GUAN",
+            "BLAN",
+            "SJER",
             "CLBJ",
             "DCFS",
             "KONZ",
@@ -251,27 +261,6 @@
             "STER",
             "BONA",
             "JORN",
-            "WOOD",
-            "PUUM",
-            "DSNY",
-            "MOAB",
-            "SERC",
-            "HARV",
-            "LAJA",
-            "GUAN",
-            "BLAN",
-            "SJER",
-            "WREF",
-            "NIWO",
-            "TEAK",
-            "LENO",
-            "SOAP",
-            "ABBY",
-            "GRSM",
-            "MLBS",
-            "TREE",
-            "NOGP",
-            "ORNL",
             "KONA",
             "TALL",
             "CPER",
@@ -285,7 +274,18 @@
             "TOOL",
             "HEAL",
             "OSBS",
-            "SRER"
+            "SRER",
+            "WREF",
+            "NIWO",
+            "TEAK",
+            "LENO",
+            "SOAP",
+            "ABBY",
+            "GRSM",
+            "MLBS",
+            "TREE",
+            "NOGP",
+            "ORNL"
         ],
         "table:columns": [
             {

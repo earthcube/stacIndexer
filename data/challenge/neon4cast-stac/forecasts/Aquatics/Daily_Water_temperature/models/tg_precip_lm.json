@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
@@ -59,36 +91,32 @@
                 39.0956
             ],
             [
-                -78.1473,
-                38.8943
+                -84.2793,
+                35.9574
             ],
             [
-                -87.4077,
-                32.9604
+                -110.5871,
+                44.9501
             ],
             [
-                -84.4374,
-                31.1854
+                -96.6242,
+                34.4442
             ],
             [
-                -66.9868,
-                18.1135
+                -89.4737,
+                46.2097
             ],
             [
-                -96.6038,
-                39.1051
+                -119.2575,
+                37.0597
             ],
             [
-                -87.7982,
-                32.5415
+                -111.5081,
+                33.751
             ],
             [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
+                -83.5038,
+                35.6904
             ],
             [
                 -111.7979,
@@ -121,40 +149,12 @@
             [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -83.5038,
-                35.6904
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA, WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:34:59",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "POSE",
+            "MAYF",
+            "FLNT",
+            "CUPE",
+            "KING",
+            "BLWA",
+            "MCRA",
+            "HOPB",
             "SUGG",
             "BARC",
             "TOOK",
@@ -198,14 +206,13 @@
             "MCDI",
             "CARI",
             "LEWI",
-            "POSE",
-            "MAYF",
-            "FLNT",
-            "CUPE",
-            "KING",
-            "BLWA",
-            "MCRA",
-            "HOPB",
+            "WALK",
+            "BLDE",
+            "BLUE",
+            "CRAM",
+            "BIGC",
+            "SYCA",
+            "LECO",
             "REDB",
             "TOMB",
             "MART",
@@ -213,14 +220,7 @@
             "TECR",
             "WLOU",
             "LIRO",
-            "PRLA",
-            "WALK",
-            "BLDE",
-            "BLUE",
-            "CRAM",
-            "BIGC",
-            "SYCA",
-            "LECO"
+            "PRLA"
         ],
         "table:columns": [
             {

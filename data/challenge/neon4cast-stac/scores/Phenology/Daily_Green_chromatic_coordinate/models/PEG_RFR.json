@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -83.5019,
-                35.689
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -39,18 +31,26 @@
                 39.0404
             ],
             [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -83.5019,
+                35.689
             ]
         ]
     },
     "properties": {
         "title": "PEG_RFR",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG_RFR model. Information for the model is provided as follows: The PEG_RFR model was also a multi-output regression model, which predicted 36 days of GCC (t to t+35 days) using immediate past GCC (last 5 days) and GCC value from the last year, meaning (t-5)th to (t+14)th days GCC from last year.\n                                    The model predicts this variable at the following sites: GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG_RFR model. Information for the model is provided as follows: The PEG_RFR model was also a multi-output regression model, which predicted 36 days of GCC (t to t+35 days) using immediate past GCC (last 5 days) and GCC value from the last year, meaning (t-5)th to (t+14)th days GCC from last year.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA, GRSM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-07-20",
         "updated": null,
         "start_datetime": "2021-03-26T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "GRSM",
-            "HARV",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
+            "HARV",
             "BART",
-            "DELA"
+            "DELA",
+            "GRSM"
         ],
         "table:columns": [
             {

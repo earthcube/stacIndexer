@@ -15,8 +15,60 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
                 -96.5631,
                 39.1008
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
             ],
             [
                 -99.0588,
@@ -47,20 +99,20 @@
                 65.154
             ],
             [
-                -97.57,
-                33.4012
-            ],
-            [
                 -99.1066,
                 47.1617
             ],
             [
-                -145.7514,
-                63.8811
+                -84.2826,
+                35.9641
             ],
             [
-                -106.8425,
-                32.5907
+                -121.9519,
+                45.8205
+            ],
+            [
+                -83.5019,
+                35.689
             ],
             [
                 -88.1612,
@@ -79,10 +131,6 @@
                 46.7697
             ],
             [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -119.2622,
                 37.0334
             ],
@@ -95,68 +143,12 @@
                 45.4937
             ],
             [
-                -121.9519,
-                45.8205
-            ],
-            [
                 -122.3303,
                 45.7624
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
                 -81.9934,
                 29.6893
-            ],
-            [
-                -105.546,
-                40.2759
             ],
             [
                 -110.8355,
@@ -167,24 +159,12 @@
                 32.9505
             ],
             [
-                -149.3705,
-                68.6611
-            ],
-            [
                 -89.5373,
                 46.2339
             ],
             [
-                -156.6194,
-                71.2824
-            ],
-            [
                 -71.2874,
                 44.0639
-            ],
-            [
-                -104.7456,
-                40.8155
             ],
             [
                 -87.8039,
@@ -201,12 +181,32 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -104.7456,
+                40.8155
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the 30min_latent_heat_flux variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_latent_heat_flux variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: SJER, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, WOOD, BLAN, CLBJ, KONZ, DEJU, JORN, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, DCFS, ORNL, WREF, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, ABBY, OSBS, SRER, TALL, UNDE, BART, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL, BARR, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-05-31",
         "updated": null,
         "start_datetime": "2022-06-08T00:00:00Z",
@@ -239,7 +239,20 @@
             "le",
             "30min",
             "PT30M",
+            "SJER",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "WOOD",
+            "BLAN",
+            "CLBJ",
             "KONZ",
+            "DEJU",
+            "JORN",
             "OAES",
             "SCBI",
             "STEI",
@@ -247,45 +260,32 @@
             "UKFS",
             "YELL",
             "BONA",
-            "CLBJ",
             "DCFS",
-            "DEJU",
-            "JORN",
+            "ORNL",
+            "WREF",
+            "GRSM",
             "LENO",
             "MLBS",
             "NIWO",
             "NOGP",
-            "ORNL",
             "SOAP",
             "TEAK",
             "TREE",
-            "WREF",
             "ABBY",
-            "GRSM",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "ONAQ",
             "OSBS",
-            "RMNP",
             "SRER",
             "TALL",
-            "TOOL",
             "UNDE",
-            "BARR",
             "BART",
-            "CPER",
             "DELA",
             "HEAL",
             "JERC",
-            "KONA"
+            "KONA",
+            "ONAQ",
+            "RMNP",
+            "TOOL",
+            "BARR",
+            "CPER"
         ],
         "table:columns": [
             {
