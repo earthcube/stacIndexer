@@ -59,38 +59,6 @@
                 33.3785
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -89.4737,
                 46.2097
             ],
@@ -149,12 +117,44 @@
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -84.4374,
+                31.1854
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MCDI, CARI, ARIK, GUIL, COMO, LEWI, BARC, TOOK, SUGG, OKSR, PRIN, BLWA, KING, MCRA, POSE, MAYF, CUPE, HOPB, FLNT, CRAM, WALK, BLUE, LECO, BIGC, BLDE, SYCA, REDB, TECR, PRPO, WLOU, MART, TOMB, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MCDI, CARI, ARIK, GUIL, COMO, LEWI, BARC, TOOK, SUGG, OKSR, PRIN, CRAM, WALK, BLUE, LECO, BIGC, BLDE, SYCA, REDB, TECR, PRPO, WLOU, MART, TOMB, LIRO, PRLA, BLWA, KING, MCRA, POSE, MAYF, CUPE, HOPB, FLNT.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:31:31",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -198,14 +198,6 @@
             "SUGG",
             "OKSR",
             "PRIN",
-            "BLWA",
-            "KING",
-            "MCRA",
-            "POSE",
-            "MAYF",
-            "CUPE",
-            "HOPB",
-            "FLNT",
             "CRAM",
             "WALK",
             "BLUE",
@@ -220,7 +212,15 @@
             "MART",
             "TOMB",
             "LIRO",
-            "PRLA"
+            "PRLA",
+            "BLWA",
+            "KING",
+            "MCRA",
+            "POSE",
+            "MAYF",
+            "CUPE",
+            "HOPB",
+            "FLNT"
         ],
         "table:columns": [
             {

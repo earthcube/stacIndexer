@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -27,26 +31,22 @@
                 29.6878
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "flareGLM_noDA",
-        "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: BARC, TOOK, SUGG, CRAM, LIRO, PRPO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: CRAM, BARC, TOOK, SUGG, LIRO, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 22:03:46",
         "start_datetime": "2023-03-02T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "CRAM",
             "BARC",
             "TOOK",
             "SUGG",
-            "CRAM",
             "LIRO",
-            "PRPO",
-            "PRLA"
+            "PRLA",
+            "PRPO"
         ],
         "table:columns": [
             {

@@ -19,22 +19,6 @@
                 42.5369
             ],
             [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
                 -78.0418,
                 39.0337
             ],
@@ -55,8 +39,64 @@
                 38.2483
             ],
             [
-                -97.57,
-                33.4012
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
             ],
             [
                 -78.1395,
@@ -71,12 +111,8 @@
                 39.0404
             ],
             [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -110.5391,
-                44.9535
+                -97.57,
+                33.4012
             ],
             [
                 -147.5026,
@@ -103,32 +139,20 @@
                 35.4106
             ],
             [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
-            ],
-            [
-                -105.546,
-                40.2759
-            ],
-            [
-                -110.8355,
-                31.9107
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -149.3705,
-                68.6611
-            ],
-            [
-                -89.5373,
-                46.2339
             ],
             [
                 -156.6194,
@@ -159,54 +183,30 @@
                 29.6893
             ],
             [
-                -83.5019,
-                35.689
+                -105.546,
+                40.2759
             ],
             [
-                -119.2622,
-                37.0334
+                -110.8355,
+                31.9107
             ],
             [
-                -119.006,
-                37.0058
+                -87.3933,
+                32.9505
             ],
             [
-                -89.5857,
-                45.4937
+                -149.3705,
+                68.6611
             ],
             [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
+                -89.5373,
+                46.2339
             ]
         ]
     },
     "properties": {
         "title": "PEG",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: HARV, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, LAJA, MOAB, CLBJ, SCBI, STEI, UKFS, STER, YELL, BONA, DCFS, DEJU, JORN, KONZ, OAES, BART, DELA, RMNP, SRER, TALL, TOOL, UNDE, BARR, CPER, HEAL, JERC, KONA, ONAQ, OSBS, GRSM, SOAP, TEAK, TREE, WREF, ABBY, LENO, MLBS, NIWO, NOGP, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: HARV, BLAN, DSNY, GUAN, LAJA, MOAB, PUUM, SERC, SJER, WOOD, GRSM, ABBY, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, SCBI, STEI, UKFS, CLBJ, BONA, DCFS, DEJU, JORN, KONZ, OAES, STER, YELL, BART, DELA, BARR, CPER, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-21",
         "updated": "2023-12-22 05:29:14",
         "start_datetime": "2021-09-12T00:00:00Z",
@@ -240,34 +240,40 @@
             "Daily",
             "P1D",
             "HARV",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
             "BLAN",
             "DSNY",
             "GUAN",
             "LAJA",
             "MOAB",
-            "CLBJ",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
+            "GRSM",
+            "ABBY",
+            "LENO",
+            "MLBS",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF",
             "SCBI",
             "STEI",
             "UKFS",
-            "STER",
-            "YELL",
+            "CLBJ",
             "BONA",
             "DCFS",
             "DEJU",
             "JORN",
             "KONZ",
             "OAES",
+            "STER",
+            "YELL",
             "BART",
             "DELA",
-            "RMNP",
-            "SRER",
-            "TALL",
-            "TOOL",
-            "UNDE",
             "BARR",
             "CPER",
             "HEAL",
@@ -275,17 +281,11 @@
             "KONA",
             "ONAQ",
             "OSBS",
-            "GRSM",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
-            "ABBY",
-            "LENO",
-            "MLBS",
-            "NIWO",
-            "NOGP",
-            "ORNL"
+            "RMNP",
+            "SRER",
+            "TALL",
+            "TOOL",
+            "UNDE"
         ],
         "table:columns": [
             {

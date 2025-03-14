@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
                 -96.5631,
                 39.1008
             ],
@@ -145,6 +61,90 @@
             [
                 -99.1066,
                 47.1617
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
             ],
             [
                 -87.8039,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLAN, GUAN, LAJA, SERC, SJER, PUUM, MOAB, WOOD, DSNY, HARV, MLBS, ORNL, GRSM, TREE, TEAK, SOAP, LENO, ABBY, NIWO, NOGP, WREF, KONZ, SCBI, STEI, UKFS, BONA, DEJU, CLBJ, JORN, YELL, OAES, STER, DCFS, DELA, RMNP, TOOL, JERC, KONA, ONAQ, SRER, BARR, TALL, BART, CPER, OSBS, HEAL, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, STEI, UKFS, BONA, DEJU, CLBJ, JORN, YELL, OAES, STER, DCFS, ORNL, GRSM, TREE, TEAK, SOAP, LENO, MLBS, ABBY, NIWO, NOGP, WREF, BLAN, GUAN, LAJA, SERC, SJER, PUUM, MOAB, WOOD, DSNY, HARV, DELA, RMNP, TOOL, JERC, KONA, ONAQ, SRER, BARR, TALL, BART, CPER, OSBS, HEAL, UNDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:27",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,27 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "BLAN",
-            "GUAN",
-            "LAJA",
-            "SERC",
-            "SJER",
-            "PUUM",
-            "MOAB",
-            "WOOD",
-            "DSNY",
-            "HARV",
-            "MLBS",
-            "ORNL",
-            "GRSM",
-            "TREE",
-            "TEAK",
-            "SOAP",
-            "LENO",
-            "ABBY",
-            "NIWO",
-            "NOGP",
-            "WREF",
             "KONZ",
             "SCBI",
             "STEI",
@@ -272,6 +251,27 @@
             "OAES",
             "STER",
             "DCFS",
+            "ORNL",
+            "GRSM",
+            "TREE",
+            "TEAK",
+            "SOAP",
+            "LENO",
+            "MLBS",
+            "ABBY",
+            "NIWO",
+            "NOGP",
+            "WREF",
+            "BLAN",
+            "GUAN",
+            "LAJA",
+            "SERC",
+            "SJER",
+            "PUUM",
+            "MOAB",
+            "WOOD",
+            "DSNY",
+            "HARV",
             "DELA",
             "RMNP",
             "TOOL",
