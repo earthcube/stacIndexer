@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -99.2531,
                 47.1298
             ],
@@ -31,22 +27,26 @@
                 47.1591
             ],
             [
-                -82.0084,
-                29.676
+                -149.6106,
+                68.6307
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
-                -149.6106,
-                68.6307
+                -82.0084,
+                29.676
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "mkricheldorf_w_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: CRAM, PRPO, LIRO, PRLA, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: PRPO, LIRO, PRLA, TOOK, SUGG, BARC, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-25",
         "updated": "2024-08-29 16:25:04",
         "start_datetime": "2024-03-06T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
             "PRPO",
             "LIRO",
             "PRLA",
-            "BARC",
+            "TOOK",
             "SUGG",
-            "TOOK"
+            "BARC",
+            "CRAM"
         ],
         "table:columns": [
             {
