@@ -35,16 +35,20 @@
                 65.1532
             ],
             [
-                -105.5442,
-                40.035
-            ],
-            [
                 -102.4471,
                 39.7582
             ],
             [
+                -105.5442,
+                40.035
+            ],
+            [
                 -97.7823,
                 33.3785
+            ],
+            [
+                -110.5871,
+                44.9501
             ],
             [
                 -89.4737,
@@ -61,10 +65,6 @@
             [
                 -84.2793,
                 35.9574
-            ],
-            [
-                -110.5871,
-                44.9501
             ],
             [
                 -83.5038,
@@ -138,7 +138,7 @@
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: GUIL, SUGG, BARC, LEWI, CARI, COMO, ARIK, PRIN, CRAM, SYCA, BIGC, WALK, BLDE, LECO, BLUE, HOPB, MCRA, BLWA, CUPE, MAYF, KING, POSE, FLNT, TOMB, PRLA, TECR, LIRO, REDB, WLOU, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: GUIL, SUGG, BARC, LEWI, CARI, ARIK, COMO, PRIN, BLDE, CRAM, SYCA, BIGC, WALK, LECO, BLUE, HOPB, MCRA, BLWA, CUPE, MAYF, KING, POSE, FLNT, TOMB, PRLA, TECR, LIRO, REDB, WLOU, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -176,14 +176,14 @@
             "BARC",
             "LEWI",
             "CARI",
-            "COMO",
             "ARIK",
+            "COMO",
             "PRIN",
+            "BLDE",
             "CRAM",
             "SYCA",
             "BIGC",
             "WALK",
-            "BLDE",
             "LECO",
             "BLUE",
             "HOPB",

@@ -15,54 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
                 -96.443,
                 38.9459
             ],
@@ -83,52 +35,28 @@
                 29.676
             ],
             [
+                -105.5442,
+                40.035
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
                 -149.143,
                 68.6698
             ],
             [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -83.5038,
-                35.6904
             ],
             [
                 -111.5081,
@@ -149,12 +77,84 @@
             [
                 -96.6242,
                 34.4442
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All forecasts for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, CARI, COMO, GUIL, LEWI, MCDI, PRIN, SUGG, ARIK, BARC, OKSR, TOOK, LIRO, MART, PRPO, REDB, TECR, TOMB, WLOU, PRLA, CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: MCDI, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, CARI, OKSR, TOOK, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MART, REDB, TECR, TOMB, WLOU, LIRO, PRPO, PRLA, MAYF, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCRA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
-            "BLWA",
-            "CUPE",
-            "FLNT",
-            "HOPB",
-            "KING",
-            "MAYF",
-            "POSE",
-            "MCRA",
-            "CARI",
-            "COMO",
-            "GUIL",
-            "LEWI",
             "MCDI",
             "PRIN",
             "SUGG",
             "ARIK",
             "BARC",
+            "COMO",
+            "GUIL",
+            "LEWI",
+            "CARI",
             "OKSR",
             "TOOK",
-            "LIRO",
-            "MART",
-            "PRPO",
-            "REDB",
-            "TECR",
-            "TOMB",
-            "WLOU",
-            "PRLA",
-            "CRAM",
-            "LECO",
             "SYCA",
             "WALK",
             "BIGC",
             "BLDE",
-            "BLUE"
+            "BLUE",
+            "CRAM",
+            "LECO",
+            "MART",
+            "REDB",
+            "TECR",
+            "TOMB",
+            "WLOU",
+            "LIRO",
+            "PRPO",
+            "PRLA",
+            "MAYF",
+            "POSE",
+            "BLWA",
+            "CUPE",
+            "FLNT",
+            "HOPB",
+            "KING",
+            "MCRA"
         ],
         "table:columns": [
             {

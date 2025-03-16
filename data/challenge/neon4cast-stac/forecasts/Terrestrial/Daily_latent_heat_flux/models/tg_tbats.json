@@ -15,6 +15,90 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -61,46 +145,6 @@
             [
                 -145.7514,
                 63.8811
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -119.7323,
-                37.1088
             ],
             [
                 -149.2133,
@@ -157,56 +201,12 @@
             [
                 -104.7456,
                 40.8155
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.006,
-                37.0058
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU, PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,27 @@
             "le",
             "Daily",
             "P1D",
+            "PUUM",
+            "GUAN",
+            "BLAN",
+            "LAJA",
+            "SERC",
+            "DSNY",
+            "HARV",
+            "WOOD",
+            "MOAB",
+            "SJER",
+            "TREE",
+            "GRSM",
+            "NIWO",
+            "ORNL",
+            "ABBY",
+            "LENO",
+            "SOAP",
+            "WREF",
+            "NOGP",
+            "MLBS",
+            "TEAK",
             "KONZ",
             "STER",
             "DCFS",
@@ -251,16 +272,6 @@
             "CLBJ",
             "JORN",
             "DEJU",
-            "PUUM",
-            "GUAN",
-            "BLAN",
-            "LAJA",
-            "SERC",
-            "DSNY",
-            "HARV",
-            "WOOD",
-            "MOAB",
-            "SJER",
             "HEAL",
             "JERC",
             "OSBS",
@@ -274,18 +285,7 @@
             "RMNP",
             "ONAQ",
             "KONA",
-            "CPER",
-            "TREE",
-            "GRSM",
-            "NIWO",
-            "ORNL",
-            "ABBY",
-            "LENO",
-            "SOAP",
-            "WREF",
-            "NOGP",
-            "MLBS",
-            "TEAK"
+            "CPER"
         ],
         "table:columns": [
             {

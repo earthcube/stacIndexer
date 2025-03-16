@@ -59,10 +59,6 @@
                 35.689
             ],
             [
-                -119.2622,
-                37.0334
-            ],
-            [
                 -89.5857,
                 45.4937
             ],
@@ -87,6 +83,10 @@
                 35.9641
             ],
             [
+                -119.2622,
+                37.0334
+            ],
+            [
                 -119.006,
                 37.0058
             ],
@@ -97,6 +97,62 @@
             [
                 -122.3303,
                 45.7624
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -149.2133,
+                63.8758
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -87.8039,
+                32.5417
+            ],
+            [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -84.4686,
+                31.1948
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -96.6129,
+                39.1104
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -89.5373,
+                46.2339
             ],
             [
                 -147.5026,
@@ -145,68 +201,12 @@
             [
                 -97.57,
                 33.4012
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -149.2133,
-                63.8758
-            ],
-            [
-                -149.3705,
-                68.6611
-            ],
-            [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -104.7456,
-                40.8155
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -110.8355,
-                31.9107
-            ],
-            [
-                -84.4686,
-                31.1948
-            ],
-            [
-                -105.546,
-                40.2759
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -96.6129,
-                39.1104
-            ],
-            [
-                -81.9934,
-                29.6893
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: PUUM, SJER, WOOD, MOAB, SERC, HARV, BLAN, GUAN, DSNY, LAJA, GRSM, SOAP, TREE, NIWO, MLBS, NOGP, LENO, ORNL, TEAK, WREF, ABBY, BONA, OAES, SCBI, YELL, DCFS, JORN, UKFS, STER, STEI, DEJU, KONZ, CLBJ, BART, HEAL, TOOL, UNDE, CPER, TALL, DELA, SRER, JERC, RMNP, BARR, ONAQ, KONA, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: PUUM, SJER, WOOD, MOAB, SERC, HARV, BLAN, GUAN, DSNY, LAJA, GRSM, TREE, NIWO, MLBS, NOGP, LENO, ORNL, SOAP, TEAK, WREF, ABBY, BART, HEAL, TOOL, CPER, TALL, DELA, SRER, JERC, RMNP, BARR, ONAQ, KONA, OSBS, UNDE, BONA, OAES, SCBI, YELL, DCFS, JORN, UKFS, STER, STEI, DEJU, KONZ, CLBJ.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:14:00",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -250,16 +250,30 @@
             "DSNY",
             "LAJA",
             "GRSM",
-            "SOAP",
             "TREE",
             "NIWO",
             "MLBS",
             "NOGP",
             "LENO",
             "ORNL",
+            "SOAP",
             "TEAK",
             "WREF",
             "ABBY",
+            "BART",
+            "HEAL",
+            "TOOL",
+            "CPER",
+            "TALL",
+            "DELA",
+            "SRER",
+            "JERC",
+            "RMNP",
+            "BARR",
+            "ONAQ",
+            "KONA",
+            "OSBS",
+            "UNDE",
             "BONA",
             "OAES",
             "SCBI",
@@ -271,21 +285,7 @@
             "STEI",
             "DEJU",
             "KONZ",
-            "CLBJ",
-            "BART",
-            "HEAL",
-            "TOOL",
-            "UNDE",
-            "CPER",
-            "TALL",
-            "DELA",
-            "SRER",
-            "JERC",
-            "RMNP",
-            "BARR",
-            "ONAQ",
-            "KONA",
-            "OSBS"
+            "CLBJ"
         ],
         "table:columns": [
             {
