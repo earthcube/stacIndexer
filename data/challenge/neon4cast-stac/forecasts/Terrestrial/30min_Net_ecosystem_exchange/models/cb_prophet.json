@@ -15,8 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.0588,
-                35.4106
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
             ],
             [
                 -78.1395,
@@ -63,20 +99,8 @@
                 39.1008
             ],
             [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
+                -99.0588,
+                35.4106
             ],
             [
                 -119.2622,
@@ -107,52 +131,20 @@
                 31.8539
             ],
             [
-                -109.3883,
-                38.2483
+                -80.5248,
+                37.3783
             ],
             [
-                -155.3173,
-                19.5531
+                -105.5824,
+                40.0543
             ],
             [
-                -76.56,
-                38.8901
+                -100.9154,
+                46.7697
             ],
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -81.9934,
-                29.6893
+                -84.2826,
+                35.9641
             ],
             [
                 -105.546,
@@ -201,12 +193,20 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -81.9934,
+                29.6893
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-05-31",
         "updated": null,
         "start_datetime": "2022-06-08T00:00:00Z",
@@ -239,7 +239,16 @@
             "nee",
             "30min",
             "PT30M",
-            "OAES",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
             "SCBI",
             "STEI",
             "STER",
@@ -251,10 +260,7 @@
             "DEJU",
             "JORN",
             "KONZ",
-            "MLBS",
-            "NIWO",
-            "NOGP",
-            "ORNL",
+            "OAES",
             "SOAP",
             "TEAK",
             "TREE",
@@ -262,18 +268,10 @@
             "ABBY",
             "GRSM",
             "LENO",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "ONAQ",
-            "OSBS",
+            "MLBS",
+            "NIWO",
+            "NOGP",
+            "ORNL",
             "RMNP",
             "SRER",
             "TALL",
@@ -285,7 +283,9 @@
             "DELA",
             "HEAL",
             "JERC",
-            "KONA"
+            "KONA",
+            "ONAQ",
+            "OSBS"
         ],
         "table:columns": [
             {

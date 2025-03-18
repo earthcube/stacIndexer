@@ -15,32 +15,36 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
+                -72.3295,
+                42.4719
             ],
             [
-                -111.5081,
-                33.751
+                -87.4077,
+                32.9604
             ],
             [
-                -96.6242,
-                34.4442
+                -96.6038,
+                39.1051
             ],
             [
-                -119.2575,
-                37.0597
+                -66.9868,
+                18.1135
             ],
             [
-                -84.2793,
-                35.9574
+                -84.4374,
+                31.1854
             ],
             [
-                -110.5871,
-                44.9501
+                -78.1473,
+                38.8943
             ],
             [
-                -83.5038,
-                35.6904
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
             ],
             [
                 -66.7987,
@@ -87,38 +91,6 @@
                 38.9459
             ],
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
@@ -149,12 +121,40 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: CRAM, SYCA, BLUE, BIGC, WALK, BLDE, LECO, GUIL, TOOK, PRIN, LEWI, OKSR, ARIK, SUGG, COMO, BARC, CARI, MCDI, HOPB, MAYF, KING, CUPE, FLNT, POSE, BLWA, MCRA, LIRO, PRLA, TECR, MART, REDB, TOMB, WLOU, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: HOPB, MAYF, KING, CUPE, FLNT, POSE, BLWA, MCRA, GUIL, TOOK, PRIN, LEWI, OKSR, ARIK, SUGG, COMO, BARC, CARI, MCDI, LIRO, PRLA, TECR, MART, REDB, TOMB, WLOU, PRPO, CRAM, SYCA, BLUE, BIGC, WALK, BLDE, LECO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,13 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
-            "SYCA",
-            "BLUE",
-            "BIGC",
-            "WALK",
-            "BLDE",
-            "LECO",
+            "HOPB",
+            "MAYF",
+            "KING",
+            "CUPE",
+            "FLNT",
+            "POSE",
+            "BLWA",
+            "MCRA",
             "GUIL",
             "TOOK",
             "PRIN",
@@ -205,14 +206,6 @@
             "BARC",
             "CARI",
             "MCDI",
-            "HOPB",
-            "MAYF",
-            "KING",
-            "CUPE",
-            "FLNT",
-            "POSE",
-            "BLWA",
-            "MCRA",
             "LIRO",
             "PRLA",
             "TECR",
@@ -220,7 +213,14 @@
             "REDB",
             "TOMB",
             "WLOU",
-            "PRPO"
+            "PRPO",
+            "CRAM",
+            "SYCA",
+            "BLUE",
+            "BIGC",
+            "WALK",
+            "BLDE",
+            "LECO"
         ],
         "table:columns": [
             {

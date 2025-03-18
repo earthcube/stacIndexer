@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -87.7982,
                 32.5415
             ],
@@ -25,6 +29,22 @@
             [
                 -78.1473,
                 38.8943
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
             ],
             [
                 -82.0084,
@@ -45,32 +65,12 @@
             [
                 -96.443,
                 38.9459
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.2531,
-                47.1298
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, POSE, BARC, SUGG, TOOK, COMO, MCDI, CRAM, TOMB, PRLA, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: CRAM, BLWA, FLNT, POSE, TOMB, PRLA, LIRO, PRPO, BARC, SUGG, TOOK, COMO, MCDI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -103,19 +103,19 @@
             "chla",
             "Daily",
             "P1D",
+            "CRAM",
             "BLWA",
             "FLNT",
             "POSE",
+            "TOMB",
+            "PRLA",
+            "LIRO",
+            "PRPO",
             "BARC",
             "SUGG",
             "TOOK",
             "COMO",
-            "MCDI",
-            "CRAM",
-            "TOMB",
-            "PRLA",
-            "LIRO",
-            "PRPO"
+            "MCDI"
         ],
         "table:columns": [
             {

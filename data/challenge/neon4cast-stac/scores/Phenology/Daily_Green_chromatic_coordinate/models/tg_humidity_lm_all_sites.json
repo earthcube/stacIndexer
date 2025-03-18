@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
                 -145.7514,
                 63.8811
             ],
@@ -61,46 +105,6 @@
             [
                 -96.5631,
                 39.1008
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -109.3883,
-                38.2483
             ],
             [
                 -149.2133,
@@ -159,54 +163,50 @@
                 46.2339
             ],
             [
-                -89.5857,
-                45.4937
+                -66.8687,
+                17.9696
             ],
             [
-                -88.1612,
-                31.8539
+                -119.7323,
+                37.1088
             ],
             [
-                -80.5248,
-                37.3783
+                -67.0769,
+                18.0213
             ],
             [
-                -83.5019,
-                35.689
+                -76.56,
+                38.8901
             ],
             [
-                -119.006,
-                37.0058
+                -155.3173,
+                19.5531
             ],
             [
-                -84.2826,
-                35.9641
+                -72.1727,
+                42.5369
             ],
             [
-                -105.5824,
-                40.0543
+                -99.2413,
+                47.1282
             ],
             [
-                -100.9154,
-                46.7697
+                -81.4362,
+                28.1251
             ],
             [
-                -119.2622,
-                37.0334
+                -78.0418,
+                39.0337
             ],
             [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
+                -109.3883,
+                38.2483
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: DEJU, CLBJ, BONA, OAES, YELL, STEI, UKFS, DCFS, SCBI, STER, JORN, KONZ, GUAN, SJER, LAJA, SERC, PUUM, HARV, WOOD, DSNY, BLAN, MOAB, HEAL, SRER, KONA, TALL, DELA, CPER, ONAQ, JERC, BARR, RMNP, TOOL, BART, OSBS, UNDE, TREE, LENO, MLBS, GRSM, TEAK, ORNL, NIWO, NOGP, SOAP, WREF, ABBY.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: TREE, LENO, MLBS, GRSM, TEAK, ORNL, NIWO, NOGP, SOAP, WREF, ABBY, DEJU, CLBJ, BONA, OAES, YELL, STEI, UKFS, DCFS, SCBI, STER, JORN, KONZ, HEAL, SRER, KONA, TALL, DELA, CPER, ONAQ, JERC, BARR, RMNP, TOOL, BART, OSBS, UNDE, GUAN, SJER, LAJA, SERC, PUUM, HARV, WOOD, DSNY, BLAN, MOAB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:15:27",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,17 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "TREE",
+            "LENO",
+            "MLBS",
+            "GRSM",
+            "TEAK",
+            "ORNL",
+            "NIWO",
+            "NOGP",
+            "SOAP",
+            "WREF",
+            "ABBY",
             "DEJU",
             "CLBJ",
             "BONA",
@@ -251,16 +262,6 @@
             "STER",
             "JORN",
             "KONZ",
-            "GUAN",
-            "SJER",
-            "LAJA",
-            "SERC",
-            "PUUM",
-            "HARV",
-            "WOOD",
-            "DSNY",
-            "BLAN",
-            "MOAB",
             "HEAL",
             "SRER",
             "KONA",
@@ -275,17 +276,16 @@
             "BART",
             "OSBS",
             "UNDE",
-            "TREE",
-            "LENO",
-            "MLBS",
-            "GRSM",
-            "TEAK",
-            "ORNL",
-            "NIWO",
-            "NOGP",
-            "SOAP",
-            "WREF",
-            "ABBY"
+            "GUAN",
+            "SJER",
+            "LAJA",
+            "SERC",
+            "PUUM",
+            "HARV",
+            "WOOD",
+            "DSNY",
+            "BLAN",
+            "MOAB"
         ],
         "table:columns": [
             {
