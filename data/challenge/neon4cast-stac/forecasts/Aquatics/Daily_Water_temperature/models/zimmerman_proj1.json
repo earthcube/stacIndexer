@@ -15,8 +15,20 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -99.2531,
@@ -27,26 +39,14 @@
                 47.1591
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0177,
-                29.6878
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "zimmerman_proj1",
-        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: CRAM, PRPO, PRLA, LIRO, BARC, TOOK, SUGG.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, LIRO, PRPO, PRLA, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 14:04:14",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
+            "BARC",
+            "SUGG",
+            "TOOK",
+            "LIRO",
             "PRPO",
             "PRLA",
-            "LIRO",
-            "BARC",
-            "TOOK",
-            "SUGG"
+            "CRAM"
         ],
         "table:columns": [
             {

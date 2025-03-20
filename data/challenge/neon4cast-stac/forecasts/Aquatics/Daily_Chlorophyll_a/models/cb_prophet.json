@@ -15,24 +15,28 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
+                -89.4737,
+                46.2097
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
-                -96.443,
-                38.9459
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
             ],
             [
                 -105.5442,
                 40.035
+            ],
+            [
+                -96.443,
+                38.9459
             ],
             [
                 -87.7982,
@@ -47,14 +51,6 @@
                 38.8943
             ],
             [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
@@ -63,14 +59,18 @@
                 47.1298
             ],
             [
-                -89.4737,
-                46.2097
+                -88.1589,
+                31.8534
+            ],
+            [
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, MCDI, COMO, BLWA, FLNT, POSE, TOMB, PRLA, LIRO, PRPO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: CRAM, SUGG, BARC, TOOK, COMO, MCDI, BLWA, FLNT, POSE, LIRO, PRPO, TOMB, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -103,19 +103,19 @@
             "chla",
             "Daily",
             "P1D",
-            "TOOK",
-            "BARC",
+            "CRAM",
             "SUGG",
-            "MCDI",
+            "BARC",
+            "TOOK",
             "COMO",
+            "MCDI",
             "BLWA",
             "FLNT",
             "POSE",
-            "TOMB",
-            "PRLA",
             "LIRO",
             "PRPO",
-            "CRAM"
+            "TOMB",
+            "PRLA"
         ],
         "table:columns": [
             {
