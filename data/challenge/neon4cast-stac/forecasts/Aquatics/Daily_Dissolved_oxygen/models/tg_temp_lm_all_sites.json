@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
@@ -59,66 +91,6 @@
                 39.7582
             ],
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
                 -121.9338,
                 45.7908
             ],
@@ -149,12 +121,40 @@
             [
                 -111.7979,
                 40.7839
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm_all_sites",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: SUGG, OKSR, GUIL, BARC, CARI, PRIN, MCDI, TOOK, LEWI, COMO, ARIK, HOPB, MCRA, MAYF, BLWA, POSE, KING, CUPE, FLNT, BLUE, CRAM, SYCA, BIGC, BLDE, LECO, WALK, MART, TOMB, LIRO, WLOU, PRPO, TECR, PRLA, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: HOPB, MCRA, MAYF, BLWA, POSE, KING, CUPE, FLNT, SUGG, OKSR, GUIL, BARC, CARI, PRIN, MCDI, TOOK, LEWI, COMO, ARIK, MART, TOMB, LIRO, WLOU, PRPO, TECR, PRLA, REDB, BLUE, CRAM, SYCA, BIGC, BLDE, LECO, WALK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:59:05",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "HOPB",
+            "MCRA",
+            "MAYF",
+            "BLWA",
+            "POSE",
+            "KING",
+            "CUPE",
+            "FLNT",
             "SUGG",
             "OKSR",
             "GUIL",
@@ -198,21 +206,6 @@
             "LEWI",
             "COMO",
             "ARIK",
-            "HOPB",
-            "MCRA",
-            "MAYF",
-            "BLWA",
-            "POSE",
-            "KING",
-            "CUPE",
-            "FLNT",
-            "BLUE",
-            "CRAM",
-            "SYCA",
-            "BIGC",
-            "BLDE",
-            "LECO",
-            "WALK",
             "MART",
             "TOMB",
             "LIRO",
@@ -220,7 +213,14 @@
             "PRPO",
             "TECR",
             "PRLA",
-            "REDB"
+            "REDB",
+            "BLUE",
+            "CRAM",
+            "SYCA",
+            "BIGC",
+            "BLDE",
+            "LECO",
+            "WALK"
         ],
         "table:columns": [
             {

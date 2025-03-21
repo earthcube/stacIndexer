@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
                 -87.7982,
                 32.5415
             ],
@@ -39,26 +27,38 @@
                 46.2097
             ],
             [
-                -88.1589,
-                31.8534
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -99.1139,
-                47.1591
-            ],
-            [
                 -89.7048,
                 45.9983
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: SUGG, TOOK, BARC, BLWA, FLNT, CRAM, TOMB, PRPO, PRLA, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: BLWA, FLNT, CRAM, TOOK, SUGG, BARC, PRPO, LIRO, TOMB, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
-            "SUGG",
-            "TOOK",
-            "BARC",
             "BLWA",
             "FLNT",
             "CRAM",
-            "TOMB",
+            "TOOK",
+            "SUGG",
+            "BARC",
             "PRPO",
-            "PRLA",
-            "LIRO"
+            "LIRO",
+            "TOMB",
+            "PRLA"
         ],
         "table:columns": [
             {

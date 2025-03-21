@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -96.6242,
                 34.4442
             ],
@@ -117,44 +149,12 @@
             [
                 -121.9338,
                 45.7908
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLUE, CRAM, LECO, BIGC, BLDE, WALK, SYCA, COMO, PRIN, LEWI, SUGG, MCDI, CARI, TOOK, OKSR, GUIL, BARC, ARIK, TOMB, REDB, PRPO, TECR, PRLA, WLOU, LIRO, MART, FLNT, KING, MCRA, CUPE, MAYF, BLWA, HOPB, POSE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: FLNT, KING, MCRA, CUPE, MAYF, BLWA, HOPB, POSE, BLUE, CRAM, LECO, BIGC, BLDE, WALK, SYCA, COMO, PRIN, LEWI, SUGG, MCDI, CARI, TOOK, OKSR, GUIL, BARC, ARIK, TOMB, REDB, PRPO, TECR, PRLA, WLOU, LIRO, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:24:13",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "FLNT",
+            "KING",
+            "MCRA",
+            "CUPE",
+            "MAYF",
+            "BLWA",
+            "HOPB",
+            "POSE",
             "BLUE",
             "CRAM",
             "LECO",
@@ -212,15 +220,7 @@
             "PRLA",
             "WLOU",
             "LIRO",
-            "MART",
-            "FLNT",
-            "KING",
-            "MCRA",
-            "CUPE",
-            "MAYF",
-            "BLWA",
-            "HOPB",
-            "POSE"
+            "MART"
         ],
         "table:columns": [
             {

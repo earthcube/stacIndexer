@@ -103,6 +103,50 @@
                 47.1282
             ],
             [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
                 -104.7456,
                 40.8155
             ],
@@ -157,56 +201,12 @@
             [
                 -110.8355,
                 31.9107
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -105.5824,
-                40.0543
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: YELL, STEI, UKFS, BONA, DEJU, JORN, DCFS, KONZ, CLBJ, STER, OAES, SCBI, DSNY, LAJA, HARV, SJER, SERC, GUAN, BLAN, MOAB, PUUM, WOOD, CPER, TOOL, BARR, JERC, DELA, UNDE, HEAL, ONAQ, KONA, RMNP, TALL, BART, OSBS, SRER, SOAP, TREE, NOGP, MLBS, ORNL, WREF, ABBY, TEAK, LENO, GRSM, NIWO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: YELL, STEI, UKFS, BONA, DEJU, JORN, DCFS, KONZ, CLBJ, STER, OAES, SCBI, DSNY, LAJA, HARV, SJER, SERC, GUAN, BLAN, MOAB, PUUM, WOOD, SOAP, TREE, NOGP, MLBS, ORNL, WREF, ABBY, TEAK, LENO, GRSM, NIWO, CPER, TOOL, BARR, JERC, DELA, UNDE, HEAL, ONAQ, KONA, RMNP, TALL, BART, OSBS, SRER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:14:00",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -261,6 +261,17 @@
             "MOAB",
             "PUUM",
             "WOOD",
+            "SOAP",
+            "TREE",
+            "NOGP",
+            "MLBS",
+            "ORNL",
+            "WREF",
+            "ABBY",
+            "TEAK",
+            "LENO",
+            "GRSM",
+            "NIWO",
             "CPER",
             "TOOL",
             "BARR",
@@ -274,18 +285,7 @@
             "TALL",
             "BART",
             "OSBS",
-            "SRER",
-            "SOAP",
-            "TREE",
-            "NOGP",
-            "MLBS",
-            "ORNL",
-            "WREF",
-            "ABBY",
-            "TEAK",
-            "LENO",
-            "GRSM",
-            "NIWO"
+            "SRER"
         ],
         "table:columns": [
             {

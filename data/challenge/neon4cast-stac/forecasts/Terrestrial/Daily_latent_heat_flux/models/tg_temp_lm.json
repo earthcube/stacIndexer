@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
                 -76.56,
                 38.8901
             ],
@@ -99,54 +147,6 @@
                 35.9641
             ],
             [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
                 -84.4686,
                 31.1948
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: SERC, SJER, HARV, GUAN, BLAN, LAJA, PUUM, DSNY, WOOD, MOAB, NIWO, MLBS, TEAK, ABBY, SOAP, WREF, GRSM, LENO, TREE, NOGP, ORNL, STEI, DEJU, UKFS, SCBI, YELL, DCFS, KONZ, OAES, STER, BONA, JORN, CLBJ, JERC, OSBS, TALL, BARR, CPER, TOOL, RMNP, HEAL, KONA, BART, SRER, UNDE, ONAQ, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: STEI, DEJU, UKFS, SCBI, YELL, DCFS, KONZ, OAES, STER, BONA, JORN, CLBJ, SERC, SJER, HARV, GUAN, BLAN, LAJA, PUUM, DSNY, WOOD, MOAB, NIWO, MLBS, TEAK, ABBY, SOAP, WREF, GRSM, LENO, TREE, NOGP, ORNL, JERC, OSBS, TALL, BARR, CPER, TOOL, RMNP, HEAL, KONA, BART, SRER, UNDE, ONAQ, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:27:34",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,18 @@
             "le",
             "Daily",
             "P1D",
+            "STEI",
+            "DEJU",
+            "UKFS",
+            "SCBI",
+            "YELL",
+            "DCFS",
+            "KONZ",
+            "OAES",
+            "STER",
+            "BONA",
+            "JORN",
+            "CLBJ",
             "SERC",
             "SJER",
             "HARV",
@@ -260,18 +272,6 @@
             "TREE",
             "NOGP",
             "ORNL",
-            "STEI",
-            "DEJU",
-            "UKFS",
-            "SCBI",
-            "YELL",
-            "DCFS",
-            "KONZ",
-            "OAES",
-            "STER",
-            "BONA",
-            "JORN",
-            "CLBJ",
             "JERC",
             "OSBS",
             "TALL",

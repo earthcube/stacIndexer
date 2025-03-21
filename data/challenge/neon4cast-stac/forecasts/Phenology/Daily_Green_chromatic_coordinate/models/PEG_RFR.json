@@ -19,10 +19,6 @@
                 42.5369
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -39,6 +35,10 @@
                 39.0404
             ],
             [
+                -83.5019,
+                35.689
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "PEG_RFR",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the PEG_RFR model. Information for the model is provided as follows: The PEG_RFR model was also a multi-output regression model, which predicted 36 days of GCC (t to t+35 days) using immediate past GCC (last 5 days) and GCC value from the last year, meaning (t-5)th to (t+14)th days GCC from last year.\n                                    The model predicts this variable at the following sites: HARV, GRSM, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the PEG_RFR model. Information for the model is provided as follows: The PEG_RFR model was also a multi-output regression model, which predicted 36 days of GCC (t to t+35 days) using immediate past GCC (last 5 days) and GCC value from the last year, meaning (t-5)th to (t+14)th days GCC from last year.\n                                    The model predicts this variable at the following sites: HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-07-20",
         "updated": null,
         "start_datetime": "2021-03-26T00:00:00Z",
@@ -84,11 +84,11 @@
             "Daily",
             "P1D",
             "HARV",
-            "GRSM",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
+            "GRSM",
             "BART",
             "DELA"
         ],
