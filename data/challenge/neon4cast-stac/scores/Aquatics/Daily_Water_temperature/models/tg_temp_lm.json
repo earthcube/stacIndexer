@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -149.143,
                 68.6698
             ],
@@ -87,38 +119,6 @@
                 33.751
             ],
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -105.9154,
                 39.8914
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: OKSR, PRIN, SUGG, CARI, COMO, BARC, TOOK, LEWI, MCDI, GUIL, ARIK, LECO, BIGC, WALK, CRAM, BLUE, BLDE, SYCA, KING, FLNT, BLWA, CUPE, HOPB, MAYF, MCRA, POSE, WLOU, REDB, TOMB, LIRO, PRPO, MART, TECR, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: KING, FLNT, BLWA, CUPE, HOPB, MAYF, MCRA, POSE, OKSR, PRIN, SUGG, CARI, COMO, BARC, TOOK, LEWI, MCDI, GUIL, ARIK, LECO, BIGC, WALK, CRAM, BLUE, BLDE, SYCA, WLOU, REDB, TOMB, LIRO, PRPO, MART, TECR, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "KING",
+            "FLNT",
+            "BLWA",
+            "CUPE",
+            "HOPB",
+            "MAYF",
+            "MCRA",
+            "POSE",
             "OKSR",
             "PRIN",
             "SUGG",
@@ -205,14 +213,6 @@
             "BLUE",
             "BLDE",
             "SYCA",
-            "KING",
-            "FLNT",
-            "BLWA",
-            "CUPE",
-            "HOPB",
-            "MAYF",
-            "MCRA",
-            "POSE",
             "WLOU",
             "REDB",
             "TOMB",

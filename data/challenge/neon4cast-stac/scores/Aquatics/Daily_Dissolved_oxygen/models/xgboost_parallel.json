@@ -15,50 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
                 -87.7982,
                 32.5415
             ],
@@ -83,12 +39,64 @@
                 32.9604
             ],
             [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -122.1655,
                 44.2596
             ],
             [
-                -78.1473,
-                38.8943
+                -82.0177,
+                29.6878
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -84.2793,
+                35.9574
             ],
             [
                 -119.2575,
@@ -103,44 +111,12 @@
                 34.4442
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -83.5038,
                 35.6904
             ],
             [
-                -111.5081,
-                33.751
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
+                -89.4737,
+                46.2097
             ],
             [
                 -119.0274,
@@ -149,12 +125,36 @@
             [
                 -88.1589,
                 31.8534
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, OKSR, PRIN, SUGG, TOOK, BLWA, CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, BIGC, BLDE, BLUE, CRAM, LECO, SYCA, WALK, WLOU, LIRO, MART, PRLA, PRPO, REDB, TECR, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, TOOK, OKSR, SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,40 +187,40 @@
             "oxygen",
             "Daily",
             "P1D",
-            "ARIK",
-            "BARC",
-            "CARI",
-            "COMO",
-            "GUIL",
-            "LEWI",
-            "MCDI",
-            "OKSR",
-            "PRIN",
-            "SUGG",
-            "TOOK",
             "BLWA",
             "CUPE",
             "FLNT",
             "HOPB",
             "KING",
             "MAYF",
-            "MCRA",
             "POSE",
+            "MCRA",
+            "SUGG",
+            "ARIK",
+            "BARC",
+            "COMO",
+            "GUIL",
+            "LEWI",
+            "MCDI",
+            "PRIN",
+            "CARI",
+            "TOOK",
+            "OKSR",
+            "SYCA",
+            "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
-            "CRAM",
             "LECO",
-            "SYCA",
-            "WALK",
-            "WLOU",
-            "LIRO",
-            "MART",
-            "PRLA",
-            "PRPO",
-            "REDB",
+            "CRAM",
             "TECR",
-            "TOMB"
+            "TOMB",
+            "WLOU",
+            "MART",
+            "REDB",
+            "LIRO",
+            "PRPO",
+            "PRLA"
         ],
         "table:columns": [
             {

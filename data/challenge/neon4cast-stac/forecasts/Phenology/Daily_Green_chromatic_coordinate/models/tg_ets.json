@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
                 -121.9519,
                 45.8205
             ],
@@ -153,60 +201,12 @@
             [
                 -112.4524,
                 40.1776
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -110.5391,
-                44.9535
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: WREF, NOGP, MLBS, TEAK, ABBY, NIWO, ORNL, SOAP, GRSM, LENO, TREE, DSNY, GUAN, WOOD, HARV, SERC, MOAB, SJER, PUUM, BLAN, LAJA, SRER, JERC, UNDE, BART, CPER, KONA, BARR, DELA, HEAL, TOOL, TALL, OSBS, RMNP, ONAQ, SCBI, KONZ, DCFS, STER, STEI, DEJU, OAES, UKFS, BONA, JORN, CLBJ, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SCBI, KONZ, DCFS, STER, STEI, DEJU, OAES, UKFS, BONA, JORN, CLBJ, YELL, WREF, NOGP, MLBS, TEAK, ABBY, NIWO, ORNL, SOAP, GRSM, LENO, TREE, DSNY, GUAN, WOOD, HARV, SERC, MOAB, SJER, PUUM, BLAN, LAJA, SRER, JERC, UNDE, BART, CPER, KONA, BARR, DELA, HEAL, TOOL, TALL, OSBS, RMNP, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:54:11",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,18 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "SCBI",
+            "KONZ",
+            "DCFS",
+            "STER",
+            "STEI",
+            "DEJU",
+            "OAES",
+            "UKFS",
+            "BONA",
+            "JORN",
+            "CLBJ",
+            "YELL",
             "WREF",
             "NOGP",
             "MLBS",
@@ -273,19 +285,7 @@
             "TALL",
             "OSBS",
             "RMNP",
-            "ONAQ",
-            "SCBI",
-            "KONZ",
-            "DCFS",
-            "STER",
-            "STEI",
-            "DEJU",
-            "OAES",
-            "UKFS",
-            "BONA",
-            "JORN",
-            "CLBJ",
-            "YELL"
+            "ONAQ"
         ],
         "table:columns": [
             {

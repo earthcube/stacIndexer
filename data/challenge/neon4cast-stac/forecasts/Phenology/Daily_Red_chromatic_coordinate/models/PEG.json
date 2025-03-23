@@ -15,12 +15,24 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -147.5026,
-                65.154
-            ],
-            [
                 -97.57,
                 33.4012
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
             ],
             [
                 -99.1066,
@@ -43,84 +55,68 @@
                 35.4106
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
                 -103.0293,
                 40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
             ],
             [
                 -110.5391,
                 44.9535
             ],
             [
-                -122.3303,
-                45.7624
+                -72.1727,
+                42.5369
             ],
             [
-                -83.5019,
-                35.689
+                -78.0418,
+                39.0337
             ],
             [
-                -88.1612,
-                31.8539
+                -81.4362,
+                28.1251
             ],
             [
-                -80.5248,
-                37.3783
+                -66.8687,
+                17.9696
             ],
             [
-                -105.5824,
-                40.0543
+                -67.0769,
+                18.0213
             ],
             [
-                -100.9154,
-                46.7697
+                -109.3883,
+                38.2483
             ],
             [
-                -84.2826,
-                35.9641
+                -155.3173,
+                19.5531
             ],
             [
-                -119.2622,
-                37.0334
+                -76.56,
+                38.8901
             ],
             [
-                -119.006,
-                37.0058
+                -119.7323,
+                37.1088
             ],
             [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -156.6194,
-                71.2824
+                -99.2413,
+                47.1282
             ],
             [
                 -71.2874,
                 44.0639
             ],
             [
-                -104.7456,
-                40.8155
-            ],
-            [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -104.7456,
+                40.8155
             ],
             [
                 -149.2133,
@@ -163,50 +159,54 @@
                 46.2339
             ],
             [
-                -78.0418,
-                39.0337
+                -83.5019,
+                35.689
             ],
             [
-                -81.4362,
-                28.1251
+                -122.3303,
+                45.7624
             ],
             [
-                -66.8687,
-                17.9696
+                -88.1612,
+                31.8539
             ],
             [
-                -72.1727,
-                42.5369
+                -80.5248,
+                37.3783
             ],
             [
-                -67.0769,
-                18.0213
+                -105.5824,
+                40.0543
             ],
             [
-                -109.3883,
-                38.2483
+                -100.9154,
+                46.7697
             ],
             [
-                -155.3173,
-                19.5531
+                -84.2826,
+                35.9641
             ],
             [
-                -76.56,
-                38.8901
+                -119.2622,
+                37.0334
             ],
             [
-                -119.7323,
-                37.1088
+                -119.006,
+                37.0058
             ],
             [
-                -99.2413,
-                47.1282
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
             ]
         ]
     },
     "properties": {
         "title": "PEG",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, BONA, DCFS, DEJU, JORN, KONZ, OAES, STER, YELL, HARV, BLAN, DSNY, GUAN, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BART, DELA, BARR, CPER, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, GRSM, ABBY, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-21",
         "updated": "2023-12-22 05:29:14",
         "start_datetime": "2021-09-12T00:00:00Z",
@@ -239,33 +239,32 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "BONA",
             "CLBJ",
+            "SCBI",
+            "STEI",
+            "UKFS",
+            "BONA",
             "DCFS",
             "DEJU",
             "JORN",
             "KONZ",
             "OAES",
-            "SCBI",
-            "STEI",
             "STER",
-            "UKFS",
             "YELL",
-            "ABBY",
-            "GRSM",
-            "LENO",
-            "MLBS",
-            "NIWO",
-            "NOGP",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
-            "BARR",
+            "HARV",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
             "BART",
-            "CPER",
             "DELA",
+            "BARR",
+            "CPER",
             "HEAL",
             "JERC",
             "KONA",
@@ -276,16 +275,17 @@
             "TALL",
             "TOOL",
             "UNDE",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD"
+            "GRSM",
+            "ABBY",
+            "LENO",
+            "MLBS",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF"
         ],
         "table:columns": [
             {

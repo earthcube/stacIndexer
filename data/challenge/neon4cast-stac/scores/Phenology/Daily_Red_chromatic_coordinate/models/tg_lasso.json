@@ -55,52 +55,48 @@
                 19.5531
             ],
             [
-                -96.5631,
-                39.1008
+                -100.9154,
+                46.7697
             ],
             [
-                -106.8425,
-                32.5907
+                -121.9519,
+                45.8205
             ],
             [
-                -78.1395,
-                38.8929
+                -84.2826,
+                35.9641
             ],
             [
-                -145.7514,
-                63.8811
+                -80.5248,
+                37.3783
             ],
             [
-                -97.57,
-                33.4012
+                -89.5857,
+                45.4937
             ],
             [
-                -99.1066,
-                47.1617
+                -119.006,
+                37.0058
             ],
             [
-                -95.1921,
-                39.0404
+                -122.3303,
+                45.7624
             ],
             [
-                -99.0588,
-                35.4106
+                -119.2622,
+                37.0334
             ],
             [
-                -103.0293,
-                40.4619
+                -83.5019,
+                35.689
             ],
             [
-                -110.5391,
-                44.9535
+                -88.1612,
+                31.8539
             ],
             [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -147.5026,
-                65.154
+                -105.5824,
+                40.0543
             ],
             [
                 -149.2133,
@@ -159,54 +155,58 @@
                 29.6893
             ],
             [
-                -100.9154,
-                46.7697
+                -96.5631,
+                39.1008
             ],
             [
-                -121.9519,
-                45.8205
+                -106.8425,
+                32.5907
             ],
             [
-                -84.2826,
-                35.9641
+                -78.1395,
+                38.8929
             ],
             [
-                -80.5248,
-                37.3783
+                -145.7514,
+                63.8811
             ],
             [
-                -89.5857,
-                45.4937
+                -97.57,
+                33.4012
             ],
             [
-                -119.006,
-                37.0058
+                -99.1066,
+                47.1617
             ],
             [
-                -122.3303,
-                45.7624
+                -95.1921,
+                39.0404
             ],
             [
-                -119.2622,
-                37.0334
+                -99.0588,
+                35.4106
             ],
             [
-                -83.5019,
-                35.689
+                -103.0293,
+                40.4619
             ],
             [
-                -88.1612,
-                31.8539
+                -110.5391,
+                44.9535
             ],
             [
-                -105.5824,
-                40.0543
+                -89.5864,
+                45.5089
+            ],
+            [
+                -147.5026,
+                65.154
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, BLAN, SERC, GUAN, SJER, HARV, WOOD, DSNY, PUUM, KONZ, JORN, SCBI, DEJU, CLBJ, DCFS, UKFS, OAES, STER, YELL, STEI, BONA, HEAL, RMNP, SRER, UNDE, CPER, KONA, TALL, BARR, TOOL, ONAQ, JERC, BART, DELA, OSBS, NOGP, WREF, ORNL, MLBS, TREE, TEAK, ABBY, SOAP, GRSM, LENO, NIWO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, BLAN, SERC, GUAN, SJER, HARV, WOOD, DSNY, PUUM, NOGP, WREF, ORNL, MLBS, TREE, TEAK, ABBY, SOAP, GRSM, LENO, NIWO, HEAL, RMNP, SRER, UNDE, CPER, KONA, TALL, BARR, TOOL, ONAQ, JERC, BART, DELA, OSBS, KONZ, JORN, SCBI, DEJU, CLBJ, DCFS, UKFS, OAES, STER, YELL, STEI, BONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -249,18 +249,17 @@
             "WOOD",
             "DSNY",
             "PUUM",
-            "KONZ",
-            "JORN",
-            "SCBI",
-            "DEJU",
-            "CLBJ",
-            "DCFS",
-            "UKFS",
-            "OAES",
-            "STER",
-            "YELL",
-            "STEI",
-            "BONA",
+            "NOGP",
+            "WREF",
+            "ORNL",
+            "MLBS",
+            "TREE",
+            "TEAK",
+            "ABBY",
+            "SOAP",
+            "GRSM",
+            "LENO",
+            "NIWO",
             "HEAL",
             "RMNP",
             "SRER",
@@ -275,17 +274,18 @@
             "BART",
             "DELA",
             "OSBS",
-            "NOGP",
-            "WREF",
-            "ORNL",
-            "MLBS",
-            "TREE",
-            "TEAK",
-            "ABBY",
-            "SOAP",
-            "GRSM",
-            "LENO",
-            "NIWO"
+            "KONZ",
+            "JORN",
+            "SCBI",
+            "DEJU",
+            "CLBJ",
+            "DCFS",
+            "UKFS",
+            "OAES",
+            "STER",
+            "YELL",
+            "STEI",
+            "BONA"
         ],
         "table:columns": [
             {

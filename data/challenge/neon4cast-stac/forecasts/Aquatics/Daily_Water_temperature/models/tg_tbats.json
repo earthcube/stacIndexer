@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
                 -119.2575,
                 37.0597
             ],
@@ -75,50 +119,6 @@
                 44.2596
             ],
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
                 -88.1589,
                 31.8534
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BIGC, SYCA, BLUE, BLDE, CRAM, WALK, LECO, POSE, HOPB, CUPE, BLWA, MAYF, FLNT, KING, MCRA, TOOK, OKSR, MCDI, BARC, GUIL, PRIN, SUGG, COMO, CARI, ARIK, LEWI, TOMB, PRLA, PRPO, TECR, LIRO, WLOU, MART, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: TOOK, OKSR, MCDI, BARC, GUIL, PRIN, SUGG, COMO, CARI, ARIK, LEWI, BIGC, SYCA, BLUE, BLDE, CRAM, WALK, LECO, POSE, HOPB, CUPE, BLWA, MAYF, FLNT, KING, MCRA, TOMB, PRLA, PRPO, TECR, LIRO, WLOU, MART, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:34:07",
         "start_datetime": "2022-08-06T00:00:00Z",
@@ -187,6 +187,17 @@
             "temperature",
             "Daily",
             "P1D",
+            "TOOK",
+            "OKSR",
+            "MCDI",
+            "BARC",
+            "GUIL",
+            "PRIN",
+            "SUGG",
+            "COMO",
+            "CARI",
+            "ARIK",
+            "LEWI",
             "BIGC",
             "SYCA",
             "BLUE",
@@ -202,17 +213,6 @@
             "FLNT",
             "KING",
             "MCRA",
-            "TOOK",
-            "OKSR",
-            "MCDI",
-            "BARC",
-            "GUIL",
-            "PRIN",
-            "SUGG",
-            "COMO",
-            "CARI",
-            "ARIK",
-            "LEWI",
             "TOMB",
             "PRLA",
             "PRPO",
