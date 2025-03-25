@@ -27,10 +27,6 @@
                 35.4106
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
                 -89.5864,
                 45.5089
             ],
@@ -51,16 +47,20 @@
                 65.154
             ],
             [
-                -97.57,
-                33.4012
-            ],
-            [
                 -99.1066,
                 47.1617
             ],
             [
                 -145.7514,
                 63.8811
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -97.57,
+                33.4012
             ],
             [
                 -72.1727,
@@ -139,12 +139,12 @@
                 45.8205
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -122.3303,
                 45.7624
+            ],
+            [
+                -83.5019,
+                35.689
             ],
             [
                 -149.2133,
@@ -187,8 +187,8 @@
                 46.2339
             ],
             [
-                -156.6194,
-                71.2824
+                -71.2874,
+                44.0639
             ],
             [
                 -104.7456,
@@ -199,18 +199,18 @@
                 32.5417
             ],
             [
-                -71.2874,
-                44.0639
+                -156.6194,
+                71.2824
             ]
         ]
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, GRSM, ABBY, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, CPER, DELA, BART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-03-18",
-        "updated": "2025-03-18 22:04:52",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: JORN, KONZ, OAES, STEI, STER, UKFS, YELL, BONA, DCFS, DEJU, SCBI, CLBJ, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BART, CPER, DELA, BARR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-03-20",
+        "updated": "2025-03-20 22:04:37",
         "start_datetime": "2022-08-24T00:00:00Z",
-        "end_datetime": "2025-03-19T00:00:00Z",
+        "end_datetime": "2025-03-21T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -242,15 +242,15 @@
             "JORN",
             "KONZ",
             "OAES",
-            "SCBI",
             "STEI",
             "STER",
             "UKFS",
             "YELL",
             "BONA",
-            "CLBJ",
             "DCFS",
             "DEJU",
+            "SCBI",
+            "CLBJ",
             "HARV",
             "LAJA",
             "MOAB",
@@ -270,8 +270,8 @@
             "TEAK",
             "TREE",
             "WREF",
-            "GRSM",
             "ABBY",
+            "GRSM",
             "HEAL",
             "JERC",
             "KONA",
@@ -282,10 +282,10 @@
             "TALL",
             "TOOL",
             "UNDE",
-            "BARR",
+            "BART",
             "CPER",
             "DELA",
-            "BART"
+            "BARR"
         ],
         "table:columns": [
             {
@@ -401,8 +401,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Red_chromatic_coordinate",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=persistenceRW\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=persistenceRW\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

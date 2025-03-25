@@ -103,50 +103,6 @@
                 45.5089
             ],
             [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
                 -149.3705,
                 68.6611
             ],
@@ -201,12 +157,56 @@
             [
                 -81.9934,
                 29.6893
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -88.1612,
+                31.8539
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS, NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:27:34",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -261,17 +261,6 @@
             "KONZ",
             "DEJU",
             "STEI",
-            "NIWO",
-            "SOAP",
-            "ABBY",
-            "NOGP",
-            "ORNL",
-            "TREE",
-            "GRSM",
-            "TEAK",
-            "MLBS",
-            "WREF",
-            "LENO",
             "TOOL",
             "UNDE",
             "HEAL",
@@ -285,7 +274,18 @@
             "RMNP",
             "BART",
             "CPER",
-            "OSBS"
+            "OSBS",
+            "NIWO",
+            "SOAP",
+            "ABBY",
+            "NOGP",
+            "ORNL",
+            "TREE",
+            "GRSM",
+            "TEAK",
+            "MLBS",
+            "WREF",
+            "LENO"
         ],
         "table:columns": [
             {
@@ -401,8 +401,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Net_ecosystem_exchange",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

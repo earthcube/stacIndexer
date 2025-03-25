@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -76.56,
+                38.8901
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -27,26 +35,18 @@
                 39.0404
             ],
             [
-                -76.56,
-                38.8901
-            ],
-            [
-                -78.0418,
-                39.0337
+                -87.3933,
+                32.9505
             ],
             [
                 -84.2826,
                 35.9641
-            ],
-            [
-                -87.3933,
-                32.9505
             ]
         ]
     },
     "properties": {
         "title": "BU_Dem",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the BU_Dem model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, SERC, BLAN, ORNL, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the BU_Dem model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SERC, BLAN, KONZ, SCBI, UKFS, TALL, ORNL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2019-10-06",
         "updated": null,
         "start_datetime": "2019-03-04T00:00:00Z",
@@ -79,13 +79,13 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
+            "SERC",
+            "BLAN",
             "KONZ",
             "SCBI",
             "UKFS",
-            "SERC",
-            "BLAN",
-            "ORNL",
-            "TALL"
+            "TALL",
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -201,8 +201,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Weekly Amblyomma_americanum_population",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

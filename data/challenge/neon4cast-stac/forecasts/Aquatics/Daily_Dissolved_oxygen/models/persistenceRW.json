@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -111.5081,
-                33.751
-            ],
-            [
                 -84.2793,
                 35.9574
             ],
@@ -39,20 +35,12 @@
                 35.6904
             ],
             [
+                -111.5081,
+                33.751
+            ],
+            [
                 -89.4737,
                 46.2097
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
             ],
             [
                 -87.7982,
@@ -75,16 +63,16 @@
                 39.1051
             ],
             [
-                -96.443,
-                38.9459
+                -87.4077,
+                32.9604
             ],
             [
-                -97.7823,
-                33.3785
+                -122.1655,
+                44.2596
             ],
             [
-                -82.0177,
-                29.6878
+                -78.1473,
+                38.8943
             ],
             [
                 -102.4471,
@@ -111,6 +99,18 @@
                 39.0956
             ],
             [
+                -96.443,
+                38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
                 -149.143,
                 68.6698
             ],
@@ -119,12 +119,8 @@
                 68.6307
             ],
             [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -119.0274,
-                36.9559
+                -88.1589,
+                31.8534
             ],
             [
                 -105.9154,
@@ -135,8 +131,12 @@
                 45.7908
             ],
             [
-                -88.1589,
-                31.8534
+                -111.7979,
+                40.7839
+            ],
+            [
+                -119.0274,
+                36.9559
             ],
             [
                 -99.1139,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, MAYF, MCRA, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCDI, PRIN, SUGG, ARIK, BARC, CARI, COMO, GUIL, LEWI, OKSR, TOOK, REDB, TECR, WLOU, MART, TOMB, PRLA, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: WALK, BIGC, BLDE, BLUE, LECO, SYCA, CRAM, BLWA, CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, PRIN, SUGG, OKSR, TOOK, TOMB, WLOU, MART, REDB, TECR, PRLA, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 22:03:59",
         "start_datetime": "2022-08-25T00:00:00Z",
@@ -187,37 +187,37 @@
             "oxygen",
             "Daily",
             "P1D",
-            "SYCA",
             "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
             "LECO",
+            "SYCA",
             "CRAM",
-            "MAYF",
-            "MCRA",
-            "POSE",
             "BLWA",
             "CUPE",
             "FLNT",
             "HOPB",
             "KING",
-            "MCDI",
-            "PRIN",
-            "SUGG",
+            "MAYF",
+            "MCRA",
+            "POSE",
             "ARIK",
             "BARC",
             "CARI",
             "COMO",
             "GUIL",
             "LEWI",
+            "MCDI",
+            "PRIN",
+            "SUGG",
             "OKSR",
             "TOOK",
-            "REDB",
-            "TECR",
+            "TOMB",
             "WLOU",
             "MART",
-            "TOMB",
+            "REDB",
+            "TECR",
             "PRLA",
             "PRPO",
             "LIRO"
@@ -336,8 +336,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

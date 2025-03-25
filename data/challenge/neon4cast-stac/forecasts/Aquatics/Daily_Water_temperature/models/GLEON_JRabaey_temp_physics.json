@@ -15,6 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
                 -66.9868,
                 18.1135
             ],
@@ -91,34 +119,6 @@
                 18.1741
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "GLEON_JRabaey_temp_physics",
-        "description": "All forecasts for the Daily_Water_temperature variable for the GLEON_JRabaey_temp_physics model. Information for the model is provided as follows: The JR-physics model is a simple process model based on the assumption that surface water\ntemperature should trend towards equilibration with air temperature with a lag factor..\n                                    The model predicts this variable at the following sites: CUPE, MCRA, BLWA, MAYF, HOPB, FLNT, KING, POSE, ARIK, COMO, BARC, PRIN, MCDI, LEWI, CARI, SUGG, TOOK, OKSR, GUIL, CRAM, LECO, BLDE, BLUE, WALK, BIGC, SYCA, PRLA, REDB, TECR, TOMB, PRPO, MART, LIRO, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the GLEON_JRabaey_temp_physics model. Information for the model is provided as follows: The JR-physics model is a simple process model based on the assumption that surface water\ntemperature should trend towards equilibration with air temperature with a lag factor..\n                                    The model predicts this variable at the following sites: CRAM, LECO, BLDE, BLUE, WALK, BIGC, SYCA, CUPE, MCRA, BLWA, MAYF, HOPB, FLNT, KING, POSE, ARIK, COMO, BARC, PRIN, MCDI, LEWI, CARI, SUGG, TOOK, OKSR, GUIL, PRLA, REDB, TECR, TOMB, PRPO, MART, LIRO, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-09",
         "updated": "2024-02-09 20:59:16",
         "start_datetime": "2022-11-15T00:00:00Z",
@@ -187,6 +187,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "CRAM",
+            "LECO",
+            "BLDE",
+            "BLUE",
+            "WALK",
+            "BIGC",
+            "SYCA",
             "CUPE",
             "MCRA",
             "BLWA",
@@ -206,13 +213,6 @@
             "TOOK",
             "OKSR",
             "GUIL",
-            "CRAM",
-            "LECO",
-            "BLDE",
-            "BLUE",
-            "WALK",
-            "BIGC",
-            "SYCA",
             "PRLA",
             "REDB",
             "TECR",
@@ -336,8 +336,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

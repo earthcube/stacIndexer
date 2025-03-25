@@ -27,26 +27,26 @@
                 68.6307
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
                 -89.7048,
                 45.9983
             ],
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All scores for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, CRAM, PRLA, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, LIRO, PRPO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 14:03:56",
         "start_datetime": "2024-03-01T00:00:00Z",
@@ -82,10 +82,10 @@
             "SUGG",
             "BARC",
             "TOOK",
-            "CRAM",
-            "PRLA",
             "LIRO",
-            "PRPO"
+            "PRPO",
+            "PRLA",
+            "CRAM"
         ],
         "table:columns": [
             {
