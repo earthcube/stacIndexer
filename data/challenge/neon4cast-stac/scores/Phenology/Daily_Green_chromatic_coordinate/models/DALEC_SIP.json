@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -89.5864,
                 45.5089
             ],
@@ -29,6 +25,10 @@
             [
                 -97.57,
                 33.4012
+            ],
+            [
+                -83.5019,
+                35.689
             ],
             [
                 -72.1727,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "DALEC_SIP",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the DALEC_SIP model. Information for the model is provided as follows: The DALEC-SIP model was a process-based carbon cycle and ecosystem model. It coupled a leaf-to-canopy radiative transfer model based on the spectral invariant properties (SIP) to the Data Assimilation Linked Carbon (DALEC) model.\n                                    The model predicts this variable at the following sites: GRSM, STEI, UKFS, CLBJ, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the DALEC_SIP model. Information for the model is provided as follows: The DALEC-SIP model was a process-based carbon cycle and ecosystem model. It coupled a leaf-to-canopy radiative transfer model based on the spectral invariant properties (SIP) to the Data Assimilation Linked Carbon (DALEC) model.\n                                    The model predicts this variable at the following sites: STEI, UKFS, CLBJ, GRSM, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-07-16",
         "updated": null,
         "start_datetime": "2021-03-01T00:00:00Z",
@@ -79,10 +79,10 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "GRSM",
             "STEI",
             "UKFS",
             "CLBJ",
+            "GRSM",
             "HARV",
             "BART",
             "DELA"
@@ -241,8 +241,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=DALEC_SIP?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=DALEC_SIP?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=DALEC_SIP\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=DALEC_SIP?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=DALEC_SIP?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=DALEC_SIP\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

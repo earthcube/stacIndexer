@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -145,6 +61,90 @@
             [
                 -110.5391,
                 44.9535
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
             ],
             [
                 -81.9934,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SOAP, LENO, GRSM, NIWO, TEAK, TREE, WREF, ABBY, MLBS, NOGP, ORNL, WOOD, BLAN, DSNY, MOAB, LAJA, PUUM, GUAN, SERC, HARV, SJER, OAES, KONZ, STER, DEJU, DCFS, JORN, CLBJ, STEI, BONA, SCBI, UKFS, YELL, OSBS, HEAL, CPER, SRER, UNDE, TOOL, KONA, DELA, ONAQ, RMNP, BART, TALL, BARR, JERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: OAES, KONZ, STER, DEJU, DCFS, JORN, CLBJ, STEI, BONA, SCBI, UKFS, YELL, WOOD, BLAN, DSNY, MOAB, LAJA, PUUM, GUAN, SERC, HARV, SJER, SOAP, LENO, GRSM, NIWO, TEAK, TREE, WREF, ABBY, MLBS, NOGP, ORNL, OSBS, HEAL, CPER, SRER, UNDE, TOOL, KONA, DELA, ONAQ, RMNP, BART, TALL, BARR, JERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:15",
         "start_datetime": "2023-01-07T00:00:00Z",
@@ -239,27 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "SOAP",
-            "LENO",
-            "GRSM",
-            "NIWO",
-            "TEAK",
-            "TREE",
-            "WREF",
-            "ABBY",
-            "MLBS",
-            "NOGP",
-            "ORNL",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "MOAB",
-            "LAJA",
-            "PUUM",
-            "GUAN",
-            "SERC",
-            "HARV",
-            "SJER",
             "OAES",
             "KONZ",
             "STER",
@@ -272,6 +251,27 @@
             "SCBI",
             "UKFS",
             "YELL",
+            "WOOD",
+            "BLAN",
+            "DSNY",
+            "MOAB",
+            "LAJA",
+            "PUUM",
+            "GUAN",
+            "SERC",
+            "HARV",
+            "SJER",
+            "SOAP",
+            "LENO",
+            "GRSM",
+            "NIWO",
+            "TEAK",
+            "TREE",
+            "WREF",
+            "ABBY",
+            "MLBS",
+            "NOGP",
+            "ORNL",
             "OSBS",
             "HEAL",
             "CPER",
@@ -441,8 +441,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily latent_heat_flux",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=le/model_id=tg_ets\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=le/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=le/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=le/model_id=tg_ets\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

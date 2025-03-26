@@ -11,42 +11,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/NEFIpheno.json"
+            "href": "./models/tg_tbats.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_precip_lm_all_sites.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_randfor.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/EFI_U_P.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_arima.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/PEG.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/climatology.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_humidity_lm.json"
+            "href": "./models/tg_temp_lm.json"
         },
         {
             "rel": "item",
@@ -76,12 +46,42 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_tbats.json"
+            "href": "./models/tg_humidity_lm.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_temp_lm.json"
+            "href": "./models/NEFIpheno.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/EFI_U_P.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/climatology.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_arima.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/PEG.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_precip_lm_all_sites.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_randfor.json"
         },
         {
             "rel": "item",
@@ -96,17 +96,17 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/tg_precip_lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/DALEC_SIP.json"
         },
         {
             "rel": "item",
             "type": "application/json",
             "href": "./models/Fourier.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_precip_lm.json"
         },
         {
             "rel": "item",
@@ -122,11 +122,6 @@
             "rel": "item",
             "type": "application/json",
             "href": "./models/VT_Ph_GDD.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/greenbears.json"
         },
         {
             "rel": "item",
@@ -147,6 +142,11 @@
             "rel": "item",
             "type": "application/json",
             "href": "./models/tg_ets.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/greenbears.json"
         },
         {
             "rel": "parent",
@@ -295,13 +295,13 @@
     ],
     "assets": {
         "data": {
-            "href": "\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=Daily/variable=gcc_90?endpoint_override=sdsc.osn.xsede.org\"",
+            "href": "\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=Daily/variable=gcc_90?endpoint_override=sdsc.osn.xsede.org\"",
             "type": "application/x-parquet",
             "title": "Database Access",
             "roles": [
                 "data"
             ],
-            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=Daily/variable=gcc_90?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=Daily/variable=gcc_90?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         },
         "thumbnail": {
             "href": "https://www.neonscience.org/sites/default/files/styles/max_1300x1300/public/image-content-images/_BFP8455.jpg",

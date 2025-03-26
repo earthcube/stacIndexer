@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -147.5026,
+                65.154
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
                 -119.006,
                 37.0058
             ],
@@ -99,54 +147,6 @@
                 47.1282
             ],
             [
-                -147.5026,
-                65.154
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
                 -112.4524,
                 40.1776
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: TEAK, TREE, LENO, MLBS, WREF, ABBY, SOAP, NOGP, ORNL, NIWO, GRSM, MOAB, PUUM, BLAN, HARV, LAJA, GUAN, SERC, SJER, DSNY, WOOD, BONA, DCFS, STER, UKFS, KONZ, OAES, DEJU, YELL, STEI, JORN, CLBJ, SCBI, ONAQ, UNDE, BARR, TALL, KONA, HEAL, TOOL, SRER, DELA, JERC, RMNP, CPER, BART, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: BONA, DCFS, STER, UKFS, KONZ, OAES, DEJU, YELL, STEI, JORN, CLBJ, SCBI, TEAK, TREE, LENO, MLBS, WREF, ABBY, SOAP, NOGP, ORNL, NIWO, GRSM, MOAB, PUUM, BLAN, HARV, LAJA, GUAN, SERC, SJER, DSNY, WOOD, ONAQ, UNDE, BARR, TALL, KONA, HEAL, TOOL, SRER, DELA, JERC, RMNP, CPER, BART, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:46:32",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,18 @@
             "nee",
             "Daily",
             "P1D",
+            "BONA",
+            "DCFS",
+            "STER",
+            "UKFS",
+            "KONZ",
+            "OAES",
+            "DEJU",
+            "YELL",
+            "STEI",
+            "JORN",
+            "CLBJ",
+            "SCBI",
             "TEAK",
             "TREE",
             "LENO",
@@ -260,18 +272,6 @@
             "SJER",
             "DSNY",
             "WOOD",
-            "BONA",
-            "DCFS",
-            "STER",
-            "UKFS",
-            "KONZ",
-            "OAES",
-            "DEJU",
-            "YELL",
-            "STEI",
-            "JORN",
-            "CLBJ",
-            "SCBI",
             "ONAQ",
             "UNDE",
             "BARR",
@@ -441,8 +441,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Net_ecosystem_exchange",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_precip_lm\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_precip_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=nee/model_id=tg_precip_lm\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

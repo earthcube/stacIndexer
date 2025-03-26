@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
                 -111.5081,
                 33.751
             ],
@@ -33,66 +41,6 @@
             [
                 -96.6242,
                 34.4442
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
             ],
             [
                 -87.7982,
@@ -115,12 +63,72 @@
                 39.1051
             ],
             [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -122.1655,
                 44.2596
             ],
             [
+                -147.504,
+                65.1532
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
                 -121.9338,
                 45.7908
+            ],
+            [
+                -99.2531,
+                47.1298
             ],
             [
                 -111.7979,
@@ -139,14 +147,6 @@
                 39.8914
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -99.1139,
                 47.1591
             ]
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MCDI, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, CARI, OKSR, TOOK, MAYF, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCRA, MART, REDB, TECR, TOMB, WLOU, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE, BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, CARI, COMO, GUIL, LEWI, MCDI, PRIN, SUGG, ARIK, BARC, OKSR, TOOK, LIRO, MART, PRPO, REDB, TECR, TOMB, WLOU, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,39 +187,39 @@
             "temperature",
             "Daily",
             "P1D",
+            "CRAM",
+            "LECO",
             "SYCA",
             "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
-            "CRAM",
-            "LECO",
-            "MCDI",
-            "PRIN",
-            "SUGG",
-            "ARIK",
-            "BARC",
-            "COMO",
-            "GUIL",
-            "LEWI",
-            "CARI",
-            "OKSR",
-            "TOOK",
-            "MAYF",
-            "POSE",
             "BLWA",
             "CUPE",
             "FLNT",
             "HOPB",
             "KING",
+            "MAYF",
+            "POSE",
             "MCRA",
+            "CARI",
+            "COMO",
+            "GUIL",
+            "LEWI",
+            "MCDI",
+            "PRIN",
+            "SUGG",
+            "ARIK",
+            "BARC",
+            "OKSR",
+            "TOOK",
+            "LIRO",
             "MART",
+            "PRPO",
             "REDB",
             "TECR",
             "TOMB",
             "WLOU",
-            "LIRO",
-            "PRPO",
             "PRLA"
         ],
         "table:columns": [
@@ -376,8 +376,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=xgboost_parallel\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=xgboost_parallel\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

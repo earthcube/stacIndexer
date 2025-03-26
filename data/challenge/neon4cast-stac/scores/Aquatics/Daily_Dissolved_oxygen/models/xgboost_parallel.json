@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -87.7982,
                 32.5415
             ],
@@ -45,6 +33,62 @@
             [
                 -96.6038,
                 39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
             ],
             [
                 -111.5081,
@@ -67,76 +111,12 @@
                 34.4442
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -83.5038,
                 35.6904
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
+                -89.4737,
+                46.2097
             ],
             [
                 -119.0274,
@@ -149,12 +129,32 @@
             [
                 -105.9154,
                 39.8914
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: MAYF, MCRA, POSE, BLWA, CUPE, FLNT, HOPB, KING, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MCDI, PRIN, SUGG, BARC, CARI, COMO, GUIL, LEWI, OKSR, TOOK, ARIK, LIRO, MART, PRLA, PRPO, REDB, TECR, TOMB, WLOU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, OKSR, TOOK, SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,40 +187,40 @@
             "oxygen",
             "Daily",
             "P1D",
-            "MAYF",
-            "MCRA",
-            "POSE",
             "BLWA",
             "CUPE",
             "FLNT",
             "HOPB",
             "KING",
+            "MAYF",
+            "POSE",
+            "MCRA",
+            "SUGG",
+            "ARIK",
+            "BARC",
+            "COMO",
+            "GUIL",
+            "LEWI",
+            "MCDI",
+            "PRIN",
+            "CARI",
+            "OKSR",
+            "TOOK",
             "SYCA",
             "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
-            "CRAM",
             "LECO",
-            "MCDI",
-            "PRIN",
-            "SUGG",
-            "BARC",
-            "CARI",
-            "COMO",
-            "GUIL",
-            "LEWI",
-            "OKSR",
-            "TOOK",
-            "ARIK",
-            "LIRO",
-            "MART",
-            "PRLA",
-            "PRPO",
-            "REDB",
+            "CRAM",
             "TECR",
             "TOMB",
-            "WLOU"
+            "WLOU",
+            "MART",
+            "REDB",
+            "LIRO",
+            "PRPO",
+            "PRLA"
         ],
         "table:columns": [
             {
@@ -376,8 +376,8 @@
         "3": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=xgboost_parallel\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=xgboost_parallel?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=xgboost_parallel\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
