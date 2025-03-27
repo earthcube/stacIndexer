@@ -15,98 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -149.143,
                 68.6698
             ],
@@ -149,12 +57,104 @@
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: BIGC, BLDE, LECO, WALK, SYCA, BLUE, CRAM, KING, HOPB, MCRA, BLWA, CUPE, FLNT, MAYF, POSE, REDB, PRLA, WLOU, TOMB, TECR, MART, LIRO, PRPO, OKSR, CARI, BARC, GUIL, LEWI, MCDI, SUGG, PRIN, COMO, ARIK, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: OKSR, CARI, BARC, GUIL, LEWI, MCDI, SUGG, PRIN, COMO, ARIK, TOOK, KING, HOPB, MCRA, BLWA, CUPE, FLNT, MAYF, POSE, BIGC, BLDE, LECO, WALK, SYCA, BLUE, CRAM, REDB, PRLA, WLOU, TOMB, TECR, MART, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:48:37",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,29 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BIGC",
-            "BLDE",
-            "LECO",
-            "WALK",
-            "SYCA",
-            "BLUE",
-            "CRAM",
-            "KING",
-            "HOPB",
-            "MCRA",
-            "BLWA",
-            "CUPE",
-            "FLNT",
-            "MAYF",
-            "POSE",
-            "REDB",
-            "PRLA",
-            "WLOU",
-            "TOMB",
-            "TECR",
-            "MART",
-            "LIRO",
-            "PRPO",
             "OKSR",
             "CARI",
             "BARC",
@@ -220,7 +197,30 @@
             "PRIN",
             "COMO",
             "ARIK",
-            "TOOK"
+            "TOOK",
+            "KING",
+            "HOPB",
+            "MCRA",
+            "BLWA",
+            "CUPE",
+            "FLNT",
+            "MAYF",
+            "POSE",
+            "BIGC",
+            "BLDE",
+            "LECO",
+            "WALK",
+            "SYCA",
+            "BLUE",
+            "CRAM",
+            "REDB",
+            "PRLA",
+            "WLOU",
+            "TOMB",
+            "TECR",
+            "MART",
+            "LIRO",
+            "PRPO"
         ],
         "table:columns": [
             {

@@ -27,10 +27,6 @@
                 47.1298
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -41,12 +37,16 @@
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All forecasts for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: PRLA, LIRO, PRPO, CRAM, SUGG, BARC, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: PRLA, LIRO, PRPO, SUGG, BARC, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-02-16",
         "updated": "2025-02-16 14:03:56",
         "start_datetime": "2024-03-01T00:00:00Z",
@@ -82,10 +82,10 @@
             "PRLA",
             "LIRO",
             "PRPO",
-            "CRAM",
             "SUGG",
             "BARC",
-            "TOOK"
+            "TOOK",
+            "CRAM"
         ],
         "table:columns": [
             {

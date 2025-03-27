@@ -15,80 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
+                -102.4471,
+                39.7582
             ],
             [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -82.0177,
-                29.6878
+                -96.443,
+                38.9459
             ],
             [
                 -66.7987,
                 18.1741
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -97.7823,
-                33.3785
             ],
             [
                 -147.504,
@@ -99,62 +35,126 @@
                 39.0956
             ],
             [
-                -149.143,
-                68.6698
+                -97.7823,
+                33.3785
             ],
             [
-                -82.0084,
-                29.676
+                -149.143,
+                68.6698
             ],
             [
                 -105.5442,
                 40.035
             ],
             [
-                -96.443,
-                38.9459
+                -82.0177,
+                29.6878
             ],
             [
-                -102.4471,
-                39.7582
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.4077,
+                32.9604
             ],
             [
                 -119.0274,
                 36.9559
             ],
             [
-                -99.2531,
-                47.1298
+                -99.1139,
+                47.1591
             ],
             [
                 -105.9154,
                 39.8914
             ],
             [
-                -89.7048,
-                45.9983
+                -99.2531,
+                47.1298
             ],
             [
                 -121.9338,
                 45.7908
             ],
             [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -99.1139,
-                47.1591
+                -89.7048,
+                45.9983
             ],
             [
                 -111.7979,
                 40.7839
+            ],
+            [
+                -88.1589,
+                31.8534
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: CRAM, BLDE, BLUE, BIGC, SYCA, WALK, LECO, BLWA, CUPE, MAYF, HOPB, FLNT, POSE, KING, MCRA, SUGG, GUIL, TOOK, PRIN, CARI, LEWI, OKSR, BARC, COMO, MCDI, ARIK, TECR, PRPO, WLOU, LIRO, MART, TOMB, PRLA, REDB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: ARIK, MCDI, GUIL, CARI, LEWI, PRIN, OKSR, COMO, SUGG, TOOK, BARC, SYCA, BLUE, CRAM, BIGC, WALK, BLDE, LECO, BLWA, HOPB, CUPE, KING, MCRA, POSE, FLNT, MAYF, TECR, PRLA, WLOU, PRPO, MART, LIRO, REDB, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
-            "BLDE",
-            "BLUE",
-            "BIGC",
-            "SYCA",
-            "WALK",
-            "LECO",
-            "BLWA",
-            "CUPE",
-            "MAYF",
-            "HOPB",
-            "FLNT",
-            "POSE",
-            "KING",
-            "MCRA",
-            "SUGG",
+            "ARIK",
+            "MCDI",
             "GUIL",
-            "TOOK",
-            "PRIN",
             "CARI",
             "LEWI",
+            "PRIN",
             "OKSR",
-            "BARC",
             "COMO",
-            "MCDI",
-            "ARIK",
+            "SUGG",
+            "TOOK",
+            "BARC",
+            "SYCA",
+            "BLUE",
+            "CRAM",
+            "BIGC",
+            "WALK",
+            "BLDE",
+            "LECO",
+            "BLWA",
+            "HOPB",
+            "CUPE",
+            "KING",
+            "MCRA",
+            "POSE",
+            "FLNT",
+            "MAYF",
             "TECR",
-            "PRPO",
-            "WLOU",
-            "LIRO",
-            "MART",
-            "TOMB",
             "PRLA",
-            "REDB"
+            "WLOU",
+            "PRPO",
+            "MART",
+            "LIRO",
+            "REDB",
+            "TOMB"
         ],
         "table:columns": [
             {
