@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
                 -81.4362,
                 28.1251
             ],
@@ -99,54 +147,6 @@
                 45.8205
             ],
             [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
                 -156.6194,
                 71.2824
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: DSNY, GUAN, LAJA, PUUM, SJER, BLAN, HARV, MOAB, SERC, WOOD, MLBS, TEAK, GRSM, NIWO, SOAP, LENO, ABBY, TREE, NOGP, ORNL, WREF, OAES, KONZ, STER, UKFS, YELL, SCBI, STEI, DCFS, CLBJ, DEJU, BONA, JORN, BARR, SRER, JERC, OSBS, DELA, TALL, UNDE, TOOL, BART, RMNP, CPER, HEAL, ONAQ, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: OAES, KONZ, STER, UKFS, YELL, SCBI, STEI, DCFS, CLBJ, DEJU, BONA, JORN, DSNY, GUAN, LAJA, PUUM, SJER, BLAN, HARV, MOAB, SERC, WOOD, MLBS, TEAK, GRSM, NIWO, SOAP, LENO, ABBY, TREE, NOGP, ORNL, WREF, BARR, SRER, JERC, OSBS, DELA, TALL, UNDE, TOOL, BART, RMNP, CPER, HEAL, ONAQ, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 23:18:50",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,18 @@
             "le",
             "Daily",
             "P1D",
+            "OAES",
+            "KONZ",
+            "STER",
+            "UKFS",
+            "YELL",
+            "SCBI",
+            "STEI",
+            "DCFS",
+            "CLBJ",
+            "DEJU",
+            "BONA",
+            "JORN",
             "DSNY",
             "GUAN",
             "LAJA",
@@ -260,18 +272,6 @@
             "NOGP",
             "ORNL",
             "WREF",
-            "OAES",
-            "KONZ",
-            "STER",
-            "UKFS",
-            "YELL",
-            "SCBI",
-            "STEI",
-            "DCFS",
-            "CLBJ",
-            "DEJU",
-            "BONA",
-            "JORN",
             "BARR",
             "SRER",
             "JERC",
