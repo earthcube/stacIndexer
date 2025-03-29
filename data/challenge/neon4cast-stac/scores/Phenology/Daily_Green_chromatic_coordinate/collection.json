@@ -16,12 +16,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_precip_lm_all_sites.json"
+            "href": "./models/tg_arima.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/NEFIpheno.json"
+            "href": "./models/PEG.json"
         },
         {
             "rel": "item",
@@ -36,17 +36,22 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_arima.json"
+            "href": "./models/tg_precip_lm_all_sites.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/PEG.json"
+            "href": "./models/NEFIpheno.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_humidity_lm.json"
+            "href": "./models/cb_prophet.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_lasso.json"
         },
         {
             "rel": "item",
@@ -71,17 +76,12 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/tg_humidity_lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/PEG_RFR.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/cb_prophet.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_lasso.json"
         },
         {
             "rel": "item",
@@ -126,6 +126,11 @@
         {
             "rel": "item",
             "type": "application/json",
+            "href": "./models/greenbears.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
             "href": "./models/tg_ets.json"
         },
         {
@@ -142,11 +147,6 @@
             "rel": "item",
             "type": "application/json",
             "href": "./models/tg_humidity_lm_all_sites.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/greenbears.json"
         },
         {
             "rel": "parent",
@@ -196,7 +196,7 @@
             "interval": [
                 [
                     "2020-04-27T00:00:00Z",
-                    "2025-03-24T00:00:00Z"
+                    "2025-03-25T00:00:00Z"
                 ]
             ]
         }

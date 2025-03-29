@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -89.7048,
                 45.9983
             ],
@@ -27,18 +39,6 @@
                 47.1298
             ],
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
                 -89.4737,
                 46.2097
             ]
@@ -46,11 +46,11 @@
     },
     "properties": {
         "title": "flareGLM_noDA",
-        "description": "All scores for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, BARC, SUGG, TOOK, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-02-16",
-        "updated": "2025-02-16 22:03:46",
+        "description": "All scores for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, LIRO, PRLA, PRPO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-03-24",
+        "updated": "2025-03-24 22:04:10",
         "start_datetime": "2023-03-02T00:00:00Z",
-        "end_datetime": "2025-02-17T00:00:00Z",
+        "end_datetime": "2025-03-25T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
+            "SUGG",
+            "BARC",
+            "TOOK",
             "LIRO",
             "PRLA",
             "PRPO",
-            "BARC",
-            "SUGG",
-            "TOOK",
             "CRAM"
         ],
         "table:columns": [

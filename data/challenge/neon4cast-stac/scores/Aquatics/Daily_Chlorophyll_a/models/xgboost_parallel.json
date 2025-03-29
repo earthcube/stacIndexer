@@ -15,8 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -82.0177,
@@ -29,14 +33,6 @@
             [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -84.4374,
-                31.1854
             ],
             [
                 -88.1589,
@@ -53,12 +49,16 @@
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: CRAM, SUGG, BARC, TOOK, BLWA, FLNT, TOMB, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BLWA, FLNT, SUGG, BARC, TOOK, TOMB, LIRO, PRPO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
-            "CRAM",
+            "BLWA",
+            "FLNT",
             "SUGG",
             "BARC",
             "TOOK",
-            "BLWA",
-            "FLNT",
             "TOMB",
             "LIRO",
             "PRPO",
-            "PRLA"
+            "PRLA",
+            "CRAM"
         ],
         "table:columns": [
             {

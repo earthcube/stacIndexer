@@ -15,44 +15,52 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -76.56,
-                38.8901
+                -147.5026,
+                65.154
             ],
             [
-                -72.1727,
-                42.5369
+                -96.5631,
+                39.1008
             ],
             [
-                -119.7323,
-                37.1088
+                -78.1395,
+                38.8929
             ],
             [
-                -67.0769,
-                18.0213
+                -89.5864,
+                45.5089
             ],
             [
-                -78.0418,
-                39.0337
+                -95.1921,
+                39.0404
             ],
             [
-                -99.2413,
-                47.1282
+                -110.5391,
+                44.9535
             ],
             [
-                -155.3173,
-                19.5531
+                -106.8425,
+                32.5907
             ],
             [
-                -109.3883,
-                38.2483
+                -145.7514,
+                63.8811
             ],
             [
-                -81.4362,
-                28.1251
+                -99.0588,
+                35.4106
             ],
             [
-                -66.8687,
-                17.9696
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -103.0293,
+                40.4619
             ],
             [
                 -122.3303,
@@ -97,6 +105,46 @@
             [
                 -119.2622,
                 37.0334
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
             ],
             [
                 -89.5373,
@@ -153,60 +201,12 @@
             [
                 -105.546,
                 40.2759
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -103.0293,
-                40.4619
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: SERC, HARV, SJER, LAJA, BLAN, WOOD, PUUM, MOAB, DSNY, GUAN, ABBY, NIWO, ORNL, NOGP, TREE, WREF, LENO, GRSM, MLBS, TEAK, SOAP, UNDE, JERC, ONAQ, CPER, BARR, KONA, HEAL, TOOL, DELA, TALL, OSBS, BART, SRER, RMNP, BONA, KONZ, SCBI, STEI, UKFS, YELL, JORN, DEJU, OAES, CLBJ, DCFS, STER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BONA, KONZ, SCBI, STEI, UKFS, YELL, JORN, DEJU, OAES, CLBJ, DCFS, STER, ABBY, NIWO, ORNL, NOGP, TREE, WREF, LENO, GRSM, MLBS, TEAK, SOAP, SERC, HARV, SJER, LAJA, BLAN, WOOD, PUUM, MOAB, DSNY, GUAN, UNDE, JERC, ONAQ, CPER, BARR, KONA, HEAL, TOOL, DELA, TALL, OSBS, BART, SRER, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:14:00",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,16 +239,18 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "SERC",
-            "HARV",
-            "SJER",
-            "LAJA",
-            "BLAN",
-            "WOOD",
-            "PUUM",
-            "MOAB",
-            "DSNY",
-            "GUAN",
+            "BONA",
+            "KONZ",
+            "SCBI",
+            "STEI",
+            "UKFS",
+            "YELL",
+            "JORN",
+            "DEJU",
+            "OAES",
+            "CLBJ",
+            "DCFS",
+            "STER",
             "ABBY",
             "NIWO",
             "ORNL",
@@ -260,6 +262,16 @@
             "MLBS",
             "TEAK",
             "SOAP",
+            "SERC",
+            "HARV",
+            "SJER",
+            "LAJA",
+            "BLAN",
+            "WOOD",
+            "PUUM",
+            "MOAB",
+            "DSNY",
+            "GUAN",
             "UNDE",
             "JERC",
             "ONAQ",
@@ -273,19 +285,7 @@
             "OSBS",
             "BART",
             "SRER",
-            "RMNP",
-            "BONA",
-            "KONZ",
-            "SCBI",
-            "STEI",
-            "UKFS",
-            "YELL",
-            "JORN",
-            "DEJU",
-            "OAES",
-            "CLBJ",
-            "DCFS",
-            "STER"
+            "RMNP"
         ],
         "table:columns": [
             {

@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -96.443,
                 38.9459
             ],
@@ -89,6 +57,38 @@
             [
                 -66.7987,
                 18.1741
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -84.2793,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: POSE, HOPB, KING, MAYF, MCRA, BLWA, CUPE, FLNT, MCDI, SUGG, ARIK, LEWI, BARC, CARI, COMO, OKSR, PRIN, TOOK, GUIL, WALK, BIGC, SYCA, BLDE, LECO, BLUE, CRAM, TECR, REDB, TOMB, PRPO, PRLA, WLOU, LIRO, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: MCDI, SUGG, ARIK, LEWI, BARC, CARI, COMO, OKSR, PRIN, TOOK, GUIL, POSE, HOPB, KING, MAYF, MCRA, BLWA, CUPE, FLNT, WALK, BIGC, SYCA, BLDE, LECO, BLUE, CRAM, TECR, REDB, TOMB, PRPO, PRLA, WLOU, LIRO, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:48:37",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,14 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "POSE",
-            "HOPB",
-            "KING",
-            "MAYF",
-            "MCRA",
-            "BLWA",
-            "CUPE",
-            "FLNT",
             "MCDI",
             "SUGG",
             "ARIK",
@@ -206,6 +198,14 @@
             "PRIN",
             "TOOK",
             "GUIL",
+            "POSE",
+            "HOPB",
+            "KING",
+            "MAYF",
+            "MCRA",
+            "BLWA",
+            "CUPE",
+            "FLNT",
             "WALK",
             "BIGC",
             "SYCA",

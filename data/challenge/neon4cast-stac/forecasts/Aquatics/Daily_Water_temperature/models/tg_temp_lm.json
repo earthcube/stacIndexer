@@ -15,6 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
                 -72.3295,
                 42.4719
             ],
@@ -45,34 +73,6 @@
             [
                 -122.1655,
                 44.2596
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -83.5038,
-                35.6904
             ],
             [
                 -66.7987,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: HOPB, MAYF, KING, CUPE, FLNT, POSE, BLWA, MCRA, CRAM, SYCA, BLUE, BIGC, WALK, BLDE, LECO, GUIL, TOOK, PRIN, LEWI, OKSR, ARIK, SUGG, COMO, BARC, CARI, MCDI, LIRO, PRLA, TECR, MART, REDB, TOMB, WLOU, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: CRAM, SYCA, BLUE, BIGC, WALK, BLDE, LECO, HOPB, MAYF, KING, CUPE, FLNT, POSE, BLWA, MCRA, GUIL, TOOK, PRIN, LEWI, OKSR, ARIK, SUGG, COMO, BARC, CARI, MCDI, LIRO, PRLA, TECR, MART, REDB, TOMB, WLOU, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,6 +187,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "CRAM",
+            "SYCA",
+            "BLUE",
+            "BIGC",
+            "WALK",
+            "BLDE",
+            "LECO",
             "HOPB",
             "MAYF",
             "KING",
@@ -195,13 +202,6 @@
             "POSE",
             "BLWA",
             "MCRA",
-            "CRAM",
-            "SYCA",
-            "BLUE",
-            "BIGC",
-            "WALK",
-            "BLDE",
-            "LECO",
             "GUIL",
             "TOOK",
             "PRIN",
