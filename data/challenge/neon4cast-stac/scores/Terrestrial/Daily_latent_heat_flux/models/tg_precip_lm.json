@@ -15,44 +15,56 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -109.3883,
-                38.2483
+                -95.1921,
+                39.0404
             ],
             [
-                -76.56,
-                38.8901
+                -103.0293,
+                40.4619
             ],
             [
-                -72.1727,
-                42.5369
+                -99.0588,
+                35.4106
             ],
             [
-                -155.3173,
-                19.5531
+                -99.1066,
+                47.1617
             ],
             [
-                -81.4362,
-                28.1251
+                -89.5864,
+                45.5089
             ],
             [
-                -119.7323,
-                37.1088
+                -106.8425,
+                32.5907
             ],
             [
-                -67.0769,
-                18.0213
+                -147.5026,
+                65.154
             ],
             [
-                -99.2413,
-                47.1282
+                -97.57,
+                33.4012
             ],
             [
-                -78.0418,
-                39.0337
+                -96.5631,
+                39.1008
             ],
             [
-                -66.8687,
-                17.9696
+                -78.1395,
+                38.8929
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -122.3303,
+                45.7624
             ],
             [
                 -88.1612,
@@ -67,20 +79,24 @@
                 35.689
             ],
             [
-                -121.9519,
-                45.8205
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.006,
+                37.0058
             ],
             [
                 -119.2622,
                 37.0334
             ],
             [
-                -122.3303,
-                45.7624
+                -89.5857,
+                45.4937
             ],
             [
-                -100.9154,
-                46.7697
+                -121.9519,
+                45.8205
             ],
             [
                 -105.5824,
@@ -91,68 +107,44 @@
                 37.3783
             ],
             [
-                -119.006,
-                37.0058
+                -109.3883,
+                38.2483
             ],
             [
-                -89.5857,
-                45.4937
+                -119.7323,
+                37.1088
             ],
             [
-                -110.5391,
-                44.9535
+                -66.8687,
+                17.9696
             ],
             [
-                -106.8425,
-                32.5907
+                -155.3173,
+                19.5531
             ],
             [
-                -103.0293,
-                40.4619
+                -99.2413,
+                47.1282
             ],
             [
-                -97.57,
-                33.4012
+                -72.1727,
+                42.5369
             ],
             [
-                -99.0588,
-                35.4106
+                -81.4362,
+                28.1251
             ],
             [
-                -96.5631,
-                39.1008
+                -76.56,
+                38.8901
             ],
             [
-                -145.7514,
-                63.8811
+                -67.0769,
+                18.0213
             ],
             [
-                -147.5026,
-                65.154
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -96.6129,
-                39.1104
-            ],
-            [
-                -110.8355,
-                31.9107
+                -78.0418,
+                39.0337
             ],
             [
                 -105.546,
@@ -163,40 +155,48 @@
                 32.9505
             ],
             [
-                -149.3705,
-                68.6611
-            ],
-            [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -156.6194,
-                71.2824
-            ],
-            [
                 -104.7456,
                 40.8155
             ],
             [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -71.2874,
-                44.0639
+                -149.3705,
+                68.6611
             ],
             [
                 -149.2133,
                 63.8758
             ],
             [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -96.6129,
+                39.1104
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -110.8355,
+                31.9107
             ],
             [
                 -84.4686,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: MOAB, SERC, HARV, PUUM, DSNY, SJER, LAJA, WOOD, BLAN, GUAN, LENO, ORNL, GRSM, WREF, SOAP, ABBY, NOGP, NIWO, MLBS, TEAK, TREE, YELL, JORN, STER, CLBJ, OAES, KONZ, DEJU, BONA, UKFS, SCBI, STEI, DCFS, KONA, SRER, RMNP, TALL, TOOL, UNDE, OSBS, BARR, CPER, ONAQ, BART, HEAL, DELA, JERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: UKFS, STER, OAES, DCFS, STEI, JORN, BONA, CLBJ, KONZ, SCBI, YELL, DEJU, ABBY, LENO, ORNL, GRSM, NOGP, TEAK, SOAP, TREE, WREF, NIWO, MLBS, MOAB, SJER, GUAN, PUUM, WOOD, HARV, DSNY, SERC, LAJA, BLAN, RMNP, TALL, CPER, TOOL, HEAL, BART, ONAQ, DELA, OSBS, UNDE, KONA, BARR, SRER, JERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:46:32",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,52 +239,52 @@
             "le",
             "Daily",
             "P1D",
-            "MOAB",
-            "SERC",
-            "HARV",
-            "PUUM",
-            "DSNY",
-            "SJER",
-            "LAJA",
-            "WOOD",
-            "BLAN",
-            "GUAN",
+            "UKFS",
+            "STER",
+            "OAES",
+            "DCFS",
+            "STEI",
+            "JORN",
+            "BONA",
+            "CLBJ",
+            "KONZ",
+            "SCBI",
+            "YELL",
+            "DEJU",
+            "ABBY",
             "LENO",
             "ORNL",
             "GRSM",
-            "WREF",
-            "SOAP",
-            "ABBY",
             "NOGP",
+            "TEAK",
+            "SOAP",
+            "TREE",
+            "WREF",
             "NIWO",
             "MLBS",
-            "TEAK",
-            "TREE",
-            "YELL",
-            "JORN",
-            "STER",
-            "CLBJ",
-            "OAES",
-            "KONZ",
-            "DEJU",
-            "BONA",
-            "UKFS",
-            "SCBI",
-            "STEI",
-            "DCFS",
-            "KONA",
-            "SRER",
+            "MOAB",
+            "SJER",
+            "GUAN",
+            "PUUM",
+            "WOOD",
+            "HARV",
+            "DSNY",
+            "SERC",
+            "LAJA",
+            "BLAN",
             "RMNP",
             "TALL",
-            "TOOL",
-            "UNDE",
-            "OSBS",
-            "BARR",
             "CPER",
-            "ONAQ",
-            "BART",
+            "TOOL",
             "HEAL",
+            "BART",
+            "ONAQ",
             "DELA",
+            "OSBS",
+            "UNDE",
+            "KONA",
+            "BARR",
+            "SRER",
             "JERC"
         ],
         "table:columns": [

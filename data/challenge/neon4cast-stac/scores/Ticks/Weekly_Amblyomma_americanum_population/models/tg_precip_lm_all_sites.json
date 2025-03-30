@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -78.0418,
                 39.0337
             ],
@@ -43,6 +35,14 @@
                 39.0404
             ],
             [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
                 -81.9934,
                 29.6893
             ],
@@ -54,7 +54,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: BLAN, SERC, KONZ, SCBI, UKFS, LENO, ORNL, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -87,13 +87,13 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "LENO",
-            "ORNL",
             "BLAN",
             "SERC",
             "KONZ",
             "SCBI",
             "UKFS",
+            "LENO",
+            "ORNL",
             "OSBS",
             "TALL"
         ],

@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -145,6 +61,90 @@
             [
                 -145.7514,
                 63.8811
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
             ],
             [
                 -96.6129,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA, GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:09",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,27 +239,6 @@
             "nee",
             "Daily",
             "P1D",
-            "MOAB",
-            "HARV",
-            "PUUM",
-            "BLAN",
-            "GUAN",
-            "DSNY",
-            "SJER",
-            "SERC",
-            "WOOD",
-            "LAJA",
-            "GRSM",
-            "NOGP",
-            "SOAP",
-            "MLBS",
-            "ORNL",
-            "WREF",
-            "NIWO",
-            "ABBY",
-            "LENO",
-            "TEAK",
-            "TREE",
             "OAES",
             "BONA",
             "SCBI",
@@ -272,6 +251,27 @@
             "UKFS",
             "CLBJ",
             "DEJU",
+            "GRSM",
+            "NOGP",
+            "SOAP",
+            "MLBS",
+            "ORNL",
+            "WREF",
+            "NIWO",
+            "ABBY",
+            "LENO",
+            "TEAK",
+            "TREE",
+            "MOAB",
+            "HARV",
+            "PUUM",
+            "BLAN",
+            "GUAN",
+            "DSNY",
+            "SJER",
+            "SERC",
+            "WOOD",
+            "LAJA",
             "KONA",
             "CPER",
             "UNDE",
