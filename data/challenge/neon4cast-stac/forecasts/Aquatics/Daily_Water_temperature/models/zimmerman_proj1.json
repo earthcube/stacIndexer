@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -82.0084,
                 29.676
             ],
@@ -41,16 +29,28 @@
             [
                 -89.4737,
                 46.2097
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -89.7048,
+                45.9983
             ]
         ]
     },
     "properties": {
         "title": "zimmerman_proj1",
-        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: PRLA, PRPO, LIRO, BARC, SUGG, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-03-25",
-        "updated": "2025-03-25 14:04:30",
+        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, CRAM, PRLA, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-03-26",
+        "updated": "2025-03-26 14:04:55",
         "start_datetime": "2024-02-28T00:00:00Z",
-        "end_datetime": "2025-03-26T00:00:00Z",
+        "end_datetime": "2025-03-27T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/poz3615/NEON-forecast-challenge-workshop/blob/main/Submit_forecast/forecast_code_template.Rmd",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "PRLA",
-            "PRPO",
-            "LIRO",
             "BARC",
             "SUGG",
             "TOOK",
-            "CRAM"
+            "CRAM",
+            "PRLA",
+            "PRPO",
+            "LIRO"
         ],
         "table:columns": [
             {
