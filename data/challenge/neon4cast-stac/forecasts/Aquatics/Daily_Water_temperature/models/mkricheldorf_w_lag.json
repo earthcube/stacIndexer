@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
@@ -27,16 +23,20 @@
                 29.676
             ],
             [
-                -89.7048,
-                45.9983
+                -82.0177,
+                29.6878
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -99.1139,
-                47.1591
+                -89.7048,
+                45.9983
             ],
             [
                 -89.4737,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "mkricheldorf_w_lag",
-        "description": "All forecasts for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: SUGG, TOOK, BARC, LIRO, PRPO, PRLA, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-25",
         "updated": "2024-08-29 16:25:04",
         "start_datetime": "2024-03-06T00:00:00Z",
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "SUGG",
             "TOOK",
             "BARC",
-            "LIRO",
-            "PRPO",
+            "SUGG",
             "PRLA",
+            "PRPO",
+            "LIRO",
             "CRAM"
         ],
         "table:columns": [

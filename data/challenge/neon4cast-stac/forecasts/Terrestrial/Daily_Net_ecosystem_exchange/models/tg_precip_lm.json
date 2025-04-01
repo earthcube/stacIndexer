@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -119.006,
                 37.0058
             ],
@@ -57,46 +97,6 @@
             [
                 -83.5019,
                 35.689
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -99.2413,
-                47.1282
             ],
             [
                 -147.5026,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: TEAK, TREE, LENO, MLBS, WREF, ABBY, SOAP, NOGP, ORNL, NIWO, GRSM, MOAB, PUUM, BLAN, HARV, LAJA, GUAN, SERC, SJER, DSNY, WOOD, BONA, DCFS, STER, UKFS, KONZ, OAES, DEJU, YELL, STEI, JORN, CLBJ, SCBI, ONAQ, UNDE, BARR, TALL, KONA, HEAL, TOOL, SRER, DELA, JERC, RMNP, CPER, BART, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: MOAB, PUUM, BLAN, HARV, LAJA, GUAN, SERC, SJER, DSNY, WOOD, TEAK, TREE, LENO, MLBS, WREF, ABBY, SOAP, NOGP, ORNL, NIWO, GRSM, BONA, DCFS, STER, UKFS, KONZ, OAES, DEJU, YELL, STEI, JORN, CLBJ, SCBI, ONAQ, UNDE, BARR, TALL, KONA, HEAL, TOOL, SRER, DELA, JERC, RMNP, CPER, BART, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:46:32",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,16 @@
             "nee",
             "Daily",
             "P1D",
+            "MOAB",
+            "PUUM",
+            "BLAN",
+            "HARV",
+            "LAJA",
+            "GUAN",
+            "SERC",
+            "SJER",
+            "DSNY",
+            "WOOD",
             "TEAK",
             "TREE",
             "LENO",
@@ -250,16 +260,6 @@
             "ORNL",
             "NIWO",
             "GRSM",
-            "MOAB",
-            "PUUM",
-            "BLAN",
-            "HARV",
-            "LAJA",
-            "GUAN",
-            "SERC",
-            "SJER",
-            "DSNY",
-            "WOOD",
             "BONA",
             "DCFS",
             "STER",
