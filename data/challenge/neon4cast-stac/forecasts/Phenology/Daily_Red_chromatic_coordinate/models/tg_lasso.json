@@ -15,52 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
+                -67.0769,
+                18.0213
             ],
             [
-                -106.8425,
-                32.5907
+                -109.3883,
+                38.2483
             ],
             [
-                -78.1395,
-                38.8929
+                -78.0418,
+                39.0337
             ],
             [
-                -145.7514,
-                63.8811
+                -76.56,
+                38.8901
             ],
             [
-                -97.57,
-                33.4012
+                -66.8687,
+                17.9696
             ],
             [
-                -99.1066,
-                47.1617
+                -119.7323,
+                37.1088
             ],
             [
-                -95.1921,
-                39.0404
+                -72.1727,
+                42.5369
             ],
             [
-                -99.0588,
-                35.4106
+                -99.2413,
+                47.1282
             ],
             [
-                -103.0293,
-                40.4619
+                -81.4362,
+                28.1251
             ],
             [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -147.5026,
-                65.154
+                -155.3173,
+                19.5531
             ],
             [
                 -100.9154,
@@ -107,44 +99,52 @@
                 40.0543
             ],
             [
-                -67.0769,
-                18.0213
+                -96.5631,
+                39.1008
             ],
             [
-                -109.3883,
-                38.2483
+                -106.8425,
+                32.5907
             ],
             [
-                -78.0418,
-                39.0337
+                -78.1395,
+                38.8929
             ],
             [
-                -76.56,
-                38.8901
+                -145.7514,
+                63.8811
             ],
             [
-                -66.8687,
-                17.9696
+                -97.57,
+                33.4012
             ],
             [
-                -119.7323,
-                37.1088
+                -99.1066,
+                47.1617
             ],
             [
-                -72.1727,
-                42.5369
+                -95.1921,
+                39.0404
             ],
             [
-                -99.2413,
-                47.1282
+                -99.0588,
+                35.4106
             ],
             [
-                -81.4362,
-                28.1251
+                -103.0293,
+                40.4619
             ],
             [
-                -155.3173,
-                19.5531
+                -110.5391,
+                44.9535
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -147.5026,
+                65.154
             ],
             [
                 -149.2133,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: KONZ, JORN, SCBI, DEJU, CLBJ, DCFS, UKFS, OAES, STER, YELL, STEI, BONA, NOGP, WREF, ORNL, MLBS, TREE, TEAK, ABBY, SOAP, GRSM, LENO, NIWO, LAJA, MOAB, BLAN, SERC, GUAN, SJER, HARV, WOOD, DSNY, PUUM, HEAL, RMNP, SRER, UNDE, CPER, KONA, TALL, BARR, TOOL, ONAQ, JERC, BART, DELA, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, BLAN, SERC, GUAN, SJER, HARV, WOOD, DSNY, PUUM, NOGP, WREF, ORNL, MLBS, TREE, TEAK, ABBY, SOAP, GRSM, LENO, NIWO, KONZ, JORN, SCBI, DEJU, CLBJ, DCFS, UKFS, OAES, STER, YELL, STEI, BONA, HEAL, RMNP, SRER, UNDE, CPER, KONA, TALL, BARR, TOOL, ONAQ, JERC, BART, DELA, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,27 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "LAJA",
+            "MOAB",
+            "BLAN",
+            "SERC",
+            "GUAN",
+            "SJER",
+            "HARV",
+            "WOOD",
+            "DSNY",
+            "PUUM",
+            "NOGP",
+            "WREF",
+            "ORNL",
+            "MLBS",
+            "TREE",
+            "TEAK",
+            "ABBY",
+            "SOAP",
+            "GRSM",
+            "LENO",
+            "NIWO",
             "KONZ",
             "JORN",
             "SCBI",
@@ -251,27 +272,6 @@
             "YELL",
             "STEI",
             "BONA",
-            "NOGP",
-            "WREF",
-            "ORNL",
-            "MLBS",
-            "TREE",
-            "TEAK",
-            "ABBY",
-            "SOAP",
-            "GRSM",
-            "LENO",
-            "NIWO",
-            "LAJA",
-            "MOAB",
-            "BLAN",
-            "SERC",
-            "GUAN",
-            "SJER",
-            "HARV",
-            "WOOD",
-            "DSNY",
-            "PUUM",
             "HEAL",
             "RMNP",
             "SRER",

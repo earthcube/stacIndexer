@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -111.5081,
-                33.751
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
                 -119.2575,
                 37.0597
             ],
@@ -43,44 +35,16 @@
                 35.6904
             ],
             [
-                -66.9868,
-                18.1135
+                -111.5081,
+                33.751
             ],
             [
-                -84.4374,
-                31.1854
+                -84.2793,
+                35.9574
             ],
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
+                -102.4471,
+                39.7582
             ],
             [
                 -82.0084,
@@ -115,24 +79,44 @@
                 33.3785
             ],
             [
-                -102.4471,
-                39.7582
+                -82.0177,
+                29.6878
             ],
             [
-                -99.2531,
-                47.1298
+                -149.6106,
+                68.6307
             ],
             [
-                -111.7979,
-                40.7839
+                -87.7982,
+                32.5415
             ],
             [
-                -119.0274,
-                36.9559
+                -66.9868,
+                18.1135
             ],
             [
-                -88.1589,
-                31.8534
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
             ],
             [
                 -105.9154,
@@ -149,12 +133,28 @@
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, BLWA, SUGG, TOOK, BARC, CARI, COMO, GUIL, LEWI, MCDI, OKSR, PRIN, ARIK, PRPO, REDB, TECR, TOMB, WLOU, LIRO, MART, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BIGC, BLDE, BLUE, CRAM, LECO, SYCA, WALK, ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, OKSR, PRIN, SUGG, TOOK, BLWA, CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, WLOU, LIRO, MART, PRLA, PRPO, REDB, TECR, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,23 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
-            "SYCA",
-            "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
             "CRAM",
             "LECO",
-            "CUPE",
-            "FLNT",
-            "HOPB",
-            "KING",
-            "MAYF",
-            "MCRA",
-            "POSE",
-            "BLWA",
-            "SUGG",
-            "TOOK",
+            "SYCA",
+            "WALK",
+            "ARIK",
             "BARC",
             "CARI",
             "COMO",
@@ -212,15 +203,24 @@
             "MCDI",
             "OKSR",
             "PRIN",
-            "ARIK",
-            "PRPO",
-            "REDB",
-            "TECR",
-            "TOMB",
+            "SUGG",
+            "TOOK",
+            "BLWA",
+            "CUPE",
+            "FLNT",
+            "HOPB",
+            "KING",
+            "MAYF",
+            "MCRA",
+            "POSE",
             "WLOU",
             "LIRO",
             "MART",
-            "PRLA"
+            "PRLA",
+            "PRPO",
+            "REDB",
+            "TECR",
+            "TOMB"
         ],
         "table:columns": [
             {

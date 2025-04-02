@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
                 -83.5019,
                 35.689
             ],
@@ -59,44 +99,52 @@
                 40.0543
             ],
             [
-                -76.56,
-                38.8901
+                -99.1066,
+                47.1617
             ],
             [
-                -155.3173,
-                19.5531
+                -78.1395,
+                38.8929
             ],
             [
-                -119.7323,
-                37.1088
+                -97.57,
+                33.4012
             ],
             [
-                -78.0418,
-                39.0337
+                -96.5631,
+                39.1008
             ],
             [
-                -66.8687,
-                17.9696
+                -95.1921,
+                39.0404
             ],
             [
-                -99.2413,
-                47.1282
+                -110.5391,
+                44.9535
             ],
             [
-                -72.1727,
-                42.5369
+                -147.5026,
+                65.154
             ],
             [
-                -67.0769,
-                18.0213
+                -89.5864,
+                45.5089
             ],
             [
-                -109.3883,
-                38.2483
+                -145.7514,
+                63.8811
             ],
             [
-                -81.4362,
-                28.1251
+                -99.0588,
+                35.4106
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -103.0293,
+                40.4619
             ],
             [
                 -156.6194,
@@ -153,60 +201,12 @@
             [
                 -81.9934,
                 29.6893
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -103.0293,
-                40.4619
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: GRSM, MLBS, TEAK, ABBY, TREE, LENO, ORNL, WREF, NOGP, SOAP, NIWO, SERC, PUUM, SJER, BLAN, GUAN, WOOD, HARV, LAJA, MOAB, DSNY, BARR, BART, ONAQ, DELA, UNDE, CPER, HEAL, RMNP, TALL, JERC, KONA, TOOL, SRER, OSBS, DCFS, SCBI, CLBJ, KONZ, UKFS, YELL, BONA, STEI, DEJU, OAES, JORN, STER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SERC, PUUM, SJER, BLAN, GUAN, WOOD, HARV, LAJA, MOAB, DSNY, GRSM, MLBS, TEAK, ABBY, TREE, LENO, ORNL, WREF, NOGP, SOAP, NIWO, DCFS, SCBI, CLBJ, KONZ, UKFS, YELL, BONA, STEI, DEJU, OAES, JORN, STER, BARR, BART, ONAQ, DELA, UNDE, CPER, HEAL, RMNP, TALL, JERC, KONA, TOOL, SRER, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:00:22",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,6 +239,16 @@
             "richness",
             "Weekly",
             "P1W",
+            "SERC",
+            "PUUM",
+            "SJER",
+            "BLAN",
+            "GUAN",
+            "WOOD",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "DSNY",
             "GRSM",
             "MLBS",
             "TEAK",
@@ -250,16 +260,18 @@
             "NOGP",
             "SOAP",
             "NIWO",
-            "SERC",
-            "PUUM",
-            "SJER",
-            "BLAN",
-            "GUAN",
-            "WOOD",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "DSNY",
+            "DCFS",
+            "SCBI",
+            "CLBJ",
+            "KONZ",
+            "UKFS",
+            "YELL",
+            "BONA",
+            "STEI",
+            "DEJU",
+            "OAES",
+            "JORN",
+            "STER",
             "BARR",
             "BART",
             "ONAQ",
@@ -273,19 +285,7 @@
             "KONA",
             "TOOL",
             "SRER",
-            "OSBS",
-            "DCFS",
-            "SCBI",
-            "CLBJ",
-            "KONZ",
-            "UKFS",
-            "YELL",
-            "BONA",
-            "STEI",
-            "DEJU",
-            "OAES",
-            "JORN",
-            "STER"
+            "OSBS"
         ],
         "table:columns": [
             {
