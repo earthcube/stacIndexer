@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
                 -103.0293,
                 40.4619
             ],
@@ -61,50 +105,6 @@
             [
                 -106.8425,
                 32.5907
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -122.3303,
-                45.7624
             ],
             [
                 -81.4362,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STER, DEJU, OAES, CLBJ, BONA, YELL, DCFS, UKFS, STEI, KONZ, SCBI, JORN, ORNL, TEAK, GRSM, TREE, NOGP, NIWO, WREF, MLBS, LENO, SOAP, ABBY, DSNY, WOOD, PUUM, SJER, LAJA, BLAN, SERC, GUAN, MOAB, HARV, UNDE, KONA, SRER, OSBS, TOOL, RMNP, BARR, HEAL, CPER, ONAQ, JERC, DELA, BART, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: ORNL, TEAK, GRSM, TREE, NOGP, NIWO, WREF, MLBS, LENO, SOAP, ABBY, STER, DEJU, OAES, CLBJ, BONA, YELL, DCFS, UKFS, STEI, KONZ, SCBI, JORN, DSNY, WOOD, PUUM, SJER, LAJA, BLAN, SERC, GUAN, MOAB, HARV, UNDE, KONA, SRER, OSBS, TOOL, RMNP, BARR, HEAL, CPER, ONAQ, JERC, DELA, BART, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:09",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,17 @@
             "nee",
             "Daily",
             "P1D",
+            "ORNL",
+            "TEAK",
+            "GRSM",
+            "TREE",
+            "NOGP",
+            "NIWO",
+            "WREF",
+            "MLBS",
+            "LENO",
+            "SOAP",
+            "ABBY",
             "STER",
             "DEJU",
             "OAES",
@@ -251,17 +262,6 @@
             "KONZ",
             "SCBI",
             "JORN",
-            "ORNL",
-            "TEAK",
-            "GRSM",
-            "TREE",
-            "NOGP",
-            "NIWO",
-            "WREF",
-            "MLBS",
-            "LENO",
-            "SOAP",
-            "ABBY",
             "DSNY",
             "WOOD",
             "PUUM",

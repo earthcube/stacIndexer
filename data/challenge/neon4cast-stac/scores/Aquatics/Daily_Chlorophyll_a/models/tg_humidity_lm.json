@@ -15,6 +15,14 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -89.4737,
                 46.2097
             ],
@@ -31,12 +39,8 @@
                 68.6307
             ],
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.7982,
-                32.5415
+                -99.1139,
+                47.1591
             ],
             [
                 -88.1589,
@@ -49,16 +53,12 @@
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -99.1139,
-                47.1591
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: CRAM, BARC, SUGG, TOOK, FLNT, BLWA, TOMB, PRPO, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, CRAM, BARC, SUGG, TOOK, PRLA, TOMB, PRPO, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:33:49",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
+            "BLWA",
+            "FLNT",
             "CRAM",
             "BARC",
             "SUGG",
             "TOOK",
-            "FLNT",
-            "BLWA",
+            "PRLA",
             "TOMB",
             "PRPO",
-            "LIRO",
-            "PRLA"
+            "LIRO"
         ],
         "table:columns": [
             {

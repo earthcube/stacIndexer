@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
                 -83.5038,
                 35.6904
             ],
@@ -105,56 +149,12 @@
             [
                 -111.7979,
                 40.7839
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -96.443,
-                38.9459
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK, BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB, SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI, LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK, BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,17 @@
             "oxygen",
             "Daily",
             "P1D",
+            "SUGG",
+            "GUIL",
+            "LEWI",
+            "PRIN",
+            "ARIK",
+            "CARI",
+            "COMO",
+            "TOOK",
+            "BARC",
+            "OKSR",
+            "MCDI",
             "LECO",
             "SYCA",
             "CRAM",
@@ -209,18 +220,7 @@
             "TOMB",
             "LIRO",
             "MART",
-            "REDB",
-            "SUGG",
-            "GUIL",
-            "LEWI",
-            "PRIN",
-            "ARIK",
-            "CARI",
-            "COMO",
-            "TOOK",
-            "BARC",
-            "OKSR",
-            "MCDI"
+            "REDB"
         ],
         "table:columns": [
             {

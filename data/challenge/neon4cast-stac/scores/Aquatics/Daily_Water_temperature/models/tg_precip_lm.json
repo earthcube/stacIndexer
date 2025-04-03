@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
                 -84.2793,
                 35.9574
             ],
@@ -27,56 +59,24 @@
                 34.4442
             ],
             [
-                -111.5081,
-                33.751
-            ],
-            [
                 -89.4737,
                 46.2097
-            ],
-            [
-                -83.5038,
-                35.6904
             ],
             [
                 -119.2575,
                 37.0597
             ],
             [
-                -102.4471,
-                39.7582
+                -111.5081,
+                33.751
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -77.9832,
-                39.0956
+                -83.5038,
+                35.6904
             ],
             [
                 -82.0177,
                 29.6878
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -97.7823,
-                33.3785
             ],
             [
                 -82.0084,
@@ -87,36 +87,36 @@
                 68.6307
             ],
             [
-                -84.4374,
-                31.1854
+                -102.4471,
+                39.7582
             ],
             [
-                -72.3295,
-                42.4719
+                -97.7823,
+                33.3785
             ],
             [
-                -87.7982,
-                32.5415
+                -105.5442,
+                40.035
             ],
             [
-                -87.4077,
-                32.9604
+                -66.7987,
+                18.1741
             ],
             [
-                -96.6038,
-                39.1051
+                -149.143,
+                68.6698
             ],
             [
-                -66.9868,
-                18.1135
+                -96.443,
+                38.9459
             ],
             [
-                -78.1473,
-                38.8943
+                -147.504,
+                65.1532
             ],
             [
-                -122.1655,
-                44.2596
+                -77.9832,
+                39.0956
             ],
             [
                 -111.7979,
@@ -127,6 +127,18 @@
                 31.8534
             ],
             [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
                 -105.9154,
                 39.8914
             ],
@@ -135,26 +147,14 @@
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -119.0274,
-                36.9559
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: WALK, BLDE, BLUE, SYCA, CRAM, LECO, BIGC, ARIK, MCDI, CARI, COMO, OKSR, LEWI, SUGG, GUIL, PRIN, BARC, TOOK, FLNT, HOPB, BLWA, MAYF, KING, CUPE, POSE, MCRA, REDB, TOMB, WLOU, LIRO, PRPO, MART, PRLA, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO, SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:34:59",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
+            "POSE",
+            "MAYF",
+            "FLNT",
+            "CUPE",
+            "KING",
+            "BLWA",
+            "MCRA",
+            "HOPB",
             "WALK",
             "BLDE",
             "BLUE",
-            "SYCA",
             "CRAM",
-            "LECO",
             "BIGC",
-            "ARIK",
-            "MCDI",
-            "CARI",
-            "COMO",
-            "OKSR",
-            "LEWI",
+            "SYCA",
+            "LECO",
             "SUGG",
-            "GUIL",
-            "PRIN",
             "BARC",
             "TOOK",
-            "FLNT",
-            "HOPB",
-            "BLWA",
-            "MAYF",
-            "KING",
-            "CUPE",
-            "POSE",
-            "MCRA",
+            "ARIK",
+            "PRIN",
+            "COMO",
+            "GUIL",
+            "OKSR",
+            "MCDI",
+            "CARI",
+            "LEWI",
             "REDB",
             "TOMB",
+            "MART",
+            "PRPO",
+            "TECR",
             "WLOU",
             "LIRO",
-            "PRPO",
-            "MART",
-            "PRLA",
-            "TECR"
+            "PRLA"
         ],
         "table:columns": [
             {
