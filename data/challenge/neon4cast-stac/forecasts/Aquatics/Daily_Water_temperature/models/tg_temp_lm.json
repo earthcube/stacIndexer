@@ -15,52 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.7982,
-                32.5415
+                -83.5038,
+                35.6904
             ],
             [
                 -119.2575,
                 37.0597
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -83.5038,
-                35.6904
             ],
             [
                 -84.2793,
@@ -71,52 +31,72 @@
                 46.2097
             ],
             [
+                -96.6242,
+                34.4442
+            ],
+            [
                 -110.5871,
                 44.9501
             ],
             [
-                -97.7823,
-                33.3785
+                -111.5081,
+                33.751
             ],
             [
-                -147.504,
-                65.1532
+                -96.6038,
+                39.1051
             ],
             [
-                -149.6106,
-                68.6307
+                -84.4374,
+                31.1854
             ],
             [
-                -66.7987,
-                18.1741
+                -87.7982,
+                32.5415
             ],
             [
-                -105.5442,
-                40.035
+                -66.9868,
+                18.1135
             ],
             [
-                -82.0084,
-                29.676
+                -72.3295,
+                42.4719
             ],
             [
-                -96.443,
-                38.9459
+                -87.4077,
+                32.9604
             ],
             [
-                -77.9832,
-                39.0956
+                -122.1655,
+                44.2596
             ],
             [
-                -102.4471,
-                39.7582
+                -78.1473,
+                38.8943
             ],
             [
-                -149.143,
-                68.6698
+                -105.9154,
+                39.8914
             ],
             [
-                -82.0177,
-                29.6878
+                -111.7979,
+                40.7839
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -121.9338,
+                45.7908
             ],
             [
                 -119.0274,
@@ -127,34 +107,54 @@
                 47.1591
             ],
             [
-                -111.7979,
-                40.7839
+                -149.143,
+                68.6698
             ],
             [
-                -89.7048,
-                45.9983
+                -97.7823,
+                33.3785
             ],
             [
-                -121.9338,
-                45.7908
+                -82.0177,
+                29.6878
             ],
             [
-                -99.2531,
-                47.1298
+                -147.504,
+                65.1532
             ],
             [
-                -105.9154,
-                39.8914
+                -105.5442,
+                40.035
             ],
             [
-                -88.1589,
-                31.8534
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -102.4471,
+                39.7582
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: HOPB, KING, MAYF, FLNT, CUPE, POSE, MCRA, BLWA, BIGC, SYCA, BLUE, LECO, WALK, CRAM, BLDE, PRIN, CARI, TOOK, GUIL, COMO, BARC, MCDI, LEWI, ARIK, OKSR, SUGG, TECR, PRLA, REDB, LIRO, MART, PRPO, WLOU, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LECO, BIGC, WALK, CRAM, BLUE, BLDE, SYCA, KING, FLNT, BLWA, CUPE, HOPB, MAYF, MCRA, POSE, WLOU, REDB, TOMB, LIRO, PRPO, MART, TECR, PRLA, OKSR, PRIN, SUGG, CARI, COMO, BARC, TOOK, LEWI, MCDI, GUIL, ARIK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
-            "HOPB",
-            "KING",
-            "MAYF",
-            "FLNT",
-            "CUPE",
-            "POSE",
-            "MCRA",
-            "BLWA",
-            "BIGC",
-            "SYCA",
-            "BLUE",
             "LECO",
+            "BIGC",
             "WALK",
             "CRAM",
+            "BLUE",
             "BLDE",
-            "PRIN",
-            "CARI",
-            "TOOK",
-            "GUIL",
-            "COMO",
-            "BARC",
-            "MCDI",
-            "LEWI",
-            "ARIK",
-            "OKSR",
-            "SUGG",
+            "SYCA",
+            "KING",
+            "FLNT",
+            "BLWA",
+            "CUPE",
+            "HOPB",
+            "MAYF",
+            "MCRA",
+            "POSE",
+            "WLOU",
+            "REDB",
+            "TOMB",
+            "LIRO",
+            "PRPO",
+            "MART",
             "TECR",
             "PRLA",
-            "REDB",
-            "LIRO",
-            "MART",
-            "PRPO",
-            "WLOU",
-            "TOMB"
+            "OKSR",
+            "PRIN",
+            "SUGG",
+            "CARI",
+            "COMO",
+            "BARC",
+            "TOOK",
+            "LEWI",
+            "MCDI",
+            "GUIL",
+            "ARIK"
         ],
         "table:columns": [
             {

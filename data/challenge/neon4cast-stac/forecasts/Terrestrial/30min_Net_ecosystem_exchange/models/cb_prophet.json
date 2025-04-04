@@ -15,50 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -201,12 +157,56 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -88.1612,
+                31.8539
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-05-31",
         "updated": null,
         "start_datetime": "2022-06-08T00:00:00Z",
@@ -239,17 +239,6 @@
             "nee",
             "30min",
             "PT30M",
-            "MLBS",
-            "NIWO",
-            "NOGP",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
-            "ABBY",
-            "GRSM",
-            "LENO",
             "OAES",
             "SCBI",
             "STEI",
@@ -285,7 +274,18 @@
             "DELA",
             "HEAL",
             "JERC",
-            "KONA"
+            "KONA",
+            "MLBS",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF",
+            "ABBY",
+            "GRSM",
+            "LENO"
         ],
         "table:columns": [
             {
