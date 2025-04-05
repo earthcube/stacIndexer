@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -147.504,
                 65.1532
             ],
@@ -91,6 +59,66 @@
                 68.6698
             ],
             [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
                 -111.7979,
                 40.7839
             ],
@@ -121,40 +149,12 @@
             [
                 -88.1589,
                 31.8534
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: KING, CUPE, MCRA, HOPB, FLNT, POSE, MAYF, BLWA, CARI, ARIK, BARC, GUIL, TOOK, COMO, MCDI, PRIN, SUGG, LEWI, OKSR, REDB, WLOU, PRLA, TECR, PRPO, LIRO, MART, TOMB, LECO, BLDE, BIGC, BLUE, SYCA, WALK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: CARI, ARIK, BARC, GUIL, TOOK, COMO, MCDI, PRIN, SUGG, LEWI, OKSR, LECO, BLDE, BIGC, BLUE, SYCA, WALK, CRAM, KING, CUPE, MCRA, HOPB, FLNT, POSE, MAYF, BLWA, REDB, WLOU, PRLA, TECR, PRPO, LIRO, MART, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:24:13",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "KING",
-            "CUPE",
-            "MCRA",
-            "HOPB",
-            "FLNT",
-            "POSE",
-            "MAYF",
-            "BLWA",
             "CARI",
             "ARIK",
             "BARC",
@@ -206,6 +198,21 @@
             "SUGG",
             "LEWI",
             "OKSR",
+            "LECO",
+            "BLDE",
+            "BIGC",
+            "BLUE",
+            "SYCA",
+            "WALK",
+            "CRAM",
+            "KING",
+            "CUPE",
+            "MCRA",
+            "HOPB",
+            "FLNT",
+            "POSE",
+            "MAYF",
+            "BLWA",
             "REDB",
             "WLOU",
             "PRLA",
@@ -213,14 +220,7 @@
             "PRPO",
             "LIRO",
             "MART",
-            "TOMB",
-            "LECO",
-            "BLDE",
-            "BIGC",
-            "BLUE",
-            "SYCA",
-            "WALK",
-            "CRAM"
+            "TOMB"
         ],
         "table:columns": [
             {

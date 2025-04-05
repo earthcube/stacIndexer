@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
@@ -59,66 +91,6 @@
                 29.676
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -111.7979,
                 40.7839
             ],
@@ -149,12 +121,40 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "air2waterSat_2",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: SUGG, MCDI, PRIN, CARI, COMO, OKSR, LEWI, ARIK, TOOK, GUIL, BARC, BLWA, MAYF, HOPB, POSE, CUPE, MCRA, FLNT, KING, BLUE, WALK, BLDE, LECO, SYCA, BIGC, CRAM, REDB, TECR, TOMB, PRLA, WLOU, MART, LIRO, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: BLWA, MAYF, HOPB, POSE, CUPE, MCRA, FLNT, KING, SUGG, MCDI, PRIN, CARI, COMO, OKSR, LEWI, ARIK, TOOK, GUIL, BARC, REDB, TECR, TOMB, PRLA, WLOU, MART, LIRO, PRPO, BLUE, WALK, BLDE, LECO, SYCA, BIGC, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-01",
         "updated": "2024-02-02 05:06:19",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "BLWA",
+            "MAYF",
+            "HOPB",
+            "POSE",
+            "CUPE",
+            "MCRA",
+            "FLNT",
+            "KING",
             "SUGG",
             "MCDI",
             "PRIN",
@@ -198,21 +206,6 @@
             "TOOK",
             "GUIL",
             "BARC",
-            "BLWA",
-            "MAYF",
-            "HOPB",
-            "POSE",
-            "CUPE",
-            "MCRA",
-            "FLNT",
-            "KING",
-            "BLUE",
-            "WALK",
-            "BLDE",
-            "LECO",
-            "SYCA",
-            "BIGC",
-            "CRAM",
             "REDB",
             "TECR",
             "TOMB",
@@ -220,7 +213,14 @@
             "WLOU",
             "MART",
             "LIRO",
-            "PRPO"
+            "PRPO",
+            "BLUE",
+            "WALK",
+            "BLDE",
+            "LECO",
+            "SYCA",
+            "BIGC",
+            "CRAM"
         ],
         "table:columns": [
             {

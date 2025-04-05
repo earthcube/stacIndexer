@@ -15,46 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -76.56,
-                38.8901
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
                 -95.1921,
                 39.0404
             ],
@@ -101,6 +61,90 @@
             [
                 -89.5864,
                 45.5089
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -122.3303,
+                45.7624
             ],
             [
                 -84.4686,
@@ -157,56 +201,12 @@
             [
                 -105.546,
                 40.2759
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -122.3303,
-                45.7624
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SERC, BLAN, HARV, DSNY, MOAB, WOOD, PUUM, LAJA, GUAN, SJER, UKFS, SCBI, CLBJ, JORN, STER, OAES, DEJU, YELL, BONA, KONZ, DCFS, STEI, JERC, DELA, CPER, BARR, ONAQ, HEAL, SRER, TALL, UNDE, OSBS, BART, KONA, TOOL, RMNP, WREF, MLBS, NIWO, GRSM, ORNL, SOAP, NOGP, TEAK, LENO, TREE, ABBY.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: UKFS, SCBI, CLBJ, JORN, STER, OAES, DEJU, YELL, BONA, KONZ, DCFS, STEI, SERC, BLAN, HARV, DSNY, MOAB, WOOD, PUUM, LAJA, GUAN, SJER, WREF, MLBS, NIWO, GRSM, ORNL, SOAP, NOGP, TEAK, LENO, TREE, ABBY, JERC, DELA, CPER, BARR, ONAQ, HEAL, SRER, TALL, UNDE, OSBS, BART, KONA, TOOL, RMNP.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:15",
         "start_datetime": "2023-01-07T00:00:00Z",
@@ -239,16 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "SERC",
-            "BLAN",
-            "HARV",
-            "DSNY",
-            "MOAB",
-            "WOOD",
-            "PUUM",
-            "LAJA",
-            "GUAN",
-            "SJER",
             "UKFS",
             "SCBI",
             "CLBJ",
@@ -261,6 +251,27 @@
             "KONZ",
             "DCFS",
             "STEI",
+            "SERC",
+            "BLAN",
+            "HARV",
+            "DSNY",
+            "MOAB",
+            "WOOD",
+            "PUUM",
+            "LAJA",
+            "GUAN",
+            "SJER",
+            "WREF",
+            "MLBS",
+            "NIWO",
+            "GRSM",
+            "ORNL",
+            "SOAP",
+            "NOGP",
+            "TEAK",
+            "LENO",
+            "TREE",
+            "ABBY",
             "JERC",
             "DELA",
             "CPER",
@@ -274,18 +285,7 @@
             "BART",
             "KONA",
             "TOOL",
-            "RMNP",
-            "WREF",
-            "MLBS",
-            "NIWO",
-            "GRSM",
-            "ORNL",
-            "SOAP",
-            "NOGP",
-            "TEAK",
-            "LENO",
-            "TREE",
-            "ABBY"
+            "RMNP"
         ],
         "table:columns": [
             {

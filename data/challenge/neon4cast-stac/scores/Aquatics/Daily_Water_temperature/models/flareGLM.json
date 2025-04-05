@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -89.4737,
                 46.2097
             ],
@@ -29,24 +41,12 @@
             [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
             ]
         ]
     },
     "properties": {
         "title": "flareGLM",
-        "description": "All scores for the Daily_Water_temperature variable for the flareGLM model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019) and data assimilation algorithm to generate\nensemble forecasts of lake water temperature..\n                                    The model predicts this variable at the following sites: CRAM, LIRO, PRPO, PRLA, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the flareGLM model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019) and data assimilation algorithm to generate\nensemble forecasts of lake water temperature..\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, CRAM, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-03-30",
         "updated": "2025-03-30 22:03:38",
         "start_datetime": "2022-12-08T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "BARC",
+            "SUGG",
+            "TOOK",
             "CRAM",
             "LIRO",
             "PRPO",
-            "PRLA",
-            "BARC",
-            "SUGG",
-            "TOOK"
+            "PRLA"
         ],
         "table:columns": [
             {
