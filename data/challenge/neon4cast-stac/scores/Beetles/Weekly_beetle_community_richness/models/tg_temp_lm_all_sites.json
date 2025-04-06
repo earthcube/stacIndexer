@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -147.5026,
                 65.154
             ],
@@ -61,90 +101,6 @@
             [
                 -110.5391,
                 44.9535
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
             ],
             [
                 -156.6194,
@@ -201,12 +157,56 @@
             [
                 -89.5373,
                 46.2339
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm_all_sites",
-        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-28",
         "updated": "2024-07-02 20:03:46",
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -239,6 +239,16 @@
             "richness",
             "Weekly",
             "P1W",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
             "BONA",
             "CLBJ",
             "DCFS",
@@ -251,27 +261,6 @@
             "STER",
             "UKFS",
             "YELL",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "ABBY",
-            "GRSM",
-            "LENO",
-            "MLBS",
-            "NIWO",
-            "NOGP",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
             "BARR",
             "BART",
             "CPER",
@@ -285,7 +274,18 @@
             "SRER",
             "TALL",
             "TOOL",
-            "UNDE"
+            "UNDE",
+            "ABBY",
+            "GRSM",
+            "LENO",
+            "MLBS",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF"
         ],
         "table:columns": [
             {
