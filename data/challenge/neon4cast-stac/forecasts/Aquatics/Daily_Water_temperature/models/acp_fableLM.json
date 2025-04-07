@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -89.7048,
                 45.9983
             ],
@@ -29,24 +41,12 @@
             [
                 -89.4737,
                 46.2097
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
             ]
         ]
     },
     "properties": {
         "title": "acp_fableLM",
-        "description": "All forecasts for the Daily_Water_temperature variable for the acp_fableLM model. Information for the model is provided as follows: Time series linear model with FABLE.\n                                    The model predicts this variable at the following sites: LIRO, PRPO, PRLA, CRAM, BARC, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the acp_fableLM model. Information for the model is provided as follows: Time series linear model with FABLE.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, LIRO, PRPO, PRLA, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-03-11",
         "updated": "2024-03-12 05:11:02",
         "start_datetime": "2024-03-11T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "BARC",
+            "SUGG",
+            "TOOK",
             "LIRO",
             "PRPO",
             "PRLA",
-            "CRAM",
-            "BARC",
-            "SUGG",
-            "TOOK"
+            "CRAM"
         ],
         "table:columns": [
             {

@@ -47,34 +47,6 @@
                 44.2596
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -149,12 +121,40 @@
             [
                 -111.7979,
                 40.7839
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -83.5038,
+                35.6904
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, MAYF, HOPB, FLNT, POSE, KING, MCRA, CRAM, BLDE, BLUE, BIGC, SYCA, WALK, LECO, SUGG, GUIL, TOOK, PRIN, CARI, LEWI, OKSR, BARC, COMO, MCDI, ARIK, TECR, PRPO, WLOU, LIRO, MART, TOMB, PRLA, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, MAYF, HOPB, FLNT, POSE, KING, MCRA, SUGG, GUIL, TOOK, PRIN, CARI, LEWI, OKSR, BARC, COMO, MCDI, ARIK, TECR, PRPO, WLOU, LIRO, MART, TOMB, PRLA, REDB, CRAM, BLDE, BLUE, BIGC, SYCA, WALK, LECO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -195,13 +195,6 @@
             "POSE",
             "KING",
             "MCRA",
-            "CRAM",
-            "BLDE",
-            "BLUE",
-            "BIGC",
-            "SYCA",
-            "WALK",
-            "LECO",
             "SUGG",
             "GUIL",
             "TOOK",
@@ -220,7 +213,14 @@
             "MART",
             "TOMB",
             "PRLA",
-            "REDB"
+            "REDB",
+            "CRAM",
+            "BLDE",
+            "BLUE",
+            "BIGC",
+            "SYCA",
+            "WALK",
+            "LECO"
         ],
         "table:columns": [
             {

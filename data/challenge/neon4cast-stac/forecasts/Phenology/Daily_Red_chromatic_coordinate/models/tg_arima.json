@@ -15,6 +15,98 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
                 -76.56,
                 38.8901
             ],
@@ -109,104 +201,12 @@
             [
                 -81.9934,
                 29.6893
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -95.1921,
-                39.0404
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SERC, LAJA, BLAN, PUUM, HARV, MOAB, GUAN, DSNY, WOOD, SJER, UNDE, RMNP, ONAQ, BARR, HEAL, SRER, TOOL, BART, KONA, CPER, DELA, JERC, TALL, OSBS, WREF, TREE, ABBY, TEAK, MLBS, SOAP, LENO, NIWO, NOGP, ORNL, GRSM, YELL, JORN, OAES, SCBI, STER, KONZ, BONA, STEI, DCFS, CLBJ, DEJU, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: YELL, JORN, OAES, SCBI, STER, KONZ, BONA, STEI, DCFS, CLBJ, DEJU, UKFS, WREF, TREE, ABBY, TEAK, MLBS, SOAP, LENO, NIWO, NOGP, ORNL, GRSM, SERC, LAJA, BLAN, PUUM, HARV, MOAB, GUAN, DSNY, WOOD, SJER, UNDE, RMNP, ONAQ, BARR, HEAL, SRER, TOOL, BART, KONA, CPER, DELA, JERC, TALL, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:53:57",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,29 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "YELL",
+            "JORN",
+            "OAES",
+            "SCBI",
+            "STER",
+            "KONZ",
+            "BONA",
+            "STEI",
+            "DCFS",
+            "CLBJ",
+            "DEJU",
+            "UKFS",
+            "WREF",
+            "TREE",
+            "ABBY",
+            "TEAK",
+            "MLBS",
+            "SOAP",
+            "LENO",
+            "NIWO",
+            "NOGP",
+            "ORNL",
+            "GRSM",
             "SERC",
             "LAJA",
             "BLAN",
@@ -262,30 +285,7 @@
             "DELA",
             "JERC",
             "TALL",
-            "OSBS",
-            "WREF",
-            "TREE",
-            "ABBY",
-            "TEAK",
-            "MLBS",
-            "SOAP",
-            "LENO",
-            "NIWO",
-            "NOGP",
-            "ORNL",
-            "GRSM",
-            "YELL",
-            "JORN",
-            "OAES",
-            "SCBI",
-            "STER",
-            "KONZ",
-            "BONA",
-            "STEI",
-            "DCFS",
-            "CLBJ",
-            "DEJU",
-            "UKFS"
+            "OSBS"
         ],
         "table:columns": [
             {

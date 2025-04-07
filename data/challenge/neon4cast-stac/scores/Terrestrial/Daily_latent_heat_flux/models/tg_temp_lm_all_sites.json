@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
                 -100.9154,
                 46.7697
             ],
@@ -107,46 +147,6 @@
                 40.4619
             ],
             [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
                 -81.9934,
                 29.6893
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm_all_sites",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: NOGP, MLBS, SOAP, NIWO, ABBY, LENO, WREF, GRSM, TREE, TEAK, ORNL, BONA, DEJU, JORN, UKFS, OAES, SCBI, KONZ, CLBJ, STEI, DCFS, YELL, STER, GUAN, MOAB, PUUM, HARV, LAJA, SJER, SERC, WOOD, DSNY, BLAN, OSBS, TOOL, JERC, SRER, UNDE, KONA, ONAQ, BARR, CPER, BART, RMNP, DELA, HEAL, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: GUAN, MOAB, PUUM, HARV, LAJA, SJER, SERC, WOOD, DSNY, BLAN, NOGP, MLBS, SOAP, NIWO, ABBY, LENO, WREF, GRSM, TREE, TEAK, ORNL, BONA, DEJU, JORN, UKFS, OAES, SCBI, KONZ, CLBJ, STEI, DCFS, YELL, STER, OSBS, TOOL, JERC, SRER, UNDE, KONA, ONAQ, BARR, CPER, BART, RMNP, DELA, HEAL, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 23:31:21",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,16 @@
             "le",
             "Daily",
             "P1D",
+            "GUAN",
+            "MOAB",
+            "PUUM",
+            "HARV",
+            "LAJA",
+            "SJER",
+            "SERC",
+            "WOOD",
+            "DSNY",
+            "BLAN",
             "NOGP",
             "MLBS",
             "SOAP",
@@ -262,16 +272,6 @@
             "DCFS",
             "YELL",
             "STER",
-            "GUAN",
-            "MOAB",
-            "PUUM",
-            "HARV",
-            "LAJA",
-            "SJER",
-            "SERC",
-            "WOOD",
-            "DSNY",
-            "BLAN",
             "OSBS",
             "TOOL",
             "JERC",

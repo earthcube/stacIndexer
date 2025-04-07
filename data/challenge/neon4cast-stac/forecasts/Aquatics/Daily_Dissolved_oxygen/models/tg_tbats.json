@@ -15,6 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -57,34 +85,6 @@
             [
                 -102.4471,
                 39.7582
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -111.5081,
-                33.751
             ],
             [
                 -66.9868,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BARC, GUIL, PRIN, TOOK, OKSR, LEWI, SUGG, CARI, COMO, MCDI, ARIK, CRAM, WALK, BLDE, BIGC, BLUE, LECO, SYCA, CUPE, HOPB, KING, BLWA, MAYF, POSE, FLNT, MCRA, PRPO, LIRO, PRLA, TECR, MART, TOMB, WLOU, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: CRAM, WALK, BLDE, BIGC, BLUE, LECO, SYCA, BARC, GUIL, PRIN, TOOK, OKSR, LEWI, SUGG, CARI, COMO, MCDI, ARIK, CUPE, HOPB, KING, BLWA, MAYF, POSE, FLNT, MCRA, PRPO, LIRO, PRLA, TECR, MART, TOMB, WLOU, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:34:07",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,6 +187,13 @@
             "oxygen",
             "Daily",
             "P1D",
+            "CRAM",
+            "WALK",
+            "BLDE",
+            "BIGC",
+            "BLUE",
+            "LECO",
+            "SYCA",
             "BARC",
             "GUIL",
             "PRIN",
@@ -198,13 +205,6 @@
             "COMO",
             "MCDI",
             "ARIK",
-            "CRAM",
-            "WALK",
-            "BLDE",
-            "BIGC",
-            "BLUE",
-            "LECO",
-            "SYCA",
             "CUPE",
             "HOPB",
             "KING",
