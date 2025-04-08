@@ -59,6 +59,34 @@
                 33.3785
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
                 -78.1473,
                 38.8943
             ],
@@ -121,40 +149,12 @@
             [
                 -111.7979,
                 40.7839
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -83.5038,
-                35.6904
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: GUIL, CARI, TOOK, SUGG, LEWI, MCDI, ARIK, OKSR, COMO, BARC, PRIN, POSE, FLNT, MCRA, MAYF, CUPE, HOPB, KING, BLWA, TECR, LIRO, PRPO, TOMB, MART, PRLA, WLOU, REDB, CRAM, SYCA, BIGC, BLDE, WALK, BLUE, LECO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: GUIL, CARI, TOOK, SUGG, LEWI, MCDI, ARIK, OKSR, COMO, BARC, PRIN, CRAM, SYCA, BIGC, BLDE, WALK, BLUE, LECO, POSE, FLNT, MCRA, MAYF, CUPE, HOPB, KING, BLWA, TECR, LIRO, PRPO, TOMB, MART, PRLA, WLOU, REDB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:22:53",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -198,6 +198,13 @@
             "COMO",
             "BARC",
             "PRIN",
+            "CRAM",
+            "SYCA",
+            "BIGC",
+            "BLDE",
+            "WALK",
+            "BLUE",
+            "LECO",
             "POSE",
             "FLNT",
             "MCRA",
@@ -213,14 +220,7 @@
             "MART",
             "PRLA",
             "WLOU",
-            "REDB",
-            "CRAM",
-            "SYCA",
-            "BIGC",
-            "BLDE",
-            "WALK",
-            "BLUE",
-            "LECO"
+            "REDB"
         ],
         "table:columns": [
             {

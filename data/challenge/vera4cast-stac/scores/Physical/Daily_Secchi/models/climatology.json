@@ -15,18 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -79.8159,
-                37.3129
-            ],
-            [
                 -79.8372,
                 37.3032
+            ],
+            [
+                -79.8159,
+                37.3129
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Secchi variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Secchi variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-03-23",
         "updated": {},
         "start_datetime": "2024-02-06T00:00:00Z",
@@ -59,8 +59,8 @@
             "Secchi_m_sample",
             "Daily",
             "P1D",
-            "bvre",
             "fcre",
+            "bvre",
             "empirical"
         ],
         "table:columns": [
@@ -220,6 +220,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "fcre, bvre",
+            "description": "Sites where the model predicts this variable"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Secchi",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=climatology?endpoint_override=renc.osn.xsede.org",

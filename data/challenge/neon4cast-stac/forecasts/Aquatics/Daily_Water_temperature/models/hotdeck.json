@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -79,12 +47,44 @@
                 39.0956
             ],
             [
-                -83.5038,
-                35.6904
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -119.2575,
                 37.0597
+            ],
+            [
+                -83.5038,
+                35.6904
             ],
             [
                 -110.5871,
@@ -138,7 +138,7 @@
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: HOPB, BLWA, CUPE, MCRA, POSE, MAYF, KING, FLNT, SUGG, CARI, BARC, GUIL, PRIN, ARIK, COMO, LEWI, LECO, BIGC, BLDE, CRAM, BLUE, WALK, SYCA, TECR, PRLA, WLOU, REDB, TOMB, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: SUGG, CARI, BARC, GUIL, PRIN, ARIK, COMO, LEWI, HOPB, BLWA, CUPE, MCRA, POSE, MAYF, KING, FLNT, BIGC, LECO, BLDE, CRAM, BLUE, WALK, SYCA, TECR, PRLA, WLOU, REDB, TOMB, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -171,14 +171,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "HOPB",
-            "BLWA",
-            "CUPE",
-            "MCRA",
-            "POSE",
-            "MAYF",
-            "KING",
-            "FLNT",
             "SUGG",
             "CARI",
             "BARC",
@@ -187,8 +179,16 @@
             "ARIK",
             "COMO",
             "LEWI",
-            "LECO",
+            "HOPB",
+            "BLWA",
+            "CUPE",
+            "MCRA",
+            "POSE",
+            "MAYF",
+            "KING",
+            "FLNT",
             "BIGC",
+            "LECO",
             "BLDE",
             "CRAM",
             "BLUE",

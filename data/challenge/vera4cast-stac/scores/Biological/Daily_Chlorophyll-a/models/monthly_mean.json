@@ -27,10 +27,10 @@
     "properties": {
         "title": "monthly_mean",
         "description": "All scores for the Daily_Chlorophyll-a variable for the monthly_mean model. Information for the model is provided as follows: This model calculates a monthly mean from the historic data and assigns this as the mean prediction for any day within that month. The standard deviation of the observations for that month is given as the standard deviation of the forecast..\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-04-04",
+        "datetime": "2025-04-05",
         "updated": {},
         "start_datetime": "2024-02-06T00:00:00Z",
-        "end_datetime": "2025-04-05T00:00:00Z",
+        "end_datetime": "2025-04-06T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/OlssonF/vera4cast/blob/main/R/MonthlyMeanModelFunction.R",
@@ -220,6 +220,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "bvre, fcre",
+            "description": "Sites where the model predicts this variable"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll-a",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/scores/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Chla_ugL_mean/model_id=monthly_mean?endpoint_override=renc.osn.xsede.org",

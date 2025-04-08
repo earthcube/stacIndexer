@@ -27,10 +27,10 @@
     "properties": {
         "title": "asl.ets",
         "description": "forecast::ets() function in R, fit individually at each site/depth",
-        "datetime": "2025-04-05",
-        "updated": "2025-04-06 06:28:06",
+        "datetime": "2025-04-06",
+        "updated": "2025-04-07 06:29:45",
         "start_datetime": "2024-03-12T00:00:00Z",
-        "end_datetime": "2025-05-10T00:00:00Z",
+        "end_datetime": "2025-05-11T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/abbylewis/vera_meteor_strike",
@@ -210,6 +210,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "bvre, fcre",
+            "description": "Sites where the model predicts this variable"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily oxygen_concentration",
             "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-summaries/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=asl.ets?endpoint_override=renc.osn.xsede.org",

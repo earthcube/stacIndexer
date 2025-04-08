@@ -15,44 +15,48 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -109.3883,
-                38.2483
+                -119.006,
+                37.0058
             ],
             [
-                -66.8687,
-                17.9696
+                -84.2826,
+                35.9641
             ],
             [
-                -99.2413,
-                47.1282
+                -80.5248,
+                37.3783
             ],
             [
-                -78.0418,
-                39.0337
+                -119.2622,
+                37.0334
             ],
             [
-                -76.56,
-                38.8901
+                -83.5019,
+                35.689
             ],
             [
-                -119.7323,
-                37.1088
+                -100.9154,
+                46.7697
             ],
             [
-                -72.1727,
-                42.5369
+                -121.9519,
+                45.8205
             ],
             [
-                -67.0769,
-                18.0213
+                -122.3303,
+                45.7624
             ],
             [
-                -155.3173,
-                19.5531
+                -88.1612,
+                31.8539
             ],
             [
-                -81.4362,
-                28.1251
+                -105.5824,
+                40.0543
+            ],
+            [
+                -89.5857,
+                45.4937
             ],
             [
                 -106.8425,
@@ -103,48 +107,44 @@
                 63.8811
             ],
             [
-                -119.006,
-                37.0058
+                -109.3883,
+                38.2483
             ],
             [
-                -84.2826,
-                35.9641
+                -66.8687,
+                17.9696
             ],
             [
-                -80.5248,
-                37.3783
+                -99.2413,
+                47.1282
             ],
             [
-                -119.2622,
-                37.0334
+                -78.0418,
+                39.0337
             ],
             [
-                -83.5019,
-                35.689
+                -76.56,
+                38.8901
             ],
             [
-                -100.9154,
-                46.7697
+                -119.7323,
+                37.1088
             ],
             [
-                -121.9519,
-                45.8205
+                -72.1727,
+                42.5369
             ],
             [
-                -122.3303,
-                45.7624
+                -67.0769,
+                18.0213
             ],
             [
-                -88.1612,
-                31.8539
+                -155.3173,
+                19.5531
             ],
             [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -89.5857,
-                45.4937
+                -81.4362,
+                28.1251
             ],
             [
                 -110.8355,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MOAB, GUAN, WOOD, BLAN, SERC, SJER, HARV, LAJA, PUUM, DSNY, JORN, YELL, STER, UKFS, CLBJ, SCBI, DCFS, BONA, KONZ, STEI, OAES, DEJU, TEAK, ORNL, MLBS, SOAP, GRSM, NOGP, WREF, ABBY, LENO, NIWO, TREE, SRER, UNDE, HEAL, ONAQ, RMNP, JERC, DELA, TALL, BART, TOOL, CPER, OSBS, BARR, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: TEAK, ORNL, MLBS, SOAP, GRSM, NOGP, WREF, ABBY, LENO, NIWO, TREE, JORN, YELL, STER, UKFS, CLBJ, SCBI, DCFS, BONA, KONZ, STEI, OAES, DEJU, MOAB, GUAN, WOOD, BLAN, SERC, SJER, HARV, LAJA, PUUM, DSNY, SRER, UNDE, HEAL, ONAQ, RMNP, JERC, DELA, TALL, BART, TOOL, CPER, OSBS, BARR, KONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:00:22",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,16 +239,17 @@
             "abundance",
             "Weekly",
             "P1W",
-            "MOAB",
-            "GUAN",
-            "WOOD",
-            "BLAN",
-            "SERC",
-            "SJER",
-            "HARV",
-            "LAJA",
-            "PUUM",
-            "DSNY",
+            "TEAK",
+            "ORNL",
+            "MLBS",
+            "SOAP",
+            "GRSM",
+            "NOGP",
+            "WREF",
+            "ABBY",
+            "LENO",
+            "NIWO",
+            "TREE",
             "JORN",
             "YELL",
             "STER",
@@ -261,17 +262,16 @@
             "STEI",
             "OAES",
             "DEJU",
-            "TEAK",
-            "ORNL",
-            "MLBS",
-            "SOAP",
-            "GRSM",
-            "NOGP",
-            "WREF",
-            "ABBY",
-            "LENO",
-            "NIWO",
-            "TREE",
+            "MOAB",
+            "GUAN",
+            "WOOD",
+            "BLAN",
+            "SERC",
+            "SJER",
+            "HARV",
+            "LAJA",
+            "PUUM",
+            "DSNY",
             "SRER",
             "UNDE",
             "HEAL",

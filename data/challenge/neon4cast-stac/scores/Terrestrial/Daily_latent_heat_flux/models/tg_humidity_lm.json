@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -83.5019,
+                35.689
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
                 -78.0418,
                 39.0337
             ],
@@ -103,50 +147,6 @@
                 65.154
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
                 -87.3933,
                 32.9505
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: BLAN, SERC, GUAN, LAJA, PUUM, DSNY, WOOD, SJER, HARV, MOAB, STEI, CLBJ, DEJU, KONZ, UKFS, DCFS, STER, SCBI, JORN, YELL, OAES, BONA, GRSM, ORNL, SOAP, NOGP, ABBY, TREE, TEAK, MLBS, LENO, WREF, NIWO, TALL, RMNP, ONAQ, HEAL, OSBS, TOOL, BARR, DELA, UNDE, BART, SRER, JERC, KONA, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: GRSM, ORNL, SOAP, NOGP, ABBY, TREE, TEAK, MLBS, LENO, WREF, NIWO, BLAN, SERC, GUAN, LAJA, PUUM, DSNY, WOOD, SJER, HARV, MOAB, STEI, CLBJ, DEJU, KONZ, UKFS, DCFS, STER, SCBI, JORN, YELL, OAES, BONA, TALL, RMNP, ONAQ, HEAL, OSBS, TOOL, BARR, DELA, UNDE, BART, SRER, JERC, KONA, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:31:54",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,17 @@
             "le",
             "Daily",
             "P1D",
+            "GRSM",
+            "ORNL",
+            "SOAP",
+            "NOGP",
+            "ABBY",
+            "TREE",
+            "TEAK",
+            "MLBS",
+            "LENO",
+            "WREF",
+            "NIWO",
             "BLAN",
             "SERC",
             "GUAN",
@@ -261,17 +272,6 @@
             "YELL",
             "OAES",
             "BONA",
-            "GRSM",
-            "ORNL",
-            "SOAP",
-            "NOGP",
-            "ABBY",
-            "TREE",
-            "TEAK",
-            "MLBS",
-            "LENO",
-            "WREF",
-            "NIWO",
             "TALL",
             "RMNP",
             "ONAQ",
