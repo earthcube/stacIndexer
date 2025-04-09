@@ -15,20 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.0588,
-                35.4106
+                -99.2413,
+                47.1282
             ],
             [
-                -78.1395,
-                38.8929
+                -78.0418,
+                39.0337
             ],
             [
-                -89.5864,
-                45.5089
+                -81.4362,
+                28.1251
             ],
             [
-                -103.0293,
-                40.4619
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
             ],
             [
                 -95.1921,
@@ -63,16 +87,20 @@
                 39.1008
             ],
             [
-                -84.2826,
-                35.9641
+                -99.0588,
+                35.4106
             ],
             [
-                -119.2622,
-                37.0334
+                -78.1395,
+                38.8929
             ],
             [
-                -119.006,
-                37.0058
+                -89.5864,
+                45.5089
+            ],
+            [
+                -103.0293,
+                40.4619
             ],
             [
                 -89.5857,
@@ -107,68 +135,16 @@
                 46.7697
             ],
             [
-                -155.3173,
-                19.5531
+                -84.2826,
+                35.9641
             ],
             [
-                -76.56,
-                38.8901
+                -119.2622,
+                37.0334
             ],
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -105.546,
-                40.2759
-            ],
-            [
-                -110.8355,
-                31.9107
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -149.3705,
-                68.6611
+                -119.006,
+                37.0058
             ],
             [
                 -89.5373,
@@ -201,12 +177,36 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -110.8355,
+                31.9107
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -149.3705,
+                68.6611
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the 30min_latent_heat_flux variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_latent_heat_flux variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-30",
         "updated": "2023-12-31 05:43:28",
         "start_datetime": "2022-02-01T00:00:00Z",
@@ -239,10 +239,16 @@
             "le",
             "30min",
             "PT30M",
-            "OAES",
-            "SCBI",
-            "STEI",
-            "STER",
+            "WOOD",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
             "UKFS",
             "YELL",
             "BONA",
@@ -251,9 +257,10 @@
             "DEJU",
             "JORN",
             "KONZ",
-            "ORNL",
-            "SOAP",
-            "TEAK",
+            "OAES",
+            "SCBI",
+            "STEI",
+            "STER",
             "TREE",
             "WREF",
             "ABBY",
@@ -262,22 +269,9 @@
             "MLBS",
             "NIWO",
             "NOGP",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "ONAQ",
-            "OSBS",
-            "RMNP",
-            "SRER",
-            "TALL",
-            "TOOL",
+            "ORNL",
+            "SOAP",
+            "TEAK",
             "UNDE",
             "BARR",
             "BART",
@@ -285,7 +279,13 @@
             "DELA",
             "HEAL",
             "JERC",
-            "KONA"
+            "KONA",
+            "ONAQ",
+            "OSBS",
+            "RMNP",
+            "SRER",
+            "TALL",
+            "TOOL"
         ],
         "table:columns": [
             {

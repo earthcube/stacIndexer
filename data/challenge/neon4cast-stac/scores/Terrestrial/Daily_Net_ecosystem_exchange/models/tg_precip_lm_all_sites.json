@@ -107,6 +107,46 @@
                 45.4937
             ],
             [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
                 -96.6129,
                 39.1104
             ],
@@ -161,52 +201,12 @@
             [
                 -105.546,
                 40.2759
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:09",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -262,6 +262,16 @@
             "LENO",
             "TEAK",
             "TREE",
+            "MOAB",
+            "HARV",
+            "PUUM",
+            "BLAN",
+            "GUAN",
+            "DSNY",
+            "SJER",
+            "SERC",
+            "WOOD",
+            "LAJA",
             "KONA",
             "CPER",
             "UNDE",
@@ -275,17 +285,7 @@
             "BARR",
             "SRER",
             "HEAL",
-            "RMNP",
-            "MOAB",
-            "HARV",
-            "PUUM",
-            "BLAN",
-            "GUAN",
-            "DSNY",
-            "SJER",
-            "SERC",
-            "WOOD",
-            "LAJA"
+            "RMNP"
         ],
         "table:columns": [
             {

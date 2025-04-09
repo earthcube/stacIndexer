@@ -15,6 +15,58 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
                 -122.3303,
                 45.7624
             ],
@@ -47,16 +99,12 @@
                 37.0334
             ],
             [
-                -119.006,
-                37.0058
+                -95.1921,
+                39.0404
             ],
             [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
+                -110.5391,
+                44.9535
             ],
             [
                 -147.5026,
@@ -99,12 +147,16 @@
                 40.4619
             ],
             [
-                -95.1921,
-                39.0404
+                -87.3933,
+                32.9505
             ],
             [
-                -110.5391,
-                44.9535
+                -149.3705,
+                68.6611
+            ],
+            [
+                -89.5373,
+                46.2339
             ],
             [
                 -156.6194,
@@ -149,64 +201,12 @@
             [
                 -110.8355,
                 31.9107
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -149.3705,
-                68.6611
-            ],
-            [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-03-28T00:00:00Z",
@@ -239,6 +239,19 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "WOOD",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "TEAK",
+            "TREE",
+            "WREF",
             "ABBY",
             "GRSM",
             "LENO",
@@ -247,9 +260,8 @@
             "NOGP",
             "ORNL",
             "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF",
+            "UKFS",
+            "YELL",
             "BONA",
             "CLBJ",
             "DCFS",
@@ -260,8 +272,9 @@
             "SCBI",
             "STEI",
             "STER",
-            "UKFS",
-            "YELL",
+            "TALL",
+            "TOOL",
+            "UNDE",
             "BARR",
             "BART",
             "CPER",
@@ -272,20 +285,7 @@
             "ONAQ",
             "OSBS",
             "RMNP",
-            "SRER",
-            "TALL",
-            "TOOL",
-            "UNDE",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD"
+            "SRER"
         ],
         "table:columns": [
             {

@@ -15,66 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -149,12 +89,72 @@
             [
                 -111.7979,
                 40.7839
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -84.2793,
+                35.9574
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING, LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK, SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB, BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING, LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,21 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BLWA",
-            "MCRA",
-            "FLNT",
-            "CUPE",
-            "MAYF",
-            "POSE",
-            "HOPB",
-            "KING",
-            "LECO",
-            "SYCA",
-            "CRAM",
-            "BIGC",
-            "BLDE",
-            "BLUE",
-            "WALK",
             "SUGG",
             "GUIL",
             "LEWI",
@@ -220,7 +205,22 @@
             "TOMB",
             "LIRO",
             "MART",
-            "REDB"
+            "REDB",
+            "BLWA",
+            "MCRA",
+            "FLNT",
+            "CUPE",
+            "MAYF",
+            "POSE",
+            "HOPB",
+            "KING",
+            "LECO",
+            "SYCA",
+            "CRAM",
+            "BIGC",
+            "BLDE",
+            "BLUE",
+            "WALK"
         ],
         "table:columns": [
             {
