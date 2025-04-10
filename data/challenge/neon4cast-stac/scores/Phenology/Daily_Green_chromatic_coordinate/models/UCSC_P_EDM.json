@@ -19,8 +19,8 @@
                 35.689
             ],
             [
-                -97.57,
-                33.4012
+                -72.1727,
+                42.5369
             ],
             [
                 -78.1395,
@@ -35,22 +35,22 @@
                 39.0404
             ],
             [
+                -97.57,
+                33.4012
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
-            ],
-            [
-                -72.1727,
-                42.5369
             ]
         ]
     },
     "properties": {
         "title": "UCSC_P_EDM",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, BART, DELA, HARV.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: GRSM, HARV, SCBI, STEI, UKFS, CLBJ, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-10-19",
         "updated": null,
         "start_datetime": "2020-04-27T00:00:00Z",
@@ -84,13 +84,13 @@
             "Daily",
             "P1D",
             "GRSM",
-            "CLBJ",
+            "HARV",
             "SCBI",
             "STEI",
             "UKFS",
+            "CLBJ",
             "BART",
-            "DELA",
-            "HARV"
+            "DELA"
         ],
         "table:columns": [
             {
@@ -244,6 +244,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "GRSM, HARV, SCBI, STEI, UKFS, CLBJ, BART, DELA"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=UCSC_P_EDM?endpoint_override=sdsc.osn.xsede.org",

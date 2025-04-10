@@ -23,42 +23,42 @@
                 32.5415
             ],
             [
-                -89.4737,
-                46.2097
+                -82.0084,
+                29.676
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
-                -82.0084,
-                29.676
-            ],
-            [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -89.7048,
-                45.9983
             ],
             [
                 -99.1139,
                 47.1591
             ],
             [
+                -88.1589,
+                31.8534
+            ],
+            [
                 -99.2531,
                 47.1298
             ],
             [
-                -88.1589,
-                31.8534
+                -89.7048,
+                45.9983
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: FLNT, BLWA, CRAM, SUGG, BARC, TOOK, LIRO, PRLA, PRPO, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: FLNT, BLWA, BARC, SUGG, TOOK, PRLA, TOMB, PRPO, LIRO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:32:49",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -93,14 +93,14 @@
             "P1D",
             "FLNT",
             "BLWA",
-            "CRAM",
-            "SUGG",
             "BARC",
+            "SUGG",
             "TOOK",
-            "LIRO",
             "PRLA",
+            "TOMB",
             "PRPO",
-            "TOMB"
+            "LIRO",
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -254,6 +254,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "FLNT, BLWA, BARC, SUGG, TOOK, PRLA, TOMB, PRPO, LIRO, CRAM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll_a",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org",

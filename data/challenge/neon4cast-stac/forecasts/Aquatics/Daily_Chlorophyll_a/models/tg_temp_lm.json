@@ -15,8 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -87.7982,
@@ -43,22 +51,14 @@
                 45.9983
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: CRAM, BLWA, FLNT, TOMB, PRPO, PRLA, LIRO, SUGG, TOOK, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: SUGG, TOOK, BARC, BLWA, FLNT, TOMB, PRPO, PRLA, LIRO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
-            "CRAM",
+            "SUGG",
+            "TOOK",
+            "BARC",
             "BLWA",
             "FLNT",
             "TOMB",
             "PRPO",
             "PRLA",
             "LIRO",
-            "SUGG",
-            "TOOK",
-            "BARC"
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -214,6 +214,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "SUGG, TOOK, BARC, BLWA, FLNT, TOMB, PRPO, PRLA, LIRO, CRAM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll_a",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",

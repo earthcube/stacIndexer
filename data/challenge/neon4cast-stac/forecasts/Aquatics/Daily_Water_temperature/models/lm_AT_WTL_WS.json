@@ -23,12 +23,12 @@
                 47.1298
             ],
             [
-                -99.1139,
-                47.1591
-            ],
-            [
                 -89.7048,
                 45.9983
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -82.0084,
@@ -46,11 +46,11 @@
     },
     "properties": {
         "title": "lm_AT_WTL_WS",
-        "description": "All forecasts for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: CRAM, PRPO, PRLA, LIRO, BARC, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-04-04",
-        "updated": "2025-04-04 14:03:45",
+        "description": "All forecasts for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: CRAM, PRPO, LIRO, PRLA, BARC, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-04-06",
+        "updated": "2025-04-06 14:03:38",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2025-04-05T00:00:00Z",
+        "end_datetime": "2025-04-07T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/cvickery123/NEON-forecast-challenge-workshop/blob/821f7af9bc83951722bb5bcecbd601c62cbe66e0/Submit_forecast/forecast_project1.Rmd",
@@ -81,8 +81,8 @@
             "P1D",
             "CRAM",
             "PRPO",
-            "PRLA",
             "LIRO",
+            "PRLA",
             "BARC",
             "SUGG",
             "TOOK"
@@ -199,6 +199,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "CRAM, PRPO, LIRO, PRLA, BARC, SUGG, TOOK"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=lm_AT_WTL_WS?endpoint_override=sdsc.osn.xsede.org",

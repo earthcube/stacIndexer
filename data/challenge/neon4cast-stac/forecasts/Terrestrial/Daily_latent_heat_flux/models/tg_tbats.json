@@ -55,6 +55,50 @@
                 37.1088
             ],
             [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
                 -149.2133,
                 63.8758
             ],
@@ -111,50 +155,6 @@
                 40.8155
             ],
             [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
                 -96.5631,
                 39.1008
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -249,6 +249,17 @@
             "WOOD",
             "MOAB",
             "SJER",
+            "TREE",
+            "GRSM",
+            "NIWO",
+            "ORNL",
+            "ABBY",
+            "LENO",
+            "SOAP",
+            "WREF",
+            "NOGP",
+            "MLBS",
+            "TEAK",
             "HEAL",
             "JERC",
             "OSBS",
@@ -263,17 +274,6 @@
             "ONAQ",
             "KONA",
             "CPER",
-            "TREE",
-            "GRSM",
-            "NIWO",
-            "ORNL",
-            "ABBY",
-            "LENO",
-            "SOAP",
-            "WREF",
-            "NOGP",
-            "MLBS",
-            "TEAK",
             "KONZ",
             "STER",
             "DCFS",
@@ -399,6 +399,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily latent_heat_flux",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=le/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",

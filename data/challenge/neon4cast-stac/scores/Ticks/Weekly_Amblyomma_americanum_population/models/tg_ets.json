@@ -23,6 +23,14 @@
                 39.0337
             ],
             [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -41,20 +49,12 @@
             [
                 -87.3933,
                 32.9505
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -88.1612,
-                31.8539
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SERC, BLAN, KONZ, UKFS, SCBI, OSBS, TALL, ORNL, LENO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SERC, BLAN, ORNL, LENO, KONZ, UKFS, SCBI, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-29 18:10:45",
         "start_datetime": "2021-06-07T00:00:00Z",
@@ -89,13 +89,13 @@
             "P1W",
             "SERC",
             "BLAN",
+            "ORNL",
+            "LENO",
             "KONZ",
             "UKFS",
             "SCBI",
             "OSBS",
-            "TALL",
-            "ORNL",
-            "LENO"
+            "TALL"
         ],
         "table:columns": [
             {
@@ -249,6 +249,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "SERC, BLAN, ORNL, LENO, KONZ, UKFS, SCBI, OSBS, TALL"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Weekly Amblyomma_americanum_population",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org",

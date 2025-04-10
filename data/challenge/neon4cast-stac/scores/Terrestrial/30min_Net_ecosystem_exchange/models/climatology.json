@@ -15,50 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -107,12 +63,52 @@
                 35.4106
             ],
             [
-                -119.7323,
-                37.1088
+                -121.9519,
+                45.8205
             ],
             [
-                -155.3173,
-                19.5531
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.7323,
+                37.1088
             ],
             [
                 -76.56,
@@ -147,6 +143,10 @@
                 38.2483
             ],
             [
+                -155.3173,
+                19.5531
+            ],
+            [
                 -110.8355,
                 31.9107
             ],
@@ -165,14 +165,6 @@
             [
                 -81.9934,
                 29.6893
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -105.546,
-                40.2759
             ],
             [
                 -149.3705,
@@ -201,12 +193,20 @@
             [
                 -96.6129,
                 39.1104
+            ],
+            [
+                -112.4524,
+                40.1776
+            ],
+            [
+                -105.546,
+                40.2759
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WREF, ORNL, SOAP, TEAK, TREE, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, CLBJ, KONZ, SCBI, STEI, STER, UKFS, YELL, BONA, DCFS, DEJU, JORN, OAES, SJER, PUUM, SERC, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, SRER, TALL, UNDE, BART, OSBS, ONAQ, RMNP, TOOL, BARR, CPER, DELA, HEAL, JERC, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: CLBJ, KONZ, SCBI, STEI, STER, UKFS, YELL, BONA, DCFS, DEJU, JORN, OAES, WREF, ORNL, SOAP, TEAK, TREE, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SJER, SERC, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SRER, TALL, UNDE, BART, OSBS, TOOL, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-30",
         "updated": "2023-12-31 05:43:28",
         "start_datetime": "2022-02-01T00:00:00Z",
@@ -239,17 +239,6 @@
             "nee",
             "30min",
             "PT30M",
-            "WREF",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "ABBY",
-            "GRSM",
-            "LENO",
-            "MLBS",
-            "NIWO",
-            "NOGP",
             "CLBJ",
             "KONZ",
             "SCBI",
@@ -262,8 +251,18 @@
             "DEJU",
             "JORN",
             "OAES",
+            "WREF",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "ABBY",
+            "GRSM",
+            "LENO",
+            "MLBS",
+            "NIWO",
+            "NOGP",
             "SJER",
-            "PUUM",
             "SERC",
             "WOOD",
             "BLAN",
@@ -272,20 +271,21 @@
             "HARV",
             "LAJA",
             "MOAB",
+            "PUUM",
             "SRER",
             "TALL",
             "UNDE",
             "BART",
             "OSBS",
-            "ONAQ",
-            "RMNP",
             "TOOL",
             "BARR",
             "CPER",
             "DELA",
             "HEAL",
             "JERC",
-            "KONA"
+            "KONA",
+            "ONAQ",
+            "RMNP"
         ],
         "table:columns": [
             {
@@ -439,6 +439,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "CLBJ, KONZ, SCBI, STEI, STER, UKFS, YELL, BONA, DCFS, DEJU, JORN, OAES, WREF, ORNL, SOAP, TEAK, TREE, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SJER, SERC, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SRER, TALL, UNDE, BART, OSBS, TOOL, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for 30min Net_ecosystem_exchange",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=PT30M/variable=nee/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",

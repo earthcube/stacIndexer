@@ -23,6 +23,10 @@
                 39.0337
             ],
             [
+                -87.3933,
+                32.9505
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -37,16 +41,12 @@
             [
                 -84.2826,
                 35.9641
-            ],
-            [
-                -87.3933,
-                32.9505
             ]
         ]
     },
     "properties": {
         "title": "BU_Dem",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the BU_Dem model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SERC, BLAN, KONZ, SCBI, UKFS, ORNL, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the BU_Dem model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SERC, BLAN, TALL, KONZ, SCBI, UKFS, ORNL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2019-10-06",
         "updated": null,
         "start_datetime": "2019-03-04T00:00:00Z",
@@ -81,11 +81,11 @@
             "P1W",
             "SERC",
             "BLAN",
+            "TALL",
             "KONZ",
             "SCBI",
             "UKFS",
-            "ORNL",
-            "TALL"
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -199,6 +199,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "SERC, BLAN, TALL, KONZ, SCBI, UKFS, ORNL"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Weekly Amblyomma_americanum_population",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=BU_Dem?endpoint_override=sdsc.osn.xsede.org",

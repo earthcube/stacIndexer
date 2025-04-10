@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -35,8 +31,8 @@
                 39.0404
             ],
             [
-                -83.5019,
-                35.689
+                -72.1727,
+                42.5369
             ],
             [
                 -71.2874,
@@ -45,12 +41,16 @@
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -83.5019,
+                35.689
             ]
         ]
     },
     "properties": {
         "title": "Fourier",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the Fourier model. Information for the model is provided as follows: The Fourier model captured the time-dependence of the greening process using the Fourier regression method and a set of temporal basis functions.\n                                    The model predicts this variable at the following sites: HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the Fourier model. Information for the model is provided as follows: The Fourier model captured the time-dependence of the greening process using the Fourier regression method and a set of temporal basis functions.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA, GRSM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-04-26",
         "updated": null,
         "start_datetime": "2021-02-24T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "HARV",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "GRSM",
+            "HARV",
             "BART",
-            "DELA"
+            "DELA",
+            "GRSM"
         ],
         "table:columns": [
             {
@@ -244,6 +244,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA, GRSM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=Fourier?endpoint_override=sdsc.osn.xsede.org",

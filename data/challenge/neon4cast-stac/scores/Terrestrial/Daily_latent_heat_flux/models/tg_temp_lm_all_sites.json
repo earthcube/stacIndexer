@@ -15,44 +15,48 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -66.8687,
-                17.9696
+                -100.9154,
+                46.7697
             ],
             [
-                -109.3883,
-                38.2483
+                -80.5248,
+                37.3783
             ],
             [
-                -155.3173,
-                19.5531
+                -119.2622,
+                37.0334
             ],
             [
-                -72.1727,
-                42.5369
+                -105.5824,
+                40.0543
             ],
             [
-                -67.0769,
-                18.0213
+                -122.3303,
+                45.7624
             ],
             [
-                -119.7323,
-                37.1088
+                -88.1612,
+                31.8539
             ],
             [
-                -76.56,
-                38.8901
+                -121.9519,
+                45.8205
             ],
             [
-                -99.2413,
-                47.1282
+                -83.5019,
+                35.689
             ],
             [
-                -81.4362,
-                28.1251
+                -89.5857,
+                45.4937
             ],
             [
-                -78.0418,
-                39.0337
+                -119.006,
+                37.0058
+            ],
+            [
+                -84.2826,
+                35.9641
             ],
             [
                 -147.5026,
@@ -103,48 +107,44 @@
                 40.4619
             ],
             [
-                -100.9154,
-                46.7697
+                -66.8687,
+                17.9696
             ],
             [
-                -80.5248,
-                37.3783
+                -109.3883,
+                38.2483
             ],
             [
-                -119.2622,
-                37.0334
+                -155.3173,
+                19.5531
             ],
             [
-                -105.5824,
-                40.0543
+                -72.1727,
+                42.5369
             ],
             [
-                -122.3303,
-                45.7624
+                -67.0769,
+                18.0213
             ],
             [
-                -88.1612,
-                31.8539
+                -119.7323,
+                37.1088
             ],
             [
-                -121.9519,
-                45.8205
+                -76.56,
+                38.8901
             ],
             [
-                -83.5019,
-                35.689
+                -99.2413,
+                47.1282
             ],
             [
-                -89.5857,
-                45.4937
+                -81.4362,
+                28.1251
             ],
             [
-                -119.006,
-                37.0058
-            ],
-            [
-                -84.2826,
-                35.9641
+                -78.0418,
+                39.0337
             ],
             [
                 -81.9934,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm_all_sites",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: GUAN, MOAB, PUUM, HARV, LAJA, SJER, SERC, WOOD, DSNY, BLAN, BONA, DEJU, JORN, UKFS, OAES, SCBI, KONZ, CLBJ, STEI, DCFS, YELL, STER, NOGP, MLBS, SOAP, NIWO, ABBY, LENO, WREF, GRSM, TREE, TEAK, ORNL, OSBS, TOOL, JERC, SRER, UNDE, KONA, ONAQ, BARR, CPER, BART, RMNP, DELA, HEAL, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: NOGP, MLBS, SOAP, NIWO, ABBY, LENO, WREF, GRSM, TREE, TEAK, ORNL, BONA, DEJU, JORN, UKFS, OAES, SCBI, KONZ, CLBJ, STEI, DCFS, YELL, STER, GUAN, MOAB, PUUM, HARV, LAJA, SJER, SERC, WOOD, DSNY, BLAN, OSBS, TOOL, JERC, SRER, UNDE, KONA, ONAQ, BARR, CPER, BART, RMNP, DELA, HEAL, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 23:31:21",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,16 +239,17 @@
             "le",
             "Daily",
             "P1D",
-            "GUAN",
-            "MOAB",
-            "PUUM",
-            "HARV",
-            "LAJA",
-            "SJER",
-            "SERC",
-            "WOOD",
-            "DSNY",
-            "BLAN",
+            "NOGP",
+            "MLBS",
+            "SOAP",
+            "NIWO",
+            "ABBY",
+            "LENO",
+            "WREF",
+            "GRSM",
+            "TREE",
+            "TEAK",
+            "ORNL",
             "BONA",
             "DEJU",
             "JORN",
@@ -261,17 +262,16 @@
             "DCFS",
             "YELL",
             "STER",
-            "NOGP",
-            "MLBS",
-            "SOAP",
-            "NIWO",
-            "ABBY",
-            "LENO",
-            "WREF",
-            "GRSM",
-            "TREE",
-            "TEAK",
-            "ORNL",
+            "GUAN",
+            "MOAB",
+            "PUUM",
+            "HARV",
+            "LAJA",
+            "SJER",
+            "SERC",
+            "WOOD",
+            "DSNY",
+            "BLAN",
             "OSBS",
             "TOOL",
             "JERC",
@@ -439,6 +439,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "NOGP, MLBS, SOAP, NIWO, ABBY, LENO, WREF, GRSM, TREE, TEAK, ORNL, BONA, DEJU, JORN, UKFS, OAES, SCBI, KONZ, CLBJ, STEI, DCFS, YELL, STER, GUAN, MOAB, PUUM, HARV, LAJA, SJER, SERC, WOOD, DSNY, BLAN, OSBS, TOOL, JERC, SRER, UNDE, KONA, ONAQ, BARR, CPER, BART, RMNP, DELA, HEAL, TALL"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily latent_heat_flux",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=le/model_id=tg_temp_lm_all_sites?endpoint_override=sdsc.osn.xsede.org",

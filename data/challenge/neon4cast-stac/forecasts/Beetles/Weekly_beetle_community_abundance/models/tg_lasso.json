@@ -15,6 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -78.0418,
                 39.0337
             ],
@@ -39,20 +55,24 @@
                 38.2483
             ],
             [
-                -155.3173,
-                19.5531
+                -78.1395,
+                38.8929
             ],
             [
-                -76.56,
-                38.8901
+                -89.5864,
+                45.5089
             ],
             [
-                -119.7323,
-                37.1088
+                -103.0293,
+                40.4619
             ],
             [
-                -99.2413,
-                47.1282
+                -95.1921,
+                39.0404
+            ],
+            [
+                -110.5391,
+                44.9535
             ],
             [
                 -147.5026,
@@ -83,24 +103,20 @@
                 35.4106
             ],
             [
-                -78.1395,
-                38.8929
+                -105.546,
+                40.2759
             ],
             [
-                -89.5864,
-                45.5089
+                -110.8355,
+                31.9107
             ],
             [
-                -103.0293,
-                40.4619
+                -87.3933,
+                32.9505
             ],
             [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
+                -89.5373,
+                46.2339
             ],
             [
                 -71.2874,
@@ -135,20 +151,20 @@
                 29.6893
             ],
             [
-                -105.546,
-                40.2759
+                -119.2622,
+                37.0334
             ],
             [
-                -110.8355,
-                31.9107
+                -119.006,
+                37.0058
             ],
             [
-                -87.3933,
-                32.9505
+                -89.5857,
+                45.4937
             ],
             [
-                -89.5373,
-                46.2339
+                -121.9519,
+                45.8205
             ],
             [
                 -122.3303,
@@ -177,28 +193,12 @@
             [
                 -84.2826,
                 35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, UNDE, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, RMNP, SRER, TALL, UNDE, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-28",
         "updated": "2024-07-02 19:54:47",
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -231,16 +231,21 @@
             "abundance",
             "Weekly",
             "P1W",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
             "BLAN",
             "DSNY",
             "GUAN",
             "HARV",
             "LAJA",
             "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
+            "SCBI",
+            "STEI",
+            "STER",
+            "UKFS",
+            "YELL",
             "BONA",
             "CLBJ",
             "DCFS",
@@ -248,11 +253,10 @@
             "JORN",
             "KONZ",
             "OAES",
-            "SCBI",
-            "STEI",
-            "STER",
-            "UKFS",
-            "YELL",
+            "RMNP",
+            "SRER",
+            "TALL",
+            "UNDE",
             "BART",
             "CPER",
             "DELA",
@@ -261,21 +265,17 @@
             "KONA",
             "ONAQ",
             "OSBS",
-            "RMNP",
-            "SRER",
-            "TALL",
-            "UNDE",
+            "SOAP",
+            "TEAK",
+            "TREE",
+            "WREF",
             "ABBY",
             "GRSM",
             "LENO",
             "MLBS",
             "NIWO",
             "NOGP",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "TREE",
-            "WREF"
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -389,6 +389,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, RMNP, SRER, TALL, UNDE, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Weekly beetle_community_abundance",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=abundance/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org",

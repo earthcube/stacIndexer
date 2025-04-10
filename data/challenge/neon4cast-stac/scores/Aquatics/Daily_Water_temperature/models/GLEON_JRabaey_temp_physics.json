@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
                 -84.2793,
                 35.9574
             ],
@@ -87,38 +119,6 @@
                 33.3785
             ],
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "GLEON_JRabaey_temp_physics",
-        "description": "All scores for the Daily_Water_temperature variable for the GLEON_JRabaey_temp_physics model. Information for the model is provided as follows: The JR-physics model is a simple process model based on the assumption that surface water\ntemperature should trend towards equilibration with air temperature with a lag factor..\n                                    The model predicts this variable at the following sites: WALK, SYCA, BIGC, CRAM, LECO, BLDE, BLUE, CARI, MCDI, OKSR, SUGG, BARC, LEWI, COMO, GUIL, TOOK, ARIK, PRIN, HOPB, MAYF, KING, CUPE, BLWA, FLNT, POSE, MCRA, PRLA, MART, WLOU, TOMB, LIRO, TECR, REDB, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the GLEON_JRabaey_temp_physics model. Information for the model is provided as follows: The JR-physics model is a simple process model based on the assumption that surface water\ntemperature should trend towards equilibration with air temperature with a lag factor..\n                                    The model predicts this variable at the following sites: HOPB, MAYF, KING, CUPE, BLWA, FLNT, POSE, MCRA, WALK, SYCA, BIGC, CRAM, LECO, BLDE, BLUE, CARI, MCDI, OKSR, SUGG, BARC, LEWI, COMO, GUIL, TOOK, ARIK, PRIN, PRLA, MART, WLOU, TOMB, LIRO, TECR, REDB, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-09",
         "updated": "2024-02-09 20:59:16",
         "start_datetime": "2022-11-15T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "HOPB",
+            "MAYF",
+            "KING",
+            "CUPE",
+            "BLWA",
+            "FLNT",
+            "POSE",
+            "MCRA",
             "WALK",
             "SYCA",
             "BIGC",
@@ -205,14 +213,6 @@
             "TOOK",
             "ARIK",
             "PRIN",
-            "HOPB",
-            "MAYF",
-            "KING",
-            "CUPE",
-            "BLWA",
-            "FLNT",
-            "POSE",
-            "MCRA",
             "PRLA",
             "MART",
             "WLOU",
@@ -374,6 +374,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "HOPB, MAYF, KING, CUPE, BLWA, FLNT, POSE, MCRA, WALK, SYCA, BIGC, CRAM, LECO, BLDE, BLUE, CARI, MCDI, OKSR, SUGG, BARC, LEWI, COMO, GUIL, TOOK, ARIK, PRIN, PRLA, MART, WLOU, TOMB, LIRO, TECR, REDB, PRPO"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=GLEON_JRabaey_temp_physics?endpoint_override=sdsc.osn.xsede.org",

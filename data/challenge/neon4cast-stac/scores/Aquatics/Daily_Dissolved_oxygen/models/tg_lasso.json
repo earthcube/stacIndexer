@@ -59,6 +59,34 @@
                 38.9459
             ],
             [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
                 -105.9154,
                 39.8914
             ],
@@ -121,40 +149,12 @@
             [
                 -96.6038,
                 39.1051
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -84.2793,
-                35.9574
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB, BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING, LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI, LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB, BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -198,6 +198,13 @@
             "BARC",
             "OKSR",
             "MCDI",
+            "LECO",
+            "SYCA",
+            "CRAM",
+            "BIGC",
+            "BLDE",
+            "BLUE",
+            "WALK",
             "WLOU",
             "PRPO",
             "PRLA",
@@ -213,14 +220,7 @@
             "MAYF",
             "POSE",
             "HOPB",
-            "KING",
-            "LECO",
-            "SYCA",
-            "CRAM",
-            "BIGC",
-            "BLDE",
-            "BLUE",
-            "WALK"
+            "KING"
         ],
         "table:columns": [
             {
@@ -374,6 +374,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "SUGG, GUIL, LEWI, PRIN, ARIK, CARI, COMO, TOOK, BARC, OKSR, MCDI, LECO, SYCA, CRAM, BIGC, BLDE, BLUE, WALK, WLOU, PRPO, PRLA, TECR, TOMB, LIRO, MART, REDB, BLWA, MCRA, FLNT, CUPE, MAYF, POSE, HOPB, KING"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org",

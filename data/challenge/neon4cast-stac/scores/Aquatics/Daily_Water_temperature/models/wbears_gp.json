@@ -15,18 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -82.0084,
                 29.676
+            ],
+            [
+                -78.1473,
+                38.8943
             ]
         ]
     },
     "properties": {
         "title": "wbears_gp",
-        "description": "All scores for the Daily_Water_temperature variable for the wbears_gp model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: POSE, BARC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the wbears_gp model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, POSE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-05-01",
         "updated": null,
         "start_datetime": "2021-05-01T00:00:00Z",
@@ -59,8 +59,8 @@
             "temperature",
             "Daily",
             "P1D",
-            "POSE",
-            "BARC"
+            "BARC",
+            "POSE"
         ],
         "table:columns": [
             {
@@ -214,6 +214,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "BARC, POSE"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=wbears_gp?endpoint_override=sdsc.osn.xsede.org",

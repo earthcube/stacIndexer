@@ -15,42 +15,42 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
                 -82.0177,
                 29.6878
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -149.6106,
                 68.6307
             ],
             [
-                -89.7048,
-                45.9983
+                -89.4737,
+                46.2097
             ],
             [
-                -99.1139,
-                47.1591
+                -89.7048,
+                45.9983
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -89.4737,
-                46.2097
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All forecasts for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, LIRO, PRLA, PRPO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-04-04",
-        "updated": "2025-04-04 14:03:54",
+        "description": "All forecasts for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, CRAM, LIRO, PRPO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-04-06",
+        "updated": "2025-04-06 14:03:46",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2025-04-05T00:00:00Z",
+        "end_datetime": "2025-04-07T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/lindsey-finks/NEON-forecast-challenge-workshop",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "BARC",
             "SUGG",
+            "BARC",
             "TOOK",
+            "CRAM",
             "LIRO",
-            "PRLA",
             "PRPO",
-            "CRAM"
+            "PRLA"
         ],
         "table:columns": [
             {
@@ -199,6 +199,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "SUGG, BARC, TOOK, CRAM, LIRO, PRPO, PRLA"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=mlp1_wtempforecast_LF?endpoint_override=sdsc.osn.xsede.org",

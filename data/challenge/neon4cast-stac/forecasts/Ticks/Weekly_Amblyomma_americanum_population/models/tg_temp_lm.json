@@ -31,6 +31,14 @@
                 38.8901
             ],
             [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -41,20 +49,12 @@
             [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -87.3933,
-                32.9505
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, OSBS, TALL, KONZ, SCBI, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -91,11 +91,11 @@
             "ORNL",
             "BLAN",
             "SERC",
+            "OSBS",
+            "TALL",
             "KONZ",
             "SCBI",
-            "UKFS",
-            "OSBS",
-            "TALL"
+            "UKFS"
         ],
         "table:columns": [
             {
@@ -209,6 +209,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "LENO, ORNL, BLAN, SERC, OSBS, TALL, KONZ, SCBI, UKFS"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Weekly Amblyomma_americanum_population",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",

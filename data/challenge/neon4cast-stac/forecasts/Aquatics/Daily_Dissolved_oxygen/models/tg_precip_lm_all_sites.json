@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -77.9832,
                 39.0956
             ],
@@ -87,38 +119,6 @@
                 33.751
             ],
             [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -99.2531,
                 47.1298
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: LEWI, ARIK, COMO, SUGG, PRIN, GUIL, MCDI, BARC, CARI, OKSR, TOOK, BIGC, LECO, BLUE, CRAM, WALK, BLDE, SYCA, POSE, BLWA, MCRA, HOPB, MAYF, KING, CUPE, FLNT, PRPO, LIRO, MART, PRLA, TECR, WLOU, TOMB, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: POSE, BLWA, MCRA, HOPB, MAYF, KING, CUPE, FLNT, LEWI, ARIK, COMO, SUGG, PRIN, GUIL, MCDI, BARC, CARI, OKSR, TOOK, BIGC, LECO, BLUE, CRAM, WALK, BLDE, SYCA, PRPO, LIRO, MART, PRLA, TECR, WLOU, TOMB, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:22:53",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "POSE",
+            "BLWA",
+            "MCRA",
+            "HOPB",
+            "MAYF",
+            "KING",
+            "CUPE",
+            "FLNT",
             "LEWI",
             "ARIK",
             "COMO",
@@ -205,14 +213,6 @@
             "WALK",
             "BLDE",
             "SYCA",
-            "POSE",
-            "BLWA",
-            "MCRA",
-            "HOPB",
-            "MAYF",
-            "KING",
-            "CUPE",
-            "FLNT",
             "PRPO",
             "LIRO",
             "MART",
@@ -334,6 +334,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "POSE, BLWA, MCRA, HOPB, MAYF, KING, CUPE, FLNT, LEWI, ARIK, COMO, SUGG, PRIN, GUIL, MCDI, BARC, CARI, OKSR, TOOK, BIGC, LECO, BLUE, CRAM, WALK, BLDE, SYCA, PRPO, LIRO, MART, PRLA, TECR, WLOU, TOMB, REDB"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_precip_lm_all_sites?endpoint_override=sdsc.osn.xsede.org",

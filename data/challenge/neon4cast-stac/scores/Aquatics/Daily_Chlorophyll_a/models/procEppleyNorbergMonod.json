@@ -23,30 +23,30 @@
                 68.6307
             ],
             [
-                -82.0084,
-                29.676
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
             [
-                -99.2531,
-                47.1298
+                -82.0084,
+                29.676
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -89.7048,
                 45.9983
             ],
             [
-                -99.1139,
-                47.1591
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "procEppleyNorbergMonod",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the procEppleyNorbergMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: CRAM, TOOK, BARC, SUGG, PRPO, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the procEppleyNorbergMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: CRAM, TOOK, SUGG, BARC, PRLA, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-05",
         "updated": "2024-02-07 05:10:06",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -81,11 +81,11 @@
             "P1D",
             "CRAM",
             "TOOK",
-            "BARC",
             "SUGG",
-            "PRPO",
+            "BARC",
+            "PRLA",
             "LIRO",
-            "PRLA"
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -239,6 +239,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "CRAM, TOOK, SUGG, BARC, PRLA, LIRO, PRPO"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll_a",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=chla/model_id=procEppleyNorbergMonod?endpoint_override=sdsc.osn.xsede.org",

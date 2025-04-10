@@ -19,20 +19,20 @@
                 47.1591
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -99.2531,
                 47.1298
             ],
             [
-                -82.0084,
-                29.676
+                -89.7048,
+                45.9983
             ],
             [
                 -82.0177,
                 29.6878
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -149.6106,
@@ -46,11 +46,11 @@
     },
     "properties": {
         "title": "GAM_air_wind",
-        "description": "All forecasts for the Daily_Water_temperature variable for the GAM_air_wind model. Information for the model is provided as follows: I used a GAM (mgcv) with a linear relationship to air temperature and smoothing for eastward and northward winds..\n                                    The model predicts this variable at the following sites: PRLA, LIRO, PRPO, BARC, SUGG, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-04-04",
-        "updated": "2025-04-04 14:03:27",
+        "description": "All forecasts for the Daily_Water_temperature variable for the GAM_air_wind model. Information for the model is provided as follows: I used a GAM (mgcv) with a linear relationship to air temperature and smoothing for eastward and northward winds..\n                                    The model predicts this variable at the following sites: PRLA, PRPO, LIRO, SUGG, BARC, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-04-06",
+        "updated": "2025-04-06 14:03:23",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2025-04-05T00:00:00Z",
+        "end_datetime": "2025-04-07T00:00:00Z",
         "providers": [
             {
                 "url": "https://projects.ecoforecast.org/neon4cast-ci/",
@@ -80,10 +80,10 @@
             "Daily",
             "P1D",
             "PRLA",
-            "LIRO",
             "PRPO",
-            "BARC",
+            "LIRO",
             "SUGG",
+            "BARC",
             "TOOK",
             "CRAM"
         ],
@@ -199,6 +199,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "PRLA, PRPO, LIRO, SUGG, BARC, TOOK, CRAM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=GAM_air_wind?endpoint_override=sdsc.osn.xsede.org",

@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
                 -145.7514,
                 63.8811
             ],
@@ -61,46 +101,6 @@
             [
                 -99.1066,
                 47.1617
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
             ],
             [
                 -83.5019,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: DEJU, YELL, JORN, SCBI, STER, BONA, UKFS, CLBJ, OAES, KONZ, STEI, DCFS, WOOD, MOAB, DSNY, HARV, SERC, GUAN, PUUM, LAJA, SJER, BLAN, GRSM, LENO, SOAP, ABBY, NOGP, TREE, ORNL, MLBS, WREF, NIWO, TEAK, SRER, RMNP, TOOL, KONA, TALL, HEAL, CPER, UNDE, ONAQ, BARR, DELA, OSBS, BART, JERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: WOOD, MOAB, DSNY, HARV, SERC, GUAN, PUUM, LAJA, SJER, BLAN, DEJU, YELL, JORN, SCBI, STER, BONA, UKFS, CLBJ, OAES, KONZ, STEI, DCFS, GRSM, LENO, SOAP, ABBY, NOGP, TREE, ORNL, MLBS, WREF, NIWO, TEAK, SRER, RMNP, TOOL, KONA, TALL, HEAL, CPER, UNDE, ONAQ, BARR, DELA, OSBS, BART, JERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:21:21",
         "start_datetime": "2022-05-29T00:00:00Z",
@@ -239,6 +239,16 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "WOOD",
+            "MOAB",
+            "DSNY",
+            "HARV",
+            "SERC",
+            "GUAN",
+            "PUUM",
+            "LAJA",
+            "SJER",
+            "BLAN",
             "DEJU",
             "YELL",
             "JORN",
@@ -251,16 +261,6 @@
             "KONZ",
             "STEI",
             "DCFS",
-            "WOOD",
-            "MOAB",
-            "DSNY",
-            "HARV",
-            "SERC",
-            "GUAN",
-            "PUUM",
-            "LAJA",
-            "SJER",
-            "BLAN",
             "GRSM",
             "LENO",
             "SOAP",
@@ -399,6 +399,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "WOOD, MOAB, DSNY, HARV, SERC, GUAN, PUUM, LAJA, SJER, BLAN, DEJU, YELL, JORN, SCBI, STER, BONA, UKFS, CLBJ, OAES, KONZ, STEI, DCFS, GRSM, LENO, SOAP, ABBY, NOGP, TREE, ORNL, MLBS, WREF, NIWO, TEAK, SRER, RMNP, TOOL, KONA, TALL, HEAL, CPER, UNDE, ONAQ, BARR, DELA, OSBS, BART, JERC"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Red_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",

@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -77.9832,
                 39.0956
             ],
@@ -149,12 +117,44 @@
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT, LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA, MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "MAYF",
-            "HOPB",
-            "POSE",
-            "KING",
-            "BLWA",
-            "CUPE",
-            "MCRA",
-            "FLNT",
             "LEWI",
             "MCDI",
             "BARC",
@@ -220,7 +212,15 @@
             "WLOU",
             "LIRO",
             "PRPO",
-            "PRLA"
+            "PRLA",
+            "MAYF",
+            "HOPB",
+            "POSE",
+            "KING",
+            "BLWA",
+            "CUPE",
+            "MCRA",
+            "FLNT"
         ],
         "table:columns": [
             {
@@ -374,6 +374,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA, MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",

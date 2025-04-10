@@ -15,54 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
                 -105.5824,
                 40.0543
             ],
@@ -147,6 +99,54 @@
                 47.1282
             ],
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
                 -104.7456,
                 40.8155
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,18 +239,6 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "KONZ",
-            "DEJU",
-            "CLBJ",
-            "UKFS",
-            "SCBI",
-            "JORN",
-            "BONA",
-            "YELL",
-            "STER",
-            "OAES",
-            "STEI",
-            "DCFS",
             "NIWO",
             "MLBS",
             "SOAP",
@@ -272,6 +260,18 @@
             "HARV",
             "SJER",
             "WOOD",
+            "KONZ",
+            "DEJU",
+            "CLBJ",
+            "UKFS",
+            "SCBI",
+            "JORN",
+            "BONA",
+            "YELL",
+            "STER",
+            "OAES",
+            "STEI",
+            "DCFS",
             "CPER",
             "DELA",
             "JERC",
@@ -399,6 +399,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "NIWO, MLBS, SOAP, WREF, ABBY, TREE, TEAK, GRSM, LENO, NOGP, ORNL, MOAB, SERC, LAJA, PUUM, DSNY, GUAN, BLAN, HARV, SJER, WOOD, KONZ, DEJU, CLBJ, UKFS, SCBI, JORN, BONA, YELL, STER, OAES, STEI, DCFS, CPER, DELA, JERC, HEAL, RMNP, TALL, BARR, TOOL, OSBS, UNDE, SRER, BART, KONA, ONAQ"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Red_chromatic_coordinate",
             "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=rcc_90/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org",

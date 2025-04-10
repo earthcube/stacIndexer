@@ -27,8 +27,8 @@
                 68.6307
             ],
             [
-                -89.4737,
-                46.2097
+                -89.7048,
+                45.9983
             ],
             [
                 -99.1139,
@@ -39,18 +39,18 @@
                 47.1298
             ],
             [
-                -89.7048,
-                45.9983
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, CRAM, PRLA, PRPO, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-04-04",
-        "updated": "2025-04-04 14:03:37",
+        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, LIRO, PRLA, PRPO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-04-05",
+        "updated": "2025-04-05 14:03:23",
         "start_datetime": "2024-02-29T00:00:00Z",
-        "end_datetime": "2025-04-05T00:00:00Z",
+        "end_datetime": "2025-04-06T00:00:00Z",
         "providers": [
             {
                 "url": null,
@@ -82,10 +82,10 @@
             "SUGG",
             "BARC",
             "TOOK",
-            "CRAM",
+            "LIRO",
             "PRLA",
             "PRPO",
-            "LIRO"
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -239,6 +239,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "SUGG, BARC, TOOK, LIRO, PRLA, PRPO, CRAM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=bee_bake_RFModel_2024?endpoint_override=sdsc.osn.xsede.org",

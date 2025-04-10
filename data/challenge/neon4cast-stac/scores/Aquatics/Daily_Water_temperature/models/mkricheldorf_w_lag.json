@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
@@ -27,16 +23,20 @@
                 29.676
             ],
             [
-                -89.7048,
-                45.9983
+                -82.0177,
+                29.6878
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -99.1139,
-                47.1591
+                -89.7048,
+                45.9983
             ],
             [
                 -89.4737,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "mkricheldorf_w_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: SUGG, TOOK, BARC, LIRO, PRPO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-25",
         "updated": "2024-08-29 16:25:04",
         "start_datetime": "2024-03-06T00:00:00Z",
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "SUGG",
             "TOOK",
             "BARC",
-            "LIRO",
-            "PRPO",
+            "SUGG",
             "PRLA",
+            "PRPO",
+            "LIRO",
             "CRAM"
         ],
         "table:columns": [
@@ -239,6 +239,12 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://github.com/radiantearth",
+            "description": "TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
             "href": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=mkricheldorf_w_lag?endpoint_override=sdsc.osn.xsede.org",
