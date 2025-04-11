@@ -15,54 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
                 -119.2622,
                 37.0334
             ],
@@ -147,6 +99,54 @@
                 47.1282
             ],
             [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
                 -104.7456,
                 40.8155
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: YELL, STEI, UKFS, BONA, DEJU, JORN, DCFS, KONZ, CLBJ, STER, OAES, SCBI, SOAP, TREE, NOGP, MLBS, ORNL, WREF, ABBY, TEAK, LENO, GRSM, NIWO, DSNY, LAJA, HARV, SJER, SERC, GUAN, BLAN, MOAB, PUUM, WOOD, CPER, TOOL, BARR, JERC, DELA, UNDE, HEAL, ONAQ, KONA, RMNP, TALL, BART, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: SOAP, TREE, NOGP, MLBS, ORNL, WREF, ABBY, TEAK, LENO, GRSM, NIWO, DSNY, LAJA, HARV, SJER, SERC, GUAN, BLAN, MOAB, PUUM, WOOD, YELL, STEI, UKFS, BONA, DEJU, JORN, DCFS, KONZ, CLBJ, STER, OAES, SCBI, CPER, TOOL, BARR, JERC, DELA, UNDE, HEAL, ONAQ, KONA, RMNP, TALL, BART, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:14:00",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,18 +239,6 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "YELL",
-            "STEI",
-            "UKFS",
-            "BONA",
-            "DEJU",
-            "JORN",
-            "DCFS",
-            "KONZ",
-            "CLBJ",
-            "STER",
-            "OAES",
-            "SCBI",
             "SOAP",
             "TREE",
             "NOGP",
@@ -272,6 +260,18 @@
             "MOAB",
             "PUUM",
             "WOOD",
+            "YELL",
+            "STEI",
+            "UKFS",
+            "BONA",
+            "DEJU",
+            "JORN",
+            "DCFS",
+            "KONZ",
+            "CLBJ",
+            "STER",
+            "OAES",
+            "SCBI",
             "CPER",
             "TOOL",
             "BARR",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "YELL, STEI, UKFS, BONA, DEJU, JORN, DCFS, KONZ, CLBJ, STER, OAES, SCBI, SOAP, TREE, NOGP, MLBS, ORNL, WREF, ABBY, TEAK, LENO, GRSM, NIWO, DSNY, LAJA, HARV, SJER, SERC, GUAN, BLAN, MOAB, PUUM, WOOD, CPER, TOOL, BARR, JERC, DELA, UNDE, HEAL, ONAQ, KONA, RMNP, TALL, BART, OSBS, SRER"
+            "description": "SOAP, TREE, NOGP, MLBS, ORNL, WREF, ABBY, TEAK, LENO, GRSM, NIWO, DSNY, LAJA, HARV, SJER, SERC, GUAN, BLAN, MOAB, PUUM, WOOD, YELL, STEI, UKFS, BONA, DEJU, JORN, DCFS, KONZ, CLBJ, STER, OAES, SCBI, CPER, TOOL, BARR, JERC, DELA, UNDE, HEAL, ONAQ, KONA, RMNP, TALL, BART, OSBS, SRER"
         },
         "4": {
             "type": "application/x-parquet",

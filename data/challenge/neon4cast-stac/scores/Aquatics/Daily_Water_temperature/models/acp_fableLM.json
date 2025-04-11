@@ -15,8 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
             ],
             [
                 -89.7048,
@@ -31,22 +39,14 @@
                 47.1591
             ],
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "acp_fableLM",
-        "description": "All scores for the Daily_Water_temperature variable for the acp_fableLM model. Information for the model is provided as follows: Time series linear model with FABLE.\n                                    The model predicts this variable at the following sites: CRAM, LIRO, PRPO, PRLA, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the acp_fableLM model. Information for the model is provided as follows: Time series linear model with FABLE.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, LIRO, PRPO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-03-11",
         "updated": "2024-03-12 05:11:02",
         "start_datetime": "2024-03-11T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
+            "BARC",
+            "SUGG",
+            "TOOK",
             "LIRO",
             "PRPO",
             "PRLA",
-            "BARC",
-            "SUGG",
-            "TOOK"
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "CRAM, LIRO, PRPO, PRLA, BARC, SUGG, TOOK"
+            "description": "BARC, SUGG, TOOK, LIRO, PRPO, PRLA, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

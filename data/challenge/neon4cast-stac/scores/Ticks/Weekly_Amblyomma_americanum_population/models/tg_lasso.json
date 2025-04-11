@@ -15,12 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.0418,
-                39.0337
+                -96.5631,
+                39.1008
             ],
             [
-                -76.56,
-                38.8901
+                -78.1395,
+                38.8929
+            ],
+            [
+                -95.1921,
+                39.0404
             ],
             [
                 -84.2826,
@@ -35,22 +39,18 @@
                 32.9505
             ],
             [
-                -96.5631,
-                39.1008
+                -78.0418,
+                39.0337
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -95.1921,
-                39.0404
+                -76.56,
+                38.8901
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLAN, SERC, ORNL, OSBS, TALL, KONZ, SCBI, UKFS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, ORNL, OSBS, TALL, BLAN, SERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -83,14 +83,14 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "BLAN",
-            "SERC",
+            "KONZ",
+            "SCBI",
+            "UKFS",
             "ORNL",
             "OSBS",
             "TALL",
-            "KONZ",
-            "SCBI",
-            "UKFS"
+            "BLAN",
+            "SERC"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "BLAN, SERC, ORNL, OSBS, TALL, KONZ, SCBI, UKFS"
+            "description": "KONZ, SCBI, UKFS, ORNL, OSBS, TALL, BLAN, SERC"
         },
         "4": {
             "type": "application/x-parquet",

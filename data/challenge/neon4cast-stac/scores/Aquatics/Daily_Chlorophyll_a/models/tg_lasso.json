@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -82.0084,
                 29.676
             ],
@@ -33,6 +25,18 @@
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -99.1139,
@@ -49,16 +53,12 @@
             [
                 -88.1589,
                 31.8534
-            ],
-            [
-                -89.4737,
-                46.2097
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLWA, FLNT, BARC, SUGG, TOOK, PRLA, LIRO, PRPO, TOMB, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, CRAM, BLWA, FLNT, PRLA, LIRO, PRPO, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
-            "BLWA",
-            "FLNT",
             "BARC",
             "SUGG",
             "TOOK",
+            "CRAM",
+            "BLWA",
+            "FLNT",
             "PRLA",
             "LIRO",
             "PRPO",
-            "TOMB",
-            "CRAM"
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -257,7 +257,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "BLWA, FLNT, BARC, SUGG, TOOK, PRLA, LIRO, PRPO, TOMB, CRAM"
+            "description": "BARC, SUGG, TOOK, CRAM, BLWA, FLNT, PRLA, LIRO, PRPO, TOMB"
         },
         "4": {
             "type": "application/x-parquet",

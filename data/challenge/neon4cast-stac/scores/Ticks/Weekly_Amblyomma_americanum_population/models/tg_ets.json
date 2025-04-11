@@ -15,32 +15,24 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -76.56,
-                38.8901
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -96.5631,
-                39.1008
+                -78.1395,
+                38.8929
             ],
             [
                 -95.1921,
                 39.0404
             ],
             [
-                -78.1395,
-                38.8929
+                -96.5631,
+                39.1008
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -84.2826,
+                35.9641
             ],
             [
                 -81.9934,
@@ -49,12 +41,20 @@
             [
                 -87.3933,
                 32.9505
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SERC, BLAN, ORNL, LENO, KONZ, UKFS, SCBI, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SCBI, UKFS, KONZ, LENO, ORNL, OSBS, TALL, BLAN, SERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-29 18:10:45",
         "start_datetime": "2021-06-07T00:00:00Z",
@@ -87,15 +87,15 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "SERC",
-            "BLAN",
-            "ORNL",
-            "LENO",
-            "KONZ",
-            "UKFS",
             "SCBI",
+            "UKFS",
+            "KONZ",
+            "LENO",
+            "ORNL",
             "OSBS",
-            "TALL"
+            "TALL",
+            "BLAN",
+            "SERC"
         ],
         "table:columns": [
             {
@@ -252,7 +252,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "SERC, BLAN, ORNL, LENO, KONZ, UKFS, SCBI, OSBS, TALL"
+            "description": "SCBI, UKFS, KONZ, LENO, ORNL, OSBS, TALL, BLAN, SERC"
         },
         "4": {
             "type": "application/x-parquet",

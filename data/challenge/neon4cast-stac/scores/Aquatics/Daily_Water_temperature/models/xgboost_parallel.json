@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
                 -111.5081,
                 33.751
             ],
@@ -75,14 +43,6 @@
                 35.6904
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -93,6 +53,10 @@
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -147.504,
+                65.1532
             ],
             [
                 -105.5442,
@@ -107,8 +71,12 @@
                 39.0956
             ],
             [
-                -147.504,
-                65.1532
+                -96.443,
+                38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
             ],
             [
                 -149.143,
@@ -119,8 +87,36 @@
                 68.6307
             ],
             [
-                -121.9338,
-                45.7908
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
             ],
             [
                 -111.7979,
@@ -143,18 +139,22 @@
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
+                -121.9338,
+                45.7908
             ],
             [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: MAYF, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCRA, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MCDI, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, CARI, OKSR, TOOK, MART, REDB, TECR, TOMB, WLOU, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, SUGG, ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, PRIN, OKSR, TOOK, BLWA, CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, REDB, TECR, TOMB, WLOU, LIRO, MART, PRLA, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "MAYF",
-            "POSE",
-            "BLWA",
-            "CUPE",
-            "FLNT",
-            "HOPB",
-            "KING",
-            "MCRA",
             "SYCA",
             "WALK",
             "BIGC",
@@ -202,25 +194,33 @@
             "BLUE",
             "CRAM",
             "LECO",
-            "MCDI",
-            "PRIN",
             "SUGG",
             "ARIK",
             "BARC",
+            "CARI",
             "COMO",
             "GUIL",
             "LEWI",
-            "CARI",
+            "MCDI",
+            "PRIN",
             "OKSR",
             "TOOK",
-            "MART",
+            "BLWA",
+            "CUPE",
+            "FLNT",
+            "HOPB",
+            "KING",
+            "MAYF",
+            "MCRA",
+            "POSE",
             "REDB",
             "TECR",
             "TOMB",
             "WLOU",
             "LIRO",
-            "PRPO",
-            "PRLA"
+            "MART",
+            "PRLA",
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "MAYF, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCRA, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MCDI, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, CARI, OKSR, TOOK, MART, REDB, TECR, TOMB, WLOU, LIRO, PRPO, PRLA"
+            "description": "SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, SUGG, ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, PRIN, OKSR, TOOK, BLWA, CUPE, FLNT, HOPB, KING, MAYF, MCRA, POSE, REDB, TECR, TOMB, WLOU, LIRO, MART, PRLA, PRPO"
         },
         "4": {
             "type": "application/x-parquet",
