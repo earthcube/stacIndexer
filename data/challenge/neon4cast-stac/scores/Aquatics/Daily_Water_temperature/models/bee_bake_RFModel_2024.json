@@ -19,20 +19,20 @@
                 47.1591
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -99.2531,
                 47.1298
             ],
             [
-                -82.0177,
-                29.6878
+                -89.7048,
+                45.9983
             ],
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -149.6106,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: PRLA, LIRO, PRPO, SUGG, BARC, TOOK, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: PRLA, PRPO, LIRO, BARC, SUGG, TOOK, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-04-06",
         "updated": "2025-04-06 14:03:31",
         "start_datetime": "2024-02-29T00:00:00Z",
@@ -80,10 +80,10 @@
             "Daily",
             "P1D",
             "PRLA",
-            "LIRO",
             "PRPO",
-            "SUGG",
+            "LIRO",
             "BARC",
+            "SUGG",
             "TOOK",
             "CRAM"
         ],
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "PRLA, LIRO, PRPO, SUGG, BARC, TOOK, CRAM"
+            "description": "PRLA, PRPO, LIRO, BARC, SUGG, TOOK, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

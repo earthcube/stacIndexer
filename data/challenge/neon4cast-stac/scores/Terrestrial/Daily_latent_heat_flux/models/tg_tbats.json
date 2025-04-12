@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -119.006,
+                37.0058
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
                 -103.0293,
                 40.4619
             ],
@@ -61,50 +105,6 @@
             [
                 -99.1066,
                 47.1617
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -89.5857,
-                45.4937
             ],
             [
                 -81.4362,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: STER, BONA, STEI, JORN, UKFS, DEJU, KONZ, CLBJ, SCBI, YELL, OAES, DCFS, TEAK, ORNL, NOGP, GRSM, ABBY, SOAP, WREF, MLBS, NIWO, LENO, TREE, DSNY, BLAN, SERC, SJER, GUAN, LAJA, PUUM, MOAB, HARV, WOOD, BART, HEAL, OSBS, DELA, SRER, TALL, UNDE, RMNP, TOOL, KONA, ONAQ, BARR, JERC, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: TEAK, ORNL, NOGP, GRSM, ABBY, SOAP, WREF, MLBS, NIWO, LENO, TREE, STER, BONA, STEI, JORN, UKFS, DEJU, KONZ, CLBJ, SCBI, YELL, OAES, DCFS, DSNY, BLAN, SERC, SJER, GUAN, LAJA, PUUM, MOAB, HARV, WOOD, BART, HEAL, OSBS, DELA, SRER, TALL, UNDE, RMNP, TOOL, KONA, ONAQ, BARR, JERC, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,17 @@
             "le",
             "Daily",
             "P1D",
+            "TEAK",
+            "ORNL",
+            "NOGP",
+            "GRSM",
+            "ABBY",
+            "SOAP",
+            "WREF",
+            "MLBS",
+            "NIWO",
+            "LENO",
+            "TREE",
             "STER",
             "BONA",
             "STEI",
@@ -251,17 +262,6 @@
             "YELL",
             "OAES",
             "DCFS",
-            "TEAK",
-            "ORNL",
-            "NOGP",
-            "GRSM",
-            "ABBY",
-            "SOAP",
-            "WREF",
-            "MLBS",
-            "NIWO",
-            "LENO",
-            "TREE",
             "DSNY",
             "BLAN",
             "SERC",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "STER, BONA, STEI, JORN, UKFS, DEJU, KONZ, CLBJ, SCBI, YELL, OAES, DCFS, TEAK, ORNL, NOGP, GRSM, ABBY, SOAP, WREF, MLBS, NIWO, LENO, TREE, DSNY, BLAN, SERC, SJER, GUAN, LAJA, PUUM, MOAB, HARV, WOOD, BART, HEAL, OSBS, DELA, SRER, TALL, UNDE, RMNP, TOOL, KONA, ONAQ, BARR, JERC, CPER"
+            "description": "TEAK, ORNL, NOGP, GRSM, ABBY, SOAP, WREF, MLBS, NIWO, LENO, TREE, STER, BONA, STEI, JORN, UKFS, DEJU, KONZ, CLBJ, SCBI, YELL, OAES, DCFS, DSNY, BLAN, SERC, SJER, GUAN, LAJA, PUUM, MOAB, HARV, WOOD, BART, HEAL, OSBS, DELA, SRER, TALL, UNDE, RMNP, TOOL, KONA, ONAQ, BARR, JERC, CPER"
         },
         "4": {
             "type": "application/x-parquet",

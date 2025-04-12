@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.5631,
+                39.1008
+            ],
+            [
                 -81.9934,
                 29.6893
             ],
@@ -25,16 +29,12 @@
             [
                 -71.2874,
                 44.0639
-            ],
-            [
-                -96.5631,
-                39.1008
             ]
         ]
     },
     "properties": {
         "title": "UCB_XT",
-        "description": "All scores for the 30min_latent_heat_flux variable for the UCB_XT model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: OSBS, SRER, BART, KONZ.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_latent_heat_flux variable for the UCB_XT model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, OSBS, SRER, BART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-02-01",
         "updated": null,
         "start_datetime": "2017-02-01T00:00:00Z",
@@ -67,10 +67,10 @@
             "le",
             "30min",
             "PT30M",
+            "KONZ",
             "OSBS",
             "SRER",
-            "BART",
-            "KONZ"
+            "BART"
         ],
         "table:columns": [
             {
@@ -227,7 +227,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "OSBS, SRER, BART, KONZ"
+            "description": "KONZ, OSBS, SRER, BART"
         },
         "4": {
             "type": "application/x-parquet",

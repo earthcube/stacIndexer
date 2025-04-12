@@ -15,6 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -111.5081,
+                33.751
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
                 -96.443,
                 38.9459
             ],
@@ -121,40 +149,12 @@
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: MCDI, PRIN, SUGG, OKSR, COMO, LEWI, ARIK, CARI, GUIL, BARC, TOOK, KING, BLWA, CUPE, FLNT, HOPB, MAYF, MCRA, POSE, PRPO, PRLA, TECR, REDB, MART, WLOU, TOMB, LIRO, SYCA, BLDE, CRAM, BIGC, BLUE, LECO, WALK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: SYCA, BLDE, CRAM, BIGC, BLUE, LECO, WALK, MCDI, PRIN, SUGG, OKSR, COMO, LEWI, ARIK, CARI, GUIL, BARC, TOOK, KING, BLWA, CUPE, FLNT, HOPB, MAYF, MCRA, POSE, PRPO, PRLA, TECR, REDB, MART, WLOU, TOMB, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:33:49",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,6 +187,13 @@
             "oxygen",
             "Daily",
             "P1D",
+            "SYCA",
+            "BLDE",
+            "CRAM",
+            "BIGC",
+            "BLUE",
+            "LECO",
+            "WALK",
             "MCDI",
             "PRIN",
             "SUGG",
@@ -213,14 +220,7 @@
             "MART",
             "WLOU",
             "TOMB",
-            "LIRO",
-            "SYCA",
-            "BLDE",
-            "CRAM",
-            "BIGC",
-            "BLUE",
-            "LECO",
-            "WALK"
+            "LIRO"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "MCDI, PRIN, SUGG, OKSR, COMO, LEWI, ARIK, CARI, GUIL, BARC, TOOK, KING, BLWA, CUPE, FLNT, HOPB, MAYF, MCRA, POSE, PRPO, PRLA, TECR, REDB, MART, WLOU, TOMB, LIRO, SYCA, BLDE, CRAM, BIGC, BLUE, LECO, WALK"
+            "description": "SYCA, BLDE, CRAM, BIGC, BLUE, LECO, WALK, MCDI, PRIN, SUGG, OKSR, COMO, LEWI, ARIK, CARI, GUIL, BARC, TOOK, KING, BLWA, CUPE, FLNT, HOPB, MAYF, MCRA, POSE, PRPO, PRLA, TECR, REDB, MART, WLOU, TOMB, LIRO"
         },
         "4": {
             "type": "application/x-parquet",

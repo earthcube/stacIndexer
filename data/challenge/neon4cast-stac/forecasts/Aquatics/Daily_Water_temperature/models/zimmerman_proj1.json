@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -31,12 +27,16 @@
                 45.9983
             ],
             [
-                -82.0177,
-                29.6878
+                -89.4737,
+                46.2097
             ],
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -149.6106,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "zimmerman_proj1",
-        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: CRAM, PRLA, PRPO, LIRO, SUGG, BARC, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: PRLA, PRPO, LIRO, CRAM, BARC, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-04-06",
         "updated": "2025-04-06 14:04:02",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "CRAM",
             "PRLA",
             "PRPO",
             "LIRO",
-            "SUGG",
+            "CRAM",
             "BARC",
+            "SUGG",
             "TOOK"
         ],
         "table:columns": [
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "CRAM, PRLA, PRPO, LIRO, SUGG, BARC, TOOK"
+            "description": "PRLA, PRPO, LIRO, CRAM, BARC, SUGG, TOOK"
         },
         "4": {
             "type": "application/x-parquet",

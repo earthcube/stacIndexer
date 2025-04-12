@@ -15,36 +15,32 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.3295,
-                42.4719
+                -119.2575,
+                37.0597
             ],
             [
-                -84.4374,
-                31.1854
+                -89.4737,
+                46.2097
             ],
             [
-                -78.1473,
-                38.8943
+                -84.2793,
+                35.9574
             ],
             [
-                -87.4077,
-                32.9604
+                -83.5038,
+                35.6904
             ],
             [
-                -87.7982,
-                32.5415
+                -111.5081,
+                33.751
             ],
             [
-                -66.9868,
-                18.1135
+                -110.5871,
+                44.9501
             ],
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
+                -96.6242,
+                34.4442
             ],
             [
                 -149.143,
@@ -91,32 +87,36 @@
                 40.035
             ],
             [
-                -119.2575,
-                37.0597
+                -72.3295,
+                42.4719
             ],
             [
-                -89.4737,
-                46.2097
+                -84.4374,
+                31.1854
             ],
             [
-                -84.2793,
-                35.9574
+                -78.1473,
+                38.8943
             ],
             [
-                -83.5038,
-                35.6904
+                -87.4077,
+                32.9604
             ],
             [
-                -111.5081,
-                33.751
+                -87.7982,
+                32.5415
             ],
             [
-                -110.5871,
-                44.9501
+                -66.9868,
+                18.1135
             ],
             [
-                -96.6242,
-                34.4442
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
             ],
             [
                 -119.0274,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "fTSLM_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the fTSLM_lag model. Information for the model is provided as follows: This is a simple time series linear model in which water temperature is a function of air\ntemperature of that day and the previous day\u2019s air temperature.\n                                    The model predicts this variable at the following sites: HOPB, FLNT, POSE, MAYF, BLWA, CUPE, KING, MCRA, OKSR, SUGG, LEWI, MCDI, TOOK, GUIL, PRIN, BARC, CARI, ARIK, COMO, BIGC, CRAM, WALK, LECO, SYCA, BLDE, BLUE, TECR, LIRO, MART, PRPO, WLOU, TOMB, REDB, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the fTSLM_lag model. Information for the model is provided as follows: This is a simple time series linear model in which water temperature is a function of air\ntemperature of that day and the previous day\u2019s air temperature.\n                                    The model predicts this variable at the following sites: BIGC, CRAM, WALK, LECO, SYCA, BLDE, BLUE, OKSR, SUGG, LEWI, MCDI, TOOK, GUIL, PRIN, BARC, CARI, ARIK, COMO, HOPB, FLNT, POSE, MAYF, BLWA, CUPE, KING, MCRA, TECR, LIRO, MART, PRPO, WLOU, TOMB, REDB, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-11",
         "updated": "2024-08-23 15:01:03",
         "start_datetime": "2022-10-21T00:00:00Z",
@@ -187,14 +187,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "HOPB",
-            "FLNT",
-            "POSE",
-            "MAYF",
-            "BLWA",
-            "CUPE",
-            "KING",
-            "MCRA",
+            "BIGC",
+            "CRAM",
+            "WALK",
+            "LECO",
+            "SYCA",
+            "BLDE",
+            "BLUE",
             "OKSR",
             "SUGG",
             "LEWI",
@@ -206,13 +205,14 @@
             "CARI",
             "ARIK",
             "COMO",
-            "BIGC",
-            "CRAM",
-            "WALK",
-            "LECO",
-            "SYCA",
-            "BLDE",
-            "BLUE",
+            "HOPB",
+            "FLNT",
+            "POSE",
+            "MAYF",
+            "BLWA",
+            "CUPE",
+            "KING",
+            "MCRA",
             "TECR",
             "LIRO",
             "MART",
@@ -343,7 +343,7 @@
         },
         {
             "rel": "item",
-            "href": "https://github.com/OlssonF/NEON-simple-baselines/blob/main/Models/ARIMA_model.R",
+            "href": "https://github.com/OlssonF/NEON-simple-baselines/blob/main/Models/TSLM_lags.R",
             "type": "text/html",
             "title": "Link for Model Code"
         },
@@ -370,14 +370,14 @@
         "2": {
             "type": "text/html",
             "title": "Link for Model Code",
-            "href": "https://github.com/OlssonF/NEON-simple-baselines/blob/main/Models/ARIMA_model.R",
+            "href": "https://github.com/OlssonF/NEON-simple-baselines/blob/main/Models/TSLM_lags.R",
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "HOPB, FLNT, POSE, MAYF, BLWA, CUPE, KING, MCRA, OKSR, SUGG, LEWI, MCDI, TOOK, GUIL, PRIN, BARC, CARI, ARIK, COMO, BIGC, CRAM, WALK, LECO, SYCA, BLDE, BLUE, TECR, LIRO, MART, PRPO, WLOU, TOMB, REDB, PRLA"
+            "description": "BIGC, CRAM, WALK, LECO, SYCA, BLDE, BLUE, OKSR, SUGG, LEWI, MCDI, TOOK, GUIL, PRIN, BARC, CARI, ARIK, COMO, HOPB, FLNT, POSE, MAYF, BLWA, CUPE, KING, MCRA, TECR, LIRO, MART, PRPO, WLOU, TOMB, REDB, PRLA"
         },
         "4": {
             "type": "application/x-parquet",

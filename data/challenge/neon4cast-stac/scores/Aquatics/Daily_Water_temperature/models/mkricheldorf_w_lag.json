@@ -19,16 +19,20 @@
                 46.2097
             ],
             [
-                -89.7048,
-                45.9983
+                -99.1139,
+                47.1591
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -99.1139,
-                47.1591
+                -89.7048,
+                45.9983
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -82.0177,
@@ -37,16 +41,12 @@
             [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -82.0084,
-                29.676
             ]
         ]
     },
     "properties": {
         "title": "mkricheldorf_w_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: CRAM, LIRO, PRPO, PRLA, SUGG, TOOK, BARC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: CRAM, PRLA, PRPO, LIRO, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-25",
         "updated": "2024-08-29 16:25:04",
         "start_datetime": "2024-03-06T00:00:00Z",
@@ -80,12 +80,12 @@
             "Daily",
             "P1D",
             "CRAM",
-            "LIRO",
-            "PRPO",
             "PRLA",
+            "PRPO",
+            "LIRO",
+            "BARC",
             "SUGG",
-            "TOOK",
-            "BARC"
+            "TOOK"
         ],
         "table:columns": [
             {
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "CRAM, LIRO, PRPO, PRLA, SUGG, TOOK, BARC"
+            "description": "CRAM, PRLA, PRPO, LIRO, BARC, SUGG, TOOK"
         },
         "4": {
             "type": "application/x-parquet",

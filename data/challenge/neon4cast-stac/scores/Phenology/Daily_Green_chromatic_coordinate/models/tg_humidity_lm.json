@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
                 -119.2622,
                 37.0334
             ],
@@ -153,60 +201,12 @@
             [
                 -89.5373,
                 46.2339
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -78.1395,
-                38.8929
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: SOAP, ORNL, MLBS, NIWO, TREE, NOGP, WREF, LENO, TEAK, ABBY, GRSM, BLAN, HARV, PUUM, DSNY, SERC, GUAN, MOAB, WOOD, SJER, LAJA, ONAQ, BART, JERC, BARR, TALL, TOOL, CPER, HEAL, OSBS, KONA, DELA, RMNP, SRER, UNDE, KONZ, CLBJ, JORN, OAES, YELL, DCFS, DEJU, UKFS, STER, STEI, BONA, SCBI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: KONZ, CLBJ, JORN, OAES, YELL, DCFS, DEJU, UKFS, STER, STEI, BONA, SCBI, SOAP, ORNL, MLBS, NIWO, TREE, NOGP, WREF, LENO, TEAK, ABBY, GRSM, BLAN, HARV, PUUM, DSNY, SERC, GUAN, MOAB, WOOD, SJER, LAJA, ONAQ, BART, JERC, BARR, TALL, TOOL, CPER, HEAL, OSBS, KONA, DELA, RMNP, SRER, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:55:38",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,18 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "KONZ",
+            "CLBJ",
+            "JORN",
+            "OAES",
+            "YELL",
+            "DCFS",
+            "DEJU",
+            "UKFS",
+            "STER",
+            "STEI",
+            "BONA",
+            "SCBI",
             "SOAP",
             "ORNL",
             "MLBS",
@@ -273,19 +285,7 @@
             "DELA",
             "RMNP",
             "SRER",
-            "UNDE",
-            "KONZ",
-            "CLBJ",
-            "JORN",
-            "OAES",
-            "YELL",
-            "DCFS",
-            "DEJU",
-            "UKFS",
-            "STER",
-            "STEI",
-            "BONA",
-            "SCBI"
+            "UNDE"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "SOAP, ORNL, MLBS, NIWO, TREE, NOGP, WREF, LENO, TEAK, ABBY, GRSM, BLAN, HARV, PUUM, DSNY, SERC, GUAN, MOAB, WOOD, SJER, LAJA, ONAQ, BART, JERC, BARR, TALL, TOOL, CPER, HEAL, OSBS, KONA, DELA, RMNP, SRER, UNDE, KONZ, CLBJ, JORN, OAES, YELL, DCFS, DEJU, UKFS, STER, STEI, BONA, SCBI"
+            "description": "KONZ, CLBJ, JORN, OAES, YELL, DCFS, DEJU, UKFS, STER, STEI, BONA, SCBI, SOAP, ORNL, MLBS, NIWO, TREE, NOGP, WREF, LENO, TEAK, ABBY, GRSM, BLAN, HARV, PUUM, DSNY, SERC, GUAN, MOAB, WOOD, SJER, LAJA, ONAQ, BART, JERC, BARR, TALL, TOOL, CPER, HEAL, OSBS, KONA, DELA, RMNP, SRER, UNDE"
         },
         "4": {
             "type": "application/x-parquet",

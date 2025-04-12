@@ -15,44 +15,48 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -67.0769,
-                18.0213
+                -105.5824,
+                40.0543
             ],
             [
-                -109.3883,
-                38.2483
+                -119.2622,
+                37.0334
             ],
             [
-                -76.56,
-                38.8901
+                -122.3303,
+                45.7624
             ],
             [
-                -81.4362,
-                28.1251
+                -100.9154,
+                46.7697
             ],
             [
-                -155.3173,
-                19.5531
+                -84.2826,
+                35.9641
             ],
             [
-                -66.8687,
-                17.9696
+                -89.5857,
+                45.4937
             ],
             [
-                -119.7323,
-                37.1088
+                -83.5019,
+                35.689
             ],
             [
-                -78.0418,
-                39.0337
+                -119.006,
+                37.0058
             ],
             [
-                -99.2413,
-                47.1282
+                -80.5248,
+                37.3783
             ],
             [
-                -72.1727,
-                42.5369
+                -121.9519,
+                45.8205
+            ],
+            [
+                -88.1612,
+                31.8539
             ],
             [
                 -99.1066,
@@ -101,50 +105,6 @@
             [
                 -89.5864,
                 45.5089
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -88.1612,
-                31.8539
             ],
             [
                 -149.3705,
@@ -201,12 +161,52 @@
             [
                 -81.9934,
                 29.6893
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -72.1727,
+                42.5369
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS, LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:27:34",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,16 +239,17 @@
             "nee",
             "Daily",
             "P1D",
-            "LAJA",
-            "MOAB",
-            "SERC",
-            "DSNY",
-            "PUUM",
-            "GUAN",
-            "SJER",
-            "BLAN",
-            "WOOD",
-            "HARV",
+            "NIWO",
+            "SOAP",
+            "ABBY",
+            "NOGP",
+            "ORNL",
+            "TREE",
+            "GRSM",
+            "TEAK",
+            "MLBS",
+            "WREF",
+            "LENO",
             "DCFS",
             "JORN",
             "SCBI",
@@ -261,17 +262,6 @@
             "KONZ",
             "DEJU",
             "STEI",
-            "NIWO",
-            "SOAP",
-            "ABBY",
-            "NOGP",
-            "ORNL",
-            "TREE",
-            "GRSM",
-            "TEAK",
-            "MLBS",
-            "WREF",
-            "LENO",
             "TOOL",
             "UNDE",
             "HEAL",
@@ -285,7 +275,17 @@
             "RMNP",
             "BART",
             "CPER",
-            "OSBS"
+            "OSBS",
+            "LAJA",
+            "MOAB",
+            "SERC",
+            "DSNY",
+            "PUUM",
+            "GUAN",
+            "SJER",
+            "BLAN",
+            "WOOD",
+            "HARV"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS"
+            "description": "NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS, LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV"
         },
         "4": {
             "type": "application/x-parquet",

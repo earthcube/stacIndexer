@@ -63,46 +63,6 @@
                 32.5907
             ],
             [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
                 -121.9519,
                 45.8205
             ],
@@ -145,6 +105,46 @@
             [
                 -100.9154,
                 46.7697
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
             ],
             [
                 -89.5373,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STER, KONZ, OAES, SCBI, UKFS, DCFS, BONA, YELL, CLBJ, DEJU, STEI, JORN, DSNY, WOOD, LAJA, BLAN, SJER, GUAN, MOAB, HARV, SERC, PUUM, WREF, TREE, GRSM, ABBY, NIWO, TEAK, LENO, MLBS, ORNL, SOAP, NOGP, UNDE, ONAQ, RMNP, SRER, KONA, OSBS, TOOL, DELA, JERC, CPER, HEAL, BARR, BART, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STER, KONZ, OAES, SCBI, UKFS, DCFS, BONA, YELL, CLBJ, DEJU, STEI, JORN, WREF, TREE, GRSM, ABBY, NIWO, TEAK, LENO, MLBS, ORNL, SOAP, NOGP, DSNY, WOOD, LAJA, BLAN, SJER, GUAN, MOAB, HARV, SERC, PUUM, UNDE, ONAQ, RMNP, SRER, KONA, OSBS, TOOL, DELA, JERC, CPER, HEAL, BARR, BART, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:09",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -251,16 +251,6 @@
             "DEJU",
             "STEI",
             "JORN",
-            "DSNY",
-            "WOOD",
-            "LAJA",
-            "BLAN",
-            "SJER",
-            "GUAN",
-            "MOAB",
-            "HARV",
-            "SERC",
-            "PUUM",
             "WREF",
             "TREE",
             "GRSM",
@@ -272,6 +262,16 @@
             "ORNL",
             "SOAP",
             "NOGP",
+            "DSNY",
+            "WOOD",
+            "LAJA",
+            "BLAN",
+            "SJER",
+            "GUAN",
+            "MOAB",
+            "HARV",
+            "SERC",
+            "PUUM",
             "UNDE",
             "ONAQ",
             "RMNP",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "STER, KONZ, OAES, SCBI, UKFS, DCFS, BONA, YELL, CLBJ, DEJU, STEI, JORN, DSNY, WOOD, LAJA, BLAN, SJER, GUAN, MOAB, HARV, SERC, PUUM, WREF, TREE, GRSM, ABBY, NIWO, TEAK, LENO, MLBS, ORNL, SOAP, NOGP, UNDE, ONAQ, RMNP, SRER, KONA, OSBS, TOOL, DELA, JERC, CPER, HEAL, BARR, BART, TALL"
+            "description": "STER, KONZ, OAES, SCBI, UKFS, DCFS, BONA, YELL, CLBJ, DEJU, STEI, JORN, WREF, TREE, GRSM, ABBY, NIWO, TEAK, LENO, MLBS, ORNL, SOAP, NOGP, DSNY, WOOD, LAJA, BLAN, SJER, GUAN, MOAB, HARV, SERC, PUUM, UNDE, ONAQ, RMNP, SRER, KONA, OSBS, TOOL, DELA, JERC, CPER, HEAL, BARR, BART, TALL"
         },
         "4": {
             "type": "application/x-parquet",
