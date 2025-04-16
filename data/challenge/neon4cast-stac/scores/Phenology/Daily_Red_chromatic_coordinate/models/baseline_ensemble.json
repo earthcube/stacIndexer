@@ -59,54 +59,6 @@
                 37.0058
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
                 -66.8687,
                 17.9696
             ],
@@ -201,12 +153,60 @@
             [
                 -110.8355,
                 31.9107
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -106.8425,
+                32.5907
             ]
         ]
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: TREE, NOGP, WREF, MLBS, NIWO, ABBY, ORNL, LENO, SOAP, GRSM, TEAK, SCBI, OAES, BONA, DEJU, KONZ, YELL, DCFS, STER, UKFS, STEI, CLBJ, JORN, GUAN, MOAB, SERC, HARV, DSNY, PUUM, LAJA, WOOD, BLAN, SJER, TALL, TOOL, BART, HEAL, KONA, JERC, ONAQ, DELA, RMNP, OSBS, BARR, CPER, UNDE, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: TREE, NOGP, WREF, MLBS, NIWO, ABBY, ORNL, LENO, SOAP, GRSM, TEAK, GUAN, MOAB, SERC, HARV, DSNY, PUUM, LAJA, WOOD, BLAN, SJER, TALL, TOOL, BART, HEAL, KONA, JERC, ONAQ, DELA, RMNP, OSBS, BARR, CPER, UNDE, SRER, SCBI, OAES, BONA, DEJU, KONZ, YELL, DCFS, STER, UKFS, STEI, CLBJ, JORN.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-03",
         "updated": "2024-08-23 22:46:26",
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -250,18 +250,6 @@
             "SOAP",
             "GRSM",
             "TEAK",
-            "SCBI",
-            "OAES",
-            "BONA",
-            "DEJU",
-            "KONZ",
-            "YELL",
-            "DCFS",
-            "STER",
-            "UKFS",
-            "STEI",
-            "CLBJ",
-            "JORN",
             "GUAN",
             "MOAB",
             "SERC",
@@ -285,7 +273,19 @@
             "BARR",
             "CPER",
             "UNDE",
-            "SRER"
+            "SRER",
+            "SCBI",
+            "OAES",
+            "BONA",
+            "DEJU",
+            "KONZ",
+            "YELL",
+            "DCFS",
+            "STER",
+            "UKFS",
+            "STEI",
+            "CLBJ",
+            "JORN"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "TREE, NOGP, WREF, MLBS, NIWO, ABBY, ORNL, LENO, SOAP, GRSM, TEAK, SCBI, OAES, BONA, DEJU, KONZ, YELL, DCFS, STER, UKFS, STEI, CLBJ, JORN, GUAN, MOAB, SERC, HARV, DSNY, PUUM, LAJA, WOOD, BLAN, SJER, TALL, TOOL, BART, HEAL, KONA, JERC, ONAQ, DELA, RMNP, OSBS, BARR, CPER, UNDE, SRER"
+            "description": "TREE, NOGP, WREF, MLBS, NIWO, ABBY, ORNL, LENO, SOAP, GRSM, TEAK, GUAN, MOAB, SERC, HARV, DSNY, PUUM, LAJA, WOOD, BLAN, SJER, TALL, TOOL, BART, HEAL, KONA, JERC, ONAQ, DELA, RMNP, OSBS, BARR, CPER, UNDE, SRER, SCBI, OAES, BONA, DEJU, KONZ, YELL, DCFS, STER, UKFS, STEI, CLBJ, JORN"
         },
         "4": {
             "type": "application/x-parquet",

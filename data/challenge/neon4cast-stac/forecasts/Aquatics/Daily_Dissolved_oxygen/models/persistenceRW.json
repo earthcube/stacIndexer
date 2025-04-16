@@ -15,12 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
+                -97.7823,
+                33.3785
             ],
             [
                 -147.504,
@@ -31,8 +27,12 @@
                 18.1741
             ],
             [
-                -97.7823,
-                33.3785
+                -96.443,
+                38.9459
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -102.4471,
@@ -43,72 +43,36 @@
                 40.035
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
                 -77.9832,
                 39.0956
             ],
             [
-                -149.6106,
-                68.6307
+                -82.0084,
+                29.676
             ],
             [
                 -149.143,
                 68.6698
             ],
             [
-                -111.5081,
-                33.751
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -96.6038,
-                39.1051
+                -149.6106,
+                68.6307
             ],
             [
                 -66.9868,
                 18.1135
             ],
             [
-                -72.3295,
-                42.4719
+                -96.6038,
+                39.1051
             ],
             [
                 -87.4077,
                 32.9604
             ],
             [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
+                -72.3295,
+                42.4719
             ],
             [
                 -78.1473,
@@ -119,6 +83,14 @@
                 32.5415
             ],
             [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
                 -121.9338,
                 45.7908
             ],
@@ -127,12 +99,12 @@
                 40.7839
             ],
             [
-                -88.1589,
-                31.8534
-            ],
-            [
                 -105.9154,
                 39.8914
+            ],
+            [
+                -88.1589,
+                31.8534
             ],
             [
                 -119.0274,
@@ -143,26 +115,54 @@
                 45.9983
             ],
             [
+                -99.2531,
+                47.1298
+            ],
+            [
                 -99.1139,
                 47.1591
             ],
             [
-                -99.2531,
-                47.1298
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: SUGG, BARC, CARI, GUIL, PRIN, ARIK, COMO, MCDI, LEWI, TOOK, OKSR, SYCA, BLDE, LECO, BIGC, BLUE, WALK, CRAM, KING, CUPE, HOPB, MAYF, MCRA, FLNT, POSE, BLWA, MART, REDB, TOMB, WLOU, TECR, LIRO, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-04-06",
-        "updated": "2025-04-06 22:04:02",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: PRIN, CARI, GUIL, MCDI, SUGG, ARIK, COMO, LEWI, BARC, OKSR, TOOK, CUPE, KING, MAYF, HOPB, POSE, BLWA, FLNT, MCRA, MART, REDB, WLOU, TOMB, TECR, LIRO, PRPO, PRLA, WALK, BLDE, BIGC, BLUE, SYCA, LECO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-04-11",
+        "updated": "2025-04-11 22:04:38",
         "start_datetime": "2022-08-25T00:00:00Z",
-        "end_datetime": "2025-04-07T00:00:00Z",
+        "end_datetime": "2025-04-12T00:00:00Z",
         "providers": [
             {
-                "url": "https://projects.ecoforecast.org/neon4cast-ci/",
-                "name": "NEON Ecological Forecasting Project",
+                "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
+                "name": "Quinn Thomas",
                 "roles": [
                     "producer",
                     "processor",
@@ -187,40 +187,40 @@
             "oxygen",
             "Daily",
             "P1D",
-            "SUGG",
-            "BARC",
+            "PRIN",
             "CARI",
             "GUIL",
-            "PRIN",
+            "MCDI",
+            "SUGG",
             "ARIK",
             "COMO",
-            "MCDI",
             "LEWI",
-            "TOOK",
+            "BARC",
             "OKSR",
-            "SYCA",
-            "BLDE",
-            "LECO",
-            "BIGC",
-            "BLUE",
-            "WALK",
-            "CRAM",
-            "KING",
+            "TOOK",
             "CUPE",
-            "HOPB",
+            "KING",
             "MAYF",
-            "MCRA",
-            "FLNT",
+            "HOPB",
             "POSE",
             "BLWA",
+            "FLNT",
+            "MCRA",
             "MART",
             "REDB",
-            "TOMB",
             "WLOU",
+            "TOMB",
             "TECR",
             "LIRO",
+            "PRPO",
             "PRLA",
-            "PRPO"
+            "WALK",
+            "BLDE",
+            "BIGC",
+            "BLUE",
+            "SYCA",
+            "LECO",
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -303,7 +303,7 @@
         },
         {
             "rel": "item",
-            "href": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
+            "href": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
             "type": "text/html",
             "title": "Link for Model Code"
         },
@@ -330,14 +330,14 @@
         "2": {
             "type": "text/html",
             "title": "Link for Model Code",
-            "href": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
+            "href": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "SUGG, BARC, CARI, GUIL, PRIN, ARIK, COMO, MCDI, LEWI, TOOK, OKSR, SYCA, BLDE, LECO, BIGC, BLUE, WALK, CRAM, KING, CUPE, HOPB, MAYF, MCRA, FLNT, POSE, BLWA, MART, REDB, TOMB, WLOU, TECR, LIRO, PRLA, PRPO"
+            "description": "PRIN, CARI, GUIL, MCDI, SUGG, ARIK, COMO, LEWI, BARC, OKSR, TOOK, CUPE, KING, MAYF, HOPB, POSE, BLWA, FLNT, MCRA, MART, REDB, WLOU, TOMB, TECR, LIRO, PRPO, PRLA, WALK, BLDE, BIGC, BLUE, SYCA, LECO, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

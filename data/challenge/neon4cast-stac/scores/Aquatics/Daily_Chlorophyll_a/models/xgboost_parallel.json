@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
                 -87.7982,
                 32.5415
             ],
@@ -27,18 +39,6 @@
                 46.2097
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
                 -88.1589,
                 31.8534
             ],
@@ -47,18 +47,18 @@
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: BLWA, FLNT, CRAM, SUGG, BARC, TOOK, TOMB, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: SUGG, TOOK, BARC, BLWA, FLNT, CRAM, TOMB, LIRO, PRLA, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -66,7 +66,7 @@
         "providers": [
             {
                 "url": "https://github.com/FLARE-forecast/XGBoostNeon4Casts",
-                "name": "Freya Olsson",
+                "name": "Gregory Harrison",
                 "roles": [
                     "producer",
                     "processor",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
+            "SUGG",
+            "TOOK",
+            "BARC",
             "BLWA",
             "FLNT",
             "CRAM",
-            "SUGG",
-            "BARC",
-            "TOOK",
             "TOMB",
             "LIRO",
-            "PRPO",
-            "PRLA"
+            "PRLA",
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -257,7 +257,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "BLWA, FLNT, CRAM, SUGG, BARC, TOOK, TOMB, LIRO, PRPO, PRLA"
+            "description": "SUGG, TOOK, BARC, BLWA, FLNT, CRAM, TOMB, LIRO, PRLA, PRPO"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,18 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -82.0084,
                 29.676
+            ],
+            [
+                -78.1473,
+                38.8943
             ]
         ]
     },
     "properties": {
         "title": "wbears_rnn",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the wbears_rnn model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: POSE, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the wbears_rnn model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BARC, POSE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-06-01",
         "updated": null,
         "start_datetime": "2021-05-01T00:00:00Z",
@@ -59,8 +59,8 @@
             "oxygen",
             "Daily",
             "P1D",
-            "POSE",
-            "BARC"
+            "BARC",
+            "POSE"
         ],
         "table:columns": [
             {
@@ -177,7 +177,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "POSE, BARC"
+            "description": "BARC, POSE"
         },
         "4": {
             "type": "application/x-parquet",

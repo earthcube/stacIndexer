@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
                 -88.1612,
                 31.8539
             ],
@@ -43,6 +31,18 @@
                 38.8901
             ],
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
                 -81.9934,
                 29.6893
             ],
@@ -54,15 +54,15 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, LENO, ORNL, BLAN, SERC, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
         "end_datetime": "2023-12-25T00:00:00Z",
         "providers": [
             {
-                "url": "https://projects.ecoforecast.org/neon4cast-ci/",
-                "name": "NEON Ecological Forecasting Project",
+                "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
+                "name": "Abigail Lewis",
                 "roles": [
                     "producer",
                     "processor",
@@ -87,13 +87,13 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "KONZ",
-            "SCBI",
-            "UKFS",
             "LENO",
             "ORNL",
             "BLAN",
             "SERC",
+            "KONZ",
+            "SCBI",
+            "UKFS",
             "OSBS",
             "TALL"
         ],
@@ -212,7 +212,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "KONZ, SCBI, UKFS, LENO, ORNL, BLAN, SERC, OSBS, TALL"
+            "description": "LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",

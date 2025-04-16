@@ -15,20 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
                 -96.443,
                 38.9459
-            ],
-            [
-                -149.143,
-                68.6698
             ],
             [
                 -97.7823,
@@ -39,10 +27,6 @@
                 29.6878
             ],
             [
-                -149.6106,
-                68.6307
-            ],
-            [
                 -102.4471,
                 39.7582
             ],
@@ -51,16 +35,32 @@
                 29.676
             ],
             [
-                -147.504,
-                65.1532
-            ],
-            [
                 -105.5442,
                 40.035
             ],
             [
-                -83.5038,
-                35.6904
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -111.5081,
+                33.751
             ],
             [
                 -84.2793,
@@ -83,28 +83,44 @@
                 46.2097
             ],
             [
-                -111.5081,
-                33.751
+                -83.5038,
+                35.6904
             ],
             [
-                -84.4374,
-                31.1854
+                -121.9338,
+                45.7908
             ],
             [
-                -72.3295,
-                42.4719
+                -111.7979,
+                40.7839
             ],
             [
-                -96.6038,
-                39.1051
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -87.4077,
                 32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
             ],
             [
                 -78.1473,
@@ -119,42 +135,26 @@
                 18.1135
             ],
             [
-                -89.7048,
-                45.9983
+                -84.4374,
+                31.1854
             ],
             [
-                -121.9338,
-                45.7908
+                -72.3295,
+                42.4719
             ],
             [
-                -99.1139,
-                47.1591
+                -96.6038,
+                39.1051
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -88.1589,
-                31.8534
+                -122.1655,
+                44.2596
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: GUIL, LEWI, MCDI, OKSR, PRIN, SUGG, TOOK, ARIK, BARC, CARI, COMO, LECO, WALK, BIGC, BLDE, BLUE, CRAM, SYCA, FLNT, HOPB, KING, MAYF, MCRA, POSE, BLWA, CUPE, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: MCDI, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, CARI, OKSR, TOOK, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MART, REDB, TECR, TOMB, WLOU, LIRO, PRPO, PRLA, MAYF, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCRA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -162,7 +162,7 @@
         "providers": [
             {
                 "url": "https://github.com/FLARE-forecast/XGBoostNeon4Casts",
-                "name": "Freya Olsson",
+                "name": "Gregory Harrison",
                 "roles": [
                     "producer",
                     "processor",
@@ -187,40 +187,40 @@
             "temperature",
             "Daily",
             "P1D",
-            "GUIL",
-            "LEWI",
             "MCDI",
-            "OKSR",
             "PRIN",
             "SUGG",
-            "TOOK",
             "ARIK",
             "BARC",
-            "CARI",
             "COMO",
-            "LECO",
+            "GUIL",
+            "LEWI",
+            "CARI",
+            "OKSR",
+            "TOOK",
+            "SYCA",
             "WALK",
             "BIGC",
             "BLDE",
             "BLUE",
             "CRAM",
-            "SYCA",
-            "FLNT",
-            "HOPB",
-            "KING",
+            "LECO",
+            "MART",
+            "REDB",
+            "TECR",
+            "TOMB",
+            "WLOU",
+            "LIRO",
+            "PRPO",
+            "PRLA",
             "MAYF",
-            "MCRA",
             "POSE",
             "BLWA",
             "CUPE",
-            "LIRO",
-            "MART",
-            "PRLA",
-            "PRPO",
-            "REDB",
-            "TECR",
-            "WLOU",
-            "TOMB"
+            "FLNT",
+            "HOPB",
+            "KING",
+            "MCRA"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "GUIL, LEWI, MCDI, OKSR, PRIN, SUGG, TOOK, ARIK, BARC, CARI, COMO, LECO, WALK, BIGC, BLDE, BLUE, CRAM, SYCA, FLNT, HOPB, KING, MAYF, MCRA, POSE, BLWA, CUPE, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB"
+            "description": "MCDI, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, CARI, OKSR, TOOK, SYCA, WALK, BIGC, BLDE, BLUE, CRAM, LECO, MART, REDB, TECR, TOMB, WLOU, LIRO, PRPO, PRLA, MAYF, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCRA"
         },
         "4": {
             "type": "application/x-parquet",
