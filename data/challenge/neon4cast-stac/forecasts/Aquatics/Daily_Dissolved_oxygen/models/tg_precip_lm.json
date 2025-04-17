@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -82.0084,
                 29.676
             ],
@@ -89,6 +57,38 @@
             [
                 -147.504,
                 65.1532
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -111.7979,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART, WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART, WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:34:59",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,14 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BLWA",
-            "CUPE",
-            "MAYF",
-            "POSE",
-            "MCRA",
-            "HOPB",
-            "KING",
-            "FLNT",
             "BARC",
             "OKSR",
             "GUIL",
@@ -206,6 +198,14 @@
             "TOOK",
             "COMO",
             "CARI",
+            "BLWA",
+            "CUPE",
+            "MAYF",
+            "POSE",
+            "MCRA",
+            "HOPB",
+            "KING",
+            "FLNT",
             "REDB",
             "LIRO",
             "TECR",
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART, WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE"
+            "description": "BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART, WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE"
         },
         "4": {
             "type": "application/x-parquet",

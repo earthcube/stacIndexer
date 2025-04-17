@@ -15,24 +15,24 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
                 -76.56,
                 38.8901
             ],
             [
                 -78.0418,
                 39.0337
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -96.5631,
+                39.1008
             ],
             [
                 -84.2826,
@@ -54,7 +54,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: UKFS, KONZ, SCBI, SERC, BLAN, ORNL, LENO, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SERC, BLAN, UKFS, SCBI, KONZ, ORNL, LENO, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-29 18:10:37",
         "start_datetime": "2021-06-07T00:00:00Z",
@@ -87,11 +87,11 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "UKFS",
-            "KONZ",
-            "SCBI",
             "SERC",
             "BLAN",
+            "UKFS",
+            "SCBI",
+            "KONZ",
             "ORNL",
             "LENO",
             "OSBS",
@@ -212,7 +212,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "UKFS, KONZ, SCBI, SERC, BLAN, ORNL, LENO, OSBS, TALL"
+            "description": "SERC, BLAN, UKFS, SCBI, KONZ, ORNL, LENO, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",

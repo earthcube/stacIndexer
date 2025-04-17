@@ -15,22 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -105.9154,
-                39.8914
-            ],
-            [
                 -102.4471,
                 39.7582
             ],
             [
                 -82.0084,
                 29.676
+            ],
+            [
+                -105.9154,
+                39.8914
             ]
         ]
     },
     "properties": {
         "title": "AquaticEcosystemsOxygen",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: WLOU, ARIK, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: ARIK, BARC, WLOU.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-07",
         "updated": "2024-08-23 03:49:14",
         "start_datetime": "2024-04-03T00:00:00Z",
@@ -63,9 +63,9 @@
             "oxygen",
             "Daily",
             "P1D",
-            "WLOU",
             "ARIK",
-            "BARC"
+            "BARC",
+            "WLOU"
         ],
         "table:columns": [
             {
@@ -182,7 +182,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "WLOU, ARIK, BARC"
+            "description": "ARIK, BARC, WLOU"
         },
         "4": {
             "type": "application/x-parquet",

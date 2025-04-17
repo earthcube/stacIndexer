@@ -15,22 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -88.1589,
+                31.8534
+            ],
+            [
                 -87.7982,
                 32.5415
             ],
             [
                 -84.4374,
                 31.1854
-            ],
-            [
-                -88.1589,
-                31.8534
             ]
         ]
     },
     "properties": {
         "title": "USGSHABs1",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the USGSHABs1 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the USGSHABs1 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: TOMB, BLWA, FLNT.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-05",
         "updated": "2024-07-02 11:25:00",
         "start_datetime": "2022-09-01T00:00:00Z",
@@ -63,9 +63,9 @@
             "chla",
             "Daily",
             "P1D",
+            "TOMB",
             "BLWA",
-            "FLNT",
-            "TOMB"
+            "FLNT"
         ],
         "table:columns": [
             {
@@ -182,7 +182,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "BLWA, FLNT, TOMB"
+            "description": "TOMB, BLWA, FLNT"
         },
         "4": {
             "type": "application/x-parquet",

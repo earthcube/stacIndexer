@@ -15,96 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -95.1921,
-                39.0404
+                -78.0418,
+                39.0337
             ],
             [
-                -147.5026,
-                65.154
+                -81.4362,
+                28.1251
             ],
             [
-                -99.1066,
-                47.1617
+                -99.2413,
+                47.1282
             ],
             [
-                -145.7514,
-                63.8811
+                -155.3173,
+                19.5531
             ],
             [
-                -78.1395,
-                38.8929
+                -119.7323,
+                37.1088
             ],
             [
-                -110.5391,
-                44.9535
+                -72.1727,
+                42.5369
             ],
             [
-                -106.8425,
-                32.5907
+                -66.8687,
+                17.9696
             ],
             [
-                -97.57,
-                33.4012
+                -109.3883,
+                38.2483
             ],
             [
-                -96.5631,
-                39.1008
+                -67.0769,
+                18.0213
             ],
             [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -105.5824,
-                40.0543
+                -76.56,
+                38.8901
             ],
             [
                 -105.546,
@@ -163,50 +111,102 @@
                 71.2824
             ],
             [
-                -78.0418,
-                39.0337
+                -80.5248,
+                37.3783
             ],
             [
-                -81.4362,
-                28.1251
+                -84.2826,
+                35.9641
             ],
             [
-                -99.2413,
-                47.1282
+                -100.9154,
+                46.7697
             ],
             [
-                -155.3173,
-                19.5531
+                -119.2622,
+                37.0334
             ],
             [
-                -119.7323,
-                37.1088
+                -89.5857,
+                45.4937
             ],
             [
-                -72.1727,
-                42.5369
+                -121.9519,
+                45.8205
             ],
             [
-                -66.8687,
-                17.9696
+                -122.3303,
+                45.7624
             ],
             [
-                -109.3883,
-                38.2483
+                -119.006,
+                37.0058
             ],
             [
-                -67.0769,
-                18.0213
+                -83.5019,
+                35.689
             ],
             [
-                -76.56,
-                38.8901
+                -88.1612,
+                31.8539
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -89.5864,
+                45.5089
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,29 +239,16 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "UKFS",
-            "BONA",
-            "DCFS",
-            "DEJU",
-            "SCBI",
-            "YELL",
-            "JORN",
-            "CLBJ",
-            "KONZ",
-            "STER",
-            "OAES",
-            "STEI",
-            "MLBS",
-            "ORNL",
-            "NOGP",
-            "SOAP",
-            "TREE",
-            "WREF",
-            "ABBY",
-            "TEAK",
-            "GRSM",
-            "LENO",
-            "NIWO",
+            "BLAN",
+            "DSNY",
+            "WOOD",
+            "PUUM",
+            "SJER",
+            "HARV",
+            "GUAN",
+            "MOAB",
+            "LAJA",
+            "SERC",
             "RMNP",
             "TALL",
             "TOOL",
@@ -276,16 +263,29 @@
             "OSBS",
             "SRER",
             "BARR",
-            "BLAN",
-            "DSNY",
-            "WOOD",
-            "PUUM",
-            "SJER",
-            "HARV",
-            "GUAN",
-            "MOAB",
-            "LAJA",
-            "SERC"
+            "MLBS",
+            "ORNL",
+            "NOGP",
+            "SOAP",
+            "TREE",
+            "WREF",
+            "ABBY",
+            "TEAK",
+            "GRSM",
+            "LENO",
+            "NIWO",
+            "UKFS",
+            "BONA",
+            "DCFS",
+            "DEJU",
+            "SCBI",
+            "YELL",
+            "JORN",
+            "CLBJ",
+            "KONZ",
+            "STER",
+            "OAES",
+            "STEI"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC"
+            "description": "BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,34 +15,34 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -96.5631,
                 39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
             ],
             [
                 -95.1921,
                 39.0404
             ],
             [
-                -87.3933,
-                32.9505
+                -78.1395,
+                38.8929
             ],
             [
                 -76.56,
                 38.8901
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -84.2826,
+                35.9641
             ]
         ]
     },
     "properties": {
         "title": "Ticks_288",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the Ticks_288 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: ORNL, KONZ, SCBI, UKFS, TALL, SERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the Ticks_288 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, UKFS, SCBI, SERC, TALL, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-03-24",
         "updated": null,
         "start_datetime": "2018-09-03T00:00:00Z",
@@ -75,12 +75,12 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "ORNL",
             "KONZ",
-            "SCBI",
             "UKFS",
+            "SCBI",
+            "SERC",
             "TALL",
-            "SERC"
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -237,7 +237,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "ORNL, KONZ, SCBI, UKFS, TALL, SERC"
+            "description": "KONZ, UKFS, SCBI, SERC, TALL, ORNL"
         },
         "4": {
             "type": "application/x-parquet",

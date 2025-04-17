@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
                 -121.9519,
                 45.8205
             ],
@@ -107,46 +147,6 @@
                 39.0404
             ],
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WREF, ORNL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, YELL, OAES, SCBI, STEI, STER, UKFS, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, MOAB, PUUM, SERC, BART, OSBS, SRER, TALL, UNDE, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, MOAB, PUUM, SERC, WREF, ORNL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, YELL, OAES, SCBI, STEI, STER, UKFS, BART, OSBS, SRER, TALL, UNDE, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-30",
         "updated": "2023-12-31 05:43:28",
         "start_datetime": "2022-02-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "nee",
             "30min",
             "PT30M",
+            "SJER",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "WOOD",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
             "WREF",
             "ORNL",
             "ABBY",
@@ -262,16 +272,6 @@
             "STEI",
             "STER",
             "UKFS",
-            "SJER",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "WOOD",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
             "BART",
             "OSBS",
             "SRER",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "WREF, ORNL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, YELL, OAES, SCBI, STEI, STER, UKFS, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, MOAB, PUUM, SERC, BART, OSBS, SRER, TALL, UNDE, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL"
+            "description": "SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, MOAB, PUUM, SERC, WREF, ORNL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, YELL, OAES, SCBI, STEI, STER, UKFS, BART, OSBS, SRER, TALL, UNDE, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL"
         },
         "4": {
             "type": "application/x-parquet",
