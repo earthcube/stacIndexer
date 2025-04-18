@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
                 -78.0418,
                 39.0337
             ],
@@ -153,60 +201,12 @@
             [
                 -105.5824,
                 40.0543
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -89.5864,
-                45.5089
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI, BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 07:16:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,18 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "UKFS",
+            "BONA",
+            "DCFS",
+            "DEJU",
+            "SCBI",
+            "YELL",
+            "JORN",
+            "CLBJ",
+            "KONZ",
+            "STER",
+            "OAES",
+            "STEI",
             "BLAN",
             "DSNY",
             "WOOD",
@@ -273,19 +285,7 @@
             "TEAK",
             "GRSM",
             "LENO",
-            "NIWO",
-            "UKFS",
-            "BONA",
-            "DCFS",
-            "DEJU",
-            "SCBI",
-            "YELL",
-            "JORN",
-            "CLBJ",
-            "KONZ",
-            "STER",
-            "OAES",
-            "STEI"
+            "NIWO"
         ],
         "table:columns": [
             {
@@ -401,8 +401,8 @@
         "3": {
             "type": "text/plain",
             "title": "Model Sites",
-            "href": "https://github.com/radiantearth",
-            "description": "BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO, UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI"
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "UKFS, BONA, DCFS, DEJU, SCBI, YELL, JORN, CLBJ, KONZ, STER, OAES, STEI, BLAN, DSNY, WOOD, PUUM, SJER, HARV, GUAN, MOAB, LAJA, SERC, RMNP, TALL, TOOL, CPER, DELA, UNDE, BART, HEAL, KONA, JERC, ONAQ, OSBS, SRER, BARR, MLBS, ORNL, NOGP, SOAP, TREE, WREF, ABBY, TEAK, GRSM, LENO, NIWO"
         },
         "4": {
             "type": "application/x-parquet",

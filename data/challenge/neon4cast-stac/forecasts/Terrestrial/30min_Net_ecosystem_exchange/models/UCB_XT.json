@@ -15,8 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.8355,
-                31.9107
+                -96.5631,
+                39.1008
             ],
             [
                 -71.2874,
@@ -27,14 +27,14 @@
                 29.6893
             ],
             [
-                -96.5631,
-                39.1008
+                -110.8355,
+                31.9107
             ]
         ]
     },
     "properties": {
         "title": "UCB_XT",
-        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the UCB_XT model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SRER, BART, OSBS, KONZ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_Net_ecosystem_exchange variable for the UCB_XT model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, BART, OSBS, SRER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-02-01",
         "updated": null,
         "start_datetime": "2017-02-01T00:00:00Z",
@@ -67,10 +67,10 @@
             "nee",
             "30min",
             "PT30M",
-            "SRER",
+            "KONZ",
             "BART",
             "OSBS",
-            "KONZ"
+            "SRER"
         ],
         "table:columns": [
             {
@@ -186,8 +186,8 @@
         "3": {
             "type": "text/plain",
             "title": "Model Sites",
-            "href": "https://github.com/radiantearth",
-            "description": "SRER, BART, OSBS, KONZ"
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "KONZ, BART, OSBS, SRER"
         },
         "4": {
             "type": "application/x-parquet",

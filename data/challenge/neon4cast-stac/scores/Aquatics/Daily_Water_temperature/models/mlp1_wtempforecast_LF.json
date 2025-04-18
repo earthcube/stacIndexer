@@ -31,12 +31,12 @@
                 46.2097
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
                 -82.0084,
                 29.676
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -149.6106,
@@ -46,11 +46,11 @@
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All scores for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, CRAM, SUGG, BARC, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-04-11",
-        "updated": "2025-04-11 14:04:01",
+        "description": "All scores for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, CRAM, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-04-13",
+        "updated": "2025-04-13 14:04:11",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2025-04-12T00:00:00Z",
+        "end_datetime": "2025-04-14T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/lindsey-finks/NEON-forecast-challenge-workshop",
@@ -83,8 +83,8 @@
             "PRLA",
             "PRPO",
             "CRAM",
-            "SUGG",
             "BARC",
+            "SUGG",
             "TOOK"
         ],
         "table:columns": [
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://github.com/radiantearth",
-            "description": "LIRO, PRLA, PRPO, CRAM, SUGG, BARC, TOOK"
+            "description": "LIRO, PRLA, PRPO, CRAM, BARC, SUGG, TOOK"
         },
         "4": {
             "type": "application/x-parquet",

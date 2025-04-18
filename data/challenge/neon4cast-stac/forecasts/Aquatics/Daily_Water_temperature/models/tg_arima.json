@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
                 -96.6242,
                 34.4442
             ],
@@ -119,6 +87,38 @@
                 40.035
             ],
             [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
                 -88.1589,
                 31.8534
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MCRA, MAYF, BLWA, KING, FLNT, POSE, CUPE, HOPB, BLUE, BIGC, CRAM, WALK, BLDE, LECO, SYCA, PRIN, SUGG, BARC, OKSR, MCDI, LEWI, CARI, GUIL, ARIK, TOOK, COMO, TOMB, PRPO, MART, WLOU, REDB, TECR, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: BLUE, BIGC, CRAM, WALK, BLDE, LECO, SYCA, PRIN, SUGG, BARC, OKSR, MCDI, LEWI, CARI, GUIL, ARIK, TOOK, COMO, MCRA, MAYF, BLWA, KING, FLNT, POSE, CUPE, HOPB, TOMB, PRPO, MART, WLOU, REDB, TECR, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:31:31",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "MCRA",
-            "MAYF",
-            "BLWA",
-            "KING",
-            "FLNT",
-            "POSE",
-            "CUPE",
-            "HOPB",
             "BLUE",
             "BIGC",
             "CRAM",
@@ -213,6 +205,14 @@
             "ARIK",
             "TOOK",
             "COMO",
+            "MCRA",
+            "MAYF",
+            "BLWA",
+            "KING",
+            "FLNT",
+            "POSE",
+            "CUPE",
+            "HOPB",
             "TOMB",
             "PRPO",
             "MART",
@@ -336,8 +336,8 @@
         "3": {
             "type": "text/plain",
             "title": "Model Sites",
-            "href": "https://github.com/radiantearth",
-            "description": "MCRA, MAYF, BLWA, KING, FLNT, POSE, CUPE, HOPB, BLUE, BIGC, CRAM, WALK, BLDE, LECO, SYCA, PRIN, SUGG, BARC, OKSR, MCDI, LEWI, CARI, GUIL, ARIK, TOOK, COMO, TOMB, PRPO, MART, WLOU, REDB, TECR, LIRO, PRLA"
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "BLUE, BIGC, CRAM, WALK, BLDE, LECO, SYCA, PRIN, SUGG, BARC, OKSR, MCDI, LEWI, CARI, GUIL, ARIK, TOOK, COMO, MCRA, MAYF, BLWA, KING, FLNT, POSE, CUPE, HOPB, TOMB, PRPO, MART, WLOU, REDB, TECR, LIRO, PRLA"
         },
         "4": {
             "type": "application/x-parquet",
