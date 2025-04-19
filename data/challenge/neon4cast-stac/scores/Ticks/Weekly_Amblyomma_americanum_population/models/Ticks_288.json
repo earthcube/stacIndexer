@@ -19,30 +19,30 @@
                 38.8901
             ],
             [
-                -84.2826,
-                35.9641
+                -87.3933,
+                32.9505
             ],
             [
                 -96.5631,
                 39.1008
             ],
             [
-                -78.1395,
-                38.8929
-            ],
-            [
                 -95.1921,
                 39.0404
             ],
             [
-                -87.3933,
-                32.9505
+                -78.1395,
+                38.8929
+            ],
+            [
+                -84.2826,
+                35.9641
             ]
         ]
     },
     "properties": {
         "title": "Ticks_288",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the Ticks_288 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SERC, ORNL, KONZ, SCBI, UKFS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the Ticks_288 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SERC, TALL, KONZ, UKFS, SCBI, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-03-24",
         "updated": null,
         "start_datetime": "2018-09-03T00:00:00Z",
@@ -76,11 +76,11 @@
             "Weekly",
             "P1W",
             "SERC",
-            "ORNL",
+            "TALL",
             "KONZ",
-            "SCBI",
             "UKFS",
-            "TALL"
+            "SCBI",
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -236,8 +236,8 @@
         "3": {
             "type": "text/plain",
             "title": "Model Sites",
-            "href": "https://github.com/radiantearth",
-            "description": "SERC, ORNL, KONZ, SCBI, UKFS, TALL"
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "SERC, TALL, KONZ, UKFS, SCBI, ORNL"
         },
         "4": {
             "type": "application/x-parquet",

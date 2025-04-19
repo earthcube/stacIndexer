@@ -99,54 +99,6 @@
                 40.0543
             ],
             [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
                 -87.3933,
                 32.9505
             ],
@@ -201,12 +153,60 @@
             [
                 -71.2874,
                 44.0639
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LAJA, SERC, HARV, BLAN, MOAB, SJER, DSNY, GUAN, PUUM, WOOD, TEAK, SOAP, TREE, MLBS, NOGP, GRSM, LENO, ORNL, ABBY, WREF, NIWO, JORN, YELL, OAES, STEI, SCBI, STER, CLBJ, DCFS, DEJU, KONZ, UKFS, BONA, TALL, TOOL, CPER, KONA, HEAL, JERC, ONAQ, RMNP, BARR, OSBS, DELA, UNDE, SRER, BART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LAJA, SERC, HARV, BLAN, MOAB, SJER, DSNY, GUAN, PUUM, WOOD, TEAK, SOAP, TREE, MLBS, NOGP, GRSM, LENO, ORNL, ABBY, WREF, NIWO, TALL, TOOL, CPER, KONA, HEAL, JERC, ONAQ, RMNP, BARR, OSBS, DELA, UNDE, SRER, BART, JORN, YELL, OAES, STEI, SCBI, STER, CLBJ, DCFS, DEJU, KONZ, UKFS, BONA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -260,18 +260,6 @@
             "ABBY",
             "WREF",
             "NIWO",
-            "JORN",
-            "YELL",
-            "OAES",
-            "STEI",
-            "SCBI",
-            "STER",
-            "CLBJ",
-            "DCFS",
-            "DEJU",
-            "KONZ",
-            "UKFS",
-            "BONA",
             "TALL",
             "TOOL",
             "CPER",
@@ -285,7 +273,19 @@
             "DELA",
             "UNDE",
             "SRER",
-            "BART"
+            "BART",
+            "JORN",
+            "YELL",
+            "OAES",
+            "STEI",
+            "SCBI",
+            "STER",
+            "CLBJ",
+            "DCFS",
+            "DEJU",
+            "KONZ",
+            "UKFS",
+            "BONA"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LAJA, SERC, HARV, BLAN, MOAB, SJER, DSNY, GUAN, PUUM, WOOD, TEAK, SOAP, TREE, MLBS, NOGP, GRSM, LENO, ORNL, ABBY, WREF, NIWO, JORN, YELL, OAES, STEI, SCBI, STER, CLBJ, DCFS, DEJU, KONZ, UKFS, BONA, TALL, TOOL, CPER, KONA, HEAL, JERC, ONAQ, RMNP, BARR, OSBS, DELA, UNDE, SRER, BART"
+            "description": "LAJA, SERC, HARV, BLAN, MOAB, SJER, DSNY, GUAN, PUUM, WOOD, TEAK, SOAP, TREE, MLBS, NOGP, GRSM, LENO, ORNL, ABBY, WREF, NIWO, TALL, TOOL, CPER, KONA, HEAL, JERC, ONAQ, RMNP, BARR, OSBS, DELA, UNDE, SRER, BART, JORN, YELL, OAES, STEI, SCBI, STER, CLBJ, DCFS, DEJU, KONZ, UKFS, BONA"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
                 -72.1727,
                 42.5369
             ],
@@ -99,54 +147,6 @@
                 40.0543
             ],
             [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: HARV, DSNY, PUUM, SJER, SERC, MOAB, WOOD, GUAN, LAJA, BLAN, SOAP, MLBS, TREE, ORNL, TEAK, LENO, WREF, NOGP, GRSM, ABBY, NIWO, KONZ, SCBI, STEI, OAES, CLBJ, UKFS, STER, YELL, BONA, JORN, DEJU, DCFS, BART, RMNP, OSBS, JERC, UNDE, HEAL, CPER, KONA, SRER, ONAQ, TALL, DELA, TOOL, BARR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: KONZ, SCBI, STEI, OAES, CLBJ, UKFS, STER, YELL, BONA, JORN, DEJU, DCFS, HARV, DSNY, PUUM, SJER, SERC, MOAB, WOOD, GUAN, LAJA, BLAN, SOAP, MLBS, TREE, ORNL, TEAK, LENO, WREF, NOGP, GRSM, ABBY, NIWO, BART, RMNP, OSBS, JERC, UNDE, HEAL, CPER, KONA, SRER, ONAQ, TALL, DELA, TOOL, BARR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:13:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,18 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "KONZ",
+            "SCBI",
+            "STEI",
+            "OAES",
+            "CLBJ",
+            "UKFS",
+            "STER",
+            "YELL",
+            "BONA",
+            "JORN",
+            "DEJU",
+            "DCFS",
             "HARV",
             "DSNY",
             "PUUM",
@@ -260,18 +272,6 @@
             "GRSM",
             "ABBY",
             "NIWO",
-            "KONZ",
-            "SCBI",
-            "STEI",
-            "OAES",
-            "CLBJ",
-            "UKFS",
-            "STER",
-            "YELL",
-            "BONA",
-            "JORN",
-            "DEJU",
-            "DCFS",
             "BART",
             "RMNP",
             "OSBS",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, DSNY, PUUM, SJER, SERC, MOAB, WOOD, GUAN, LAJA, BLAN, SOAP, MLBS, TREE, ORNL, TEAK, LENO, WREF, NOGP, GRSM, ABBY, NIWO, KONZ, SCBI, STEI, OAES, CLBJ, UKFS, STER, YELL, BONA, JORN, DEJU, DCFS, BART, RMNP, OSBS, JERC, UNDE, HEAL, CPER, KONA, SRER, ONAQ, TALL, DELA, TOOL, BARR"
+            "description": "KONZ, SCBI, STEI, OAES, CLBJ, UKFS, STER, YELL, BONA, JORN, DEJU, DCFS, HARV, DSNY, PUUM, SJER, SERC, MOAB, WOOD, GUAN, LAJA, BLAN, SOAP, MLBS, TREE, ORNL, TEAK, LENO, WREF, NOGP, GRSM, ABBY, NIWO, BART, RMNP, OSBS, JERC, UNDE, HEAL, CPER, KONA, SRER, ONAQ, TALL, DELA, TOOL, BARR"
         },
         "4": {
             "type": "application/x-parquet",

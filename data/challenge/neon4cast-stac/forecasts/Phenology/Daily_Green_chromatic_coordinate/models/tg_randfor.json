@@ -63,46 +63,6 @@
                 38.8929
             ],
             [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
                 -119.006,
                 37.0058
             ],
@@ -145,6 +105,46 @@
             [
                 -80.5248,
                 37.3783
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
             ],
             [
                 -104.7456,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: YELL, UKFS, CLBJ, DEJU, JORN, STER, KONZ, DCFS, BONA, STEI, OAES, SCBI, PUUM, WOOD, SJER, LAJA, GUAN, HARV, DSNY, MOAB, BLAN, SERC, TEAK, GRSM, ABBY, ORNL, LENO, SOAP, NIWO, NOGP, WREF, TREE, MLBS, CPER, OSBS, UNDE, HEAL, KONA, DELA, BART, BARR, TOOL, ONAQ, RMNP, SRER, TALL, JERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: YELL, UKFS, CLBJ, DEJU, JORN, STER, KONZ, DCFS, BONA, STEI, OAES, SCBI, TEAK, GRSM, ABBY, ORNL, LENO, SOAP, NIWO, NOGP, WREF, TREE, MLBS, PUUM, WOOD, SJER, LAJA, GUAN, HARV, DSNY, MOAB, BLAN, SERC, CPER, OSBS, UNDE, HEAL, KONA, DELA, BART, BARR, TOOL, ONAQ, RMNP, SRER, TALL, JERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:14:00",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -251,16 +251,6 @@
             "STEI",
             "OAES",
             "SCBI",
-            "PUUM",
-            "WOOD",
-            "SJER",
-            "LAJA",
-            "GUAN",
-            "HARV",
-            "DSNY",
-            "MOAB",
-            "BLAN",
-            "SERC",
             "TEAK",
             "GRSM",
             "ABBY",
@@ -272,6 +262,16 @@
             "WREF",
             "TREE",
             "MLBS",
+            "PUUM",
+            "WOOD",
+            "SJER",
+            "LAJA",
+            "GUAN",
+            "HARV",
+            "DSNY",
+            "MOAB",
+            "BLAN",
+            "SERC",
             "CPER",
             "OSBS",
             "UNDE",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "YELL, UKFS, CLBJ, DEJU, JORN, STER, KONZ, DCFS, BONA, STEI, OAES, SCBI, PUUM, WOOD, SJER, LAJA, GUAN, HARV, DSNY, MOAB, BLAN, SERC, TEAK, GRSM, ABBY, ORNL, LENO, SOAP, NIWO, NOGP, WREF, TREE, MLBS, CPER, OSBS, UNDE, HEAL, KONA, DELA, BART, BARR, TOOL, ONAQ, RMNP, SRER, TALL, JERC"
+            "description": "YELL, UKFS, CLBJ, DEJU, JORN, STER, KONZ, DCFS, BONA, STEI, OAES, SCBI, TEAK, GRSM, ABBY, ORNL, LENO, SOAP, NIWO, NOGP, WREF, TREE, MLBS, PUUM, WOOD, SJER, LAJA, GUAN, HARV, DSNY, MOAB, BLAN, SERC, CPER, OSBS, UNDE, HEAL, KONA, DELA, BART, BARR, TOOL, ONAQ, RMNP, SRER, TALL, JERC"
         },
         "4": {
             "type": "application/x-parquet",

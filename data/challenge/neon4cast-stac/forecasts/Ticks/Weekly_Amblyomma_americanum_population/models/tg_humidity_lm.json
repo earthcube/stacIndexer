@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
                 -88.1612,
                 31.8539
             ],
@@ -43,6 +31,18 @@
                 38.8901
             ],
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
                 -81.9934,
                 29.6893
             ],
@@ -54,7 +54,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, LENO, ORNL, BLAN, SERC, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -87,13 +87,13 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "KONZ",
-            "SCBI",
-            "UKFS",
             "LENO",
             "ORNL",
             "BLAN",
             "SERC",
+            "KONZ",
+            "SCBI",
+            "UKFS",
             "OSBS",
             "TALL"
         ],
@@ -212,7 +212,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, SCBI, UKFS, LENO, ORNL, BLAN, SERC, OSBS, TALL"
+            "description": "LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",
