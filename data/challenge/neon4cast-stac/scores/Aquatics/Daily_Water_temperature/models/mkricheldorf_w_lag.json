@@ -19,12 +19,12 @@
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
             ],
             [
                 -82.0177,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "mkricheldorf_w_lag",
-        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: LIRO, PRPO, PRLA, SUGG, TOOK, BARC, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, SUGG, TOOK, BARC, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-25",
         "updated": "2024-08-29 16:25:04",
         "start_datetime": "2024-03-06T00:00:00Z",
@@ -80,8 +80,8 @@
             "Daily",
             "P1D",
             "LIRO",
-            "PRPO",
             "PRLA",
+            "PRPO",
             "SUGG",
             "TOOK",
             "BARC",
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LIRO, PRPO, PRLA, SUGG, TOOK, BARC, CRAM"
+            "description": "LIRO, PRLA, PRPO, SUGG, TOOK, BARC, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

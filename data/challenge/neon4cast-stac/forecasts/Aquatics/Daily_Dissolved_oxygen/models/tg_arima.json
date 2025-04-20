@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -59,66 +91,6 @@
                 39.7582
             ],
             [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
                 -88.1589,
                 31.8534
             ],
@@ -149,12 +121,40 @@
             [
                 -111.7979,
                 40.7839
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: BARC, OKSR, TOOK, CARI, PRIN, SUGG, MCDI, GUIL, LEWI, COMO, ARIK, BLDE, WALK, SYCA, BLUE, BIGC, LECO, CRAM, CUPE, MAYF, BLWA, POSE, KING, FLNT, MCRA, HOPB, TOMB, MART, WLOU, TECR, LIRO, PRLA, PRPO, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: CUPE, MAYF, BLWA, POSE, KING, FLNT, MCRA, HOPB, BARC, OKSR, TOOK, CARI, PRIN, SUGG, MCDI, GUIL, LEWI, COMO, ARIK, TOMB, MART, WLOU, TECR, LIRO, PRLA, PRPO, REDB, BLDE, WALK, SYCA, BLUE, BIGC, LECO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:31:31",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "CUPE",
+            "MAYF",
+            "BLWA",
+            "POSE",
+            "KING",
+            "FLNT",
+            "MCRA",
+            "HOPB",
             "BARC",
             "OKSR",
             "TOOK",
@@ -198,21 +206,6 @@
             "LEWI",
             "COMO",
             "ARIK",
-            "BLDE",
-            "WALK",
-            "SYCA",
-            "BLUE",
-            "BIGC",
-            "LECO",
-            "CRAM",
-            "CUPE",
-            "MAYF",
-            "BLWA",
-            "POSE",
-            "KING",
-            "FLNT",
-            "MCRA",
-            "HOPB",
             "TOMB",
             "MART",
             "WLOU",
@@ -220,7 +213,14 @@
             "LIRO",
             "PRLA",
             "PRPO",
-            "REDB"
+            "REDB",
+            "BLDE",
+            "WALK",
+            "SYCA",
+            "BLUE",
+            "BIGC",
+            "LECO",
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BARC, OKSR, TOOK, CARI, PRIN, SUGG, MCDI, GUIL, LEWI, COMO, ARIK, BLDE, WALK, SYCA, BLUE, BIGC, LECO, CRAM, CUPE, MAYF, BLWA, POSE, KING, FLNT, MCRA, HOPB, TOMB, MART, WLOU, TECR, LIRO, PRLA, PRPO, REDB"
+            "description": "CUPE, MAYF, BLWA, POSE, KING, FLNT, MCRA, HOPB, BARC, OKSR, TOOK, CARI, PRIN, SUGG, MCDI, GUIL, LEWI, COMO, ARIK, TOMB, MART, WLOU, TECR, LIRO, PRLA, PRPO, REDB, BLDE, WALK, SYCA, BLUE, BIGC, LECO, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -106.8425,
                 32.5907
             ],
@@ -107,46 +147,6 @@
                 37.0334
             ],
             [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
                 -104.7456,
                 40.8155
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: JORN, STER, BONA, CLBJ, OAES, STEI, YELL, DEJU, SCBI, KONZ, DCFS, UKFS, TEAK, ORNL, TREE, WREF, GRSM, NOGP, MLBS, NIWO, ABBY, LENO, SOAP, PUUM, DSNY, BLAN, SERC, LAJA, GUAN, HARV, MOAB, SJER, WOOD, CPER, TOOL, HEAL, BART, BARR, KONA, JERC, ONAQ, OSBS, RMNP, UNDE, DELA, SRER, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: PUUM, DSNY, BLAN, SERC, LAJA, GUAN, HARV, MOAB, SJER, WOOD, JORN, STER, BONA, CLBJ, OAES, STEI, YELL, DEJU, SCBI, KONZ, DCFS, UKFS, TEAK, ORNL, TREE, WREF, GRSM, NOGP, MLBS, NIWO, ABBY, LENO, SOAP, CPER, TOOL, HEAL, BART, BARR, KONA, JERC, ONAQ, OSBS, RMNP, UNDE, DELA, SRER, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:53:57",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "rcc_90",
             "Daily",
             "P1D",
+            "PUUM",
+            "DSNY",
+            "BLAN",
+            "SERC",
+            "LAJA",
+            "GUAN",
+            "HARV",
+            "MOAB",
+            "SJER",
+            "WOOD",
             "JORN",
             "STER",
             "BONA",
@@ -262,16 +272,6 @@
             "ABBY",
             "LENO",
             "SOAP",
-            "PUUM",
-            "DSNY",
-            "BLAN",
-            "SERC",
-            "LAJA",
-            "GUAN",
-            "HARV",
-            "MOAB",
-            "SJER",
-            "WOOD",
             "CPER",
             "TOOL",
             "HEAL",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "JORN, STER, BONA, CLBJ, OAES, STEI, YELL, DEJU, SCBI, KONZ, DCFS, UKFS, TEAK, ORNL, TREE, WREF, GRSM, NOGP, MLBS, NIWO, ABBY, LENO, SOAP, PUUM, DSNY, BLAN, SERC, LAJA, GUAN, HARV, MOAB, SJER, WOOD, CPER, TOOL, HEAL, BART, BARR, KONA, JERC, ONAQ, OSBS, RMNP, UNDE, DELA, SRER, TALL"
+            "description": "PUUM, DSNY, BLAN, SERC, LAJA, GUAN, HARV, MOAB, SJER, WOOD, JORN, STER, BONA, CLBJ, OAES, STEI, YELL, DEJU, SCBI, KONZ, DCFS, UKFS, TEAK, ORNL, TREE, WREF, GRSM, NOGP, MLBS, NIWO, ABBY, LENO, SOAP, CPER, TOOL, HEAL, BART, BARR, KONA, JERC, ONAQ, OSBS, RMNP, UNDE, DELA, SRER, TALL"
         },
         "4": {
             "type": "application/x-parquet",

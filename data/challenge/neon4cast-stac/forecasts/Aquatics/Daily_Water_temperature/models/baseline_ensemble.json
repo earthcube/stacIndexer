@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
                 -89.4737,
                 46.2097
             ],
@@ -117,44 +149,12 @@
             [
                 -88.1589,
                 31.8534
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -84.4374,
-                31.1854
             ]
         ]
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All forecasts for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE, COMO, LEWI, PRIN, SUGG, BARC, GUIL, MCDI, ARIK, TOOK, CARI, OKSR, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB, BLWA, CUPE, HOPB, KING, MAYF, MCRA, POSE, FLNT.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: BLWA, CUPE, HOPB, KING, MAYF, MCRA, POSE, FLNT, CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE, COMO, LEWI, PRIN, SUGG, BARC, GUIL, MCDI, ARIK, TOOK, CARI, OKSR, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-03",
         "updated": "2024-08-22 14:02:17",
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "BLWA",
+            "CUPE",
+            "HOPB",
+            "KING",
+            "MAYF",
+            "MCRA",
+            "POSE",
+            "FLNT",
             "CRAM",
             "LECO",
             "SYCA",
@@ -212,15 +220,7 @@
             "REDB",
             "TECR",
             "WLOU",
-            "TOMB",
-            "BLWA",
-            "CUPE",
-            "HOPB",
-            "KING",
-            "MAYF",
-            "MCRA",
-            "POSE",
-            "FLNT"
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE, COMO, LEWI, PRIN, SUGG, BARC, GUIL, MCDI, ARIK, TOOK, CARI, OKSR, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB, BLWA, CUPE, HOPB, KING, MAYF, MCRA, POSE, FLNT"
+            "description": "BLWA, CUPE, HOPB, KING, MAYF, MCRA, POSE, FLNT, CRAM, LECO, SYCA, WALK, BIGC, BLDE, BLUE, COMO, LEWI, PRIN, SUGG, BARC, GUIL, MCDI, ARIK, TOOK, CARI, OKSR, LIRO, MART, PRLA, PRPO, REDB, TECR, WLOU, TOMB"
         },
         "4": {
             "type": "application/x-parquet",
