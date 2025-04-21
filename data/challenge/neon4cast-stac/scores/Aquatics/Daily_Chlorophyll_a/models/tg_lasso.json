@@ -15,34 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -82.0084,
                 29.676
             ],
@@ -53,12 +25,40 @@
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -88.1589,
+                31.8534
             ]
         ]
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: CRAM, FLNT, BLWA, PRLA, TOMB, LIRO, PRPO, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, BLWA, FLNT, CRAM, PRLA, LIRO, PRPO, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
-            "CRAM",
-            "FLNT",
-            "BLWA",
-            "PRLA",
-            "TOMB",
-            "LIRO",
-            "PRPO",
             "BARC",
             "SUGG",
-            "TOOK"
+            "TOOK",
+            "BLWA",
+            "FLNT",
+            "CRAM",
+            "PRLA",
+            "LIRO",
+            "PRPO",
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -257,7 +257,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CRAM, FLNT, BLWA, PRLA, TOMB, LIRO, PRPO, BARC, SUGG, TOOK"
+            "description": "BARC, SUGG, TOOK, BLWA, FLNT, CRAM, PRLA, LIRO, PRPO, TOMB"
         },
         "4": {
             "type": "application/x-parquet",

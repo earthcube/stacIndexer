@@ -23,14 +23,6 @@
                 38.8901
             ],
             [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
                 -95.1921,
                 39.0404
             ],
@@ -43,18 +35,26 @@
                 39.1008
             ],
             [
-                -84.2826,
-                35.9641
+                -87.3933,
+                32.9505
+            ],
+            [
+                -81.9934,
+                29.6893
             ],
             [
                 -88.1612,
                 31.8539
+            ],
+            [
+                -84.2826,
+                35.9641
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BLAN, SERC, TALL, OSBS, UKFS, SCBI, KONZ, ORNL, LENO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BLAN, SERC, UKFS, SCBI, KONZ, TALL, OSBS, LENO, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-29 18:10:54",
         "start_datetime": "2021-06-07T00:00:00Z",
@@ -89,13 +89,13 @@
             "P1W",
             "BLAN",
             "SERC",
-            "TALL",
-            "OSBS",
             "UKFS",
             "SCBI",
             "KONZ",
-            "ORNL",
-            "LENO"
+            "TALL",
+            "OSBS",
+            "LENO",
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -252,7 +252,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BLAN, SERC, TALL, OSBS, UKFS, SCBI, KONZ, ORNL, LENO"
+            "description": "BLAN, SERC, UKFS, SCBI, KONZ, TALL, OSBS, LENO, ORNL"
         },
         "4": {
             "type": "application/x-parquet",

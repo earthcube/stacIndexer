@@ -15,6 +15,54 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
                 -105.5824,
                 40.0543
             ],
@@ -99,54 +147,6 @@
                 42.5369
             ],
             [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
                 -149.3705,
                 68.6611
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:27:34",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,6 +239,18 @@
             "nee",
             "Daily",
             "P1D",
+            "DCFS",
+            "JORN",
+            "SCBI",
+            "YELL",
+            "STER",
+            "UKFS",
+            "BONA",
+            "CLBJ",
+            "OAES",
+            "KONZ",
+            "DEJU",
+            "STEI",
             "NIWO",
             "SOAP",
             "ABBY",
@@ -260,18 +272,6 @@
             "BLAN",
             "WOOD",
             "HARV",
-            "DCFS",
-            "JORN",
-            "SCBI",
-            "YELL",
-            "STER",
-            "UKFS",
-            "BONA",
-            "CLBJ",
-            "OAES",
-            "KONZ",
-            "DEJU",
-            "STEI",
             "TOOL",
             "UNDE",
             "HEAL",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS"
+            "description": "DCFS, JORN, SCBI, YELL, STER, UKFS, BONA, CLBJ, OAES, KONZ, DEJU, STEI, NIWO, SOAP, ABBY, NOGP, ORNL, TREE, GRSM, TEAK, MLBS, WREF, LENO, LAJA, MOAB, SERC, DSNY, PUUM, GUAN, SJER, BLAN, WOOD, HARV, TOOL, UNDE, HEAL, TALL, KONA, SRER, BARR, JERC, ONAQ, DELA, RMNP, BART, CPER, OSBS"
         },
         "4": {
             "type": "application/x-parquet",
