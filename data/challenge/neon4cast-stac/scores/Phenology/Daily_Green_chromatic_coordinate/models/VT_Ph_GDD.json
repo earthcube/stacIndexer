@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -83.5019,
+                35.689
+            ],
+            [
                 -72.1727,
                 42.5369
             ],
@@ -35,10 +39,6 @@
                 39.0404
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "VT_Ph_GDD",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the VT_Ph_GDD model. Information for the model is provided as follows: The model was built using a logistic growth process model (Eq. S14) fit in a Bayesian framework to predict spring greenness, where = cumulative growing degree day (GDD) on the \ud835\udc65\ud835\udc61 day being predicted. GDD was calculated using Eq. (S15) on each day a forecast was made, where is the maximum air temperature and is the minimum air temperature on \ud835\udc5a\ud835\udc4e\ud835\udc65\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d \ud835\udc5a\ud835\udc56\ud835\udc5b\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d a given day, and \ud835\udc47 was a constant set at 10\u00b0C.\n                                    The model predicts this variable at the following sites: HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the VT_Ph_GDD model. Information for the model is provided as follows: The model was built using a logistic growth process model (Eq. S14) fit in a Bayesian framework to predict spring greenness, where = cumulative growing degree day (GDD) on the \ud835\udc65\ud835\udc61 day being predicted. GDD was calculated using Eq. (S15) on each day a forecast was made, where is the maximum air temperature and is the minimum air temperature on \ud835\udc5a\ud835\udc4e\ud835\udc65\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d \ud835\udc5a\ud835\udc56\ud835\udc5b\ud835\udc61\ud835\udc52\ud835\udc5a\ud835\udc5d a given day, and \ud835\udc47 was a constant set at 10\u00b0C.\n                                    The model predicts this variable at the following sites: GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-04-25",
         "updated": null,
         "start_datetime": "2021-04-15T00:00:00Z",
@@ -83,12 +83,12 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "GRSM",
             "HARV",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "GRSM",
             "BART",
             "DELA"
         ],
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA"
+            "description": "GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",

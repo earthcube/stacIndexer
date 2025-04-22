@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
-            ],
-            [
                 -110.8355,
                 31.9107
             ],
@@ -29,12 +25,16 @@
             [
                 -81.9934,
                 29.6893
+            ],
+            [
+                -96.5631,
+                39.1008
             ]
         ]
     },
     "properties": {
         "title": "BU_SIPNET",
-        "description": "All forecasts for the 30min_latent_heat_flux variable for the BU_SIPNET model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, SRER, BART, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the 30min_latent_heat_flux variable for the BU_SIPNET model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SRER, BART, OSBS, KONZ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-09-07",
         "updated": null,
         "start_datetime": "2021-01-01T00:00:00Z",
@@ -67,10 +67,10 @@
             "le",
             "30min",
             "PT30M",
-            "KONZ",
             "SRER",
             "BART",
-            "OSBS"
+            "OSBS",
+            "KONZ"
         ],
         "table:columns": [
             {
@@ -187,7 +187,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, SRER, BART, OSBS"
+            "description": "SRER, BART, OSBS, KONZ"
         },
         "4": {
             "type": "application/x-parquet",

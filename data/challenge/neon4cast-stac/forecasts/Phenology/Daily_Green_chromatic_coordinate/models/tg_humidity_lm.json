@@ -15,48 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -122.3303,
-                45.7624
+                -81.4362,
+                28.1251
             ],
             [
-                -84.2826,
-                35.9641
+                -76.56,
+                38.8901
             ],
             [
-                -119.006,
-                37.0058
+                -109.3883,
+                38.2483
             ],
             [
-                -121.9519,
-                45.8205
+                -155.3173,
+                19.5531
             ],
             [
-                -88.1612,
-                31.8539
+                -119.7323,
+                37.1088
             ],
             [
-                -80.5248,
-                37.3783
+                -67.0769,
+                18.0213
             ],
             [
-                -89.5857,
-                45.4937
+                -99.2413,
+                47.1282
             ],
             [
-                -100.9154,
-                46.7697
+                -72.1727,
+                42.5369
             ],
             [
-                -83.5019,
-                35.689
+                -66.8687,
+                17.9696
             ],
             [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -105.5824,
-                40.0543
+                -78.0418,
+                39.0337
             ],
             [
                 -96.5631,
@@ -163,50 +159,54 @@
                 46.2339
             ],
             [
-                -81.4362,
-                28.1251
+                -122.3303,
+                45.7624
             ],
             [
-                -76.56,
-                38.8901
+                -84.2826,
+                35.9641
             ],
             [
-                -109.3883,
-                38.2483
+                -119.006,
+                37.0058
             ],
             [
-                -155.3173,
-                19.5531
+                -121.9519,
+                45.8205
             ],
             [
-                -119.7323,
-                37.1088
+                -88.1612,
+                31.8539
             ],
             [
-                -67.0769,
-                18.0213
+                -80.5248,
+                37.3783
             ],
             [
-                -99.2413,
-                47.1282
+                -89.5857,
+                45.4937
             ],
             [
-                -72.1727,
-                42.5369
+                -100.9154,
+                46.7697
             ],
             [
-                -66.8687,
-                17.9696
+                -83.5019,
+                35.689
             ],
             [
-                -78.0418,
-                39.0337
+                -119.2622,
+                37.0334
+            ],
+            [
+                -105.5824,
+                40.0543
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: ABBY, ORNL, TEAK, WREF, LENO, MLBS, TREE, NOGP, GRSM, SOAP, NIWO, KONZ, JORN, OAES, UKFS, STER, SCBI, CLBJ, YELL, STEI, BONA, DEJU, DCFS, DELA, OSBS, CPER, HEAL, TALL, RMNP, TOOL, BARR, SRER, BART, ONAQ, KONA, JERC, UNDE, DSNY, SERC, MOAB, PUUM, SJER, LAJA, WOOD, HARV, GUAN, BLAN.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: DSNY, SERC, MOAB, PUUM, SJER, LAJA, WOOD, HARV, GUAN, BLAN, KONZ, JORN, OAES, UKFS, STER, SCBI, CLBJ, YELL, STEI, BONA, DEJU, DCFS, DELA, OSBS, CPER, HEAL, TALL, RMNP, TOOL, BARR, SRER, BART, ONAQ, KONA, JERC, UNDE, ABBY, ORNL, TEAK, WREF, LENO, MLBS, TREE, NOGP, GRSM, SOAP, NIWO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:55:38",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,17 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "ABBY",
-            "ORNL",
-            "TEAK",
-            "WREF",
-            "LENO",
-            "MLBS",
-            "TREE",
-            "NOGP",
-            "GRSM",
-            "SOAP",
-            "NIWO",
+            "DSNY",
+            "SERC",
+            "MOAB",
+            "PUUM",
+            "SJER",
+            "LAJA",
+            "WOOD",
+            "HARV",
+            "GUAN",
+            "BLAN",
             "KONZ",
             "JORN",
             "OAES",
@@ -276,16 +275,17 @@
             "KONA",
             "JERC",
             "UNDE",
-            "DSNY",
-            "SERC",
-            "MOAB",
-            "PUUM",
-            "SJER",
-            "LAJA",
-            "WOOD",
-            "HARV",
-            "GUAN",
-            "BLAN"
+            "ABBY",
+            "ORNL",
+            "TEAK",
+            "WREF",
+            "LENO",
+            "MLBS",
+            "TREE",
+            "NOGP",
+            "GRSM",
+            "SOAP",
+            "NIWO"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "ABBY, ORNL, TEAK, WREF, LENO, MLBS, TREE, NOGP, GRSM, SOAP, NIWO, KONZ, JORN, OAES, UKFS, STER, SCBI, CLBJ, YELL, STEI, BONA, DEJU, DCFS, DELA, OSBS, CPER, HEAL, TALL, RMNP, TOOL, BARR, SRER, BART, ONAQ, KONA, JERC, UNDE, DSNY, SERC, MOAB, PUUM, SJER, LAJA, WOOD, HARV, GUAN, BLAN"
+            "description": "DSNY, SERC, MOAB, PUUM, SJER, LAJA, WOOD, HARV, GUAN, BLAN, KONZ, JORN, OAES, UKFS, STER, SCBI, CLBJ, YELL, STEI, BONA, DEJU, DCFS, DELA, OSBS, CPER, HEAL, TALL, RMNP, TOOL, BARR, SRER, BART, ONAQ, KONA, JERC, UNDE, ABBY, ORNL, TEAK, WREF, LENO, MLBS, TREE, NOGP, GRSM, SOAP, NIWO"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,34 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
                 -87.7982,
                 32.5415
             ],
@@ -73,6 +45,34 @@
             [
                 -84.4374,
                 31.1854
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -110.5871,
+                44.9501
             ],
             [
                 -82.0084,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE, BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:34:59",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,13 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "WALK",
-            "BLUE",
-            "SYCA",
-            "CRAM",
-            "BIGC",
-            "LECO",
-            "BLDE",
             "BLWA",
             "CUPE",
             "MAYF",
@@ -202,6 +195,13 @@
             "HOPB",
             "KING",
             "FLNT",
+            "WALK",
+            "BLUE",
+            "SYCA",
+            "CRAM",
+            "BIGC",
+            "LECO",
+            "BLDE",
             "BARC",
             "OKSR",
             "GUIL",
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE, BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART"
+            "description": "BLWA, CUPE, MAYF, POSE, MCRA, HOPB, KING, FLNT, WALK, BLUE, SYCA, CRAM, BIGC, LECO, BLDE, BARC, OKSR, GUIL, SUGG, MCDI, LEWI, PRIN, ARIK, TOOK, COMO, CARI, REDB, LIRO, TECR, TOMB, PRPO, WLOU, PRLA, MART"
         },
         "4": {
             "type": "application/x-parquet",

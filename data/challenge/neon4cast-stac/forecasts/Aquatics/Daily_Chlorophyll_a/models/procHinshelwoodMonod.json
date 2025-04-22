@@ -15,8 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.7048,
-                45.9983
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -99.1139,
@@ -27,16 +35,8 @@
                 47.1298
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
+                -89.7048,
+                45.9983
             ],
             [
                 -89.4737,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "procHinshelwoodMonod",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the procHinshelwoodMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, SUGG, BARC, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the procHinshelwoodMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-05",
         "updated": "2024-02-07 05:11:37",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -79,12 +79,12 @@
             "chla",
             "Daily",
             "P1D",
-            "LIRO",
+            "TOOK",
+            "BARC",
+            "SUGG",
             "PRLA",
             "PRPO",
-            "SUGG",
-            "BARC",
-            "TOOK",
+            "LIRO",
             "CRAM"
         ],
         "table:columns": [
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LIRO, PRLA, PRPO, SUGG, BARC, TOOK, CRAM"
+            "description": "TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM"
         },
         "4": {
             "type": "application/x-parquet",
