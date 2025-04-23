@@ -59,46 +59,6 @@
                 45.4937
             ],
             [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
                 -145.7514,
                 63.8811
             ],
@@ -201,12 +161,52 @@
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -67.0769,
+                18.0213
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: TEAK, ABBY, GRSM, NOGP, NIWO, MLBS, ORNL, LENO, WREF, SOAP, TREE, BLAN, HARV, DSNY, SERC, PUUM, MOAB, GUAN, WOOD, SJER, LAJA, DEJU, KONZ, STEI, DCFS, BONA, STER, SCBI, UKFS, JORN, YELL, CLBJ, OAES, ONAQ, BART, HEAL, RMNP, KONA, UNDE, TALL, JERC, TOOL, OSBS, BARR, CPER, SRER, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: TEAK, ABBY, GRSM, NOGP, NIWO, MLBS, ORNL, LENO, WREF, SOAP, TREE, DEJU, KONZ, STEI, DCFS, BONA, STER, SCBI, UKFS, JORN, YELL, CLBJ, OAES, ONAQ, BART, HEAL, RMNP, KONA, UNDE, TALL, JERC, TOOL, OSBS, BARR, CPER, SRER, DELA, BLAN, HARV, DSNY, SERC, PUUM, MOAB, GUAN, WOOD, SJER, LAJA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:27",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -250,16 +250,6 @@
             "WREF",
             "SOAP",
             "TREE",
-            "BLAN",
-            "HARV",
-            "DSNY",
-            "SERC",
-            "PUUM",
-            "MOAB",
-            "GUAN",
-            "WOOD",
-            "SJER",
-            "LAJA",
             "DEJU",
             "KONZ",
             "STEI",
@@ -285,7 +275,17 @@
             "BARR",
             "CPER",
             "SRER",
-            "DELA"
+            "DELA",
+            "BLAN",
+            "HARV",
+            "DSNY",
+            "SERC",
+            "PUUM",
+            "MOAB",
+            "GUAN",
+            "WOOD",
+            "SJER",
+            "LAJA"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "TEAK, ABBY, GRSM, NOGP, NIWO, MLBS, ORNL, LENO, WREF, SOAP, TREE, BLAN, HARV, DSNY, SERC, PUUM, MOAB, GUAN, WOOD, SJER, LAJA, DEJU, KONZ, STEI, DCFS, BONA, STER, SCBI, UKFS, JORN, YELL, CLBJ, OAES, ONAQ, BART, HEAL, RMNP, KONA, UNDE, TALL, JERC, TOOL, OSBS, BARR, CPER, SRER, DELA"
+            "description": "TEAK, ABBY, GRSM, NOGP, NIWO, MLBS, ORNL, LENO, WREF, SOAP, TREE, DEJU, KONZ, STEI, DCFS, BONA, STER, SCBI, UKFS, JORN, YELL, CLBJ, OAES, ONAQ, BART, HEAL, RMNP, KONA, UNDE, TALL, JERC, TOOL, OSBS, BARR, CPER, SRER, DELA, BLAN, HARV, DSNY, SERC, PUUM, MOAB, GUAN, WOOD, SJER, LAJA"
         },
         "4": {
             "type": "application/x-parquet",

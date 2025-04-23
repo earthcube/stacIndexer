@@ -31,12 +31,12 @@
                 47.1591
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -89.4737,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "GAM_air_wind",
-        "description": "All scores for the Daily_Water_temperature variable for the GAM_air_wind model. Information for the model is provided as follows: I used a GAM (mgcv) with a linear relationship to air temperature and smoothing for eastward and northward winds..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, PRLA, LIRO, PRPO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the GAM_air_wind model. Information for the model is provided as follows: I used a GAM (mgcv) with a linear relationship to air temperature and smoothing for eastward and northward winds..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, PRLA, PRPO, LIRO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-04-17",
         "updated": "2025-04-17 14:03:33",
         "start_datetime": "2024-03-01T00:00:00Z",
@@ -83,8 +83,8 @@
             "BARC",
             "TOOK",
             "PRLA",
-            "LIRO",
             "PRPO",
+            "LIRO",
             "CRAM"
         ],
         "table:columns": [
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SUGG, BARC, TOOK, PRLA, LIRO, PRPO, CRAM"
+            "description": "SUGG, BARC, TOOK, PRLA, PRPO, LIRO, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

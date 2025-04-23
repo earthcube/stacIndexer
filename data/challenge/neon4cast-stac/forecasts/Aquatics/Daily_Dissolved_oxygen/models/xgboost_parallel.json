@@ -75,38 +75,6 @@
                 44.2596
             ],
             [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -149,12 +117,44 @@
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
             ]
         ]
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, OKSR, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, OKSR, TOOK, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -202,14 +202,6 @@
             "MAYF",
             "POSE",
             "MCRA",
-            "TECR",
-            "TOMB",
-            "WLOU",
-            "MART",
-            "REDB",
-            "LIRO",
-            "PRPO",
-            "PRLA",
             "SUGG",
             "ARIK",
             "BARC",
@@ -220,7 +212,15 @@
             "PRIN",
             "CARI",
             "OKSR",
-            "TOOK"
+            "TOOK",
+            "TECR",
+            "TOMB",
+            "WLOU",
+            "MART",
+            "REDB",
+            "LIRO",
+            "PRPO",
+            "PRLA"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, OKSR, TOOK"
+            "description": "SYCA, WALK, BIGC, BLDE, BLUE, LECO, CRAM, BLWA, CUPE, FLNT, HOPB, KING, MAYF, POSE, MCRA, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, PRIN, CARI, OKSR, TOOK, TECR, TOMB, WLOU, MART, REDB, LIRO, PRPO, PRLA"
         },
         "4": {
             "type": "application/x-parquet",

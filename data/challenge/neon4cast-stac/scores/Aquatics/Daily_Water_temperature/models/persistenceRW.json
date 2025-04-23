@@ -19,8 +19,8 @@
                 44.2596
             ],
             [
-                -87.7982,
-                32.5415
+                -78.1473,
+                38.8943
             ],
             [
                 -66.9868,
@@ -35,16 +35,16 @@
                 42.4719
             ],
             [
+                -96.6038,
+                39.1051
+            ],
+            [
                 -87.4077,
                 32.9604
             ],
             [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
+                -87.7982,
+                32.5415
             ],
             [
                 -111.5081,
@@ -91,6 +91,10 @@
                 29.676
             ],
             [
+                -147.504,
+                65.1532
+            ],
+            [
                 -105.5442,
                 40.035
             ],
@@ -107,16 +111,12 @@
                 38.9459
             ],
             [
-                -147.504,
-                65.1532
+                -149.143,
+                68.6698
             ],
             [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -149.143,
-                68.6698
             ],
             [
                 -111.7979,
@@ -135,12 +135,12 @@
                 45.7908
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -119.0274,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All scores for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: MCRA, BLWA, CUPE, FLNT, HOPB, MAYF, POSE, KING, SYCA, WALK, BIGC, BLDE, LECO, BLUE, CRAM, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, CARI, TOOK, OKSR, REDB, TOMB, WLOU, MART, LIRO, PRLA, TECR, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: MCRA, POSE, CUPE, FLNT, HOPB, KING, MAYF, BLWA, SYCA, WALK, BIGC, BLDE, LECO, BLUE, CRAM, PRIN, SUGG, ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, OKSR, TOOK, REDB, TOMB, WLOU, MART, PRLA, LIRO, TECR, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-04-17",
         "updated": "2025-04-17 22:04:17",
         "start_datetime": "2022-08-25T00:00:00Z",
@@ -188,13 +188,13 @@
             "Daily",
             "P1D",
             "MCRA",
-            "BLWA",
+            "POSE",
             "CUPE",
             "FLNT",
             "HOPB",
-            "MAYF",
-            "POSE",
             "KING",
+            "MAYF",
+            "BLWA",
             "SYCA",
             "WALK",
             "BIGC",
@@ -206,19 +206,19 @@
             "SUGG",
             "ARIK",
             "BARC",
+            "CARI",
             "COMO",
             "GUIL",
             "LEWI",
             "MCDI",
-            "CARI",
-            "TOOK",
             "OKSR",
+            "TOOK",
             "REDB",
             "TOMB",
             "WLOU",
             "MART",
-            "LIRO",
             "PRLA",
+            "LIRO",
             "TECR",
             "PRPO"
         ],
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "MCRA, BLWA, CUPE, FLNT, HOPB, MAYF, POSE, KING, SYCA, WALK, BIGC, BLDE, LECO, BLUE, CRAM, PRIN, SUGG, ARIK, BARC, COMO, GUIL, LEWI, MCDI, CARI, TOOK, OKSR, REDB, TOMB, WLOU, MART, LIRO, PRLA, TECR, PRPO"
+            "description": "MCRA, POSE, CUPE, FLNT, HOPB, KING, MAYF, BLWA, SYCA, WALK, BIGC, BLDE, LECO, BLUE, CRAM, PRIN, SUGG, ARIK, BARC, CARI, COMO, GUIL, LEWI, MCDI, OKSR, TOOK, REDB, TOMB, WLOU, MART, PRLA, LIRO, TECR, PRPO"
         },
         "4": {
             "type": "application/x-parquet",
