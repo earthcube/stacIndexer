@@ -15,24 +15,24 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -77.9832,
-                39.0956
+                -97.7823,
+                33.3785
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
+                -77.9832,
+                39.0956
+            ],
+            [
                 -82.0084,
                 29.676
             ],
             [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -89.4737,
-                46.2097
+                -111.5081,
+                33.751
             ],
             [
                 -110.5871,
@@ -43,24 +43,8 @@
                 37.0597
             ],
             [
-                -111.5081,
-                33.751
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -96.6038,
-                39.1051
+                -89.4737,
+                46.2097
             ],
             [
                 -111.7979,
@@ -69,12 +53,28 @@
             [
                 -89.7048,
                 45.9983
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.4077,
+                32.9604
             ]
         ]
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: LEWI, SUGG, BARC, PRIN, CRAM, BLDE, BIGC, SYCA, MCRA, MAYF, POSE, KING, REDB, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: PRIN, SUGG, LEWI, BARC, SYCA, BLDE, BIGC, CRAM, REDB, LIRO, KING, POSE, MCRA, MAYF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-04-05T00:00:00Z",
@@ -107,20 +107,20 @@
             "oxygen",
             "Daily",
             "P1D",
-            "LEWI",
-            "SUGG",
-            "BARC",
             "PRIN",
-            "CRAM",
+            "SUGG",
+            "LEWI",
+            "BARC",
+            "SYCA",
             "BLDE",
             "BIGC",
-            "SYCA",
-            "MCRA",
-            "MAYF",
-            "POSE",
-            "KING",
+            "CRAM",
             "REDB",
-            "LIRO"
+            "LIRO",
+            "KING",
+            "POSE",
+            "MCRA",
+            "MAYF"
         ],
         "table:columns": [
             {
@@ -237,7 +237,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LEWI, SUGG, BARC, PRIN, CRAM, BLDE, BIGC, SYCA, MCRA, MAYF, POSE, KING, REDB, LIRO"
+            "description": "PRIN, SUGG, LEWI, BARC, SYCA, BLDE, BIGC, CRAM, REDB, LIRO, KING, POSE, MCRA, MAYF"
         },
         "4": {
             "type": "application/x-parquet",

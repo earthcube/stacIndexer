@@ -15,32 +15,36 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2793,
-                35.9574
+                -78.1473,
+                38.8943
             ],
             [
-                -96.6242,
-                34.4442
+                -122.1655,
+                44.2596
             ],
             [
-                -110.5871,
-                44.9501
+                -66.9868,
+                18.1135
             ],
             [
-                -89.4737,
-                46.2097
+                -87.7982,
+                32.5415
             ],
             [
-                -83.5038,
-                35.6904
+                -84.4374,
+                31.1854
             ],
             [
-                -111.5081,
-                33.751
+                -72.3295,
+                42.4719
             ],
             [
-                -119.2575,
-                37.0597
+                -87.4077,
+                32.9604
+            ],
+            [
+                -96.6038,
+                39.1051
             ],
             [
                 -66.7987,
@@ -87,36 +91,32 @@
                 68.6307
             ],
             [
-                -78.1473,
-                38.8943
+                -84.2793,
+                35.9574
             ],
             [
-                -122.1655,
-                44.2596
+                -96.6242,
+                34.4442
             ],
             [
-                -66.9868,
-                18.1135
+                -110.5871,
+                44.9501
             ],
             [
-                -87.7982,
-                32.5415
+                -89.4737,
+                46.2097
             ],
             [
-                -84.4374,
-                31.1854
+                -83.5038,
+                35.6904
             ],
             [
-                -72.3295,
-                42.4719
+                -111.5081,
+                33.751
             ],
             [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -96.6038,
-                39.1051
+                -119.2575,
+                37.0597
             ],
             [
                 -88.1589,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_lasso",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: WALK, BLUE, BLDE, CRAM, LECO, SYCA, BIGC, GUIL, LEWI, PRIN, COMO, CARI, OKSR, MCDI, ARIK, BARC, SUGG, TOOK, POSE, MCRA, CUPE, BLWA, FLNT, HOPB, MAYF, KING, TOMB, REDB, MART, PRLA, PRPO, WLOU, LIRO, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: POSE, MCRA, CUPE, BLWA, FLNT, HOPB, MAYF, KING, GUIL, LEWI, PRIN, COMO, CARI, OKSR, MCDI, ARIK, BARC, SUGG, TOOK, WALK, BLUE, BLDE, CRAM, LECO, SYCA, BIGC, TOMB, REDB, MART, PRLA, PRPO, WLOU, LIRO, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-02 10:49:46",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,13 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
-            "WALK",
-            "BLUE",
-            "BLDE",
-            "CRAM",
-            "LECO",
-            "SYCA",
-            "BIGC",
+            "POSE",
+            "MCRA",
+            "CUPE",
+            "BLWA",
+            "FLNT",
+            "HOPB",
+            "MAYF",
+            "KING",
             "GUIL",
             "LEWI",
             "PRIN",
@@ -205,14 +206,13 @@
             "BARC",
             "SUGG",
             "TOOK",
-            "POSE",
-            "MCRA",
-            "CUPE",
-            "BLWA",
-            "FLNT",
-            "HOPB",
-            "MAYF",
-            "KING",
+            "WALK",
+            "BLUE",
+            "BLDE",
+            "CRAM",
+            "LECO",
+            "SYCA",
+            "BIGC",
             "TOMB",
             "REDB",
             "MART",
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "WALK, BLUE, BLDE, CRAM, LECO, SYCA, BIGC, GUIL, LEWI, PRIN, COMO, CARI, OKSR, MCDI, ARIK, BARC, SUGG, TOOK, POSE, MCRA, CUPE, BLWA, FLNT, HOPB, MAYF, KING, TOMB, REDB, MART, PRLA, PRPO, WLOU, LIRO, TECR"
+            "description": "POSE, MCRA, CUPE, BLWA, FLNT, HOPB, MAYF, KING, GUIL, LEWI, PRIN, COMO, CARI, OKSR, MCDI, ARIK, BARC, SUGG, TOOK, WALK, BLUE, BLDE, CRAM, LECO, SYCA, BIGC, TOMB, REDB, MART, PRLA, PRPO, WLOU, LIRO, TECR"
         },
         "4": {
             "type": "application/x-parquet",

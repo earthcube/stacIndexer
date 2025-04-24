@@ -47,34 +47,6 @@
                 44.2596
             ],
             [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
                 -66.7987,
                 18.1741
             ],
@@ -119,6 +91,34 @@
                 68.6698
             ],
             [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
                 -105.9154,
                 39.8914
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: KING, HOPB, POSE, MAYF, CUPE, BLWA, FLNT, MCRA, BLDE, WALK, SYCA, LECO, CRAM, BLUE, BIGC, GUIL, BARC, ARIK, COMO, MCDI, LEWI, PRIN, CARI, SUGG, TOOK, OKSR, WLOU, REDB, PRLA, TOMB, LIRO, PRPO, MART, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: KING, HOPB, POSE, MAYF, CUPE, BLWA, FLNT, MCRA, GUIL, BARC, ARIK, COMO, MCDI, LEWI, PRIN, CARI, SUGG, TOOK, OKSR, BLDE, WALK, SYCA, LECO, CRAM, BLUE, BIGC, WLOU, REDB, PRLA, TOMB, LIRO, PRPO, MART, TECR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -195,13 +195,6 @@
             "BLWA",
             "FLNT",
             "MCRA",
-            "BLDE",
-            "WALK",
-            "SYCA",
-            "LECO",
-            "CRAM",
-            "BLUE",
-            "BIGC",
             "GUIL",
             "BARC",
             "ARIK",
@@ -213,6 +206,13 @@
             "SUGG",
             "TOOK",
             "OKSR",
+            "BLDE",
+            "WALK",
+            "SYCA",
+            "LECO",
+            "CRAM",
+            "BLUE",
+            "BIGC",
             "WLOU",
             "REDB",
             "PRLA",
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KING, HOPB, POSE, MAYF, CUPE, BLWA, FLNT, MCRA, BLDE, WALK, SYCA, LECO, CRAM, BLUE, BIGC, GUIL, BARC, ARIK, COMO, MCDI, LEWI, PRIN, CARI, SUGG, TOOK, OKSR, WLOU, REDB, PRLA, TOMB, LIRO, PRPO, MART, TECR"
+            "description": "KING, HOPB, POSE, MAYF, CUPE, BLWA, FLNT, MCRA, GUIL, BARC, ARIK, COMO, MCDI, LEWI, PRIN, CARI, SUGG, TOOK, OKSR, BLDE, WALK, SYCA, LECO, CRAM, BLUE, BIGC, WLOU, REDB, PRLA, TOMB, LIRO, PRPO, MART, TECR"
         },
         "4": {
             "type": "application/x-parquet",

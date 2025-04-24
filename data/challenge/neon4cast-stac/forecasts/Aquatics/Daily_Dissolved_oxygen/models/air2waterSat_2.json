@@ -47,6 +47,50 @@
                 42.4719
             ],
             [
+                -96.443,
+                38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -111.5081,
                 33.751
             ],
@@ -105,56 +149,12 @@
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
             ]
         ]
     },
     "properties": {
         "title": "air2waterSat_2",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: CUPE, MCRA, FLNT, MAYF, KING, BLWA, POSE, HOPB, SYCA, CRAM, BIGC, BLDE, LECO, BLUE, WALK, PRPO, TECR, REDB, TOMB, PRLA, MART, WLOU, LIRO, MCDI, PRIN, SUGG, COMO, LEWI, BARC, GUIL, CARI, ARIK, OKSR, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: CUPE, MCRA, FLNT, MAYF, KING, BLWA, POSE, HOPB, MCDI, PRIN, SUGG, COMO, LEWI, BARC, GUIL, CARI, ARIK, OKSR, TOOK, SYCA, CRAM, BIGC, BLDE, LECO, BLUE, WALK, PRPO, TECR, REDB, TOMB, PRLA, MART, WLOU, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-01",
         "updated": "2024-02-02 05:06:19",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -195,6 +195,17 @@
             "BLWA",
             "POSE",
             "HOPB",
+            "MCDI",
+            "PRIN",
+            "SUGG",
+            "COMO",
+            "LEWI",
+            "BARC",
+            "GUIL",
+            "CARI",
+            "ARIK",
+            "OKSR",
+            "TOOK",
             "SYCA",
             "CRAM",
             "BIGC",
@@ -209,18 +220,7 @@
             "PRLA",
             "MART",
             "WLOU",
-            "LIRO",
-            "MCDI",
-            "PRIN",
-            "SUGG",
-            "COMO",
-            "LEWI",
-            "BARC",
-            "GUIL",
-            "CARI",
-            "ARIK",
-            "OKSR",
-            "TOOK"
+            "LIRO"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CUPE, MCRA, FLNT, MAYF, KING, BLWA, POSE, HOPB, SYCA, CRAM, BIGC, BLDE, LECO, BLUE, WALK, PRPO, TECR, REDB, TOMB, PRLA, MART, WLOU, LIRO, MCDI, PRIN, SUGG, COMO, LEWI, BARC, GUIL, CARI, ARIK, OKSR, TOOK"
+            "description": "CUPE, MCRA, FLNT, MAYF, KING, BLWA, POSE, HOPB, MCDI, PRIN, SUGG, COMO, LEWI, BARC, GUIL, CARI, ARIK, OKSR, TOOK, SYCA, CRAM, BIGC, BLDE, LECO, BLUE, WALK, PRPO, TECR, REDB, TOMB, PRLA, MART, WLOU, LIRO"
         },
         "4": {
             "type": "application/x-parquet",

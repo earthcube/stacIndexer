@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -149.6106,
                 68.6307
             ],
@@ -89,6 +57,38 @@
             [
                 -66.7987,
                 18.1741
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
             ],
             [
                 -99.1139,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: FLNT, CUPE, POSE, MAYF, HOPB, MCRA, KING, BLWA, TOOK, LEWI, BARC, PRIN, MCDI, ARIK, CARI, OKSR, COMO, SUGG, GUIL, PRLA, TECR, LIRO, REDB, TOMB, MART, WLOU, PRPO, BLDE, LECO, SYCA, BIGC, WALK, CRAM, BLUE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: TOOK, LEWI, BARC, PRIN, MCDI, ARIK, CARI, OKSR, COMO, SUGG, GUIL, FLNT, CUPE, POSE, MAYF, HOPB, MCRA, KING, BLWA, PRLA, TECR, LIRO, REDB, TOMB, MART, WLOU, PRPO, BLDE, LECO, SYCA, BIGC, WALK, CRAM, BLUE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:37:20",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,14 +187,6 @@
             "oxygen",
             "Daily",
             "P1D",
-            "FLNT",
-            "CUPE",
-            "POSE",
-            "MAYF",
-            "HOPB",
-            "MCRA",
-            "KING",
-            "BLWA",
             "TOOK",
             "LEWI",
             "BARC",
@@ -206,6 +198,14 @@
             "COMO",
             "SUGG",
             "GUIL",
+            "FLNT",
+            "CUPE",
+            "POSE",
+            "MAYF",
+            "HOPB",
+            "MCRA",
+            "KING",
+            "BLWA",
             "PRLA",
             "TECR",
             "LIRO",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "FLNT, CUPE, POSE, MAYF, HOPB, MCRA, KING, BLWA, TOOK, LEWI, BARC, PRIN, MCDI, ARIK, CARI, OKSR, COMO, SUGG, GUIL, PRLA, TECR, LIRO, REDB, TOMB, MART, WLOU, PRPO, BLDE, LECO, SYCA, BIGC, WALK, CRAM, BLUE"
+            "description": "TOOK, LEWI, BARC, PRIN, MCDI, ARIK, CARI, OKSR, COMO, SUGG, GUIL, FLNT, CUPE, POSE, MAYF, HOPB, MCRA, KING, BLWA, PRLA, TECR, LIRO, REDB, TOMB, MART, WLOU, PRPO, BLDE, LECO, SYCA, BIGC, WALK, CRAM, BLUE"
         },
         "4": {
             "type": "application/x-parquet",

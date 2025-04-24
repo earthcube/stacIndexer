@@ -63,6 +63,46 @@
                 32.5907
             ],
             [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
                 -100.9154,
                 46.7697
             ],
@@ -161,52 +201,12 @@
             [
                 -89.5373,
                 46.2339
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_latent_heat_flux variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: DEJU, KONZ, CLBJ, SCBI, YELL, STER, BONA, OAES, UKFS, STEI, DCFS, JORN, NOGP, ORNL, WREF, LENO, GRSM, ABBY, MLBS, SOAP, TEAK, NIWO, TREE, HEAL, CPER, RMNP, JERC, BART, OSBS, BARR, DELA, SRER, TOOL, TALL, KONA, ONAQ, UNDE, GUAN, HARV, LAJA, WOOD, DSNY, SJER, BLAN, PUUM, MOAB, SERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: DEJU, KONZ, CLBJ, SCBI, YELL, STER, BONA, OAES, UKFS, STEI, DCFS, JORN, GUAN, HARV, LAJA, WOOD, DSNY, SJER, BLAN, PUUM, MOAB, SERC, NOGP, ORNL, WREF, LENO, GRSM, ABBY, MLBS, SOAP, TEAK, NIWO, TREE, HEAL, CPER, RMNP, JERC, BART, OSBS, BARR, DELA, SRER, TOOL, TALL, KONA, ONAQ, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-03-31",
         "updated": "2025-03-31 22:05:19",
         "start_datetime": "2023-11-15T00:00:00Z",
@@ -251,6 +251,16 @@
             "STEI",
             "DCFS",
             "JORN",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "WOOD",
+            "DSNY",
+            "SJER",
+            "BLAN",
+            "PUUM",
+            "MOAB",
+            "SERC",
             "NOGP",
             "ORNL",
             "WREF",
@@ -275,17 +285,7 @@
             "TALL",
             "KONA",
             "ONAQ",
-            "UNDE",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "WOOD",
-            "DSNY",
-            "SJER",
-            "BLAN",
-            "PUUM",
-            "MOAB",
-            "SERC"
+            "UNDE"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "DEJU, KONZ, CLBJ, SCBI, YELL, STER, BONA, OAES, UKFS, STEI, DCFS, JORN, NOGP, ORNL, WREF, LENO, GRSM, ABBY, MLBS, SOAP, TEAK, NIWO, TREE, HEAL, CPER, RMNP, JERC, BART, OSBS, BARR, DELA, SRER, TOOL, TALL, KONA, ONAQ, UNDE, GUAN, HARV, LAJA, WOOD, DSNY, SJER, BLAN, PUUM, MOAB, SERC"
+            "description": "DEJU, KONZ, CLBJ, SCBI, YELL, STER, BONA, OAES, UKFS, STEI, DCFS, JORN, GUAN, HARV, LAJA, WOOD, DSNY, SJER, BLAN, PUUM, MOAB, SERC, NOGP, ORNL, WREF, LENO, GRSM, ABBY, MLBS, SOAP, TEAK, NIWO, TREE, HEAL, CPER, RMNP, JERC, BART, OSBS, BARR, DELA, SRER, TOOL, TALL, KONA, ONAQ, UNDE"
         },
         "4": {
             "type": "application/x-parquet",
