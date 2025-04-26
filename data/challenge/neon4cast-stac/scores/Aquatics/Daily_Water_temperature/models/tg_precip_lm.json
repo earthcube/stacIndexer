@@ -15,32 +15,36 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2793,
-                35.9574
+                -78.1473,
+                38.8943
             ],
             [
-                -110.5871,
-                44.9501
+                -87.4077,
+                32.9604
             ],
             [
-                -96.6242,
-                34.4442
+                -84.4374,
+                31.1854
             ],
             [
-                -89.4737,
-                46.2097
+                -66.9868,
+                18.1135
             ],
             [
-                -119.2575,
-                37.0597
+                -96.6038,
+                39.1051
             ],
             [
-                -111.5081,
-                33.751
+                -87.7982,
+                32.5415
             ],
             [
-                -83.5038,
-                35.6904
+                -122.1655,
+                44.2596
+            ],
+            [
+                -72.3295,
+                42.4719
             ],
             [
                 -82.0177,
@@ -87,36 +91,32 @@
                 39.0956
             ],
             [
-                -78.1473,
-                38.8943
+                -84.2793,
+                35.9574
             ],
             [
-                -87.4077,
-                32.9604
+                -110.5871,
+                44.9501
             ],
             [
-                -84.4374,
-                31.1854
+                -96.6242,
+                34.4442
             ],
             [
-                -66.9868,
-                18.1135
+                -89.4737,
+                46.2097
             ],
             [
-                -96.6038,
-                39.1051
+                -119.2575,
+                37.0597
             ],
             [
-                -87.7982,
-                32.5415
+                -111.5081,
+                33.751
             ],
             [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -72.3295,
-                42.4719
+                -83.5038,
+                35.6904
             ],
             [
                 -111.7979,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO, SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:34:59",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -187,13 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
-            "WALK",
-            "BLDE",
-            "BLUE",
-            "CRAM",
-            "BIGC",
-            "SYCA",
-            "LECO",
+            "POSE",
+            "MAYF",
+            "FLNT",
+            "CUPE",
+            "KING",
+            "BLWA",
+            "MCRA",
+            "HOPB",
             "SUGG",
             "BARC",
             "TOOK",
@@ -205,14 +206,13 @@
             "MCDI",
             "CARI",
             "LEWI",
-            "POSE",
-            "MAYF",
-            "FLNT",
-            "CUPE",
-            "KING",
-            "BLWA",
-            "MCRA",
-            "HOPB",
+            "WALK",
+            "BLDE",
+            "BLUE",
+            "CRAM",
+            "BIGC",
+            "SYCA",
+            "LECO",
             "REDB",
             "TOMB",
             "MART",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO, SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA"
+            "description": "POSE, MAYF, FLNT, CUPE, KING, BLWA, MCRA, HOPB, SUGG, BARC, TOOK, ARIK, PRIN, COMO, GUIL, OKSR, MCDI, CARI, LEWI, WALK, BLDE, BLUE, CRAM, BIGC, SYCA, LECO, REDB, TOMB, MART, PRPO, TECR, WLOU, LIRO, PRLA"
         },
         "4": {
             "type": "application/x-parquet",

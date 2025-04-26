@@ -15,20 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -83.5019,
                 35.689
-            ],
-            [
-                -87.8039,
-                32.5417
-            ],
-            [
-                -71.2874,
-                44.0639
             ],
             [
                 -97.57,
@@ -45,12 +33,24 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -87.8039,
+                32.5417
             ]
         ]
     },
     "properties": {
         "title": "PEG_RFR0",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG_RFR0 model. Information for the model is provided as follows: The PEG_RFR0 model was a multi-output regression model, which predicted 36 days of GCC (to next 35 days) using immediate past GCC (last 5 days) as well as GCC value from the last year (25 days)..\n                                    The model predicts this variable at the following sites: HARV, GRSM, DELA, BART, CLBJ, SCBI, STEI, UKFS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the PEG_RFR0 model. Information for the model is provided as follows: The PEG_RFR0 model was a multi-output regression model, which predicted 36 days of GCC (to next 35 days) using immediate past GCC (last 5 days) as well as GCC value from the last year (25 days)..\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-07-20",
         "updated": null,
         "start_datetime": "2021-03-26T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "HARV",
             "GRSM",
-            "DELA",
-            "BART",
             "CLBJ",
             "SCBI",
             "STEI",
-            "UKFS"
+            "UKFS",
+            "HARV",
+            "BART",
+            "DELA"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, GRSM, DELA, BART, CLBJ, SCBI, STEI, UKFS"
+            "description": "GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",

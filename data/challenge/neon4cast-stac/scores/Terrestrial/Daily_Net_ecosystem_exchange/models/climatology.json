@@ -59,6 +59,46 @@
                 45.4937
             ],
             [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
                 -89.5864,
                 45.5089
             ],
@@ -105,46 +145,6 @@
             [
                 -145.7514,
                 63.8811
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -109.3883,
-                38.2483
             ],
             [
                 -156.6194,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SOAP, TEAK, MLBS, ABBY, LENO, NOGP, WREF, GRSM, ORNL, NIWO, TREE, STEI, SCBI, YELL, STER, UKFS, DCFS, OAES, BONA, CLBJ, KONZ, JORN, DEJU, HARV, WOOD, GUAN, LAJA, DSNY, SJER, BLAN, PUUM, SERC, MOAB, BARR, BART, JERC, KONA, HEAL, SRER, ONAQ, OSBS, UNDE, DELA, TALL, TOOL, RMNP, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SOAP, TEAK, MLBS, ABBY, LENO, NOGP, WREF, GRSM, ORNL, NIWO, TREE, HARV, WOOD, GUAN, LAJA, DSNY, SJER, BLAN, PUUM, SERC, MOAB, STEI, SCBI, YELL, STER, UKFS, DCFS, OAES, BONA, CLBJ, KONZ, JORN, DEJU, BARR, BART, JERC, KONA, HEAL, SRER, ONAQ, OSBS, UNDE, DELA, TALL, TOOL, RMNP, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-04-14",
         "updated": "2025-04-14 20:19:30",
         "start_datetime": "2023-11-15T00:00:00Z",
@@ -250,6 +250,16 @@
             "ORNL",
             "NIWO",
             "TREE",
+            "HARV",
+            "WOOD",
+            "GUAN",
+            "LAJA",
+            "DSNY",
+            "SJER",
+            "BLAN",
+            "PUUM",
+            "SERC",
+            "MOAB",
             "STEI",
             "SCBI",
             "YELL",
@@ -262,16 +272,6 @@
             "KONZ",
             "JORN",
             "DEJU",
-            "HARV",
-            "WOOD",
-            "GUAN",
-            "LAJA",
-            "DSNY",
-            "SJER",
-            "BLAN",
-            "PUUM",
-            "SERC",
-            "MOAB",
             "BARR",
             "BART",
             "JERC",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SOAP, TEAK, MLBS, ABBY, LENO, NOGP, WREF, GRSM, ORNL, NIWO, TREE, STEI, SCBI, YELL, STER, UKFS, DCFS, OAES, BONA, CLBJ, KONZ, JORN, DEJU, HARV, WOOD, GUAN, LAJA, DSNY, SJER, BLAN, PUUM, SERC, MOAB, BARR, BART, JERC, KONA, HEAL, SRER, ONAQ, OSBS, UNDE, DELA, TALL, TOOL, RMNP, CPER"
+            "description": "SOAP, TEAK, MLBS, ABBY, LENO, NOGP, WREF, GRSM, ORNL, NIWO, TREE, HARV, WOOD, GUAN, LAJA, DSNY, SJER, BLAN, PUUM, SERC, MOAB, STEI, SCBI, YELL, STER, UKFS, DCFS, OAES, BONA, CLBJ, KONZ, JORN, DEJU, BARR, BART, JERC, KONA, HEAL, SRER, ONAQ, OSBS, UNDE, DELA, TALL, TOOL, RMNP, CPER"
         },
         "4": {
             "type": "application/x-parquet",

@@ -87,38 +87,6 @@
                 18.1741
             ],
             [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
                 -66.9868,
                 18.1135
             ],
@@ -149,12 +117,44 @@
             [
                 -87.7982,
                 32.5415
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -111.7979,
+                40.7839
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: WALK, BLUE, BLDE, BIGC, CRAM, LECO, SYCA, COMO, CARI, OKSR, ARIK, MCDI, SUGG, PRIN, TOOK, LEWI, BARC, GUIL, PRLA, TECR, LIRO, TOMB, MART, WLOU, PRPO, REDB, CUPE, POSE, FLNT, HOPB, MAYF, MCRA, KING, BLWA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: WALK, BLUE, BLDE, BIGC, CRAM, LECO, SYCA, COMO, CARI, OKSR, ARIK, MCDI, SUGG, PRIN, TOOK, LEWI, BARC, GUIL, CUPE, POSE, FLNT, HOPB, MAYF, MCRA, KING, BLWA, PRLA, TECR, LIRO, TOMB, MART, WLOU, PRPO, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:32:49",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -205,14 +205,6 @@
             "LEWI",
             "BARC",
             "GUIL",
-            "PRLA",
-            "TECR",
-            "LIRO",
-            "TOMB",
-            "MART",
-            "WLOU",
-            "PRPO",
-            "REDB",
             "CUPE",
             "POSE",
             "FLNT",
@@ -220,7 +212,15 @@
             "MAYF",
             "MCRA",
             "KING",
-            "BLWA"
+            "BLWA",
+            "PRLA",
+            "TECR",
+            "LIRO",
+            "TOMB",
+            "MART",
+            "WLOU",
+            "PRPO",
+            "REDB"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "WALK, BLUE, BLDE, BIGC, CRAM, LECO, SYCA, COMO, CARI, OKSR, ARIK, MCDI, SUGG, PRIN, TOOK, LEWI, BARC, GUIL, PRLA, TECR, LIRO, TOMB, MART, WLOU, PRPO, REDB, CUPE, POSE, FLNT, HOPB, MAYF, MCRA, KING, BLWA"
+            "description": "WALK, BLUE, BLDE, BIGC, CRAM, LECO, SYCA, COMO, CARI, OKSR, ARIK, MCDI, SUGG, PRIN, TOOK, LEWI, BARC, GUIL, CUPE, POSE, FLNT, HOPB, MAYF, MCRA, KING, BLWA, PRLA, TECR, LIRO, TOMB, MART, WLOU, PRPO, REDB"
         },
         "4": {
             "type": "application/x-parquet",

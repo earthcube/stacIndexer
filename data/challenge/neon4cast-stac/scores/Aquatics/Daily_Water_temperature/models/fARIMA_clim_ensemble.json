@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
                 -84.2793,
                 35.9574
             ],
@@ -117,44 +149,12 @@
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
             ]
         ]
     },
     "properties": {
         "title": "fARIMA_clim_ensemble",
-        "description": "All scores for the Daily_Water_temperature variable for the fARIMA_clim_ensemble model. Information for the model is provided as follows: The fAMIRA-DOY MME is a multi-model ensemble (MME) composed of two empirical\nmodels: an ARIMA model (fARIMA) and day-of-year model.\n                                    The model predicts this variable at the following sites: WALK, CRAM, SYCA, BLUE, BIGC, BLDE, LECO, PRIN, COMO, ARIK, CARI, BARC, GUIL, MCDI, SUGG, LEWI, TOOK, OKSR, TOMB, PRLA, PRPO, MART, WLOU, REDB, TECR, LIRO, POSE, MCRA, FLNT, CUPE, BLWA, MAYF, HOPB, KING.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the fARIMA_clim_ensemble model. Information for the model is provided as follows: The fAMIRA-DOY MME is a multi-model ensemble (MME) composed of two empirical\nmodels: an ARIMA model (fARIMA) and day-of-year model.\n                                    The model predicts this variable at the following sites: POSE, MCRA, FLNT, CUPE, BLWA, MAYF, HOPB, KING, WALK, CRAM, SYCA, BLUE, BIGC, BLDE, LECO, PRIN, COMO, ARIK, CARI, BARC, GUIL, MCDI, SUGG, LEWI, TOOK, OKSR, TOMB, PRLA, PRPO, MART, WLOU, REDB, TECR, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-03",
         "updated": "2024-08-22 14:03:34",
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -187,6 +187,14 @@
             "temperature",
             "Daily",
             "P1D",
+            "POSE",
+            "MCRA",
+            "FLNT",
+            "CUPE",
+            "BLWA",
+            "MAYF",
+            "HOPB",
+            "KING",
             "WALK",
             "CRAM",
             "SYCA",
@@ -212,15 +220,7 @@
             "WLOU",
             "REDB",
             "TECR",
-            "LIRO",
-            "POSE",
-            "MCRA",
-            "FLNT",
-            "CUPE",
-            "BLWA",
-            "MAYF",
-            "HOPB",
-            "KING"
+            "LIRO"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "WALK, CRAM, SYCA, BLUE, BIGC, BLDE, LECO, PRIN, COMO, ARIK, CARI, BARC, GUIL, MCDI, SUGG, LEWI, TOOK, OKSR, TOMB, PRLA, PRPO, MART, WLOU, REDB, TECR, LIRO, POSE, MCRA, FLNT, CUPE, BLWA, MAYF, HOPB, KING"
+            "description": "POSE, MCRA, FLNT, CUPE, BLWA, MAYF, HOPB, KING, WALK, CRAM, SYCA, BLUE, BIGC, BLDE, LECO, PRIN, COMO, ARIK, CARI, BARC, GUIL, MCDI, SUGG, LEWI, TOOK, OKSR, TOMB, PRLA, PRPO, MART, WLOU, REDB, TECR, LIRO"
         },
         "4": {
             "type": "application/x-parquet",

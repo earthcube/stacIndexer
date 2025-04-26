@@ -15,48 +15,32 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
+                -110.5871,
+                44.9501
             ],
             [
-                -77.9832,
-                39.0956
+                -111.5081,
+                33.751
             ],
             [
-                -96.443,
-                38.9459
+                -83.5038,
+                35.6904
             ],
             [
-                -97.7823,
-                33.3785
+                -119.2575,
+                37.0597
             ],
             [
-                -105.5442,
-                40.035
+                -84.2793,
+                35.9574
             ],
             [
-                -102.4471,
-                39.7582
+                -89.4737,
+                46.2097
             ],
             [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
+                -96.6242,
+                34.4442
             ],
             [
                 -72.3295,
@@ -123,38 +107,54 @@
                 31.8534
             ],
             [
-                -110.5871,
-                44.9501
+                -82.0177,
+                29.6878
             ],
             [
-                -111.5081,
-                33.751
+                -77.9832,
+                39.0956
             ],
             [
-                -83.5038,
-                35.6904
+                -96.443,
+                38.9459
             ],
             [
-                -119.2575,
-                37.0597
+                -97.7823,
+                33.3785
             ],
             [
-                -84.2793,
-                35.9574
+                -105.5442,
+                40.035
             ],
             [
-                -89.4737,
-                46.2097
+                -102.4471,
+                39.7582
             ],
             [
-                -96.6242,
-                34.4442
+                -66.7987,
+                18.1741
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
             ]
         ]
     },
     "properties": {
         "title": "baseline_ensemble",
-        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: SUGG, LEWI, MCDI, PRIN, COMO, ARIK, GUIL, BARC, CARI, OKSR, TOOK, HOPB, MAYF, POSE, MCRA, CUPE, KING, FLNT, BLWA, LIRO, MART, TECR, REDB, WLOU, PRLA, PRPO, TOMB, BLDE, SYCA, LECO, BIGC, WALK, CRAM, BLUE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the baseline_ensemble model. Information for the model is provided as follows: The Baseline MME is a multi-model ensemble (MME) comprised of the two baseline models\n(day-of-year, persistence) submitted by Challenge organisers.\n                                    The model predicts this variable at the following sites: BLDE, SYCA, LECO, BIGC, WALK, CRAM, BLUE, HOPB, MAYF, POSE, MCRA, CUPE, KING, FLNT, BLWA, LIRO, MART, TECR, REDB, WLOU, PRLA, PRPO, TOMB, SUGG, LEWI, MCDI, PRIN, COMO, ARIK, GUIL, BARC, CARI, OKSR, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-03",
         "updated": "2024-08-22 14:02:17",
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -187,17 +187,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "SUGG",
-            "LEWI",
-            "MCDI",
-            "PRIN",
-            "COMO",
-            "ARIK",
-            "GUIL",
-            "BARC",
-            "CARI",
-            "OKSR",
-            "TOOK",
+            "BLDE",
+            "SYCA",
+            "LECO",
+            "BIGC",
+            "WALK",
+            "CRAM",
+            "BLUE",
             "HOPB",
             "MAYF",
             "POSE",
@@ -214,13 +210,17 @@
             "PRLA",
             "PRPO",
             "TOMB",
-            "BLDE",
-            "SYCA",
-            "LECO",
-            "BIGC",
-            "WALK",
-            "CRAM",
-            "BLUE"
+            "SUGG",
+            "LEWI",
+            "MCDI",
+            "PRIN",
+            "COMO",
+            "ARIK",
+            "GUIL",
+            "BARC",
+            "CARI",
+            "OKSR",
+            "TOOK"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SUGG, LEWI, MCDI, PRIN, COMO, ARIK, GUIL, BARC, CARI, OKSR, TOOK, HOPB, MAYF, POSE, MCRA, CUPE, KING, FLNT, BLWA, LIRO, MART, TECR, REDB, WLOU, PRLA, PRPO, TOMB, BLDE, SYCA, LECO, BIGC, WALK, CRAM, BLUE"
+            "description": "BLDE, SYCA, LECO, BIGC, WALK, CRAM, BLUE, HOPB, MAYF, POSE, MCRA, CUPE, KING, FLNT, BLWA, LIRO, MART, TECR, REDB, WLOU, PRLA, PRPO, TOMB, SUGG, LEWI, MCDI, PRIN, COMO, ARIK, GUIL, BARC, CARI, OKSR, TOOK"
         },
         "4": {
             "type": "application/x-parquet",

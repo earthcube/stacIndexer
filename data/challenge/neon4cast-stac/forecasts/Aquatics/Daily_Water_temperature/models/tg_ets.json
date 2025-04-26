@@ -43,6 +43,50 @@
                 46.2097
             ],
             [
+                -105.5442,
+                40.035
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -96.6038,
                 39.1051
             ],
@@ -105,56 +149,12 @@
             [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: LECO, WALK, BLUE, BIGC, SYCA, BLDE, CRAM, KING, FLNT, POSE, CUPE, BLWA, MAYF, MCRA, HOPB, TECR, PRPO, REDB, LIRO, MART, TOMB, WLOU, PRLA, COMO, OKSR, SUGG, ARIK, PRIN, GUIL, LEWI, CARI, MCDI, BARC, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: LECO, WALK, BLUE, BIGC, SYCA, BLDE, CRAM, COMO, OKSR, SUGG, ARIK, PRIN, GUIL, LEWI, CARI, MCDI, BARC, TOOK, KING, FLNT, POSE, CUPE, BLWA, MAYF, MCRA, HOPB, TECR, PRPO, REDB, LIRO, MART, TOMB, WLOU, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:32:49",
         "start_datetime": "2022-08-06T00:00:00Z",
@@ -194,6 +194,17 @@
             "SYCA",
             "BLDE",
             "CRAM",
+            "COMO",
+            "OKSR",
+            "SUGG",
+            "ARIK",
+            "PRIN",
+            "GUIL",
+            "LEWI",
+            "CARI",
+            "MCDI",
+            "BARC",
+            "TOOK",
             "KING",
             "FLNT",
             "POSE",
@@ -209,18 +220,7 @@
             "MART",
             "TOMB",
             "WLOU",
-            "PRLA",
-            "COMO",
-            "OKSR",
-            "SUGG",
-            "ARIK",
-            "PRIN",
-            "GUIL",
-            "LEWI",
-            "CARI",
-            "MCDI",
-            "BARC",
-            "TOOK"
+            "PRLA"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LECO, WALK, BLUE, BIGC, SYCA, BLDE, CRAM, KING, FLNT, POSE, CUPE, BLWA, MAYF, MCRA, HOPB, TECR, PRPO, REDB, LIRO, MART, TOMB, WLOU, PRLA, COMO, OKSR, SUGG, ARIK, PRIN, GUIL, LEWI, CARI, MCDI, BARC, TOOK"
+            "description": "LECO, WALK, BLUE, BIGC, SYCA, BLDE, CRAM, COMO, OKSR, SUGG, ARIK, PRIN, GUIL, LEWI, CARI, MCDI, BARC, TOOK, KING, FLNT, POSE, CUPE, BLWA, MAYF, MCRA, HOPB, TECR, PRPO, REDB, LIRO, MART, TOMB, WLOU, PRLA"
         },
         "4": {
             "type": "application/x-parquet",
