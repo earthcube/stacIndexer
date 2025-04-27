@@ -27,16 +27,16 @@
                 39.0404
             ],
             [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -78.0418,
                 39.0337
             ],
             [
                 -76.56,
                 38.8901
+            ],
+            [
+                -84.2826,
+                35.9641
             ],
             [
                 -81.9934,
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, ORNL, BLAN, SERC, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, BLAN, SERC, ORNL, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-31",
         "updated": null,
         "start_datetime": "2022-12-26T00:00:00Z",
@@ -86,9 +86,9 @@
             "KONZ",
             "SCBI",
             "UKFS",
-            "ORNL",
             "BLAN",
             "SERC",
+            "ORNL",
             "OSBS",
             "TALL"
         ],
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, SCBI, UKFS, ORNL, BLAN, SERC, OSBS, TALL"
+            "description": "KONZ, SCBI, UKFS, BLAN, SERC, ORNL, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",

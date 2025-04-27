@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
                 -99.0588,
                 35.4106
             ],
@@ -61,46 +101,6 @@
             [
                 -78.1395,
                 38.8929
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -109.3883,
-                38.2483
             ],
             [
                 -88.1612,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: OAES, STEI, JORN, YELL, STER, CLBJ, BONA, UKFS, KONZ, DEJU, DCFS, SCBI, DSNY, SJER, LAJA, PUUM, GUAN, SERC, HARV, WOOD, BLAN, MOAB, LENO, SOAP, WREF, TREE, ABBY, MLBS, GRSM, TEAK, NOGP, ORNL, NIWO, OSBS, BART, DELA, HEAL, TOOL, UNDE, KONA, RMNP, ONAQ, JERC, TALL, SRER, BARR, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_richness variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: DSNY, SJER, LAJA, PUUM, GUAN, SERC, HARV, WOOD, BLAN, MOAB, OAES, STEI, JORN, YELL, STER, CLBJ, BONA, UKFS, KONZ, DEJU, DCFS, SCBI, LENO, SOAP, WREF, TREE, ABBY, MLBS, GRSM, TEAK, NOGP, ORNL, NIWO, OSBS, BART, DELA, HEAL, TOOL, UNDE, KONA, RMNP, ONAQ, JERC, TALL, SRER, BARR, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:03:11",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,6 +239,16 @@
             "richness",
             "Weekly",
             "P1W",
+            "DSNY",
+            "SJER",
+            "LAJA",
+            "PUUM",
+            "GUAN",
+            "SERC",
+            "HARV",
+            "WOOD",
+            "BLAN",
+            "MOAB",
             "OAES",
             "STEI",
             "JORN",
@@ -251,16 +261,6 @@
             "DEJU",
             "DCFS",
             "SCBI",
-            "DSNY",
-            "SJER",
-            "LAJA",
-            "PUUM",
-            "GUAN",
-            "SERC",
-            "HARV",
-            "WOOD",
-            "BLAN",
-            "MOAB",
             "LENO",
             "SOAP",
             "WREF",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "OAES, STEI, JORN, YELL, STER, CLBJ, BONA, UKFS, KONZ, DEJU, DCFS, SCBI, DSNY, SJER, LAJA, PUUM, GUAN, SERC, HARV, WOOD, BLAN, MOAB, LENO, SOAP, WREF, TREE, ABBY, MLBS, GRSM, TEAK, NOGP, ORNL, NIWO, OSBS, BART, DELA, HEAL, TOOL, UNDE, KONA, RMNP, ONAQ, JERC, TALL, SRER, BARR, CPER"
+            "description": "DSNY, SJER, LAJA, PUUM, GUAN, SERC, HARV, WOOD, BLAN, MOAB, OAES, STEI, JORN, YELL, STER, CLBJ, BONA, UKFS, KONZ, DEJU, DCFS, SCBI, LENO, SOAP, WREF, TREE, ABBY, MLBS, GRSM, TEAK, NOGP, ORNL, NIWO, OSBS, BART, DELA, HEAL, TOOL, UNDE, KONA, RMNP, ONAQ, JERC, TALL, SRER, BARR, CPER"
         },
         "4": {
             "type": "application/x-parquet",

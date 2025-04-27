@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -83.5019,
+                35.689
+            ],
+            [
                 -97.57,
                 33.4012
             ],
@@ -29,10 +33,6 @@
             [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -83.5019,
-                35.689
             ],
             [
                 -72.1727,
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "NEFIpheno",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the NEFIpheno model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, GRSM, HARV, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the NEFIpheno model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-12-17",
         "updated": null,
         "start_datetime": "2021-08-25T00:00:00Z",
@@ -83,11 +83,11 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "GRSM",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "GRSM",
             "HARV",
             "BART",
             "DELA"
@@ -207,7 +207,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CLBJ, SCBI, STEI, UKFS, GRSM, HARV, BART, DELA"
+            "description": "GRSM, CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",
