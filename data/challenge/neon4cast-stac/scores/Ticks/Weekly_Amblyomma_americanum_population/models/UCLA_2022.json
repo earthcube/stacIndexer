@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -96.5631,
                 39.1008
             ],
@@ -49,12 +41,20 @@
             [
                 -87.3933,
                 32.9505
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -84.2826,
+                35.9641
             ]
         ]
     },
     "properties": {
         "title": "UCLA_2022",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the UCLA_2022 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: LENO, ORNL, KONZ, SCBI, UKFS, NA, BLAN, SERC, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the UCLA_2022 model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, NA, BLAN, SERC, OSBS, TALL, LENO, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-05-02",
         "updated": null,
         "start_datetime": "2021-03-01T00:00:00Z",
@@ -87,8 +87,6 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "LENO",
-            "ORNL",
             "KONZ",
             "SCBI",
             "UKFS",
@@ -96,7 +94,9 @@
             "BLAN",
             "SERC",
             "OSBS",
-            "TALL"
+            "TALL",
+            "LENO",
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -253,7 +253,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LENO, ORNL, KONZ, SCBI, UKFS, NA, BLAN, SERC, OSBS, TALL"
+            "description": "KONZ, SCBI, UKFS, NA, BLAN, SERC, OSBS, TALL, LENO, ORNL"
         },
         "4": {
             "type": "application/x-parquet",

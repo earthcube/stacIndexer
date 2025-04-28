@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -111.5081,
                 33.751
             ],
@@ -59,12 +27,12 @@
                 35.9574
             ],
             [
-                -83.5038,
-                35.6904
-            ],
-            [
                 -119.2575,
                 37.0597
+            ],
+            [
+                -83.5038,
+                35.6904
             ],
             [
                 -110.5871,
@@ -75,20 +43,52 @@
                 46.2097
             ],
             [
-                -102.4471,
-                39.7582
+                -96.6038,
+                39.1051
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
             ],
             [
                 -147.504,
                 65.1532
             ],
             [
-                -96.443,
-                38.9459
+                -102.4471,
+                39.7582
             ],
             [
                 -97.7823,
                 33.3785
+            ],
+            [
+                -96.443,
+                38.9459
             ],
             [
                 -82.0177,
@@ -103,20 +103,20 @@
                 18.1741
             ],
             [
-                -105.5442,
-                40.035
-            ],
-            [
                 -77.9832,
                 39.0956
             ],
             [
-                -149.6106,
-                68.6307
+                -105.5442,
+                40.035
             ],
             [
                 -149.143,
                 68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
             ],
             [
                 -88.1589,
@@ -139,26 +139,26 @@
                 45.9983
             ],
             [
+                -99.2531,
+                47.1298
+            ],
+            [
                 -119.0274,
                 36.9559
             ],
             [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: KING, POSE, CUPE, MAYF, MCRA, FLNT, HOPB, BLWA, SYCA, BLUE, WALK, LECO, BIGC, BLDE, CRAM, ARIK, CARI, MCDI, PRIN, SUGG, BARC, GUIL, COMO, LEWI, TOOK, OKSR, TOMB, REDB, WLOU, MART, LIRO, TECR, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-04-22",
-        "updated": "2025-04-22 22:03:56",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SYCA, BLUE, WALK, BIGC, LECO, BLDE, CRAM, KING, POSE, MCRA, CUPE, MAYF, FLNT, BLWA, HOPB, CARI, ARIK, PRIN, MCDI, SUGG, BARC, GUIL, LEWI, COMO, OKSR, TOOK, TOMB, REDB, WLOU, MART, LIRO, PRPO, TECR, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-04-23",
+        "updated": "2025-04-23 22:04:03",
         "start_datetime": "2021-05-01T00:00:00Z",
-        "end_datetime": "2025-04-23T00:00:00Z",
+        "end_datetime": "2025-04-24T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
@@ -187,40 +187,40 @@
             "oxygen",
             "Daily",
             "P1D",
-            "KING",
-            "POSE",
-            "CUPE",
-            "MAYF",
-            "MCRA",
-            "FLNT",
-            "HOPB",
-            "BLWA",
             "SYCA",
             "BLUE",
             "WALK",
-            "LECO",
             "BIGC",
+            "LECO",
             "BLDE",
             "CRAM",
-            "ARIK",
+            "KING",
+            "POSE",
+            "MCRA",
+            "CUPE",
+            "MAYF",
+            "FLNT",
+            "BLWA",
+            "HOPB",
             "CARI",
-            "MCDI",
+            "ARIK",
             "PRIN",
+            "MCDI",
             "SUGG",
             "BARC",
             "GUIL",
-            "COMO",
             "LEWI",
-            "TOOK",
+            "COMO",
             "OKSR",
+            "TOOK",
             "TOMB",
             "REDB",
             "WLOU",
             "MART",
             "LIRO",
+            "PRPO",
             "TECR",
-            "PRLA",
-            "PRPO"
+            "PRLA"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KING, POSE, CUPE, MAYF, MCRA, FLNT, HOPB, BLWA, SYCA, BLUE, WALK, LECO, BIGC, BLDE, CRAM, ARIK, CARI, MCDI, PRIN, SUGG, BARC, GUIL, COMO, LEWI, TOOK, OKSR, TOMB, REDB, WLOU, MART, LIRO, TECR, PRLA, PRPO"
+            "description": "SYCA, BLUE, WALK, BIGC, LECO, BLDE, CRAM, KING, POSE, MCRA, CUPE, MAYF, FLNT, BLWA, HOPB, CARI, ARIK, PRIN, MCDI, SUGG, BARC, GUIL, LEWI, COMO, OKSR, TOOK, TOMB, REDB, WLOU, MART, LIRO, PRPO, TECR, PRLA"
         },
         "4": {
             "type": "application/x-parquet",

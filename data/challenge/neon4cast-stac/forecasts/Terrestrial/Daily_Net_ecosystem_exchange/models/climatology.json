@@ -63,46 +63,6 @@
                 63.8811
             ],
             [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
                 -122.3303,
                 45.7624
             ],
@@ -201,12 +161,52 @@
             [
                 -104.7456,
                 40.8155
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -109.3883,
+                38.2483
             ]
         ]
     },
     "properties": {
         "title": "climatology",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: STEI, KONZ, UKFS, CLBJ, OAES, DCFS, SCBI, STER, BONA, JORN, YELL, DEJU, WOOD, SJER, GUAN, LAJA, DSNY, HARV, BLAN, PUUM, SERC, MOAB, ABBY, LENO, GRSM, SOAP, TEAK, WREF, NOGP, ORNL, MLBS, NIWO, TREE, JERC, OSBS, SRER, HEAL, BART, TOOL, BARR, RMNP, KONA, ONAQ, DELA, TALL, UNDE, CPER.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: STEI, KONZ, UKFS, CLBJ, OAES, DCFS, SCBI, STER, BONA, JORN, YELL, DEJU, ABBY, LENO, GRSM, SOAP, TEAK, WREF, NOGP, ORNL, MLBS, NIWO, TREE, JERC, OSBS, SRER, HEAL, BART, TOOL, BARR, RMNP, KONA, ONAQ, DELA, TALL, UNDE, CPER, WOOD, SJER, GUAN, LAJA, DSNY, HARV, BLAN, PUUM, SERC, MOAB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-04-14",
         "updated": "2025-04-14 20:19:30",
         "start_datetime": "2023-11-15T00:00:00Z",
@@ -251,16 +251,6 @@
             "JORN",
             "YELL",
             "DEJU",
-            "WOOD",
-            "SJER",
-            "GUAN",
-            "LAJA",
-            "DSNY",
-            "HARV",
-            "BLAN",
-            "PUUM",
-            "SERC",
-            "MOAB",
             "ABBY",
             "LENO",
             "GRSM",
@@ -285,7 +275,17 @@
             "DELA",
             "TALL",
             "UNDE",
-            "CPER"
+            "CPER",
+            "WOOD",
+            "SJER",
+            "GUAN",
+            "LAJA",
+            "DSNY",
+            "HARV",
+            "BLAN",
+            "PUUM",
+            "SERC",
+            "MOAB"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "STEI, KONZ, UKFS, CLBJ, OAES, DCFS, SCBI, STER, BONA, JORN, YELL, DEJU, WOOD, SJER, GUAN, LAJA, DSNY, HARV, BLAN, PUUM, SERC, MOAB, ABBY, LENO, GRSM, SOAP, TEAK, WREF, NOGP, ORNL, MLBS, NIWO, TREE, JERC, OSBS, SRER, HEAL, BART, TOOL, BARR, RMNP, KONA, ONAQ, DELA, TALL, UNDE, CPER"
+            "description": "STEI, KONZ, UKFS, CLBJ, OAES, DCFS, SCBI, STER, BONA, JORN, YELL, DEJU, ABBY, LENO, GRSM, SOAP, TEAK, WREF, NOGP, ORNL, MLBS, NIWO, TREE, JERC, OSBS, SRER, HEAL, BART, TOOL, BARR, RMNP, KONA, ONAQ, DELA, TALL, UNDE, CPER, WOOD, SJER, GUAN, LAJA, DSNY, HARV, BLAN, PUUM, SERC, MOAB"
         },
         "4": {
             "type": "application/x-parquet",

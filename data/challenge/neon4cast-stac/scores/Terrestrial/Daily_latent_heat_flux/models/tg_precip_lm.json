@@ -63,6 +63,46 @@
                 63.8811
             ],
             [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
                 -122.3303,
                 45.7624
             ],
@@ -105,46 +145,6 @@
             [
                 -80.5248,
                 37.3783
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
             ],
             [
                 -105.546,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: UKFS, STER, OAES, DCFS, STEI, JORN, BONA, CLBJ, KONZ, SCBI, YELL, DEJU, ABBY, LENO, ORNL, GRSM, NOGP, TEAK, SOAP, TREE, WREF, NIWO, MLBS, MOAB, SJER, GUAN, PUUM, WOOD, HARV, DSNY, SERC, LAJA, BLAN, RMNP, TALL, CPER, TOOL, HEAL, BART, ONAQ, DELA, OSBS, UNDE, KONA, BARR, SRER, JERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: UKFS, STER, OAES, DCFS, STEI, JORN, BONA, CLBJ, KONZ, SCBI, YELL, DEJU, MOAB, SJER, GUAN, PUUM, WOOD, HARV, DSNY, SERC, LAJA, BLAN, ABBY, LENO, ORNL, GRSM, NOGP, TEAK, SOAP, TREE, WREF, NIWO, MLBS, RMNP, TALL, CPER, TOOL, HEAL, BART, ONAQ, DELA, OSBS, UNDE, KONA, BARR, SRER, JERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-04 03:46:32",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -251,6 +251,16 @@
             "SCBI",
             "YELL",
             "DEJU",
+            "MOAB",
+            "SJER",
+            "GUAN",
+            "PUUM",
+            "WOOD",
+            "HARV",
+            "DSNY",
+            "SERC",
+            "LAJA",
+            "BLAN",
             "ABBY",
             "LENO",
             "ORNL",
@@ -262,16 +272,6 @@
             "WREF",
             "NIWO",
             "MLBS",
-            "MOAB",
-            "SJER",
-            "GUAN",
-            "PUUM",
-            "WOOD",
-            "HARV",
-            "DSNY",
-            "SERC",
-            "LAJA",
-            "BLAN",
             "RMNP",
             "TALL",
             "CPER",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "UKFS, STER, OAES, DCFS, STEI, JORN, BONA, CLBJ, KONZ, SCBI, YELL, DEJU, ABBY, LENO, ORNL, GRSM, NOGP, TEAK, SOAP, TREE, WREF, NIWO, MLBS, MOAB, SJER, GUAN, PUUM, WOOD, HARV, DSNY, SERC, LAJA, BLAN, RMNP, TALL, CPER, TOOL, HEAL, BART, ONAQ, DELA, OSBS, UNDE, KONA, BARR, SRER, JERC"
+            "description": "UKFS, STER, OAES, DCFS, STEI, JORN, BONA, CLBJ, KONZ, SCBI, YELL, DEJU, MOAB, SJER, GUAN, PUUM, WOOD, HARV, DSNY, SERC, LAJA, BLAN, ABBY, LENO, ORNL, GRSM, NOGP, TEAK, SOAP, TREE, WREF, NIWO, MLBS, RMNP, TALL, CPER, TOOL, HEAL, BART, ONAQ, DELA, OSBS, UNDE, KONA, BARR, SRER, JERC"
         },
         "4": {
             "type": "application/x-parquet",

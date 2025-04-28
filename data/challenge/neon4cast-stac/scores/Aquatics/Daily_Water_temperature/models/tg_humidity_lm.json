@@ -59,6 +59,38 @@
                 68.6307
             ],
             [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -111.7979,
+                40.7839
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
+                -119.0274,
+                36.9559
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -105.9154,
+                39.8914
+            ],
+            [
+                -121.9338,
+                45.7908
+            ],
+            [
                 -111.5081,
                 33.751
             ],
@@ -117,44 +149,12 @@
             [
                 -87.4077,
                 32.9604
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -111.7979,
-                40.7839
-            ],
-            [
-                -88.1589,
-                31.8534
-            ],
-            [
-                -119.0274,
-                36.9559
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -121.9338,
-                45.7908
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: LEWI, SUGG, PRIN, CARI, MCDI, ARIK, OKSR, COMO, BARC, GUIL, TOOK, SYCA, BLUE, WALK, BLDE, CRAM, LECO, BIGC, MCRA, BLWA, FLNT, CUPE, KING, POSE, HOPB, MAYF, LIRO, REDB, TOMB, TECR, PRLA, PRPO, WLOU, MART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_humidity_lm model. Information for the model is provided as follows: The tg_humidity_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity.\n                                    The model predicts this variable at the following sites: LEWI, SUGG, PRIN, CARI, MCDI, ARIK, OKSR, COMO, BARC, GUIL, TOOK, LIRO, REDB, TOMB, TECR, PRLA, PRPO, WLOU, MART, SYCA, BLUE, WALK, BLDE, CRAM, LECO, BIGC, MCRA, BLWA, FLNT, CUPE, KING, POSE, HOPB, MAYF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-02 11:33:49",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -198,6 +198,14 @@
             "BARC",
             "GUIL",
             "TOOK",
+            "LIRO",
+            "REDB",
+            "TOMB",
+            "TECR",
+            "PRLA",
+            "PRPO",
+            "WLOU",
+            "MART",
             "SYCA",
             "BLUE",
             "WALK",
@@ -212,15 +220,7 @@
             "KING",
             "POSE",
             "HOPB",
-            "MAYF",
-            "LIRO",
-            "REDB",
-            "TOMB",
-            "TECR",
-            "PRLA",
-            "PRPO",
-            "WLOU",
-            "MART"
+            "MAYF"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LEWI, SUGG, PRIN, CARI, MCDI, ARIK, OKSR, COMO, BARC, GUIL, TOOK, SYCA, BLUE, WALK, BLDE, CRAM, LECO, BIGC, MCRA, BLWA, FLNT, CUPE, KING, POSE, HOPB, MAYF, LIRO, REDB, TOMB, TECR, PRLA, PRPO, WLOU, MART"
+            "description": "LEWI, SUGG, PRIN, CARI, MCDI, ARIK, OKSR, COMO, BARC, GUIL, TOOK, LIRO, REDB, TOMB, TECR, PRLA, PRPO, WLOU, MART, SYCA, BLUE, WALK, BLDE, CRAM, LECO, BIGC, MCRA, BLWA, FLNT, CUPE, KING, POSE, HOPB, MAYF"
         },
         "4": {
             "type": "application/x-parquet",

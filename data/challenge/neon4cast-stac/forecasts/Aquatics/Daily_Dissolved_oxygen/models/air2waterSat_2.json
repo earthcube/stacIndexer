@@ -91,6 +91,34 @@
                 39.1051
             ],
             [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
                 -105.9154,
                 39.8914
             ],
@@ -121,40 +149,12 @@
             [
                 -121.9338,
                 45.7908
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -96.6242,
-                34.4442
             ]
         ]
     },
     "properties": {
         "title": "air2waterSat_2",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: GUIL, BARC, PRIN, ARIK, OKSR, COMO, SUGG, TOOK, MCDI, CARI, LEWI, CUPE, BLWA, MCRA, FLNT, HOPB, POSE, MAYF, KING, WLOU, TECR, PRLA, LIRO, PRPO, REDB, TOMB, MART, WALK, LECO, BIGC, CRAM, BLDE, SYCA, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: GUIL, BARC, PRIN, ARIK, OKSR, COMO, SUGG, TOOK, MCDI, CARI, LEWI, CUPE, BLWA, MCRA, FLNT, HOPB, POSE, MAYF, KING, WALK, LECO, BIGC, CRAM, BLDE, SYCA, BLUE, WLOU, TECR, PRLA, LIRO, PRPO, REDB, TOMB, MART.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-01",
         "updated": "2024-02-02 05:06:19",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -206,6 +206,13 @@
             "POSE",
             "MAYF",
             "KING",
+            "WALK",
+            "LECO",
+            "BIGC",
+            "CRAM",
+            "BLDE",
+            "SYCA",
+            "BLUE",
             "WLOU",
             "TECR",
             "PRLA",
@@ -213,14 +220,7 @@
             "PRPO",
             "REDB",
             "TOMB",
-            "MART",
-            "WALK",
-            "LECO",
-            "BIGC",
-            "CRAM",
-            "BLDE",
-            "SYCA",
-            "BLUE"
+            "MART"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "GUIL, BARC, PRIN, ARIK, OKSR, COMO, SUGG, TOOK, MCDI, CARI, LEWI, CUPE, BLWA, MCRA, FLNT, HOPB, POSE, MAYF, KING, WLOU, TECR, PRLA, LIRO, PRPO, REDB, TOMB, MART, WALK, LECO, BIGC, CRAM, BLDE, SYCA, BLUE"
+            "description": "GUIL, BARC, PRIN, ARIK, OKSR, COMO, SUGG, TOOK, MCDI, CARI, LEWI, CUPE, BLWA, MCRA, FLNT, HOPB, POSE, MAYF, KING, WALK, LECO, BIGC, CRAM, BLDE, SYCA, BLUE, WLOU, TECR, PRLA, LIRO, PRPO, REDB, TOMB, MART"
         },
         "4": {
             "type": "application/x-parquet",
