@@ -15,26 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
                 -87.7982,
                 32.5415
             ],
@@ -45,6 +25,30 @@
             [
                 -78.1473,
                 38.8943
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -96.443,
+                38.9459
             ],
             [
                 -88.1589,
@@ -61,16 +65,12 @@
             [
                 -99.2531,
                 47.1298
-            ],
-            [
-                -89.4737,
-                46.2097
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, MCDI, COMO, BLWA, FLNT, POSE, TOMB, PRLA, LIRO, PRPO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLWA, FLNT, POSE, CRAM, BARC, SUGG, TOOK, COMO, MCDI, TOMB, PRLA, LIRO, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2022-06-01T00:00:00Z",
@@ -103,19 +103,19 @@
             "chla",
             "Daily",
             "P1D",
-            "TOOK",
-            "BARC",
-            "SUGG",
-            "MCDI",
-            "COMO",
             "BLWA",
             "FLNT",
             "POSE",
+            "CRAM",
+            "BARC",
+            "SUGG",
+            "TOOK",
+            "COMO",
+            "MCDI",
             "TOMB",
             "PRLA",
             "LIRO",
-            "PRPO",
-            "CRAM"
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -232,7 +232,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "TOOK, BARC, SUGG, MCDI, COMO, BLWA, FLNT, POSE, TOMB, PRLA, LIRO, PRPO, CRAM"
+            "description": "BLWA, FLNT, POSE, CRAM, BARC, SUGG, TOOK, COMO, MCDI, TOMB, PRLA, LIRO, PRPO"
         },
         "4": {
             "type": "application/x-parquet",

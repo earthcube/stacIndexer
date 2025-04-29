@@ -15,20 +15,68 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.5871,
-                44.9501
+                -72.3295,
+                42.4719
             ],
             [
-                -89.4737,
-                46.2097
+                -96.6038,
+                39.1051
             ],
             [
-                -96.6242,
-                34.4442
+                -84.4374,
+                31.1854
             ],
             [
-                -84.2793,
-                35.9574
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -102.4471,
+                39.7582
             ],
             [
                 -83.5038,
@@ -39,40 +87,28 @@
                 37.0597
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
                 -111.5081,
                 33.751
             ],
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
+                -89.7048,
+                45.9983
             ],
             [
                 -119.0274,
@@ -87,58 +123,22 @@
                 40.7839
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -105.9154,
                 39.8914
-            ],
-            [
-                -88.1589,
-                31.8534
             ],
             [
                 -99.1139,
                 47.1591
             ],
             [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -102.4471,
-                39.7582
+                -88.1589,
+                31.8534
             ]
         ]
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: BLDE, CRAM, BLUE, WALK, LECO, BIGC, SYCA, FLNT, BLWA, MAYF, POSE, MCRA, CUPE, HOPB, KING, TECR, PRPO, REDB, LIRO, WLOU, TOMB, PRLA, LEWI, BARC, PRIN, GUIL, COMO, CARI, SUGG, ARIK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: HOPB, KING, FLNT, MCRA, MAYF, CUPE, POSE, BLWA, PRIN, SUGG, BARC, LEWI, GUIL, CARI, COMO, ARIK, LECO, BIGC, CRAM, WALK, BLDE, BLUE, SYCA, LIRO, TECR, PRPO, REDB, WLOU, PRLA, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -171,36 +171,36 @@
             "temperature",
             "Daily",
             "P1D",
-            "BLDE",
-            "CRAM",
-            "BLUE",
-            "WALK",
-            "LECO",
-            "BIGC",
-            "SYCA",
-            "FLNT",
-            "BLWA",
-            "MAYF",
-            "POSE",
-            "MCRA",
-            "CUPE",
             "HOPB",
             "KING",
+            "FLNT",
+            "MCRA",
+            "MAYF",
+            "CUPE",
+            "POSE",
+            "BLWA",
+            "PRIN",
+            "SUGG",
+            "BARC",
+            "LEWI",
+            "GUIL",
+            "CARI",
+            "COMO",
+            "ARIK",
+            "LECO",
+            "BIGC",
+            "CRAM",
+            "WALK",
+            "BLDE",
+            "BLUE",
+            "SYCA",
+            "LIRO",
             "TECR",
             "PRPO",
             "REDB",
-            "LIRO",
             "WLOU",
-            "TOMB",
             "PRLA",
-            "LEWI",
-            "BARC",
-            "PRIN",
-            "GUIL",
-            "COMO",
-            "CARI",
-            "SUGG",
-            "ARIK"
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -317,7 +317,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BLDE, CRAM, BLUE, WALK, LECO, BIGC, SYCA, FLNT, BLWA, MAYF, POSE, MCRA, CUPE, HOPB, KING, TECR, PRPO, REDB, LIRO, WLOU, TOMB, PRLA, LEWI, BARC, PRIN, GUIL, COMO, CARI, SUGG, ARIK"
+            "description": "HOPB, KING, FLNT, MCRA, MAYF, CUPE, POSE, BLWA, PRIN, SUGG, BARC, LEWI, GUIL, CARI, COMO, ARIK, LECO, BIGC, CRAM, WALK, BLDE, BLUE, SYCA, LIRO, TECR, PRPO, REDB, WLOU, PRLA, TOMB"
         },
         "4": {
             "type": "application/x-parquet",

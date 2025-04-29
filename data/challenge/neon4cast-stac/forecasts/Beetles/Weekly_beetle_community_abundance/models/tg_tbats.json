@@ -55,6 +55,50 @@
                 37.1088
             ],
             [
+                -83.5019,
+                35.689
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
                 -145.7514,
                 63.8811
             ],
@@ -157,56 +201,12 @@
             [
                 -105.546,
                 40.2759
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -121.9519,
-                45.8205
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LAJA, DSNY, WOOD, HARV, BLAN, SERC, GUAN, MOAB, PUUM, SJER, DEJU, STER, SCBI, OAES, DCFS, CLBJ, KONZ, UKFS, YELL, JORN, STEI, BONA, TOOL, OSBS, UNDE, TALL, HEAL, BART, KONA, CPER, SRER, BARR, DELA, ONAQ, JERC, RMNP, GRSM, ABBY, TREE, ORNL, SOAP, TEAK, NOGP, NIWO, LENO, MLBS, WREF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LAJA, DSNY, WOOD, HARV, BLAN, SERC, GUAN, MOAB, PUUM, SJER, GRSM, ABBY, TREE, ORNL, SOAP, TEAK, NOGP, NIWO, LENO, MLBS, WREF, DEJU, STER, SCBI, OAES, DCFS, CLBJ, KONZ, UKFS, YELL, JORN, STEI, BONA, TOOL, OSBS, UNDE, TALL, HEAL, BART, KONA, CPER, SRER, BARR, DELA, ONAQ, JERC, RMNP.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:03:11",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -249,6 +249,17 @@
             "MOAB",
             "PUUM",
             "SJER",
+            "GRSM",
+            "ABBY",
+            "TREE",
+            "ORNL",
+            "SOAP",
+            "TEAK",
+            "NOGP",
+            "NIWO",
+            "LENO",
+            "MLBS",
+            "WREF",
             "DEJU",
             "STER",
             "SCBI",
@@ -274,18 +285,7 @@
             "DELA",
             "ONAQ",
             "JERC",
-            "RMNP",
-            "GRSM",
-            "ABBY",
-            "TREE",
-            "ORNL",
-            "SOAP",
-            "TEAK",
-            "NOGP",
-            "NIWO",
-            "LENO",
-            "MLBS",
-            "WREF"
+            "RMNP"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LAJA, DSNY, WOOD, HARV, BLAN, SERC, GUAN, MOAB, PUUM, SJER, DEJU, STER, SCBI, OAES, DCFS, CLBJ, KONZ, UKFS, YELL, JORN, STEI, BONA, TOOL, OSBS, UNDE, TALL, HEAL, BART, KONA, CPER, SRER, BARR, DELA, ONAQ, JERC, RMNP, GRSM, ABBY, TREE, ORNL, SOAP, TEAK, NOGP, NIWO, LENO, MLBS, WREF"
+            "description": "LAJA, DSNY, WOOD, HARV, BLAN, SERC, GUAN, MOAB, PUUM, SJER, GRSM, ABBY, TREE, ORNL, SOAP, TEAK, NOGP, NIWO, LENO, MLBS, WREF, DEJU, STER, SCBI, OAES, DCFS, CLBJ, KONZ, UKFS, YELL, JORN, STEI, BONA, TOOL, OSBS, UNDE, TALL, HEAL, BART, KONA, CPER, SRER, BARR, DELA, ONAQ, JERC, RMNP"
         },
         "4": {
             "type": "application/x-parquet",

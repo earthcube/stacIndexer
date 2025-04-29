@@ -15,8 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -76.56,
-                38.8901
+                -84.2826,
+                35.9641
             ],
             [
                 -96.5631,
@@ -31,18 +31,18 @@
                 39.0404
             ],
             [
-                -87.3933,
-                32.9505
+                -76.56,
+                38.8901
             ],
             [
-                -84.2826,
-                35.9641
+                -87.3933,
+                32.9505
             ]
         ]
     },
     "properties": {
         "title": "NJC_Ticks",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the NJC_Ticks model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SERC, KONZ, SCBI, UKFS, TALL, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the NJC_Ticks model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: ORNL, KONZ, SCBI, UKFS, SERC, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2019-10-06",
         "updated": null,
         "start_datetime": "2019-02-25T00:00:00Z",
@@ -75,12 +75,12 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "SERC",
+            "ORNL",
             "KONZ",
             "SCBI",
             "UKFS",
-            "TALL",
-            "ORNL"
+            "SERC",
+            "TALL"
         ],
         "table:columns": [
             {
@@ -237,7 +237,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SERC, KONZ, SCBI, UKFS, TALL, ORNL"
+            "description": "ORNL, KONZ, SCBI, UKFS, SERC, TALL"
         },
         "4": {
             "type": "application/x-parquet",

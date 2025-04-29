@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -83.5019,
+                35.689
+            ],
+            [
                 -72.1727,
                 42.5369
             ],
@@ -35,10 +39,6 @@
                 39.0404
             ],
             [
-                -83.5019,
-                35.689
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
@@ -50,7 +50,7 @@
     },
     "properties": {
         "title": "CSP_Gwave",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the CSP_Gwave model. Information for the model is provided as follows: The CSP-Gwave (\u201cgreenwave\u201d) model represented seasonality using a double logistic\nfunction. Within a single year (growing season), the function consisted of two primary components: one curve for greenup, and another for \u201cbrown-down\u201d. It used a corrected sum of the curves for each year to obtain a single, continuously differentiable curve spanning the time period of interest.\n                                    The model predicts this variable at the following sites: HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the CSP_Gwave model. Information for the model is provided as follows: The CSP-Gwave (\u201cgreenwave\u201d) model represented seasonality using a double logistic\nfunction. Within a single year (growing season), the function consisted of two primary components: one curve for greenup, and another for \u201cbrown-down\u201d. It used a corrected sum of the curves for each year to obtain a single, continuously differentiable curve spanning the time period of interest.\n                                    The model predicts this variable at the following sites: GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-05-21",
         "updated": null,
         "start_datetime": "2021-04-08T00:00:00Z",
@@ -83,12 +83,12 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "GRSM",
             "HARV",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "GRSM",
             "BART",
             "DELA"
         ],
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA"
+            "description": "GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",

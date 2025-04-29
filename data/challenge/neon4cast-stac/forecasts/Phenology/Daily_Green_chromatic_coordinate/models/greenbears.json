@@ -19,12 +19,8 @@
                 42.5369
             ],
             [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -87.8039,
-                32.5417
+                -83.5019,
+                35.689
             ],
             [
                 -97.57,
@@ -43,14 +39,18 @@
                 39.0404
             ],
             [
-                -83.5019,
-                35.689
+                -71.2874,
+                44.0639
+            ],
+            [
+                -87.8039,
+                32.5417
             ]
         ]
     },
     "properties": {
         "title": "greenbears",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: HARV, BART, DELA, CLBJ, SCBI, STEI, UKFS, GRSM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: HARV, GRSM, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-03-01",
         "updated": null,
         "start_datetime": "2021-02-22T00:00:00Z",
@@ -84,13 +84,13 @@
             "Daily",
             "P1D",
             "HARV",
-            "BART",
-            "DELA",
+            "GRSM",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "GRSM"
+            "BART",
+            "DELA"
         ],
         "table:columns": [
             {
@@ -207,7 +207,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, BART, DELA, CLBJ, SCBI, STEI, UKFS, GRSM"
+            "description": "HARV, GRSM, CLBJ, SCBI, STEI, UKFS, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",

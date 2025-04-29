@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -97.57,
+                33.4012
+            ],
+            [
                 -78.1395,
                 38.8929
             ],
@@ -27,30 +31,26 @@
                 39.0404
             ],
             [
-                -97.57,
-                33.4012
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -83.5019,
+                35.689
             ]
         ]
     },
     "properties": {
         "title": "UCSC_P_EDM",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SCBI, STEI, UKFS, CLBJ, GRSM, HARV, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, BART, DELA, HARV, GRSM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-10-19",
         "updated": null,
         "start_datetime": "2020-04-27T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "CLBJ",
-            "GRSM",
-            "HARV",
             "BART",
-            "DELA"
+            "DELA",
+            "HARV",
+            "GRSM"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SCBI, STEI, UKFS, CLBJ, GRSM, HARV, BART, DELA"
+            "description": "CLBJ, SCBI, STEI, UKFS, BART, DELA, HARV, GRSM"
         },
         "4": {
             "type": "application/x-parquet",

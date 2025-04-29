@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
@@ -57,38 +89,6 @@
             [
                 -82.0084,
                 29.676
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6038,
-                39.1051
             ],
             [
                 -96.6242,
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "air2waterSat_2",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: SUGG, MCDI, PRIN, CARI, COMO, OKSR, LEWI, ARIK, TOOK, GUIL, BARC, BLWA, MAYF, HOPB, POSE, CUPE, MCRA, FLNT, KING, BLUE, WALK, BLDE, LECO, SYCA, BIGC, CRAM, REDB, TECR, TOMB, PRLA, WLOU, MART, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the air2waterSat_2 model. Information for the model is provided as follows: The air2water model is a linear model fit using the function lm() in R and uses air temperature as\na covariate.\n                                    The model predicts this variable at the following sites: BLWA, MAYF, HOPB, POSE, CUPE, MCRA, FLNT, KING, SUGG, MCDI, PRIN, CARI, COMO, OKSR, LEWI, ARIK, TOOK, GUIL, BARC, BLUE, WALK, BLDE, LECO, SYCA, BIGC, CRAM, REDB, TECR, TOMB, PRLA, WLOU, MART, LIRO, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-01",
         "updated": "2024-02-02 05:06:19",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "BLWA",
+            "MAYF",
+            "HOPB",
+            "POSE",
+            "CUPE",
+            "MCRA",
+            "FLNT",
+            "KING",
             "SUGG",
             "MCDI",
             "PRIN",
@@ -198,14 +206,6 @@
             "TOOK",
             "GUIL",
             "BARC",
-            "BLWA",
-            "MAYF",
-            "HOPB",
-            "POSE",
-            "CUPE",
-            "MCRA",
-            "FLNT",
-            "KING",
             "BLUE",
             "WALK",
             "BLDE",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SUGG, MCDI, PRIN, CARI, COMO, OKSR, LEWI, ARIK, TOOK, GUIL, BARC, BLWA, MAYF, HOPB, POSE, CUPE, MCRA, FLNT, KING, BLUE, WALK, BLDE, LECO, SYCA, BIGC, CRAM, REDB, TECR, TOMB, PRLA, WLOU, MART, LIRO, PRPO"
+            "description": "BLWA, MAYF, HOPB, POSE, CUPE, MCRA, FLNT, KING, SUGG, MCDI, PRIN, CARI, COMO, OKSR, LEWI, ARIK, TOOK, GUIL, BARC, BLUE, WALK, BLDE, LECO, SYCA, BIGC, CRAM, REDB, TECR, TOMB, PRLA, WLOU, MART, LIRO, PRPO"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,90 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
                 -145.7514,
                 63.8811
             ],
@@ -145,6 +61,90 @@
             [
                 -103.0293,
                 40.4619
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -121.9519,
+                45.8205
             ],
             [
                 -112.4524,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: SOAP, LENO, ABBY, MLBS, TEAK, NIWO, TREE, NOGP, GRSM, ORNL, WREF, MOAB, SERC, PUUM, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, DEJU, SCBI, KONZ, YELL, STEI, CLBJ, UKFS, OAES, DCFS, BONA, JORN, STER, ONAQ, DELA, BARR, UNDE, JERC, OSBS, KONA, RMNP, TOOL, BART, CPER, SRER, TALL, HEAL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: DEJU, SCBI, KONZ, YELL, STEI, CLBJ, UKFS, OAES, DCFS, BONA, JORN, STER, MOAB, SERC, PUUM, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, SOAP, LENO, ABBY, MLBS, TEAK, NIWO, TREE, NOGP, GRSM, ORNL, WREF, ONAQ, DELA, BARR, UNDE, JERC, OSBS, KONA, RMNP, TOOL, BART, CPER, SRER, TALL, HEAL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-01-31",
         "updated": "2024-07-03 23:18:50",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,27 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "SOAP",
-            "LENO",
-            "ABBY",
-            "MLBS",
-            "TEAK",
-            "NIWO",
-            "TREE",
-            "NOGP",
-            "GRSM",
-            "ORNL",
-            "WREF",
-            "MOAB",
-            "SERC",
-            "PUUM",
-            "SJER",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "WOOD",
-            "LAJA",
             "DEJU",
             "SCBI",
             "KONZ",
@@ -272,6 +251,27 @@
             "BONA",
             "JORN",
             "STER",
+            "MOAB",
+            "SERC",
+            "PUUM",
+            "SJER",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "WOOD",
+            "LAJA",
+            "SOAP",
+            "LENO",
+            "ABBY",
+            "MLBS",
+            "TEAK",
+            "NIWO",
+            "TREE",
+            "NOGP",
+            "GRSM",
+            "ORNL",
+            "WREF",
             "ONAQ",
             "DELA",
             "BARR",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SOAP, LENO, ABBY, MLBS, TEAK, NIWO, TREE, NOGP, GRSM, ORNL, WREF, MOAB, SERC, PUUM, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, DEJU, SCBI, KONZ, YELL, STEI, CLBJ, UKFS, OAES, DCFS, BONA, JORN, STER, ONAQ, DELA, BARR, UNDE, JERC, OSBS, KONA, RMNP, TOOL, BART, CPER, SRER, TALL, HEAL"
+            "description": "DEJU, SCBI, KONZ, YELL, STEI, CLBJ, UKFS, OAES, DCFS, BONA, JORN, STER, MOAB, SERC, PUUM, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, SOAP, LENO, ABBY, MLBS, TEAK, NIWO, TREE, NOGP, GRSM, ORNL, WREF, ONAQ, DELA, BARR, UNDE, JERC, OSBS, KONA, RMNP, TOOL, BART, CPER, SRER, TALL, HEAL"
         },
         "4": {
             "type": "application/x-parquet",
