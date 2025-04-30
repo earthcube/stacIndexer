@@ -15,50 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
                 -111.5081,
                 33.751
             ],
@@ -67,12 +23,12 @@
                 35.6904
             ],
             [
-                -84.2793,
-                35.9574
-            ],
-            [
                 -110.5871,
                 44.9501
+            ],
+            [
+                -84.2793,
+                35.9574
             ],
             [
                 -96.6242,
@@ -87,8 +43,68 @@
                 46.2097
             ],
             [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -96.6038,
                 39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -87.7982,
@@ -99,36 +115,12 @@
                 44.2596
             ],
             [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
                 -78.1473,
                 38.8943
             ],
             [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -121.9338,
-                45.7908
-            ],
-            [
                 -99.1139,
                 47.1591
-            ],
-            [
-                -89.7048,
-                45.9983
             ],
             [
                 -111.7979,
@@ -137,6 +129,14 @@
             [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -121.9338,
+                45.7908
             ],
             [
                 -88.1589,
@@ -154,11 +154,11 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Water_temperature variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SUGG, MCDI, ARIK, COMO, LEWI, BARC, PRIN, CARI, GUIL, OKSR, TOOK, SYCA, LECO, WALK, BLDE, BLUE, BIGC, CRAM, KING, BLWA, MCRA, MAYF, HOPB, FLNT, POSE, CUPE, MART, PRLA, LIRO, REDB, PRPO, TOMB, WLOU, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-04-23",
-        "updated": "2025-04-23 22:04:03",
+        "description": "All scores for the Daily_Water_temperature variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SYCA, LECO, BLDE, WALK, BLUE, BIGC, CRAM, SUGG, MCDI, CARI, COMO, BARC, GUIL, PRIN, LEWI, ARIK, OKSR, TOOK, KING, CUPE, HOPB, MAYF, FLNT, BLWA, MCRA, POSE, PRLA, REDB, PRPO, LIRO, MART, TOMB, WLOU, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-04-26",
+        "updated": "2025-04-26 22:03:22",
         "start_datetime": "2021-05-01T00:00:00Z",
-        "end_datetime": "2025-04-24T00:00:00Z",
+        "end_datetime": "2025-04-27T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
@@ -187,37 +187,37 @@
             "temperature",
             "Daily",
             "P1D",
-            "SUGG",
-            "MCDI",
-            "ARIK",
-            "COMO",
-            "LEWI",
-            "BARC",
-            "PRIN",
-            "CARI",
-            "GUIL",
-            "OKSR",
-            "TOOK",
             "SYCA",
             "LECO",
-            "WALK",
             "BLDE",
+            "WALK",
             "BLUE",
             "BIGC",
             "CRAM",
+            "SUGG",
+            "MCDI",
+            "CARI",
+            "COMO",
+            "BARC",
+            "GUIL",
+            "PRIN",
+            "LEWI",
+            "ARIK",
+            "OKSR",
+            "TOOK",
             "KING",
+            "CUPE",
+            "HOPB",
+            "MAYF",
+            "FLNT",
             "BLWA",
             "MCRA",
-            "MAYF",
-            "HOPB",
-            "FLNT",
             "POSE",
-            "CUPE",
-            "MART",
             "PRLA",
-            "LIRO",
             "REDB",
             "PRPO",
+            "LIRO",
+            "MART",
             "TOMB",
             "WLOU",
             "TECR"
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SUGG, MCDI, ARIK, COMO, LEWI, BARC, PRIN, CARI, GUIL, OKSR, TOOK, SYCA, LECO, WALK, BLDE, BLUE, BIGC, CRAM, KING, BLWA, MCRA, MAYF, HOPB, FLNT, POSE, CUPE, MART, PRLA, LIRO, REDB, PRPO, TOMB, WLOU, TECR"
+            "description": "SYCA, LECO, BLDE, WALK, BLUE, BIGC, CRAM, SUGG, MCDI, CARI, COMO, BARC, GUIL, PRIN, LEWI, ARIK, OKSR, TOOK, KING, CUPE, HOPB, MAYF, FLNT, BLWA, MCRA, POSE, PRLA, REDB, PRPO, LIRO, MART, TOMB, WLOU, TECR"
         },
         "4": {
             "type": "application/x-parquet",

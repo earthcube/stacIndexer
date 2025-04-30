@@ -15,52 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -97.57,
-                33.4012
+                -76.56,
+                38.8901
             ],
             [
-                -99.1066,
-                47.1617
+                -78.0418,
+                39.0337
             ],
             [
-                -95.1921,
-                39.0404
+                -99.2413,
+                47.1282
             ],
             [
-                -96.5631,
-                39.1008
+                -155.3173,
+                19.5531
             ],
             [
-                -78.1395,
-                38.8929
+                -81.4362,
+                28.1251
             ],
             [
-                -106.8425,
-                32.5907
+                -119.7323,
+                37.1088
             ],
             [
-                -110.5391,
-                44.9535
+                -67.0769,
+                18.0213
             ],
             [
-                -147.5026,
-                65.154
+                -66.8687,
+                17.9696
             ],
             [
-                -89.5864,
-                45.5089
+                -72.1727,
+                42.5369
             ],
             [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -145.7514,
-                63.8811
+                -109.3883,
+                38.2483
             ],
             [
                 -84.2826,
@@ -105,46 +97,6 @@
             [
                 -105.5824,
                 40.0543
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -109.3883,
-                38.2483
             ],
             [
                 -87.8039,
@@ -201,12 +153,60 @@
             [
                 -105.546,
                 40.2759
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -145.7514,
+                63.8811
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: CLBJ, DCFS, UKFS, KONZ, SCBI, JORN, YELL, BONA, STEI, OAES, STER, DEJU, ORNL, TEAK, WREF, SOAP, MLBS, GRSM, ABBY, TREE, NOGP, LENO, NIWO, SERC, BLAN, WOOD, PUUM, DSNY, SJER, LAJA, GUAN, HARV, MOAB, DELA, KONA, BART, CPER, TOOL, SRER, BARR, TALL, HEAL, ONAQ, JERC, OSBS, UNDE, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: SERC, BLAN, WOOD, PUUM, DSNY, SJER, LAJA, GUAN, HARV, MOAB, ORNL, TEAK, WREF, SOAP, MLBS, GRSM, ABBY, TREE, NOGP, LENO, NIWO, DELA, KONA, BART, CPER, TOOL, SRER, BARR, TALL, HEAL, ONAQ, JERC, OSBS, UNDE, RMNP, CLBJ, DCFS, UKFS, KONZ, SCBI, JORN, YELL, BONA, STEI, OAES, STER, DEJU.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 18:03:27",
         "start_datetime": "2023-11-14T00:00:00Z",
@@ -239,18 +239,16 @@
             "nee",
             "Daily",
             "P1D",
-            "CLBJ",
-            "DCFS",
-            "UKFS",
-            "KONZ",
-            "SCBI",
-            "JORN",
-            "YELL",
-            "BONA",
-            "STEI",
-            "OAES",
-            "STER",
-            "DEJU",
+            "SERC",
+            "BLAN",
+            "WOOD",
+            "PUUM",
+            "DSNY",
+            "SJER",
+            "LAJA",
+            "GUAN",
+            "HARV",
+            "MOAB",
             "ORNL",
             "TEAK",
             "WREF",
@@ -262,16 +260,6 @@
             "NOGP",
             "LENO",
             "NIWO",
-            "SERC",
-            "BLAN",
-            "WOOD",
-            "PUUM",
-            "DSNY",
-            "SJER",
-            "LAJA",
-            "GUAN",
-            "HARV",
-            "MOAB",
             "DELA",
             "KONA",
             "BART",
@@ -285,7 +273,19 @@
             "JERC",
             "OSBS",
             "UNDE",
-            "RMNP"
+            "RMNP",
+            "CLBJ",
+            "DCFS",
+            "UKFS",
+            "KONZ",
+            "SCBI",
+            "JORN",
+            "YELL",
+            "BONA",
+            "STEI",
+            "OAES",
+            "STER",
+            "DEJU"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CLBJ, DCFS, UKFS, KONZ, SCBI, JORN, YELL, BONA, STEI, OAES, STER, DEJU, ORNL, TEAK, WREF, SOAP, MLBS, GRSM, ABBY, TREE, NOGP, LENO, NIWO, SERC, BLAN, WOOD, PUUM, DSNY, SJER, LAJA, GUAN, HARV, MOAB, DELA, KONA, BART, CPER, TOOL, SRER, BARR, TALL, HEAL, ONAQ, JERC, OSBS, UNDE, RMNP"
+            "description": "SERC, BLAN, WOOD, PUUM, DSNY, SJER, LAJA, GUAN, HARV, MOAB, ORNL, TEAK, WREF, SOAP, MLBS, GRSM, ABBY, TREE, NOGP, LENO, NIWO, DELA, KONA, BART, CPER, TOOL, SRER, BARR, TALL, HEAL, ONAQ, JERC, OSBS, UNDE, RMNP, CLBJ, DCFS, UKFS, KONZ, SCBI, JORN, YELL, BONA, STEI, OAES, STER, DEJU"
         },
         "4": {
             "type": "application/x-parquet",

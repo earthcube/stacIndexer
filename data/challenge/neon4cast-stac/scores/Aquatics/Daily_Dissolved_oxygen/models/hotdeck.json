@@ -15,20 +15,52 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.5871,
-                44.9501
+                -77.9832,
+                39.0956
             ],
             [
-                -119.2575,
-                37.0597
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -110.5871,
+                44.9501
             ],
             [
                 -89.4737,
                 46.2097
             ],
             [
-                -111.5081,
-                33.751
+                -119.2575,
+                37.0597
             ],
             [
                 -111.7979,
@@ -37,44 +69,12 @@
             [
                 -89.7048,
                 45.9983
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -97.7823,
-                33.3785
             ]
         ]
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: BLDE, BIGC, CRAM, SYCA, REDB, LIRO, MCRA, KING, POSE, MAYF, SUGG, LEWI, BARC, PRIN.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: LEWI, PRIN, SUGG, BARC, KING, MAYF, POSE, MCRA, SYCA, BLDE, CRAM, BIGC, REDB, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-04-05T00:00:00Z",
@@ -107,20 +107,20 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BLDE",
-            "BIGC",
-            "CRAM",
-            "SYCA",
-            "REDB",
-            "LIRO",
-            "MCRA",
-            "KING",
-            "POSE",
-            "MAYF",
-            "SUGG",
             "LEWI",
+            "PRIN",
+            "SUGG",
             "BARC",
-            "PRIN"
+            "KING",
+            "MAYF",
+            "POSE",
+            "MCRA",
+            "SYCA",
+            "BLDE",
+            "CRAM",
+            "BIGC",
+            "REDB",
+            "LIRO"
         ],
         "table:columns": [
             {
@@ -277,7 +277,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BLDE, BIGC, CRAM, SYCA, REDB, LIRO, MCRA, KING, POSE, MAYF, SUGG, LEWI, BARC, PRIN"
+            "description": "LEWI, PRIN, SUGG, BARC, KING, MAYF, POSE, MCRA, SYCA, BLDE, CRAM, BIGC, REDB, LIRO"
         },
         "4": {
             "type": "application/x-parquet",

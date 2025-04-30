@@ -15,16 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -149.6106,
-                68.6307
+                -89.4737,
+                46.2097
             ],
             [
                 -84.4374,
@@ -51,14 +43,22 @@
                 45.9983
             ],
             [
-                -89.4737,
-                46.2097
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, FLNT, BLWA, PRLA, TOMB, PRPO, LIRO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: CRAM, FLNT, BLWA, PRLA, TOMB, PRPO, LIRO, SUGG, BARC, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:32:49",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
-            "BARC",
-            "SUGG",
-            "TOOK",
+            "CRAM",
             "FLNT",
             "BLWA",
             "PRLA",
             "TOMB",
             "PRPO",
             "LIRO",
-            "CRAM"
+            "SUGG",
+            "BARC",
+            "TOOK"
         ],
         "table:columns": [
             {
@@ -257,7 +257,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BARC, SUGG, TOOK, FLNT, BLWA, PRLA, TOMB, PRPO, LIRO, CRAM"
+            "description": "CRAM, FLNT, BLWA, PRLA, TOMB, PRPO, LIRO, SUGG, BARC, TOOK"
         },
         "4": {
             "type": "application/x-parquet",
