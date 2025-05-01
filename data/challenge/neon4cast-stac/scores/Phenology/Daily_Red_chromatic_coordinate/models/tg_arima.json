@@ -59,6 +59,46 @@
                 45.8205
             ],
             [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
                 -97.57,
                 33.4012
             ],
@@ -105,46 +145,6 @@
             [
                 -147.5026,
                 65.154
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -109.3883,
-                38.2483
             ],
             [
                 -104.7456,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: ORNL, LENO, ABBY, NOGP, TEAK, GRSM, TREE, NIWO, SOAP, MLBS, WREF, CLBJ, KONZ, SCBI, YELL, STEI, UKFS, JORN, DEJU, STER, DCFS, OAES, BONA, HARV, LAJA, SERC, WOOD, GUAN, SJER, PUUM, BLAN, DSNY, MOAB, CPER, SRER, BARR, KONA, RMNP, OSBS, HEAL, TOOL, JERC, TALL, ONAQ, UNDE, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: ORNL, LENO, ABBY, NOGP, TEAK, GRSM, TREE, NIWO, SOAP, MLBS, WREF, HARV, LAJA, SERC, WOOD, GUAN, SJER, PUUM, BLAN, DSNY, MOAB, CLBJ, KONZ, SCBI, YELL, STEI, UKFS, JORN, DEJU, STER, DCFS, OAES, BONA, CPER, SRER, BARR, KONA, RMNP, OSBS, HEAL, TOOL, JERC, TALL, ONAQ, UNDE, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:53:57",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -250,6 +250,16 @@
             "SOAP",
             "MLBS",
             "WREF",
+            "HARV",
+            "LAJA",
+            "SERC",
+            "WOOD",
+            "GUAN",
+            "SJER",
+            "PUUM",
+            "BLAN",
+            "DSNY",
+            "MOAB",
             "CLBJ",
             "KONZ",
             "SCBI",
@@ -262,16 +272,6 @@
             "DCFS",
             "OAES",
             "BONA",
-            "HARV",
-            "LAJA",
-            "SERC",
-            "WOOD",
-            "GUAN",
-            "SJER",
-            "PUUM",
-            "BLAN",
-            "DSNY",
-            "MOAB",
             "CPER",
             "SRER",
             "BARR",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "ORNL, LENO, ABBY, NOGP, TEAK, GRSM, TREE, NIWO, SOAP, MLBS, WREF, CLBJ, KONZ, SCBI, YELL, STEI, UKFS, JORN, DEJU, STER, DCFS, OAES, BONA, HARV, LAJA, SERC, WOOD, GUAN, SJER, PUUM, BLAN, DSNY, MOAB, CPER, SRER, BARR, KONA, RMNP, OSBS, HEAL, TOOL, JERC, TALL, ONAQ, UNDE, BART, DELA"
+            "description": "ORNL, LENO, ABBY, NOGP, TEAK, GRSM, TREE, NIWO, SOAP, MLBS, WREF, HARV, LAJA, SERC, WOOD, GUAN, SJER, PUUM, BLAN, DSNY, MOAB, CLBJ, KONZ, SCBI, YELL, STEI, UKFS, JORN, DEJU, STER, DCFS, OAES, BONA, CPER, SRER, BARR, KONA, RMNP, OSBS, HEAL, TOOL, JERC, TALL, ONAQ, UNDE, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",

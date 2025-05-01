@@ -15,28 +15,28 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
+                -82.0084,
+                29.676
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
-                -82.0084,
-                29.676
-            ],
-            [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -89.4737,
@@ -46,11 +46,11 @@
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, SUGG, BARC, TOOK, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-04-26",
-        "updated": "2025-04-26 14:03:45",
+        "description": "All scores for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, LIRO, PRPO, PRLA, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-04-27",
+        "updated": "2025-04-27 14:03:27",
         "start_datetime": "2024-02-29T00:00:00Z",
-        "end_datetime": "2025-04-27T00:00:00Z",
+        "end_datetime": "2025-04-28T00:00:00Z",
         "providers": [
             {
                 "url": null,
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "LIRO",
-            "PRLA",
-            "PRPO",
-            "SUGG",
             "BARC",
+            "SUGG",
             "TOOK",
+            "LIRO",
+            "PRPO",
+            "PRLA",
             "CRAM"
         ],
         "table:columns": [
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LIRO, PRLA, PRPO, SUGG, BARC, TOOK, CRAM"
+            "description": "BARC, SUGG, TOOK, LIRO, PRPO, PRLA, CRAM"
         },
         "4": {
             "type": "application/x-parquet",
