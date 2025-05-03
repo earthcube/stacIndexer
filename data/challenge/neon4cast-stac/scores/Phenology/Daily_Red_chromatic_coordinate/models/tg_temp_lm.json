@@ -59,6 +59,54 @@
                 45.4937
             ],
             [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
                 -81.4362,
                 28.1251
             ],
@@ -153,60 +201,12 @@
             [
                 -71.2874,
                 44.0639
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -99.0588,
-                35.4106
             ]
         ]
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: ORNL, WREF, ABBY, LENO, MLBS, NOGP, GRSM, NIWO, SOAP, TEAK, TREE, DSNY, GUAN, MOAB, PUUM, SJER, HARV, LAJA, SERC, WOOD, BLAN, OSBS, TALL, SRER, RMNP, KONA, DELA, ONAQ, BARR, HEAL, TOOL, JERC, UNDE, CPER, BART, KONZ, UKFS, JORN, BONA, STER, SCBI, DEJU, STEI, YELL, CLBJ, DCFS, OAES.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: ORNL, WREF, ABBY, LENO, MLBS, NOGP, GRSM, NIWO, SOAP, TEAK, TREE, KONZ, UKFS, JORN, BONA, STER, SCBI, DEJU, STEI, YELL, CLBJ, DCFS, OAES, DSNY, GUAN, MOAB, PUUM, SJER, HARV, LAJA, SERC, WOOD, BLAN, OSBS, TALL, SRER, RMNP, KONA, DELA, ONAQ, BARR, HEAL, TOOL, JERC, UNDE, CPER, BART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:59:23",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -250,6 +250,18 @@
             "SOAP",
             "TEAK",
             "TREE",
+            "KONZ",
+            "UKFS",
+            "JORN",
+            "BONA",
+            "STER",
+            "SCBI",
+            "DEJU",
+            "STEI",
+            "YELL",
+            "CLBJ",
+            "DCFS",
+            "OAES",
             "DSNY",
             "GUAN",
             "MOAB",
@@ -273,19 +285,7 @@
             "JERC",
             "UNDE",
             "CPER",
-            "BART",
-            "KONZ",
-            "UKFS",
-            "JORN",
-            "BONA",
-            "STER",
-            "SCBI",
-            "DEJU",
-            "STEI",
-            "YELL",
-            "CLBJ",
-            "DCFS",
-            "OAES"
+            "BART"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "ORNL, WREF, ABBY, LENO, MLBS, NOGP, GRSM, NIWO, SOAP, TEAK, TREE, DSNY, GUAN, MOAB, PUUM, SJER, HARV, LAJA, SERC, WOOD, BLAN, OSBS, TALL, SRER, RMNP, KONA, DELA, ONAQ, BARR, HEAL, TOOL, JERC, UNDE, CPER, BART, KONZ, UKFS, JORN, BONA, STER, SCBI, DEJU, STEI, YELL, CLBJ, DCFS, OAES"
+            "description": "ORNL, WREF, ABBY, LENO, MLBS, NOGP, GRSM, NIWO, SOAP, TEAK, TREE, KONZ, UKFS, JORN, BONA, STER, SCBI, DEJU, STEI, YELL, CLBJ, DCFS, OAES, DSNY, GUAN, MOAB, PUUM, SJER, HARV, LAJA, SERC, WOOD, BLAN, OSBS, TALL, SRER, RMNP, KONA, DELA, ONAQ, BARR, HEAL, TOOL, JERC, UNDE, CPER, BART"
         },
         "4": {
             "type": "application/x-parquet",

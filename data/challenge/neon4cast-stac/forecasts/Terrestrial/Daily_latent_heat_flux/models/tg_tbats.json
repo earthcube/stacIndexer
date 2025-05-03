@@ -15,52 +15,44 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -147.5026,
-                65.154
+                -72.1727,
+                42.5369
             ],
             [
-                -110.5391,
-                44.9535
+                -119.7323,
+                37.1088
             ],
             [
-                -95.1921,
-                39.0404
+                -67.0769,
+                18.0213
             ],
             [
-                -145.7514,
-                63.8811
+                -78.0418,
+                39.0337
             ],
             [
-                -97.57,
-                33.4012
+                -99.2413,
+                47.1282
             ],
             [
-                -106.8425,
-                32.5907
+                -155.3173,
+                19.5531
             ],
             [
-                -96.5631,
-                39.1008
+                -66.8687,
+                17.9696
             ],
             [
-                -78.1395,
-                38.8929
+                -76.56,
+                38.8901
             ],
             [
-                -99.1066,
-                47.1617
+                -109.3883,
+                38.2483
             ],
             [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -99.0588,
-                35.4106
+                -81.4362,
+                28.1251
             ],
             [
                 -84.2826,
@@ -107,44 +99,52 @@
                 45.7624
             ],
             [
-                -72.1727,
-                42.5369
+                -147.5026,
+                65.154
             ],
             [
-                -119.7323,
-                37.1088
+                -110.5391,
+                44.9535
             ],
             [
-                -67.0769,
-                18.0213
+                -95.1921,
+                39.0404
             ],
             [
-                -78.0418,
-                39.0337
+                -145.7514,
+                63.8811
             ],
             [
-                -99.2413,
-                47.1282
+                -97.57,
+                33.4012
             ],
             [
-                -155.3173,
-                19.5531
+                -106.8425,
+                32.5907
             ],
             [
-                -66.8687,
-                17.9696
+                -96.5631,
+                39.1008
             ],
             [
-                -76.56,
-                38.8901
+                -78.1395,
+                38.8929
             ],
             [
-                -109.3883,
-                38.2483
+                -99.1066,
+                47.1617
             ],
             [
-                -81.4362,
-                28.1251
+                -103.0293,
+                40.4619
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -99.0588,
+                35.4106
             ],
             [
                 -81.9934,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BONA, YELL, UKFS, DEJU, CLBJ, JORN, KONZ, SCBI, DCFS, STER, STEI, OAES, ORNL, TEAK, LENO, NIWO, SOAP, TREE, WREF, MLBS, NOGP, GRSM, ABBY, HARV, SJER, LAJA, BLAN, WOOD, PUUM, GUAN, SERC, MOAB, DSNY, OSBS, BART, HEAL, KONA, UNDE, TOOL, BARR, CPER, RMNP, DELA, JERC, TALL, SRER, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: HARV, SJER, LAJA, BLAN, WOOD, PUUM, GUAN, SERC, MOAB, DSNY, ORNL, TEAK, LENO, NIWO, SOAP, TREE, WREF, MLBS, NOGP, GRSM, ABBY, BONA, YELL, UKFS, DEJU, CLBJ, JORN, KONZ, SCBI, DCFS, STER, STEI, OAES, OSBS, BART, HEAL, KONA, UNDE, TOOL, BARR, CPER, RMNP, DELA, JERC, TALL, SRER, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,27 @@
             "le",
             "Daily",
             "P1D",
+            "HARV",
+            "SJER",
+            "LAJA",
+            "BLAN",
+            "WOOD",
+            "PUUM",
+            "GUAN",
+            "SERC",
+            "MOAB",
+            "DSNY",
+            "ORNL",
+            "TEAK",
+            "LENO",
+            "NIWO",
+            "SOAP",
+            "TREE",
+            "WREF",
+            "MLBS",
+            "NOGP",
+            "GRSM",
+            "ABBY",
             "BONA",
             "YELL",
             "UKFS",
@@ -251,27 +272,6 @@
             "STER",
             "STEI",
             "OAES",
-            "ORNL",
-            "TEAK",
-            "LENO",
-            "NIWO",
-            "SOAP",
-            "TREE",
-            "WREF",
-            "MLBS",
-            "NOGP",
-            "GRSM",
-            "ABBY",
-            "HARV",
-            "SJER",
-            "LAJA",
-            "BLAN",
-            "WOOD",
-            "PUUM",
-            "GUAN",
-            "SERC",
-            "MOAB",
-            "DSNY",
             "OSBS",
             "BART",
             "HEAL",
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BONA, YELL, UKFS, DEJU, CLBJ, JORN, KONZ, SCBI, DCFS, STER, STEI, OAES, ORNL, TEAK, LENO, NIWO, SOAP, TREE, WREF, MLBS, NOGP, GRSM, ABBY, HARV, SJER, LAJA, BLAN, WOOD, PUUM, GUAN, SERC, MOAB, DSNY, OSBS, BART, HEAL, KONA, UNDE, TOOL, BARR, CPER, RMNP, DELA, JERC, TALL, SRER, ONAQ"
+            "description": "HARV, SJER, LAJA, BLAN, WOOD, PUUM, GUAN, SERC, MOAB, DSNY, ORNL, TEAK, LENO, NIWO, SOAP, TREE, WREF, MLBS, NOGP, GRSM, ABBY, BONA, YELL, UKFS, DEJU, CLBJ, JORN, KONZ, SCBI, DCFS, STER, STEI, OAES, OSBS, BART, HEAL, KONA, UNDE, TOOL, BARR, CPER, RMNP, DELA, JERC, TALL, SRER, ONAQ"
         },
         "4": {
             "type": "application/x-parquet",

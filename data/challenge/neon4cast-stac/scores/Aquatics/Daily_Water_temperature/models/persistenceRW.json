@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -83.5038,
+                35.6904
+            ],
+            [
                 -111.5081,
                 33.751
             ],
@@ -27,10 +31,6 @@
                 44.9501
             ],
             [
-                -83.5038,
-                35.6904
-            ],
-            [
                 -84.2793,
                 35.9574
             ],
@@ -41,6 +41,14 @@
             [
                 -89.4737,
                 46.2097
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
             ],
             [
                 -87.4077,
@@ -67,16 +75,24 @@
                 31.1854
             ],
             [
-                -72.3295,
-                42.4719
+                -66.7987,
+                18.1741
             ],
             [
-                -96.6038,
-                39.1051
+                -77.9832,
+                39.0956
             ],
             [
                 -96.443,
                 38.9459
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -102.4471,
@@ -95,28 +111,16 @@
                 40.035
             ],
             [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
                 -149.143,
                 68.6698
             ],
             [
                 -149.6106,
                 68.6307
+            ],
+            [
+                -121.9338,
+                45.7908
             ],
             [
                 -111.7979,
@@ -129,10 +133,6 @@
             [
                 -105.9154,
                 39.8914
-            ],
-            [
-                -121.9338,
-                45.7908
             ],
             [
                 -89.7048,
@@ -154,11 +154,11 @@
     },
     "properties": {
         "title": "persistenceRW",
-        "description": "All scores for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: SYCA, BIGC, BLDE, LECO, WALK, BLUE, CRAM, MAYF, MCRA, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCDI, ARIK, BARC, CARI, COMO, GUIL, LEWI, PRIN, SUGG, OKSR, TOOK, REDB, TOMB, WLOU, MART, LIRO, PRLA, PRPO, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-04-27",
-        "updated": "2025-04-27 22:03:56",
+        "description": "All scores for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: LECO, SYCA, BIGC, BLDE, WALK, BLUE, CRAM, HOPB, KING, MAYF, MCRA, POSE, BLWA, CUPE, FLNT, GUIL, LEWI, MCDI, PRIN, SUGG, ARIK, BARC, CARI, COMO, OKSR, TOOK, MART, REDB, TOMB, WLOU, LIRO, PRLA, PRPO, TECR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-04-28",
+        "updated": "2025-04-28 22:03:49",
         "start_datetime": "2022-08-25T00:00:00Z",
-        "end_datetime": "2025-04-28T00:00:00Z",
+        "end_datetime": "2025-04-29T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
@@ -187,36 +187,36 @@
             "temperature",
             "Daily",
             "P1D",
+            "LECO",
             "SYCA",
             "BIGC",
             "BLDE",
-            "LECO",
             "WALK",
             "BLUE",
             "CRAM",
+            "HOPB",
+            "KING",
             "MAYF",
             "MCRA",
             "POSE",
             "BLWA",
             "CUPE",
             "FLNT",
-            "HOPB",
-            "KING",
+            "GUIL",
+            "LEWI",
             "MCDI",
+            "PRIN",
+            "SUGG",
             "ARIK",
             "BARC",
             "CARI",
             "COMO",
-            "GUIL",
-            "LEWI",
-            "PRIN",
-            "SUGG",
             "OKSR",
             "TOOK",
+            "MART",
             "REDB",
             "TOMB",
             "WLOU",
-            "MART",
             "LIRO",
             "PRLA",
             "PRPO",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SYCA, BIGC, BLDE, LECO, WALK, BLUE, CRAM, MAYF, MCRA, POSE, BLWA, CUPE, FLNT, HOPB, KING, MCDI, ARIK, BARC, CARI, COMO, GUIL, LEWI, PRIN, SUGG, OKSR, TOOK, REDB, TOMB, WLOU, MART, LIRO, PRLA, PRPO, TECR"
+            "description": "LECO, SYCA, BIGC, BLDE, WALK, BLUE, CRAM, HOPB, KING, MAYF, MCRA, POSE, BLWA, CUPE, FLNT, GUIL, LEWI, MCDI, PRIN, SUGG, ARIK, BARC, CARI, COMO, OKSR, TOOK, MART, REDB, TOMB, WLOU, LIRO, PRLA, PRPO, TECR"
         },
         "4": {
             "type": "application/x-parquet",

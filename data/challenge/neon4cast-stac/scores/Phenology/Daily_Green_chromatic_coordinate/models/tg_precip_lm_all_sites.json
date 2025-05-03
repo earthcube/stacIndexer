@@ -15,46 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
                 -84.2826,
                 35.9641
             ],
@@ -147,6 +107,46 @@
                 33.4012
             ],
             [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
                 -110.8355,
                 31.9107
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: SJER, LAJA, HARV, WOOD, BLAN, MOAB, DSNY, GUAN, PUUM, SERC, ORNL, TREE, TEAK, GRSM, LENO, NIWO, NOGP, SOAP, MLBS, WREF, ABBY, OAES, UKFS, KONZ, BONA, SCBI, DCFS, STEI, STER, DEJU, JORN, YELL, CLBJ, SRER, JERC, DELA, BART, BARR, TOOL, HEAL, UNDE, KONA, OSBS, CPER, ONAQ, RMNP, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: ORNL, TREE, TEAK, GRSM, LENO, NIWO, NOGP, SOAP, MLBS, WREF, ABBY, OAES, UKFS, KONZ, BONA, SCBI, DCFS, STEI, STER, DEJU, JORN, YELL, CLBJ, SJER, LAJA, HARV, WOOD, BLAN, MOAB, DSNY, GUAN, PUUM, SERC, SRER, JERC, DELA, BART, BARR, TOOL, HEAL, UNDE, KONA, OSBS, CPER, ONAQ, RMNP, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-29 17:13:42",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,16 +239,6 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "SJER",
-            "LAJA",
-            "HARV",
-            "WOOD",
-            "BLAN",
-            "MOAB",
-            "DSNY",
-            "GUAN",
-            "PUUM",
-            "SERC",
             "ORNL",
             "TREE",
             "TEAK",
@@ -272,6 +262,16 @@
             "JORN",
             "YELL",
             "CLBJ",
+            "SJER",
+            "LAJA",
+            "HARV",
+            "WOOD",
+            "BLAN",
+            "MOAB",
+            "DSNY",
+            "GUAN",
+            "PUUM",
+            "SERC",
             "SRER",
             "JERC",
             "DELA",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SJER, LAJA, HARV, WOOD, BLAN, MOAB, DSNY, GUAN, PUUM, SERC, ORNL, TREE, TEAK, GRSM, LENO, NIWO, NOGP, SOAP, MLBS, WREF, ABBY, OAES, UKFS, KONZ, BONA, SCBI, DCFS, STEI, STER, DEJU, JORN, YELL, CLBJ, SRER, JERC, DELA, BART, BARR, TOOL, HEAL, UNDE, KONA, OSBS, CPER, ONAQ, RMNP, TALL"
+            "description": "ORNL, TREE, TEAK, GRSM, LENO, NIWO, NOGP, SOAP, MLBS, WREF, ABBY, OAES, UKFS, KONZ, BONA, SCBI, DCFS, STEI, STER, DEJU, JORN, YELL, CLBJ, SJER, LAJA, HARV, WOOD, BLAN, MOAB, DSNY, GUAN, PUUM, SERC, SRER, JERC, DELA, BART, BARR, TOOL, HEAL, UNDE, KONA, OSBS, CPER, ONAQ, RMNP, TALL"
         },
         "4": {
             "type": "application/x-parquet",

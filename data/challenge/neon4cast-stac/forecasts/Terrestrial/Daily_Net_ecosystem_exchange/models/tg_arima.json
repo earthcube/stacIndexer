@@ -15,46 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
                 -119.2622,
                 37.0334
             ],
@@ -97,6 +57,94 @@
             [
                 -88.1612,
                 31.8539
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -110.5391,
+                44.9535
             ],
             [
                 -71.2874,
@@ -153,60 +201,12 @@
             [
                 -112.4524,
                 40.1776
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -110.5391,
-                44.9535
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: MOAB, WOOD, GUAN, HARV, SERC, PUUM, LAJA, BLAN, SJER, DSNY, SOAP, NIWO, ABBY, TEAK, MLBS, TREE, ORNL, GRSM, WREF, NOGP, LENO, BART, JERC, CPER, SRER, KONA, DELA, TALL, UNDE, BARR, HEAL, RMNP, TOOL, OSBS, ONAQ, OAES, STEI, SCBI, BONA, CLBJ, UKFS, DEJU, KONZ, JORN, DCFS, STER, YELL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Net_ecosystem_exchange variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SOAP, NIWO, ABBY, TEAK, MLBS, TREE, ORNL, GRSM, WREF, NOGP, LENO, MOAB, WOOD, GUAN, HARV, SERC, PUUM, LAJA, BLAN, SJER, DSNY, OAES, STEI, SCBI, BONA, CLBJ, UKFS, DEJU, KONZ, JORN, DCFS, STER, YELL, BART, JERC, CPER, SRER, KONA, DELA, TALL, UNDE, BARR, HEAL, RMNP, TOOL, OSBS, ONAQ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:02",
         "start_datetime": "2023-01-07T00:00:00Z",
@@ -239,16 +239,6 @@
             "nee",
             "Daily",
             "P1D",
-            "MOAB",
-            "WOOD",
-            "GUAN",
-            "HARV",
-            "SERC",
-            "PUUM",
-            "LAJA",
-            "BLAN",
-            "SJER",
-            "DSNY",
             "SOAP",
             "NIWO",
             "ABBY",
@@ -260,6 +250,28 @@
             "WREF",
             "NOGP",
             "LENO",
+            "MOAB",
+            "WOOD",
+            "GUAN",
+            "HARV",
+            "SERC",
+            "PUUM",
+            "LAJA",
+            "BLAN",
+            "SJER",
+            "DSNY",
+            "OAES",
+            "STEI",
+            "SCBI",
+            "BONA",
+            "CLBJ",
+            "UKFS",
+            "DEJU",
+            "KONZ",
+            "JORN",
+            "DCFS",
+            "STER",
+            "YELL",
             "BART",
             "JERC",
             "CPER",
@@ -273,19 +285,7 @@
             "RMNP",
             "TOOL",
             "OSBS",
-            "ONAQ",
-            "OAES",
-            "STEI",
-            "SCBI",
-            "BONA",
-            "CLBJ",
-            "UKFS",
-            "DEJU",
-            "KONZ",
-            "JORN",
-            "DCFS",
-            "STER",
-            "YELL"
+            "ONAQ"
         ],
         "table:columns": [
             {
@@ -402,7 +402,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "MOAB, WOOD, GUAN, HARV, SERC, PUUM, LAJA, BLAN, SJER, DSNY, SOAP, NIWO, ABBY, TEAK, MLBS, TREE, ORNL, GRSM, WREF, NOGP, LENO, BART, JERC, CPER, SRER, KONA, DELA, TALL, UNDE, BARR, HEAL, RMNP, TOOL, OSBS, ONAQ, OAES, STEI, SCBI, BONA, CLBJ, UKFS, DEJU, KONZ, JORN, DCFS, STER, YELL"
+            "description": "SOAP, NIWO, ABBY, TEAK, MLBS, TREE, ORNL, GRSM, WREF, NOGP, LENO, MOAB, WOOD, GUAN, HARV, SERC, PUUM, LAJA, BLAN, SJER, DSNY, OAES, STEI, SCBI, BONA, CLBJ, UKFS, DEJU, KONZ, JORN, DCFS, STER, YELL, BART, JERC, CPER, SRER, KONA, DELA, TALL, UNDE, BARR, HEAL, RMNP, TOOL, OSBS, ONAQ"
         },
         "4": {
             "type": "application/x-parquet",

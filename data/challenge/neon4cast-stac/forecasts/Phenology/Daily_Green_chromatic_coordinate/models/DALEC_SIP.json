@@ -19,16 +19,16 @@
                 42.5369
             ],
             [
+                -97.57,
+                33.4012
+            ],
+            [
                 -89.5864,
                 45.5089
             ],
             [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -97.57,
-                33.4012
             ],
             [
                 -83.5019,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "DALEC_SIP",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the DALEC_SIP model. Information for the model is provided as follows: The DALEC-SIP model was a process-based carbon cycle and ecosystem model. It coupled a leaf-to-canopy radiative transfer model based on the spectral invariant properties (SIP) to the Data Assimilation Linked Carbon (DALEC) model.\n                                    The model predicts this variable at the following sites: HARV, STEI, UKFS, CLBJ, GRSM, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the DALEC_SIP model. Information for the model is provided as follows: The DALEC-SIP model was a process-based carbon cycle and ecosystem model. It coupled a leaf-to-canopy radiative transfer model based on the spectral invariant properties (SIP) to the Data Assimilation Linked Carbon (DALEC) model.\n                                    The model predicts this variable at the following sites: HARV, CLBJ, STEI, UKFS, GRSM, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-07-16",
         "updated": null,
         "start_datetime": "2021-03-01T00:00:00Z",
@@ -80,9 +80,9 @@
             "Daily",
             "P1D",
             "HARV",
+            "CLBJ",
             "STEI",
             "UKFS",
-            "CLBJ",
             "GRSM",
             "BART",
             "DELA"
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, STEI, UKFS, CLBJ, GRSM, BART, DELA"
+            "description": "HARV, CLBJ, STEI, UKFS, GRSM, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",
