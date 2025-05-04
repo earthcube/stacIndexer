@@ -15,6 +15,10 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -84.2826,
+                35.9641
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -27,8 +31,8 @@
                 39.0404
             ],
             [
-                -84.2826,
-                35.9641
+                -87.3933,
+                32.9505
             ],
             [
                 -76.56,
@@ -37,16 +41,12 @@
             [
                 -78.0418,
                 39.0337
-            ],
-            [
-                -87.3933,
-                32.9505
             ]
         ]
     },
     "properties": {
         "title": "BU_Dem",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the BU_Dem model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, ORNL, SERC, BLAN, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the BU_Dem model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: ORNL, KONZ, SCBI, UKFS, TALL, SERC, BLAN.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2019-10-06",
         "updated": null,
         "start_datetime": "2019-03-04T00:00:00Z",
@@ -79,13 +79,13 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
+            "ORNL",
             "KONZ",
             "SCBI",
             "UKFS",
-            "ORNL",
+            "TALL",
             "SERC",
-            "BLAN",
-            "TALL"
+            "BLAN"
         ],
         "table:columns": [
             {
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, SCBI, UKFS, ORNL, SERC, BLAN, TALL"
+            "description": "ORNL, KONZ, SCBI, UKFS, TALL, SERC, BLAN"
         },
         "4": {
             "type": "application/x-parquet",

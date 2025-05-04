@@ -15,10 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -78.1395,
                 38.8929
             ],
@@ -35,8 +31,8 @@
                 33.4012
             ],
             [
-                -83.5019,
-                35.689
+                -72.1727,
+                42.5369
             ],
             [
                 -71.2874,
@@ -45,12 +41,16 @@
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -83.5019,
+                35.689
             ]
         ]
     },
     "properties": {
         "title": "UCSC_P_EDM",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: HARV, SCBI, STEI, UKFS, CLBJ, GRSM, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SCBI, STEI, UKFS, CLBJ, HARV, BART, DELA, GRSM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2021-10-19",
         "updated": null,
         "start_datetime": "2020-04-27T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "HARV",
             "SCBI",
             "STEI",
             "UKFS",
             "CLBJ",
-            "GRSM",
+            "HARV",
             "BART",
-            "DELA"
+            "DELA",
+            "GRSM"
         ],
         "table:columns": [
             {
@@ -207,7 +207,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, SCBI, STEI, UKFS, CLBJ, GRSM, BART, DELA"
+            "description": "SCBI, STEI, UKFS, CLBJ, HARV, BART, DELA, GRSM"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,32 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -88.1612,
                 31.8539
             ],
             [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -81.9934,
-                29.6893
+                -84.2826,
+                35.9641
             ],
             [
                 -78.0418,
@@ -49,12 +29,32 @@
             [
                 -76.56,
                 38.8901
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -87.3933,
+                32.9505
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: ORNL, LENO, UKFS, SCBI, KONZ, TALL, OSBS, BLAN, SERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, UKFS, KONZ, SCBI, OSBS, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-14",
         "updated": "2024-08-29 18:10:54",
         "start_datetime": "2021-06-07T00:00:00Z",
@@ -87,15 +87,15 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "ORNL",
             "LENO",
-            "UKFS",
-            "SCBI",
-            "KONZ",
-            "TALL",
-            "OSBS",
+            "ORNL",
             "BLAN",
-            "SERC"
+            "SERC",
+            "UKFS",
+            "KONZ",
+            "SCBI",
+            "OSBS",
+            "TALL"
         ],
         "table:columns": [
             {
@@ -212,7 +212,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "ORNL, LENO, UKFS, SCBI, KONZ, TALL, OSBS, BLAN, SERC"
+            "description": "LENO, ORNL, BLAN, SERC, UKFS, KONZ, SCBI, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",

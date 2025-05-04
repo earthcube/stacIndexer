@@ -15,6 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
+            ],
+            [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -82.0084,
                 29.676
             ],
@@ -25,28 +41,12 @@
             [
                 -149.6106,
                 68.6307
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -89.7048,
-                45.9983
             ]
         ]
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, CRAM, PRLA, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: LIRO, PRPO, PRLA, CRAM, BARC, SUGG, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-04-28",
         "updated": "2025-04-28 14:03:43",
         "start_datetime": "2024-02-29T00:00:00Z",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "LIRO",
+            "PRPO",
+            "PRLA",
+            "CRAM",
             "BARC",
             "SUGG",
-            "TOOK",
-            "CRAM",
-            "PRLA",
-            "PRPO",
-            "LIRO"
+            "TOOK"
         ],
         "table:columns": [
             {
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BARC, SUGG, TOOK, CRAM, PRLA, PRPO, LIRO"
+            "description": "LIRO, PRPO, PRLA, CRAM, BARC, SUGG, TOOK"
         },
         "4": {
             "type": "application/x-parquet",
