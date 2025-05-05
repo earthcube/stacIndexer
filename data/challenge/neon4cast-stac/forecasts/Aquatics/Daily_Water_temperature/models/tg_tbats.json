@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -149.143,
                 68.6698
             ],
@@ -91,34 +59,6 @@
                 18.1741
             ],
             [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
                 -111.7979,
                 40.7839
             ],
@@ -149,12 +89,72 @@
             [
                 -88.1589,
                 31.8534
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -110.5871,
+                44.9501
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -78.1473,
+                38.8943
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Daily_Water_temperature variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE, OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE, FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:34:07",
         "start_datetime": "2022-08-06T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "FLNT",
-            "MAYF",
-            "HOPB",
-            "KING",
-            "BLWA",
-            "MCRA",
-            "CUPE",
-            "POSE",
             "OKSR",
             "ARIK",
             "BARC",
@@ -206,13 +198,6 @@
             "PRIN",
             "MCDI",
             "GUIL",
-            "LECO",
-            "WALK",
-            "CRAM",
-            "SYCA",
-            "BIGC",
-            "BLUE",
-            "BLDE",
             "REDB",
             "LIRO",
             "WLOU",
@@ -220,7 +205,22 @@
             "TECR",
             "PRLA",
             "MART",
-            "TOMB"
+            "TOMB",
+            "LECO",
+            "WALK",
+            "CRAM",
+            "SYCA",
+            "BIGC",
+            "BLUE",
+            "BLDE",
+            "FLNT",
+            "MAYF",
+            "HOPB",
+            "KING",
+            "BLWA",
+            "MCRA",
+            "CUPE",
+            "POSE"
         ],
         "table:columns": [
             {
@@ -337,7 +337,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE, OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB"
+            "description": "OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE, FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE"
         },
         "4": {
             "type": "application/x-parquet",

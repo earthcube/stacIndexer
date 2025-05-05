@@ -23,10 +23,6 @@
                 35.9641
             ],
             [
-                -122.3303,
-                45.7624
-            ],
-            [
                 -83.5019,
                 35.689
             ],
@@ -59,6 +55,50 @@
                 45.4937
             ],
             [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
                 -97.57,
                 33.4012
             ],
@@ -83,10 +123,6 @@
                 32.5907
             ],
             [
-                -110.5391,
-                44.9535
-            ],
-            [
                 -99.0588,
                 35.4106
             ],
@@ -107,52 +143,8 @@
                 39.0404
             ],
             [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -71.2874,
-                44.0639
-            ],
-            [
-                -81.9934,
-                29.6893
+                -110.5391,
+                44.9535
             ],
             [
                 -110.8355,
@@ -165,6 +157,14 @@
             [
                 -89.5373,
                 46.2339
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -81.9934,
+                29.6893
             ],
             [
                 -156.6194,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WREF, ORNL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, YELL, OAES, SCBI, STEI, STER, UKFS, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, MOAB, PUUM, SERC, BART, OSBS, SRER, TALL, UNDE, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: WREF, ORNL, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, ABBY, SJER, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, WOOD, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, OAES, SCBI, STEI, STER, UKFS, YELL, SRER, TALL, UNDE, BART, OSBS, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-30",
         "updated": "2023-12-31 05:43:28",
         "start_datetime": "2022-02-01T00:00:00Z",
@@ -241,7 +241,6 @@
             "PT30M",
             "WREF",
             "ORNL",
-            "ABBY",
             "GRSM",
             "LENO",
             "MLBS",
@@ -250,33 +249,34 @@
             "SOAP",
             "TEAK",
             "TREE",
+            "ABBY",
+            "SJER",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "WOOD",
             "CLBJ",
             "KONZ",
             "BONA",
             "DCFS",
             "DEJU",
             "JORN",
-            "YELL",
             "OAES",
             "SCBI",
             "STEI",
             "STER",
             "UKFS",
-            "SJER",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "WOOD",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "BART",
-            "OSBS",
+            "YELL",
             "SRER",
             "TALL",
             "UNDE",
+            "BART",
+            "OSBS",
             "BARR",
             "CPER",
             "DELA",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "WREF, ORNL, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, YELL, OAES, SCBI, STEI, STER, UKFS, SJER, BLAN, DSNY, GUAN, HARV, WOOD, LAJA, MOAB, PUUM, SERC, BART, OSBS, SRER, TALL, UNDE, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL"
+            "description": "WREF, ORNL, GRSM, LENO, MLBS, NIWO, NOGP, SOAP, TEAK, TREE, ABBY, SJER, BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, WOOD, CLBJ, KONZ, BONA, DCFS, DEJU, JORN, OAES, SCBI, STEI, STER, UKFS, YELL, SRER, TALL, UNDE, BART, OSBS, BARR, CPER, DELA, HEAL, JERC, KONA, ONAQ, RMNP, TOOL"
         },
         "4": {
             "type": "application/x-parquet",

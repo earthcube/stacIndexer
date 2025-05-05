@@ -15,18 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
@@ -39,6 +27,18 @@
                 45.9983
             ],
             [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
                 -89.4737,
                 46.2097
             ]
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "mkricheldorf_w_lag",
-        "description": "All forecasts for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: PRLA, PRPO, LIRO, TOOK, BARC, SUGG, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-08-25",
         "updated": "2024-08-29 16:25:04",
         "start_datetime": "2024-03-06T00:00:00Z",
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "TOOK",
-            "BARC",
-            "SUGG",
             "PRLA",
             "PRPO",
             "LIRO",
+            "TOOK",
+            "BARC",
+            "SUGG",
             "CRAM"
         ],
         "table:columns": [
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "TOOK, BARC, SUGG, PRLA, PRPO, LIRO, CRAM"
+            "description": "PRLA, PRPO, LIRO, TOOK, BARC, SUGG, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -83.5019,
-                35.689
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
                 -97.57,
                 33.4012
             ],
@@ -39,18 +31,26 @@
                 39.0404
             ],
             [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -71.2874,
                 44.0639
             ],
             [
                 -87.8039,
                 32.5417
+            ],
+            [
+                -83.5019,
+                35.689
             ]
         ]
     },
     "properties": {
         "title": "greenbears",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA, GRSM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-03-01",
         "updated": null,
         "start_datetime": "2021-02-22T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "GRSM",
-            "HARV",
             "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
+            "HARV",
             "BART",
-            "DELA"
+            "DELA",
+            "GRSM"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA"
+            "description": "CLBJ, SCBI, STEI, UKFS, HARV, BART, DELA, GRSM"
         },
         "4": {
             "type": "application/x-parquet",
