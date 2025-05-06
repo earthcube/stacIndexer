@@ -15,46 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
                 -89.5857,
                 45.4937
             ],
@@ -97,6 +57,46 @@
             [
                 -119.006,
                 37.0058
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
             ],
             [
                 -96.5631,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 17:46:29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,16 +239,6 @@
             "le",
             "Daily",
             "P1D",
-            "PUUM",
-            "GUAN",
-            "BLAN",
-            "LAJA",
-            "SERC",
-            "DSNY",
-            "HARV",
-            "WOOD",
-            "MOAB",
-            "SJER",
             "TREE",
             "GRSM",
             "NIWO",
@@ -260,6 +250,16 @@
             "NOGP",
             "MLBS",
             "TEAK",
+            "PUUM",
+            "GUAN",
+            "BLAN",
+            "LAJA",
+            "SERC",
+            "DSNY",
+            "HARV",
+            "WOOD",
+            "MOAB",
+            "SJER",
             "KONZ",
             "STER",
             "DCFS",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER"
+            "description": "TREE, GRSM, NIWO, ORNL, ABBY, LENO, SOAP, WREF, NOGP, MLBS, TEAK, PUUM, GUAN, BLAN, LAJA, SERC, DSNY, HARV, WOOD, MOAB, SJER, KONZ, STER, DCFS, SCBI, STEI, BONA, YELL, UKFS, OAES, CLBJ, JORN, DEJU, HEAL, JERC, OSBS, UNDE, BARR, TALL, TOOL, BART, SRER, DELA, RMNP, ONAQ, KONA, CPER"
         },
         "4": {
             "type": "application/x-parquet",

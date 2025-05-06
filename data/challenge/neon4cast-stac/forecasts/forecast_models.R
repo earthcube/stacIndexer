@@ -53,7 +53,7 @@ print('FIND INVENTORY BUCKET')
 #   #filter(project_id == config$project_id) |>
 #   collect()
 
-forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_scores,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_forecasts,'?endpoint_override=',config$endpoint), anonymous = TRUE)
 
 theme_models <- forecast_duck_df |>
   distinct(model_id) |>
@@ -419,11 +419,18 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
 
   } ## end variable loop
 
+  group_date_range <- forecast_duck_df |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+  group_min_date <-  group_date_range |> pull(datetime_min)
+  group_max_date <-  group_date_range |> pull(datetime_max)
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                    table_description = forecast_description_create,
-                                   start_date = forecast_min_date,
-                                   end_date = forecast_max_date,
+                                   start_date = group_min_date,
+                                   end_date = group_max_date,
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

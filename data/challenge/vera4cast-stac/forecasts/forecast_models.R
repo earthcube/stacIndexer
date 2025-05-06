@@ -60,12 +60,20 @@ forecast_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_b
 # forecast_sites <- forecast_data_df |>
 #   distinct(site_id)
 
-forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
-  collect()
-#forecast_date_range <- forecast_data_df |> dplyr::summarise(min(date),max(date))
-forecast_min_date <- forecast_date_range$datetime_min
-forecast_max_date <- forecast_date_range$datetime_max
+forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_forecasts,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+
+forecast_date_range <- forecast_duck_df |>
+  summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+forecast_min_date <-  forecast_date_range |> pull(datetime_min)
+forecast_max_date <-  forecast_date_range |> pull(datetime_max)
+
+# forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+#   collect()
+# #forecast_date_range <- forecast_data_df |> dplyr::summarise(min(date),max(date))
+# forecast_min_date <- forecast_date_range$datetime_min
+# forecast_max_date <- forecast_date_range$datetime_max
 
 build_description <- paste0("Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the scores (summaries of the forecasts) to analyze forecasts (unless you need the individual ensemble members). You can access the forecasts at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
@@ -426,11 +434,18 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
+  group_date_range <- forecast_duck_df |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+  group_min_date <-  group_date_range |> pull(datetime_min)
+  group_max_date <-  group_date_range |> pull(datetime_max)
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                    table_description = forecast_description_create,
-                                   start_date = forecast_min_date,
-                                   end_date = forecast_max_date,
+                                   start_date = group_min_date,
+                                   end_date = group_max_date,
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

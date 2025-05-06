@@ -231,7 +231,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                        dashboard_string = catalog_config$dashboard_url,
                                        dashboard_title = catalog_config$dashboard_title,
                                        theme_title = var_formal_name,
-                                       destination_path = file.path(catalog_config$summaries_path,names(config$variable_groups)[i],var_formal_name),
+                                       destination_path = file.path('.',catalog_config$summaries_path,names(config$variable_groups)[i],var_formal_name),
                                        aws_download_path = catalog_config$aws_download_path_summaries,
                                        group_var_items = stac4cast::generate_variable_model_items(model_list = var_models),
                                        thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
@@ -374,11 +374,18 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
+  group_date_range <- summaries_duck_df |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+  group_min_date <-  group_date_range |> pull(datetime_min)
+  group_max_date <-  group_date_range |> pull(datetime_max)
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = summaries_theme_df,
                                    table_description = summaries_description_create,
-                                   start_date = summaries_min_date,
-                                   end_date = summaries_max_date,
+                                   start_date = group_min_date,
+                                   end_date = group_max_date,
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

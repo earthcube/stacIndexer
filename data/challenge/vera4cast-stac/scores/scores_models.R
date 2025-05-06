@@ -40,11 +40,21 @@ scores_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket
   distinct(site_id) |>
   collect()
 
-scores_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
-  collect()
-scores_min_date <- scores_date_range$datetime_min
-scores_max_date <- scores_date_range$datetime_max
+
+scores_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_scores,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+
+scores_date_range <- scores_duck_df |>
+  summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+scores_min_date <-  scores_date_range |> pull(datetime_min)
+scores_max_date <-  scores_date_range |> pull(datetime_max)
+
+
+# scores_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+#   collect()
+# scores_min_date <- scores_date_range$datetime_min
+# scores_max_date <- scores_date_range$datetime_max
 
 build_description <- paste0("Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations). You can access the scores at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the scores catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the scores for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
@@ -374,11 +384,19 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
+
+  group_date_range <- scores_duck_df |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+  group_min_date <-  group_date_range |> pull(datetime_min)
+  group_max_date <-  group_date_range |> pull(datetime_max)
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = scores_theme_df,
                                    table_description = scores_description_create,
-                                   start_date = scores_min_date,
-                                   end_date = scores_max_date,
+                                   start_date = group_min_date,
+                                   end_date = group_max_date,
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

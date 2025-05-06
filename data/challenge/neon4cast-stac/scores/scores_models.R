@@ -422,27 +422,34 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
-## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
-stac4cast::build_group_variables(table_schema = scores_theme_df,
-                    table_description = scores_description_create,
-                    start_date = scores_min_date,
-                    end_date = scores_max_date,
-                    id_value = names(config$variable_groups)[i],
-                    description_string = group_description,
-                    about_string = catalog_config$about_string,
-                    about_title = catalog_config$about_title,
-                    dashboard_string = catalog_config$dashboard_url,
-                    dashboard_title = catalog_config$dashboard_title,
-                    theme_title = names(config$variable_groups[i]),
-                    destination_path = file.path(catalog_config$scores_path,names(config$variable_groups)[i]),
-                    aws_download_path = catalog_config$aws_download_path_scores,
-                    group_var_items = stac4cast::generate_group_variable_items(variables = variable_name_build),
-                    thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
-                    thumbnail_title = config$variable_groups[[i]]$thumbnail_title,
-                    group_var_vector = unique(var_values),
-                    group_duration_value = NULL,
-                    single_var_name = NULL,
-                    group_sites = find_group_sites,
-                    citation_values = citation_build,
-                    doi_values = doi_build)
+  group_date_range <- scores_duck_df |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+  group_min_date <-  group_date_range |> pull(datetime_min)
+  group_max_date <-  group_date_range |> pull(datetime_max)
+
+  ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
+  stac4cast::build_group_variables(table_schema = scores_theme_df,
+                      table_description = scores_description_create,
+                      start_date = group_min_date,
+                      end_date = group_max_date,
+                      id_value = names(config$variable_groups)[i],
+                      description_string = group_description,
+                      about_string = catalog_config$about_string,
+                      about_title = catalog_config$about_title,
+                      dashboard_string = catalog_config$dashboard_url,
+                      dashboard_title = catalog_config$dashboard_title,
+                      theme_title = names(config$variable_groups[i]),
+                      destination_path = file.path(catalog_config$scores_path,names(config$variable_groups)[i]),
+                      aws_download_path = catalog_config$aws_download_path_scores,
+                      group_var_items = stac4cast::generate_group_variable_items(variables = variable_name_build),
+                      thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
+                      thumbnail_title = config$variable_groups[[i]]$thumbnail_title,
+                      group_var_vector = unique(var_values),
+                      group_duration_value = NULL,
+                      single_var_name = NULL,
+                      group_sites = find_group_sites,
+                      citation_values = citation_build,
+                      doi_values = doi_build)
 } # end group loop

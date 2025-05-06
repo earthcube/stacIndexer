@@ -15,22 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
                 -84.4374,
                 31.1854
             ],
@@ -39,20 +23,28 @@
                 42.4719
             ],
             [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -122.1655,
                 44.2596
             ],
             [
+                -87.4077,
+                32.9604
+            ],
+            [
                 -87.7982,
                 32.5415
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -110.5871,
-                44.9501
             ],
             [
                 -83.5038,
@@ -63,20 +55,24 @@
                 37.0597
             ],
             [
+                -110.5871,
+                44.9501
+            ],
+            [
                 -84.2793,
                 35.9574
             ],
             [
-                -89.4737,
-                46.2097
+                -96.6242,
+                34.4442
             ],
             [
                 -111.5081,
                 33.751
             ],
             [
-                -105.5442,
-                40.035
+                -89.4737,
+                46.2097
             ],
             [
                 -82.0084,
@@ -85,10 +81,6 @@
             [
                 -66.7987,
                 18.1741
-            ],
-            [
-                -97.7823,
-                33.3785
             ],
             [
                 -82.0177,
@@ -103,8 +95,24 @@
                 39.0956
             ],
             [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
                 -102.4471,
                 39.7582
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.1139,
+                47.1591
             ],
             [
                 -105.9154,
@@ -113,10 +121,6 @@
             [
                 -111.7979,
                 40.7839
-            ],
-            [
-                -99.1139,
-                47.1591
             ],
             [
                 -119.0274,
@@ -129,16 +133,12 @@
             [
                 -99.2531,
                 47.1298
-            ],
-            [
-                -89.7048,
-                45.9983
             ]
         ]
     },
     "properties": {
         "title": "hotdeck",
-        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: KING, POSE, MAYF, CUPE, FLNT, HOPB, MCRA, BLWA, BLUE, BLDE, LECO, BIGC, WALK, CRAM, SYCA, COMO, BARC, GUIL, PRIN, SUGG, CARI, LEWI, ARIK, WLOU, REDB, PRLA, TECR, TOMB, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: FLNT, HOPB, KING, CUPE, POSE, MCRA, MAYF, BLWA, LECO, BIGC, BLDE, WALK, BLUE, SYCA, CRAM, BARC, GUIL, SUGG, CARI, LEWI, PRIN, COMO, ARIK, LIRO, PRLA, WLOU, REDB, TECR, TOMB, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2025-01-27",
         "updated": "2025-01-27 18:04:13",
         "start_datetime": "2024-02-28T00:00:00Z",
@@ -171,36 +171,36 @@
             "temperature",
             "Daily",
             "P1D",
-            "KING",
-            "POSE",
-            "MAYF",
-            "CUPE",
             "FLNT",
             "HOPB",
+            "KING",
+            "CUPE",
+            "POSE",
             "MCRA",
+            "MAYF",
             "BLWA",
-            "BLUE",
-            "BLDE",
             "LECO",
             "BIGC",
+            "BLDE",
             "WALK",
-            "CRAM",
+            "BLUE",
             "SYCA",
-            "COMO",
+            "CRAM",
             "BARC",
             "GUIL",
-            "PRIN",
             "SUGG",
             "CARI",
             "LEWI",
+            "PRIN",
+            "COMO",
             "ARIK",
+            "LIRO",
+            "PRLA",
             "WLOU",
             "REDB",
-            "PRLA",
             "TECR",
             "TOMB",
-            "PRPO",
-            "LIRO"
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -317,7 +317,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KING, POSE, MAYF, CUPE, FLNT, HOPB, MCRA, BLWA, BLUE, BLDE, LECO, BIGC, WALK, CRAM, SYCA, COMO, BARC, GUIL, PRIN, SUGG, CARI, LEWI, ARIK, WLOU, REDB, PRLA, TECR, TOMB, PRPO, LIRO"
+            "description": "FLNT, HOPB, KING, CUPE, POSE, MCRA, MAYF, BLWA, LECO, BIGC, BLDE, WALK, BLUE, SYCA, CRAM, BARC, GUIL, SUGG, CARI, LEWI, PRIN, COMO, ARIK, LIRO, PRLA, WLOU, REDB, TECR, TOMB, PRPO"
         },
         "4": {
             "type": "application/x-parquet",
