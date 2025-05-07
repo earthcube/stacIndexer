@@ -15,16 +15,16 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
             [
                 -82.0084,
                 29.676
-            ],
-            [
-                -149.6106,
-                68.6307
             ],
             [
                 -96.443,
@@ -35,8 +35,8 @@
                 40.035
             ],
             [
-                -89.4737,
-                46.2097
+                -149.6106,
+                68.6307
             ],
             [
                 -84.4374,
@@ -55,12 +55,12 @@
                 31.8534
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
                 -99.2531,
                 47.1298
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -99.1139,
@@ -70,11 +70,11 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, MCDI, COMO, USGS-05558300, USGS-14181500, USGS-05543010, USGS-05553700, USGS-01463500, USGS-01427510, CRAM, USGS-14211010, FLNT, BLWA, POSE, TOMB, LIRO, PRPO, PRLA, USGS-14211720, USGS-05586300.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-05-02",
-        "updated": "2025-05-02 22:03:13",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: CRAM, USGS-14211010, SUGG, BARC, MCDI, COMO, TOOK, USGS-05553700, USGS-01427510, USGS-05543010, USGS-01463500, USGS-05558300, USGS-14181500, FLNT, BLWA, POSE, TOMB, PRPO, LIRO, PRLA, USGS-14211720, USGS-05586300.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-05-03",
+        "updated": "2025-05-03 22:03:26",
         "start_datetime": "2022-01-01T00:00:00Z",
-        "end_datetime": "2025-05-03T00:00:00Z",
+        "end_datetime": "2025-05-04T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
@@ -103,25 +103,25 @@
             "chla",
             "Daily",
             "P1D",
-            "SUGG",
-            "BARC",
-            "TOOK",
-            "MCDI",
-            "COMO",
-            "USGS-05558300",
-            "USGS-14181500",
-            "USGS-05543010",
-            "USGS-05553700",
-            "USGS-01463500",
-            "USGS-01427510",
             "CRAM",
             "USGS-14211010",
+            "SUGG",
+            "BARC",
+            "MCDI",
+            "COMO",
+            "TOOK",
+            "USGS-05553700",
+            "USGS-01427510",
+            "USGS-05543010",
+            "USGS-01463500",
+            "USGS-05558300",
+            "USGS-14181500",
             "FLNT",
             "BLWA",
             "POSE",
             "TOMB",
-            "LIRO",
             "PRPO",
+            "LIRO",
             "PRLA",
             "USGS-14211720",
             "USGS-05586300"
@@ -281,7 +281,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SUGG, BARC, TOOK, MCDI, COMO, USGS-05558300, USGS-14181500, USGS-05543010, USGS-05553700, USGS-01463500, USGS-01427510, CRAM, USGS-14211010, FLNT, BLWA, POSE, TOMB, LIRO, PRPO, PRLA, USGS-14211720, USGS-05586300"
+            "description": "CRAM, USGS-14211010, SUGG, BARC, MCDI, COMO, TOOK, USGS-05553700, USGS-01427510, USGS-05543010, USGS-01463500, USGS-05558300, USGS-14181500, FLNT, BLWA, POSE, TOMB, PRPO, LIRO, PRLA, USGS-14211720, USGS-05586300"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,38 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
                 -89.4737,
                 46.2097
             ],
@@ -119,6 +87,38 @@
                 29.6878
             ],
             [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
                 -89.7048,
                 45.9983
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: HOPB, KING, MCRA, BLWA, FLNT, POSE, MAYF, CUPE, CRAM, LECO, BLUE, BIGC, BLDE, SYCA, WALK, LEWI, MCDI, BARC, OKSR, GUIL, PRIN, ARIK, TOOK, CARI, COMO, SUGG, LIRO, TECR, WLOU, MART, PRLA, REDB, PRPO, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: CRAM, LECO, BLUE, BIGC, BLDE, SYCA, WALK, LEWI, MCDI, BARC, OKSR, GUIL, PRIN, ARIK, TOOK, CARI, COMO, SUGG, HOPB, KING, MCRA, BLWA, FLNT, POSE, MAYF, CUPE, LIRO, TECR, WLOU, MART, PRLA, REDB, PRPO, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:32:49",
         "start_datetime": "2022-08-06T00:00:00Z",
@@ -187,14 +187,6 @@
             "temperature",
             "Daily",
             "P1D",
-            "HOPB",
-            "KING",
-            "MCRA",
-            "BLWA",
-            "FLNT",
-            "POSE",
-            "MAYF",
-            "CUPE",
             "CRAM",
             "LECO",
             "BLUE",
@@ -213,6 +205,14 @@
             "CARI",
             "COMO",
             "SUGG",
+            "HOPB",
+            "KING",
+            "MCRA",
+            "BLWA",
+            "FLNT",
+            "POSE",
+            "MAYF",
+            "CUPE",
             "LIRO",
             "TECR",
             "WLOU",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HOPB, KING, MCRA, BLWA, FLNT, POSE, MAYF, CUPE, CRAM, LECO, BLUE, BIGC, BLDE, SYCA, WALK, LEWI, MCDI, BARC, OKSR, GUIL, PRIN, ARIK, TOOK, CARI, COMO, SUGG, LIRO, TECR, WLOU, MART, PRLA, REDB, PRPO, TOMB"
+            "description": "CRAM, LECO, BLUE, BIGC, BLDE, SYCA, WALK, LEWI, MCDI, BARC, OKSR, GUIL, PRIN, ARIK, TOOK, CARI, COMO, SUGG, HOPB, KING, MCRA, BLWA, FLNT, POSE, MAYF, CUPE, LIRO, TECR, WLOU, MART, PRLA, REDB, PRPO, TOMB"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,6 +15,18 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -89.7048,
                 45.9983
             ],
@@ -29,28 +41,16 @@
             [
                 -89.4737,
                 46.2097
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
             ]
         ]
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All scores for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: LIRO, PRLA, PRPO, CRAM, SUGG, BARC, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-        "datetime": "2025-05-02",
-        "updated": "2025-05-02 14:03:44",
+        "description": "All scores for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: SUGG, BARC, TOOK, LIRO, PRLA, PRPO, CRAM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "datetime": "2025-05-03",
+        "updated": "2025-05-03 14:03:22",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2025-05-03T00:00:00Z",
+        "end_datetime": "2025-05-04T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/lindsey-finks/NEON-forecast-challenge-workshop",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
+            "SUGG",
+            "BARC",
+            "TOOK",
             "LIRO",
             "PRLA",
             "PRPO",
-            "CRAM",
-            "SUGG",
-            "BARC",
-            "TOOK"
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LIRO, PRLA, PRPO, CRAM, SUGG, BARC, TOOK"
+            "description": "SUGG, BARC, TOOK, LIRO, PRLA, PRPO, CRAM"
         },
         "4": {
             "type": "application/x-parquet",

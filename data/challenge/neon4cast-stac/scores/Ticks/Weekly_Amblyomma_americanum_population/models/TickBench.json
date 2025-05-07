@@ -15,6 +15,22 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -33,28 +49,12 @@
             [
                 -87.3933,
                 32.9505
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -84.2826,
-                35.9641
             ]
         ]
     },
     "properties": {
         "title": "TickBench",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the TickBench model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, OSBS, TALL, BLAN, SERC, LENO, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the TickBench model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-03-07",
         "updated": null,
         "start_datetime": "2021-03-01T00:00:00Z",
@@ -87,15 +87,15 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
+            "LENO",
+            "ORNL",
+            "BLAN",
+            "SERC",
             "KONZ",
             "SCBI",
             "UKFS",
             "OSBS",
-            "TALL",
-            "BLAN",
-            "SERC",
-            "LENO",
-            "ORNL"
+            "TALL"
         ],
         "table:columns": [
             {
@@ -252,7 +252,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, SCBI, UKFS, OSBS, TALL, BLAN, SERC, LENO, ORNL"
+            "description": "LENO, ORNL, BLAN, SERC, KONZ, SCBI, UKFS, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",
