@@ -1,0 +1,548 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "urn:neon4cast-stac:38ddeb087c",
+    "name": "tg_tbats",
+    "description": "All scores for the Weekly_beetle_community_richness variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BONA, KONZ, DCFS, STER, YELL, OAES, SCBI, STEI, JORN, DEJU, UKFS, CLBJ, SJER, GUAN, DSNY, HARV, PUUM, BLAN, SERC, MOAB, LAJA, WOOD, NIWO, SOAP, TEAK, ABBY, MLBS, ORNL, LENO, WREF, TREE, GRSM, NOGP, KONA, ONAQ, TOOL, CPER, RMNP, OSBS, BARR, SRER, TALL, JERC, DELA, HEAL, UNDE, BART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "datePublished": "2024-07-14",
+    "datetime": "2024-07-14",
+    "updated": "2024-08-23 18:03:11",
+    "start_datetime": "2021-05-17T00:00:00Z",
+    "end_datetime": "2025-04-21T00:00:00Z",
+    "keywords": [
+        "Scores",
+        "neon4cast",
+        "Beetles",
+        "tg_tbats",
+        "beetle_community_richness",
+        "richness",
+        "Weekly",
+        "P1W",
+        "BONA",
+        "KONZ",
+        "DCFS",
+        "STER",
+        "YELL",
+        "OAES",
+        "SCBI",
+        "STEI",
+        "JORN",
+        "DEJU",
+        "UKFS",
+        "CLBJ",
+        "SJER",
+        "GUAN",
+        "DSNY",
+        "HARV",
+        "PUUM",
+        "BLAN",
+        "SERC",
+        "MOAB",
+        "LAJA",
+        "WOOD",
+        "NIWO",
+        "SOAP",
+        "TEAK",
+        "ABBY",
+        "MLBS",
+        "ORNL",
+        "LENO",
+        "WREF",
+        "TREE",
+        "GRSM",
+        "NOGP",
+        "KONA",
+        "ONAQ",
+        "TOOL",
+        "CPER",
+        "RMNP",
+        "OSBS",
+        "BARR",
+        "SRER",
+        "TALL",
+        "JERC",
+        "DELA",
+        "HEAL",
+        "UNDE",
+        "BART"
+    ],
+    "citation": {
+        "@type": "CreativeWork",
+        "@id": "https://doi.org/10.1002/ecs2.4686",
+        "url": "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4686",
+        "name": "A community convention for ecological forecasting: Output files and metadata version 1.0",
+        "description": "This paper summarizes the open community conventions developed by the Ecological Forecasting Initiative (EFI) for the common formatting and archiving of ecological forecasts and the metadata associated with these forecasts. ",
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "https://registry.identifiers.org/registry/doi",
+            "value": "doi:10.1002/ecs2.4686",
+            "url": "https://doi.org/10.1002/ecs2.4686"
+        }
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "reference_datetime",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "site_id",
+            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "datetime",
+            "description": "datetime of the forecasted value (ISO 8601)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "family",
+            "description": "For ensembles: \u201censemble.\u201d Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201d For summary statistics: \u201csummary.\u201dIf this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "pub_datetime",
+            "description": "datetime that forecast was submitted"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "observation",
+            "description": "observed value for variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "crps",
+            "description": "crps forecast score"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "logs",
+            "description": "logs forecast score"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "mean",
+            "description": "mean forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "median",
+            "description": "median forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "sd",
+            "description": "standard deviation forecasts"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile97.5",
+            "description": "upper 97.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile02.5",
+            "description": "upper 2.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile90",
+            "description": "upper 90 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile10",
+            "description": "upper 10 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "duration",
+            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "model_id",
+            "description": "unique model identifier"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "project_id",
+            "description": "unique project identifier"
+        }
+    ],
+    "distribution": [
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_tbats.json",
+            "encodingFormat": "application/json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_tbats.json\")\n\n",
+            "name": "Model Metadata"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
+            "encodingFormat": "text/html",
+            "description": "The link to the model code provided by the model submission team",
+            "name": "Link for Model Code"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "encodingFormat": "text/plain",
+            "description": "BONA, KONZ, DCFS, STER, YELL, OAES, SCBI, STEI, JORN, DEJU, UKFS, CLBJ, SJER, GUAN, DSNY, HARV, PUUM, BLAN, SERC, MOAB, LAJA, WOOD, NIWO, SOAP, TEAK, ABBY, MLBS, ORNL, LENO, WREF, TREE, GRSM, NOGP, KONA, ONAQ, TOOL, CPER, RMNP, OSBS, BARR, SRER, TALL, JERC, DELA, HEAL, UNDE, BART",
+            "name": "Model Sites"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=richness/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
+            "encodingFormat": "application/x-parquet",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=richness/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=richness/model_id=tg_tbats\"\ncon.read_parquet(path + \"/**\")",
+            "name": "Database Access for Weekly beetle_community_richness"
+        }
+    ],
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": [
+            {
+                "@type": "GeoShape",
+                "box": "17.9696,-156.6194 71.2824,-66.8687"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 65.154,
+                "longitude": -147.5026
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1008,
+                "longitude": -96.5631
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1617,
+                "longitude": -99.1066
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.4619,
+                "longitude": -103.0293
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.9535,
+                "longitude": -110.5391
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.4106,
+                "longitude": -99.0588
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5089,
+                "longitude": -89.5864
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5907,
+                "longitude": -106.8425
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 63.8811,
+                "longitude": -145.7514
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0404,
+                "longitude": -95.1921
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 33.4012,
+                "longitude": -97.57
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.1088,
+                "longitude": -119.7323
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 17.9696,
+                "longitude": -66.8687
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 28.1251,
+                "longitude": -81.4362
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 42.5369,
+                "longitude": -72.1727
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 19.5531,
+                "longitude": -155.3173
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0337,
+                "longitude": -78.0418
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.2483,
+                "longitude": -109.3883
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 18.0213,
+                "longitude": -67.0769
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1282,
+                "longitude": -99.2413
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.0543,
+                "longitude": -105.5824
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0334,
+                "longitude": -119.2622
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0058,
+                "longitude": -119.006
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.7624,
+                "longitude": -122.3303
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.3783,
+                "longitude": -80.5248
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.9641,
+                "longitude": -84.2826
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.8539,
+                "longitude": -88.1612
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.8205,
+                "longitude": -121.9519
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.4937,
+                "longitude": -89.5857
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.689,
+                "longitude": -83.5019
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.7697,
+                "longitude": -100.9154
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1104,
+                "longitude": -96.6129
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.1776,
+                "longitude": -112.4524
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6611,
+                "longitude": -149.3705
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.8155,
+                "longitude": -104.7456
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.2759,
+                "longitude": -105.546
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.6893,
+                "longitude": -81.9934
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 71.2824,
+                "longitude": -156.6194
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.9107,
+                "longitude": -110.8355
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.1948,
+                "longitude": -84.4686
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5417,
+                "longitude": -87.8039
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 63.8758,
+                "longitude": -149.2133
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.2339,
+                "longitude": -89.5373
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.0639,
+                "longitude": -71.2874
+            }
+        ],
+        "additionalProperty": [
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291041754864156672
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291043953887412224
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291044503643226112
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291045878032760832
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291047252422295552
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291047802178109440
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291051650468806656
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291052200224620544
+            }
+        ]
+    }
+}
