@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
                 -106.8425,
                 32.5907
             ],
@@ -107,46 +147,6 @@
                 46.7697
             ],
             [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
                 -84.4686,
                 31.1948
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: JORN, STER, SCBI, BONA, CLBJ, KONZ, STEI, DCFS, UKFS, YELL, OAES, DEJU, MLBS, TEAK, LENO, ABBY, NIWO, WREF, GRSM, SOAP, TREE, ORNL, NOGP, LAJA, MOAB, SJER, WOOD, SERC, PUUM, BLAN, DSNY, HARV, GUAN, JERC, ONAQ, RMNP, SRER, TALL, CPER, OSBS, UNDE, BART, HEAL, TOOL, KONA, DELA, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, SJER, WOOD, SERC, PUUM, BLAN, DSNY, HARV, GUAN, JORN, STER, SCBI, BONA, CLBJ, KONZ, STEI, DCFS, UKFS, YELL, OAES, DEJU, MLBS, TEAK, LENO, ABBY, NIWO, WREF, GRSM, SOAP, TREE, ORNL, NOGP, JERC, ONAQ, RMNP, SRER, TALL, CPER, OSBS, UNDE, BART, HEAL, TOOL, KONA, DELA, BARR.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-03",
         "updated": "2024-07-03 07:59:23",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "LAJA",
+            "MOAB",
+            "SJER",
+            "WOOD",
+            "SERC",
+            "PUUM",
+            "BLAN",
+            "DSNY",
+            "HARV",
+            "GUAN",
             "JORN",
             "STER",
             "SCBI",
@@ -262,16 +272,6 @@
             "TREE",
             "ORNL",
             "NOGP",
-            "LAJA",
-            "MOAB",
-            "SJER",
-            "WOOD",
-            "SERC",
-            "PUUM",
-            "BLAN",
-            "DSNY",
-            "HARV",
-            "GUAN",
             "JERC",
             "ONAQ",
             "RMNP",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "JORN, STER, SCBI, BONA, CLBJ, KONZ, STEI, DCFS, UKFS, YELL, OAES, DEJU, MLBS, TEAK, LENO, ABBY, NIWO, WREF, GRSM, SOAP, TREE, ORNL, NOGP, LAJA, MOAB, SJER, WOOD, SERC, PUUM, BLAN, DSNY, HARV, GUAN, JERC, ONAQ, RMNP, SRER, TALL, CPER, OSBS, UNDE, BART, HEAL, TOOL, KONA, DELA, BARR"
+            "description": "LAJA, MOAB, SJER, WOOD, SERC, PUUM, BLAN, DSNY, HARV, GUAN, JORN, STER, SCBI, BONA, CLBJ, KONZ, STEI, DCFS, UKFS, YELL, OAES, DEJU, MLBS, TEAK, LENO, ABBY, NIWO, WREF, GRSM, SOAP, TREE, ORNL, NOGP, JERC, ONAQ, RMNP, SRER, TALL, CPER, OSBS, UNDE, BART, HEAL, TOOL, KONA, DELA, BARR"
         },
         "4": {
             "type": "application/x-parquet",

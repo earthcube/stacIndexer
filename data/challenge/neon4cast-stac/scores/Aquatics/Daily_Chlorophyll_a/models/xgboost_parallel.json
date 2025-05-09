@@ -19,24 +19,28 @@
                 46.2097
             ],
             [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -84.4374,
                 31.1854
+            ],
+            [
+                -87.7982,
+                32.5415
             ],
             [
                 -82.0177,
                 29.6878
             ],
             [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -82.0084,
                 29.676
             ],
             [
-                -149.6106,
-                68.6307
+                -99.2531,
+                47.1298
             ],
             [
                 -88.1589,
@@ -47,10 +51,6 @@
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -99.1139,
                 47.1591
             ]
@@ -58,7 +58,7 @@
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: CRAM, BLWA, FLNT, SUGG, BARC, TOOK, TOMB, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: CRAM, FLNT, BLWA, SUGG, TOOK, BARC, PRPO, TOMB, LIRO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -92,14 +92,14 @@
             "Daily",
             "P1D",
             "CRAM",
-            "BLWA",
             "FLNT",
+            "BLWA",
             "SUGG",
-            "BARC",
             "TOOK",
+            "BARC",
+            "PRPO",
             "TOMB",
             "LIRO",
-            "PRPO",
             "PRLA"
         ],
         "table:columns": [
@@ -257,7 +257,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CRAM, BLWA, FLNT, SUGG, BARC, TOOK, TOMB, LIRO, PRPO, PRLA"
+            "description": "CRAM, FLNT, BLWA, SUGG, TOOK, BARC, PRPO, TOMB, LIRO, PRLA"
         },
         "4": {
             "type": "application/x-parquet",
