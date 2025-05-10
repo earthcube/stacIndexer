@@ -31,6 +31,7 @@ summaries_description_create <- data.frame(reference_datetime = 'datetime that t
 summaries_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) #|>
 
 summaries_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(variable != 'DIC_mgL_sample') |>
   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
   collect()
 
@@ -39,13 +40,14 @@ theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_buc
   collect()
 
 summaries_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(variable != 'DIC_mgL_sample') |>
   distinct(site_id) |>
   collect()
 
 summaries_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_summaries,'?endpoint_override=',config$endpoint), anonymous = TRUE)
 
-summaries_date_range <- summaries_duck_df |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+# summaries_date_range <- summaries_duck_df |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max)))
 
 summaries_min_date <-  summaries_date_range |> pull(datetime_min)
 summaries_max_date <-  summaries_date_range |> pull(datetime_max)
@@ -248,7 +250,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_name) |>
+                 duration == duration_name,
+                 variable != 'DIC_mgL_sample') |>
           summarize(across(all_of(c('datetime','reference_date','pub_datetime')), list(min = min, max = max))) |>
           collect()
 
@@ -261,7 +264,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_var_duration_df <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_name) |>
+                 duration == duration_name,
+                 variable != 'DIC_mgL_sample') |>
           distinct(variable,duration, project_id) |>
           collect() |>
           mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>

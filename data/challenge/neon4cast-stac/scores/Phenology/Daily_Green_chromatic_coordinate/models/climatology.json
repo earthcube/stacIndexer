@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -119.2622,
                 37.0334
             ],
@@ -57,46 +97,6 @@
             [
                 -100.9154,
                 46.7697
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
             ],
             [
                 -99.1066,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: SOAP, NIWO, TEAK, MLBS, LENO, TREE, GRSM, ABBY, ORNL, WREF, NOGP, BLAN, LAJA, PUUM, GUAN, WOOD, DSNY, SERC, SJER, MOAB, HARV, DCFS, CLBJ, STER, UKFS, JORN, YELL, KONZ, STEI, OAES, BONA, DEJU, SCBI, RMNP, TALL, OSBS, BARR, UNDE, ONAQ, TOOL, DELA, HEAL, JERC, CPER, BART, SRER, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BLAN, LAJA, PUUM, GUAN, WOOD, DSNY, SERC, SJER, MOAB, HARV, SOAP, NIWO, TEAK, MLBS, LENO, TREE, GRSM, ABBY, ORNL, WREF, NOGP, DCFS, CLBJ, STER, UKFS, JORN, YELL, KONZ, STEI, OAES, BONA, DEJU, SCBI, RMNP, TALL, OSBS, BARR, UNDE, ONAQ, TOOL, DELA, HEAL, JERC, CPER, BART, SRER, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-05-03",
         "updated": "2025-05-03 22:04:15",
         "start_datetime": "2021-01-01T00:00:00Z",
@@ -239,6 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "BLAN",
+            "LAJA",
+            "PUUM",
+            "GUAN",
+            "WOOD",
+            "DSNY",
+            "SERC",
+            "SJER",
+            "MOAB",
+            "HARV",
             "SOAP",
             "NIWO",
             "TEAK",
@@ -250,16 +260,6 @@
             "ORNL",
             "WREF",
             "NOGP",
-            "BLAN",
-            "LAJA",
-            "PUUM",
-            "GUAN",
-            "WOOD",
-            "DSNY",
-            "SERC",
-            "SJER",
-            "MOAB",
-            "HARV",
             "DCFS",
             "CLBJ",
             "STER",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SOAP, NIWO, TEAK, MLBS, LENO, TREE, GRSM, ABBY, ORNL, WREF, NOGP, BLAN, LAJA, PUUM, GUAN, WOOD, DSNY, SERC, SJER, MOAB, HARV, DCFS, CLBJ, STER, UKFS, JORN, YELL, KONZ, STEI, OAES, BONA, DEJU, SCBI, RMNP, TALL, OSBS, BARR, UNDE, ONAQ, TOOL, DELA, HEAL, JERC, CPER, BART, SRER, KONA"
+            "description": "BLAN, LAJA, PUUM, GUAN, WOOD, DSNY, SERC, SJER, MOAB, HARV, SOAP, NIWO, TEAK, MLBS, LENO, TREE, GRSM, ABBY, ORNL, WREF, NOGP, DCFS, CLBJ, STER, UKFS, JORN, YELL, KONZ, STEI, OAES, BONA, DEJU, SCBI, RMNP, TALL, OSBS, BARR, UNDE, ONAQ, TOOL, DELA, HEAL, JERC, CPER, BART, SRER, KONA"
         },
         "4": {
             "type": "application/x-parquet",

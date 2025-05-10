@@ -15,54 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
                 -76.56,
                 38.8901
             ],
@@ -147,6 +99,54 @@
                 31.8539
             ],
             [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
                 -87.3933,
                 32.9505
             ],
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: UKFS, DCFS, CLBJ, DEJU, STEI, SCBI, YELL, STER, KONZ, OAES, JORN, BONA, SERC, SJER, DSNY, HARV, MOAB, BLAN, WOOD, GUAN, PUUM, LAJA, ABBY, WREF, SOAP, NOGP, MLBS, NIWO, TREE, ORNL, TEAK, GRSM, LENO, TALL, HEAL, SRER, UNDE, ONAQ, TOOL, BARR, BART, RMNP, JERC, KONA, OSBS, DELA, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SERC, SJER, DSNY, HARV, MOAB, BLAN, WOOD, GUAN, PUUM, LAJA, ABBY, WREF, SOAP, NOGP, MLBS, NIWO, TREE, ORNL, TEAK, GRSM, LENO, UKFS, DCFS, CLBJ, DEJU, STEI, SCBI, YELL, STER, KONZ, OAES, JORN, BONA, TALL, HEAL, SRER, UNDE, ONAQ, TOOL, BARR, BART, RMNP, JERC, KONA, OSBS, DELA, CPER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:00:22",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,18 +239,6 @@
             "richness",
             "Weekly",
             "P1W",
-            "UKFS",
-            "DCFS",
-            "CLBJ",
-            "DEJU",
-            "STEI",
-            "SCBI",
-            "YELL",
-            "STER",
-            "KONZ",
-            "OAES",
-            "JORN",
-            "BONA",
             "SERC",
             "SJER",
             "DSNY",
@@ -272,6 +260,18 @@
             "TEAK",
             "GRSM",
             "LENO",
+            "UKFS",
+            "DCFS",
+            "CLBJ",
+            "DEJU",
+            "STEI",
+            "SCBI",
+            "YELL",
+            "STER",
+            "KONZ",
+            "OAES",
+            "JORN",
+            "BONA",
             "TALL",
             "HEAL",
             "SRER",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "UKFS, DCFS, CLBJ, DEJU, STEI, SCBI, YELL, STER, KONZ, OAES, JORN, BONA, SERC, SJER, DSNY, HARV, MOAB, BLAN, WOOD, GUAN, PUUM, LAJA, ABBY, WREF, SOAP, NOGP, MLBS, NIWO, TREE, ORNL, TEAK, GRSM, LENO, TALL, HEAL, SRER, UNDE, ONAQ, TOOL, BARR, BART, RMNP, JERC, KONA, OSBS, DELA, CPER"
+            "description": "SERC, SJER, DSNY, HARV, MOAB, BLAN, WOOD, GUAN, PUUM, LAJA, ABBY, WREF, SOAP, NOGP, MLBS, NIWO, TREE, ORNL, TEAK, GRSM, LENO, UKFS, DCFS, CLBJ, DEJU, STEI, SCBI, YELL, STER, KONZ, OAES, JORN, BONA, TALL, HEAL, SRER, UNDE, ONAQ, TOOL, BARR, BART, RMNP, JERC, KONA, OSBS, DELA, CPER"
         },
         "4": {
             "type": "application/x-parquet",
