@@ -39,26 +39,26 @@
                 46.2097
             ],
             [
-                -88.1589,
-                31.8534
-            ],
-            [
                 -99.1139,
                 47.1591
+            ],
+            [
+                -89.7048,
+                45.9983
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -89.7048,
-                45.9983
+                -88.1589,
+                31.8534
             ]
         ]
     },
     "properties": {
         "title": "tg_arima",
-        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: FLNT, BLWA, SUGG, TOOK, BARC, CRAM, TOMB, PRLA, PRPO, LIRO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Chlorophyll_a variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: FLNT, BLWA, SUGG, TOOK, BARC, CRAM, PRLA, LIRO, PRPO, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:31:31",
         "start_datetime": "2022-09-21T00:00:00Z",
@@ -97,10 +97,10 @@
             "TOOK",
             "BARC",
             "CRAM",
-            "TOMB",
             "PRLA",
+            "LIRO",
             "PRPO",
-            "LIRO"
+            "TOMB"
         ],
         "table:columns": [
             {
@@ -257,7 +257,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "FLNT, BLWA, SUGG, TOOK, BARC, CRAM, TOMB, PRLA, PRPO, LIRO"
+            "description": "FLNT, BLWA, SUGG, TOOK, BARC, CRAM, PRLA, LIRO, PRPO, TOMB"
         },
         "4": {
             "type": "application/x-parquet",

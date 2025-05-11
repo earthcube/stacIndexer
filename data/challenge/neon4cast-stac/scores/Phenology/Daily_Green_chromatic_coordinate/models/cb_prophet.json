@@ -63,6 +63,46 @@
                 65.154
             ],
             [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
                 -88.1612,
                 31.8539
             ],
@@ -105,46 +145,6 @@
             [
                 -83.5019,
                 35.689
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -81.4362,
-                28.1251
             ],
             [
                 -104.7456,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: UKFS, DEJU, DCFS, JORN, YELL, KONZ, STEI, CLBJ, OAES, SCBI, STER, BONA, LENO, ORNL, TEAK, NOGP, WREF, NIWO, SOAP, TREE, ABBY, MLBS, GRSM, BLAN, PUUM, GUAN, MOAB, SERC, SJER, HARV, WOOD, LAJA, DSNY, CPER, KONA, TALL, BARR, ONAQ, BART, TOOL, SRER, JERC, OSBS, HEAL, UNDE, RMNP, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: UKFS, DEJU, DCFS, JORN, YELL, KONZ, STEI, CLBJ, OAES, SCBI, STER, BONA, BLAN, PUUM, GUAN, MOAB, SERC, SJER, HARV, WOOD, LAJA, DSNY, LENO, ORNL, TEAK, NOGP, WREF, NIWO, SOAP, TREE, ABBY, MLBS, GRSM, CPER, KONA, TALL, BARR, ONAQ, BART, TOOL, SRER, JERC, OSBS, HEAL, UNDE, RMNP, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:21:21",
         "start_datetime": "2022-05-29T00:00:00Z",
@@ -251,6 +251,16 @@
             "SCBI",
             "STER",
             "BONA",
+            "BLAN",
+            "PUUM",
+            "GUAN",
+            "MOAB",
+            "SERC",
+            "SJER",
+            "HARV",
+            "WOOD",
+            "LAJA",
+            "DSNY",
             "LENO",
             "ORNL",
             "TEAK",
@@ -262,16 +272,6 @@
             "ABBY",
             "MLBS",
             "GRSM",
-            "BLAN",
-            "PUUM",
-            "GUAN",
-            "MOAB",
-            "SERC",
-            "SJER",
-            "HARV",
-            "WOOD",
-            "LAJA",
-            "DSNY",
             "CPER",
             "KONA",
             "TALL",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "UKFS, DEJU, DCFS, JORN, YELL, KONZ, STEI, CLBJ, OAES, SCBI, STER, BONA, LENO, ORNL, TEAK, NOGP, WREF, NIWO, SOAP, TREE, ABBY, MLBS, GRSM, BLAN, PUUM, GUAN, MOAB, SERC, SJER, HARV, WOOD, LAJA, DSNY, CPER, KONA, TALL, BARR, ONAQ, BART, TOOL, SRER, JERC, OSBS, HEAL, UNDE, RMNP, DELA"
+            "description": "UKFS, DEJU, DCFS, JORN, YELL, KONZ, STEI, CLBJ, OAES, SCBI, STER, BONA, BLAN, PUUM, GUAN, MOAB, SERC, SJER, HARV, WOOD, LAJA, DSNY, LENO, ORNL, TEAK, NOGP, WREF, NIWO, SOAP, TREE, ABBY, MLBS, GRSM, CPER, KONA, TALL, BARR, ONAQ, BART, TOOL, SRER, JERC, OSBS, HEAL, UNDE, RMNP, DELA"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,6 +15,46 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
                 -88.1612,
                 31.8539
             ],
@@ -57,46 +97,6 @@
             [
                 -83.5019,
                 35.689
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
             ],
             [
                 -96.5631,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "xgboost_parallel",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the xgboost_parallel model. Information for the model is provided as follows: The XGBoost model is an extreme gradient boosted random forest (XGBoost) machine learning\nmodel that uses predicted atmospheric conditions and day of year as covariates. This model utilises the\nxgboost R package (Chen & Guestrin 2016; Chen et al., 2023)..\n                                    The model predicts this variable at the following sites: LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-11-04",
         "updated": null,
         "start_datetime": "2023-03-28T00:00:00Z",
@@ -239,6 +239,16 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
+            "BLAN",
+            "DSNY",
+            "GUAN",
+            "HARV",
             "LENO",
             "MLBS",
             "NIWO",
@@ -250,16 +260,6 @@
             "WREF",
             "ABBY",
             "GRSM",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
             "KONZ",
             "OAES",
             "SCBI",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA"
+            "description": "LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, DSNY, GUAN, HARV, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, GRSM, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, JORN, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA, HEAL, JERC, KONA"
         },
         "4": {
             "type": "application/x-parquet",

@@ -15,20 +15,20 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -89.7048,
-                45.9983
+                -89.4737,
+                46.2097
             ],
             [
                 -99.1139,
                 47.1591
             ],
             [
-                -89.4737,
-                46.2097
+                -89.7048,
+                45.9983
+            ],
+            [
+                -99.2531,
+                47.1298
             ],
             [
                 -82.0084,
@@ -46,7 +46,7 @@
     },
     "properties": {
         "title": "lm_AT_WTL_WS",
-        "description": "All scores for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: PRPO, LIRO, PRLA, CRAM, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: CRAM, PRLA, LIRO, PRPO, BARC, SUGG, TOOK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-05-03",
         "updated": "2025-05-03 14:03:14",
         "start_datetime": "2024-03-01T00:00:00Z",
@@ -79,10 +79,10 @@
             "temperature",
             "Daily",
             "P1D",
-            "PRPO",
-            "LIRO",
-            "PRLA",
             "CRAM",
+            "PRLA",
+            "LIRO",
+            "PRPO",
             "BARC",
             "SUGG",
             "TOOK"
@@ -242,7 +242,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "PRPO, LIRO, PRLA, CRAM, BARC, SUGG, TOOK"
+            "description": "CRAM, PRLA, LIRO, PRPO, BARC, SUGG, TOOK"
         },
         "4": {
             "type": "application/x-parquet",

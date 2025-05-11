@@ -15,6 +15,50 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -77.9832,
+                39.0956
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -147.504,
+                65.1532
+            ],
+            [
+                -149.143,
+                68.6698
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -87.4077,
                 32.9604
             ],
@@ -75,50 +119,6 @@
                 46.2097
             ],
             [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -96.443,
-                38.9459
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -105.5442,
-                40.035
-            ],
-            [
-                -97.7823,
-                33.3785
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -147.504,
-                65.1532
-            ],
-            [
-                -149.143,
-                68.6698
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
                 -88.1589,
                 31.8534
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All scores for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07 05:13:58",
         "start_datetime": "2021-12-18T00:00:00Z",
@@ -187,6 +187,17 @@
             "temperature",
             "Daily",
             "P1D",
+            "LEWI",
+            "MCDI",
+            "BARC",
+            "COMO",
+            "PRIN",
+            "GUIL",
+            "SUGG",
+            "ARIK",
+            "CARI",
+            "OKSR",
+            "TOOK",
             "MAYF",
             "HOPB",
             "POSE",
@@ -202,17 +213,6 @@
             "BIGC",
             "BLUE",
             "CRAM",
-            "LEWI",
-            "MCDI",
-            "BARC",
-            "COMO",
-            "PRIN",
-            "GUIL",
-            "SUGG",
-            "ARIK",
-            "CARI",
-            "OKSR",
-            "TOOK",
             "TOMB",
             "MART",
             "REDB",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA"
+            "description": "LEWI, MCDI, BARC, COMO, PRIN, GUIL, SUGG, ARIK, CARI, OKSR, TOOK, MAYF, HOPB, POSE, KING, BLWA, CUPE, MCRA, FLNT, WALK, SYCA, BLDE, LECO, BIGC, BLUE, CRAM, TOMB, MART, REDB, TECR, WLOU, LIRO, PRPO, PRLA"
         },
         "4": {
             "type": "application/x-parquet",
