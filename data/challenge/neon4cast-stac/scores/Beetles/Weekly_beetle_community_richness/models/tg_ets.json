@@ -15,6 +15,90 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
                 -89.5864,
                 45.5089
             ],
@@ -61,90 +145,6 @@
             [
                 -103.0293,
                 40.4619
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -100.9154,
-                46.7697
             ],
             [
                 -110.8355,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: STEI, YELL, SCBI, DEJU, OAES, KONZ, DCFS, UKFS, BONA, JORN, CLBJ, STER, SJER, BLAN, SERC, HARV, GUAN, WOOD, PUUM, LAJA, DSNY, MOAB, LENO, GRSM, TREE, WREF, NIWO, ORNL, TEAK, ABBY, SOAP, MLBS, NOGP, SRER, KONA, BARR, TOOL, OSBS, ONAQ, DELA, JERC, CPER, BART, UNDE, TALL, RMNP, HEAL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_beetle_community_richness variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: LENO, GRSM, TREE, WREF, NIWO, ORNL, TEAK, ABBY, SOAP, MLBS, NOGP, SJER, BLAN, SERC, HARV, GUAN, WOOD, PUUM, LAJA, DSNY, MOAB, STEI, YELL, SCBI, DEJU, OAES, KONZ, DCFS, UKFS, BONA, JORN, CLBJ, STER, SRER, KONA, BARR, TOOL, OSBS, ONAQ, DELA, JERC, CPER, BART, UNDE, TALL, RMNP, HEAL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23 18:01:46",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -239,6 +239,27 @@
             "richness",
             "Weekly",
             "P1W",
+            "LENO",
+            "GRSM",
+            "TREE",
+            "WREF",
+            "NIWO",
+            "ORNL",
+            "TEAK",
+            "ABBY",
+            "SOAP",
+            "MLBS",
+            "NOGP",
+            "SJER",
+            "BLAN",
+            "SERC",
+            "HARV",
+            "GUAN",
+            "WOOD",
+            "PUUM",
+            "LAJA",
+            "DSNY",
+            "MOAB",
             "STEI",
             "YELL",
             "SCBI",
@@ -251,27 +272,6 @@
             "JORN",
             "CLBJ",
             "STER",
-            "SJER",
-            "BLAN",
-            "SERC",
-            "HARV",
-            "GUAN",
-            "WOOD",
-            "PUUM",
-            "LAJA",
-            "DSNY",
-            "MOAB",
-            "LENO",
-            "GRSM",
-            "TREE",
-            "WREF",
-            "NIWO",
-            "ORNL",
-            "TEAK",
-            "ABBY",
-            "SOAP",
-            "MLBS",
-            "NOGP",
             "SRER",
             "KONA",
             "BARR",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "STEI, YELL, SCBI, DEJU, OAES, KONZ, DCFS, UKFS, BONA, JORN, CLBJ, STER, SJER, BLAN, SERC, HARV, GUAN, WOOD, PUUM, LAJA, DSNY, MOAB, LENO, GRSM, TREE, WREF, NIWO, ORNL, TEAK, ABBY, SOAP, MLBS, NOGP, SRER, KONA, BARR, TOOL, OSBS, ONAQ, DELA, JERC, CPER, BART, UNDE, TALL, RMNP, HEAL"
+            "description": "LENO, GRSM, TREE, WREF, NIWO, ORNL, TEAK, ABBY, SOAP, MLBS, NOGP, SJER, BLAN, SERC, HARV, GUAN, WOOD, PUUM, LAJA, DSNY, MOAB, STEI, YELL, SCBI, DEJU, OAES, KONZ, DCFS, UKFS, BONA, JORN, CLBJ, STER, SRER, KONA, BARR, TOOL, OSBS, ONAQ, DELA, JERC, CPER, BART, UNDE, TALL, RMNP, HEAL"
         },
         "4": {
             "type": "application/x-parquet",

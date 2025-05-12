@@ -43,6 +43,38 @@
                 33.751
             ],
             [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
                 -105.5442,
                 40.035
             ],
@@ -87,38 +119,6 @@
                 39.7582
             ],
             [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
                 -88.1589,
                 31.8534
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLUE, CRAM, LECO, BIGC, BLDE, WALK, SYCA, COMO, PRIN, LEWI, SUGG, MCDI, CARI, TOOK, OKSR, GUIL, BARC, ARIK, FLNT, KING, MCRA, CUPE, MAYF, BLWA, HOPB, POSE, TOMB, REDB, PRPO, TECR, PRLA, WLOU, LIRO, MART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: BLUE, CRAM, LECO, BIGC, BLDE, WALK, SYCA, FLNT, KING, MCRA, CUPE, MAYF, BLWA, HOPB, POSE, COMO, PRIN, LEWI, SUGG, MCDI, CARI, TOOK, OKSR, GUIL, BARC, ARIK, TOMB, REDB, PRPO, TECR, PRLA, WLOU, LIRO, MART.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
         "updated": "2024-08-23 16:24:13",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -194,6 +194,14 @@
             "BLDE",
             "WALK",
             "SYCA",
+            "FLNT",
+            "KING",
+            "MCRA",
+            "CUPE",
+            "MAYF",
+            "BLWA",
+            "HOPB",
+            "POSE",
             "COMO",
             "PRIN",
             "LEWI",
@@ -205,14 +213,6 @@
             "GUIL",
             "BARC",
             "ARIK",
-            "FLNT",
-            "KING",
-            "MCRA",
-            "CUPE",
-            "MAYF",
-            "BLWA",
-            "HOPB",
-            "POSE",
             "TOMB",
             "REDB",
             "PRPO",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BLUE, CRAM, LECO, BIGC, BLDE, WALK, SYCA, COMO, PRIN, LEWI, SUGG, MCDI, CARI, TOOK, OKSR, GUIL, BARC, ARIK, FLNT, KING, MCRA, CUPE, MAYF, BLWA, HOPB, POSE, TOMB, REDB, PRPO, TECR, PRLA, WLOU, LIRO, MART"
+            "description": "BLUE, CRAM, LECO, BIGC, BLDE, WALK, SYCA, FLNT, KING, MCRA, CUPE, MAYF, BLWA, HOPB, POSE, COMO, PRIN, LEWI, SUGG, MCDI, CARI, TOOK, OKSR, GUIL, BARC, ARIK, TOMB, REDB, PRPO, TECR, PRLA, WLOU, LIRO, MART"
         },
         "4": {
             "type": "application/x-parquet",
