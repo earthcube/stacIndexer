@@ -15,6 +15,90 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -105.5824,
+                40.0543
+            ],
+            [
+                -121.9519,
+                45.8205
+            ],
+            [
+                -89.5857,
+                45.4937
+            ],
+            [
+                -84.2826,
+                35.9641
+            ],
+            [
+                -119.006,
+                37.0058
+            ],
+            [
+                -80.5248,
+                37.3783
+            ],
+            [
+                -122.3303,
+                45.7624
+            ],
+            [
+                -100.9154,
+                46.7697
+            ],
+            [
+                -88.1612,
+                31.8539
+            ],
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -119.2622,
+                37.0334
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
                 -96.5631,
                 39.1008
             ],
@@ -61,90 +145,6 @@
             [
                 -99.0588,
                 35.4106
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -119.2622,
-                37.0334
             ],
             [
                 -112.4524,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: KONZ, CLBJ, JORN, STEI, DCFS, DEJU, STER, UKFS, SCBI, BONA, YELL, OAES, BLAN, HARV, LAJA, WOOD, GUAN, SJER, DSNY, SERC, MOAB, PUUM, NIWO, WREF, TREE, ORNL, TEAK, MLBS, ABBY, NOGP, LENO, GRSM, SOAP, ONAQ, UNDE, BART, OSBS, CPER, KONA, DELA, BARR, HEAL, JERC, TOOL, TALL, SRER, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: NIWO, WREF, TREE, ORNL, TEAK, MLBS, ABBY, NOGP, LENO, GRSM, SOAP, BLAN, HARV, LAJA, WOOD, GUAN, SJER, DSNY, SERC, MOAB, PUUM, KONZ, CLBJ, JORN, STEI, DCFS, DEJU, STER, UKFS, SCBI, BONA, YELL, OAES, ONAQ, UNDE, BART, OSBS, CPER, KONA, DELA, BARR, HEAL, JERC, TOOL, TALL, SRER, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29 16:54:26",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,6 +239,27 @@
             "gcc_90",
             "Daily",
             "P1D",
+            "NIWO",
+            "WREF",
+            "TREE",
+            "ORNL",
+            "TEAK",
+            "MLBS",
+            "ABBY",
+            "NOGP",
+            "LENO",
+            "GRSM",
+            "SOAP",
+            "BLAN",
+            "HARV",
+            "LAJA",
+            "WOOD",
+            "GUAN",
+            "SJER",
+            "DSNY",
+            "SERC",
+            "MOAB",
+            "PUUM",
             "KONZ",
             "CLBJ",
             "JORN",
@@ -251,27 +272,6 @@
             "BONA",
             "YELL",
             "OAES",
-            "BLAN",
-            "HARV",
-            "LAJA",
-            "WOOD",
-            "GUAN",
-            "SJER",
-            "DSNY",
-            "SERC",
-            "MOAB",
-            "PUUM",
-            "NIWO",
-            "WREF",
-            "TREE",
-            "ORNL",
-            "TEAK",
-            "MLBS",
-            "ABBY",
-            "NOGP",
-            "LENO",
-            "GRSM",
-            "SOAP",
             "ONAQ",
             "UNDE",
             "BART",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, CLBJ, JORN, STEI, DCFS, DEJU, STER, UKFS, SCBI, BONA, YELL, OAES, BLAN, HARV, LAJA, WOOD, GUAN, SJER, DSNY, SERC, MOAB, PUUM, NIWO, WREF, TREE, ORNL, TEAK, MLBS, ABBY, NOGP, LENO, GRSM, SOAP, ONAQ, UNDE, BART, OSBS, CPER, KONA, DELA, BARR, HEAL, JERC, TOOL, TALL, SRER, RMNP"
+            "description": "NIWO, WREF, TREE, ORNL, TEAK, MLBS, ABBY, NOGP, LENO, GRSM, SOAP, BLAN, HARV, LAJA, WOOD, GUAN, SJER, DSNY, SERC, MOAB, PUUM, KONZ, CLBJ, JORN, STEI, DCFS, DEJU, STER, UKFS, SCBI, BONA, YELL, OAES, ONAQ, UNDE, BART, OSBS, CPER, KONA, DELA, BARR, HEAL, JERC, TOOL, TALL, SRER, RMNP"
         },
         "4": {
             "type": "application/x-parquet",

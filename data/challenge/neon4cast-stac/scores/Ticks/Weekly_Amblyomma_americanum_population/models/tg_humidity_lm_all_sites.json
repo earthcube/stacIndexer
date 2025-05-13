@@ -15,14 +15,6 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
                 -78.0418,
                 39.0337
             ],
@@ -31,12 +23,12 @@
                 38.8901
             ],
             [
-                -81.9934,
-                29.6893
+                -88.1612,
+                31.8539
             ],
             [
-                -87.3933,
-                32.9505
+                -84.2826,
+                35.9641
             ],
             [
                 -96.5631,
@@ -49,12 +41,20 @@
             [
                 -95.1921,
                 39.0404
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -87.3933,
+                32.9505
             ]
         ]
     },
     "properties": {
         "title": "tg_humidity_lm_all_sites",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: LENO, ORNL, BLAN, SERC, OSBS, TALL, KONZ, SCBI, UKFS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: BLAN, SERC, LENO, ORNL, KONZ, SCBI, UKFS, OSBS, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-24",
         "updated": null,
         "start_datetime": "2023-01-02T00:00:00Z",
@@ -87,15 +87,15 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "LENO",
-            "ORNL",
             "BLAN",
             "SERC",
-            "OSBS",
-            "TALL",
+            "LENO",
+            "ORNL",
             "KONZ",
             "SCBI",
-            "UKFS"
+            "UKFS",
+            "OSBS",
+            "TALL"
         ],
         "table:columns": [
             {
@@ -252,7 +252,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LENO, ORNL, BLAN, SERC, OSBS, TALL, KONZ, SCBI, UKFS"
+            "description": "BLAN, SERC, LENO, ORNL, KONZ, SCBI, UKFS, OSBS, TALL"
         },
         "4": {
             "type": "application/x-parquet",
