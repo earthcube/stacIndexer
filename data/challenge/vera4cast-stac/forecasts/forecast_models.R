@@ -353,7 +353,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                                            endpoint_override = config$endpoint, anonymous=TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_nam) |>
+                 duration == duration_name) |>
           distinct(variable) |>
           collect() |>
           left_join(model_var_full_name, by = 'variable')

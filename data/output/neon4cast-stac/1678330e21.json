@@ -1,0 +1,314 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "urn:neon4cast-stac:13d0c48ad5",
+    "name": "greenbears",
+    "description": "All scores for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, HARV, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "datePublished": "2021-03-01",
+    "datetime": "2021-03-01",
+    "updated": null,
+    "start_datetime": "2021-02-22T00:00:00Z",
+    "end_datetime": "2021-03-28T00:00:00Z",
+    "keywords": [
+        "Scores",
+        "neon4cast",
+        "Phenology",
+        "greenbears",
+        "Green_chromatic_coordinate",
+        "gcc_90",
+        "Daily",
+        "P1D",
+        "CLBJ",
+        "SCBI",
+        "STEI",
+        "UKFS",
+        "HARV",
+        "GRSM",
+        "BART",
+        "DELA"
+    ],
+    "citation": {
+        "@type": "CreativeWork",
+        "@id": "https://doi.org/10.1002/ecs2.4686",
+        "url": "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.4686",
+        "name": "A community convention for ecological forecasting: Output files and metadata version 1.0",
+        "description": "This paper summarizes the open community conventions developed by the Ecological Forecasting Initiative (EFI) for the common formatting and archiving of ecological forecasts and the metadata associated with these forecasts. ",
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "https://registry.identifiers.org/registry/doi",
+            "value": "doi:10.1002/ecs2.4686",
+            "url": "https://doi.org/10.1002/ecs2.4686"
+        }
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "reference_datetime",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "site_id",
+            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "datetime",
+            "description": "datetime of the forecasted value (ISO 8601)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "family",
+            "description": "For ensembles: \u201censemble.\u201d Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201d For summary statistics: \u201csummary.\u201dIf this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "pub_datetime",
+            "description": "datetime that forecast was submitted"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "observation",
+            "description": "observed value for variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "crps",
+            "description": "crps forecast score"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "logs",
+            "description": "logs forecast score"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "mean",
+            "description": "mean forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "median",
+            "description": "median forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "sd",
+            "description": "standard deviation forecasts"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile97.5",
+            "description": "upper 97.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile02.5",
+            "description": "upper 2.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile90",
+            "description": "upper 90 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile10",
+            "description": "upper 10 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "duration",
+            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "model_id",
+            "description": "unique model identifier"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "project_id",
+            "description": "unique project identifier"
+        }
+    ],
+    "distribution": [
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/greenbears.json",
+            "encodingFormat": "application/json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/greenbears.json\")\n\n",
+            "name": "Model Metadata"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "http://doi.org/10.5281/zenodo.5738488",
+            "encodingFormat": "text/html",
+            "description": "The link to the model code provided by the model submission team",
+            "name": "Link for Model Code"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "encodingFormat": "text/plain",
+            "description": "CLBJ, SCBI, STEI, UKFS, HARV, GRSM, BART, DELA",
+            "name": "Model Sites"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=greenbears?endpoint_override=sdsc.osn.xsede.org",
+            "encodingFormat": "application/x-parquet",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=greenbears?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=greenbears\"\ncon.read_parquet(path + \"/**\")",
+            "name": "Database Access for Daily Green_chromatic_coordinate"
+        }
+    ],
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": [
+            {
+                "@type": "GeoShape",
+                "box": "32.5417,-97.57 45.5089,-71.2874"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 33.4012,
+                "longitude": -97.57
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5089,
+                "longitude": -89.5864
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0404,
+                "longitude": -95.1921
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 42.5369,
+                "longitude": -72.1727
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.689,
+                "longitude": -83.5019
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.0639,
+                "longitude": -71.2874
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5417,
+                "longitude": -87.8039
+            }
+        ],
+        "additionalProperty": [
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291041754864156672
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291043953887412224
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291044503643226112
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291045878032760832
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291047252422295552
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291047802178109440
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291051650468806656
+            },
+            {
+                "@type": [
+                    "PropertyValue",
+                    "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                ],
+                "additionalType": {
+                    "@id": "https://stko-kwg.geog.ucsb.edu/lod/ontology#S2Cell"
+                },
+                "name": "s2Level13",
+                "description": "S2 cell at level 13",
+                "value": 9291052200224620544
+            }
+        ]
+    }
+}

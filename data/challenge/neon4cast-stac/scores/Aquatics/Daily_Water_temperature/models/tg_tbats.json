@@ -91,34 +91,6 @@
                 18.1741
             ],
             [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -84.2793,
-                35.9574
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -111.5081,
-                33.751
-            ],
-            [
-                -119.2575,
-                37.0597
-            ],
-            [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -110.5871,
-                44.9501
-            ],
-            [
                 -111.7979,
                 40.7839
             ],
@@ -149,12 +121,40 @@
             [
                 -88.1589,
                 31.8534
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -84.2793,
+                35.9574
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -119.2575,
+                37.0597
+            ],
+            [
+                -96.6242,
+                34.4442
+            ],
+            [
+                -110.5871,
+                44.9501
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Daily_Water_temperature variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE, OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Water_temperature variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE, OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-23 08:34:07",
         "start_datetime": "2022-08-06T00:00:00Z",
@@ -206,13 +206,6 @@
             "PRIN",
             "MCDI",
             "GUIL",
-            "LECO",
-            "WALK",
-            "CRAM",
-            "SYCA",
-            "BIGC",
-            "BLUE",
-            "BLDE",
             "REDB",
             "LIRO",
             "WLOU",
@@ -220,7 +213,14 @@
             "TECR",
             "PRLA",
             "MART",
-            "TOMB"
+            "TOMB",
+            "LECO",
+            "WALK",
+            "CRAM",
+            "SYCA",
+            "BIGC",
+            "BLUE",
+            "BLDE"
         ],
         "table:columns": [
             {
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE, OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB"
+            "description": "FLNT, MAYF, HOPB, KING, BLWA, MCRA, CUPE, POSE, OKSR, ARIK, BARC, TOOK, LEWI, CARI, COMO, SUGG, PRIN, MCDI, GUIL, REDB, LIRO, WLOU, PRPO, TECR, PRLA, MART, TOMB, LECO, WALK, CRAM, SYCA, BIGC, BLUE, BLDE"
         },
         "4": {
             "type": "application/x-parquet",

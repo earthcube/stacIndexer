@@ -15,8 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -110.8355,
-                31.9107
+                -96.5631,
+                39.1008
             ],
             [
                 -71.2874,
@@ -27,14 +27,14 @@
                 29.6893
             ],
             [
-                -96.5631,
-                39.1008
+                -110.8355,
+                31.9107
             ]
         ]
     },
     "properties": {
         "title": "hist30min",
-        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the hist30min model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: SRER, BART, OSBS, KONZ.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the 30min_Net_ecosystem_exchange variable for the hist30min model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, BART, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2022-05-01",
         "updated": null,
         "start_datetime": "2021-01-01T00:00:00Z",
@@ -67,10 +67,10 @@
             "nee",
             "30min",
             "PT30M",
-            "SRER",
+            "KONZ",
             "BART",
             "OSBS",
-            "KONZ"
+            "SRER"
         ],
         "table:columns": [
             {
@@ -227,7 +227,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SRER, BART, OSBS, KONZ"
+            "description": "KONZ, BART, OSBS, SRER"
         },
         "4": {
             "type": "application/x-parquet",

@@ -170,8 +170,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         next
       }
 
-      if (!dir.exists(file.path(catalog_config$forecast_path,names(config$variable_groups)[i],var_formal_name))){
-        dir.create(file.path(catalog_config$forecast_path,names(config$variable_groups)[i],var_formal_name))
+      if (!dir.exists(file.path(catalog_config$summaries_path,names(config$variable_groups)[i],var_formal_name))){
+        dir.create(file.path(catalog_config$summaries_path,names(config$variable_groups)[i],var_formal_name))
       }
 
       # var_data <- forecast_data_df |>
@@ -263,10 +263,14 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
           summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max)))
 
         model_min_date <- model_date_range |> pull(datetime_min)
-        model_max_date <- model_date_rang |> pull(datetime_max)
+        model_max_date <- model_date_range |> pull(datetime_max)
 
         model_reference_date <- model_date_range |> pull(reference_datetime_max)
         model_pub_date <- model_date_range |> pull(pub_datetime_max)
+
+        if(is.na(model_pub_date)){
+          model_pub_date <- model_reference_date
+        }
 
         model_var_duration_df <- summaries_duck_df |>
           filter(model_id == m,
@@ -346,9 +350,9 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                stac_id = stac_id,
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                model_description = model_description,
-                               start_date = model_min_date,
-                               end_date = model_max_date,
-                               pub_date = model_pub_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
+                               pub_date = as.Date(model_pub_date),
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
                                duration_value = duration_name,

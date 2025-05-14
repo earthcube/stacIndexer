@@ -15,6 +15,38 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
                 -96.6242,
                 34.4442
             ],
@@ -87,38 +119,6 @@
                 68.6698
             ],
             [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -87.4077,
-                32.9604
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
                 -88.1589,
                 31.8534
             ],
@@ -154,7 +154,7 @@
     },
     "properties": {
         "title": "climatology",
-        "description": "All scores for the Daily_Dissolved_oxygen variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BLUE, SYCA, WALK, CRAM, LECO, BIGC, BLDE, CARI, PRIN, MCDI, ARIK, SUGG, BARC, GUIL, COMO, LEWI, TOOK, OKSR, KING, POSE, MCRA, CUPE, MAYF, FLNT, HOPB, BLWA, TOMB, REDB, WLOU, MART, TECR, LIRO, PRLA, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Dissolved_oxygen variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: KING, POSE, MCRA, CUPE, MAYF, FLNT, HOPB, BLWA, BLUE, SYCA, WALK, CRAM, LECO, BIGC, BLDE, CARI, PRIN, MCDI, ARIK, SUGG, BARC, GUIL, COMO, LEWI, TOOK, OKSR, TOMB, REDB, WLOU, MART, TECR, LIRO, PRLA, PRPO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2025-05-04",
         "updated": "2025-05-04 22:03:14",
         "start_datetime": "2021-05-01T00:00:00Z",
@@ -187,6 +187,14 @@
             "oxygen",
             "Daily",
             "P1D",
+            "KING",
+            "POSE",
+            "MCRA",
+            "CUPE",
+            "MAYF",
+            "FLNT",
+            "HOPB",
+            "BLWA",
             "BLUE",
             "SYCA",
             "WALK",
@@ -205,14 +213,6 @@
             "LEWI",
             "TOOK",
             "OKSR",
-            "KING",
-            "POSE",
-            "MCRA",
-            "CUPE",
-            "MAYF",
-            "FLNT",
-            "HOPB",
-            "BLWA",
             "TOMB",
             "REDB",
             "WLOU",
@@ -377,7 +377,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BLUE, SYCA, WALK, CRAM, LECO, BIGC, BLDE, CARI, PRIN, MCDI, ARIK, SUGG, BARC, GUIL, COMO, LEWI, TOOK, OKSR, KING, POSE, MCRA, CUPE, MAYF, FLNT, HOPB, BLWA, TOMB, REDB, WLOU, MART, TECR, LIRO, PRLA, PRPO"
+            "description": "KING, POSE, MCRA, CUPE, MAYF, FLNT, HOPB, BLWA, BLUE, SYCA, WALK, CRAM, LECO, BIGC, BLDE, CARI, PRIN, MCDI, ARIK, SUGG, BARC, GUIL, COMO, LEWI, TOOK, OKSR, TOMB, REDB, WLOU, MART, TECR, LIRO, PRLA, PRPO"
         },
         "4": {
             "type": "application/x-parquet",

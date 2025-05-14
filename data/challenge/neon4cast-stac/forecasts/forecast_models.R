@@ -310,6 +310,10 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
         model_reference_date <- model_date_range |> pull(reference_datetime_max)
         model_pub_date <- model_date_range |> pull(pub_datetime_max)
 
+        if(is.na(model_pub_date)){
+          model_pub_date <- model_reference_date
+        }
+
         model_var_duration_df <-  forecast_duck_df |>
           filter(model_id == m,
                  variable == var_name,
@@ -392,9 +396,9 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                #model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
                                model_description = model_description,
-                               start_date = model_min_date,
-                               end_date = model_max_date,
-                               pub_date = model_pub_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
+                               pub_date = as.Date(model_pub_date),
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
                                duration_names = model_var_duration_df$duration,
