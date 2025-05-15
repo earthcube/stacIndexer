@@ -63,6 +63,46 @@
                 44.9535
             ],
             [
+                -76.56,
+                38.8901
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
                 -105.5824,
                 40.0543
             ],
@@ -105,46 +145,6 @@
             [
                 -121.9519,
                 45.8205
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -78.0418,
-                39.0337
             ],
             [
                 -84.4686,
@@ -206,9 +206,9 @@
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_latent_heat_flux variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STEI, UKFS, JORN, SCBI, KONZ, STER, DEJU, DCFS, OAES, BONA, CLBJ, YELL, NIWO, SOAP, TREE, ORNL, NOGP, LENO, GRSM, TEAK, ABBY, MLBS, WREF, SERC, HARV, GUAN, WOOD, DSNY, SJER, MOAB, PUUM, LAJA, BLAN, JERC, ONAQ, HEAL, CPER, SRER, DELA, RMNP, KONA, TOOL, TALL, BART, BARR, OSBS, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_latent_heat_flux variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: STEI, UKFS, JORN, SCBI, KONZ, STER, DEJU, DCFS, OAES, BONA, CLBJ, YELL, SERC, HARV, GUAN, WOOD, DSNY, SJER, MOAB, PUUM, LAJA, BLAN, NIWO, SOAP, TREE, ORNL, NOGP, LENO, GRSM, TEAK, ABBY, MLBS, WREF, JERC, ONAQ, HEAL, CPER, SRER, DELA, RMNP, KONA, TOOL, TALL, BART, BARR, OSBS, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
-        "updated": "2024-08-29 18:03:09",
+        "updated": "2024-08-29",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-09-19T00:00:00Z",
         "providers": [
@@ -251,6 +251,16 @@
             "BONA",
             "CLBJ",
             "YELL",
+            "SERC",
+            "HARV",
+            "GUAN",
+            "WOOD",
+            "DSNY",
+            "SJER",
+            "MOAB",
+            "PUUM",
+            "LAJA",
+            "BLAN",
             "NIWO",
             "SOAP",
             "TREE",
@@ -262,16 +272,6 @@
             "ABBY",
             "MLBS",
             "WREF",
-            "SERC",
-            "HARV",
-            "GUAN",
-            "WOOD",
-            "DSNY",
-            "SJER",
-            "MOAB",
-            "PUUM",
-            "LAJA",
-            "BLAN",
             "JERC",
             "ONAQ",
             "HEAL",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "STEI, UKFS, JORN, SCBI, KONZ, STER, DEJU, DCFS, OAES, BONA, CLBJ, YELL, NIWO, SOAP, TREE, ORNL, NOGP, LENO, GRSM, TEAK, ABBY, MLBS, WREF, SERC, HARV, GUAN, WOOD, DSNY, SJER, MOAB, PUUM, LAJA, BLAN, JERC, ONAQ, HEAL, CPER, SRER, DELA, RMNP, KONA, TOOL, TALL, BART, BARR, OSBS, UNDE"
+            "description": "STEI, UKFS, JORN, SCBI, KONZ, STER, DEJU, DCFS, OAES, BONA, CLBJ, YELL, SERC, HARV, GUAN, WOOD, DSNY, SJER, MOAB, PUUM, LAJA, BLAN, NIWO, SOAP, TREE, ORNL, NOGP, LENO, GRSM, TEAK, ABBY, MLBS, WREF, JERC, ONAQ, HEAL, CPER, SRER, DELA, RMNP, KONA, TOOL, TALL, BART, BARR, OSBS, UNDE"
         },
         "4": {
             "type": "application/x-parquet",

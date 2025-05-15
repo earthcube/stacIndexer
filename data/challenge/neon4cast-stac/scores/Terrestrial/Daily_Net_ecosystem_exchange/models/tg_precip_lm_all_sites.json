@@ -59,6 +59,94 @@
                 45.4937
             ],
             [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -99.0588,
+                35.4106
+            ],
+            [
+                -147.5026,
+                65.154
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -96.5631,
+                39.1008
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -99.1066,
+                47.1617
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -145.7514,
+                63.8811
+            ],
+            [
                 -96.6129,
                 39.1104
             ],
@@ -113,102 +201,14 @@
             [
                 -105.546,
                 40.2759
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -147.5026,
-                65.154
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -99.1066,
-                47.1617
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -110.5391,
-                44.9535
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -97.57,
-                33.4012
-            ],
-            [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
             ]
         ]
     },
     "properties": {
         "title": "tg_precip_lm_all_sites",
-        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP, OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA, OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-08-16",
-        "updated": "2024-08-29 18:03:09",
+        "updated": "2024-08-29",
         "start_datetime": "2023-11-14T00:00:00Z",
         "end_datetime": "2024-09-19T00:00:00Z",
         "providers": [
@@ -250,6 +250,28 @@
             "LENO",
             "TEAK",
             "TREE",
+            "MOAB",
+            "HARV",
+            "PUUM",
+            "BLAN",
+            "GUAN",
+            "DSNY",
+            "SJER",
+            "SERC",
+            "WOOD",
+            "LAJA",
+            "OAES",
+            "BONA",
+            "SCBI",
+            "KONZ",
+            "STER",
+            "DCFS",
+            "STEI",
+            "JORN",
+            "YELL",
+            "UKFS",
+            "CLBJ",
+            "DEJU",
             "KONA",
             "CPER",
             "UNDE",
@@ -263,29 +285,7 @@
             "BARR",
             "SRER",
             "HEAL",
-            "RMNP",
-            "OAES",
-            "BONA",
-            "SCBI",
-            "KONZ",
-            "STER",
-            "DCFS",
-            "STEI",
-            "JORN",
-            "YELL",
-            "UKFS",
-            "CLBJ",
-            "DEJU",
-            "MOAB",
-            "HARV",
-            "PUUM",
-            "BLAN",
-            "GUAN",
-            "DSNY",
-            "SJER",
-            "SERC",
-            "WOOD",
-            "LAJA"
+            "RMNP"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP, OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA"
+            "description": "GRSM, NOGP, SOAP, MLBS, ORNL, WREF, NIWO, ABBY, LENO, TEAK, TREE, MOAB, HARV, PUUM, BLAN, GUAN, DSNY, SJER, SERC, WOOD, LAJA, OAES, BONA, SCBI, KONZ, STER, DCFS, STEI, JORN, YELL, UKFS, CLBJ, DEJU, KONA, CPER, UNDE, OSBS, JERC, TOOL, BART, ONAQ, DELA, TALL, BARR, SRER, HEAL, RMNP"
         },
         "4": {
             "type": "application/x-parquet",

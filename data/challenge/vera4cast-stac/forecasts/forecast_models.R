@@ -64,10 +64,14 @@ forecast_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_b
 
 forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_forecasts,'?endpoint_override=',config$endpoint), anonymous = TRUE)
 
+var_remove <- c("DC_mgL_sample","DOC_mgL_sample","NH4_ugL_sample","TN_ugL_sample",
+                "TP_ugL_sample","DN_mgL_sample","SRP_ugL_sample","NO3NO2_ugL_sample", "DIC_mgL_sample")
+model_remove <- c('historic_mean', 'persistenceRW')
+
 # forecast_date_range <- forecast_duck_df |>
 #   summarize(across(all_of(c('datetime')), list(min = min, max = max)))
 forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  filter(variable != 'DIC_mgL_sample') |>
+  filter(!(variable %in% var_remove & model_id %in% model_remove)) |>
   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
   collect()
 
@@ -86,8 +90,8 @@ build_description <- paste0("Forecasts are the raw forecasts that includes all e
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
                       table_description = forecast_description_create,
-                      start_date = forecast_min_date,
-                      end_date = forecast_max_date,
+                      start_date = as.Date(forecast_min_date),
+                      end_date = as.Date(forecast_max_date),
                       id_value = "daily-forecasts",
                       description_string = build_description,
                       about_string = catalog_config$about_string,
@@ -268,8 +272,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                        #theme_id = var_formal_name[j],
                                        table_description = forecast_description_create,
-                                       start_date = var_min_date,
-                                       end_date = var_max_date,
+                                       start_date = as.Date(var_min_date),
+                                       end_date = as.Date(var_max_date),
                                        id_value = var_formal_name,
                                        description_string = var_description,
                                        about_string = catalog_config$about_string,
@@ -416,8 +420,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                #model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
                                model_description = model_description,
-                               start_date = model_min_date,
-                               end_date = model_max_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
                                pub_date = model_pub_date,
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
@@ -453,8 +457,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                    table_description = forecast_description_create,
-                                   start_date = group_min_date,
-                                   end_date = group_max_date,
+                                   start_date = as.Date(group_min_date),
+                                   end_date = as.Date(group_max_date),
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

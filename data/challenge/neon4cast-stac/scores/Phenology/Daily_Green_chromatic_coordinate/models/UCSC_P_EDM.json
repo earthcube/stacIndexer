@@ -19,6 +19,10 @@
                 42.5369
             ],
             [
+                -97.57,
+                33.4012
+            ],
+            [
                 -78.1395,
                 38.8929
             ],
@@ -29,10 +33,6 @@
             [
                 -95.1921,
                 39.0404
-            ],
-            [
-                -97.57,
-                33.4012
             ],
             [
                 -83.5019,
@@ -50,9 +50,9 @@
     },
     "properties": {
         "title": "UCSC_P_EDM",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: HARV, SCBI, STEI, UKFS, CLBJ, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the UCSC_P_EDM model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-10-19",
-        "updated": null,
+        "updated": "2021-10-19",
         "start_datetime": "2020-04-27T00:00:00Z",
         "end_datetime": "2021-11-22T00:00:00Z",
         "providers": [
@@ -84,10 +84,10 @@
             "Daily",
             "P1D",
             "HARV",
+            "CLBJ",
             "SCBI",
             "STEI",
             "UKFS",
-            "CLBJ",
             "GRSM",
             "BART",
             "DELA"
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "HARV, SCBI, STEI, UKFS, CLBJ, GRSM, BART, DELA"
+            "description": "HARV, CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA"
         },
         "4": {
             "type": "application/x-parquet",

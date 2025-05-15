@@ -49,9 +49,13 @@ scores_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_downl
 # scores_min_date <-  scores_date_range |> pull(datetime_min)
 # scores_max_date <-  scores_date_range |> pull(datetime_max)
 
+var_remove <- c("DC_mgL_sample","DOC_mgL_sample","NH4_ugL_sample","TN_ugL_sample",
+                "TP_ugL_sample","DN_mgL_sample","SRP_ugL_sample","NO3NO2_ugL_sample", "DIC_mgL_sample")
+model_remove <- c('historic_mean', 'persistenceRW')
+
 
 scores_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  filter(variable != 'DIC_mgL_sample') |>
+  filter(!(variable %in% var_remove & model_id %in% model_remove)) |>
   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
   collect()
 scores_min_date <- scores_date_range$datetime_min

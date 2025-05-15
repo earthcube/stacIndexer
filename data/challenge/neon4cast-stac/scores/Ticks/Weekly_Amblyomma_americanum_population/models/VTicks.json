@@ -15,16 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -95.1921,
-                39.0404
+                -84.2826,
+                35.9641
             ],
             [
                 -76.56,
@@ -35,16 +27,24 @@
                 32.9505
             ],
             [
-                -84.2826,
-                35.9641
+                -96.5631,
+                39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -95.1921,
+                39.0404
             ]
         ]
     },
     "properties": {
         "title": "VTicks",
-        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the VTicks model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: KONZ, SCBI, UKFS, SERC, TALL, ORNL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the VTicks model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: ORNL, SERC, TALL, KONZ, SCBI, UKFS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2019-04-01",
-        "updated": null,
+        "updated": "2019-04-01",
         "start_datetime": "2019-03-04T00:00:00Z",
         "end_datetime": "2019-10-28T00:00:00Z",
         "providers": [
@@ -75,12 +75,12 @@
             "amblyomma_americanum",
             "Weekly",
             "P1W",
-            "KONZ",
-            "SCBI",
-            "UKFS",
+            "ORNL",
             "SERC",
             "TALL",
-            "ORNL"
+            "KONZ",
+            "SCBI",
+            "UKFS"
         ],
         "table:columns": [
             {
@@ -237,7 +237,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "KONZ, SCBI, UKFS, SERC, TALL, ORNL"
+            "description": "ORNL, SERC, TALL, KONZ, SCBI, UKFS"
         },
         "4": {
             "type": "application/x-parquet",
