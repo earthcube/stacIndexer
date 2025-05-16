@@ -15,44 +15,48 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -119.7323,
-                37.1088
+                -105.5824,
+                40.0543
             ],
             [
-                -81.4362,
-                28.1251
+                -100.9154,
+                46.7697
             ],
             [
-                -72.1727,
-                42.5369
+                -119.2622,
+                37.0334
             ],
             [
-                -109.3883,
-                38.2483
+                -121.9519,
+                45.8205
             ],
             [
-                -155.3173,
-                19.5531
+                -122.3303,
+                45.7624
             ],
             [
-                -67.0769,
-                18.0213
+                -80.5248,
+                37.3783
             ],
             [
-                -66.8687,
-                17.9696
+                -84.2826,
+                35.9641
             ],
             [
-                -99.2413,
-                47.1282
+                -119.006,
+                37.0058
             ],
             [
-                -76.56,
-                38.8901
+                -83.5019,
+                35.689
             ],
             [
-                -78.0418,
-                39.0337
+                -89.5857,
+                45.4937
+            ],
+            [
+                -88.1612,
+                31.8539
             ],
             [
                 -110.5391,
@@ -101,6 +105,46 @@
             [
                 -96.5631,
                 39.1008
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -78.0418,
+                39.0337
             ],
             [
                 -110.8355,
@@ -157,56 +201,12 @@
             [
                 -89.5373,
                 46.2339
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -119.2622,
-                37.0334
-            ],
-            [
-                -121.9519,
-                45.8205
-            ],
-            [
-                -122.3303,
-                45.7624
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -119.006,
-                37.0058
-            ],
-            [
-                -83.5019,
-                35.689
-            ],
-            [
-                -89.5857,
-                45.4937
-            ],
-            [
-                -88.1612,
-                31.8539
             ]
         ]
     },
     "properties": {
         "title": "tg_ets",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: SJER, DSNY, HARV, MOAB, PUUM, LAJA, GUAN, WOOD, SERC, BLAN, YELL, DEJU, BONA, OAES, JORN, UKFS, STEI, CLBJ, DCFS, STER, SCBI, KONZ, SRER, JERC, CPER, DELA, HEAL, ONAQ, TALL, KONA, TOOL, BART, RMNP, BARR, OSBS, UNDE, NIWO, NOGP, SOAP, WREF, ABBY, MLBS, ORNL, TEAK, GRSM, TREE, LENO.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: NIWO, NOGP, SOAP, WREF, ABBY, MLBS, ORNL, TEAK, GRSM, TREE, LENO, YELL, DEJU, BONA, OAES, JORN, UKFS, STEI, CLBJ, DCFS, STER, SCBI, KONZ, SJER, DSNY, HARV, MOAB, PUUM, LAJA, GUAN, WOOD, SERC, BLAN, SRER, JERC, CPER, DELA, HEAL, ONAQ, TALL, KONA, TOOL, BART, RMNP, BARR, OSBS, UNDE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-19",
         "updated": "2024-08-29",
         "start_datetime": "2023-01-01T00:00:00Z",
@@ -239,16 +239,17 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "SJER",
-            "DSNY",
-            "HARV",
-            "MOAB",
-            "PUUM",
-            "LAJA",
-            "GUAN",
-            "WOOD",
-            "SERC",
-            "BLAN",
+            "NIWO",
+            "NOGP",
+            "SOAP",
+            "WREF",
+            "ABBY",
+            "MLBS",
+            "ORNL",
+            "TEAK",
+            "GRSM",
+            "TREE",
+            "LENO",
             "YELL",
             "DEJU",
             "BONA",
@@ -261,6 +262,16 @@
             "STER",
             "SCBI",
             "KONZ",
+            "SJER",
+            "DSNY",
+            "HARV",
+            "MOAB",
+            "PUUM",
+            "LAJA",
+            "GUAN",
+            "WOOD",
+            "SERC",
+            "BLAN",
             "SRER",
             "JERC",
             "CPER",
@@ -274,18 +285,7 @@
             "RMNP",
             "BARR",
             "OSBS",
-            "UNDE",
-            "NIWO",
-            "NOGP",
-            "SOAP",
-            "WREF",
-            "ABBY",
-            "MLBS",
-            "ORNL",
-            "TEAK",
-            "GRSM",
-            "TREE",
-            "LENO"
+            "UNDE"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "SJER, DSNY, HARV, MOAB, PUUM, LAJA, GUAN, WOOD, SERC, BLAN, YELL, DEJU, BONA, OAES, JORN, UKFS, STEI, CLBJ, DCFS, STER, SCBI, KONZ, SRER, JERC, CPER, DELA, HEAL, ONAQ, TALL, KONA, TOOL, BART, RMNP, BARR, OSBS, UNDE, NIWO, NOGP, SOAP, WREF, ABBY, MLBS, ORNL, TEAK, GRSM, TREE, LENO"
+            "description": "NIWO, NOGP, SOAP, WREF, ABBY, MLBS, ORNL, TEAK, GRSM, TREE, LENO, YELL, DEJU, BONA, OAES, JORN, UKFS, STEI, CLBJ, DCFS, STER, SCBI, KONZ, SJER, DSNY, HARV, MOAB, PUUM, LAJA, GUAN, WOOD, SERC, BLAN, SRER, JERC, CPER, DELA, HEAL, ONAQ, TALL, KONA, TOOL, BART, RMNP, BARR, OSBS, UNDE"
         },
         "4": {
             "type": "application/x-parquet",

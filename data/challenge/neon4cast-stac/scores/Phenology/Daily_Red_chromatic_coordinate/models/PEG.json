@@ -15,48 +15,52 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.0418,
-                39.0337
+                -106.8425,
+                32.5907
             ],
             [
-                -81.4362,
-                28.1251
+                -96.5631,
+                39.1008
             ],
             [
-                -66.8687,
-                17.9696
+                -99.0588,
+                35.4106
             ],
             [
-                -72.1727,
-                42.5369
+                -78.1395,
+                38.8929
             ],
             [
-                -67.0769,
-                18.0213
+                -89.5864,
+                45.5089
             ],
             [
-                -109.3883,
-                38.2483
+                -103.0293,
+                40.4619
             ],
             [
-                -155.3173,
-                19.5531
+                -95.1921,
+                39.0404
             ],
             [
-                -76.56,
-                38.8901
+                -110.5391,
+                44.9535
             ],
             [
-                -119.7323,
-                37.1088
+                -147.5026,
+                65.154
             ],
             [
-                -99.2413,
-                47.1282
+                -97.57,
+                33.4012
             ],
             [
-                -122.3303,
-                45.7624
+                -99.1066,
+                47.1617
+            ],
+            [
+                -145.7514,
+                63.8811
             ],
             [
                 -83.5019,
@@ -99,20 +103,48 @@
                 45.8205
             ],
             [
-                -156.6194,
-                71.2824
+                -122.3303,
+                45.7624
             ],
             [
-                -71.2874,
-                44.0639
+                -81.4362,
+                28.1251
             ],
             [
-                -104.7456,
-                40.8155
+                -66.8687,
+                17.9696
             ],
             [
-                -87.8039,
-                32.5417
+                -72.1727,
+                42.5369
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
             ],
             [
                 -149.2133,
@@ -155,58 +187,26 @@
                 46.2339
             ],
             [
-                -147.5026,
-                65.154
+                -156.6194,
+                71.2824
             ],
             [
-                -97.57,
-                33.4012
+                -71.2874,
+                44.0639
             ],
             [
-                -99.1066,
-                47.1617
+                -104.7456,
+                40.8155
             ],
             [
-                -145.7514,
-                63.8811
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -110.5391,
-                44.9535
+                -87.8039,
+                32.5417
             ]
         ]
     },
     "properties": {
         "title": "PEG",
-        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Red_chromatic_coordinate variable for the PEG model. Information for the model is provided as follows: This model was a Simple Seasonal + Exponential Smoothing Model, with the GCC targets as inputs.\n                                    The model predicts this variable at the following sites: JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2023-12-21",
         "updated": "2023-12-22",
         "start_datetime": "2021-09-12T00:00:00Z",
@@ -239,17 +239,18 @@
             "rcc_90",
             "Daily",
             "P1D",
-            "BLAN",
-            "DSNY",
-            "GUAN",
-            "HARV",
-            "LAJA",
-            "MOAB",
-            "PUUM",
-            "SERC",
-            "SJER",
-            "WOOD",
-            "ABBY",
+            "JORN",
+            "KONZ",
+            "OAES",
+            "SCBI",
+            "STEI",
+            "STER",
+            "UKFS",
+            "YELL",
+            "BONA",
+            "CLBJ",
+            "DCFS",
+            "DEJU",
             "GRSM",
             "LENO",
             "MLBS",
@@ -260,10 +261,17 @@
             "TEAK",
             "TREE",
             "WREF",
-            "BARR",
-            "BART",
-            "CPER",
-            "DELA",
+            "ABBY",
+            "DSNY",
+            "GUAN",
+            "HARV",
+            "LAJA",
+            "MOAB",
+            "PUUM",
+            "SERC",
+            "SJER",
+            "WOOD",
+            "BLAN",
             "HEAL",
             "JERC",
             "KONA",
@@ -274,18 +282,10 @@
             "TALL",
             "TOOL",
             "UNDE",
-            "BONA",
-            "CLBJ",
-            "DCFS",
-            "DEJU",
-            "JORN",
-            "KONZ",
-            "OAES",
-            "SCBI",
-            "STEI",
-            "STER",
-            "UKFS",
-            "YELL"
+            "BARR",
+            "BART",
+            "CPER",
+            "DELA"
         ],
         "table:columns": [
             {
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BLAN, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, ABBY, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, BARR, BART, CPER, DELA, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BONA, CLBJ, DCFS, DEJU, JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL"
+            "description": "JORN, KONZ, OAES, SCBI, STEI, STER, UKFS, YELL, BONA, CLBJ, DCFS, DEJU, GRSM, LENO, MLBS, NIWO, NOGP, ORNL, SOAP, TEAK, TREE, WREF, ABBY, DSNY, GUAN, HARV, LAJA, MOAB, PUUM, SERC, SJER, WOOD, BLAN, HEAL, JERC, KONA, ONAQ, OSBS, RMNP, SRER, TALL, TOOL, UNDE, BARR, BART, CPER, DELA"
         },
         "4": {
             "type": "application/x-parquet",
