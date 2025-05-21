@@ -15,6 +15,30 @@
         "type": "MultiPoint",
         "coordinates": [
             [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0177,
+                29.6878
+            ],
+            [
+                -88.1589,
+                31.8534
+            ],
+            [
                 -84.4374,
                 31.1854
             ],
@@ -23,46 +47,22 @@
                 32.5415
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -99.2531,
-                47.1298
-            ],
-            [
                 -99.1139,
                 47.1591
             ],
             [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -88.1589,
-                31.8534
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: FLNT, BLWA, CRAM, TOOK, BARC, SUGG, PRPO, PRLA, LIRO, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-16",
-        "updated": "2024-08-23 16:24:13",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: CRAM, LIRO, BARC, TOOK, SUGG, TOMB, FLNT, BLWA, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-05-15",
+        "updated": "2025-05-15",
         "start_datetime": "2023-01-01T00:00:00Z",
-        "end_datetime": "2024-09-18T00:00:00Z",
+        "end_datetime": "2025-06-17T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts/tg_randfor/train",
@@ -91,16 +91,16 @@
             "chla",
             "Daily",
             "P1D",
+            "CRAM",
+            "LIRO",
+            "BARC",
+            "TOOK",
+            "SUGG",
+            "TOMB",
             "FLNT",
             "BLWA",
-            "CRAM",
-            "TOOK",
-            "BARC",
-            "SUGG",
-            "PRPO",
             "PRLA",
-            "LIRO",
-            "TOMB"
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -217,7 +217,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "FLNT, BLWA, CRAM, TOOK, BARC, SUGG, PRPO, PRLA, LIRO, TOMB"
+            "description": "CRAM, LIRO, BARC, TOOK, SUGG, TOMB, FLNT, BLWA, PRLA, PRPO"
         },
         "4": {
             "type": "application/x-parquet",

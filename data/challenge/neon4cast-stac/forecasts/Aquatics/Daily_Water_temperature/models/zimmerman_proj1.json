@@ -19,8 +19,16 @@
                 46.2097
             ],
             [
-                -89.7048,
-                45.9983
+                -82.0084,
+                29.676
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -82.0177,
+                29.6878
             ],
             [
                 -99.1139,
@@ -31,26 +39,18 @@
                 47.1298
             ],
             [
-                -82.0177,
-                29.6878
-            ],
-            [
-                -82.0084,
-                29.676
-            ],
-            [
-                -149.6106,
-                68.6307
+                -89.7048,
+                45.9983
             ]
         ]
     },
     "properties": {
         "title": "zimmerman_proj1",
-        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: CRAM, LIRO, PRLA, PRPO, SUGG, BARC, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-05-02",
-        "updated": "2025-05-02 14:04:00",
+        "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: CRAM, BARC, TOOK, SUGG, PRLA, PRPO, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-05-15",
+        "updated": "2025-05-15",
         "start_datetime": "2024-02-28T00:00:00Z",
-        "end_datetime": "2025-05-03T00:00:00Z",
+        "end_datetime": "2025-06-18T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/poz3615/NEON-forecast-challenge-workshop/blob/main/Submit_forecast/forecast_code_template.Rmd",
@@ -80,12 +80,12 @@
             "Daily",
             "P1D",
             "CRAM",
-            "LIRO",
+            "BARC",
+            "TOOK",
+            "SUGG",
             "PRLA",
             "PRPO",
-            "SUGG",
-            "BARC",
-            "TOOK"
+            "LIRO"
         ],
         "table:columns": [
             {
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CRAM, LIRO, PRLA, PRPO, SUGG, BARC, TOOK"
+            "description": "CRAM, BARC, TOOK, SUGG, PRLA, PRPO, LIRO"
         },
         "4": {
             "type": "application/x-parquet",

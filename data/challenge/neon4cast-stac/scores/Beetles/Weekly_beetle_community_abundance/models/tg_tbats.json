@@ -63,6 +63,46 @@
                 44.9535
             ],
             [
+                -76.56,
+                38.8901
+            ],
+            [
+                -66.8687,
+                17.9696
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -81.4362,
+                28.1251
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -78.0418,
+                39.0337
+            ],
+            [
+                -109.3883,
+                38.2483
+            ],
+            [
                 -88.1612,
                 31.8539
             ],
@@ -105,46 +145,6 @@
             [
                 -105.5824,
                 40.0543
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -66.8687,
-                17.9696
-            ],
-            [
-                -72.1727,
-                42.5369
-            ],
-            [
-                -81.4362,
-                28.1251
-            ],
-            [
-                -99.2413,
-                47.1282
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
-                -78.0418,
-                39.0337
-            ],
-            [
-                -109.3883,
-                38.2483
             ],
             [
                 -87.8039,
@@ -206,7 +206,7 @@
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: DEJU, CLBJ, KONZ, STER, BONA, JORN, SCBI, DCFS, OAES, STEI, UKFS, YELL, LENO, TEAK, NOGP, MLBS, ABBY, WREF, SOAP, GRSM, TREE, ORNL, NIWO, SERC, GUAN, HARV, DSNY, WOOD, LAJA, PUUM, SJER, BLAN, MOAB, DELA, RMNP, TALL, BARR, TOOL, BART, ONAQ, JERC, HEAL, KONA, CPER, UNDE, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: DEJU, CLBJ, KONZ, STER, BONA, JORN, SCBI, DCFS, OAES, STEI, UKFS, YELL, SERC, GUAN, HARV, DSNY, WOOD, LAJA, PUUM, SJER, BLAN, MOAB, LENO, TEAK, NOGP, MLBS, ABBY, WREF, SOAP, GRSM, TREE, ORNL, NIWO, DELA, RMNP, TALL, BARR, TOOL, BART, ONAQ, JERC, HEAL, KONA, CPER, UNDE, OSBS, SRER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2024-07-14",
         "updated": "2024-08-23",
         "start_datetime": "2021-05-17T00:00:00Z",
@@ -251,6 +251,16 @@
             "STEI",
             "UKFS",
             "YELL",
+            "SERC",
+            "GUAN",
+            "HARV",
+            "DSNY",
+            "WOOD",
+            "LAJA",
+            "PUUM",
+            "SJER",
+            "BLAN",
+            "MOAB",
             "LENO",
             "TEAK",
             "NOGP",
@@ -262,16 +272,6 @@
             "TREE",
             "ORNL",
             "NIWO",
-            "SERC",
-            "GUAN",
-            "HARV",
-            "DSNY",
-            "WOOD",
-            "LAJA",
-            "PUUM",
-            "SJER",
-            "BLAN",
-            "MOAB",
             "DELA",
             "RMNP",
             "TALL",
@@ -442,7 +442,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "DEJU, CLBJ, KONZ, STER, BONA, JORN, SCBI, DCFS, OAES, STEI, UKFS, YELL, LENO, TEAK, NOGP, MLBS, ABBY, WREF, SOAP, GRSM, TREE, ORNL, NIWO, SERC, GUAN, HARV, DSNY, WOOD, LAJA, PUUM, SJER, BLAN, MOAB, DELA, RMNP, TALL, BARR, TOOL, BART, ONAQ, JERC, HEAL, KONA, CPER, UNDE, OSBS, SRER"
+            "description": "DEJU, CLBJ, KONZ, STER, BONA, JORN, SCBI, DCFS, OAES, STEI, UKFS, YELL, SERC, GUAN, HARV, DSNY, WOOD, LAJA, PUUM, SJER, BLAN, MOAB, LENO, TEAK, NOGP, MLBS, ABBY, WREF, SOAP, GRSM, TREE, ORNL, NIWO, DELA, RMNP, TALL, BARR, TOOL, BART, ONAQ, JERC, HEAL, KONA, CPER, UNDE, OSBS, SRER"
         },
         "4": {
             "type": "application/x-parquet",

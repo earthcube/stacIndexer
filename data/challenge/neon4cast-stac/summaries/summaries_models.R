@@ -314,6 +314,10 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
         idx = which(registered_model_id$model_id == m)
 
+        if(is.na(model_pub_date)){
+            model_pub_date <- model_reference_date
+          }
+
         if (is.null(registered_model_id$`Web link to model code`[idx])){
           model_code_link <- 'https://projects.ecoforecast.org/neon4cast-ci/'
         } else{

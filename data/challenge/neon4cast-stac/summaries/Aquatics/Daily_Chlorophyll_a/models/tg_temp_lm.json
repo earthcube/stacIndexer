@@ -15,40 +15,40 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -84.4374,
-                31.1854
+                -88.1589,
+                31.8534
             ],
             [
                 -89.7048,
                 45.9983
             ],
             [
-                -99.1139,
-                47.1591
+                -82.0177,
+                29.6878
+            ],
+            [
+                -84.4374,
+                31.1854
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
-                -82.0177,
-                29.6878
+                -99.1139,
+                47.1591
             ],
             [
-                -88.1589,
-                31.8534
+                -89.4737,
+                46.2097
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -82.0084,
+                29.676
             ],
             [
                 -149.6106,
@@ -58,11 +58,11 @@
     },
     "properties": {
         "title": "tg_temp_lm",
-        "description": "All summaries for the Daily_Chlorophyll_a variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: BARC, BLWA, CRAM, FLNT, LIRO, PRLA, PRPO, SUGG, TOMB, TOOK.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
-        "datetime": "2024-02-03",
-        "updated": "2024-07-02",
+        "description": "All summaries for the Daily_Chlorophyll_a variable for the tg_temp_lm model. Information for the model is provided as follows: The tg_temp_lm model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation..\n                                    The model predicts this variable at the following sites: TOMB, LIRO, SUGG, FLNT, PRPO, PRLA, CRAM, BLWA, BARC, TOOK.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
+        "datetime": "2025-05-16",
+        "updated": "2025-05-17",
         "start_datetime": "2023-11-14T00:00:00Z",
-        "end_datetime": "2024-03-08T00:00:00Z",
+        "end_datetime": "2025-06-19T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
@@ -91,15 +91,15 @@
             "chla",
             "Daily",
             "P1D",
-            "BARC",
-            "BLWA",
-            "CRAM",
-            "FLNT",
-            "LIRO",
-            "PRLA",
-            "PRPO",
-            "SUGG",
             "TOMB",
+            "LIRO",
+            "SUGG",
+            "FLNT",
+            "PRPO",
+            "PRLA",
+            "CRAM",
+            "BLWA",
+            "BARC",
             "TOOK"
         ],
         "table:columns": [
@@ -169,6 +169,11 @@
                 "description": "unique identifier for the forecast project"
             },
             {
+                "name": "reference_date",
+                "type": "date32[day]",
+                "description": "date that the forecast was initiated"
+            },
+            {
                 "name": "duration",
                 "type": "string",
                 "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
@@ -177,11 +182,6 @@
                 "name": "variable",
                 "type": "string",
                 "description": "name of forecasted variable"
-            },
-            {
-                "name": "model_id",
-                "type": "string",
-                "description": "unique model identifier"
             }
         ]
     },
@@ -244,10 +244,16 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "TOMB, LIRO, SUGG, FLNT, PRPO, PRLA, CRAM, BLWA, BARC, TOOK"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll_a",
             "href": "s3://anonymous@/project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@/project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3:///project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@/project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_temp_lm?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3:///project_id=neon4cast/duration=P1D/variable=chla/model_id=tg_temp_lm\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

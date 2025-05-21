@@ -19,14 +19,6 @@
                 45.9983
             ],
             [
-                -99.2531,
-                47.1298
-            ],
-            [
-                -99.1139,
-                47.1591
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
@@ -35,22 +27,30 @@
                 29.676
             ],
             [
+                -89.4737,
+                46.2097
+            ],
+            [
                 -149.6106,
                 68.6307
             ],
             [
-                -89.4737,
-                46.2097
+                -99.1139,
+                47.1591
+            ],
+            [
+                -99.2531,
+                47.1298
             ]
         ]
     },
     "properties": {
         "title": "mlp1_wtempforecast_LF",
-        "description": "All forecasts for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: LIRO, PRPO, PRLA, SUGG, BARC, TOOK, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-05-02",
-        "updated": "2025-05-02 14:03:44",
+        "description": "All forecasts for the Daily_Water_temperature variable for the mlp1_wtempforecast_LF model. Information for the model is provided as follows: Modelling for water temperature using a single layer neural network (mlp() in tidymodels). Used relative humidity, precipitation flux and air temperature as drivers. Hypertuned parameters for models to be run with 100 epochs and penalty value of 0.01..\n                                    The model predicts this variable at the following sites: LIRO, SUGG, BARC, CRAM, TOOK, PRLA, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-05-15",
+        "updated": "2025-05-15",
         "start_datetime": "2024-03-01T00:00:00Z",
-        "end_datetime": "2025-05-03T00:00:00Z",
+        "end_datetime": "2025-06-17T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/lindsey-finks/NEON-forecast-challenge-workshop",
@@ -80,12 +80,12 @@
             "Daily",
             "P1D",
             "LIRO",
-            "PRPO",
-            "PRLA",
             "SUGG",
             "BARC",
+            "CRAM",
             "TOOK",
-            "CRAM"
+            "PRLA",
+            "PRPO"
         ],
         "table:columns": [
             {
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "LIRO, PRPO, PRLA, SUGG, BARC, TOOK, CRAM"
+            "description": "LIRO, SUGG, BARC, CRAM, TOOK, PRLA, PRPO"
         },
         "4": {
             "type": "application/x-parquet",

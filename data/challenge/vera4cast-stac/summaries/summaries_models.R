@@ -62,8 +62,8 @@ build_description <- paste0("Summaries are the forecasts statistics of the raw f
 stac4cast::build_forecast_scores(table_schema = summaries_theme_df,
                                  #theme_id = 'Forecasts',
                                  table_description = summaries_description_create,
-                                 start_date = summaries_min_date,
-                                 end_date = summaries_max_date,
+                                 start_date = as.Date(summaries_min_date),
+                                 end_date = as.Date(summaries_max_date),
                                  id_value = "summaries",
                                  description_string = build_description,
                                  about_string = catalog_config$about_string,
@@ -219,8 +219,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       stac4cast::build_group_variables(table_schema = summaries_theme_df,
                                        #theme_id = var_formal_name[j],
                                        table_description = summaries_description_create,
-                                       start_date = var_min_date,
-                                       end_date = var_max_date,
+                                       start_date = as.Date(var_min_date),
+                                       end_date = as.Date(var_max_date),
                                        id_value = var_formal_name,
                                        description_string = var_description,
                                        about_string = catalog_config$about_string,
@@ -311,6 +311,10 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
         idx = which(registered_model_id$model_id == m)
 
+        if(is.na(model_pub_date)){
+            model_pub_date <- model_reference_date
+          }
+
         model_description <- paste0("This page includes summaries for the ",
                                     var_formal_name,
                                     ' variable for the ',
@@ -361,8 +365,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                stac_id = stac_id,
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
-                               start_date = model_min_date,
-                               end_date = model_max_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
                                pub_date = model_pub_date,
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
@@ -398,8 +402,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = summaries_theme_df,
                                    table_description = summaries_description_create,
-                                   start_date = group_min_date,
-                                   end_date = group_max_date,
+                                   start_date = as.Date(group_min_date),
+                                   end_date = as.Date(group_max_date),
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

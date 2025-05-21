@@ -15,16 +15,12 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
                 -82.0177,
                 29.6878
             ],
             [
-                -149.6106,
-                68.6307
+                -82.0084,
+                29.676
             ],
             [
                 -89.4737,
@@ -39,6 +35,10 @@
                 47.1591
             ],
             [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -89.7048,
                 45.9983
             ]
@@ -46,11 +46,11 @@
     },
     "properties": {
         "title": "bee_bake_RFModel_2024",
-        "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: BARC, SUGG, TOOK, CRAM, PRPO, PRLA, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2025-05-02",
-        "updated": "2025-05-02 14:03:25",
+        "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: SUGG, BARC, CRAM, PRPO, PRLA, TOOK, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-05-15",
+        "updated": "2025-05-15",
         "start_datetime": "2024-02-29T00:00:00Z",
-        "end_datetime": "2025-05-03T00:00:00Z",
+        "end_datetime": "2025-06-17T00:00:00Z",
         "providers": [
             {
                 "url": null,
@@ -79,12 +79,12 @@
             "temperature",
             "Daily",
             "P1D",
-            "BARC",
             "SUGG",
-            "TOOK",
+            "BARC",
             "CRAM",
             "PRPO",
             "PRLA",
+            "TOOK",
             "LIRO"
         ],
         "table:columns": [
@@ -202,7 +202,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "BARC, SUGG, TOOK, CRAM, PRPO, PRLA, LIRO"
+            "description": "SUGG, BARC, CRAM, PRPO, PRLA, TOOK, LIRO"
         },
         "4": {
             "type": "application/x-parquet",

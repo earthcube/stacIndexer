@@ -15,20 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -97.57,
-                33.4012
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -95.1921,
-                39.0404
+                -72.1727,
+                42.5369
             ],
             [
                 -83.5019,
@@ -43,14 +31,26 @@
                 32.5417
             ],
             [
-                -72.1727,
-                42.5369
+                -97.57,
+                33.4012
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -95.1921,
+                39.0404
             ]
         ]
     },
     "properties": {
         "title": "EFI_U_P",
-        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the EFI_U_P model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA, HARV.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+        "description": "All scores for the Daily_Green_chromatic_coordinate variable for the EFI_U_P model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: HARV, GRSM, BART, DELA, CLBJ, SCBI, STEI, UKFS.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
         "datetime": "2021-05-03",
         "updated": "2021-05-03",
         "start_datetime": "2021-05-04T00:00:00Z",
@@ -83,14 +83,14 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "CLBJ",
-            "SCBI",
-            "STEI",
-            "UKFS",
+            "HARV",
             "GRSM",
             "BART",
             "DELA",
-            "HARV"
+            "CLBJ",
+            "SCBI",
+            "STEI",
+            "UKFS"
         ],
         "table:columns": [
             {
@@ -247,7 +247,7 @@
             "type": "text/plain",
             "title": "Model Sites",
             "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
-            "description": "CLBJ, SCBI, STEI, UKFS, GRSM, BART, DELA, HARV"
+            "description": "HARV, GRSM, BART, DELA, CLBJ, SCBI, STEI, UKFS"
         },
         "4": {
             "type": "application/x-parquet",
