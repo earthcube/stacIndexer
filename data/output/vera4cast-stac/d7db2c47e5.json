@@ -3,26 +3,25 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:vera4cast-stac:559c036e28",
-    "name": "fableNNETAR",
-    "description": "All forecasts for the Daily_oxygen_concentration variable for the fableNNETAR model. Information for the model is provided as follows: autoregressive neural net fit using the NNETAR() function in the fable R package.\n                                    The model predicts this variable at the following sites: bvre, fcre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2024-04-29",
-    "datetime": "2024-04-29",
-    "updated": "2024-04-30 04:03:46",
-    "start_datetime": "2024-04-26T00:00:00Z",
-    "end_datetime": "2024-06-03T00:00:00Z",
+    "@id": "urn:vera4cast-stac:bc8006bf6d",
+    "name": "flareSimstrat",
+    "description": "All forecasts for the Daily_Water_temperature variable for the flareSimstrat model. Information for the model is provided as follows: FLARE-Simstrat combines the 1D process-based model Simstrat, a data assimilation algorithm (EnKF) and NOAA driver weather data to make predictions of water column temperatures..\n                                    The model predicts this variable at the following sites: fcre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2025-05-22",
+    "datetime": "2025-05-22",
+    "updated": "2025-05-22 12:46:57",
+    "start_datetime": "2024-01-21T00:00:00Z",
+    "end_datetime": "2025-06-20T00:00:00Z",
     "keywords": [
         "Forecasts",
         "vera4cast",
-        "Chemical",
-        "fableNNETAR",
-        "oxygen_concentration",
-        "DO_mgL_mean",
+        "Physical",
+        "flareSimstrat",
+        "Water_temperature",
+        "Temp_C_mean",
         "Daily",
         "P1D",
-        "bvre",
         "fcre",
-        "machine learning"
+        "process based"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -102,14 +101,14 @@
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/fableNNETAR.json",
+            "contentUrl": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/flareSimstrat.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/fableNNETAR.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/flareSimstrat.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://github.com/melofton/vera4casts/blob/main/code/function_library/predict/fableNNETAR.R",
+            "contentUrl": "https://github.com/FLARE-forecast/FCRE-forecast-code/blob/main/workflows/ler/combined_workflow_Simstrat.R",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
@@ -118,15 +117,15 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "bvre, fcre",
+            "description": "fcre",
             "name": "Model Sites"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR?endpoint_override=amnh1.osn.mghpcc.org",
+            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=flareSimstrat?endpoint_override=amnh1.osn.mghpcc.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR?endpoint_override=amnh1.osn.mghpcc.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'amnh1.osn.mghpcc.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=DO_mgL_mean/model_id=fableNNETAR\"\ncon.read_parquet(path + \"/**\")",
-            "name": "Database Access for Daily oxygen_concentration"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=flareSimstrat?endpoint_override=amnh1.osn.mghpcc.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'amnh1.osn.mghpcc.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=flareSimstrat\"\ncon.read_parquet(path + \"/**\")",
+            "name": "Database Access for Daily Water_temperature"
         }
     ],
     "spatialCoverage": {
@@ -134,12 +133,7 @@
         "geo": [
             {
                 "@type": "GeoShape",
-                "box": "37.3032,-79.8372 37.3129,-79.8159"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.3129,
-                "longitude": -79.8159
+                "box": "37.3032,-79.8372 37.3032,-79.8372"
             },
             {
                 "@type": "GeoCoordinates",
