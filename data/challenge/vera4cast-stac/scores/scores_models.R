@@ -224,9 +224,9 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       stac4cast::build_group_variables(table_schema = scores_theme_df,
                                        #theme_id = var_formal_name[j],
                                        table_description = scores_description_create,
-                                       start_date = var_min_date,
+                                       start_date = as.Date(var_min_date),
                                        end_date = as.Date(var_max_date),
-                                       id_value = as.Date(var_formal_name),
+                                       id_value = var_formal_name,
                                        description_string = var_description,
                                        about_string = catalog_config$about_string,
                                        about_title = catalog_config$about_title,
@@ -313,7 +313,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         if(is.na(model_pub_date)){
             model_pub_date <- model_reference_date
           }
-        
+
         stac_id <- paste0(m,'_',var_name,'_',duration_name,'_scores')
 
         model_description <- paste0("All scores for the ",
