@@ -11,7 +11,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.auto.arima.json"
+            "href": "./models/LSTM.json"
         },
         {
             "rel": "item",
@@ -21,12 +21,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/asl.persistence.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.ets.json"
+            "href": "./models/asl.auto.arima.json"
         },
         {
             "rel": "item",
@@ -36,12 +31,22 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/LSTM.json"
+            "href": "./models/asl.met.lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.ets.json"
         },
         {
             "rel": "item",
             "type": "application/json",
             "href": "./models/asl.tbats.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.persistence.json"
         },
         {
             "rel": "item",
@@ -56,17 +61,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/fableETS.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/glm_aed_flare_v3.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/glm_aed_v1.json"
+            "href": "./models/fableETS.json"
         },
         {
             "rel": "item",
@@ -76,17 +76,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/persistenceRW.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.met.lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/asl.temp.lm.json"
+            "href": "./models/glm_aed_v1.json"
         },
         {
             "rel": "item",
@@ -97,6 +87,16 @@
             "rel": "item",
             "type": "application/json",
             "href": "./models/monthly_mean.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/persistenceRW.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/asl.temp.lm.json"
         },
         {
             "rel": "parent",
@@ -146,7 +146,7 @@
             "interval": [
                 [
                     "2023-10-01T00:00:00Z",
-                    "2025-05-29T00:00:00Z"
+                    "2025-05-30T00:00:00Z"
                 ]
             ]
         }
