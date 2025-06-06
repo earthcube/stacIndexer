@@ -3,25 +3,26 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:vera4cast-stac:d67762aed7",
-    "name": "glm_aed_v1",
-    "description": "All forecasts for the Daily_Water_temperature variable for the glm_aed_v1 model. Information for the model is provided as follows: GLM-AED with Ensemble Kalman Filter as implemented in FLARE.  This version used DA to update model states but not model parameters..\n                                    The model predicts this variable at the following sites: fcre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2024-10-24",
-    "datetime": "2024-10-24",
-    "updated": "2024-10-25 04:20:22",
-    "start_datetime": "2023-10-14T00:00:00Z",
-    "end_datetime": "2024-11-27T00:00:00Z",
+    "@id": "urn:vera4cast-stac:221787bb27",
+    "name": "climatology",
+    "description": "All forecasts for the Daily_Secchi variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: fcre, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2025-06-03",
+    "datetime": "2025-06-03",
+    "updated": "2025-06-03 12:46:21",
+    "start_datetime": "2024-02-06T00:00:00Z",
+    "end_datetime": "2025-07-09T00:00:00Z",
     "keywords": [
         "Forecasts",
         "vera4cast",
         "Physical",
-        "glm_aed_v1",
-        "Water_temperature",
-        "Temp_C_mean",
+        "climatology",
+        "Secchi",
+        "Secchi_m_sample",
         "Daily",
         "P1D",
         "fcre",
-        "process based"
+        "bvre",
+        "empirical"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -101,14 +102,14 @@
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/glm_aed_v1.json",
+            "contentUrl": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/climatology.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/glm_aed_v1.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/climatology.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://github.com/FLARE-forecast/FCRE-forecast-code/blob/main/workflows/glm_aed/combined_run_aed.R",
+            "contentUrl": "https://github.com/LTREB-reservoirs/vera4cast/blob/main/models/run_terrestrial_baselines.R",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
@@ -117,15 +118,15 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "fcre",
+            "description": "fcre, bvre",
             "name": "Model Sites"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=glm_aed_v1?endpoint_override=amnh1.osn.mghpcc.org",
+            "contentUrl": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=climatology?endpoint_override=amnh1.osn.mghpcc.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=glm_aed_v1?endpoint_override=amnh1.osn.mghpcc.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'amnh1.osn.mghpcc.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Temp_C_mean/model_id=glm_aed_v1\"\ncon.read_parquet(path + \"/**\")",
-            "name": "Database Access for Daily Water_temperature"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=climatology?endpoint_override=amnh1.osn.mghpcc.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'amnh1.osn.mghpcc.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/variable=Secchi_m_sample/model_id=climatology\"\ncon.read_parquet(path + \"/**\")",
+            "name": "Database Access for Daily Secchi"
         }
     ],
     "spatialCoverage": {
@@ -133,12 +134,17 @@
         "geo": [
             {
                 "@type": "GeoShape",
-                "box": "37.3032,-79.8372 37.3032,-79.8372"
+                "box": "37.3032,-79.8372 37.3129,-79.8159"
             },
             {
                 "@type": "GeoCoordinates",
                 "latitude": 37.3032,
                 "longitude": -79.8372
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.3129,
+                "longitude": -79.8159
             }
         ],
         "additionalProperty": [
