@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "urn:vera4cast-stac:4a184bc7aa",
     "name": "persistenceRW",
-    "description": "All forecasts for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: bvre, fcre, tubr.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: fcre, tubr, bvre.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-01-10",
     "datetime": "2025-01-10",
     "updated": "2025-01-13 07:06:28",
@@ -20,9 +20,9 @@
         "Temp_C_mean",
         "Daily",
         "P1D",
-        "bvre",
         "fcre",
         "tubr",
+        "bvre",
         "empirical"
     ],
     "citation": {
@@ -119,7 +119,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/vera4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "bvre, fcre, tubr",
+            "description": "fcre, tubr, bvre",
             "name": "Model Sites"
         },
         {
@@ -139,11 +139,6 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3129,
-                "longitude": -79.8159
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 37.3032,
                 "longitude": -79.8372
             },
@@ -151,6 +146,11 @@
                 "@type": "GeoCoordinates",
                 "latitude": 37.3078,
                 "longitude": -79.8357
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.3129,
+                "longitude": -79.8159
             }
         ],
         "additionalProperty": [
