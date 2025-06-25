@@ -1,6 +1,7 @@
 import logging
 import os
 import shutil
+from urllib.parse import urlparse
 
 import pystac
 import requests
@@ -76,16 +77,17 @@ def save_dict_to_file(repo, root, collection, item):
     dists = []
 
     href = item.get_self_href()
-    if href:
-        try:
-            item_path = Path(href).resolve()
-            item_file_path = str(item_path)
-        except Exception as e:
-            print(f"[WARN] Failed to resolve item path for {item.id}: {e}")
-            item_file_path = "unknown"
+    parsed = urlparse(href)
+
+    if parsed.scheme in ("http", "https"):
+        # Don't try to resolve a URL
+        item_file_path = href
     else:
-        print(f"[WARN] item.get_self_href() is None for item {item.id}")
-        item_file_path = "unknown"
+        try:
+            item_file_path = str(Path(href).resolve())
+        except Exception as e:
+            print(f"[WARN] Cannot resolve item path: {e}")
+            item_file_path = href or "unknown"
 
     dists.append({
         "@type": "DataDownload",
