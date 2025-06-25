@@ -15,6 +15,7 @@ from pystac_client import Client
 # from convertas import convert_array_to_string
 from defs import convertas
 from defs import datacitation
+from pathlib import Path
 
 
 def save_dict_to_file(repo, root, collection, item):
@@ -39,22 +40,10 @@ def save_dict_to_file(repo, root, collection, item):
     ic(item.common_metadata.gsd)
     ic(item.stac_extensions)
 
-    #ic(asset)
-
     max_lng, max_lat, min_lng, min_lat = item.bbox
     level = 13
 
     cells = bb2s2(min_lat, max_lat, min_lng, max_lng, level)
-    # ic(cells)
-
-    # print('{} ({})'.format( asset["href"], asset["type"]))
-
-    # NOTE: note really needed since the table extension is used.
-    # if asset["type"] == "application/x-parquet":
-    #     read_parquet(asset["href"])
-
-    # asset = item.assets['parquet_items']
-    # ic(asset.to_dict())
 
     doc = {}
     context = {"@vocab": "https://schema.org/"}
@@ -85,6 +74,16 @@ def save_dict_to_file(repo, root, collection, item):
     doc["citation"] = datacitation.citation()
 
     dists = []
+
+    item_file_path = str(Path(item.get_self_href()).resolve())
+    dists.append({
+        "@type": "DataDownload",
+        "contentUrl": local_path_to_stac_browser_url(item_file_path),
+        "encodingFormat": "application/html",
+        "description": "STAC Item metadata Link",
+        "name": "STAC Item Link"
+    })
+
     for asset_key in assets:
         asset = assets[asset_key].to_dict()
         dist = {"@type": "DataDownload"}
@@ -370,6 +369,14 @@ def download_folder_from_github(repo, folder_path, local_folder_path):
     else:
         print(f"Failed to retrieve folder contents: {response.status_code}")
         return
+
+def local_path_to_stac_browser_url(local_path: str) -> str:
+    marker = "raw.githubusercontent.com/"
+    idx = local_path.find(marker)
+    if idx == -1:
+        raise ValueError("raw.githubusercontent.com not found in path")
+    raw_path = local_path[idx:]
+    return f"https://radiantearth.github.io/stac-browser/#/external/{raw_path}"
 
 def walk_stac(cf):
 
