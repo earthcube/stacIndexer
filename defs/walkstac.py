@@ -75,7 +75,18 @@ def save_dict_to_file(repo, root, collection, item):
 
     dists = []
 
-    item_file_path = str(Path(item.get_self_href()).resolve())
+    href = item.get_self_href()
+    if href:
+        try:
+            item_path = Path(href).resolve()
+            item_file_path = str(item_path)
+        except Exception as e:
+            print(f"[WARN] Failed to resolve item path for {item.id}: {e}")
+            item_file_path = "unknown"
+    else:
+        print(f"[WARN] item.get_self_href() is None for item {item.id}")
+        item_file_path = "unknown"
+
     dists.append({
         "@type": "DataDownload",
         "contentUrl": local_path_to_stac_browser_url(item_file_path),
@@ -383,9 +394,9 @@ def walk_stac(cf):
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
 
-    download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
-    download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
-    download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
+    # download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
+    # download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+    # download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
     # Resolve schema issues
     replace_in_folder('./data/challenge', '"href": []', '"href": "https://github.com/radiantearth"')
