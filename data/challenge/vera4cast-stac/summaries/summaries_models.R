@@ -30,7 +30,13 @@ summaries_description_create <- data.frame(reference_datetime = 'datetime that t
 
 summaries_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) #|>
 
+
+var_remove <- c("DC_mgL_sample","DOC_mgL_sample","NH4_ugL_sample","TN_ugL_sample",
+                "TP_ugL_sample","DN_mgL_sample","SRP_ugL_sample","NO3NO2_ugL_sample", "DIC_mgL_sample")
+model_remove <- c('historic_mean', 'persistenceRW')
+
 summaries_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(!(variable %in% var_remove & model_id %in% model_remove)) |>
   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
   collect()
 
@@ -39,23 +45,25 @@ theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_buc
   collect()
 
 summaries_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(variable != 'DIC_mgL_sample') |>
   distinct(site_id) |>
   collect()
 
-summaries_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
-  collect()
-#forecast_date_range <- forecast_data_df |> dplyr::summarise(min(date),max(date))
-summaries_min_date <- summaries_date_range$datetime_min
-summaries_max_date <- summaries_date_range$datetime_max
+summaries_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_summaries,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+
+# summaries_date_range <- summaries_duck_df |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+summaries_min_date <-  summaries_date_range |> pull(datetime_min)
+summaries_max_date <-  summaries_date_range |> pull(datetime_max)
 
 build_description <- paste0("Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals). You can access the summaries at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
 stac4cast::build_forecast_scores(table_schema = summaries_theme_df,
                                  #theme_id = 'Forecasts',
                                  table_description = summaries_description_create,
-                                 start_date = summaries_min_date,
-                                 end_date = summaries_max_date,
+                                 start_date = as.Date(summaries_min_date),
+                                 end_date = as.Date(summaries_max_date),
                                  id_value = "summaries",
                                  description_string = build_description,
                                  about_string = catalog_config$about_string,
@@ -211,8 +219,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       stac4cast::build_group_variables(table_schema = summaries_theme_df,
                                        #theme_id = var_formal_name[j],
                                        table_description = summaries_description_create,
-                                       start_date = var_min_date,
-                                       end_date = var_max_date,
+                                       start_date = as.Date(var_min_date),
+                                       end_date = as.Date(var_max_date),
                                        id_value = var_formal_name,
                                        description_string = var_description,
                                        about_string = catalog_config$about_string,
@@ -247,7 +255,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_name) |>
+                 duration == duration_name,
+                 variable != 'DIC_mgL_sample') |>
           summarize(across(all_of(c('datetime','reference_date','pub_datetime')), list(min = min, max = max))) |>
           collect()
 
@@ -260,7 +269,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_var_duration_df <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_name) |>
+                 duration == duration_name,
+                 variable != 'DIC_mgL_sample') |>
           distinct(variable,duration, project_id) |>
           collect() |>
           mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
@@ -300,6 +310,10 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         stac_id <- paste0(m,'_',var_name,'_',duration_name,'_summaries')
 
         idx = which(registered_model_id$model_id == m)
+
+        if(is.na(model_pub_date)){
+            model_pub_date <- model_reference_date
+          }
 
         model_description <- paste0("This page includes summaries for the ",
                                     var_formal_name,
@@ -351,8 +365,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                stac_id = stac_id,
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
-                               start_date = model_min_date,
-                               end_date = model_max_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
                                pub_date = model_pub_date,
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
@@ -363,7 +377,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                model_documentation = registered_model_id,
                                destination_path = paste0(catalog_config$summaries_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"),
                                aws_download_path = catalog_config$aws_download_path_summaries, # USE SCORES BUCKET FOR MODELS
-                               collection_name = 'forecasts',
+                               collection_name = 'summaries',
                                thumbnail_image_name = NULL,
                                table_schema = summaries_theme_df,
                                table_description = summaries_description_create,
@@ -378,11 +392,18 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
+  group_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by
+    summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+    collect()
+  group_min_date <- group_date_range$datetime_min
+  group_max_date <- group_date_range$datetime_max
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = summaries_theme_df,
                                    table_description = summaries_description_create,
-                                   start_date = summaries_min_date,
-                                   end_date = summaries_max_date,
+                                   start_date = as.Date(group_min_date),
+                                   end_date = as.Date(group_max_date),
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

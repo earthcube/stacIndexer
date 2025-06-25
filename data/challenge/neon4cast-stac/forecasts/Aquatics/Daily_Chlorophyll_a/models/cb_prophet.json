@@ -6,63 +6,79 @@
     "type": "Feature",
     "id": "cb_prophet_chla_P1D_forecast",
     "bbox": [
-        -99.2531,
+        -149.6106,
         29.676,
-        -82.0084,
-        47.1591
+        -78.1473,
+        68.6307
     ],
     "geometry": {
         "type": "MultiPoint",
         "coordinates": [
             [
-                -82.0084,
-                29.676
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -89.7048,
-                45.9983
-            ],
-            [
-                -99.1139,
-                47.1591
+                -88.1589,
+                31.8534
             ],
             [
                 -99.2531,
                 47.1298
             ],
             [
+                -99.1139,
+                47.1591
+            ],
+            [
+                -105.5442,
+                40.035
+            ],
+            [
+                -96.443,
+                38.9459
+            ],
+            [
                 -82.0177,
                 29.6878
             ],
             [
-                -88.1589,
-                31.8534
+                -89.7048,
+                45.9983
+            ],
+            [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -149.6106,
+                68.6307
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -82.0084,
+                29.676
+            ],
+            [
+                -89.4737,
+                46.2097
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BARC, BLWA, CRAM, FLNT, LIRO, PRLA, PRPO, SUGG, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Chlorophyll_a variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: TOMB, PRPO, PRLA, COMO, MCDI, SUGG, LIRO, FLNT, TOOK, BLWA, POSE, BARC, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07",
-        "start_datetime": "2023-11-14T00:00:00Z",
+        "start_datetime": "2022-06-01T00:00:00Z",
         "end_datetime": "2024-03-10T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/cboettig/forecasts-darts-framework",
-                "name": "Freya Olsson",
+                "name": "Carl Boettiger",
                 "roles": [
                     "producer",
                     "processor",
@@ -87,15 +103,19 @@
             "chla",
             "Daily",
             "P1D",
-            "BARC",
-            "BLWA",
-            "CRAM",
-            "FLNT",
-            "LIRO",
-            "PRLA",
+            "TOMB",
             "PRPO",
+            "PRLA",
+            "COMO",
+            "MCDI",
             "SUGG",
-            "TOMB"
+            "LIRO",
+            "FLNT",
+            "TOOK",
+            "BLWA",
+            "POSE",
+            "BARC",
+            "CRAM"
         ],
         "table:columns": [
             {
@@ -147,11 +167,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique identifier for the forecast project"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
@@ -214,10 +229,16 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "TOMB, PRPO, PRLA, COMO, MCDI, SUGG, LIRO, FLNT, TOOK, BLWA, POSE, BARC, CRAM"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Chlorophyll_a",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=chla/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=chla/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=chla/model_id=cb_prophet\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=chla/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=chla/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=chla/model_id=cb_prophet\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

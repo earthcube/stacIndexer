@@ -16,12 +16,7 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_ets.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/cb_prophet.json"
+            "href": "./models/tg_precip_lm_all_sites.json"
         },
         {
             "rel": "item",
@@ -31,7 +26,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/persistenceRW.json"
+            "href": "./models/tg_randfor.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/cb_prophet.json"
         },
         {
             "rel": "item",
@@ -51,7 +51,12 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_humidity_lm_all_sites.json"
+            "href": "./models/tg_humidity_lm.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/bookcast_forest.json"
         },
         {
             "rel": "item",
@@ -61,27 +66,22 @@
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/tg_precip_lm_all_sites.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_randfor.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
-            "href": "./models/tg_humidity_lm.json"
-        },
-        {
-            "rel": "item",
-            "type": "application/json",
             "href": "./models/USUNEEDAILY.json"
         },
         {
             "rel": "item",
             "type": "application/json",
-            "href": "./models/bookcast_forest.json"
+            "href": "./models/persistenceRW.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_ets.json"
+        },
+        {
+            "rel": "item",
+            "type": "application/json",
+            "href": "./models/tg_humidity_lm_all_sites.json"
         },
         {
             "rel": "parent",
@@ -131,7 +131,7 @@
             "interval": [
                 [
                     "2023-01-01T00:00:00Z",
-                    "2026-12-27T00:00:00Z"
+                    "2025-04-15T00:00:00Z"
                 ]
             ]
         }
@@ -186,22 +186,17 @@
             "name": "project_id",
             "type": "string",
             "description": "unique identifier for the forecast project"
-        },
-        {
-            "name": "variable",
-            "type": "string",
-            "description": "name of forecasted variable"
         }
     ],
     "assets": {
         "data": {
-            "href": "\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=nee/project_id=neon4cast/duration=Daily/variable=nee?endpoint_override=sdsc.osn.xsede.org\"",
+            "href": "\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=Daily/variable=nee?endpoint_override=sdsc.osn.xsede.org\"",
             "type": "application/x-parquet",
             "title": "Database Access",
             "roles": [
                 "data"
             ],
-            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/parquet/project_id=neon4cast/duration=P1D/variable=nee/project_id=neon4cast/duration=Daily/variable=nee?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for forecasts of the variable by the specific model .\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=Daily/variable=nee?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         },
         "thumbnail": {
             "href": "https://projects.ecoforecast.org/neon4cast-catalog/img/BONA_Twr.jpg",

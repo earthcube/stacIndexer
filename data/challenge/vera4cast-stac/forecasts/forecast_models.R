@@ -47,6 +47,7 @@ forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecast
 #   collect()
 
 theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(variable != 'DIC_mgL_sample') |>
   distinct(model_id) |>
   collect()
 
@@ -54,26 +55,43 @@ theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_buc
 #   distinct(model_id)
 
 forecast_sites <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(variable != 'DIC_mgL_sample') |>
   distinct(site_id) |>
   collect()
 
 # forecast_sites <- forecast_data_df |>
 #   distinct(site_id)
 
-forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_forecasts,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+
+var_remove <- c("DC_mgL_sample","DOC_mgL_sample","NH4_ugL_sample","TN_ugL_sample",
+                "TP_ugL_sample","DN_mgL_sample","SRP_ugL_sample","NO3NO2_ugL_sample", "DIC_mgL_sample")
+model_remove <- c('historic_mean', 'persistenceRW')
+
+# forecast_date_range <- forecast_duck_df |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-summaries'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+  filter(!(variable %in% var_remove & model_id %in% model_remove)) |>
   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
   collect()
-#forecast_date_range <- forecast_data_df |> dplyr::summarise(min(date),max(date))
-forecast_min_date <- forecast_date_range$datetime_min
-forecast_max_date <- forecast_date_range$datetime_max
+
+forecast_min_date <-  forecast_date_range |> pull(datetime_min)
+forecast_max_date <-  forecast_date_range |> pull(datetime_max)
+
+# forecast_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+#   collect()
+# #forecast_date_range <- forecast_data_df |> dplyr::summarise(min(date),max(date))
+# forecast_min_date <- forecast_date_range$datetime_min
+# forecast_max_date <- forecast_date_range$datetime_max
 
 build_description <- paste0("Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the scores (summaries of the forecasts) to analyze forecasts (unless you need the individual ensemble members). You can access the forecasts at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
                       table_description = forecast_description_create,
-                      start_date = forecast_min_date,
-                      end_date = forecast_max_date,
+                      start_date = as.Date(forecast_min_date),
+                      end_date = as.Date(forecast_max_date),
                       id_value = "daily-forecasts",
                       description_string = build_description,
                       about_string = catalog_config$about_string,
@@ -254,8 +272,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
       stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                        #theme_id = var_formal_name[j],
                                        table_description = forecast_description_create,
-                                       start_date = var_min_date,
-                                       end_date = var_max_date,
+                                       start_date = as.Date(var_min_date),
+                                       end_date = as.Date(var_max_date),
                                        id_value = var_formal_name,
                                        description_string = var_description,
                                        about_string = catalog_config$about_string,
@@ -291,7 +309,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_name) |>
+                 duration == duration_name,
+                 variable != 'DIC_mgL_sample') |>
           summarize(across(all_of(c('datetime','reference_date','pub_datetime')), list(min = min, max = max))) |>
           collect()
 
@@ -310,7 +329,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         model_var_duration_df <-  arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
           filter(model_id == m,
                  variable == var_name,
-                 duration == duration_name) |>
+                 duration == duration_name,
+                 variable != 'DIC_mgL_sample') |>
           distinct(variable,duration, project_id) |>
           collect() |>
           mutate(duration_name = ifelse(duration == 'P1D', 'Daily', duration)) |>
@@ -349,6 +369,10 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
         idx = which(registered_model_id$model_id == m)
 
+        if(is.na(model_pub_date)){
+            model_pub_date <- model_reference_date
+          }
+        
         stac_id <- paste0(m,'_',var_name,'_',duration_name,'_forecast')
 
 
@@ -400,8 +424,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                #model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
                                model_description = model_description,
-                               start_date = model_min_date,
-                               end_date = model_max_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
                                pub_date = model_pub_date,
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
@@ -426,11 +450,19 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
+  group_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by var group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+    collect()
+
+  group_min_date <- group_date_range$datetime_min
+  group_max_date <- group_date_range$datetime_max
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                    table_description = forecast_description_create,
-                                   start_date = forecast_min_date,
-                                   end_date = forecast_max_date,
+                                   start_date = as.Date(group_min_date),
+                                   end_date = as.Date(group_max_date),
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

@@ -17,7 +17,7 @@ library(minioclient)
 
 
 theme_models <- duckdbfs::open_dataset(glue::glue("s3://{config$inventory_bucket}/catalog"),
-                                         s3_endpoint = "renc.osn.xsede.org", anonymous=TRUE) |>
+                                         s3_endpoint = "amnh1.osn.mghpcc.org", anonymous=TRUE) |>
   collect()
 
 theme_models <- theme_models |>
@@ -32,7 +32,7 @@ theme_models <- theme_models |>
 #   collect()
 
 
-baseline_df <- scores_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$scores_bucket, endpoint_override = "renc.osn.xsede.org", anonymous = TRUE)) |>
+baseline_df <- scores_theme_df <- arrow::open_dataset(arrow::s3_bucket(config$scores_bucket, endpoint_override = "amnh1.osn.mghpcc.org", anonymous = TRUE)) |>
   filter(model_id == 'climatology')
 
 

@@ -58,7 +58,7 @@
             "interval": [
                 [
                     "2013-03-07T00:00:00Z",
-                    "2025-01-25T00:00:00Z"
+                    "2025-06-22T00:00:00Z"
                 ]
             ]
         }
@@ -113,31 +113,31 @@
             "title": "CCRE Reservoir Image"
         },
         "2": {
-            "href": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz",
+            "href": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz",
             "type": "application/x-parquet",
             "title": "Insitu Target Access",
             "roles": [
                 "data"
             ],
-            "description": "This R code will return results for the relevant targets file.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz\"\ntargets <- readr::read_csv(url, show_col_types = FALSE)\n```"
+            "description": "This R code will return results for the relevant targets file.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz\"\ntargets <- readr::read_csv(url, show_col_types = FALSE)\n```"
         },
         "3": {
-            "href": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-inflow-targets.csv.gz",
+            "href": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-inflow-targets.csv.gz",
             "type": "application/x-parquet",
             "title": "Inflow Target Access",
             "roles": [
                 "data"
             ],
-            "description": "This R code will return results for the relevant targets file.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-inflow-targets.csv.gz\"\ntargets <- readr::read_csv(url, show_col_types = FALSE)\n```"
+            "description": "This R code will return results for the relevant targets file.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-inflow-targets.csv.gz\"\ntargets <- readr::read_csv(url, show_col_types = FALSE)\n```"
         },
         "4": {
-            "href": "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-met-targets.csv.gz",
+            "href": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-met-targets.csv.gz",
             "type": "application/x-parquet",
             "title": "Met Target Access",
             "roles": [
                 "data"
             ],
-            "description": "This R code will return results for the relevant targets file.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-met-targets.csv.gz\"\ntargets <- readr::read_csv(url, show_col_types = FALSE)\n```"
+            "description": "This R code will return results for the relevant targets file.\n\n### R\n\n```{r}\n# Use code below\n\nurl <- \"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-met-targets.csv.gz\"\ntargets <- readr::read_csv(url, show_col_types = FALSE)\n```"
         }
     }
 }

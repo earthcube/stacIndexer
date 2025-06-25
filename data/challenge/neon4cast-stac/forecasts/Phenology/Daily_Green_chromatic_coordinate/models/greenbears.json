@@ -1,0 +1,219 @@
+{
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "type": "Feature",
+    "id": "greenbears_gcc_90_P1D_forecast",
+    "bbox": [
+        -97.57,
+        32.5417,
+        -71.2874,
+        45.5089
+    ],
+    "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+            [
+                -83.5019,
+                35.689
+            ],
+            [
+                -72.1727,
+                42.5369
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -89.5864,
+                45.5089
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -87.8039,
+                32.5417
+            ]
+        ]
+    },
+    "properties": {
+        "title": "greenbears",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2021-03-01",
+        "updated": null,
+        "start_datetime": "2021-02-22T00:00:00Z",
+        "end_datetime": "2021-03-28T00:00:00Z",
+        "providers": [
+            {
+                "url": "http://doi.org/10.5281/zenodo.5738488",
+                "name": "Carl Boettiger",
+                "roles": [
+                    "producer",
+                    "processor",
+                    "licensor"
+                ]
+            },
+            {
+                "url": "www.neon4cast.org",
+                "name": "Ecoforecast Challenge",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "license": "CC0-1.0",
+        "keywords": [
+            "Forecasts",
+            "neon4cast",
+            "Phenology",
+            "greenbears",
+            "Green_chromatic_coordinate",
+            "gcc_90",
+            "Daily",
+            "P1D",
+            "GRSM",
+            "HARV",
+            "CLBJ",
+            "SCBI",
+            "STEI",
+            "UKFS",
+            "BART",
+            "DELA"
+        ],
+        "table:columns": [
+            {
+                "name": "datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime of the forecasted value (ISO 8601)"
+            },
+            {
+                "name": "site_id",
+                "type": "string",
+                "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            },
+            {
+                "name": "prediction",
+                "type": "double",
+                "description": "predicted value for variable"
+            },
+            {
+                "name": "parameter",
+                "type": "string",
+                "description": "ensemble member or distribution parameter"
+            },
+            {
+                "name": "family",
+                "type": "string",
+                "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
+            },
+            {
+                "name": "reference_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that the forecast was initiated (horizon = 0)"
+            },
+            {
+                "name": "pub_datetime",
+                "type": "timestamp[us, tz=UTC]",
+                "description": "datetime that forecast was submitted"
+            },
+            {
+                "name": "duration",
+                "type": "string",
+                "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+            },
+            {
+                "name": "model_id",
+                "type": "string",
+                "description": "unique model identifier"
+            },
+            {
+                "name": "project_id",
+                "type": "string",
+                "description": "unique identifier for the forecast project"
+            }
+        ]
+    },
+    "collection": "forecasts",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "greenbears"
+        },
+        {
+            "rel": "root",
+            "href": "../../../catalog.json",
+            "type": "application/json",
+            "title": "Forecast Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "greenbears"
+        },
+        {
+            "rel": "self",
+            "href": "greenbears.json",
+            "type": "application/json",
+            "title": "Model Forecast"
+        },
+        {
+            "rel": "item",
+            "href": "http://doi.org/10.5281/zenodo.5738488",
+            "type": "text/html",
+            "title": "Link for Model Code"
+        },
+        {
+            "rel": "item",
+            "href": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/forecasts/Phenology/Daily_Green_chromatic_coordinate/models/greenbears.json",
+            "type": "text/html",
+            "title": "Link for rendered STAC item"
+        },
+        {
+            "rel": "item",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/forecasts/Phenology/Daily_Green_chromatic_coordinate/models/greenbears.json",
+            "type": "text/html",
+            "title": "Link for raw JSON file"
+        }
+    ],
+    "assets": {
+        "1": {
+            "type": "application/json",
+            "title": "Model Metadata",
+            "href": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/greenbears.json",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/greenbears.json\")\n\n"
+        },
+        "2": {
+            "type": "text/html",
+            "title": "Link for Model Code",
+            "href": "http://doi.org/10.5281/zenodo.5738488",
+            "description": "The link to the model code provided by the model submission team"
+        },
+        "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "GRSM, HARV, CLBJ, SCBI, STEI, UKFS, BART, DELA"
+        },
+        "4": {
+            "type": "application/x-parquet",
+            "title": "Database Access for Daily Green_chromatic_coordinate",
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=greenbears?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=greenbears?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=greenbears\"\ncon.read_parquet(path + \"/**\")"
+        }
+    }
+}

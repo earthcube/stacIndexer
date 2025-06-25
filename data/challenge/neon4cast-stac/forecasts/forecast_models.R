@@ -53,21 +53,21 @@ print('FIND INVENTORY BUCKET')
 #   #filter(project_id == config$project_id) |>
 #   collect()
 
-forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_scores,'?endpoint_override=',config$endpoint), anonymous = TRUE)
+forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_forecasts,'?endpoint_override=',config$endpoint), anonymous = TRUE)
 
 theme_models <- forecast_duck_df |>
   distinct(model_id) |>
   pull(model_id)
 
-scores_sites <- forecast_duck_df |>
+forecast_sites <- forecast_duck_df |>
   distinct(site_id) |>
   pull(site_id)
 
-scores_date_range <- forecast_duck_df |>
+forecast_date_range <- forecast_duck_df |>
   summarize(across(all_of(c('datetime')), list(min = min, max = max)))
 
-scores_min_date <-  scores_date_range |> pull(datetime_min)
-scores_max_date <-  scores_date_range |> pull(datetime_max)
+forecast_min_date <-  forecast_date_range |> pull(datetime_min)
+forecast_max_date <-  forecast_date_range |> pull(datetime_max)
 
 
 
@@ -88,13 +88,13 @@ scores_max_date <-  scores_date_range |> pull(datetime_max)
 
 build_description <- paste0("Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the scores (summaries of the forecasts) to analyze forecasts (unless you need the individual ensemble members). You can access the forecasts at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
-forecast_sites <- forecast_sites$site_id
+#forecast_sites <- forecast_sites$site_id
 
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
                       table_description = forecast_description_create,
-                      start_date = forecast_min_date,
-                      end_date = forecast_max_date,
+                      start_date = as.Date(forecast_min_date),
+                      end_date = as.Date(forecast_max_date),
                       id_value = "daily-forecasts",
                       description_string = build_description,
                       about_string = catalog_config$about_string,
@@ -129,8 +129,10 @@ registered_model_id <- gsheet_read |>
 for (i in 1:length(config$variable_groups)){ ## organize variable groups
   print(names(config$variable_groups)[i])
 
+  group_var_values <- config$variable_groups[[i]]$variable
+
   # check data and skip if no data found
-  var_group_data_check <- scores_duck_df |>
+  var_group_data_check <- forecast_duck_df |>
     filter(variable %in% group_var_values) |>
     summarise(n = n()) |>
     pull(n)
@@ -161,7 +163,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
   group_description <- paste0('All variables for the ',names(config$variable_groups[i]),' group.')
 
   ## find group sites
-  find_group_sites <- scores_duck_df |>
+  find_group_sites <- forecast_duck_df |>
     filter(variable %in% var_values) |>
     distinct(site_id) |>
     pull(site_id)
@@ -194,12 +196,12 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       var_formal_name <- paste0(duration_value,'_',var_name_full[j])
 
       # check data and skip if no data found
-      var_data_check <- scores_duck_df |>
+      var_data_check <- forecast_duck_df |>
         filter(variable == var_name, duration == duration_name) |>
         summarise(n = n()) |>
         pull(n)
 
-      if (nrow(var_data_check) == 0){
+      if (var_data_check == 0){
         print('No data available for variable')
         next
       }
@@ -212,7 +214,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       #   filter(variable == var_name,
       #          duration == duration_name)
 
-      var_date_range <- scores_duck_df|>
+      var_date_range <- forecast_duck_df|>
         filter(variable == var_name,
                duration == duration_name) |>
         summarize(across(all_of(c('datetime')), list(min = min, max = max))) #|>
@@ -221,14 +223,14 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       var_min_date <- var_date_range |> pull(datetime_min)
       var_max_date <- var_date_range |> pull(datetime_max)
 
-      var_models <- scores_duck_df |>
+      var_models <- forecast_duck_df |>
         filter(variable == var_name, duration == duration_name) |>
         distinct(model_id) |>
         filter(model_id %in% registered_model_id$model_id,
                !grepl("example",model_id)) |>
         pull(model_id)
 
-      find_var_sites <- scores_duck_df |>
+      find_var_sites <- forecast_duck_df |>
         filter(variable == var_name) |>
         distinct(site_id) |>
         pull(site_id)
@@ -241,7 +243,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                 var_metadata$Description)
 
       #var_path <- gsub('forecasts','scores',var_data$path[1])
-      var_path <- var_data$path[1]
+      #var_path <- var_data$path[1]
 
       ## build lists for creating publication items
       var_citations <- config$variable_groups[[i]]$group_vars[[j]]$var_citation
@@ -258,8 +260,8 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                        #theme_id = var_formal_name[j],
                                        table_description = forecast_description_create,
-                                       start_date = var_min_date,
-                                       end_date = var_max_date,
+                                       start_date = as.Date(var_min_date),
+                                       end_date = as.Date(var_max_date),
                                        id_value = var_formal_name,
                                        description_string = var_description,
                                        about_string = catalog_config$about_string,
@@ -268,7 +270,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                        dashboard_title = catalog_config$dashboard_title,
                                        theme_title = var_formal_name,
                                        destination_path = file.path(catalog_config$forecast_path,names(config$variable_groups)[i],var_formal_name),
-                                       aws_download_path = var_path,
+                                       aws_download_path = catalog_config$aws_download_path_forecasts,
                                        group_var_items = stac4cast::generate_variable_model_items(model_list = var_models),
                                        thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
                                        thumbnail_title = "Thumbnail Image",
@@ -282,7 +284,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
       forecast_sites <- c()
 
       ## LOOP OVER MODEL IDS AND CREATE JSONS
-      for (m in var_models$model_id){
+      for (m in var_models){
 
         if (!(m %in% registered_model_id$model_id)){
           message(paste0('Omitting model_id "',m,'" due to missing registration'))
@@ -296,19 +298,23 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
 
         print(m)
 
-        model_date_range <- scores_duck_df |>
+        model_date_range <- forecast_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
           summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max)))
 
         model_min_date <- model_date_range |> pull(datetime_min)
-        model_max_date <- model_date_rang |> pull(datetime_max)
+        model_max_date <- model_date_range |> pull(datetime_max)
 
-        model_reference_date <- model_date_range |> pull(`max(reference_date)`)
-        model_pub_date <- model_date_range |> pull(`max(pub_date)`)
+        model_reference_date <- model_date_range |> pull(reference_datetime_max)
+        model_pub_date <- model_date_range |> pull(pub_datetime_max)
 
-        model_var_duration_df <-  scores_duck_df |>
+        if(is.na(model_pub_date)){
+          model_pub_date <- model_reference_date
+        }
+
+        model_var_duration_df <-  forecast_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
@@ -325,16 +331,16 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                        select(variable = `"official" targets name`, full_name = `Variable name`) |>
                        distinct(variable, .keep_all = TRUE)), by = c('variable'))
 
-        model_sites <- scores_duck_df |>
+        model_sites <- forecast_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
           distinct(site_id) |>
           pull(site_id)
 
-        model_site_text <- paste(as.character(model_sites$site_id), sep="' '", collapse=", ")
+        model_site_text <- paste(as.character(model_sites), sep="' '", collapse=", ")
 
-        model_vars <- scores_duck_df |>
+        model_vars <- forecast_duck_df |>
           filter(model_id == m,
                  variable == var_name,
                  duration == duration_name) |>
@@ -345,7 +351,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
         model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)
 
         forecast_sites <- append(forecast_sites,  stac4cast::get_site_coords(site_metadata = catalog_config$site_metadata_url,
-                                                                             sites = model_sites$site_id))
+                                                                             sites = model_sites))
 
         idx = which(registered_model_id$model_id == m)
 
@@ -372,7 +378,7 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                     Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)')
 
         model_keywords <- c(list('Forecasts',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
-                            as.list(model_sites$site_id))
+                            as.list(model_sites))
 
         ## build radiantearth stac and raw json link
         stac_link <- paste0('https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/forecasts/',
@@ -390,9 +396,9 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
                                team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                #model_description = registered_model_id[idx,"Describe your modeling approach in your own words."][[1]],
                                model_description = model_description,
-                               start_date = model_min_date,
-                               end_date = model_max_date,
-                               pub_date = model_pub_date,
+                               start_date = as.Date(model_min_date),
+                               end_date = as.Date(model_max_date),
+                               pub_date = as.Date(model_pub_date),
                                forecast_date = model_reference_date,
                                var_values = model_vars$var_duration_name,
                                duration_names = model_var_duration_df$duration,
@@ -417,11 +423,18 @@ for (i in 1:length(config$variable_groups)){ ## organize variable groups
 
   } ## end variable loop
 
+  group_date_range <- forecast_duck_df |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+    summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+
+  group_min_date <-  group_date_range |> pull(datetime_min)
+  group_max_date <-  group_date_range |> pull(datetime_max)
+
   ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
   stac4cast::build_group_variables(table_schema = forecast_theme_df,
                                    table_description = forecast_description_create,
-                                   start_date = forecast_min_date,
-                                   end_date = forecast_max_date,
+                                   start_date = as.Date(group_min_date),
+                                   end_date = as.Date(group_max_date),
                                    id_value = names(config$variable_groups)[i],
                                    description_string = group_description,
                                    about_string = catalog_config$about_string,

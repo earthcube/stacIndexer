@@ -72,8 +72,8 @@
         "temporal": {
             "interval": [
                 [
-                    "2023-09-21T00:00:00Z",
-                    "2470-04-25T00:00:00Z"
+                    "2023-10-14T00:00:00Z",
+                    "2025-07-09T00:00:00Z"
                 ]
             ]
         }
@@ -142,13 +142,13 @@
     ],
     "assets": {
         "data": {
-            "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet?endpoint_override=renc.osn.xsede.org",
+            "href": "s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet?endpoint_override=amnh1.osn.mghpcc.org",
             "type": "application/x-parquet",
             "title": "Database Access",
             "roles": [
                 "data"
             ],
-            "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet?endpoint_override=renc.osn.xsede.org\")\ndf <- all_results |>\n dplyr::filter(variable %in% c(\"DO_mgL_mean\")) |>\n dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
+            "description": "Use `arrow` for remote access to the database. This R code will return results for the NEON Ecological Forecasting Aquatics theme.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230121-bucket01/vera4cast/forecasts/bundled-parquet?endpoint_override=amnh1.osn.mghpcc.org\")\ndf <- all_results |>\n dplyr::filter(variable %in% c(\"DO_mgL_mean\")) |>\n dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n"
         },
         "thumbnail": {
             "href": "https://raw.githubusercontent.com/addelany/vera4cast/main/catalog/thumbnail_plots/bvr_platform_green.jpg",

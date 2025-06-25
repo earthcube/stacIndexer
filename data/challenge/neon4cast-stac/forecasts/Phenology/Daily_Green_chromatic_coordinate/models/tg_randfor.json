@@ -15,116 +15,184 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -119.7323,
-                37.1088
-            ],
-            [
                 -119.2622,
                 37.0334
-            ],
-            [
-                -110.8355,
-                31.9107
-            ],
-            [
-                -89.5864,
-                45.5089
-            ],
-            [
-                -103.0293,
-                40.4619
-            ],
-            [
-                -87.3933,
-                32.9505
             ],
             [
                 -119.006,
                 37.0058
             ],
             [
-                -149.3705,
-                68.6611
+                -100.9154,
+                46.7697
+            ],
+            [
+                -88.1612,
+                31.8539
             ],
             [
                 -89.5857,
                 45.4937
             ],
             [
-                -95.1921,
-                39.0404
-            ],
-            [
-                -89.5373,
-                46.2339
-            ],
-            [
-                -99.2413,
-                47.1282
+                -122.3303,
+                45.7624
             ],
             [
                 -121.9519,
                 45.8205
             ],
             [
-                -110.5391,
-                44.9535
+                -84.2826,
+                35.9641
             ],
             [
-                -122.3303,
-                45.7624
+                -83.5019,
+                35.689
             ],
             [
-                -156.6194,
-                71.2824
+                -80.5248,
+                37.3783
             ],
             [
-                -71.2874,
-                44.0639
+                -105.5824,
+                40.0543
             ],
             [
-                -78.0418,
-                39.0337
+                -95.1921,
+                39.0404
             ],
             [
                 -147.5026,
                 65.154
             ],
             [
-                -97.57,
-                33.4012
+                -78.1395,
+                38.8929
             ],
             [
-                -104.7456,
-                40.8155
+                -99.0588,
+                35.4106
+            ],
+            [
+                -96.5631,
+                39.1008
             ],
             [
                 -99.1066,
                 47.1617
             ],
             [
+                -89.5864,
+                45.5089
+            ],
+            [
                 -145.7514,
                 63.8811
+            ],
+            [
+                -106.8425,
+                32.5907
+            ],
+            [
+                -110.5391,
+                44.9535
+            ],
+            [
+                -103.0293,
+                40.4619
+            ],
+            [
+                -97.57,
+                33.4012
+            ],
+            [
+                -156.6194,
+                71.2824
+            ],
+            [
+                -104.7456,
+                40.8155
+            ],
+            [
+                -84.4686,
+                31.1948
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -105.546,
+                40.2759
+            ],
+            [
+                -96.6129,
+                39.1104
+            ],
+            [
+                -149.2133,
+                63.8758
+            ],
+            [
+                -87.3933,
+                32.9505
+            ],
+            [
+                -149.3705,
+                68.6611
+            ],
+            [
+                -89.5373,
+                46.2339
+            ],
+            [
+                -71.2874,
+                44.0639
+            ],
+            [
+                -112.4524,
+                40.1776
             ],
             [
                 -87.8039,
                 32.5417
             ],
             [
+                -110.8355,
+                31.9107
+            ],
+            [
                 -81.4362,
                 28.1251
             ],
             [
-                -83.5019,
-                35.689
+                -109.3883,
+                38.2483
+            ],
+            [
+                -119.7323,
+                37.1088
+            ],
+            [
+                -155.3173,
+                19.5531
+            ],
+            [
+                -67.0769,
+                18.0213
+            ],
+            [
+                -76.56,
+                38.8901
+            ],
+            [
+                -99.2413,
+                47.1282
+            ],
+            [
+                -78.0418,
+                39.0337
             ],
             [
                 -66.8687,
@@ -133,88 +201,20 @@
             [
                 -72.1727,
                 42.5369
-            ],
-            [
-                -149.2133,
-                63.8758
-            ],
-            [
-                -84.4686,
-                31.1948
-            ],
-            [
-                -106.8425,
-                32.5907
-            ],
-            [
-                -96.6129,
-                39.1104
-            ],
-            [
-                -96.5631,
-                39.1008
-            ],
-            [
-                -67.0769,
-                18.0213
-            ],
-            [
-                -88.1612,
-                31.8539
-            ],
-            [
-                -80.5248,
-                37.3783
-            ],
-            [
-                -109.3883,
-                38.2483
-            ],
-            [
-                -105.5824,
-                40.0543
-            ],
-            [
-                -100.9154,
-                46.7697
-            ],
-            [
-                -99.0588,
-                35.4106
-            ],
-            [
-                -112.4524,
-                40.1776
-            ],
-            [
-                -84.2826,
-                35.9641
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -155.3173,
-                19.5531
-            ],
-            [
-                -105.546,
-                40.2759
             ]
         ]
     },
     "properties": {
         "title": "tg_randfor",
-        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: SCBI, SERC, SJER, SOAP, SRER, STEI, STER, TALL, TEAK, TOOL, TREE, UKFS, UNDE, WOOD, WREF, YELL, ABBY, BARR, BART, BLAN, BONA, CLBJ, CPER, DCFS, DEJU, DELA, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONA, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, NOGP, OAES, ONAQ, ORNL, OSBS, PUUM, RMNP.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-01-31",
-        "updated": "2024-07-03",
-        "start_datetime": "2023-11-14T00:00:00Z",
-        "end_datetime": "2024-03-04T00:00:00Z",
+        "description": "All forecasts for the Daily_Green_chromatic_coordinate variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: SOAP, TEAK, NOGP, LENO, TREE, ABBY, WREF, ORNL, GRSM, MLBS, NIWO, UKFS, BONA, SCBI, OAES, KONZ, DCFS, STEI, DEJU, JORN, YELL, STER, CLBJ, BARR, CPER, JERC, OSBS, RMNP, KONA, HEAL, TALL, TOOL, UNDE, BART, ONAQ, DELA, SRER, DSNY, MOAB, SJER, PUUM, LAJA, SERC, WOOD, BLAN, GUAN, HARV.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-08-16",
+        "updated": "2024-08-29 17:14:00",
+        "start_datetime": "2023-01-01T00:00:00Z",
+        "end_datetime": "2024-09-18T00:00:00Z",
         "providers": [
             {
-                "url": "https://projects.ecoforecast.org/neon4cast-ci/",
-                "name": "NEON Ecological Forecasting Project",
+                "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts/tg_randfor/train",
+                "name": "Caleb Robbins",
                 "roles": [
                     "producer",
                     "processor",
@@ -239,53 +239,53 @@
             "gcc_90",
             "Daily",
             "P1D",
-            "SCBI",
-            "SERC",
-            "SJER",
             "SOAP",
-            "SRER",
-            "STEI",
-            "STER",
-            "TALL",
             "TEAK",
-            "TOOL",
-            "TREE",
-            "UKFS",
-            "UNDE",
-            "WOOD",
-            "WREF",
-            "YELL",
-            "ABBY",
-            "BARR",
-            "BART",
-            "BLAN",
-            "BONA",
-            "CLBJ",
-            "CPER",
-            "DCFS",
-            "DEJU",
-            "DELA",
-            "DSNY",
-            "GRSM",
-            "GUAN",
-            "HARV",
-            "HEAL",
-            "JERC",
-            "JORN",
-            "KONA",
-            "KONZ",
-            "LAJA",
-            "LENO",
-            "MLBS",
-            "MOAB",
-            "NIWO",
             "NOGP",
-            "OAES",
-            "ONAQ",
+            "LENO",
+            "TREE",
+            "ABBY",
+            "WREF",
             "ORNL",
+            "GRSM",
+            "MLBS",
+            "NIWO",
+            "UKFS",
+            "BONA",
+            "SCBI",
+            "OAES",
+            "KONZ",
+            "DCFS",
+            "STEI",
+            "DEJU",
+            "JORN",
+            "YELL",
+            "STER",
+            "CLBJ",
+            "BARR",
+            "CPER",
+            "JERC",
             "OSBS",
+            "RMNP",
+            "KONA",
+            "HEAL",
+            "TALL",
+            "TOOL",
+            "UNDE",
+            "BART",
+            "ONAQ",
+            "DELA",
+            "SRER",
+            "DSNY",
+            "MOAB",
+            "SJER",
             "PUUM",
-            "RMNP"
+            "LAJA",
+            "SERC",
+            "WOOD",
+            "BLAN",
+            "GUAN",
+            "HARV"
         ],
         "table:columns": [
             {
@@ -337,11 +337,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique identifier for the forecast project"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
@@ -404,10 +399,16 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "SOAP, TEAK, NOGP, LENO, TREE, ABBY, WREF, ORNL, GRSM, MLBS, NIWO, UKFS, BONA, SCBI, OAES, KONZ, DCFS, STEI, DEJU, JORN, YELL, STER, CLBJ, BARR, CPER, JERC, OSBS, RMNP, KONA, HEAL, TALL, TOOL, UNDE, BART, ONAQ, DELA, SRER, DSNY, MOAB, SJER, PUUM, LAJA, SERC, WOOD, BLAN, GUAN, HARV"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Green_chromatic_coordinate",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=tg_randfor\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=tg_randfor?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=gcc_90/model_id=tg_randfor\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

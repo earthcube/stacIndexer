@@ -19,8 +19,28 @@
                 39.0337
             ],
             [
+                -76.56,
+                38.8901
+            ],
+            [
+                -95.1921,
+                39.0404
+            ],
+            [
                 -96.5631,
                 39.1008
+            ],
+            [
+                -78.1395,
+                38.8929
+            ],
+            [
+                -81.9934,
+                29.6893
+            ],
+            [
+                -87.3933,
+                32.9505
             ],
             [
                 -88.1612,
@@ -29,40 +49,20 @@
             [
                 -84.2826,
                 35.9641
-            ],
-            [
-                -81.9934,
-                29.6893
-            ],
-            [
-                -78.1395,
-                38.8929
-            ],
-            [
-                -76.56,
-                38.8901
-            ],
-            [
-                -87.3933,
-                32.9505
-            ],
-            [
-                -95.1921,
-                39.0404
             ]
         ]
     },
     "properties": {
         "title": "tg_tbats",
-        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BLAN, KONZ, LENO, ORNL, OSBS, SCBI, SERC, TALL, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-06-30",
-        "updated": "2024-07-04",
-        "start_datetime": "2023-01-02T00:00:00Z",
-        "end_datetime": "2025-06-23T00:00:00Z",
+        "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: BLAN, SERC, UKFS, KONZ, SCBI, OSBS, TALL, LENO, ORNL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2024-07-14",
+        "updated": "2024-08-29 18:10:54",
+        "start_datetime": "2021-06-07T00:00:00Z",
+        "end_datetime": "2024-10-07T00:00:00Z",
         "providers": [
             {
-                "url": "https://projects.ecoforecast.org/neon4cast-ci/",
-                "name": "NEON Ecological Forecasting Project",
+                "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts",
+                "name": "Abigail Lewis",
                 "roles": [
                     "producer",
                     "processor",
@@ -88,14 +88,14 @@
             "Weekly",
             "P1W",
             "BLAN",
-            "KONZ",
-            "LENO",
-            "ORNL",
-            "OSBS",
-            "SCBI",
             "SERC",
+            "UKFS",
+            "KONZ",
+            "SCBI",
+            "OSBS",
             "TALL",
-            "UKFS"
+            "LENO",
+            "ORNL"
         ],
         "table:columns": [
             {
@@ -147,11 +147,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique identifier for the forecast project"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
@@ -214,10 +209,16 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "BLAN, SERC, UKFS, KONZ, SCBI, OSBS, TALL, LENO, ORNL"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Weekly Amblyomma_americanum_population",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

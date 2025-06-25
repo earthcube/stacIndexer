@@ -15,12 +15,8 @@
         "type": "MultiPoint",
         "coordinates": [
             [
-                -149.6106,
-                68.6307
-            ],
-            [
-                -82.0084,
-                29.676
+                -82.0177,
+                29.6878
             ],
             [
                 -89.4737,
@@ -31,6 +27,10 @@
                 45.9983
             ],
             [
+                -149.6106,
+                68.6307
+            ],
+            [
                 -99.1139,
                 47.1591
             ],
@@ -39,22 +39,22 @@
                 47.1298
             ],
             [
-                -82.0177,
-                29.6878
+                -82.0084,
+                29.676
             ]
         ]
     },
     "properties": {
         "title": "flareGLM_noDA",
-        "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: TOOK, BARC, CRAM, LIRO, PRLA, PRPO, SUGG.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-        "datetime": "2024-08-22",
-        "updated": "2024-08-23",
+        "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: SUGG, CRAM, LIRO, TOOK, PRLA, PRPO, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "datetime": "2025-04-23",
+        "updated": "2025-04-23",
         "start_datetime": "2023-03-02T00:00:00Z",
-        "end_datetime": "2024-09-25T00:00:00Z",
+        "end_datetime": "2025-05-27T00:00:00Z",
         "providers": [
             {
-                "url": "https://projects.ecoforecast.org/neon4cast-ci/",
-                "name": "NEON Ecological Forecasting Project",
+                "url": "https://github.com/FLARE-forecast/NEON-forecast-code/workflows/default",
+                "name": "Freya Olsson",
                 "roles": [
                     "producer",
                     "processor",
@@ -79,13 +79,13 @@
             "temperature",
             "Daily",
             "P1D",
-            "TOOK",
-            "BARC",
+            "SUGG",
             "CRAM",
             "LIRO",
+            "TOOK",
             "PRLA",
             "PRPO",
-            "SUGG"
+            "BARC"
         ],
         "table:columns": [
             {
@@ -137,11 +137,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique identifier for the forecast project"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
@@ -204,10 +199,16 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "SUGG, CRAM, LIRO, TOOK, PRLA, PRPO, BARC"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Water_temperature",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=flareGLM_noDA?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=flareGLM_noDA?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=temperature/model_id=flareGLM_noDA\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=flareGLM_noDA?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=flareGLM_noDA?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=temperature/model_id=flareGLM_noDA\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }

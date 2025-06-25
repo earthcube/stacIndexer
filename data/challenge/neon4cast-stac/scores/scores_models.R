@@ -83,8 +83,8 @@ build_description <- paste0("The catalog contains scores for the ", config$chall
 stac4cast::build_forecast_scores(table_schema = scores_theme_df,
                       #theme_id = 'Scores',
                       table_description = scores_description_create,
-                      start_date = scores_min_date,
-                      end_date = scores_max_date,
+                      start_date = as.Date(scores_min_date),
+                      end_date = as.Date(scores_max_date),
                       id_value = "daily-scores",
                       description_string = build_description,
                       about_string = catalog_config$about_string,
@@ -264,8 +264,8 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
         stac4cast::build_group_variables(table_schema = scores_theme_df,
                                         #theme_id = var_formal_name[j],
                                         table_description = scores_description_create,
-                                        start_date = var_min_date,
-                                        end_date = var_max_date,
+                                        start_date = as.Date(var_min_date),
+                                        end_date = as.Date(var_max_date),
                                         id_value = var_formal_name,
                                         description_string = var_description,
                                         about_string = catalog_config$about_string,
@@ -291,7 +291,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
         ## loop over model ids and extract components if present in metadata table
 
-        for (m in var_models$model_id){
+        for (m in var_models){
 
           # make model directory
           if (!dir.exists(paste0(catalog_config$scores_path,'/',names(config$variable_groups)[i],'/',var_formal_name,"/models"))){
@@ -307,10 +307,14 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
             summarize(across(all_of(c('datetime','reference_datetime','pub_datetime')), list(min = min, max = max)))
 
           model_min_date <- model_date_range |> pull(datetime_min)
-          model_max_date <- model_date_rang |> pull(datetime_max)
+          model_max_date <- model_date_range |> pull(datetime_max)
 
-          model_reference_date <- model_date_range |> pull(`max(reference_date)`)
-          model_pub_date <- model_date_range |> pull(`max(pub_date)`)
+          model_reference_date <- model_date_range |> pull(reference_datetime_max)
+          model_pub_date <- model_date_range |> pull(pub_datetime_max)
+
+          if(is.na(model_pub_date)){
+            model_pub_date <- model_reference_date
+          }
 
           model_var_duration_df <-  scores_duck_df |>
             filter(model_id == m,
@@ -341,7 +345,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
             distinct(site_id) |>
             pull(site_id)
 
-          model_site_text <- paste(as.character(model_sites$site_id), sep="' '", collapse=", ")
+          model_site_text <- paste(as.character(model_sites), sep="' '", collapse=", ")
 
           model_vars <- scores_duck_df |>
             filter(model_id == m,
@@ -354,7 +358,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
           model_vars$var_duration_name <- paste0(model_vars$duration_name, " ", model_vars$full_name)
 
           scores_sites <- append(scores_sites,  stac4cast::get_site_coords(site_metadata = catalog_config$site_metadata_url,
-                                                                           sites = model_sites$site_id))
+                                                                           sites = model_sites))
           stac_id <- paste0(m,'_',var_name,'_',duration_name,'_scores')
 
           idx = which(registered_model_id$model_id == m)
@@ -378,7 +382,7 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                     Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)')
 
           model_keywords <- c(list('Scores',config$project_id, names(config$variable_groups)[i], m, var_name_full[j], var_name, duration_value, duration_name),
-                              as.list(model_sites$site_id))
+                              as.list(model_sites))
 
           ## build radiantearth stac and raw json link
           stac_link <- paste0('https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/',
@@ -395,9 +399,9 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
                                  stac_id = stac_id,
                                  team_name = registered_model_id$`Long name of the model (can include spaces)`[idx],
                                  model_description = model_description,
-                                 start_date = model_min_date,
-                                 end_date = model_max_date,
-                                 pub_date = model_pub_date,
+                                 start_date = as.Date(model_min_date),
+                                 end_date = as.Date(model_max_date),
+                                 pub_date = as.Date(model_pub_date),
                                  forecast_date = model_reference_date,
                                  var_values = model_vars$var_duration_name,
                                  duration_names = model_var_duration_df$duration,
@@ -422,27 +426,42 @@ for (i in 1:length(config$variable_groups)){ # LOOP OVER VARIABLE GROUPS -- BUIL
 
   } ## end variable loop
 
-## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
-stac4cast::build_group_variables(table_schema = scores_theme_df,
-                    table_description = scores_description_create,
-                    start_date = scores_min_date,
-                    end_date = scores_max_date,
-                    id_value = names(config$variable_groups)[i],
-                    description_string = group_description,
-                    about_string = catalog_config$about_string,
-                    about_title = catalog_config$about_title,
-                    dashboard_string = catalog_config$dashboard_url,
-                    dashboard_title = catalog_config$dashboard_title,
-                    theme_title = names(config$variable_groups[i]),
-                    destination_path = file.path(catalog_config$scores_path,names(config$variable_groups)[i]),
-                    aws_download_path = catalog_config$aws_download_path_scores,
-                    group_var_items = stac4cast::generate_group_variable_items(variables = variable_name_build),
-                    thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
-                    thumbnail_title = config$variable_groups[[i]]$thumbnail_title,
-                    group_var_vector = unique(var_values),
-                    group_duration_value = NULL,
-                    single_var_name = NULL,
-                    group_sites = find_group_sites,
-                    citation_values = citation_build,
-                    doi_values = doi_build)
+  # group_date_range <- scores_duck_df |>
+  #   filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by group
+  #   summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+  #
+  # group_min_date <-  group_date_range |> pull(datetime_min)
+  # group_max_date <-  group_date_range |> pull(datetime_max)
+
+  group_date_range <- arrow::open_dataset(arrow::s3_bucket(paste0(config$scores_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
+    filter(variable %in% names(config$variable_groups[[i]]$group_vars)) |> ## filter by
+    summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+    collect()
+
+  group_min_date <- group_date_range$datetime_min
+  group_max_date <- group_date_range$datetime_max
+
+  ## BUILD THE GROUP PAGES WITH UPDATED VAR/PUB INFORMATION
+  stac4cast::build_group_variables(table_schema = scores_theme_df,
+                      table_description = scores_description_create,
+                      start_date = group_min_date,
+                      end_date = group_max_date,
+                      id_value = names(config$variable_groups)[i],
+                      description_string = group_description,
+                      about_string = catalog_config$about_string,
+                      about_title = catalog_config$about_title,
+                      dashboard_string = catalog_config$dashboard_url,
+                      dashboard_title = catalog_config$dashboard_title,
+                      theme_title = names(config$variable_groups[i]),
+                      destination_path = file.path(catalog_config$scores_path,names(config$variable_groups)[i]),
+                      aws_download_path = catalog_config$aws_download_path_scores,
+                      group_var_items = stac4cast::generate_group_variable_items(variables = variable_name_build),
+                      thumbnail_link = config$variable_groups[[i]]$thumbnail_link,
+                      thumbnail_title = config$variable_groups[[i]]$thumbnail_title,
+                      group_var_vector = unique(var_values),
+                      group_duration_value = NULL,
+                      single_var_name = NULL,
+                      group_sites = find_group_sites,
+                      citation_values = citation_build,
+                      doi_values = doi_build)
 } # end group loop

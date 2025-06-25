@@ -6,89 +6,37 @@
     "type": "Feature",
     "id": "cb_prophet_oxygen_P1D_forecast",
     "bbox": [
-        -147.504,
+        -149.6106,
         18.1135,
         -66.7987,
-        65.1532
+        68.6698
     ],
     "geometry": {
         "type": "MultiPoint",
         "coordinates": [
             [
-                -96.6242,
-                34.4442
-            ],
-            [
-                -87.7982,
-                32.5415
-            ],
-            [
-                -147.504,
-                65.1532
+                -96.443,
+                38.9459
             ],
             [
                 -105.5442,
                 40.035
             ],
             [
-                -89.4737,
-                46.2097
-            ],
-            [
-                -66.9868,
-                18.1135
-            ],
-            [
-                -84.4374,
-                31.1854
-            ],
-            [
-                -66.7987,
-                18.1741
-            ],
-            [
-                -72.3295,
-                42.4719
-            ],
-            [
-                -96.6038,
-                39.1051
-            ],
-            [
-                -83.5038,
-                35.6904
-            ],
-            [
-                -77.9832,
-                39.0956
-            ],
-            [
-                -89.7048,
-                45.9983
+                -82.0177,
+                29.6878
             ],
             [
                 -121.9338,
                 45.7908
             ],
             [
-                -87.4077,
-                32.9604
+                -105.9154,
+                39.8914
             ],
             [
-                -96.443,
-                38.9459
-            ],
-            [
-                -122.1655,
-                44.2596
-            ],
-            [
-                -78.1473,
-                38.8943
-            ],
-            [
-                -97.7823,
-                33.3785
+                -149.143,
+                68.6698
             ],
             [
                 -99.1139,
@@ -99,16 +47,36 @@
                 47.1298
             ],
             [
-                -111.7979,
-                40.7839
+                -82.0084,
+                29.676
             ],
             [
-                -82.0177,
-                29.6878
+                -147.504,
+                65.1532
             ],
             [
-                -111.5081,
-                33.751
+                -77.9832,
+                39.0956
+            ],
+            [
+                -122.1655,
+                44.2596
+            ],
+            [
+                -66.7987,
+                18.1741
+            ],
+            [
+                -102.4471,
+                39.7582
+            ],
+            [
+                -97.7823,
+                33.3785
+            ],
+            [
+                -149.6106,
+                68.6307
             ],
             [
                 -119.0274,
@@ -119,20 +87,52 @@
                 31.8534
             ],
             [
+                -84.4374,
+                31.1854
+            ],
+            [
+                -78.1473,
+                38.8943
+            ],
+            [
+                -72.3295,
+                42.4719
+            ],
+            [
+                -89.4737,
+                46.2097
+            ],
+            [
+                -83.5038,
+                35.6904
+            ],
+            [
+                -111.5081,
+                33.751
+            ],
+            [
+                -96.6038,
+                39.1051
+            ],
+            [
+                -87.7982,
+                32.5415
+            ],
+            [
+                -66.9868,
+                18.1135
+            ],
+            [
+                -87.4077,
+                32.9604
+            ],
+            [
                 -84.2793,
                 35.9574
             ],
             [
-                -105.9154,
-                39.8914
-            ],
-            [
-                -102.4471,
-                39.7582
-            ],
-            [
-                -82.0084,
-                29.676
+                -96.6242,
+                34.4442
             ],
             [
                 -119.2575,
@@ -141,20 +141,28 @@
             [
                 -110.5871,
                 44.9501
+            ],
+            [
+                -89.7048,
+                45.9983
+            ],
+            [
+                -111.7979,
+                40.7839
             ]
         ]
     },
     "properties": {
         "title": "cb_prophet",
-        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: BLUE, BLWA, CARI, COMO, CRAM, CUPE, FLNT, GUIL, HOPB, KING, LECO, LEWI, LIRO, MART, MAYF, MCDI, MCRA, POSE, PRIN, PRLA, PRPO, REDB, SUGG, SYCA, TECR, TOMB, WALK, WLOU, ARIK, BARC, BIGC, BLDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+        "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: MCDI, COMO, SUGG, MART, WLOU, OKSR, PRLA, PRPO, BARC, CARI, LEWI, MCRA, GUIL, ARIK, PRIN, TOOK, TECR, TOMB, FLNT, POSE, HOPB, CRAM, LECO, SYCA, KING, BLWA, CUPE, MAYF, WALK, BLUE, BIGC, BLDE, LIRO, REDB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
         "datetime": "2024-02-06",
         "updated": "2024-02-07",
-        "start_datetime": "2023-11-14T00:00:00Z",
+        "start_datetime": "2022-06-01T00:00:00Z",
         "end_datetime": "2024-03-10T00:00:00Z",
         "providers": [
             {
                 "url": "https://github.com/cboettig/forecasts-darts-framework",
-                "name": "Freya Olsson",
+                "name": "Carl Boettiger",
                 "roles": [
                     "producer",
                     "processor",
@@ -179,38 +187,40 @@
             "oxygen",
             "Daily",
             "P1D",
-            "BLUE",
-            "BLWA",
-            "CARI",
-            "COMO",
-            "CRAM",
-            "CUPE",
-            "FLNT",
-            "GUIL",
-            "HOPB",
-            "KING",
-            "LECO",
-            "LEWI",
-            "LIRO",
-            "MART",
-            "MAYF",
             "MCDI",
-            "MCRA",
-            "POSE",
-            "PRIN",
+            "COMO",
+            "SUGG",
+            "MART",
+            "WLOU",
+            "OKSR",
             "PRLA",
             "PRPO",
-            "REDB",
-            "SUGG",
-            "SYCA",
+            "BARC",
+            "CARI",
+            "LEWI",
+            "MCRA",
+            "GUIL",
+            "ARIK",
+            "PRIN",
+            "TOOK",
             "TECR",
             "TOMB",
+            "FLNT",
+            "POSE",
+            "HOPB",
+            "CRAM",
+            "LECO",
+            "SYCA",
+            "KING",
+            "BLWA",
+            "CUPE",
+            "MAYF",
             "WALK",
-            "WLOU",
-            "ARIK",
-            "BARC",
+            "BLUE",
             "BIGC",
-            "BLDE"
+            "BLDE",
+            "LIRO",
+            "REDB"
         ],
         "table:columns": [
             {
@@ -262,11 +272,6 @@
                 "name": "project_id",
                 "type": "string",
                 "description": "unique identifier for the forecast project"
-            },
-            {
-                "name": "variable",
-                "type": "string",
-                "description": "name of forecasted variable"
             }
         ]
     },
@@ -329,10 +334,16 @@
             "description": "The link to the model code provided by the model submission team"
         },
         "3": {
+            "type": "text/plain",
+            "title": "Model Sites",
+            "href": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
+            "description": "MCDI, COMO, SUGG, MART, WLOU, OKSR, PRLA, PRPO, BARC, CARI, LEWI, MCRA, GUIL, ARIK, PRIN, TOOK, TECR, TOMB, FLNT, POSE, HOPB, CRAM, LECO, SYCA, KING, BLWA, CUPE, MAYF, WALK, BLUE, BIGC, BLDE, LIRO, REDB"
+        },
+        "4": {
             "type": "application/x-parquet",
             "title": "Database Access for Daily Dissolved_oxygen",
-            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```# Use code below\n\n\nimport ibis\n\n       con = ibis.duckdbf.connect()\n\n\n       con.raw_sql(f'''\n\n       CREATE OR REPLACE SECRET secret (\n\n       TYPE S3,\n\n       ENDPOINT 'sdsc.osn.xsede.org',\n\n       URL_STYLE 'path'\n\n\n       );/n\n       '''\n\n\n       path = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet//project_id=neon4cast/duration=P1D/variable=oxygen/model_id=cb_prophet\"\ncon.read_parquet(path + \"/**\")"
+            "href": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=cb_prophet?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=cb_prophet\"\ncon.read_parquet(path + \"/**\")"
         }
     }
 }
