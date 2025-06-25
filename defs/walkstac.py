@@ -76,9 +76,9 @@ def save_dict_to_file(repo, root, collection, item):
 
     dists = []
 
-    # href = item.get_self_href()
-    # parsed = urlparse(href)
-    #
+    href = item.get_self_href()
+    parsed = urlparse(href)
+
     # if parsed.scheme in ("http", "https"):
     #     # Don't try to resolve a URL
     #     item_file_path = href
@@ -88,14 +88,16 @@ def save_dict_to_file(repo, root, collection, item):
     #     except Exception as e:
     #         print(f"[WARN] Cannot resolve item path: {e}")
     #         item_file_path = href or "unknown"
-    #
-    # dists.append({
-    #     "@type": "DataDownload",
-    #     "contentUrl": item_file_path,
-    #     "encodingFormat": "application/html",
-    #     "description": "STAC Item metadata Link",
-    #     "name": "STAC Item Link"
-    # })
+
+    item_file_path = str(href)
+
+    dists.append({
+        "@type": "DataDownload",
+        "contentUrl": item_file_path,
+        "encodingFormat": "application/html",
+        "description": "STAC Item metadata Link",
+        "name": "STAC Item Link"
+    })
 
     for asset_key in assets:
         asset = assets[asset_key].to_dict()
