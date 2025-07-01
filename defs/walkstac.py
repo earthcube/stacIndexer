@@ -175,10 +175,10 @@ def walk_collection(repo, root_catalog: Catalog, collection: Collection, breadcr
         #filtered_data = [item for item in items if item is not None]
 
         for item in items:
-            breadcrumb = f"{breadcrumb}/{item.id}"
+            breadcrumb_item = f"{breadcrumb}/{item.id}"
             # print(f"- {item.id}")
             try:
-                walk_item(repo, root_catalog, collection, item.id, breadcrumb, repoPath)
+                walk_item(repo, root_catalog, collection, item.id, breadcrumb_item, repoPath)
             except Exception as e:
                 ic(item)
                 print(
