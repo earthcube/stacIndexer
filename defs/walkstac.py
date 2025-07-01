@@ -323,7 +323,7 @@ def generate_sitemap(folder_path, sitemap_path, repo):
     if not os.path.exists(target_directory):
         return
     # Specify the directory you want to list
-    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/master' + folder_path + '/'
+    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/master' + '/'
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
