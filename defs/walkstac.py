@@ -316,14 +316,14 @@ def walk_catalog(root_catalog: Catalog, breadcrumb, previousCatalogs=None):
             logging.error(f"uknonwn type")
 
 
-def generate_sitemap(folder_path, sitemap_path, repo):
+def generate_sitemap(folder_path, sitemap_path, repo, branch="master"):
     base_path = Path(".")
 
     target_directory = base_path.joinpath(folder_path)
     if not os.path.exists(target_directory):
         return
     # Specify the directory you want to list
-    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/master' + '/'
+    base_url = f'https://raw.githubusercontent.com/earthcube/stacIndexer/{branch}/'
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
@@ -508,10 +508,10 @@ def local_path_to_stac_browser_url(local_path: str) -> str:
     return f"https://radiantearth.github.io/stac-browser/#/external/{raw_path}"
 
 
-def walk_stac(cf):
+def walk_stac(args):
     # Use a breakpoint in the code line below to debug your script.
     clear_output_folder("./data/output/")
-
+    cf= args.configfile
     # Use URL-based approach with content cleaning
     if cf.startswith('http'):
         # Fetch and clean catalog from URL
@@ -519,6 +519,9 @@ def walk_stac(cf):
         root_catalog = Catalog.from_dict(catalog_dict)
         root_catalog.set_self_href(cf)
     else:
+        if os.getenv('GITHUB_TOKEN') is None:
+            logging.error('GITHUB_TOKEN env is not set')
+            return
         # Fallback to file-based approach for local files
         download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
         download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
@@ -567,6 +570,6 @@ def walk_stac(cf):
     #             walk_collection(child, collection)
     #     else:
     #         logging.error(f"uknonwn type")
-    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast")
-    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast")
-    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast")
+    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast", branch=cf.branch)
+    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast", branch=cf.branch)
+    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast", branch=cf.branch)
