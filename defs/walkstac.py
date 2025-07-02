@@ -570,6 +570,6 @@ def walk_stac(args):
     #             walk_collection(child, collection)
     #     else:
     #         logging.error(f"uknonwn type")
-    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast", branch=cf.branch)
-    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast", branch=cf.branch)
-    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast", branch=cf.branch)
+    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast", branch=args.branch)
+    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast", branch=args.branch)
+    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast", branch=args.branch)
