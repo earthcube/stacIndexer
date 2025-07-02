@@ -510,66 +510,43 @@ def local_path_to_stac_browser_url(local_path: str) -> str:
 
 def walk_stac(args):
     # Use a breakpoint in the code line below to debug your script.
-    clear_output_folder("./data/output/")
+
     cf= args.configfile
     # Use URL-based approach with content cleaning
-    if cf.startswith('http'):
-        # Fetch and clean catalog from URL
-        catalog_dict = fetch_and_clean_catalog_from_url(cf)
-        root_catalog = Catalog.from_dict(catalog_dict)
-        root_catalog.set_self_href(cf)
-    else:
-        if os.getenv('GITHUB_TOKEN') is None:
-            logging.error('GITHUB_TOKEN env is not set')
-            return
-        # Fallback to file-based approach for local files
-        download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
-        download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
-        download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
+    if not args.sitemap_only:
+        clear_output_folder("./data/output/")
+        if cf.startswith('http'):
+            # Fetch and clean catalog from URL
+            catalog_dict = fetch_and_clean_catalog_from_url(cf)
+            root_catalog = Catalog.from_dict(catalog_dict)
+            root_catalog.set_self_href(cf)
+        else:
+            if os.getenv('GITHUB_TOKEN') is None:
+                logging.error('GITHUB_TOKEN env is not set')
+                return
+            # Fallback to file-based approach for local files
+            download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
+            download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+            download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
-        # Resolve schema issues
-        replace_in_folder('./data/challenge', '"href": []', '"href": "https://github.com/radiantearth"')
-        replace_in_folder('./data/challenge', '"href": null', '"href": "https://github.com/radiantearth"')
-        replace_in_folder('./data/challenge', '"href": {}', '"href": "https://github.com/radiantearth"')
-        replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
-        replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
-        replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
-        replace_in_folder('./data/challenge', '2017-02-01 15:00:00T00:00:00Z', '2017-02-01T00:00:00Z')
+            # Resolve schema issues
+            replace_in_folder('./data/challenge', '"href": []', '"href": "https://github.com/radiantearth"')
+            replace_in_folder('./data/challenge', '"href": null', '"href": "https://github.com/radiantearth"')
+            replace_in_folder('./data/challenge', '"href": {}', '"href": "https://github.com/radiantearth"')
+            replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
+            replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
+            replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
+            replace_in_folder('./data/challenge', '2017-02-01 15:00:00T00:00:00Z', '2017-02-01T00:00:00Z')
 
-        root_catalog = Catalog.from_file(href=cf)
-    ic(root_catalog)
+            root_catalog = Catalog.from_file(href=cf)
+        ic(root_catalog)
 
-    #child_catalogs = list(root_catalog.get_children())
-    breadcumb=root_catalog.id
-    walk_catalog(root_catalog, breadcumb)
-    # Debugging for challenge only
-    # print(f"Number of child catalogs: {len(child_catalogs)}")
-    # for child in child_catalogs:
-    #     print(f"  - {child.id}")
-    #     child_cf = f"data/challenge/{child.id}/catalog.json"
-    #     print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
-    #
-    #     child_catalog = Catalog.from_file(href=child_cf)
-    #     process_catalog(child_catalog, f"data/challenge/{child.id}")
-    #
-    # original block
-    # for child in child_catalogs:
-    #     if child.STAC_OBJECT_TYPE == STACObjectType.ITEM: # aka Feature
-    #         logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
-    #     elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
-    #         l2_child_catalogs = list(child.get_children())
-    #         for l2 in l2_child_catalogs:
-    #             process_catalog(l2, l2.get_self_href())
-    #     elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
-    #        # collections = list(child.get_all_collections())
-    #         collections = list(child.get_collections())
-    #         print(f"Number of collections: {len(collections)}")
-    #         print("Collections IDs:")
-    #         for collection in collections:
-    #             print(f"- {collection.id}")
-    #             walk_collection(child, collection)
-    #     else:
-    #         logging.error(f"uknonwn type")
-    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast", branch=args.branch)
-    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast", branch=args.branch)
-    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast", branch=args.branch)
+        #child_catalogs = list(root_catalog.get_children())
+        breadcumb=root_catalog.id
+
+        walk_catalog(root_catalog, breadcumb)
+    generate_sitemap("data/output/neon4cast-stac", "data/output/sitemap", "neon4cast", branch=args.branch)
+    generate_sitemap("data/output/vera4cast-stac", "data/output/sitemap", "vera4cast", branch=args.branch)
+    generate_sitemap("data/output/usgsrc4cast-stac", "data/output/sitemap", "usgsrc4cast", branch=args.branch)
+
+
