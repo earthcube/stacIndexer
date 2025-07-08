@@ -100,3 +100,5 @@ stac4cast::build_sites(table_schema = site_df,
                        link_items = NULL,
                        thumbnail_link = config$site_thumbnail,
                        thumbnail_title = config$site_thumbnail_title)
+
+message('sites generated...')
