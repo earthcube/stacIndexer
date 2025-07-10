@@ -80,6 +80,10 @@ build_description <- paste0("The catalog contains scores for the ", config$chall
 # scores_sites <- scores_data_df |>
 #   distinct(site_id)
 
+if (!file.exists(catalog_config$scores_path)){
+  dir.create(catalog_config$scores_path)
+}
+
 stac4cast::build_forecast_scores(table_schema = scores_theme_df,
                       #theme_id = 'Scores',
                       table_description = scores_description_create,

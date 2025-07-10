@@ -90,6 +90,10 @@ build_description <- paste0("Forecasts are the raw forecasts that includes all e
 
 #forecast_sites <- forecast_sites$site_id
 
+if (!file.exists(config$forecast_path)){
+  dir.create(config$forecast_path)
+}
+
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
                       table_description = forecast_description_create,

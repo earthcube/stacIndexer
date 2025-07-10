@@ -85,6 +85,9 @@ target_max_date <- as.Date(target_date_range$`max(datetime)`)
 
 build_description <- paste0("The catalog contains site metadata for the ", config$challenge_long_name)
 
+if (!file.exists(config$site_path)){
+  dir.create(config$site_path)
+}
 
 stac4cast::build_sites(table_schema = site_df,
                        table_description = site_description_create,
