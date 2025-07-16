@@ -108,36 +108,40 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
         stacHtml["name"] = "Stac Item in Radiantearth STAC Browser"
         dists.append(stacHtml)
     for asset_key in assets:
-        asset = assets[asset_key].to_dict()
-        asset_obj = assets[asset_key]
-        dist = {"@type": "DataDownload"}
-        href = asset_obj.get_absolute_href() or asset_obj.get_href()
-        dist["contentUrl"] = href
-        dist["encodingFormat"] = asset["type"]
-        dist["description"] = asset["description"]
-        dist["name"] = asset["title"]
+        try:
+            asset = assets[asset_key].to_dict()
+            asset_obj = assets[asset_key]
+            dist = {"@type": "DataDownload"}
+            href = asset_obj.get_absolute_href() or asset_obj.get_href()
+            dist["contentUrl"] = href
+            dist["encodingFormat"] = asset["type"]
+            dist["description"] = asset["description"]
+            dist["name"] = asset["title"]
 
-        varmes = []
-        if asset.get("type") == "application/x-parquet":
-            # if asset["type"] == "image/png":
-            ext = item.stac_extensions
-            if 'https://stac-extensions.github.io/table/v1.2.0/schema.json' in ext:
-                try:
-                    cols = item.ext.table.columns
-                except AttributeError:
-                    print("'Item' object has no attribute 'ext'. Continuing...")
-                else:
-                    if len(cols) > 0:
-                        for col in cols:
-                            col_dc = col.to_dict()
-                            prop = {}
-                            prop["@type"] = "PropertyValue"
-                            prop["name"] = col_dc["name"]
-                            prop["description"] = col_dc["description"]
-                            varmes.append(prop)
-                    doc["variableMeasured"] = varmes
+            varmes = []
+            if asset.get("type") == "application/x-parquet":
+                # if asset["type"] == "image/png":
+                ext = item.stac_extensions
+                if 'https://stac-extensions.github.io/table/v1.2.0/schema.json' in ext:
+                    try:
+                        cols = item.ext.table.columns
+                    except AttributeError:
+                        print("'Item' object has no attribute 'ext'. Continuing...")
+                    else:
+                        if len(cols) > 0:
+                            for col in cols:
+                                col_dc = col.to_dict()
+                                prop = {}
+                                prop["@type"] = "PropertyValue"
+                                prop["name"] = col_dc["name"]
+                                prop["description"] = col_dc["description"]
+                                varmes.append(prop)
+                        doc["variableMeasured"] = varmes
 
-        dists.append(dist)
+            dists.append(dist)
+        except Exception as e:
+            logging.error(f"Error processing asset {asset_key} for item {item.id}: {e}")
+            continue
 
     # TODO WARNING static element, comment out for now
     # doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
