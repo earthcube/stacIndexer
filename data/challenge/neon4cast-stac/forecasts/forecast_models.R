@@ -59,9 +59,12 @@ forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_dow
 #   distinct(model_id) |>
 #   pull(model_id)
 
+
+message('forecast sites...')
 # forecast_sites <- forecast_duck_df |>
 #   distinct(site_id) |>
 #   pull(site_id)
+
 forecast_sites <- c("BARC", "USGS-14181500", "USGS-05543010", "CARI", "LEWI","ORNL","SOAP", "BIGC","BLDE","BLUE",
                     "USGS-14211010", "NIWO","NOGP","TEAK","LENO","MLBS","TREE","WALK","SUGG","MCDI","COMO", "USGS-01427510",
                     "USGS-05553700", "HARV","DSNY","GUAN","LAJA","POSE", "SCBI","DCFS","KONZ","OAES","HOPB","TOOK","USGS-01463500",
@@ -70,12 +73,14 @@ forecast_sites <- c("BARC", "USGS-14181500", "USGS-05543010", "CARI", "LEWI","OR
                     "KING", "MAYF","PRLA","PRPO","BARR","OSBS","TALL","TOOL", "TOMB","USGS-14211720", "RMNP","SRER","TECR","DEJU",
                     "JORN", "YELL","MCRA", "DELA","CPER","HEAL","MART","WLOU","CRAM","GRSM","ABBY","WREF","LECO","SYCA" )
 
-forecast_date_range <- forecast_duck_df |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
-  pull(datetime_min, datetime_max)
+message('forecast dates...')
 
-forecast_min_date <-  forecast_date_range$datetime_min
-forecast_max_date <-  forecast_date_range$datetime_max
+# forecast_date_range <- forecast_duck_df |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+#   pull(datetime_min, datetime_max)
+#
+# forecast_min_date <-  forecast_date_range$datetime_min
+# forecast_max_date <-  forecast_date_range$datetime_max
 
 #forecast_min_date <-  forecast_date_range |> pull(datetime_min)
 #forecast_max_date <-  forecast_date_range |> pull(datetime_max)
