@@ -68,10 +68,9 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     doc["start_datetime"] = props.get("start_datetime")
     doc["end_datetime"] = props.get("end_datetime")
     doc["keywords"] = props.get("keywords", [])
-    baseStacUI ="https://radiantearth.github.io/stac-browser/#/external"
-    fileurl = item.get_self_href()
-    filepath = fileurl.split("/",maxsplit=1)[1]
-    doc["url"] = f'{baseStacUI}{filepath}'
+
+
+
     # TODO WARNING
     # this is hard coded here, need to pass down from the main, but I would like to make
     # the whole process https based, so just bring this value here to test in the JSON-LD
@@ -81,18 +80,25 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     doc["citation"] = datacitation.citation()
 
     dists = []
-    stacDist = {"@type": "DataDownload"}
-    stacDist["contentUrl"] =  item.get_self_href()
-    stacDist["encodingFormat"] = 'application/json'
-    stacDist["description"] = "Stac Item JSON"
-    stacDist["name"] = "Stac Item JSON"
-    dists.append(stacDist)
-    stacHtml = {"@type": "DataDownload"}
-    stacHtml["contentUrl"] =  f'{baseStacUI}{filepath}'
-    stacHtml["encodingFormat"] = 'text/html'
-    stacHtml["description"] = "Stac Item in Radiantearth STAC Browser"
-    stacHtml["name"] = "Stac Item in Radiantearth STAC Browser"
-    dists.append(stacHtml)
+
+    baseStacUI = "https://radiantearth.github.io/stac-browser/#/external"
+    fileurl = item.get_self_href()
+    if fileurl.startswith("http"):
+        filepath = fileurl.split("/",maxsplit=1)[1]
+        doc["url"] = f'{baseStacUI}{filepath}'
+
+        stacDist = {"@type": "DataDownload"}
+        stacDist["contentUrl"] =  item.get_self_href()
+        stacDist["encodingFormat"] = 'application/json'
+        stacDist["description"] = "Stac Item JSON"
+        stacDist["name"] = "Stac Item JSON"
+        dists.append(stacDist)
+        stacHtml = {"@type": "DataDownload"}
+        stacHtml["contentUrl"] =  f'{baseStacUI}{filepath}'
+        stacHtml["encodingFormat"] = 'text/html'
+        stacHtml["description"] = "Stac Item in Radiantearth STAC Browser"
+        stacHtml["name"] = "Stac Item in Radiantearth STAC Browser"
+        dists.append(stacHtml)
     for asset_key in assets:
         asset = assets[asset_key].to_dict()
         asset_obj = assets[asset_key]

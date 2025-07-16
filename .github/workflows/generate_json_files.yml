@@ -39,7 +39,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python main.py --configfile ./data/challenge/catalog-yl.json
+         python main.py --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
+        # python main.py --configfile ./data/challenge/catalog-yl.json
 
     - name: Stage changes in the data folder
       run: |
