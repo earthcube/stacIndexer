@@ -68,7 +68,10 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     doc["start_datetime"] = props.get("start_datetime")
     doc["end_datetime"] = props.get("end_datetime")
     doc["keywords"] = props.get("keywords", [])
-
+    baseStacUI ="https://radiantearth.github.io/stac-browser/#/external"
+    fileurl = item.get_self_href()
+    filepath = fileurl.split("/",maxsplit=1)[1]
+    doc["url"] = f'{baseStacUI}{filepath}'
     # TODO WARNING
     # this is hard coded here, need to pass down from the main, but I would like to make
     # the whole process https based, so just bring this value here to test in the JSON-LD
