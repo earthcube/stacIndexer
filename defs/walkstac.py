@@ -145,7 +145,7 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
 
     # if asset "Model Sites" is present, then use its description to define the name for teh @Place for the spatial coverage
     ms =  find_asset_by_title(assets, "Model Sites")
-    placename= ms.description if ms.description else None
+    placename= ms.description if ms and ms.description else None
     doc["spatialCoverage"] = sdo_box(convertas.convert_array_to_string(item.bbox), item.geometry, cells, name=placename)
 
     # Rest of code remains unchanged...
