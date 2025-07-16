@@ -101,6 +101,20 @@
     "distribution": [
         {
             "@type": "DataDownload",
+            "contentUrl": "/home/runner/work/stacIndexer/stacIndexer/data/challenge/neon4cast-stac/forecasts/Aquatics/Daily_Chlorophyll_a/models/tg_precip_lm_all_sites.json",
+            "encodingFormat": "application/json",
+            "description": "Stac Item JSON",
+            "name": "Stac Item JSON"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://radiantearth.github.io/stac-browser/#/externalhome/runner/work/stacIndexer/stacIndexer/data/challenge/neon4cast-stac/forecasts/Aquatics/Daily_Chlorophyll_a/models/tg_precip_lm_all_sites.json",
+            "encodingFormat": "text/html",
+            "description": "Stac Item in Radiantearth STAC Browser",
+            "name": "Stac Item in Radiantearth STAC Browser"
+        },
+        {
+            "@type": "DataDownload",
             "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_precip_lm_all_sites.json",
             "encodingFormat": "application/json",
             "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_precip_lm_all_sites.json\")\n\n",

@@ -139,6 +139,20 @@
     "distribution": [
         {
             "@type": "DataDownload",
+            "contentUrl": "/home/runner/work/stacIndexer/stacIndexer/data/challenge/vera4cast-stac/scores/Biological/Daily_Bloom_binary/models/asl.met.lm.step.json",
+            "encodingFormat": "application/json",
+            "description": "Stac Item JSON",
+            "name": "Stac Item JSON"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://radiantearth.github.io/stac-browser/#/externalhome/runner/work/stacIndexer/stacIndexer/data/challenge/vera4cast-stac/scores/Biological/Daily_Bloom_binary/models/asl.met.lm.step.json",
+            "encodingFormat": "text/html",
+            "description": "Stac Item in Radiantearth STAC Browser",
+            "name": "Stac Item in Radiantearth STAC Browser"
+        },
+        {
+            "@type": "DataDownload",
             "contentUrl": "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/asl.met.lm.step.json",
             "encodingFormat": "application/json",
             "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/metadata/model_id/asl.met.lm.step.json\")\n\n",
