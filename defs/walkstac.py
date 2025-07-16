@@ -81,7 +81,18 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     doc["citation"] = datacitation.citation()
 
     dists = []
-
+    stacDist = {"@type": "DataDownload"}
+    stacDist["contentUrl"] =  item.get_self_href()
+    stacDist["encodingFormat"] = 'application/json'
+    stacDist["description"] = "Stac Item JSON"
+    stacDist["name"] = "Stac Item JSON"
+    dists.append(stacDist)
+    stacHtml = {"@type": "DataDownload"}
+    stacHtml["contentUrl"] =  f'{baseStacUI}{filepath}'
+    stacHtml["encodingFormat"] = 'text/html'
+    stacHtml["description"] = "Stac Item in Radiantearth STAC Browser"
+    stacHtml["name"] = "Stac Item in Radiantearth STAC Browser"
+    dists.append(stacHtml)
     for asset_key in assets:
         asset = assets[asset_key].to_dict()
         asset_obj = assets[asset_key]
