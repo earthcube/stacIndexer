@@ -20,6 +20,13 @@ from pathlib import Path
 from sys import gettrace
 
 
+def find_asset_by_title(assets, title):
+    for asset_key, asset in assets.items():
+        if asset.title == title:
+            return asset
+    return None
+
+
 def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missing"):
     # At this point I have three elements:  root_catalog, item and asset (from below)
     props = item.properties
@@ -46,6 +53,7 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     level = 13
 
     cells = bb2s2(min_lat, max_lat, min_lng, max_lng, level)
+    # if asset "Model Sites" is present, then use its description to define the name for teh @Place for the spatial coverage
 
     doc = {}
     context = {"@vocab": "https://schema.org/"}
@@ -134,7 +142,11 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     # TODO WARNING static element, comment out for now
     # doc["isPartOf"] = "https://datasets-server.huggingface.co/croissant?dataset=eco4cast/neon4cast-scores&full=true"
     doc["distribution"] = dists
-    doc["spatialCoverage"] = sdo_box(convertas.convert_array_to_string(item.bbox), item.geometry, cells)
+
+    # if asset "Model Sites" is present, then use its description to define the name for teh @Place for the spatial coverage
+    ms =  find_asset_by_title(assets, "Model Sites")
+    placename= ms["description"] if ms else None
+    doc["spatialCoverage"] = sdo_box(convertas.convert_array_to_string(item.bbox), item.geometry, cells, name=placename)
 
     # Rest of code remains unchanged...
 

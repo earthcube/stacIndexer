@@ -17,7 +17,7 @@
 # }
 
 
-def sdo_box(bbox, geometry, cells):
+def sdo_box(bbox, geometry, cells, name=None):
     doc = {}
     additional_property = []
     geo = []
@@ -43,6 +43,8 @@ def sdo_box(bbox, geometry, cells):
         additional_property.append(geos2)
 
     doc['@type'] = 'Place'
+    if name:
+        doc['name'] = name
     doc['geo'] = geo
     doc['additionalProperty'] = additional_property
 
