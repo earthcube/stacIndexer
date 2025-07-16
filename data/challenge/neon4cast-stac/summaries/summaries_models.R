@@ -58,6 +58,10 @@ summaries_max_date <-  summaries_date_range |> pull(datetime_max)
 
 build_description <- paste0("Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals). You can access the summaries at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
+if (!file.exists(catalog_config$summaries_path)){
+  dir.create(catalog_config$summaries_path)
+}
+
 stac4cast::build_forecast_scores(table_schema = summaries_theme_df,
                                  #theme_id = 'Forecasts',
                                  table_description = summaries_description_create,

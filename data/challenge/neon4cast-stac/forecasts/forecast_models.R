@@ -37,7 +37,7 @@ forecast_description_create <- data.frame(datetime = 'datetime of the forecasted
 # model_id <- 'climatology'
 
 print('FIND FORECAST TABLE SCHEMA')
-forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) #|>
+forecast_theme_df <- arrow::open_dataset(arrow::s3_bucket((config$forecasts_bucket), endpoint_override = config$endpoint, anonymous = TRUE)) #|>
 
 print('FIND INVENTORY BUCKET')
 # forecast_s3 <- arrow::s3_bucket(glue::glue("{config$inventory_bucket}/catalog/forecasts/project_id={config$project_id}"),
@@ -55,20 +55,38 @@ print('FIND INVENTORY BUCKET')
 
 forecast_duck_df <- duckdbfs::open_dataset(paste0('s3://',catalog_config$aws_download_path_forecasts,'?endpoint_override=',config$endpoint), anonymous = TRUE)
 
-theme_models <- forecast_duck_df |>
-  distinct(model_id) |>
-  pull(model_id)
+# theme_models <- forecast_duck_df |>
+#   distinct(model_id) |>
+#   pull(model_id)
 
-forecast_sites <- forecast_duck_df |>
-  distinct(site_id) |>
-  pull(site_id)
 
-forecast_date_range <- forecast_duck_df |>
-  summarize(across(all_of(c('datetime')), list(min = min, max = max)))
+message('forecast sites...')
+# forecast_sites <- forecast_duck_df |>
+#   distinct(site_id) |>
+#   pull(site_id)
 
-forecast_min_date <-  forecast_date_range |> pull(datetime_min)
-forecast_max_date <-  forecast_date_range |> pull(datetime_max)
+forecast_sites <- c("BARC", "USGS-14181500", "USGS-05543010", "CARI", "LEWI","ORNL","SOAP", "BIGC","BLDE","BLUE",
+                    "USGS-14211010", "NIWO","NOGP","TEAK","LENO","MLBS","TREE","WALK","SUGG","MCDI","COMO", "USGS-01427510",
+                    "USGS-05553700", "HARV","DSNY","GUAN","LAJA","POSE", "SCBI","DCFS","KONZ","OAES","HOPB","TOOK","USGS-01463500",
+                    "USGS-05558300", "MOAB","PUUM","SERC","SJER","WOOD","ARIK", "GUIL","PRIN","LIRO","USGS-05586300", "BART",
+                    "JERC","KONA", "ONAQ","UNDE","REDB","FLNT","STEI","UKFS","CLBJ", "BONA","BLAN","OKSR","BLWA","STER","CUPE",
+                    "KING", "MAYF","PRLA","PRPO","BARR","OSBS","TALL","TOOL", "TOMB","USGS-14211720", "RMNP","SRER","TECR","DEJU",
+                    "JORN", "YELL","MCRA", "DELA","CPER","HEAL","MART","WLOU","CRAM","GRSM","ABBY","WREF","LECO","SYCA" )
 
+message('forecast dates...')
+
+# forecast_date_range <- forecast_duck_df |>
+#   summarize(across(all_of(c('datetime')), list(min = min, max = max))) |>
+#   pull(datetime_min, datetime_max)
+#
+# forecast_min_date <-  forecast_date_range$datetime_min
+# forecast_max_date <-  forecast_date_range$datetime_max
+
+#forecast_min_date <-  forecast_date_range |> pull(datetime_min)
+#forecast_max_date <-  forecast_date_range |> pull(datetime_max)
+
+forecast_min_date <- '2017-02-01'
+forecast_max_date <- '2026-12-27'
 
 
 # theme_models <- arrow::open_dataset(arrow::s3_bucket(paste0(config$forecasts_bucket,'/bundled-parquet'), endpoint_override = config$endpoint, anonymous = TRUE)) |>
@@ -89,6 +107,10 @@ forecast_max_date <-  forecast_date_range |> pull(datetime_max)
 build_description <- paste0("Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the scores (summaries of the forecasts) to analyze forecasts (unless you need the individual ensemble members). You can access the forecasts at the top level of the dataset where all models, variables, and dates that forecasts were produced (reference_datetime) are available. The code to access the entire dataset is provided as an asset. Given the size of the forecast catalog, it can be time-consuming to access the data at the full dataset level. For quicker access to the forecasts for a particular model (model_id), we also provide the code to access the data at the model_id level as an asset for each model.")
 
 #forecast_sites <- forecast_sites$site_id
+
+if (!file.exists(catalog_config$forecast_path)){
+  dir.create(catalog_config$forecast_path)
+}
 
 stac4cast::build_forecast_scores(table_schema = forecast_theme_df,
                       #theme_id = 'Forecasts',
