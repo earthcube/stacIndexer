@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 
 import pystac
 import requests
-from pystac import Catalog, STACObjectType
+from pystac import Catalog, STACObjectType, Item, Collection
 from icecream import ic
 import hashlib
 
@@ -17,29 +17,30 @@ from pystac_client import Client
 from defs import convertas
 from defs import datacitation
 from pathlib import Path
+from sys import gettrace
 
 
-def save_dict_to_file(repo, root, collection, item):
+def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missing"):
     # At this point I have three elements:  root_catalog, item and asset (from below)
     props = item.properties
     assets = item.assets
+    if gettrace() or os.getenv("DEBUG", 'FALSE').upper() == "TRUE":
+        ic(root.id)
+        ic(root.title)
+        ic(root.description)
 
-    ic(root.id)
-    ic(root.title)
-    ic(root.description)
+        ic(collection.to_dict())
+        ic(collection.description)
 
-    ic(collection.to_dict())
-    ic(collection.description)
-
-    ic(item.geometry)
-    ic(item.bbox)
-    ic(item.datetime)
-    ic(item.collection_id)
-    ic(item.get_collection())
-    ic(item.common_metadata.instruments)
-    ic(item.common_metadata.platform)
-    ic(item.common_metadata.gsd)
-    ic(item.stac_extensions)
+        ic(item.geometry)
+        ic(item.bbox)
+        ic(item.datetime)
+        ic(item.collection_id)
+        ic(item.get_collection())
+        ic(item.common_metadata.instruments)
+        ic(item.common_metadata.platform)
+        ic(item.common_metadata.gsd)
+        ic(item.stac_extensions)
 
     max_lng, max_lat, min_lng, min_lat = item.bbox
     level = 13
@@ -50,13 +51,15 @@ def save_dict_to_file(repo, root, collection, item):
     context = {"@vocab": "https://schema.org/"}
 
     idhash_obj = hashlib.sha256()
-    idhash_obj.update(str(item.id + item.collection_id).encode())
+
+    idhash_obj.update(breadcrumb.encode())
     idhash_string = idhash_obj.hexdigest()
     idshort_hash = idhash_string[:10]
 
     doc["@context"] = context
     doc["@type"] = "Dataset"
-    doc["@id"] = "urn:" + repo.id + ":{}".format(idshort_hash)
+    doc["@id"] = "urn:" + repoPath + ":{}".format(idshort_hash)
+    doc['identifier']=breadcrumb
     doc["name"] = str(props.get("title"))
     doc["description"] = str(props.get("description"))
     doc["datePublished"] = props.get("datetime")[:10]
@@ -78,8 +81,10 @@ def save_dict_to_file(repo, root, collection, item):
 
     for asset_key in assets:
         asset = assets[asset_key].to_dict()
+        asset_obj = assets[asset_key]
         dist = {"@type": "DataDownload"}
-        dist["contentUrl"] = asset.get("href")
+        href = asset_obj.get_absolute_href() or asset_obj.get_href()
+        dist["contentUrl"] = href
         dist["encodingFormat"] = asset["type"]
         dist["description"] = asset["description"]
         dist["name"] = asset["title"]
@@ -114,35 +119,41 @@ def save_dict_to_file(repo, root, collection, item):
     # Rest of code remains unchanged...
 
     # if asset["type"] == "application/x-parquet":
-        # read_parquet(asset["href"])
+    # read_parquet(asset["href"])
 
     # compacted = jsonld.compact(doc, context)
     # dataset_string = json.dumps(compacted, indent=4)
 
     dataset_string = json.dumps(doc, indent=4)
+    #
+    # hash_obj = hashlib.sha256()
+    # # lets us amore stable @id for the filenames
+    # #hash_obj.update(dataset_string.encode())
+    # hash_obj.update(doc["@id"].encode())
+    # hash_string = hash_obj.hexdigest()
+    # short_hash = hash_string[:10]
 
-    hash_obj = hashlib.sha256()
-    hash_obj.update(dataset_string.encode())
-    hash_string = hash_obj.hexdigest()
-    short_hash = hash_string[:10]
-
-    create_folder_if_not_exist("./data/output/" + repo.id)
-    filename = "./data/output/" + repo.id + "/{}.json".format(short_hash)
+    create_folder_if_not_exist("./data/output/" + repoPath)
+    filename = "./data/output/" + repoPath + "/{}.json".format( idshort_hash)
+    if os.path.exists(filename):
+        print(f"duplicate hash for : {idshort_hash} {breadcrumb}")
     with open(filename, 'w') as f:
         f.write(dataset_string)
     # print(f"Dictionary saved to file: {filename}")
 
-def walk_item(repo, root_catalog, collection, itemid):
+
+def walk_item(repo, root_catalog: Catalog, collection: Collection, itemid, breadcrumb, repoPath="missing"):
     try:
         item = root_catalog.get_item(itemid, recursive=True)
     except Exception as e:
         # print(f"An error occurred: {e}")  # Prints the error message
 
         return  # Leaves the function early
+    #breadcrumb = f"{breadcrumb}/{item.id}"
+    save_dict_to_file(repo, root_catalog, collection, item, breadcrumb,repoPath)
 
-    save_dict_to_file(repo, root_catalog, collection, item)
 
-def walk_collection(repo, root_catalog, collection):
+def walk_collection(repo, root_catalog: Catalog, collection: Collection, breadcrumb, repoPath="/"):
     # collectionid = root_catalog.get_child(collection.id,recursive=True)
     # if collectionid is None:
     #     print("Collection is Empty. Check your downloads and try again.")
@@ -151,10 +162,32 @@ def walk_collection(repo, root_catalog, collection):
     #     print("Collection has a root child. You may proceed to the following steps.")
     #
     # items = list(collectionid.get_all_items())
-    items = list(collection.get_all_items())
-    for item in items:
-        # print(f"- {item.id}")
-        walk_item(repo, root_catalog, collection, item.id)
+    try:
+        if collection is None:
+            print(
+                f"    Collection is None... for get_all_items collection:")
+
+            return
+
+        #items = collection.get_all_items()
+        items = collection.get_items(recursive=True)
+        # removing None still had issues, just using the iterator
+        #filtered_data = [item for item in items if item is not None]
+
+        for item in items:
+            breadcrumb_item = f"{breadcrumb}/{item.id}"
+            # print(f"- {item.id}")
+            try:
+                walk_item(repo, root_catalog, collection, item.id, breadcrumb_item, repoPath)
+            except Exception as e:
+                ic(item)
+                print(
+                    f"    An error occurred in item {item.id} collection: {collection.id}  root: {root_catalog.id} repo: {repo.id}: {e}")
+    except  Exception as e:
+        ic(collection)
+        print(
+            f"    An error occurred at get_all_items collection: {collection.id}  root: {root_catalog.id} repo: {repo.id}: {e}")
+
 
 def safe_convert_to_int(value):
     """ Attempts to convert a value to an integer, handling errors gracefully. """
@@ -164,7 +197,9 @@ def safe_convert_to_int(value):
         logging.error(f"Invalid data for conversion to int: {value}")
         return None  # or return a default value, or raise a custom error
 
+
 import json
+
 
 def validate_collection(file_path):
     collection = pystac.Collection.from_file(file_path)
@@ -193,16 +228,25 @@ def validate_collection(file_path):
     #     }
     # ]
 
-def validate_catalog(file_path):
-    catalog = pystac.Catalog.from_file(file_path)
 
-    # Validate the collection
+def validate_catalog(file_path_or_url):
+    # Support both URL and file path
+    if file_path_or_url.startswith('http'):
+        # Fetch and clean catalog from URL
+        catalog_dict = fetch_and_clean_catalog_from_url(file_path_or_url)
+        catalog = pystac.Catalog.from_dict(catalog_dict)
+    else:
+        # Use file-based approach for local files
+        catalog = pystac.Catalog.from_file(file_path_or_url)
+
+    # Validate the catalog
     try:
         catalog.validate()
         return "VALID catalog"
     except Exception as e:
         logging.error("Validation error:", e)
         return "INVALID catalog"
+
 
 def process_catalog(catalog, base):
     try:
@@ -214,62 +258,94 @@ def process_catalog(catalog, base):
 
         # Process items
         for item in client.get_child_links():
-            if item.rel=="child":
+            if item.rel == "child":
                 print(f"    Processing item: {base}/{item.target}")
                 filepath = f"{base}/{item.target}"
                 validate_collection(filepath)
     except Exception as e:
         print(f"    An error occurred: {e}")
 
+def repoPath(catalog, previousCatalogs):
+    rootPath = ""
+    if previousCatalogs is not None:
+        for p in previousCatalogs:
+            rootPath = f"{p.id}"
+    rootPath = f"{rootPath}/{catalog.id}"
+    return rootPath
 
-def walk_catalog(root_catalog):
-    child_items = list(root_catalog.get_children())
+def walk_catalog(root_catalog: Catalog, breadcrumb, previousCatalogs=None):
+
+    child_items = root_catalog.get_children()
+
     for child in child_items:
-        if child.STAC_OBJECT_TYPE == STACObjectType.ITEM: # aka Feature
+        if previousCatalogs is None:
+            previousCatalogs = []
+        breadcrumb_new = f"{breadcrumb}/{child.id}"
+
+        if child.STAC_OBJECT_TYPE == STACObjectType.ITEM:  # aka Feature
             logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
         elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
-            l2_child_catalogs = list(child.get_children())
+
+            previousCatalogs.append(child)
+            l2_child_catalogs = child.get_children()
             for l2 in l2_child_catalogs:
-                walk_catalog(child)
+                breadcrumb_catalog = f"{breadcrumb_new}/{l2.id}"
+                try:
+                    walk_catalog(l2, breadcrumb_catalog, previousCatalogs=previousCatalogs)
+                except Exception as e:
+                    print(f"    An error occurred chlid: {child.id} root {root_catalog.id}: {e}")
+
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
             try:
-                collections = list(child.get_all_collections())
-                print(f"Number of collections: {len(collections)}")
+                collections = child.get_all_collections()
+                #print(f"Number of collections: {len(collections)}")
                 print("Collections IDs:")
                 for collection in collections:
+                    breadcrumb_collection = f"{breadcrumb_new}/{collection.id}"
                     print(f"- {collection.id}")
-                    walk_collection(root_catalog, child, collection)
+                    try:
+
+                        walk_collection(root_catalog, child, collection, breadcrumb_collection, repoPath(root_catalog, previousCatalogs))
+                    except Exception as e:
+                        print(
+                            f"    An error occurred in child: {child.id} collection {collection.id}: root:{root_catalog.id} {e}")
             except Exception as e:
-                print(f"    An error occurred: {e}")
+                print(
+                    f"    An error occurred for STACObjectType.COLLECTION child: {child.id}  root:{root_catalog.id}: {e}")
         else:
             logging.error(f"uknonwn type")
 
 
+def generate_sitemap(folder_path, sitemap_path, repo, branch="master"):
+    base_path = Path(".")
 
-
-def generate_sitemap(folder_path, sitemap_path, repo):
-    if not os.path.exists("." + folder_path):
+    target_directory = base_path.joinpath(folder_path)
+    if not os.path.exists(target_directory):
         return
     # Specify the directory you want to list
-    base_url = 'https://raw.githubusercontent.com/earthcube/stacIndexer/master' + folder_path + '/'
+    base_url = f'https://raw.githubusercontent.com/earthcube/stacIndexer/{branch}/'
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
     # List all files and directories in the folder
-    items = os.listdir("." + folder_path)
+     #items= os.listdir("." + folder_path)
+
+    items = [item for item in target_directory.rglob("*") if item.is_file()]
 
     # Print the items
     for item in items:
-        xml_content += '    <url><loc>'+base_url + item + '</loc></url>\n'
+
+        xml_content += '    <url><loc>' + base_url + str(item) + '</loc></url>\n'
 
     xml_content += '</urlset>'
     # Path to the file
-    file_path = '.' + sitemap_path + '/sitemap_' + repo + '.xml'
-    create_folder_if_not_exist('.' + sitemap_path)
-
+    sm_path = base_path.joinpath(sitemap_path)
+    create_folder_if_not_exist(sm_path)
+    file_path = sm_path.joinpath( f"sitemap_{repo}.xml")
     # Write to the file
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(xml_content)
+
 
 def clear_output_folder(folder_path):
     # Check if the folder exists
@@ -279,8 +355,10 @@ def clear_output_folder(folder_path):
     # Create the folder (it will also recreate if it was deleted)
     os.makedirs(folder_path)
 
+
 def create_folder_if_not_exist(folder_path):
     os.makedirs(folder_path, exist_ok=True)
+
 
 def adjust_bbox(bbox):
     # Check if the bbox has an extra pair of square brackets
@@ -288,6 +366,62 @@ def adjust_bbox(bbox):
         # Flatten the list by removing the outer list
         return bbox[0]
     return bbox
+
+
+def clean_catalog_content(content):
+    """
+    Apply the same cleaning operations that replace_in_folder applies,
+    but to a string content instead of files in a folder.
+    """
+    # Apply the same replacements as used in walk_stac()
+    replacements = [
+        ('"href": []', '"href": "https://github.com/radiantearth"'),
+        ('"href": null', '"href": "https://github.com/radiantearth"'),
+        ('"href": {}', '"href": "https://github.com/radiantearth"'),
+        ('InfT00:00:00Z', '2023-10-01T00:00:00Z'),
+        ('-InfT00:00:00Z', '2024-09-05T00:00:00Z'),
+        ('-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z'),
+        ('2017-02-01 15:00:00T00:00:00Z', '2017-02-01T00:00:00Z')
+    ]
+
+    cleaned_content = content
+    for old_string, new_string in replacements:
+        cleaned_content = cleaned_content.replace(old_string, new_string)
+
+    return cleaned_content
+
+
+def fetch_and_clean_catalog_from_url(url):
+    """
+    Fetch catalog JSON from a URL, apply content cleaning, and return a dictionary
+    suitable for pystac.Catalog.from_dict()
+    """
+    try:
+        # Fetch content from URL
+        response = requests.get(url)
+        response.raise_for_status()
+
+        # Clean the content using the same logic as replace_in_folder
+        cleaned_content = clean_catalog_content(response.text)
+
+        # Parse to JSON dictionary
+        catalog_dict = json.loads(cleaned_content)
+
+        # Apply bbox adjustment if needed
+        if "bbox" in catalog_dict:
+            catalog_dict["bbox"] = adjust_bbox(catalog_dict["bbox"])
+
+        return catalog_dict
+
+    except requests.RequestException as e:
+        print(f"Error fetching catalog from URL {url}: {e}")
+        raise
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSON from URL {url}: {e}")
+        raise
+    except Exception as e:
+        print(f"Unexpected error processing catalog from URL {url}: {e}")
+        raise
 
 
 def process_file(file_path, old_string, new_string):
@@ -330,6 +464,7 @@ def replace_in_folder(folder_path, old_string, new_string):
                 # Process the file
                 process_file(file_path, old_string, new_string)
 
+
 def download_file_from_github(file_url, local_path):
     response = requests.get(file_url)
     if response.status_code == 200:
@@ -338,6 +473,7 @@ def download_file_from_github(file_url, local_path):
         print(f"File downloaded: {local_path}")
     else:
         print(f"Failed to download file: {response.status_code}")
+
 
 def download_folder_from_github(repo, folder_path, local_folder_path):
     clear_output_folder(local_folder_path)
@@ -362,6 +498,7 @@ def download_folder_from_github(repo, folder_path, local_folder_path):
         print(f"Failed to retrieve folder contents: {response.status_code}")
         return
 
+
 def local_path_to_stac_browser_url(local_path: str) -> str:
     marker = "raw.githubusercontent.com/"
     idx = local_path.find(marker)
@@ -370,58 +507,46 @@ def local_path_to_stac_browser_url(local_path: str) -> str:
     raw_path = local_path[idx:]
     return f"https://radiantearth.github.io/stac-browser/#/external/{raw_path}"
 
-def walk_stac(cf):
 
+def walk_stac(args):
     # Use a breakpoint in the code line below to debug your script.
-    clear_output_folder("./data/output/")
 
-    download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
-    download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
-    download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
+    cf= args.configfile
+    # Use URL-based approach with content cleaning
+    if not args.sitemap_only:
+        clear_output_folder("./data/output/")
+        if cf.startswith('http'):
+            # Fetch and clean catalog from URL
+            catalog_dict = fetch_and_clean_catalog_from_url(cf)
+            root_catalog = Catalog.from_dict(catalog_dict)
+            root_catalog.set_self_href(cf)
+        else:
+            if os.getenv('GITHUB_TOKEN') is None:
+                logging.error('GITHUB_TOKEN env is not set')
+                return
+            # Fallback to file-based approach for local files
+            download_folder_from_github("eco4cast/neon4cast-ci", "catalog", "./data/challenge/neon4cast-stac")
+            download_folder_from_github("LTREB-reservoirs/vera4cast", "catalog", "./data/challenge/vera4cast-stac")
+            download_folder_from_github("eco4cast/usgsrc4cast-ci", "catalog", "./data/challenge/usgsrc4cast-stac")
 
-    # Resolve schema issues
-    replace_in_folder('./data/challenge', '"href": []', '"href": "https://github.com/radiantearth"')
-    replace_in_folder('./data/challenge', '"href": null', '"href": "https://github.com/radiantearth"')
-    replace_in_folder('./data/challenge', '"href": {}', '"href": "https://github.com/radiantearth"')
-    replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
-    replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
-    replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
-    replace_in_folder('./data/challenge', '2017-02-01 15:00:00T00:00:00Z', '2017-02-01T00:00:00Z')
+            # Resolve schema issues
+            replace_in_folder('./data/challenge', '"href": []', '"href": "https://github.com/radiantearth"')
+            replace_in_folder('./data/challenge', '"href": null', '"href": "https://github.com/radiantearth"')
+            replace_in_folder('./data/challenge', '"href": {}', '"href": "https://github.com/radiantearth"')
+            replace_in_folder('./data/challenge', 'InfT00:00:00Z', '2023-10-01T00:00:00Z')
+            replace_in_folder('./data/challenge', '-InfT00:00:00Z', '2024-09-05T00:00:00Z')
+            replace_in_folder('./data/challenge', '-2023-10-01T00:00:00Z', '2023-10-01T00:00:00Z')
+            replace_in_folder('./data/challenge', '2017-02-01 15:00:00T00:00:00Z', '2017-02-01T00:00:00Z')
+
+            root_catalog = Catalog.from_file(href=cf)
+        ic(root_catalog)
+
+        #child_catalogs = list(root_catalog.get_children())
+        breadcumb=root_catalog.id
+
+        walk_catalog(root_catalog, breadcumb)
+    generate_sitemap("data/output/neon4cast-stac", "data/output/sitemap", "neon4cast", branch=args.branch)
+    generate_sitemap("data/output/vera4cast-stac", "data/output/sitemap", "vera4cast", branch=args.branch)
+    generate_sitemap("data/output/usgsrc4cast-stac", "data/output/sitemap", "usgsrc4cast", branch=args.branch)
 
 
-    root_catalog = Catalog.from_file(href=cf)
-    ic(root_catalog)
-
-    #child_catalogs = list(root_catalog.get_children())
-    walk_catalog(root_catalog)
-    # Debugging for challenge only
-    # print(f"Number of child catalogs: {len(child_catalogs)}")
-    # for child in child_catalogs:
-    #     print(f"  - {child.id}")
-    #     child_cf = f"data/challenge/{child.id}/catalog.json"
-    #     print(f"    - {child_cf} [{validate_catalog(child_cf)}]")
-    #
-    #     child_catalog = Catalog.from_file(href=child_cf)
-    #     process_catalog(child_catalog, f"data/challenge/{child.id}")
-    #
-    # original block
-    # for child in child_catalogs:
-    #     if child.STAC_OBJECT_TYPE == STACObjectType.ITEM: # aka Feature
-    #         logging.info(f" do something with FEATURE(aka STACObjectType.ITEM): {child}")
-    #     elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
-    #         l2_child_catalogs = list(child.get_children())
-    #         for l2 in l2_child_catalogs:
-    #             process_catalog(l2, l2.get_self_href())
-    #     elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
-    #        # collections = list(child.get_all_collections())
-    #         collections = list(child.get_collections())
-    #         print(f"Number of collections: {len(collections)}")
-    #         print("Collections IDs:")
-    #         for collection in collections:
-    #             print(f"- {collection.id}")
-    #             walk_collection(child, collection)
-    #     else:
-    #         logging.error(f"uknonwn type")
-    generate_sitemap("/data/output/neon4cast-stac", "/data/output/sitemap", "neon4cast")
-    generate_sitemap("/data/output/vera4cast-stac", "/data/output/sitemap", "vera4cast")
-    generate_sitemap("/data/output/usgsrc4cast-stac", "/data/output/sitemap", "usgsrc4cast")
