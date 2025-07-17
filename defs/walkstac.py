@@ -18,7 +18,7 @@ from defs import convertas
 from defs import datacitation
 from pathlib import Path
 from sys import gettrace
-
+import re
 
 def find_asset_by_title(assets, title):
     for asset_key, asset in assets.items():
@@ -198,6 +198,8 @@ def walk_collection(repo, root_catalog: Catalog, collection: Collection, breadcr
     #     print("Collection has a root child. You may proceed to the following steps.")
     #
     # items = list(collectionid.get_all_items())
+    baseStacUI = "https://radiantearth.github.io/stac-browser/#/external"
+
     try:
         if collection is None:
             print(
@@ -223,6 +225,17 @@ def walk_collection(repo, root_catalog: Catalog, collection: Collection, breadcr
         ic(collection)
         print(
             f"    An error occurred at get_all_items collection: {collection.id}  root: {root_catalog.id} repo: {repo.id}: {e}")
+        if str(e).startswith('HREF:'):
+            # This is a specific error related to the href not being found
+            # It might be due to an empty collection or a missing href
+            print(f"    Collection {collection.id} might be empty or href is missing.")
+            match = re.search(r"https?://[^\s']+", str(e))
+            if match:
+                url = match.group()
+                if url.startswith("http"):
+                    url = url.split("/", maxsplit=1)[1]
+                    print(f" in chrome see if source is valid: {baseStacUI}{url}")
+
 
 
 def safe_convert_to_int(value):
