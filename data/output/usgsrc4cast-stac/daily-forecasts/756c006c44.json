@@ -54,18 +54,13 @@
         },
         {
             "@type": "PropertyValue",
+            "name": "reference_datetime",
+            "description": "datetime that the forecast was initiated (horizon = 0)"
+        },
+        {
+            "@type": "PropertyValue",
             "name": "site_id",
             "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "prediction",
-            "description": "predicted value for variable"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "parameter",
-            "description": "ensemble member or distribution parameter"
         },
         {
             "@type": "PropertyValue",
@@ -74,8 +69,13 @@
         },
         {
             "@type": "PropertyValue",
-            "name": "reference_datetime",
-            "description": "datetime that the forecast was initiated (horizon = 0)"
+            "name": "parameter",
+            "description": "ensemble member or distribution parameter"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "prediction",
+            "description": "predicted value for variable"
         },
         {
             "@type": "PropertyValue",
@@ -84,23 +84,23 @@
         },
         {
             "@type": "PropertyValue",
-            "name": "duration",
-            "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "model_id",
-            "description": "unique model identifier"
-        },
-        {
-            "@type": "PropertyValue",
             "name": "project_id",
             "description": "unique identifier for the forecast project"
         },
         {
             "@type": "PropertyValue",
+            "name": "duration",
+            "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
+        },
+        {
+            "@type": "PropertyValue",
             "name": "variable",
             "description": "name of forecasted variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "model_id",
+            "description": "unique model identifier"
         }
     ],
     "distribution": [
