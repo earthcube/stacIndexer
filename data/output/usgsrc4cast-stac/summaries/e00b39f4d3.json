@@ -6,12 +6,12 @@
     "@id": "urn:usgsrc4cast-stac/summaries:e00b39f4d3",
     "identifier": "eco4cast-stac/usgsrc4cast-stac/summaries/aquatics/Daily_Chlorophyll_a/persistenceRW_chla_P1D_summaries",
     "name": "persistenceRW",
-    "description": "All summaries for the Daily_Chlorophyll_a variable for the persistenceRW model. Information for the model is provided as follows: Random walk model based on most recent stream chl-a observations using the fable::RW() model..\n                                    The model predicts this variable at the following sites: USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
-    "datePublished": "2025-07-21",
-    "datetime": "2025-07-21",
-    "updated": "2025-07-22",
+    "description": "All summaries for the Daily_Chlorophyll_a variable for the persistenceRW model. Information for the model is provided as follows: Random walk model based on most recent stream chl-a observations using the fable::RW() model..\n                                    The model predicts this variable at the following sites: USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010.\n                                    Summaries are the forecasts statistics of the raw forecasts (i.e., mean, median, confidence intervals)",
+    "datePublished": "2025-07-22",
+    "datetime": "2025-07-22",
+    "updated": "2025-07-23",
     "start_datetime": "2024-02-07T00:00:00Z",
-    "end_datetime": "2025-08-24T00:00:00Z",
+    "end_datetime": "2025-08-25T00:00:00Z",
     "keywords": [
         "Summaries",
         "usgsrc4cast",
@@ -21,6 +21,7 @@
         "chla",
         "Daily",
         "P1D",
+        "USGS-14211720",
         "USGS-01427510",
         "USGS-01463500",
         "USGS-05543010",
@@ -29,8 +30,7 @@
         "USGS-05558300",
         "USGS-05586300",
         "USGS-14181500",
-        "USGS-14211010",
-        "USGS-14211720"
+        "USGS-14211010"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -161,7 +161,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/USGS_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720",
+            "description": "USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010",
             "name": "Model Sites"
         },
         {
@@ -174,11 +174,16 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720",
+        "name": "USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "39.6328,-122.6692 45.5175,-74.7781"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5175,
+                "longitude": -122.6692
             },
             {
                 "@type": "GeoCoordinates",
@@ -224,11 +229,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 45.3793,
                 "longitude": -122.5773
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.5175,
-                "longitude": -122.6692
             }
         ],
         "additionalProperty": [
