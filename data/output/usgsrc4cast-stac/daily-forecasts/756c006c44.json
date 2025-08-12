@@ -6,7 +6,7 @@
     "@id": "urn:usgsrc4cast-stac/daily-forecasts:756c006c44",
     "identifier": "eco4cast-stac/usgsrc4cast-stac/daily-forecasts/aquatics/Daily_Chlorophyll_a/USGSHABs1_chla_P1D_forecast",
     "name": "USGSHABs1",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the USGSHABs1 model. Information for the model is provided as follows: Uses the randomForest::randomForest() R package model to train site-specific models for predicting river chl-a. Uses ensemble Kalman filter to adjust predicted chl-a states..\n                                    The model predicts this variable at the following sites: USGS-14211720, USGS-14181500, USGS-05586300, USGS-14211010, USGS-01463500, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the USGSHABs1 model. Information for the model is provided as follows: Uses the randomForest::randomForest() R package model to train site-specific models for predicting river chl-a. Uses ensemble Kalman filter to adjust predicted chl-a states..\n                                    The model predicts this variable at the following sites: USGS-14211720, USGS-14181500, USGS-05586300, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510, USGS-14211010, USGS-01463500.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-08",
     "datetime": "2025-07-08",
     "updated": "2025-07-09",
@@ -24,13 +24,13 @@
         "USGS-14211720",
         "USGS-14181500",
         "USGS-05586300",
-        "USGS-14211010",
-        "USGS-01463500",
         "USGS-05558300",
         "USGS-05553700",
         "USGS-05543010",
         "USGS-05549500",
-        "USGS-01427510"
+        "USGS-01427510",
+        "USGS-14211010",
+        "USGS-01463500"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -136,7 +136,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/USGS_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "USGS-14211720, USGS-14181500, USGS-05586300, USGS-14211010, USGS-01463500, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510",
+            "description": "USGS-14211720, USGS-14181500, USGS-05586300, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510, USGS-14211010, USGS-01463500",
             "name": "Model Sites"
         },
         {
@@ -149,7 +149,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "USGS-14211720, USGS-14181500, USGS-05586300, USGS-14211010, USGS-01463500, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510",
+        "name": "USGS-14211720, USGS-14181500, USGS-05586300, USGS-05558300, USGS-05553700, USGS-05543010, USGS-05549500, USGS-01427510, USGS-14211010, USGS-01463500",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -169,16 +169,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.6328,
                 "longitude": -90.6077
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.3793,
-                "longitude": -122.5773
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.2217,
-                "longitude": -74.7781
             },
             {
                 "@type": "GeoCoordinates",
@@ -204,6 +194,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 41.7567,
                 "longitude": -75.0574
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.3793,
+                "longitude": -122.5773
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.2217,
+                "longitude": -74.7781
             }
         ],
         "additionalProperty": [
