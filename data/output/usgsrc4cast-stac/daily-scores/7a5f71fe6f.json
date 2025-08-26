@@ -6,12 +6,12 @@
     "@id": "urn:usgsrc4cast-stac/daily-scores:7a5f71fe6f",
     "identifier": "eco4cast-stac/usgsrc4cast-stac/daily-scores/aquatics/Daily_Chlorophyll_a/persistenceRW_chla_P1D_scores",
     "name": "persistenceRW",
-    "description": "All scores for the Daily_Chlorophyll_a variable for the persistenceRW model. Information for the model is provided as follows: Random walk model based on most recent stream chl-a observations using the fable::RW() model..\n                                    The model predicts this variable at the following sites: USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-    "datePublished": "2025-08-23",
-    "datetime": "2025-08-23",
-    "updated": "2025-08-24",
+    "description": "All scores for the Daily_Chlorophyll_a variable for the persistenceRW model. Information for the model is provided as follows: Random walk model based on most recent stream chl-a observations using the fable::RW() model..\n                                    The model predicts this variable at the following sites: USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "datePublished": "2025-08-24",
+    "datetime": "2025-08-24",
+    "updated": "2025-08-25",
     "start_datetime": "2024-02-07T00:00:00Z",
-    "end_datetime": "2025-08-24T00:00:00Z",
+    "end_datetime": "2025-08-25T00:00:00Z",
     "keywords": [
         "Scores",
         "usgsrc4cast",
@@ -21,16 +21,16 @@
         "chla",
         "Daily",
         "P1D",
+        "USGS-01427510",
+        "USGS-01463500",
+        "USGS-05543010",
         "USGS-05549500",
         "USGS-05553700",
         "USGS-05558300",
         "USGS-05586300",
         "USGS-14181500",
         "USGS-14211010",
-        "USGS-14211720",
-        "USGS-01427510",
-        "USGS-01463500",
-        "USGS-05543010"
+        "USGS-14211720"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -176,7 +176,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/USGS_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010",
+            "description": "USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720",
             "name": "Model Sites"
         },
         {
@@ -189,11 +189,26 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720, USGS-01427510, USGS-01463500, USGS-05543010",
+        "name": "USGS-01427510, USGS-01463500, USGS-05543010, USGS-05549500, USGS-05553700, USGS-05558300, USGS-05586300, USGS-14181500, USGS-14211010, USGS-14211720",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "39.6328,-122.6692 45.5175,-74.7781"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 41.7567,
+                "longitude": -75.0574
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.2217,
+                "longitude": -74.7781
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 41.2999,
+                "longitude": -88.6142
             },
             {
                 "@type": "GeoCoordinates",
@@ -229,21 +244,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 45.5175,
                 "longitude": -122.6692
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 41.7567,
-                "longitude": -75.0574
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.2217,
-                "longitude": -74.7781
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 41.2999,
-                "longitude": -88.6142
             }
         ],
         "additionalProperty": [
