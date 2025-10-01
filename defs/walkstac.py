@@ -605,3 +605,195 @@ def walk_stac(args):
     generate_sitemap("data/output/usgsrc4cast-stac", "data/output/sitemap", "usgsrc4cast", branch=args.branch)
 
 
+def validate_stac_catalog(args):
+    """
+    Comprehensive validation of a STAC catalog with detailed error reporting.
+    Supports both URL and file-based catalogs.
+    """
+    cf = args.configfile
+    if not cf:
+        print("ERROR: No config file specified. Use --configfile <url_or_path>")
+        return
+
+    validation_report = {
+        "catalog_url": cf,
+        "overall_status": "UNKNOWN",
+        "errors": [],
+        "warnings": [],
+        "summary": {
+            "total_catalogs": 0,
+            "total_collections": 0,
+            "total_items": 0,
+            "validation_errors": 0,
+            "validation_warnings": 0
+        }
+    }
+
+    print(f"🔍 Validating STAC catalog: {cf}")
+    print("=" * 80)
+
+    try:
+        # Load and validate root catalog
+        print("📁 Loading root catalog...")
+        if cf.startswith('http'):
+            catalog_dict = fetch_and_clean_catalog_from_url(cf)
+            root_catalog = Catalog.from_dict(catalog_dict)
+            root_catalog.set_self_href(cf)
+        else:
+            root_catalog = Catalog.from_file(href=cf)
+
+        validation_report["summary"]["total_catalogs"] += 1
+
+        # Validate root catalog
+        try:
+            root_catalog.validate()
+            print("✅ Root catalog is valid")
+        except Exception as e:
+            error_msg = f"Root catalog validation failed: {str(e)}"
+            validation_report["errors"].append(error_msg)
+            validation_report["summary"]["validation_errors"] += 1
+            print(f"❌ {error_msg}")
+
+        # Recursively validate the entire catalog structure
+        _validate_catalog_recursive(root_catalog, validation_report, level=0)
+
+    except Exception as e:
+        error_msg = f"Failed to load catalog: {str(e)}"
+        validation_report["errors"].append(error_msg)
+        validation_report["summary"]["validation_errors"] += 1
+        print(f"💥 {error_msg}")
+
+    # Generate final report
+    _print_validation_summary(validation_report)
+    _save_validation_report(validation_report)
+
+
+def _validate_catalog_recursive(catalog: Catalog, report: dict, level: int = 0):
+    """Recursively validate catalog, collections, and items."""
+    indent = "  " * level
+
+    try:
+        children = catalog.get_children()
+
+        for child in children:
+            if child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
+                print(f"{indent}📁 Validating sub-catalog: {child.id}")
+                report["summary"]["total_catalogs"] += 1
+
+                try:
+                    child.validate()
+                    print(f"{indent}✅ Catalog '{child.id}' is valid")
+                except Exception as e:
+                    error_msg = f"Catalog '{child.id}' validation failed: {str(e)}"
+                    report["errors"].append(error_msg)
+                    report["summary"]["validation_errors"] += 1
+                    print(f"{indent}❌ {error_msg}")
+
+                # Recursively validate sub-catalogs
+                _validate_catalog_recursive(child, report, level + 1)
+
+            elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
+                print(f"{indent}📦 Validating collection: {child.id}")
+                report["summary"]["total_collections"] += 1
+
+                try:
+                    child.validate()
+                    print(f"{indent}✅ Collection '{child.id}' is valid")
+                except Exception as e:
+                    error_msg = f"Collection '{child.id}' validation failed: {str(e)}"
+                    report["errors"].append(error_msg)
+                    report["summary"]["validation_errors"] += 1
+                    print(f"{indent}❌ {error_msg}")
+
+                # Validate items in collection
+                _validate_collection_items(child, report, level + 1)
+
+    except Exception as e:
+        error_msg = f"Failed to get children for catalog '{catalog.id}': {str(e)}"
+        report["errors"].append(error_msg)
+        report["summary"]["validation_errors"] += 1
+        print(f"{indent}💥 {error_msg}")
+
+
+def _validate_collection_items(collection: Collection, report: dict, level: int = 0):
+    """Validate all items in a collection."""
+    indent = "  " * level
+
+    try:
+        items = collection.get_items(recursive=True)
+        item_count = 0
+
+        for item in items:
+            item_count += 1
+            report["summary"]["total_items"] += 1
+
+            if item_count <= 5:  # Only show details for first 5 items to avoid spam
+                print(f"{indent}📄 Validating item: {item.id}")
+            elif item_count == 6:
+                print(f"{indent}... (validating remaining items silently)")
+
+            try:
+                item.validate()
+                if item_count <= 5:
+                    print(f"{indent}✅ Item '{item.id}' is valid")
+            except Exception as e:
+                error_msg = f"Item '{item.id}' in collection '{collection.id}' validation failed: {str(e)}"
+                report["errors"].append(error_msg)
+                report["summary"]["validation_errors"] += 1
+                if item_count <= 5:
+                    print(f"{indent}❌ Item '{item.id}' validation failed: {str(e)}")
+
+        if item_count > 5:
+            print(f"{indent}📊 Validated {item_count} items total in collection '{collection.id}'")
+
+    except Exception as e:
+        error_msg = f"Failed to get items for collection '{collection.id}': {str(e)}"
+        report["errors"].append(error_msg)
+        report["summary"]["validation_errors"] += 1
+        print(f"{indent}💥 {error_msg}")
+
+
+def _print_validation_summary(report: dict):
+    """Print a summary of the validation results."""
+    print("\n" + "=" * 80)
+    print("📊 VALIDATION SUMMARY")
+    print("=" * 80)
+
+    summary = report["summary"]
+    print(f"📁 Total catalogs validated: {summary['total_catalogs']}")
+    print(f"📦 Total collections validated: {summary['total_collections']}")
+    print(f"📄 Total items validated: {summary['total_items']}")
+    print(f"❌ Validation errors: {summary['validation_errors']}")
+    print(f"⚠️  Validation warnings: {summary['validation_warnings']}")
+
+    if summary['validation_errors'] == 0:
+        report["overall_status"] = "VALID"
+        print("\n🎉 OVERALL STATUS: VALID - No validation errors found!")
+    else:
+        report["overall_status"] = "INVALID"
+        print(f"\n💥 OVERALL STATUS: INVALID - {summary['validation_errors']} validation errors found")
+
+        print("\n❌ ERRORS:")
+        for i, error in enumerate(report["errors"][:10], 1):  # Show first 10 errors
+            print(f"  {i}. {error}")
+
+        if len(report["errors"]) > 10:
+            print(f"  ... and {len(report['errors']) - 10} more errors")
+
+
+def _save_validation_report(report: dict):
+    """Save the validation report to a JSON file."""
+    import json
+    from datetime import datetime
+
+    report["timestamp"] = datetime.now().isoformat()
+
+    create_folder_if_not_exist("./validation_reports")
+    filename = f"./validation_reports/validation_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+
+    with open(filename, 'w') as f:
+        json.dump(report, f, indent=2)
+
+    print(f"\n📄 Detailed validation report saved to: {filename}")
+
+
