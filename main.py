@@ -12,7 +12,12 @@ if __name__ == '__main__':
     parser.add_argument('--configfile', type=str, help='The config file')
     parser.add_argument('--branch', type=str, default='master', help='github branch')
     parser.add_argument('--sitemap_only', action='store_true', help='just generate sitemap')
+    parser.add_argument('--validate', action='store_true', help='validate STAC catalog and generate error report')
     args = parser.parse_args()
     configfile = args.configfile
-    ws.walk_stac(args)
+
+    if args.validate:
+        ws.validate_stac_catalog(args)
+    else:
+        ws.walk_stac(args)
 
