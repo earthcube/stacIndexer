@@ -336,14 +336,20 @@ def walk_catalog(root_catalog: Catalog, breadcrumb, previousCatalogs=None):
         elif child.STAC_OBJECT_TYPE == STACObjectType.CATALOG:
 
             previousCatalogs.append(child)
-            l2_child_catalogs = child.get_children()
-            for l2 in l2_child_catalogs:
-                breadcrumb_catalog = f"{breadcrumb_new}/{l2.id}"
-                try:
-                    walk_catalog(l2, breadcrumb_catalog, previousCatalogs=previousCatalogs)
-                except Exception as e:
-                    print(f"    An error occurred chlid: {child.id} root {root_catalog.id}: {e}")
-
+            try:
+                l2_child_catalogs = child.get_children()
+                for l2 in l2_child_catalogs:
+                    breadcrumb_catalog = f"{breadcrumb_new}/{l2.id}"
+                    try:
+                        walk_catalog(l2, breadcrumb_catalog, previousCatalogs=previousCatalogs)
+                    except   pystac.errors.STACError as e:
+                        print(f"    An error occurred chlid: {child.id} root {root_catalog.id}: {e}")
+                    except Exception as e:
+                        print(f"    An error occurred chlid: {child.id} root {root_catalog.id}: {e}")
+            except   pystac.errors.STACError as e:
+                print(f"    An error occurred chlid: {child.id} root {root_catalog.id}: {e}")
+            except  Exception as e:
+                print(f"    An error occurred chlid: {child.id} root {root_catalog.id}: {e}")
         elif child.STAC_OBJECT_TYPE == STACObjectType.COLLECTION:
             try:
                 collections = child.get_all_collections()
