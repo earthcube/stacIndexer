@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:552fbf39f9",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_randfor_amblyomma_americanum_P1W_forecast",
     "name": "tg_randfor",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: KONZ, ORNL, UKFS, OSBS, SCBI, BLAN, SERC, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: ORNL, UKFS, OSBS, KONZ, SCBI, BLAN, SERC, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -21,10 +21,10 @@
         "amblyomma_americanum",
         "Weekly",
         "P1W",
-        "KONZ",
         "ORNL",
         "UKFS",
         "OSBS",
+        "KONZ",
         "SCBI",
         "BLAN",
         "SERC",
@@ -134,7 +134,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "KONZ, ORNL, UKFS, OSBS, SCBI, BLAN, SERC, TALL",
+            "description": "ORNL, UKFS, OSBS, KONZ, SCBI, BLAN, SERC, TALL",
             "name": "Model Sites"
         },
         {
@@ -147,16 +147,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "KONZ, ORNL, UKFS, OSBS, SCBI, BLAN, SERC, TALL",
+        "name": "ORNL, UKFS, OSBS, KONZ, SCBI, BLAN, SERC, TALL",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.6893,-96.5631 39.1008,-76.56"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.1008,
-                "longitude": -96.5631
             },
             {
                 "@type": "GeoCoordinates",
@@ -172,6 +167,11 @@
                 "@type": "GeoCoordinates",
                 "latitude": 29.6893,
                 "longitude": -81.9934
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1008,
+                "longitude": -96.5631
             },
             {
                 "@type": "GeoCoordinates",

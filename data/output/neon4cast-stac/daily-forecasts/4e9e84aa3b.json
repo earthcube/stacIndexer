@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:4e9e84aa3b",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Dissolved_oxygen/tg_tbats_oxygen_P1D_forecast",
     "name": "tg_tbats",
-    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LEWI, PRPO, BLUE, TOOK, CARI, TOMB, LIRO, PRLA, SYCA, TECR, COMO, BLWA, GUIL, CRAM, SUGG, OKSR, MCDI, BARC, MART, HOPB, CUPE, POSE, KING, PRIN, WLOU, REDB, ARIK, WALK, MAYF, LECO, BLDE, BIGC, FLNT, MCRA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: CARI, TOMB, LIRO, PRLA, SYCA, TECR, COMO, BLWA, GUIL, LEWI, PRPO, BLUE, TOOK, CRAM, SUGG, OKSR, MCDI, BARC, MART, HOPB, CUPE, POSE, KING, PRIN, WLOU, REDB, ARIK, WALK, MAYF, LECO, BLDE, BIGC, FLNT, MCRA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-12T00:00:00Z",
@@ -21,10 +21,6 @@
         "oxygen",
         "Daily",
         "P1D",
-        "LEWI",
-        "PRPO",
-        "BLUE",
-        "TOOK",
         "CARI",
         "TOMB",
         "LIRO",
@@ -34,6 +30,10 @@
         "COMO",
         "BLWA",
         "GUIL",
+        "LEWI",
+        "PRPO",
+        "BLUE",
+        "TOOK",
         "CRAM",
         "SUGG",
         "OKSR",
@@ -160,7 +160,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LEWI, PRPO, BLUE, TOOK, CARI, TOMB, LIRO, PRLA, SYCA, TECR, COMO, BLWA, GUIL, CRAM, SUGG, OKSR, MCDI, BARC, MART, HOPB, CUPE, POSE, KING, PRIN, WLOU, REDB, ARIK, WALK, MAYF, LECO, BLDE, BIGC, FLNT, MCRA",
+            "description": "CARI, TOMB, LIRO, PRLA, SYCA, TECR, COMO, BLWA, GUIL, LEWI, PRPO, BLUE, TOOK, CRAM, SUGG, OKSR, MCDI, BARC, MART, HOPB, CUPE, POSE, KING, PRIN, WLOU, REDB, ARIK, WALK, MAYF, LECO, BLDE, BIGC, FLNT, MCRA",
             "name": "Model Sites"
         },
         {
@@ -173,31 +173,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LEWI, PRPO, BLUE, TOOK, CARI, TOMB, LIRO, PRLA, SYCA, TECR, COMO, BLWA, GUIL, CRAM, SUGG, OKSR, MCDI, BARC, MART, HOPB, CUPE, POSE, KING, PRIN, WLOU, REDB, ARIK, WALK, MAYF, LECO, BLDE, BIGC, FLNT, MCRA",
+        "name": "CARI, TOMB, LIRO, PRLA, SYCA, TECR, COMO, BLWA, GUIL, LEWI, PRPO, BLUE, TOOK, CRAM, SUGG, OKSR, MCDI, BARC, MART, HOPB, CUPE, POSE, KING, PRIN, WLOU, REDB, ARIK, WALK, MAYF, LECO, BLDE, BIGC, FLNT, MCRA",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "18.1135,-149.6106 68.6698,-66.7987"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
             },
             {
                 "@type": "GeoCoordinates",
@@ -243,6 +223,26 @@
                 "@type": "GeoCoordinates",
                 "latitude": 18.1741,
                 "longitude": -66.7987
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
             },
             {
                 "@type": "GeoCoordinates",
