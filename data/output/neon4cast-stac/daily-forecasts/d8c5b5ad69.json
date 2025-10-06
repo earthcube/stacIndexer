@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:d8c5b5ad69",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Dissolved_oxygen/AquaticEcosystemsOxygen_oxygen_P1D_forecast",
     "name": "AquaticEcosystemsOxygen",
-    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: WLOU, BARC, ARIK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: ARIK, WLOU, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-07-07",
     "datetime": "2024-07-07",
     "updated": "2024-08-23T00:00:00Z",
@@ -21,9 +21,9 @@
         "oxygen",
         "Daily",
         "P1D",
+        "ARIK",
         "WLOU",
-        "BARC",
-        "ARIK"
+        "BARC"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -129,7 +129,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "WLOU, BARC, ARIK",
+            "description": "ARIK, WLOU, BARC",
             "name": "Model Sites"
         },
         {
@@ -142,11 +142,16 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "WLOU, BARC, ARIK",
+        "name": "ARIK, WLOU, BARC",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-105.9154 39.8914,-82.0084"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.7582,
+                "longitude": -102.4471
             },
             {
                 "@type": "GeoCoordinates",
@@ -157,11 +162,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 29.676,
                 "longitude": -82.0084
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7582,
-                "longitude": -102.4471
             }
         ],
         "additionalProperty": [

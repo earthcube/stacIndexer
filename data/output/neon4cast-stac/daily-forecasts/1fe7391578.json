@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:1fe7391578",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_elasticNet_amblyomma_americanum_P1W_forecast",
     "name": "tg_elasticNet",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_elasticNet model. Information for the model is provided as follows: elastic net regression trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: LENO, KONZ, TALL, SERC, SCBI, BLAN, OSBS, ORNL, UKFS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_elasticNet model. Information for the model is provided as follows: elastic net regression trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: SCBI, BLAN, LENO, KONZ, OSBS, ORNL, UKFS, TALL, SERC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -21,15 +21,15 @@
         "amblyomma_americanum",
         "Weekly",
         "P1W",
-        "LENO",
-        "KONZ",
-        "TALL",
-        "SERC",
         "SCBI",
         "BLAN",
+        "LENO",
+        "KONZ",
         "OSBS",
         "ORNL",
-        "UKFS"
+        "UKFS",
+        "TALL",
+        "SERC"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -135,7 +135,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LENO, KONZ, TALL, SERC, SCBI, BLAN, OSBS, ORNL, UKFS",
+            "description": "SCBI, BLAN, LENO, KONZ, OSBS, ORNL, UKFS, TALL, SERC",
             "name": "Model Sites"
         },
         {
@@ -148,31 +148,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LENO, KONZ, TALL, SERC, SCBI, BLAN, OSBS, ORNL, UKFS",
+        "name": "SCBI, BLAN, LENO, KONZ, OSBS, ORNL, UKFS, TALL, SERC",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.6893,-96.5631 39.1008,-76.56"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.8539,
-                "longitude": -88.1612
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.1008,
-                "longitude": -96.5631
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
             },
             {
                 "@type": "GeoCoordinates",
@@ -183,6 +163,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.0337,
                 "longitude": -78.0418
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.8539,
+                "longitude": -88.1612
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1008,
+                "longitude": -96.5631
             },
             {
                 "@type": "GeoCoordinates",
@@ -198,6 +188,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.0404,
                 "longitude": -95.1921
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
             }
         ],
         "additionalProperty": [
