@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:84c53f1857",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/zimmerman_proj1_temperature_P1D_forecast",
     "name": "zimmerman_proj1",
-    "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: BARC, CRAM, SUGG, TOOK, PRPO, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the zimmerman_proj1 model. Information for the model is provided as follows: I used an ARIMA model with one autoregressive term. I also included air pressure and air temperature.\n                                    The model predicts this variable at the following sites: TOOK, PRPO, LIRO, PRLA, BARC, CRAM, SUGG.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-06-14",
     "datetime": "2025-06-14",
     "updated": "2025-06-14T00:00:00Z",
@@ -21,13 +21,13 @@
         "temperature",
         "Daily",
         "P1D",
-        "BARC",
-        "CRAM",
-        "SUGG",
         "TOOK",
         "PRPO",
         "LIRO",
-        "PRLA"
+        "PRLA",
+        "BARC",
+        "CRAM",
+        "SUGG"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -133,7 +133,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "BARC, CRAM, SUGG, TOOK, PRPO, LIRO, PRLA",
+            "description": "TOOK, PRPO, LIRO, PRLA, BARC, CRAM, SUGG",
             "name": "Model Sites"
         },
         {
@@ -146,26 +146,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "BARC, CRAM, SUGG, TOOK, PRPO, LIRO, PRLA",
+        "name": "TOOK, PRPO, LIRO, PRLA, BARC, CRAM, SUGG",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.676,
-                "longitude": -82.0084
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.2097,
-                "longitude": -89.4737
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.6878,
-                "longitude": -82.0177
             },
             {
                 "@type": "GeoCoordinates",
@@ -186,6 +171,21 @@
                 "@type": "GeoCoordinates",
                 "latitude": 47.1591,
                 "longitude": -99.1139
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.676,
+                "longitude": -82.0084
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.2097,
+                "longitude": -89.4737
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.6878,
+                "longitude": -82.0177
             }
         ],
         "additionalProperty": [
