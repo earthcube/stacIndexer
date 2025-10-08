@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:ca8803b7f6",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/mkricheldorf_w_lag_temperature_P1D_forecast",
     "name": "mkricheldorf_w_lag",
-    "description": "All forecasts for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: TOOK, PRPO, PRLA, LIRO, CRAM, SUGG, BARC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the mkricheldorf_w_lag model. Information for the model is provided as follows: I used an autoregressive linear model using the lm() function.\n                                    The model predicts this variable at the following sites: PRLA, LIRO, CRAM, SUGG, BARC, TOOK, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-08-25",
     "datetime": "2024-08-25",
     "updated": "2024-08-29T00:00:00Z",
@@ -21,13 +21,13 @@
         "temperature",
         "Daily",
         "P1D",
-        "TOOK",
-        "PRPO",
         "PRLA",
         "LIRO",
         "CRAM",
         "SUGG",
-        "BARC"
+        "BARC",
+        "TOOK",
+        "PRPO"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -133,7 +133,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TOOK, PRPO, PRLA, LIRO, CRAM, SUGG, BARC",
+            "description": "PRLA, LIRO, CRAM, SUGG, BARC, TOOK, PRPO",
             "name": "Model Sites"
         },
         {
@@ -146,21 +146,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TOOK, PRPO, PRLA, LIRO, CRAM, SUGG, BARC",
+        "name": "PRLA, LIRO, CRAM, SUGG, BARC, TOOK, PRPO",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
@@ -186,6 +176,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 29.676,
                 "longitude": -82.0084
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
             }
         ],
         "additionalProperty": [
