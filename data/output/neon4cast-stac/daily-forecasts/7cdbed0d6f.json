@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:7cdbed0d6f",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/fARIMA_clim_ensemble_temperature_P1D_forecast",
     "name": "fARIMA_clim_ensemble",
-    "description": "All forecasts for the Daily_Water_temperature variable for the fARIMA_clim_ensemble model. Information for the model is provided as follows: The fAMIRA-DOY MME is a multi-model ensemble (MME) composed of two empirical\nmodels: an ARIMA model (fARIMA) and day-of-year model.\n                                    The model predicts this variable at the following sites: TOMB, CARI, LIRO, COMO, TECR, BLWA, GUIL, SYCA, PRLA, BARC, SUGG, CUPE, MCDI, POSE, REDB, HOPB, PRIN, MART, KING, WLOU, CRAM, OKSR, PRPO, LEWI, BLUE, TOOK, BIGC, WALK, LECO, MCRA, BLDE, FLNT, ARIK, MAYF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the fARIMA_clim_ensemble model. Information for the model is provided as follows: The fAMIRA-DOY MME is a multi-model ensemble (MME) composed of two empirical\nmodels: an ARIMA model (fARIMA) and day-of-year model.\n                                    The model predicts this variable at the following sites: TOMB, CARI, LIRO, COMO, TECR, BLWA, GUIL, SYCA, PRLA, PRPO, LEWI, BLUE, TOOK, BARC, SUGG, CUPE, MCDI, POSE, REDB, HOPB, PRIN, MART, KING, WLOU, CRAM, OKSR, BIGC, WALK, LECO, MCRA, BLDE, FLNT, ARIK, MAYF.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-07-03",
     "datetime": "2024-07-03",
     "updated": "2024-08-22T00:00:00Z",
@@ -30,6 +30,10 @@
         "GUIL",
         "SYCA",
         "PRLA",
+        "PRPO",
+        "LEWI",
+        "BLUE",
+        "TOOK",
         "BARC",
         "SUGG",
         "CUPE",
@@ -43,10 +47,6 @@
         "WLOU",
         "CRAM",
         "OKSR",
-        "PRPO",
-        "LEWI",
-        "BLUE",
-        "TOOK",
         "BIGC",
         "WALK",
         "LECO",
@@ -160,7 +160,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TOMB, CARI, LIRO, COMO, TECR, BLWA, GUIL, SYCA, PRLA, BARC, SUGG, CUPE, MCDI, POSE, REDB, HOPB, PRIN, MART, KING, WLOU, CRAM, OKSR, PRPO, LEWI, BLUE, TOOK, BIGC, WALK, LECO, MCRA, BLDE, FLNT, ARIK, MAYF",
+            "description": "TOMB, CARI, LIRO, COMO, TECR, BLWA, GUIL, SYCA, PRLA, PRPO, LEWI, BLUE, TOOK, BARC, SUGG, CUPE, MCDI, POSE, REDB, HOPB, PRIN, MART, KING, WLOU, CRAM, OKSR, BIGC, WALK, LECO, MCRA, BLDE, FLNT, ARIK, MAYF",
             "name": "Model Sites"
         },
         {
@@ -173,7 +173,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TOMB, CARI, LIRO, COMO, TECR, BLWA, GUIL, SYCA, PRLA, BARC, SUGG, CUPE, MCDI, POSE, REDB, HOPB, PRIN, MART, KING, WLOU, CRAM, OKSR, PRPO, LEWI, BLUE, TOOK, BIGC, WALK, LECO, MCRA, BLDE, FLNT, ARIK, MAYF",
+        "name": "TOMB, CARI, LIRO, COMO, TECR, BLWA, GUIL, SYCA, PRLA, PRPO, LEWI, BLUE, TOOK, BARC, SUGG, CUPE, MCDI, POSE, REDB, HOPB, PRIN, MART, KING, WLOU, CRAM, OKSR, BIGC, WALK, LECO, MCRA, BLDE, FLNT, ARIK, MAYF",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -223,6 +223,26 @@
                 "@type": "GeoCoordinates",
                 "latitude": 47.1591,
                 "longitude": -99.1139
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
             },
             {
                 "@type": "GeoCoordinates",
@@ -288,26 +308,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 68.6698,
                 "longitude": -149.143
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
             },
             {
                 "@type": "GeoCoordinates",

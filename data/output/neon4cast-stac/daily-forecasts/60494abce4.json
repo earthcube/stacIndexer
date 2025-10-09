@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:60494abce4",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Beetles/Weekly_beetle_community_abundance/tg_tbats_abundance_P1W_forecast",
     "name": "tg_tbats",
-    "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: TOOL, ORNL, DCFS, YELL, HEAL, HARV, OSBS, WOOD, WREF, CLBJ, DSNY, BARR, NOGP, DEJU, BONA, UKFS, UNDE, GUAN, KONA, TEAK, SCBI, SRER, JERC, SOAP, OAES, STER, BLAN, CPER, ONAQ, MOAB, GRSM, PUUM, DELA, LAJA, MLBS, KONZ, LENO, ABBY, NIWO, TREE, RMNP, SJER, JORN, BART, TALL, SERC, STEI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_beetle_community_abundance variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: TOOL, ORNL, DCFS, YELL, HEAL, HARV, OSBS, WOOD, WREF, CLBJ, DSNY, BARR, NOGP, DEJU, BONA, UKFS, UNDE, GUAN, KONA, TEAK, MOAB, GRSM, PUUM, DELA, LAJA, MLBS, KONZ, LENO, ABBY, NIWO, SCBI, SRER, JERC, SOAP, OAES, STER, BLAN, CPER, ONAQ, TREE, RMNP, SJER, JORN, BART, TALL, SERC, STEI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-12T00:00:00Z",
@@ -41,15 +41,6 @@
         "GUAN",
         "KONA",
         "TEAK",
-        "SCBI",
-        "SRER",
-        "JERC",
-        "SOAP",
-        "OAES",
-        "STER",
-        "BLAN",
-        "CPER",
-        "ONAQ",
         "MOAB",
         "GRSM",
         "PUUM",
@@ -60,6 +51,15 @@
         "LENO",
         "ABBY",
         "NIWO",
+        "SCBI",
+        "SRER",
+        "JERC",
+        "SOAP",
+        "OAES",
+        "STER",
+        "BLAN",
+        "CPER",
+        "ONAQ",
         "TREE",
         "RMNP",
         "SJER",
@@ -173,7 +173,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TOOL, ORNL, DCFS, YELL, HEAL, HARV, OSBS, WOOD, WREF, CLBJ, DSNY, BARR, NOGP, DEJU, BONA, UKFS, UNDE, GUAN, KONA, TEAK, SCBI, SRER, JERC, SOAP, OAES, STER, BLAN, CPER, ONAQ, MOAB, GRSM, PUUM, DELA, LAJA, MLBS, KONZ, LENO, ABBY, NIWO, TREE, RMNP, SJER, JORN, BART, TALL, SERC, STEI",
+            "description": "TOOL, ORNL, DCFS, YELL, HEAL, HARV, OSBS, WOOD, WREF, CLBJ, DSNY, BARR, NOGP, DEJU, BONA, UKFS, UNDE, GUAN, KONA, TEAK, MOAB, GRSM, PUUM, DELA, LAJA, MLBS, KONZ, LENO, ABBY, NIWO, SCBI, SRER, JERC, SOAP, OAES, STER, BLAN, CPER, ONAQ, TREE, RMNP, SJER, JORN, BART, TALL, SERC, STEI",
             "name": "Model Sites"
         },
         {
@@ -186,7 +186,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TOOL, ORNL, DCFS, YELL, HEAL, HARV, OSBS, WOOD, WREF, CLBJ, DSNY, BARR, NOGP, DEJU, BONA, UKFS, UNDE, GUAN, KONA, TEAK, SCBI, SRER, JERC, SOAP, OAES, STER, BLAN, CPER, ONAQ, MOAB, GRSM, PUUM, DELA, LAJA, MLBS, KONZ, LENO, ABBY, NIWO, TREE, RMNP, SJER, JORN, BART, TALL, SERC, STEI",
+        "name": "TOOL, ORNL, DCFS, YELL, HEAL, HARV, OSBS, WOOD, WREF, CLBJ, DSNY, BARR, NOGP, DEJU, BONA, UKFS, UNDE, GUAN, KONA, TEAK, MOAB, GRSM, PUUM, DELA, LAJA, MLBS, KONZ, LENO, ABBY, NIWO, SCBI, SRER, JERC, SOAP, OAES, STER, BLAN, CPER, ONAQ, TREE, RMNP, SJER, JORN, BART, TALL, SERC, STEI",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -294,51 +294,6 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.9107,
-                "longitude": -110.8355
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.1948,
-                "longitude": -84.4686
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.0334,
-                "longitude": -119.2622
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.4106,
-                "longitude": -99.0588
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.4619,
-                "longitude": -103.0293
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0337,
-                "longitude": -78.0418
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.8155,
-                "longitude": -104.7456
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.1776,
-                "longitude": -112.4524
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 38.2483,
                 "longitude": -109.3883
             },
@@ -386,6 +341,51 @@
                 "@type": "GeoCoordinates",
                 "latitude": 40.0543,
                 "longitude": -105.5824
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.9107,
+                "longitude": -110.8355
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.1948,
+                "longitude": -84.4686
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0334,
+                "longitude": -119.2622
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.4106,
+                "longitude": -99.0588
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.4619,
+                "longitude": -103.0293
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0337,
+                "longitude": -78.0418
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.8155,
+                "longitude": -104.7456
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.1776,
+                "longitude": -112.4524
             },
             {
                 "@type": "GeoCoordinates",
