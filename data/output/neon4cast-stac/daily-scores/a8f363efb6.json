@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:a8f363efb6",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Ticks/Weekly_Amblyomma_americanum_population/tg_temp_lm_all_sites_amblyomma_americanum_P1W_scores",
     "name": "tg_temp_lm_all_sites",
-    "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: KONZ, LENO, OSBS, UKFS, ORNL, BLAN, SCBI, TALL, SERC.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_temp_lm_all_sites model. Information for the model is provided as follows: The tg_temp_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation.This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: LENO, KONZ, SERC, TALL, OSBS, ORNL, UKFS, BLAN, SCBI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -21,15 +21,15 @@
         "amblyomma_americanum",
         "Weekly",
         "P1W",
-        "KONZ",
         "LENO",
-        "OSBS",
-        "UKFS",
-        "ORNL",
-        "BLAN",
-        "SCBI",
+        "KONZ",
+        "SERC",
         "TALL",
-        "SERC"
+        "OSBS",
+        "ORNL",
+        "UKFS",
+        "BLAN",
+        "SCBI"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -170,7 +170,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "KONZ, LENO, OSBS, UKFS, ORNL, BLAN, SCBI, TALL, SERC",
+            "description": "LENO, KONZ, SERC, TALL, OSBS, ORNL, UKFS, BLAN, SCBI",
             "name": "Model Sites"
         },
         {
@@ -183,16 +183,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "KONZ, LENO, OSBS, UKFS, ORNL, BLAN, SCBI, TALL, SERC",
+        "name": "LENO, KONZ, SERC, TALL, OSBS, ORNL, UKFS, BLAN, SCBI",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.6893,-96.5631 39.1008,-76.56"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.1008,
-                "longitude": -96.5631
             },
             {
                 "@type": "GeoCoordinates",
@@ -201,18 +196,33 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 39.1008,
+                "longitude": -96.5631
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 29.6893,
                 "longitude": -81.9934
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.0404,
-                "longitude": -95.1921
+                "latitude": 35.9641,
+                "longitude": -84.2826
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 35.9641,
-                "longitude": -84.2826
+                "latitude": 39.0404,
+                "longitude": -95.1921
             },
             {
                 "@type": "GeoCoordinates",
@@ -223,16 +233,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 38.8929,
                 "longitude": -78.1395
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
             }
         ],
         "additionalProperty": [
