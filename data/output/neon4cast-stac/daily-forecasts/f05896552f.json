@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:f05896552f",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/acp_fableLM_temperature_P1D_forecast",
     "name": "acp_fableLM",
-    "description": "All forecasts for the Daily_Water_temperature variable for the acp_fableLM model. Information for the model is provided as follows: Time series linear model with FABLE.\n                                    The model predicts this variable at the following sites: PRLA, LIRO, SUGG, BARC, CRAM, TOOK, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the acp_fableLM model. Information for the model is provided as follows: Time series linear model with FABLE.\n                                    The model predicts this variable at the following sites: SUGG, BARC, CRAM, PRLA, LIRO, TOOK, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-03-11",
     "datetime": "2024-03-11",
     "updated": "2024-03-12T00:00:00Z",
@@ -21,11 +21,11 @@
         "temperature",
         "Daily",
         "P1D",
-        "PRLA",
-        "LIRO",
         "SUGG",
         "BARC",
         "CRAM",
+        "PRLA",
+        "LIRO",
         "TOOK",
         "PRPO"
     ],
@@ -133,7 +133,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "PRLA, LIRO, SUGG, BARC, CRAM, TOOK, PRPO",
+            "description": "SUGG, BARC, CRAM, PRLA, LIRO, TOOK, PRPO",
             "name": "Model Sites"
         },
         {
@@ -146,21 +146,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "PRLA, LIRO, SUGG, BARC, CRAM, TOOK, PRPO",
+        "name": "SUGG, BARC, CRAM, PRLA, LIRO, TOOK, PRPO",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1591,
-                "longitude": -99.1139
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.9983,
-                "longitude": -89.7048
             },
             {
                 "@type": "GeoCoordinates",
@@ -176,6 +166,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 46.2097,
                 "longitude": -89.4737
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1591,
+                "longitude": -99.1139
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.9983,
+                "longitude": -89.7048
             },
             {
                 "@type": "GeoCoordinates",
