@@ -6,12 +6,12 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:925de80cf8",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/bee_bake_RFModel_2024_temperature_P1D_forecast",
     "name": "bee_bake_RFModel_2024",
-    "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, BARC, CRAM, SUGG, PRPO, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2025-10-10",
-    "datetime": "2025-10-10",
-    "updated": "2025-10-10T00:00:00Z",
+    "description": "All forecasts for the Daily_Water_temperature variable for the bee_bake_RFModel_2024 model. Information for the model is provided as follows: Random Forest.\n                                    The model predicts this variable at the following sites: BARC, CRAM, SUGG, LIRO, PRLA, PRPO, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2025-10-11",
+    "datetime": "2025-10-11",
+    "updated": "2025-10-11T00:00:00Z",
     "start_datetime": "2024-02-29T00:00:00Z",
-    "end_datetime": "2025-11-12T00:00:00Z",
+    "end_datetime": "2025-11-13T00:00:00Z",
     "keywords": [
         "Forecasts",
         "neon4cast",
@@ -21,11 +21,11 @@
         "temperature",
         "Daily",
         "P1D",
-        "LIRO",
-        "PRLA",
         "BARC",
         "CRAM",
         "SUGG",
+        "LIRO",
+        "PRLA",
         "PRPO",
         "TOOK"
     ],
@@ -133,7 +133,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LIRO, PRLA, BARC, CRAM, SUGG, PRPO, TOOK",
+            "description": "BARC, CRAM, SUGG, LIRO, PRLA, PRPO, TOOK",
             "name": "Model Sites"
         },
         {
@@ -146,21 +146,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LIRO, PRLA, BARC, CRAM, SUGG, PRPO, TOOK",
+        "name": "BARC, CRAM, SUGG, LIRO, PRLA, PRPO, TOOK",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.9983,
-                "longitude": -89.7048
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1591,
-                "longitude": -99.1139
             },
             {
                 "@type": "GeoCoordinates",
@@ -176,6 +166,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 29.6878,
                 "longitude": -82.0177
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.9983,
+                "longitude": -89.7048
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1591,
+                "longitude": -99.1139
             },
             {
                 "@type": "GeoCoordinates",
