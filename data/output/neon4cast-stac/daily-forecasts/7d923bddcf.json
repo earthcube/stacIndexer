@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:7d923bddcf",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_lasso_amblyomma_americanum_P1W_forecast",
     "name": "tg_lasso",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: SERC, TALL, BLAN, SCBI, ORNL, UKFS, OSBS, KONZ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLAN, SCBI, SERC, TALL, ORNL, UKFS, OSBS, KONZ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -21,10 +21,10 @@
         "amblyomma_americanum",
         "Weekly",
         "P1W",
-        "SERC",
-        "TALL",
         "BLAN",
         "SCBI",
+        "SERC",
+        "TALL",
         "ORNL",
         "UKFS",
         "OSBS",
@@ -134,7 +134,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "SERC, TALL, BLAN, SCBI, ORNL, UKFS, OSBS, KONZ",
+            "description": "BLAN, SCBI, SERC, TALL, ORNL, UKFS, OSBS, KONZ",
             "name": "Model Sites"
         },
         {
@@ -147,21 +147,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "SERC, TALL, BLAN, SCBI, ORNL, UKFS, OSBS, KONZ",
+        "name": "BLAN, SCBI, SERC, TALL, ORNL, UKFS, OSBS, KONZ",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.6893,-96.5631 39.1008,-76.56"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
             },
             {
                 "@type": "GeoCoordinates",
@@ -172,6 +162,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 38.8929,
                 "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
             },
             {
                 "@type": "GeoCoordinates",
