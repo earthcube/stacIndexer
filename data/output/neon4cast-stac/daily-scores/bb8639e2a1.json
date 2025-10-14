@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:bb8639e2a1",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Terrestrial/Daily_latent_heat_flux/tg_lasso_le_P1D_scores",
     "name": "tg_lasso",
-    "description": "All scores for the Daily_latent_heat_flux variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BARR, BONA, CLBJ, DCFS, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, UNDE, WOOD, WREF, YELL, GUAN, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_latent_heat_flux variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, UNDE, WOOD, YELL, WREF, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -24,7 +24,6 @@
         "BARR",
         "BONA",
         "CLBJ",
-        "DCFS",
         "DEJU",
         "DSNY",
         "HARV",
@@ -38,26 +37,10 @@
         "UKFS",
         "UNDE",
         "WOOD",
-        "WREF",
         "YELL",
+        "WREF",
         "GUAN",
-        "BART",
-        "JORN",
-        "RMNP",
-        "SERC",
-        "SJER",
-        "STEI",
-        "TALL",
-        "TREE",
-        "BLAN",
-        "CPER",
-        "JERC",
-        "OAES",
-        "ONAQ",
-        "SCBI",
-        "SOAP",
-        "SRER",
-        "STER",
+        "DCFS",
         "ABBY",
         "DELA",
         "GRSM",
@@ -67,7 +50,24 @@
         "MLBS",
         "MOAB",
         "NIWO",
-        "PUUM"
+        "PUUM",
+        "BLAN",
+        "CPER",
+        "JERC",
+        "OAES",
+        "ONAQ",
+        "SCBI",
+        "SOAP",
+        "SRER",
+        "STER",
+        "BART",
+        "JORN",
+        "RMNP",
+        "SERC",
+        "SJER",
+        "STEI",
+        "TALL",
+        "TREE"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -208,7 +208,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "BARR, BONA, CLBJ, DCFS, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, UNDE, WOOD, WREF, YELL, GUAN, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM",
+            "description": "BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, UNDE, WOOD, YELL, WREF, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE",
             "name": "Model Sites"
         },
         {
@@ -221,7 +221,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "BARR, BONA, CLBJ, DCFS, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, UNDE, WOOD, WREF, YELL, GUAN, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM",
+        "name": "BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, UNDE, WOOD, YELL, WREF, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -241,11 +241,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 33.4012,
                 "longitude": -97.57
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1617,
-                "longitude": -99.1066
             },
             {
                 "@type": "GeoCoordinates",
@@ -314,13 +309,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 45.8205,
-                "longitude": -121.9519
+                "latitude": 44.9535,
+                "longitude": -110.5391
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 44.9535,
-                "longitude": -110.5391
+                "latitude": 45.8205,
+                "longitude": -121.9519
             },
             {
                 "@type": "GeoCoordinates",
@@ -329,88 +324,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 44.0639,
-                "longitude": -71.2874
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.5907,
-                "longitude": -106.8425
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.2759,
-                "longitude": -105.546
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.1088,
-                "longitude": -119.7323
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.5089,
-                "longitude": -89.5864
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.4937,
-                "longitude": -89.5857
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0337,
-                "longitude": -78.0418
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.8155,
-                "longitude": -104.7456
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.1948,
-                "longitude": -84.4686
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.4106,
-                "longitude": -99.0588
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.1776,
-                "longitude": -112.4524
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.0334,
-                "longitude": -119.2622
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.9107,
-                "longitude": -110.8355
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.4619,
-                "longitude": -103.0293
+                "latitude": 47.1617,
+                "longitude": -99.1066
             },
             {
                 "@type": "GeoCoordinates",
@@ -461,6 +376,91 @@
                 "@type": "GeoCoordinates",
                 "latitude": 19.5531,
                 "longitude": -155.3173
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0337,
+                "longitude": -78.0418
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.8155,
+                "longitude": -104.7456
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.1948,
+                "longitude": -84.4686
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.4106,
+                "longitude": -99.0588
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.1776,
+                "longitude": -112.4524
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0334,
+                "longitude": -119.2622
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.9107,
+                "longitude": -110.8355
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.4619,
+                "longitude": -103.0293
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.0639,
+                "longitude": -71.2874
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5907,
+                "longitude": -106.8425
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.2759,
+                "longitude": -105.546
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.1088,
+                "longitude": -119.7323
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5089,
+                "longitude": -89.5864
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.4937,
+                "longitude": -89.5857
             }
         ],
         "additionalProperty": [
