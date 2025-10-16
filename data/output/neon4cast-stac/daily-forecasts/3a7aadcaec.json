@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:3a7aadcaec",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/flareGLM_noDA_temperature_P1D_forecast",
     "name": "flareGLM_noDA",
-    "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: SUGG, CRAM, BARC, PRPO, TOOK, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the flareGLM_noDA model. Information for the model is provided as follows: The FLARE-GLM is a forecasting framework that integrates the General Lake Model\nhydrodynamic process model (GLM; Hipsey et al., 2019). This version does not incorportate data assimilation.\n                                    The model predicts this variable at the following sites: CRAM, SUGG, BARC, PRPO, TOOK, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-04-23",
     "datetime": "2025-04-23",
     "updated": "2025-04-23T00:00:00Z",
@@ -21,8 +21,8 @@
         "temperature",
         "Daily",
         "P1D",
-        "SUGG",
         "CRAM",
+        "SUGG",
         "BARC",
         "PRPO",
         "TOOK",
@@ -133,7 +133,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "SUGG, CRAM, BARC, PRPO, TOOK, LIRO, PRLA",
+            "description": "CRAM, SUGG, BARC, PRPO, TOOK, LIRO, PRLA",
             "name": "Model Sites"
         },
         {
@@ -146,7 +146,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "SUGG, CRAM, BARC, PRPO, TOOK, LIRO, PRLA",
+        "name": "CRAM, SUGG, BARC, PRPO, TOOK, LIRO, PRLA",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -154,13 +154,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 29.6878,
-                "longitude": -82.0177
+                "latitude": 46.2097,
+                "longitude": -89.4737
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 46.2097,
-                "longitude": -89.4737
+                "latitude": 29.6878,
+                "longitude": -82.0177
             },
             {
                 "@type": "GeoCoordinates",
