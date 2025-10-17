@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:2dfb40de3d",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Terrestrial/Daily_latent_heat_flux/tg_brnn_le_P1D_scores",
     "name": "tg_brnn",
-    "description": "All scores for the Daily_latent_heat_flux variable for the tg_brnn model. Information for the model is provided as follows: Bayesian Regularized Neural Network trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: ABBY, LAJA, MOAB, DELA, GRSM, KONZ, LENO, PUUM, NIWO, MLBS, BART, JORN, RMNP, SJER, STEI, SERC, TALL, TREE, BARR, BONA, HARV, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, WREF, YELL, DCFS, DEJU, DSNY, HEAL, CLBJ, UNDE, WOOD, GUAN, OAES, ONAQ, SCBI, SOAP, SRER, BLAN, CPER, JERC, STER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_latent_heat_flux variable for the tg_brnn model. Information for the model is provided as follows: Bayesian Regularized Neural Network trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: ABBY, LAJA, MOAB, DELA, GRSM, KONZ, LENO, PUUM, NIWO, MLBS, BART, JORN, RMNP, SJER, STEI, SERC, TALL, TREE, TEAK, BARR, BONA, HARV, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, WREF, YELL, DCFS, DEJU, DSNY, HEAL, CLBJ, UNDE, WOOD, GUAN, OAES, ONAQ, SCBI, SOAP, SRER, BLAN, CPER, JERC, STER.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -39,6 +39,7 @@
         "SERC",
         "TALL",
         "TREE",
+        "TEAK",
         "BARR",
         "BONA",
         "HARV",
@@ -46,7 +47,6 @@
         "NOGP",
         "ORNL",
         "OSBS",
-        "TEAK",
         "TOOL",
         "UKFS",
         "WREF",
@@ -208,7 +208,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "ABBY, LAJA, MOAB, DELA, GRSM, KONZ, LENO, PUUM, NIWO, MLBS, BART, JORN, RMNP, SJER, STEI, SERC, TALL, TREE, BARR, BONA, HARV, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, WREF, YELL, DCFS, DEJU, DSNY, HEAL, CLBJ, UNDE, WOOD, GUAN, OAES, ONAQ, SCBI, SOAP, SRER, BLAN, CPER, JERC, STER",
+            "description": "ABBY, LAJA, MOAB, DELA, GRSM, KONZ, LENO, PUUM, NIWO, MLBS, BART, JORN, RMNP, SJER, STEI, SERC, TALL, TREE, TEAK, BARR, BONA, HARV, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, WREF, YELL, DCFS, DEJU, DSNY, HEAL, CLBJ, UNDE, WOOD, GUAN, OAES, ONAQ, SCBI, SOAP, SRER, BLAN, CPER, JERC, STER",
             "name": "Model Sites"
         },
         {
@@ -221,7 +221,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "ABBY, LAJA, MOAB, DELA, GRSM, KONZ, LENO, PUUM, NIWO, MLBS, BART, JORN, RMNP, SJER, STEI, SERC, TALL, TREE, BARR, BONA, HARV, KONA, NOGP, ORNL, OSBS, TEAK, TOOL, UKFS, WREF, YELL, DCFS, DEJU, DSNY, HEAL, CLBJ, UNDE, WOOD, GUAN, OAES, ONAQ, SCBI, SOAP, SRER, BLAN, CPER, JERC, STER",
+        "name": "ABBY, LAJA, MOAB, DELA, GRSM, KONZ, LENO, PUUM, NIWO, MLBS, BART, JORN, RMNP, SJER, STEI, SERC, TALL, TREE, TEAK, BARR, BONA, HARV, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, WREF, YELL, DCFS, DEJU, DSNY, HEAL, CLBJ, UNDE, WOOD, GUAN, OAES, ONAQ, SCBI, SOAP, SRER, BLAN, CPER, JERC, STER",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -319,6 +319,11 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 37.0058,
+                "longitude": -119.006
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 71.2824,
                 "longitude": -156.6194
             },
@@ -351,11 +356,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 29.6893,
                 "longitude": -81.9934
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.0058,
-                "longitude": -119.006
             },
             {
                 "@type": "GeoCoordinates",
