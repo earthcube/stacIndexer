@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:efbf134baa",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Dissolved_oxygen/hotdeck_oxygen_P1D_forecast",
     "name": "hotdeck",
-    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: LEWI, MAYF, BLDE, BIGC, MCRA, KING, PRIN, POSE, SUGG, REDB, CRAM, BARC, SYCA, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: LEWI, SYCA, LIRO, KING, PRIN, POSE, SUGG, REDB, CRAM, BARC, MAYF, BLDE, BIGC, MCRA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-01-27",
     "datetime": "2025-01-27",
     "updated": "2025-01-27T00:00:00Z",
@@ -22,10 +22,8 @@
         "Daily",
         "P1D",
         "LEWI",
-        "MAYF",
-        "BLDE",
-        "BIGC",
-        "MCRA",
+        "SYCA",
+        "LIRO",
         "KING",
         "PRIN",
         "POSE",
@@ -33,8 +31,10 @@
         "REDB",
         "CRAM",
         "BARC",
-        "SYCA",
-        "LIRO"
+        "MAYF",
+        "BLDE",
+        "BIGC",
+        "MCRA"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -140,7 +140,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LEWI, MAYF, BLDE, BIGC, MCRA, KING, PRIN, POSE, SUGG, REDB, CRAM, BARC, SYCA, LIRO",
+            "description": "LEWI, SYCA, LIRO, KING, PRIN, POSE, SUGG, REDB, CRAM, BARC, MAYF, BLDE, BIGC, MCRA",
             "name": "Model Sites"
         },
         {
@@ -153,7 +153,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LEWI, MAYF, BLDE, BIGC, MCRA, KING, PRIN, POSE, SUGG, REDB, CRAM, BARC, SYCA, LIRO",
+        "name": "LEWI, SYCA, LIRO, KING, PRIN, POSE, SUGG, REDB, CRAM, BARC, MAYF, BLDE, BIGC, MCRA",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -166,23 +166,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 32.9604,
-                "longitude": -87.4077
+                "latitude": 33.751,
+                "longitude": -111.5081
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 44.9501,
-                "longitude": -110.5871
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.0597,
-                "longitude": -119.2575
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 44.2596,
-                "longitude": -122.1655
+                "latitude": 45.9983,
+                "longitude": -89.7048
             },
             {
                 "@type": "GeoCoordinates",
@@ -221,13 +211,23 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 33.751,
-                "longitude": -111.5081
+                "latitude": 32.9604,
+                "longitude": -87.4077
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 45.9983,
-                "longitude": -89.7048
+                "latitude": 44.9501,
+                "longitude": -110.5871
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0597,
+                "longitude": -119.2575
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.2596,
+                "longitude": -122.1655
             }
         ],
         "additionalProperty": [

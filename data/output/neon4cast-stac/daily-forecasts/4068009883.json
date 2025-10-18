@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:4068009883",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_humidity_lm_all_sites_amblyomma_americanum_P1W_forecast",
     "name": "tg_humidity_lm_all_sites",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: UKFS, OSBS, ORNL, SCBI, BLAN, TALL, SERC, KONZ, LENO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_humidity_lm_all_sites model. Information for the model is provided as follows: The tg_humidity_lm_all_sites model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only one covariate: relative humidity. This model was used to forecast water temperature and dissolved oxygen concentration at the\nseven lake sites, with the model fitted for all sites together.\n                                    The model predicts this variable at the following sites: UKFS, OSBS, ORNL, KONZ, LENO, TALL, SERC, SCBI, BLAN.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-01-28",
     "datetime": "2024-01-28",
     "updated": "2024-07-04T00:00:00Z",
@@ -24,12 +24,12 @@
         "UKFS",
         "OSBS",
         "ORNL",
-        "SCBI",
-        "BLAN",
+        "KONZ",
+        "LENO",
         "TALL",
         "SERC",
-        "KONZ",
-        "LENO"
+        "SCBI",
+        "BLAN"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -135,7 +135,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "UKFS, OSBS, ORNL, SCBI, BLAN, TALL, SERC, KONZ, LENO",
+            "description": "UKFS, OSBS, ORNL, KONZ, LENO, TALL, SERC, SCBI, BLAN",
             "name": "Model Sites"
         },
         {
@@ -148,7 +148,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "UKFS, OSBS, ORNL, SCBI, BLAN, TALL, SERC, KONZ, LENO",
+        "name": "UKFS, OSBS, ORNL, KONZ, LENO, TALL, SERC, SCBI, BLAN",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -171,13 +171,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
+                "latitude": 39.1008,
+                "longitude": -96.5631
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.0337,
-                "longitude": -78.0418
+                "latitude": 31.8539,
+                "longitude": -88.1612
             },
             {
                 "@type": "GeoCoordinates",
@@ -191,13 +191,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.1008,
-                "longitude": -96.5631
+                "latitude": 38.8929,
+                "longitude": -78.1395
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 31.8539,
-                "longitude": -88.1612
+                "latitude": 39.0337,
+                "longitude": -78.0418
             }
         ],
         "additionalProperty": [
