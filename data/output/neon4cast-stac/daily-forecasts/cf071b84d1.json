@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:cf071b84d1",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/hotdeck_temperature_P1D_forecast",
     "name": "hotdeck",
-    "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: KING, PRIN, WLOU, CRAM, SUGG, HOPB, REDB, BARC, POSE, CUPE, CARI, BLWA, TECR, LIRO, GUIL, COMO, SYCA, TOMB, PRLA, LECO, MAYF, BLDE, BIGC, WALK, MCRA, FLNT, ARIK, LEWI, BLUE, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the hotdeck model. Information for the model is provided as follows: Uses a hot deck approach: - Take the latest observation/forecast. - Past observations from around the same window of the season are collected. - Values close to the latest observation/forecast are collected. - One of these is randomly sampled. - Its \"tomorrow\" observation is used as the forecast. - Repeat until forecast at step h..\n                                    The model predicts this variable at the following sites: LEWI, BLUE, PRPO, KING, PRIN, WLOU, CRAM, SUGG, HOPB, REDB, BARC, POSE, CUPE, CARI, BLWA, TECR, LIRO, GUIL, COMO, SYCA, TOMB, PRLA, LECO, MAYF, BLDE, BIGC, WALK, MCRA, FLNT, ARIK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-01-27",
     "datetime": "2025-01-27",
     "updated": "2025-01-27T00:00:00Z",
@@ -21,6 +21,9 @@
         "temperature",
         "Daily",
         "P1D",
+        "LEWI",
+        "BLUE",
+        "PRPO",
         "KING",
         "PRIN",
         "WLOU",
@@ -47,10 +50,7 @@
         "WALK",
         "MCRA",
         "FLNT",
-        "ARIK",
-        "LEWI",
-        "BLUE",
-        "PRPO"
+        "ARIK"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -156,7 +156,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "KING, PRIN, WLOU, CRAM, SUGG, HOPB, REDB, BARC, POSE, CUPE, CARI, BLWA, TECR, LIRO, GUIL, COMO, SYCA, TOMB, PRLA, LECO, MAYF, BLDE, BIGC, WALK, MCRA, FLNT, ARIK, LEWI, BLUE, PRPO",
+            "description": "LEWI, BLUE, PRPO, KING, PRIN, WLOU, CRAM, SUGG, HOPB, REDB, BARC, POSE, CUPE, CARI, BLWA, TECR, LIRO, GUIL, COMO, SYCA, TOMB, PRLA, LECO, MAYF, BLDE, BIGC, WALK, MCRA, FLNT, ARIK",
             "name": "Model Sites"
         },
         {
@@ -169,11 +169,26 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "KING, PRIN, WLOU, CRAM, SUGG, HOPB, REDB, BARC, POSE, CUPE, CARI, BLWA, TECR, LIRO, GUIL, COMO, SYCA, TOMB, PRLA, LECO, MAYF, BLDE, BIGC, WALK, MCRA, FLNT, ARIK, LEWI, BLUE, PRPO",
+        "name": "LEWI, BLUE, PRPO, KING, PRIN, WLOU, CRAM, SUGG, HOPB, REDB, BARC, POSE, CUPE, CARI, BLWA, TECR, LIRO, GUIL, COMO, SYCA, TOMB, PRLA, LECO, MAYF, BLDE, BIGC, WALK, MCRA, FLNT, ARIK",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "18.1135,-147.504 65.1532,-66.7987"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
@@ -309,21 +324,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.7582,
                 "longitude": -102.4471
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
             }
         ],
         "additionalProperty": [

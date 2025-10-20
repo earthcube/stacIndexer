@@ -6,12 +6,12 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:402fb3b026",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Chlorophyll_a/climatology_chla_P1D_forecast",
     "name": "climatology",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: BARC, CRAM, SUGG, BLWA, LIRO, PRLA, TOMB, FLNT, PRPO, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2025-10-17",
-    "datetime": "2025-10-17",
-    "updated": "2025-10-17T00:00:00Z",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: PRPO, TOOK, BARC, CRAM, SUGG, BLWA, LIRO, PRLA, TOMB, FLNT.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2025-10-18",
+    "datetime": "2025-10-18",
+    "updated": "2025-10-18T00:00:00Z",
     "start_datetime": "2022-01-01T00:00:00Z",
-    "end_datetime": "2025-11-21T00:00:00Z",
+    "end_datetime": "2025-11-22T00:00:00Z",
     "keywords": [
         "Forecasts",
         "neon4cast",
@@ -21,6 +21,8 @@
         "chla",
         "Daily",
         "P1D",
+        "PRPO",
+        "TOOK",
         "BARC",
         "CRAM",
         "SUGG",
@@ -28,9 +30,7 @@
         "LIRO",
         "PRLA",
         "TOMB",
-        "FLNT",
-        "PRPO",
-        "TOOK"
+        "FLNT"
     ],
     "citation": {
         "@type": "CreativeWork",
@@ -136,7 +136,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "BARC, CRAM, SUGG, BLWA, LIRO, PRLA, TOMB, FLNT, PRPO, TOOK",
+            "description": "PRPO, TOOK, BARC, CRAM, SUGG, BLWA, LIRO, PRLA, TOMB, FLNT",
             "name": "Model Sites"
         },
         {
@@ -149,11 +149,21 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "BARC, CRAM, SUGG, BLWA, LIRO, PRLA, TOMB, FLNT, PRPO, TOOK",
+        "name": "PRPO, TOOK, BARC, CRAM, SUGG, BLWA, LIRO, PRLA, TOMB, FLNT",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
             },
             {
                 "@type": "GeoCoordinates",
@@ -194,16 +204,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 31.1854,
                 "longitude": -84.4374
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
             }
         ],
         "additionalProperty": [
