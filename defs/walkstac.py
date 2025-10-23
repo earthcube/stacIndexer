@@ -76,6 +76,7 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     doc["start_datetime"] = props.get("start_datetime")
     doc["end_datetime"] = props.get("end_datetime")
     doc["keywords"] = props.get("keywords", [])
+    doc["providers"] = props.get("providers", [])
 
 
 
