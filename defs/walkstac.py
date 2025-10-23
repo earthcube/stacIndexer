@@ -86,7 +86,7 @@ def save_dict_to_file(repo, root, collection, item, breadcrumb, repoPath="missin
     # root_catalog_url = "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json"
     # doc["offers"] = offer(root_catalog_url)   ## comment back in when the catalog URL properly passed up from main
 
-    doc["citation"] = datacitation.citation()
+    doc["citation"] = datacitation.citation(doc["providers"] )
 
     dists = []
 
