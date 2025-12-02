@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:f975e5e99c",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Ticks/Weekly_Amblyomma_americanum_population/tg_ets_amblyomma_americanum_P1W_scores",
     "name": "tg_ets",
-    "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: OSBS, UKFS, ORNL, SERC, TALL, KONZ, LENO, BLAN, SCBI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: OSBS, UKFS, ORNL, KONZ, LENO, SERC, TALL, BLAN, SCBI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -24,10 +24,10 @@
         "OSBS",
         "UKFS",
         "ORNL",
-        "SERC",
-        "TALL",
         "KONZ",
         "LENO",
+        "SERC",
+        "TALL",
         "BLAN",
         "SCBI"
     ],
@@ -203,7 +203,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "OSBS, UKFS, ORNL, SERC, TALL, KONZ, LENO, BLAN, SCBI",
+            "description": "OSBS, UKFS, ORNL, KONZ, LENO, SERC, TALL, BLAN, SCBI",
             "name": "Model Sites"
         },
         {
@@ -216,7 +216,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "OSBS, UKFS, ORNL, SERC, TALL, KONZ, LENO, BLAN, SCBI",
+        "name": "OSBS, UKFS, ORNL, KONZ, LENO, SERC, TALL, BLAN, SCBI",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -239,16 +239,6 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 39.1008,
                 "longitude": -96.5631
             },
@@ -256,6 +246,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 31.8539,
                 "longitude": -88.1612
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
             },
             {
                 "@type": "GeoCoordinates",
