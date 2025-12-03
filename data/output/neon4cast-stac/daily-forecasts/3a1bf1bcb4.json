@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:3a1bf1bcb4",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_precip_lm_amblyomma_americanum_P1W_forecast",
     "name": "tg_precip_lm",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: ORNL, UKFS, OSBS, SERC, TALL, SCBI, BLAN, LENO, KONZ.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: ORNL, UKFS, OSBS, LENO, KONZ, SCBI, BLAN, SERC, TALL.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-01-28",
     "datetime": "2024-01-28",
     "updated": "2024-07-04T00:00:00Z",
@@ -24,12 +24,12 @@
         "ORNL",
         "UKFS",
         "OSBS",
-        "SERC",
-        "TALL",
+        "LENO",
+        "KONZ",
         "SCBI",
         "BLAN",
-        "LENO",
-        "KONZ"
+        "SERC",
+        "TALL"
     ],
     "providers": [
         {
@@ -168,7 +168,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "ORNL, UKFS, OSBS, SERC, TALL, SCBI, BLAN, LENO, KONZ",
+            "description": "ORNL, UKFS, OSBS, LENO, KONZ, SCBI, BLAN, SERC, TALL",
             "name": "Model Sites"
         },
         {
@@ -181,7 +181,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "ORNL, UKFS, OSBS, SERC, TALL, SCBI, BLAN, LENO, KONZ",
+        "name": "ORNL, UKFS, OSBS, LENO, KONZ, SCBI, BLAN, SERC, TALL",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -204,13 +204,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
+                "latitude": 31.8539,
+                "longitude": -88.1612
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
+                "latitude": 39.1008,
+                "longitude": -96.5631
             },
             {
                 "@type": "GeoCoordinates",
@@ -224,13 +224,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 31.8539,
-                "longitude": -88.1612
+                "latitude": 38.8901,
+                "longitude": -76.56
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.1008,
-                "longitude": -96.5631
+                "latitude": 32.9505,
+                "longitude": -87.3933
             }
         ],
         "additionalProperty": [

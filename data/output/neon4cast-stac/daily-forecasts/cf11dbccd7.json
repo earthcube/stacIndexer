@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:cf11dbccd7",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_ets_amblyomma_americanum_P1W_forecast",
     "name": "tg_ets",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: KONZ, LENO, BLAN, SCBI, SERC, TALL, ORNL, UKFS, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: KONZ, LENO, ORNL, UKFS, OSBS, SERC, TALL, BLAN, SCBI.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -23,13 +23,13 @@
         "P1W",
         "KONZ",
         "LENO",
-        "BLAN",
-        "SCBI",
-        "SERC",
-        "TALL",
         "ORNL",
         "UKFS",
-        "OSBS"
+        "OSBS",
+        "SERC",
+        "TALL",
+        "BLAN",
+        "SCBI"
     ],
     "providers": [
         {
@@ -168,7 +168,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "KONZ, LENO, BLAN, SCBI, SERC, TALL, ORNL, UKFS, OSBS",
+            "description": "KONZ, LENO, ORNL, UKFS, OSBS, SERC, TALL, BLAN, SCBI",
             "name": "Model Sites"
         },
         {
@@ -181,7 +181,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "KONZ, LENO, BLAN, SCBI, SERC, TALL, ORNL, UKFS, OSBS",
+        "name": "KONZ, LENO, ORNL, UKFS, OSBS, SERC, TALL, BLAN, SCBI",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -199,13 +199,18 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.0337,
-                "longitude": -78.0418
+                "latitude": 35.9641,
+                "longitude": -84.2826
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
+                "latitude": 39.0404,
+                "longitude": -95.1921
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.6893,
+                "longitude": -81.9934
             },
             {
                 "@type": "GeoCoordinates",
@@ -219,18 +224,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 35.9641,
-                "longitude": -84.2826
+                "latitude": 39.0337,
+                "longitude": -78.0418
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.0404,
-                "longitude": -95.1921
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.6893,
-                "longitude": -81.9934
+                "latitude": 38.8929,
+                "longitude": -78.1395
             }
         ],
         "additionalProperty": [
