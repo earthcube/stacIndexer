@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:d6ae2b01da",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Terrestrial/Daily_Net_ecosystem_exchange/tg_elasticNet_nee_P1D_scores",
     "name": "tg_elasticNet",
-    "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_elasticNet model. Information for the model is provided as follows: elastic net regression trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: TEAK, NOGP, ORNL, TOOL, UKFS, UNDE, WOOD, WREF, YELL, BARR, CLBJ, DCFS, DEJU, DSNY, GUAN, HARV, HEAL, KONA, BONA, OSBS, MLBS, MOAB, NIWO, PUUM, ABBY, DELA, GRSM, KONZ, LAJA, LENO, OAES, ONAQ, SCBI, SOAP, SRER, STER, BLAN, CPER, JERC, RMNP, SERC, SJER, STEI, TREE, BART, JORN, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_elasticNet model. Information for the model is provided as follows: elastic net regression trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: TEAK, NOGP, ORNL, TOOL, UKFS, UNDE, WOOD, WREF, YELL, BARR, BONA, CLBJ, DCFS, DEJU, DSNY, GUAN, HARV, HEAL, KONA, OSBS, MLBS, MOAB, NIWO, PUUM, ABBY, DELA, GRSM, KONZ, LAJA, LENO, OAES, ONAQ, SCBI, SOAP, SRER, STER, BLAN, CPER, JERC, RMNP, SERC, SJER, STEI, TREE, BART, JORN, TALL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -31,6 +31,7 @@
         "WREF",
         "YELL",
         "BARR",
+        "BONA",
         "CLBJ",
         "DCFS",
         "DEJU",
@@ -39,7 +40,6 @@
         "HARV",
         "HEAL",
         "KONA",
-        "BONA",
         "OSBS",
         "MLBS",
         "MOAB",
@@ -241,7 +241,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TEAK, NOGP, ORNL, TOOL, UKFS, UNDE, WOOD, WREF, YELL, BARR, CLBJ, DCFS, DEJU, DSNY, GUAN, HARV, HEAL, KONA, BONA, OSBS, MLBS, MOAB, NIWO, PUUM, ABBY, DELA, GRSM, KONZ, LAJA, LENO, OAES, ONAQ, SCBI, SOAP, SRER, STER, BLAN, CPER, JERC, RMNP, SERC, SJER, STEI, TREE, BART, JORN, TALL",
+            "description": "TEAK, NOGP, ORNL, TOOL, UKFS, UNDE, WOOD, WREF, YELL, BARR, BONA, CLBJ, DCFS, DEJU, DSNY, GUAN, HARV, HEAL, KONA, OSBS, MLBS, MOAB, NIWO, PUUM, ABBY, DELA, GRSM, KONZ, LAJA, LENO, OAES, ONAQ, SCBI, SOAP, SRER, STER, BLAN, CPER, JERC, RMNP, SERC, SJER, STEI, TREE, BART, JORN, TALL",
             "name": "Model Sites"
         },
         {
@@ -254,7 +254,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TEAK, NOGP, ORNL, TOOL, UKFS, UNDE, WOOD, WREF, YELL, BARR, CLBJ, DCFS, DEJU, DSNY, GUAN, HARV, HEAL, KONA, BONA, OSBS, MLBS, MOAB, NIWO, PUUM, ABBY, DELA, GRSM, KONZ, LAJA, LENO, OAES, ONAQ, SCBI, SOAP, SRER, STER, BLAN, CPER, JERC, RMNP, SERC, SJER, STEI, TREE, BART, JORN, TALL",
+        "name": "TEAK, NOGP, ORNL, TOOL, UKFS, UNDE, WOOD, WREF, YELL, BARR, BONA, CLBJ, DCFS, DEJU, DSNY, GUAN, HARV, HEAL, KONA, OSBS, MLBS, MOAB, NIWO, PUUM, ABBY, DELA, GRSM, KONZ, LAJA, LENO, OAES, ONAQ, SCBI, SOAP, SRER, STER, BLAN, CPER, JERC, RMNP, SERC, SJER, STEI, TREE, BART, JORN, TALL",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -312,6 +312,11 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 65.154,
+                "longitude": -147.5026
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 33.4012,
                 "longitude": -97.57
             },
@@ -349,11 +354,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.1104,
                 "longitude": -96.6129
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 65.154,
-                "longitude": -147.5026
             },
             {
                 "@type": "GeoCoordinates",

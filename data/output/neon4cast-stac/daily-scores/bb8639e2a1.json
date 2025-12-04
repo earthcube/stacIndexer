@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:bb8639e2a1",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Terrestrial/Daily_latent_heat_flux/tg_lasso_le_P1D_scores",
     "name": "tg_lasso",
-    "description": "All scores for the Daily_latent_heat_flux variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: TEAK, BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, UNDE, WOOD, WREF, YELL, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_latent_heat_flux variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: TEAK, BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, UNDE, WOOD, YELL, WREF, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -37,8 +37,8 @@
         "UKFS",
         "UNDE",
         "WOOD",
-        "WREF",
         "YELL",
+        "WREF",
         "GUAN",
         "DCFS",
         "ABBY",
@@ -241,7 +241,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TEAK, BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, UNDE, WOOD, WREF, YELL, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE",
+            "description": "TEAK, BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, UNDE, WOOD, YELL, WREF, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE",
             "name": "Model Sites"
         },
         {
@@ -254,7 +254,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TEAK, BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, UNDE, WOOD, WREF, YELL, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE",
+        "name": "TEAK, BARR, BONA, CLBJ, DEJU, DSNY, HARV, HEAL, KONA, NOGP, ORNL, OSBS, TOOL, UKFS, UNDE, WOOD, YELL, WREF, GUAN, DCFS, ABBY, DELA, GRSM, KONZ, LAJA, LENO, MLBS, MOAB, NIWO, PUUM, BLAN, CPER, JERC, OAES, ONAQ, SCBI, SOAP, SRER, STER, BART, JORN, RMNP, SERC, SJER, STEI, TALL, TREE",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -342,13 +342,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 45.8205,
-                "longitude": -121.9519
+                "latitude": 44.9535,
+                "longitude": -110.5391
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 44.9535,
-                "longitude": -110.5391
+                "latitude": 45.8205,
+                "longitude": -121.9519
             },
             {
                 "@type": "GeoCoordinates",

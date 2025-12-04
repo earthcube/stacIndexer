@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:92eff22f77",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Terrestrial/Daily_Net_ecosystem_exchange/tg_precip_lm_nee_P1D_scores",
     "name": "tg_precip_lm",
-    "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: UKFS, CLBJ, NOGP, BARR, BONA, HEAL, DCFS, DSNY, TOOL, HARV, DEJU, TEAK, ORNL, KONA, GUAN, YELL, WREF, UNDE, OSBS, WOOD, KONZ, LAJA, ABBY, MLBS, MOAB, DELA, GRSM, LENO, NIWO, PUUM, SCBI, SRER, BLAN, JERC, SOAP, STER, ONAQ, OAES, CPER, TREE, RMNP, JORN, TALL, BART, SERC, SJER, STEI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_Net_ecosystem_exchange variable for the tg_precip_lm model. Information for the model is provided as follows: The tg_precip_lm model is a linear model fit using the function lm() in R. This is a very simple\nmodel with only total precipitation used as a model covariate..\n                                    The model predicts this variable at the following sites: OSBS, TOOL, CLBJ, UKFS, HARV, HEAL, BONA, GUAN, NOGP, UNDE, TEAK, KONA, DSNY, YELL, WOOD, ORNL, DCFS, DEJU, WREF, BARR, ABBY, LENO, PUUM, DELA, KONZ, MOAB, GRSM, NIWO, MLBS, LAJA, ONAQ, CPER, STER, SRER, SCBI, OAES, SOAP, BLAN, JERC, JORN, SJER, SERC, STEI, TALL, BART, RMNP, TREE.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2024-02-03",
     "datetime": "2024-02-03",
     "updated": "2024-07-04T00:00:00Z",
@@ -21,53 +21,53 @@
         "nee",
         "Daily",
         "P1D",
-        "UKFS",
-        "CLBJ",
-        "NOGP",
-        "BARR",
-        "BONA",
-        "HEAL",
-        "DCFS",
-        "DSNY",
-        "TOOL",
-        "HARV",
-        "DEJU",
-        "TEAK",
-        "ORNL",
-        "KONA",
-        "GUAN",
-        "YELL",
-        "WREF",
-        "UNDE",
         "OSBS",
+        "TOOL",
+        "CLBJ",
+        "UKFS",
+        "HARV",
+        "HEAL",
+        "BONA",
+        "GUAN",
+        "NOGP",
+        "UNDE",
+        "TEAK",
+        "KONA",
+        "DSNY",
+        "YELL",
         "WOOD",
-        "KONZ",
-        "LAJA",
+        "ORNL",
+        "DCFS",
+        "DEJU",
+        "WREF",
+        "BARR",
         "ABBY",
-        "MLBS",
-        "MOAB",
-        "DELA",
-        "GRSM",
         "LENO",
-        "NIWO",
         "PUUM",
-        "SCBI",
+        "DELA",
+        "KONZ",
+        "MOAB",
+        "GRSM",
+        "NIWO",
+        "MLBS",
+        "LAJA",
+        "ONAQ",
+        "CPER",
+        "STER",
         "SRER",
+        "SCBI",
+        "OAES",
+        "SOAP",
         "BLAN",
         "JERC",
-        "SOAP",
-        "STER",
-        "ONAQ",
-        "OAES",
-        "CPER",
-        "TREE",
-        "RMNP",
         "JORN",
+        "SJER",
+        "SERC",
+        "STEI",
         "TALL",
         "BART",
-        "SERC",
-        "SJER",
-        "STEI"
+        "RMNP",
+        "TREE"
     ],
     "providers": [
         {
@@ -241,7 +241,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "UKFS, CLBJ, NOGP, BARR, BONA, HEAL, DCFS, DSNY, TOOL, HARV, DEJU, TEAK, ORNL, KONA, GUAN, YELL, WREF, UNDE, OSBS, WOOD, KONZ, LAJA, ABBY, MLBS, MOAB, DELA, GRSM, LENO, NIWO, PUUM, SCBI, SRER, BLAN, JERC, SOAP, STER, ONAQ, OAES, CPER, TREE, RMNP, JORN, TALL, BART, SERC, SJER, STEI",
+            "description": "OSBS, TOOL, CLBJ, UKFS, HARV, HEAL, BONA, GUAN, NOGP, UNDE, TEAK, KONA, DSNY, YELL, WOOD, ORNL, DCFS, DEJU, WREF, BARR, ABBY, LENO, PUUM, DELA, KONZ, MOAB, GRSM, NIWO, MLBS, LAJA, ONAQ, CPER, STER, SRER, SCBI, OAES, SOAP, BLAN, JERC, JORN, SJER, SERC, STEI, TALL, BART, RMNP, TREE",
             "name": "Model Sites"
         },
         {
@@ -254,101 +254,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "UKFS, CLBJ, NOGP, BARR, BONA, HEAL, DCFS, DSNY, TOOL, HARV, DEJU, TEAK, ORNL, KONA, GUAN, YELL, WREF, UNDE, OSBS, WOOD, KONZ, LAJA, ABBY, MLBS, MOAB, DELA, GRSM, LENO, NIWO, PUUM, SCBI, SRER, BLAN, JERC, SOAP, STER, ONAQ, OAES, CPER, TREE, RMNP, JORN, TALL, BART, SERC, SJER, STEI",
+        "name": "OSBS, TOOL, CLBJ, UKFS, HARV, HEAL, BONA, GUAN, NOGP, UNDE, TEAK, KONA, DSNY, YELL, WOOD, ORNL, DCFS, DEJU, WREF, BARR, ABBY, LENO, PUUM, DELA, KONZ, MOAB, GRSM, NIWO, MLBS, LAJA, ONAQ, CPER, STER, SRER, SCBI, OAES, SOAP, BLAN, JERC, JORN, SJER, SERC, STEI, TALL, BART, RMNP, TREE",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "17.9696,-156.6194 71.2824,-66.8687"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0404,
-                "longitude": -95.1921
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 33.4012,
-                "longitude": -97.57
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.7697,
-                "longitude": -100.9154
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 71.2824,
-                "longitude": -156.6194
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 65.154,
-                "longitude": -147.5026
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 63.8758,
-                "longitude": -149.2133
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1617,
-                "longitude": -99.1066
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 28.1251,
-                "longitude": -81.4362
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6611,
-                "longitude": -149.3705
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 42.5369,
-                "longitude": -72.1727
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 63.8811,
-                "longitude": -145.7514
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.0058,
-                "longitude": -119.006
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.9641,
-                "longitude": -84.2826
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.1104,
-                "longitude": -96.6129
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 17.9696,
-                "longitude": -66.8687
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 44.9535,
-                "longitude": -110.5391
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.8205,
-                "longitude": -121.9519
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.2339,
-                "longitude": -89.5373
             },
             {
                 "@type": "GeoCoordinates",
@@ -357,18 +267,98 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 68.6611,
+                "longitude": -149.3705
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 33.4012,
+                "longitude": -97.57
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0404,
+                "longitude": -95.1921
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 42.5369,
+                "longitude": -72.1727
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 63.8758,
+                "longitude": -149.2133
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 65.154,
+                "longitude": -147.5026
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 17.9696,
+                "longitude": -66.8687
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.7697,
+                "longitude": -100.9154
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.2339,
+                "longitude": -89.5373
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0058,
+                "longitude": -119.006
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1104,
+                "longitude": -96.6129
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 28.1251,
+                "longitude": -81.4362
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.9535,
+                "longitude": -110.5391
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 47.1282,
                 "longitude": -99.2413
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.1008,
-                "longitude": -96.5631
+                "latitude": 35.9641,
+                "longitude": -84.2826
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 18.0213,
-                "longitude": -67.0769
+                "latitude": 47.1617,
+                "longitude": -99.1066
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 63.8811,
+                "longitude": -145.7514
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.8205,
+                "longitude": -121.9519
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 71.2824,
+                "longitude": -156.6194
             },
             {
                 "@type": "GeoCoordinates",
@@ -377,33 +367,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.3783,
-                "longitude": -80.5248
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.2483,
-                "longitude": -109.3883
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.5417,
-                "longitude": -87.8039
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.689,
-                "longitude": -83.5019
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 31.8539,
                 "longitude": -88.1612
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.0543,
-                "longitude": -105.5824
             },
             {
                 "@type": "GeoCoordinates",
@@ -412,13 +377,73 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
+                "latitude": 32.5417,
+                "longitude": -87.8039
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1008,
+                "longitude": -96.5631
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.2483,
+                "longitude": -109.3883
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.689,
+                "longitude": -83.5019
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.0543,
+                "longitude": -105.5824
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.3783,
+                "longitude": -80.5248
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 18.0213,
+                "longitude": -67.0769
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.1776,
+                "longitude": -112.4524
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.8155,
+                "longitude": -104.7456
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.4619,
+                "longitude": -103.0293
             },
             {
                 "@type": "GeoCoordinates",
                 "latitude": 31.9107,
                 "longitude": -110.8355
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.4106,
+                "longitude": -99.0588
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0334,
+                "longitude": -119.2622
             },
             {
                 "@type": "GeoCoordinates",
@@ -432,43 +457,23 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.0334,
-                "longitude": -119.2622
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.4619,
-                "longitude": -103.0293
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.1776,
-                "longitude": -112.4524
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.4106,
-                "longitude": -99.0588
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.8155,
-                "longitude": -104.7456
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.4937,
-                "longitude": -89.5857
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.2759,
-                "longitude": -105.546
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 32.5907,
                 "longitude": -106.8425
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.1088,
+                "longitude": -119.7323
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5089,
+                "longitude": -89.5864
             },
             {
                 "@type": "GeoCoordinates",
@@ -482,18 +487,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
+                "latitude": 40.2759,
+                "longitude": -105.546
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.1088,
-                "longitude": -119.7323
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.5089,
-                "longitude": -89.5864
+                "latitude": 45.4937,
+                "longitude": -89.5857
             }
         ],
         "additionalProperty": [
