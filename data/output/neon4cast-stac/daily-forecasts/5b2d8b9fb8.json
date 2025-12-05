@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:5b2d8b9fb8",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Dissolved_oxygen/cb_prophet_oxygen_P1D_forecast",
     "name": "cb_prophet",
-    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: SYCA, COMO, BLWA, CARI, TECR, LIRO, GUIL, TOMB, PRLA, MCRA, MAYF, FLNT, BLDE, LECO, WALK, BIGC, ARIK, LEWI, BLUE, PRPO, KING, SUGG, BARC, MCDI, MART, WLOU, CUPE, PRIN, REDB, HOPB, POSE, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the cb_prophet model. Information for the model is provided as follows: The Prophet model is an empirical model, specifically a non-linear regression model that includes\nseasonality effects (Taylor & Letham, 2018). The model relies on Bayesian estimation with an additive\nwhite noise error term.\n                                    The model predicts this variable at the following sites: SYCA, COMO, BLWA, CARI, TECR, LIRO, GUIL, TOMB, PRLA, LEWI, BLUE, PRPO, MCRA, MAYF, FLNT, BLDE, LECO, WALK, BIGC, ARIK, KING, SUGG, BARC, MCDI, MART, WLOU, CUPE, PRIN, REDB, HOPB, POSE, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-02-06",
     "datetime": "2024-02-06",
     "updated": "2024-02-07T00:00:00Z",
@@ -30,6 +30,9 @@
         "GUIL",
         "TOMB",
         "PRLA",
+        "LEWI",
+        "BLUE",
+        "PRPO",
         "MCRA",
         "MAYF",
         "FLNT",
@@ -38,9 +41,6 @@
         "WALK",
         "BIGC",
         "ARIK",
-        "LEWI",
-        "BLUE",
-        "PRPO",
         "KING",
         "SUGG",
         "BARC",
@@ -191,7 +191,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "SYCA, COMO, BLWA, CARI, TECR, LIRO, GUIL, TOMB, PRLA, MCRA, MAYF, FLNT, BLDE, LECO, WALK, BIGC, ARIK, LEWI, BLUE, PRPO, KING, SUGG, BARC, MCDI, MART, WLOU, CUPE, PRIN, REDB, HOPB, POSE, CRAM",
+            "description": "SYCA, COMO, BLWA, CARI, TECR, LIRO, GUIL, TOMB, PRLA, LEWI, BLUE, PRPO, MCRA, MAYF, FLNT, BLDE, LECO, WALK, BIGC, ARIK, KING, SUGG, BARC, MCDI, MART, WLOU, CUPE, PRIN, REDB, HOPB, POSE, CRAM",
             "name": "Model Sites"
         },
         {
@@ -204,7 +204,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "SYCA, COMO, BLWA, CARI, TECR, LIRO, GUIL, TOMB, PRLA, MCRA, MAYF, FLNT, BLDE, LECO, WALK, BIGC, ARIK, LEWI, BLUE, PRPO, KING, SUGG, BARC, MCDI, MART, WLOU, CUPE, PRIN, REDB, HOPB, POSE, CRAM",
+        "name": "SYCA, COMO, BLWA, CARI, TECR, LIRO, GUIL, TOMB, PRLA, LEWI, BLUE, PRPO, MCRA, MAYF, FLNT, BLDE, LECO, WALK, BIGC, ARIK, KING, SUGG, BARC, MCDI, MART, WLOU, CUPE, PRIN, REDB, HOPB, POSE, CRAM",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -257,6 +257,21 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 44.2596,
                 "longitude": -122.1655
             },
@@ -294,21 +309,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.7582,
                 "longitude": -102.4471
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
