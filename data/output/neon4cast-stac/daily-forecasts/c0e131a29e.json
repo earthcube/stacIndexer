@@ -6,12 +6,12 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:c0e131a29e",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/lm_AT_WTL_WS_temperature_P1D_forecast",
     "name": "lm_AT_WTL_WS",
-    "description": "All forecasts for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: LIRO, PRLA, TOOK, PRPO, CRAM, BARC, SUGG.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2025-12-06",
-    "datetime": "2025-12-06",
-    "updated": "2025-12-06T00:00:00Z",
+    "description": "All forecasts for the Daily_Water_temperature variable for the lm_AT_WTL_WS model. Information for the model is provided as follows: This forecast of water temperature at NEON Lake sites uses a linear model, incorporating air temperature, wind speed, and the previous day's forecasted water temperature as variables..\n                                    The model predicts this variable at the following sites: LIRO, PRLA, BARC, CRAM, SUGG, PRPO, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "datePublished": "2025-12-07",
+    "datetime": "2025-12-07",
+    "updated": "2025-12-07T00:00:00Z",
     "start_datetime": "2024-03-01T00:00:00Z",
-    "end_datetime": "2026-01-05T00:00:00Z",
+    "end_datetime": "2026-01-06T00:00:00Z",
     "keywords": [
         "Forecasts",
         "neon4cast",
@@ -23,11 +23,11 @@
         "P1D",
         "LIRO",
         "PRLA",
-        "TOOK",
-        "PRPO",
-        "CRAM",
         "BARC",
-        "SUGG"
+        "CRAM",
+        "SUGG",
+        "PRPO",
+        "TOOK"
     ],
     "providers": [
         {
@@ -166,7 +166,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LIRO, PRLA, TOOK, PRPO, CRAM, BARC, SUGG",
+            "description": "LIRO, PRLA, BARC, CRAM, SUGG, PRPO, TOOK",
             "name": "Model Sites"
         },
         {
@@ -179,7 +179,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LIRO, PRLA, TOOK, PRPO, CRAM, BARC, SUGG",
+        "name": "LIRO, PRLA, BARC, CRAM, SUGG, PRPO, TOOK",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -197,13 +197,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
+                "latitude": 29.676,
+                "longitude": -82.0084
             },
             {
                 "@type": "GeoCoordinates",
@@ -212,13 +207,18 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 29.676,
-                "longitude": -82.0084
+                "latitude": 29.6878,
+                "longitude": -82.0177
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 29.6878,
-                "longitude": -82.0177
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
             }
         ],
         "additionalProperty": [

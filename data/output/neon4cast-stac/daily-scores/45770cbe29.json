@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:45770cbe29",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Beetles/Weekly_beetle_community_abundance/tg_arima_abundance_P1W_scores",
     "name": "tg_arima",
-    "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SJER, TREE, RMNP, JORN, BART, STEI, TALL, SERC, DELA, ABBY, PUUM, LENO, LAJA, KONZ, NIWO, GRSM, MLBS, MOAB, JERC, SRER, OAES, STER, SOAP, CPER, BLAN, ONAQ, SCBI, TOOL, TEAK, DCFS, UNDE, KONA, ORNL, NOGP, DEJU, WOOD, GUAN, OSBS, UKFS, HEAL, BONA, WREF, BARR, HARV, DSNY, CLBJ, YELL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Weekly_beetle_community_abundance variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SJER, TREE, RMNP, JORN, BART, STEI, TALL, SERC, JERC, SRER, OAES, STER, SOAP, CPER, BLAN, ONAQ, SCBI, DELA, ABBY, PUUM, LENO, LAJA, KONZ, NIWO, GRSM, MLBS, MOAB, TOOL, TEAK, DCFS, UNDE, KONA, ORNL, NOGP, DEJU, WOOD, GUAN, OSBS, UKFS, HEAL, BONA, WREF, BARR, HARV, DSNY, CLBJ, YELL.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -29,6 +29,15 @@
         "STEI",
         "TALL",
         "SERC",
+        "JERC",
+        "SRER",
+        "OAES",
+        "STER",
+        "SOAP",
+        "CPER",
+        "BLAN",
+        "ONAQ",
+        "SCBI",
         "DELA",
         "ABBY",
         "PUUM",
@@ -39,15 +48,6 @@
         "GRSM",
         "MLBS",
         "MOAB",
-        "JERC",
-        "SRER",
-        "OAES",
-        "STER",
-        "SOAP",
-        "CPER",
-        "BLAN",
-        "ONAQ",
-        "SCBI",
         "TOOL",
         "TEAK",
         "DCFS",
@@ -241,7 +241,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "SJER, TREE, RMNP, JORN, BART, STEI, TALL, SERC, DELA, ABBY, PUUM, LENO, LAJA, KONZ, NIWO, GRSM, MLBS, MOAB, JERC, SRER, OAES, STER, SOAP, CPER, BLAN, ONAQ, SCBI, TOOL, TEAK, DCFS, UNDE, KONA, ORNL, NOGP, DEJU, WOOD, GUAN, OSBS, UKFS, HEAL, BONA, WREF, BARR, HARV, DSNY, CLBJ, YELL",
+            "description": "SJER, TREE, RMNP, JORN, BART, STEI, TALL, SERC, JERC, SRER, OAES, STER, SOAP, CPER, BLAN, ONAQ, SCBI, DELA, ABBY, PUUM, LENO, LAJA, KONZ, NIWO, GRSM, MLBS, MOAB, TOOL, TEAK, DCFS, UNDE, KONA, ORNL, NOGP, DEJU, WOOD, GUAN, OSBS, UKFS, HEAL, BONA, WREF, BARR, HARV, DSNY, CLBJ, YELL",
             "name": "Model Sites"
         },
         {
@@ -254,7 +254,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "SJER, TREE, RMNP, JORN, BART, STEI, TALL, SERC, DELA, ABBY, PUUM, LENO, LAJA, KONZ, NIWO, GRSM, MLBS, MOAB, JERC, SRER, OAES, STER, SOAP, CPER, BLAN, ONAQ, SCBI, TOOL, TEAK, DCFS, UNDE, KONA, ORNL, NOGP, DEJU, WOOD, GUAN, OSBS, UKFS, HEAL, BONA, WREF, BARR, HARV, DSNY, CLBJ, YELL",
+        "name": "SJER, TREE, RMNP, JORN, BART, STEI, TALL, SERC, JERC, SRER, OAES, STER, SOAP, CPER, BLAN, ONAQ, SCBI, DELA, ABBY, PUUM, LENO, LAJA, KONZ, NIWO, GRSM, MLBS, MOAB, TOOL, TEAK, DCFS, UNDE, KONA, ORNL, NOGP, DEJU, WOOD, GUAN, OSBS, UKFS, HEAL, BONA, WREF, BARR, HARV, DSNY, CLBJ, YELL",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -299,6 +299,51 @@
                 "@type": "GeoCoordinates",
                 "latitude": 38.8901,
                 "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.1948,
+                "longitude": -84.4686
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.9107,
+                "longitude": -110.8355
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.4106,
+                "longitude": -99.0588
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.4619,
+                "longitude": -103.0293
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 37.0334,
+                "longitude": -119.2622
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.8155,
+                "longitude": -104.7456
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0337,
+                "longitude": -78.0418
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.1776,
+                "longitude": -112.4524
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
             },
             {
                 "@type": "GeoCoordinates",
@@ -349,51 +394,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 38.2483,
                 "longitude": -109.3883
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.1948,
-                "longitude": -84.4686
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.9107,
-                "longitude": -110.8355
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.4106,
-                "longitude": -99.0588
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.4619,
-                "longitude": -103.0293
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 37.0334,
-                "longitude": -119.2622
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.8155,
-                "longitude": -104.7456
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0337,
-                "longitude": -78.0418
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.1776,
-                "longitude": -112.4524
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
             },
             {
                 "@type": "GeoCoordinates",
