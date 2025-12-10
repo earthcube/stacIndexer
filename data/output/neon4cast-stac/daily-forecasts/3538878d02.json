@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:3538878d02",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/tg_randfor_temperature_P1D_forecast",
     "name": "tg_randfor",
-    "description": "All forecasts for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: LEWI, PRPO, TOOK, BLUE, CARI, PRLA, GUIL, COMO, LIRO, BLWA, TECR, SYCA, TOMB, MCDI, KING, REDB, OKSR, SUGG, WLOU, HOPB, CUPE, PRIN, MART, CRAM, POSE, BARC, FLNT, WALK, ARIK, MAYF, MCRA, BLDE, LECO, BIGC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the tg_randfor model. Information for the model is provided as follows: Random Forest is a machine learning model that is fitted with the ranger() function in the ranger\nR package (Wright & Ziegler 2017) within the tidymodels framework (Kuhn & Wickham 2020). The\nmodel drivers are unlagged air temperature, air pressure, relative humidity, surface downwelling\nlongwave and shortwave radiation, precipitation, and northward and eastward wind.\n                                    The model predicts this variable at the following sites: CARI, PRLA, GUIL, COMO, LIRO, BLWA, TECR, SYCA, TOMB, MCDI, KING, REDB, OKSR, SUGG, WLOU, HOPB, CUPE, PRIN, MART, CRAM, POSE, BARC, LEWI, PRPO, TOOK, BLUE, FLNT, WALK, ARIK, MAYF, MCRA, BLDE, LECO, BIGC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -21,10 +21,6 @@
         "temperature",
         "Daily",
         "P1D",
-        "LEWI",
-        "PRPO",
-        "TOOK",
-        "BLUE",
         "CARI",
         "PRLA",
         "GUIL",
@@ -47,6 +43,10 @@
         "CRAM",
         "POSE",
         "BARC",
+        "LEWI",
+        "PRPO",
+        "TOOK",
+        "BLUE",
         "FLNT",
         "WALK",
         "ARIK",
@@ -193,7 +193,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LEWI, PRPO, TOOK, BLUE, CARI, PRLA, GUIL, COMO, LIRO, BLWA, TECR, SYCA, TOMB, MCDI, KING, REDB, OKSR, SUGG, WLOU, HOPB, CUPE, PRIN, MART, CRAM, POSE, BARC, FLNT, WALK, ARIK, MAYF, MCRA, BLDE, LECO, BIGC",
+            "description": "CARI, PRLA, GUIL, COMO, LIRO, BLWA, TECR, SYCA, TOMB, MCDI, KING, REDB, OKSR, SUGG, WLOU, HOPB, CUPE, PRIN, MART, CRAM, POSE, BARC, LEWI, PRPO, TOOK, BLUE, FLNT, WALK, ARIK, MAYF, MCRA, BLDE, LECO, BIGC",
             "name": "Model Sites"
         },
         {
@@ -206,31 +206,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LEWI, PRPO, TOOK, BLUE, CARI, PRLA, GUIL, COMO, LIRO, BLWA, TECR, SYCA, TOMB, MCDI, KING, REDB, OKSR, SUGG, WLOU, HOPB, CUPE, PRIN, MART, CRAM, POSE, BARC, FLNT, WALK, ARIK, MAYF, MCRA, BLDE, LECO, BIGC",
+        "name": "CARI, PRLA, GUIL, COMO, LIRO, BLWA, TECR, SYCA, TOMB, MCDI, KING, REDB, OKSR, SUGG, WLOU, HOPB, CUPE, PRIN, MART, CRAM, POSE, BARC, LEWI, PRPO, TOOK, BLUE, FLNT, WALK, ARIK, MAYF, MCRA, BLDE, LECO, BIGC",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "18.1135,-149.6106 68.6698,-66.7987"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
             },
             {
                 "@type": "GeoCoordinates",
@@ -341,6 +321,26 @@
                 "@type": "GeoCoordinates",
                 "latitude": 29.676,
                 "longitude": -82.0084
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
             },
             {
                 "@type": "GeoCoordinates",

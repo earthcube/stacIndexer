@@ -3,63 +3,63 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:neon4cast-stac/daily-scores:40e5f9ac81",
-    "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Aquatics/Daily_Dissolved_oxygen/tg_lasso_oxygen_P1D_scores",
-    "name": "tg_lasso",
-    "description": "All scores for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: POSE, HOPB, REDB, PRIN, CUPE, SUGG, MART, CRAM, WLOU, MCDI, KING, BARC, OKSR, LEWI, PRPO, BLUE, TOOK, COMO, LIRO, GUIL, CARI, PRLA, SYCA, TECR, BLWA, TOMB, BLDE, MCRA, WALK, ARIK, LECO, FLNT, BIGC, MAYF.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
-    "datePublished": "2025-07-11",
-    "datetime": "2025-07-11",
-    "updated": "2025-07-11T00:00:00Z",
-    "start_datetime": "2023-01-01T00:00:00Z",
-    "end_datetime": "2025-08-13T00:00:00Z",
+    "@id": "urn:neon4cast-stac/daily-scores:2bce32e830",
+    "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Aquatics/Daily_Dissolved_oxygen/persistenceRW_oxygen_P1D_scores",
+    "name": "persistenceRW",
+    "description": "All scores for the Daily_Dissolved_oxygen variable for the persistenceRW model. Information for the model is provided as follows: Random walk from the fable package with ensembles used to represent uncertainty.\n                                    The model predicts this variable at the following sites: CARI, LIRO, PRLA, BLWA, COMO, GUIL, TOMB, SYCA, TECR, PRPO, LEWI, BLUE, TOOK, CRAM, SUGG, CUPE, POSE, WLOU, HOPB, MART, KING, MCDI, REDB, BARC, PRIN, OKSR, WALK, BIGC, MAYF, BLDE, FLNT, LECO, MCRA, ARIK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "datePublished": "2025-12-05",
+    "datetime": "2025-12-05",
+    "updated": "2025-12-05T00:00:00Z",
+    "start_datetime": "2022-08-25T00:00:00Z",
+    "end_datetime": "2025-12-06T00:00:00Z",
     "keywords": [
         "Scores",
         "neon4cast",
         "Aquatics",
-        "tg_lasso",
+        "persistenceRW",
         "Dissolved_oxygen",
         "oxygen",
         "Daily",
         "P1D",
-        "POSE",
-        "HOPB",
-        "REDB",
-        "PRIN",
-        "CUPE",
-        "SUGG",
-        "MART",
-        "CRAM",
-        "WLOU",
-        "MCDI",
-        "KING",
-        "BARC",
-        "OKSR",
-        "LEWI",
-        "PRPO",
-        "BLUE",
-        "TOOK",
-        "COMO",
-        "LIRO",
-        "GUIL",
         "CARI",
+        "LIRO",
         "PRLA",
+        "BLWA",
+        "COMO",
+        "GUIL",
+        "TOMB",
         "SYCA",
         "TECR",
-        "BLWA",
-        "TOMB",
-        "BLDE",
-        "MCRA",
+        "PRPO",
+        "LEWI",
+        "BLUE",
+        "TOOK",
+        "CRAM",
+        "SUGG",
+        "CUPE",
+        "POSE",
+        "WLOU",
+        "HOPB",
+        "MART",
+        "KING",
+        "MCDI",
+        "REDB",
+        "BARC",
+        "PRIN",
+        "OKSR",
         "WALK",
-        "ARIK",
-        "LECO",
-        "FLNT",
         "BIGC",
-        "MAYF"
+        "MAYF",
+        "BLDE",
+        "FLNT",
+        "LECO",
+        "MCRA",
+        "ARIK"
     ],
     "providers": [
         {
-            "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts/tg_lasso/forecast_model.R",
-            "name": "Caleb Robbins",
+            "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
+            "name": "Quinn Thomas",
             "roles": [
                 "producer",
                 "processor",
@@ -78,8 +78,8 @@
         {
             "@type": "CreativeWork",
             "@id": "https://doi.org/10.1002/ecs2.4686",
-            "url": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts/tg_lasso/forecast_model.R",
-            "name": "Caleb Robbins",
+            "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
+            "name": "Quinn Thomas",
             "description": "This paper summarizes ...",
             "identifier": {
                 "@type": "PropertyValue",
@@ -102,7 +102,7 @@
             }
         }
     ],
-    "url": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/tg_lasso.json",
+    "url": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/persistenceRW.json",
     "variableMeasured": [
         {
             "@type": "PropertyValue",
@@ -198,28 +198,28 @@
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/tg_lasso.json",
+            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/persistenceRW.json",
             "encodingFormat": "application/json",
             "description": "Stac Item JSON",
             "name": "Stac Item JSON"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/tg_lasso.json",
+            "contentUrl": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/persistenceRW.json",
             "encodingFormat": "text/html",
             "description": "Stac Item in Radiantearth STAC Browser",
             "name": "Stac Item in Radiantearth STAC Browser"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_lasso.json",
+            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/persistenceRW.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_lasso.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/persistenceRW.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://github.com/eco4cast/Forecast_submissions/blob/main/Generate_forecasts/tg_lasso/forecast_model.R",
+            "contentUrl": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
@@ -228,124 +228,24 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "POSE, HOPB, REDB, PRIN, CUPE, SUGG, MART, CRAM, WLOU, MCDI, KING, BARC, OKSR, LEWI, PRPO, BLUE, TOOK, COMO, LIRO, GUIL, CARI, PRLA, SYCA, TECR, BLWA, TOMB, BLDE, MCRA, WALK, ARIK, LECO, FLNT, BIGC, MAYF",
+            "description": "CARI, LIRO, PRLA, BLWA, COMO, GUIL, TOMB, SYCA, TECR, PRPO, LEWI, BLUE, TOOK, CRAM, SUGG, CUPE, POSE, WLOU, HOPB, MART, KING, MCDI, REDB, BARC, PRIN, OKSR, WALK, BIGC, MAYF, BLDE, FLNT, LECO, MCRA, ARIK",
             "name": "Model Sites"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_lasso?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=tg_lasso\"\ncon.read_parquet(path + \"/**\")",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=persistenceRW\"\ncon.read_parquet(path + \"/**\")",
             "name": "Database Access for Daily Dissolved_oxygen"
         }
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "POSE, HOPB, REDB, PRIN, CUPE, SUGG, MART, CRAM, WLOU, MCDI, KING, BARC, OKSR, LEWI, PRPO, BLUE, TOOK, COMO, LIRO, GUIL, CARI, PRLA, SYCA, TECR, BLWA, TOMB, BLDE, MCRA, WALK, ARIK, LECO, FLNT, BIGC, MAYF",
+        "name": "CARI, LIRO, PRLA, BLWA, COMO, GUIL, TOMB, SYCA, TECR, PRPO, LEWI, BLUE, TOOK, CRAM, SUGG, CUPE, POSE, WLOU, HOPB, MART, KING, MCDI, REDB, BARC, PRIN, OKSR, WALK, BIGC, MAYF, BLDE, FLNT, LECO, MCRA, ARIK",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "18.1135,-149.6106 68.6698,-66.7987"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8943,
-                "longitude": -78.1473
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 42.4719,
-                "longitude": -72.3295
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.7839,
-                "longitude": -111.7979
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 33.3785,
-                "longitude": -97.7823
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 18.1135,
-                "longitude": -66.9868
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.6878,
-                "longitude": -82.0177
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.7908,
-                "longitude": -121.9338
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.2097,
-                "longitude": -89.4737
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.8914,
-                "longitude": -105.9154
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.9459,
-                "longitude": -96.443
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.1051,
-                "longitude": -96.6038
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.676,
-                "longitude": -82.0084
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6698,
-                "longitude": -149.143
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 40.035,
-                "longitude": -105.5442
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.9983,
-                "longitude": -89.7048
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 18.1741,
-                "longitude": -66.7987
             },
             {
                 "@type": "GeoCoordinates",
@@ -354,8 +254,33 @@
             },
             {
                 "@type": "GeoCoordinates",
+                "latitude": 45.9983,
+                "longitude": -89.7048
+            },
+            {
+                "@type": "GeoCoordinates",
                 "latitude": 47.1591,
                 "longitude": -99.1139
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5415,
+                "longitude": -87.7982
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.035,
+                "longitude": -105.5442
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 18.1741,
+                "longitude": -66.7987
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.8534,
+                "longitude": -88.1589
             },
             {
                 "@type": "GeoCoordinates",
@@ -369,43 +294,93 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 32.5415,
-                "longitude": -87.7982
+                "latitude": 47.1298,
+                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 31.8534,
-                "longitude": -88.1589
+                "latitude": 39.0956,
+                "longitude": -77.9832
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 44.9501,
-                "longitude": -110.5871
+                "latitude": 34.4442,
+                "longitude": -96.6242
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 44.2596,
-                "longitude": -122.1655
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.2097,
+                "longitude": -89.4737
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.6878,
+                "longitude": -82.0177
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 18.1135,
+                "longitude": -66.9868
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8943,
+                "longitude": -78.1473
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.8914,
+                "longitude": -105.9154
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 42.4719,
+                "longitude": -72.3295
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.7908,
+                "longitude": -121.9338
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.1051,
+                "longitude": -96.6038
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.9459,
+                "longitude": -96.443
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 40.7839,
+                "longitude": -111.7979
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.676,
+                "longitude": -82.0084
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 33.3785,
+                "longitude": -97.7823
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6698,
+                "longitude": -149.143
             },
             {
                 "@type": "GeoCoordinates",
                 "latitude": 35.9574,
                 "longitude": -84.2793
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.7582,
-                "longitude": -102.4471
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.6904,
-                "longitude": -83.5038
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.1854,
-                "longitude": -84.4374
             },
             {
                 "@type": "GeoCoordinates",
@@ -416,6 +391,31 @@
                 "@type": "GeoCoordinates",
                 "latitude": 32.9604,
                 "longitude": -87.4077
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.9501,
+                "longitude": -110.5871
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.1854,
+                "longitude": -84.4374
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.6904,
+                "longitude": -83.5038
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.2596,
+                "longitude": -122.1655
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.7582,
+                "longitude": -102.4471
             }
         ],
         "additionalProperty": [
