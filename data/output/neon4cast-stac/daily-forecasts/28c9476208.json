@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:28c9476208",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Chlorophyll_a/tg_elasticNet_chla_P1D_forecast",
     "name": "tg_elasticNet",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_elasticNet model. Information for the model is provided as follows: elastic net regression trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: FLNT, TOOK, PRPO, SUGG, CRAM, BARC, BLWA, PRLA, LIRO, TOMB.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_elasticNet model. Information for the model is provided as follows: elastic net regression trained using consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: FLNT, BLWA, PRLA, LIRO, TOMB, SUGG, CRAM, BARC, TOOK, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -22,15 +22,15 @@
         "Daily",
         "P1D",
         "FLNT",
-        "TOOK",
-        "PRPO",
-        "SUGG",
-        "CRAM",
-        "BARC",
         "BLWA",
         "PRLA",
         "LIRO",
-        "TOMB"
+        "TOMB",
+        "SUGG",
+        "CRAM",
+        "BARC",
+        "TOOK",
+        "PRPO"
     ],
     "providers": [
         {
@@ -169,7 +169,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "FLNT, TOOK, PRPO, SUGG, CRAM, BARC, BLWA, PRLA, LIRO, TOMB",
+            "description": "FLNT, BLWA, PRLA, LIRO, TOMB, SUGG, CRAM, BARC, TOOK, PRPO",
             "name": "Model Sites"
         },
         {
@@ -182,7 +182,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "FLNT, TOOK, PRPO, SUGG, CRAM, BARC, BLWA, PRLA, LIRO, TOMB",
+        "name": "FLNT, BLWA, PRLA, LIRO, TOMB, SUGG, CRAM, BARC, TOOK, PRPO",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -192,31 +192,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 31.1854,
                 "longitude": -84.4374
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.6878,
-                "longitude": -82.0177
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.2097,
-                "longitude": -89.4737
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.676,
-                "longitude": -82.0084
             },
             {
                 "@type": "GeoCoordinates",
@@ -237,6 +212,31 @@
                 "@type": "GeoCoordinates",
                 "latitude": 31.8534,
                 "longitude": -88.1589
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.6878,
+                "longitude": -82.0177
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 46.2097,
+                "longitude": -89.4737
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 29.676,
+                "longitude": -82.0084
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
             }
         ],
         "additionalProperty": [

@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:5278b605ed",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Chlorophyll_a/tg_arima_chla_P1D_forecast",
     "name": "tg_arima",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: BARC, CRAM, SUGG, PRLA, BLWA, LIRO, TOMB, FLNT, PRPO, TOOK.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: SUGG, CRAM, BARC, PRPO, TOOK, FLNT, BLWA, TOMB, LIRO, PRLA.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -21,16 +21,16 @@
         "chla",
         "Daily",
         "P1D",
-        "BARC",
-        "CRAM",
         "SUGG",
-        "PRLA",
-        "BLWA",
-        "LIRO",
-        "TOMB",
-        "FLNT",
+        "CRAM",
+        "BARC",
         "PRPO",
-        "TOOK"
+        "TOOK",
+        "FLNT",
+        "BLWA",
+        "TOMB",
+        "LIRO",
+        "PRLA"
     ],
     "providers": [
         {
@@ -169,7 +169,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "BARC, CRAM, SUGG, PRLA, BLWA, LIRO, TOMB, FLNT, PRPO, TOOK",
+            "description": "SUGG, CRAM, BARC, PRPO, TOOK, FLNT, BLWA, TOMB, LIRO, PRLA",
             "name": "Model Sites"
         },
         {
@@ -182,21 +182,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "BARC, CRAM, SUGG, PRLA, BLWA, LIRO, TOMB, FLNT, PRPO, TOOK",
+        "name": "SUGG, CRAM, BARC, PRPO, TOOK, FLNT, BLWA, TOMB, LIRO, PRLA",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.676,
-                "longitude": -82.0084
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.2097,
-                "longitude": -89.4737
             },
             {
                 "@type": "GeoCoordinates",
@@ -205,28 +195,13 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 47.1591,
-                "longitude": -99.1139
+                "latitude": 46.2097,
+                "longitude": -89.4737
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 32.5415,
-                "longitude": -87.7982
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.9983,
-                "longitude": -89.7048
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.8534,
-                "longitude": -88.1589
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.1854,
-                "longitude": -84.4374
+                "latitude": 29.676,
+                "longitude": -82.0084
             },
             {
                 "@type": "GeoCoordinates",
@@ -237,6 +212,31 @@
                 "@type": "GeoCoordinates",
                 "latitude": 68.6307,
                 "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.1854,
+                "longitude": -84.4374
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5415,
+                "longitude": -87.7982
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 31.8534,
+                "longitude": -88.1589
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 45.9983,
+                "longitude": -89.7048
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1591,
+                "longitude": -99.1139
             }
         ],
         "additionalProperty": [
