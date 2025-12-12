@@ -3,10 +3,10 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:neon4cast-stac/daily-scores:f975e5e99c",
-    "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Ticks/Weekly_Amblyomma_americanum_population/tg_ets_amblyomma_americanum_P1W_scores",
-    "name": "tg_ets",
-    "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_ets model. Information for the model is provided as follows: The tg_ets model is an Error, Trend, Seasonal (ETS) model fit using the function ets() from the\nforecast package in R (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series\nmodel with no covariates..\n                                    The model predicts this variable at the following sites: LENO, KONZ, SERC, TALL, ORNL, OSBS, UKFS, BLAN, SCBI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "@id": "urn:neon4cast-stac/daily-scores:d96f65fe9f",
+    "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Ticks/Weekly_Amblyomma_americanum_population/tg_tbats_amblyomma_americanum_P1W_scores",
+    "name": "tg_tbats",
+    "description": "All scores for the Weekly_Amblyomma_americanum_population variable for the tg_tbats model. Information for the model is provided as follows: The tg_tbats model is a TBATS (Trigonometric seasonality, Box-Cox transformation, ARMA\nerrors, Trend and Seasonal components) model fit using the function tbats() from the forecast package in\nR (Hyndman et al. 2023; Hyndman et al., 2008). This is an empirical time series model with no\ncovariates..\n                                    The model predicts this variable at the following sites: LENO, KONZ, OSBS, ORNL, UKFS, SERC, TALL, BLAN, SCBI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -16,18 +16,18 @@
         "Scores",
         "neon4cast",
         "Ticks",
-        "tg_ets",
+        "tg_tbats",
         "Amblyomma_americanum_population",
         "amblyomma_americanum",
         "Weekly",
         "P1W",
         "LENO",
         "KONZ",
+        "OSBS",
+        "ORNL",
+        "UKFS",
         "SERC",
         "TALL",
-        "ORNL",
-        "OSBS",
-        "UKFS",
         "BLAN",
         "SCBI"
     ],
@@ -77,7 +77,7 @@
             }
         }
     ],
-    "url": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Ticks/Weekly_Amblyomma_americanum_population/models/tg_ets.json",
+    "url": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Ticks/Weekly_Amblyomma_americanum_population/models/tg_tbats.json",
     "variableMeasured": [
         {
             "@type": "PropertyValue",
@@ -173,23 +173,23 @@
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Ticks/Weekly_Amblyomma_americanum_population/models/tg_ets.json",
+            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Ticks/Weekly_Amblyomma_americanum_population/models/tg_tbats.json",
             "encodingFormat": "application/json",
             "description": "Stac Item JSON",
             "name": "Stac Item JSON"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Ticks/Weekly_Amblyomma_americanum_population/models/tg_ets.json",
+            "contentUrl": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Ticks/Weekly_Amblyomma_americanum_population/models/tg_tbats.json",
             "encodingFormat": "text/html",
             "description": "Stac Item in Radiantearth STAC Browser",
             "name": "Stac Item in Radiantearth STAC Browser"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_ets.json",
+            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_tbats.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_ets.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/tg_tbats.json\")\n\n",
             "name": "Model Metadata"
         },
         {
@@ -203,20 +203,20 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "LENO, KONZ, SERC, TALL, ORNL, OSBS, UKFS, BLAN, SCBI",
+            "description": "LENO, KONZ, OSBS, ORNL, UKFS, SERC, TALL, BLAN, SCBI",
             "name": "Model Sites"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_ets?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_ets\"\ncon.read_parquet(path + \"/**\")",
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1W/variable=amblyomma_americanum/model_id=tg_tbats\"\ncon.read_parquet(path + \"/**\")",
             "name": "Database Access for Weekly Amblyomma_americanum_population"
         }
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "LENO, KONZ, SERC, TALL, ORNL, OSBS, UKFS, BLAN, SCBI",
+        "name": "LENO, KONZ, OSBS, ORNL, UKFS, SERC, TALL, BLAN, SCBI",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -234,13 +234,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8901,
-                "longitude": -76.56
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9505,
-                "longitude": -87.3933
+                "latitude": 29.6893,
+                "longitude": -81.9934
             },
             {
                 "@type": "GeoCoordinates",
@@ -249,13 +244,18 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 29.6893,
-                "longitude": -81.9934
+                "latitude": 39.0404,
+                "longitude": -95.1921
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.0404,
-                "longitude": -95.1921
+                "latitude": 38.8901,
+                "longitude": -76.56
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9505,
+                "longitude": -87.3933
             },
             {
                 "@type": "GeoCoordinates",

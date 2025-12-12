@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:bd516e0747",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/tg_precip_lm_all_sites_temperature_P1D_forecast",
     "name": "tg_precip_lm_all_sites",
-    "description": "All forecasts for the Daily_Water_temperature variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: MAYF, WALK, FLNT, BIGC, ARIK, LECO, BLDE, MCRA, GUIL, CARI, BLWA, COMO, TOMB, TECR, SYCA, LIRO, PRLA, HOPB, SUGG, CUPE, MART, MCDI, KING, BARC, PRIN, CRAM, WLOU, POSE, REDB, OKSR, PRPO, LEWI, TOOK, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the tg_precip_lm_all_sites model. Information for the model is provided as follows: The tg_precip_lm_all_sites model is a linear model fit using the function lm() in R. This is a very\nsimple model with only one covariate: total precipitation. y. This model was used to forecast water temperature and dissolved oxygen\nconcentration at the seven lake sites, with the model fitted for all sites together..\n                                    The model predicts this variable at the following sites: MAYF, WALK, FLNT, BIGC, ARIK, LECO, BLDE, MCRA, PRPO, LEWI, TOOK, BLUE, GUIL, CARI, BLWA, COMO, TOMB, TECR, SYCA, LIRO, PRLA, HOPB, SUGG, CUPE, MART, MCDI, KING, BARC, PRIN, CRAM, WLOU, POSE, REDB, OKSR.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-08-16",
     "datetime": "2024-08-16",
     "updated": "2024-08-23T00:00:00Z",
@@ -29,6 +29,10 @@
         "LECO",
         "BLDE",
         "MCRA",
+        "PRPO",
+        "LEWI",
+        "TOOK",
+        "BLUE",
         "GUIL",
         "CARI",
         "BLWA",
@@ -50,11 +54,7 @@
         "WLOU",
         "POSE",
         "REDB",
-        "OKSR",
-        "PRPO",
-        "LEWI",
-        "TOOK",
-        "BLUE"
+        "OKSR"
     ],
     "providers": [
         {
@@ -193,7 +193,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "MAYF, WALK, FLNT, BIGC, ARIK, LECO, BLDE, MCRA, GUIL, CARI, BLWA, COMO, TOMB, TECR, SYCA, LIRO, PRLA, HOPB, SUGG, CUPE, MART, MCDI, KING, BARC, PRIN, CRAM, WLOU, POSE, REDB, OKSR, PRPO, LEWI, TOOK, BLUE",
+            "description": "MAYF, WALK, FLNT, BIGC, ARIK, LECO, BLDE, MCRA, PRPO, LEWI, TOOK, BLUE, GUIL, CARI, BLWA, COMO, TOMB, TECR, SYCA, LIRO, PRLA, HOPB, SUGG, CUPE, MART, MCDI, KING, BARC, PRIN, CRAM, WLOU, POSE, REDB, OKSR",
             "name": "Model Sites"
         },
         {
@@ -206,7 +206,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "MAYF, WALK, FLNT, BIGC, ARIK, LECO, BLDE, MCRA, GUIL, CARI, BLWA, COMO, TOMB, TECR, SYCA, LIRO, PRLA, HOPB, SUGG, CUPE, MART, MCDI, KING, BARC, PRIN, CRAM, WLOU, POSE, REDB, OKSR, PRPO, LEWI, TOOK, BLUE",
+        "name": "MAYF, WALK, FLNT, BIGC, ARIK, LECO, BLDE, MCRA, PRPO, LEWI, TOOK, BLUE, GUIL, CARI, BLWA, COMO, TOMB, TECR, SYCA, LIRO, PRLA, HOPB, SUGG, CUPE, MART, MCDI, KING, BARC, PRIN, CRAM, WLOU, POSE, REDB, OKSR",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -251,6 +251,26 @@
                 "@type": "GeoCoordinates",
                 "latitude": 44.2596,
                 "longitude": -122.1655
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
             },
             {
                 "@type": "GeoCoordinates",
@@ -361,26 +381,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 68.6698,
                 "longitude": -149.143
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
             }
         ],
         "additionalProperty": [
