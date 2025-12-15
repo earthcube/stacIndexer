@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:41e060b00e",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Ticks/Weekly_Amblyomma_americanum_population/tg_arima_amblyomma_americanum_P1W_forecast",
     "name": "tg_arima",
-    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: TALL, SERC, SCBI, BLAN, LENO, KONZ, UKFS, ORNL, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Weekly_Amblyomma_americanum_population variable for the tg_arima model. Information for the model is provided as follows: The tg_arima model is an AutoRegressive Integrated Moving Average (ARIMA) model fit using\nthe function auto.arima() from the forecast package in R (Hyndman et al. 2023; Hyndman et al., 2008).\nThis is an empirical time series model with no covariates.\n                                    The model predicts this variable at the following sites: TALL, SERC, LENO, KONZ, SCBI, BLAN, UKFS, ORNL, OSBS.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-06",
     "datetime": "2025-07-06",
     "updated": "2025-07-06T00:00:00Z",
@@ -23,10 +23,10 @@
         "P1W",
         "TALL",
         "SERC",
-        "SCBI",
-        "BLAN",
         "LENO",
         "KONZ",
+        "SCBI",
+        "BLAN",
         "UKFS",
         "ORNL",
         "OSBS"
@@ -168,7 +168,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TALL, SERC, SCBI, BLAN, LENO, KONZ, UKFS, ORNL, OSBS",
+            "description": "TALL, SERC, LENO, KONZ, SCBI, BLAN, UKFS, ORNL, OSBS",
             "name": "Model Sites"
         },
         {
@@ -181,7 +181,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TALL, SERC, SCBI, BLAN, LENO, KONZ, UKFS, ORNL, OSBS",
+        "name": "TALL, SERC, LENO, KONZ, SCBI, BLAN, UKFS, ORNL, OSBS",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -199,16 +199,6 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0337,
-                "longitude": -78.0418
-            },
-            {
-                "@type": "GeoCoordinates",
                 "latitude": 31.8539,
                 "longitude": -88.1612
             },
@@ -216,6 +206,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.1008,
                 "longitude": -96.5631
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0337,
+                "longitude": -78.0418
             },
             {
                 "@type": "GeoCoordinates",

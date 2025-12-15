@@ -3,39 +3,32 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "urn:neon4cast-stac/daily-forecasts:402fb3b026",
-    "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Chlorophyll_a/climatology_chla_P1D_forecast",
-    "name": "climatology",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the climatology model. Information for the model is provided as follows: Historical DOY mean and sd.  Assumes normal distribution.\n                                    The model predicts this variable at the following sites: FLNT, PRPO, TOOK, CRAM, SUGG, BARC, BLWA, PRLA, TOMB, LIRO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
-    "datePublished": "2025-12-13",
-    "datetime": "2025-12-13",
-    "updated": "2025-12-13T00:00:00Z",
-    "start_datetime": "2022-01-01T00:00:00Z",
-    "end_datetime": "2026-01-17T00:00:00Z",
+    "@id": "urn:neon4cast-stac/daily-scores:cc8fedae4e",
+    "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Aquatics/Daily_Dissolved_oxygen/AquaticEcosystemsOxygen_oxygen_P1D_scores",
+    "name": "AquaticEcosystemsOxygen",
+    "description": "All scores for the Daily_Dissolved_oxygen variable for the AquaticEcosystemsOxygen model. Information for the model is provided as follows: Used a Bayesian Dynamic Linear Model using the fit_dlm function from the ecoforecastR package.\n                                    The model predicts this variable at the following sites: WLOU, BARC, ARIK.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "datePublished": "2024-07-07",
+    "datetime": "2024-07-07",
+    "updated": "2024-08-23T00:00:00Z",
+    "start_datetime": "2024-04-03T00:00:00Z",
+    "end_datetime": "2024-08-04T00:00:00Z",
     "keywords": [
-        "Forecasts",
+        "Scores",
         "neon4cast",
         "Aquatics",
-        "climatology",
-        "Chlorophyll_a",
-        "chla",
+        "AquaticEcosystemsOxygen",
+        "Dissolved_oxygen",
+        "oxygen",
         "Daily",
         "P1D",
-        "FLNT",
-        "PRPO",
-        "TOOK",
-        "CRAM",
-        "SUGG",
+        "WLOU",
         "BARC",
-        "BLWA",
-        "PRLA",
-        "TOMB",
-        "LIRO"
+        "ARIK"
     ],
     "providers": [
         {
-            "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
-            "name": "Quinn Thomas",
+            "url": "https://projects.ecoforecast.org/neon4cast-ci/",
+            "name": "NEON Ecological Forecasting Project",
             "roles": [
                 "producer",
                 "processor",
@@ -54,8 +47,8 @@
         {
             "@type": "CreativeWork",
             "@id": "https://doi.org/10.1002/ecs2.4686",
-            "url": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
-            "name": "Quinn Thomas",
+            "url": "https://projects.ecoforecast.org/neon4cast-ci/",
+            "name": "NEON Ecological Forecasting Project",
             "description": "This paper summarizes ...",
             "identifier": {
                 "@type": "PropertyValue",
@@ -78,13 +71,8 @@
             }
         }
     ],
-    "url": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/forecasts/Aquatics/Daily_Chlorophyll_a/models/climatology.json",
+    "url": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/AquaticEcosystemsOxygen.json",
     "variableMeasured": [
-        {
-            "@type": "PropertyValue",
-            "name": "datetime",
-            "description": "datetime of the forecasted value (ISO 8601)"
-        },
         {
             "@type": "PropertyValue",
             "name": "reference_datetime",
@@ -93,22 +81,17 @@
         {
             "@type": "PropertyValue",
             "name": "site_id",
-            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat)"
+            "description": "For forecasts that are not on a spatial grid, use of a site dimension that maps to a more detailed geometry (points, polygons, etc.) is allowable. In general this would be documented in the external metadata (e.g., alook-up table that provides lon and lat); however in netCDF this could be handled by the CF Discrete Sampling Geometry data model."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "datetime",
+            "description": "datetime of the forecasted value (ISO 8601)"
         },
         {
             "@type": "PropertyValue",
             "name": "family",
-            "description": "For ensembles: \u201censemble.\u201d Default value if unspecified for probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201dFor summary statistics: \u201csummary.\u201d"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "parameter",
-            "description": "ensemble member or distribution parameter"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "prediction",
-            "description": "predicted value for variable"
+            "description": "For ensembles: \u201censemble.\u201d Default value if unspecified For probability distributions: Name of the statistical distribution associated with the reported statistics. The \u201csample\u201d distribution is synonymous with \u201censemble.\u201d For summary statistics: \u201csummary.\u201dIf this dimension does not vary, it is permissible to specify family as a variable attribute if the file format being used supports this (e.g.,netCDF)."
         },
         {
             "@type": "PropertyValue",
@@ -117,50 +100,95 @@
         },
         {
             "@type": "PropertyValue",
-            "name": "project_id",
-            "description": "unique identifier for the forecast project"
+            "name": "observation",
+            "description": "observed value for variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "crps",
+            "description": "crps forecast score"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "logs",
+            "description": "logs forecast score"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "mean",
+            "description": "mean forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "median",
+            "description": "median forecast prediction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "sd",
+            "description": "standard deviation forecasts"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile97.5",
+            "description": "upper 97.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile02.5",
+            "description": "upper 2.5 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile90",
+            "description": "upper 90 percentile value of forecast"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "quantile10",
+            "description": "upper 10 percentile value of forecast"
         },
         {
             "@type": "PropertyValue",
             "name": "duration",
-            "description": "temporal duration of forecast (hourly, daily, etc.); follows ISO 8601 duration convention"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "variable",
-            "description": "name of forecasted variable"
+            "description": "temporal duration of forecast (hourly = PT1H, daily = P1D, etc.); follows ISO 8601 duration convention"
         },
         {
             "@type": "PropertyValue",
             "name": "model_id",
             "description": "unique model identifier"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "project_id",
+            "description": "unique project identifier"
         }
     ],
     "distribution": [
         {
             "@type": "DataDownload",
-            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/forecasts/Aquatics/Daily_Chlorophyll_a/models/climatology.json",
+            "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/AquaticEcosystemsOxygen.json",
             "encodingFormat": "application/json",
             "description": "Stac Item JSON",
             "name": "Stac Item JSON"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/forecasts/Aquatics/Daily_Chlorophyll_a/models/climatology.json",
+            "contentUrl": "https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/AquaticEcosystemsOxygen.json",
             "encodingFormat": "text/html",
             "description": "Stac Item in Radiantearth STAC Browser",
             "name": "Stac Item in Radiantearth STAC Browser"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/climatology.json",
+            "contentUrl": "https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/AquaticEcosystemsOxygen.json",
             "encodingFormat": "application/json",
-            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/climatology.json\")\n\n",
+            "description": "Use `jsonlite::fromJSON()` to download the model metadata JSON file. This R code will return metadata provided during the model registration.\n      \n\n### R\n\n```{r}\n# Use code below\n\nmodel_metadata <- jsonlite::fromJSON(\"https://sdsc.osn.xsede.org/bio230014-bucket01/challenges/metadata/model_id/AquaticEcosystemsOxygen.json\")\n\n",
             "name": "Model Metadata"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "https://github.com/eco4cast/neon4cast-ci/blob/main/baseline_models/models/aquatics_persistenceRW.R",
+            "contentUrl": "https://github.com/EcoForecast/AquaticEcosystems",
             "encodingFormat": "text/html",
             "description": "The link to the model code provided by the model submission team",
             "name": "Link for Model Code"
@@ -169,49 +197,29 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "FLNT, PRPO, TOOK, CRAM, SUGG, BARC, BLWA, PRLA, TOMB, LIRO",
+            "description": "WLOU, BARC, ARIK",
             "name": "Model Sites"
         },
         {
             "@type": "DataDownload",
-            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-summaries/project_id=neon4cast/duration=P1D/variable=chla/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
+            "contentUrl": "s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org",
             "encodingFormat": "application/x-parquet",
-            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/forecasts/bundled-summaries/project_id=neon4cast/duration=P1D/variable=chla/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/forecasts/bundled-summaries/project_id=neon4cast/duration=P1D/variable=chla/model_id=climatology\"\ncon.read_parquet(path + \"/**\")",
-            "name": "Database Access for Daily Chlorophyll_a"
+            "description": "Use `R` or `Python` code for remote access to the database. This code will return results for this variable and model combination.\n\n### R\n\n```{r}\n# Use code below\n\nall_results <- arrow::open_dataset(\"s3://anonymous@bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen?endpoint_override=sdsc.osn.xsede.org\")\ndf <- all_results |> dplyr::collect()\n\n```\n       \n\nYou can use dplyr operations before calling `dplyr::collect()` to `summarise`, `select` columns, and/or `filter` rows prior to pulling the data into a local `data.frame`. Reducing the data that is pulled locally will speed up the data download speed and reduce your memory usage.\n\n\n### Python\n\n```{python}# Use code below\nimport ibis\ncon = ibis.duckdbf.connect()\ncon.raw_sql(f'''\nCREATE OR REPLACE SECRET secret (\nTYPE S3,\nENDPOINT 'sdsc.osn.xsede.org',\nURL_STYLE 'path'\n\n''');\npath = \"s3://bio230014-bucket01/challenges/scores/bundled-parquet/project_id=neon4cast/duration=P1D/variable=oxygen/model_id=AquaticEcosystemsOxygen\"\ncon.read_parquet(path + \"/**\")",
+            "name": "Database Access for Daily Dissolved_oxygen"
         }
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "FLNT, PRPO, TOOK, CRAM, SUGG, BARC, BLWA, PRLA, TOMB, LIRO",
+        "name": "WLOU, BARC, ARIK",
         "geo": [
             {
                 "@type": "GeoShape",
-                "box": "29.676,-149.6106 68.6307,-82.0084"
+                "box": "29.676,-105.9154 39.8914,-82.0084"
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 31.1854,
-                "longitude": -84.4374
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 46.2097,
-                "longitude": -89.4737
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 29.6878,
-                "longitude": -82.0177
+                "latitude": 39.8914,
+                "longitude": -105.9154
             },
             {
                 "@type": "GeoCoordinates",
@@ -220,23 +228,8 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 32.5415,
-                "longitude": -87.7982
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1591,
-                "longitude": -99.1139
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 31.8534,
-                "longitude": -88.1589
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 45.9983,
-                "longitude": -89.7048
+                "latitude": 39.7582,
+                "longitude": -102.4471
             }
         ],
         "additionalProperty": [

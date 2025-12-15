@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:773ba69182",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/tg_SVM_temperature_P1D_forecast",
     "name": "tg_SVM",
-    "description": "All forecasts for the Daily_Water_temperature variable for the tg_SVM model. Information for the model is provided as follows: SVM regression forecasts generated with consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: TECR, LIRO, SYCA, GUIL, CARI, PRLA, BLWA, TOMB, COMO, BLUE, LEWI, TOOK, PRPO, BARC, MART, REDB, HOPB, CUPE, MCDI, WLOU, OKSR, SUGG, POSE, PRIN, CRAM, KING, WALK, BLDE, LECO, FLNT, ARIK, MCRA, MAYF, BIGC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the tg_SVM model. Information for the model is provided as follows: SVM regression forecasts generated with consistent methods across all sites/variables.\n                                    The model predicts this variable at the following sites: TECR, LIRO, SYCA, GUIL, CARI, PRLA, BLWA, TOMB, COMO, BARC, MART, REDB, HOPB, CUPE, MCDI, WLOU, OKSR, SUGG, POSE, PRIN, CRAM, KING, BLUE, LEWI, TOOK, PRPO, WALK, BLDE, LECO, FLNT, ARIK, MCRA, MAYF, BIGC.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -30,10 +30,6 @@
         "BLWA",
         "TOMB",
         "COMO",
-        "BLUE",
-        "LEWI",
-        "TOOK",
-        "PRPO",
         "BARC",
         "MART",
         "REDB",
@@ -47,6 +43,10 @@
         "PRIN",
         "CRAM",
         "KING",
+        "BLUE",
+        "LEWI",
+        "TOOK",
+        "PRPO",
         "WALK",
         "BLDE",
         "LECO",
@@ -193,7 +193,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TECR, LIRO, SYCA, GUIL, CARI, PRLA, BLWA, TOMB, COMO, BLUE, LEWI, TOOK, PRPO, BARC, MART, REDB, HOPB, CUPE, MCDI, WLOU, OKSR, SUGG, POSE, PRIN, CRAM, KING, WALK, BLDE, LECO, FLNT, ARIK, MCRA, MAYF, BIGC",
+            "description": "TECR, LIRO, SYCA, GUIL, CARI, PRLA, BLWA, TOMB, COMO, BARC, MART, REDB, HOPB, CUPE, MCDI, WLOU, OKSR, SUGG, POSE, PRIN, CRAM, KING, BLUE, LEWI, TOOK, PRPO, WALK, BLDE, LECO, FLNT, ARIK, MCRA, MAYF, BIGC",
             "name": "Model Sites"
         },
         {
@@ -206,7 +206,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TECR, LIRO, SYCA, GUIL, CARI, PRLA, BLWA, TOMB, COMO, BLUE, LEWI, TOOK, PRPO, BARC, MART, REDB, HOPB, CUPE, MCDI, WLOU, OKSR, SUGG, POSE, PRIN, CRAM, KING, WALK, BLDE, LECO, FLNT, ARIK, MCRA, MAYF, BIGC",
+        "name": "TECR, LIRO, SYCA, GUIL, CARI, PRLA, BLWA, TOMB, COMO, BARC, MART, REDB, HOPB, CUPE, MCDI, WLOU, OKSR, SUGG, POSE, PRIN, CRAM, KING, BLUE, LEWI, TOOK, PRPO, WALK, BLDE, LECO, FLNT, ARIK, MCRA, MAYF, BIGC",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -256,26 +256,6 @@
                 "@type": "GeoCoordinates",
                 "latitude": 40.035,
                 "longitude": -105.5442
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
@@ -341,6 +321,26 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.1051,
                 "longitude": -96.6038
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
