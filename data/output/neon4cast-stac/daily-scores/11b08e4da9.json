@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-scores:11b08e4da9",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-scores/Phenology/Daily_Green_chromatic_coordinate/greenbears_gcc_90_P1D_scores",
     "name": "greenbears",
-    "description": "All scores for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: SCBI, DELA, GRSM, CLBJ, HARV, UKFS, BART, STEI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
+    "description": "All scores for the Daily_Green_chromatic_coordinate variable for the greenbears model. Information for the model is provided as follows: They started with a simple parametric approach, and tried to fit a smooth cyclic curve based on day-of-year for each site. They used generalized additive models (GAMs) to estimate an annual smooth cycle in the GCC greenness index (Wood, 2017).\n                                    The model predicts this variable at the following sites: CLBJ, HARV, UKFS, DELA, GRSM, SCBI, BART, STEI.\n                                    Scores are metrics that describe how well forecasts compare to observations. The scores catalog includes are summaries of the forecasts (i.e., mean, median, confidence intervals), matched observations (if available), and scores (metrics of how well the model distribution compares to observations)",
     "datePublished": "2021-03-01",
     "datetime": "2021-03-01",
     "updated": "2021-03-01T00:00:00Z",
@@ -21,12 +21,12 @@
         "gcc_90",
         "Daily",
         "P1D",
-        "SCBI",
-        "DELA",
-        "GRSM",
         "CLBJ",
         "HARV",
         "UKFS",
+        "DELA",
+        "GRSM",
+        "SCBI",
         "BART",
         "STEI"
     ],
@@ -202,7 +202,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "SCBI, DELA, GRSM, CLBJ, HARV, UKFS, BART, STEI",
+            "description": "CLBJ, HARV, UKFS, DELA, GRSM, SCBI, BART, STEI",
             "name": "Model Sites"
         },
         {
@@ -215,26 +215,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "SCBI, DELA, GRSM, CLBJ, HARV, UKFS, BART, STEI",
+        "name": "CLBJ, HARV, UKFS, DELA, GRSM, SCBI, BART, STEI",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "32.5417,-97.57 45.5089,-71.2874"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 38.8929,
-                "longitude": -78.1395
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.5417,
-                "longitude": -87.8039
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.689,
-                "longitude": -83.5019
             },
             {
                 "@type": "GeoCoordinates",
@@ -250,6 +235,21 @@
                 "@type": "GeoCoordinates",
                 "latitude": 39.0404,
                 "longitude": -95.1921
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.5417,
+                "longitude": -87.8039
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.689,
+                "longitude": -83.5019
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 38.8929,
+                "longitude": -78.1395
             },
             {
                 "@type": "GeoCoordinates",

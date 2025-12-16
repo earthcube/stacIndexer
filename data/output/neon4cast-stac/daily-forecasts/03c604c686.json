@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:03c604c686",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Chlorophyll_a/procHinshelwoodMonod_chla_P1D_forecast",
     "name": "procHinshelwoodMonod",
-    "description": "All forecasts for the Daily_Chlorophyll_a variable for the procHinshelwoodMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: TOOK, PRPO, LIRO, PRLA, SUGG, BARC, CRAM.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Chlorophyll_a variable for the procHinshelwoodMonod model. Information for the model is provided as follows: NA.\n                                    The model predicts this variable at the following sites: LIRO, PRLA, SUGG, BARC, CRAM, TOOK, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2024-02-05",
     "datetime": "2024-02-05",
     "updated": "2024-02-07T00:00:00Z",
@@ -21,13 +21,13 @@
         "chla",
         "Daily",
         "P1D",
-        "TOOK",
-        "PRPO",
         "LIRO",
         "PRLA",
         "SUGG",
         "BARC",
-        "CRAM"
+        "CRAM",
+        "TOOK",
+        "PRPO"
     ],
     "providers": [
         {
@@ -166,7 +166,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "TOOK, PRPO, LIRO, PRLA, SUGG, BARC, CRAM",
+            "description": "LIRO, PRLA, SUGG, BARC, CRAM, TOOK, PRPO",
             "name": "Model Sites"
         },
         {
@@ -179,21 +179,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "TOOK, PRPO, LIRO, PRLA, SUGG, BARC, CRAM",
+        "name": "LIRO, PRLA, SUGG, BARC, CRAM, TOOK, PRPO",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "29.676,-149.6106 68.6307,-82.0084"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
@@ -219,6 +209,16 @@
                 "@type": "GeoCoordinates",
                 "latitude": 46.2097,
                 "longitude": -89.4737
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
             }
         ],
         "additionalProperty": [

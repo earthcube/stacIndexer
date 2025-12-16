@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:986de51dc3",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Dissolved_oxygen/tg_lasso_oxygen_P1D_forecast",
     "name": "tg_lasso",
-    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: PRPO, TOOK, LEWI, BLUE, BLDE, ARIK, LECO, BIGC, MAYF, WALK, FLNT, MCRA, SYCA, CARI, PRLA, COMO, GUIL, LIRO, BLWA, TOMB, TECR, CUPE, KING, PRIN, OKSR, CRAM, MCDI, BARC, SUGG, REDB, WLOU, MART, HOPB, POSE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Dissolved_oxygen variable for the tg_lasso model. Information for the model is provided as follows: Lasso is a machine learning model implemented in the same workflow as tg_randfor, but with\ndifferent hyperparameter tuning. The model drivers are unlagged air temperature, air pressure, relative\nhumidity, surface downwelling longwave and shortwave radiation, precipitation, and northward and\neastward wind. Lasso regressions were fitted with the function glmnet() in\nthe package glmnet (Tay et al. 2023), where the regularization hyperparameter (lambda) is tuned and\nselected with 10-fold cross validation..\n                                    The model predicts this variable at the following sites: BLDE, ARIK, LECO, BIGC, MAYF, WALK, FLNT, MCRA, SYCA, CARI, PRLA, COMO, GUIL, LIRO, BLWA, TOMB, TECR, CUPE, KING, PRIN, OKSR, CRAM, MCDI, BARC, SUGG, REDB, WLOU, MART, HOPB, POSE, PRPO, TOOK, LEWI, BLUE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -21,10 +21,6 @@
         "oxygen",
         "Daily",
         "P1D",
-        "PRPO",
-        "TOOK",
-        "LEWI",
-        "BLUE",
         "BLDE",
         "ARIK",
         "LECO",
@@ -54,7 +50,11 @@
         "WLOU",
         "MART",
         "HOPB",
-        "POSE"
+        "POSE",
+        "PRPO",
+        "TOOK",
+        "LEWI",
+        "BLUE"
     ],
     "providers": [
         {
@@ -193,7 +193,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "PRPO, TOOK, LEWI, BLUE, BLDE, ARIK, LECO, BIGC, MAYF, WALK, FLNT, MCRA, SYCA, CARI, PRLA, COMO, GUIL, LIRO, BLWA, TOMB, TECR, CUPE, KING, PRIN, OKSR, CRAM, MCDI, BARC, SUGG, REDB, WLOU, MART, HOPB, POSE",
+            "description": "BLDE, ARIK, LECO, BIGC, MAYF, WALK, FLNT, MCRA, SYCA, CARI, PRLA, COMO, GUIL, LIRO, BLWA, TOMB, TECR, CUPE, KING, PRIN, OKSR, CRAM, MCDI, BARC, SUGG, REDB, WLOU, MART, HOPB, POSE, PRPO, TOOK, LEWI, BLUE",
             "name": "Model Sites"
         },
         {
@@ -206,31 +206,11 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "PRPO, TOOK, LEWI, BLUE, BLDE, ARIK, LECO, BIGC, MAYF, WALK, FLNT, MCRA, SYCA, CARI, PRLA, COMO, GUIL, LIRO, BLWA, TOMB, TECR, CUPE, KING, PRIN, OKSR, CRAM, MCDI, BARC, SUGG, REDB, WLOU, MART, HOPB, POSE",
+        "name": "BLDE, ARIK, LECO, BIGC, MAYF, WALK, FLNT, MCRA, SYCA, CARI, PRLA, COMO, GUIL, LIRO, BLWA, TOMB, TECR, CUPE, KING, PRIN, OKSR, CRAM, MCDI, BARC, SUGG, REDB, WLOU, MART, HOPB, POSE, PRPO, TOOK, LEWI, BLUE",
         "geo": [
             {
                 "@type": "GeoShape",
                 "box": "18.1135,-149.6106 68.6698,-66.7987"
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
             },
             {
                 "@type": "GeoCoordinates",
@@ -381,6 +361,26 @@
                 "@type": "GeoCoordinates",
                 "latitude": 38.8943,
                 "longitude": -78.1473
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 47.1298,
+                "longitude": -99.2531
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 68.6307,
+                "longitude": -149.6106
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0956,
+                "longitude": -77.9832
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 34.4442,
+                "longitude": -96.6242
             }
         ],
         "additionalProperty": [
