@@ -6,7 +6,7 @@
     "@id": "urn:neon4cast-stac/daily-forecasts:0e3bb5a12b",
     "identifier": "eco4cast-stac/neon4cast-stac/daily-forecasts/Aquatics/Daily_Water_temperature/tg_XGBoost_temperature_P1D_forecast",
     "name": "tg_XGBoost",
-    "description": "All forecasts for the Daily_Water_temperature variable for the tg_XGBoost model. Information for the model is provided as follows: XGBoost trained in the same way for every site/variable.\n                                    The model predicts this variable at the following sites: WALK, ARIK, FLNT, BIGC, LECO, MCRA, MAYF, BLDE, COMO, SYCA, CARI, PRLA, GUIL, BLWA, TECR, TOMB, LIRO, PRIN, MCDI, WLOU, BARC, SUGG, CRAM, HOPB, REDB, POSE, CUPE, MART, KING, OKSR, TOOK, LEWI, BLUE, PRPO.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
+    "description": "All forecasts for the Daily_Water_temperature variable for the tg_XGBoost model. Information for the model is provided as follows: XGBoost trained in the same way for every site/variable.\n                                    The model predicts this variable at the following sites: TOOK, LEWI, BLUE, PRPO, COMO, SYCA, CARI, PRLA, GUIL, BLWA, TECR, TOMB, LIRO, PRIN, MCDI, WLOU, BARC, SUGG, CRAM, HOPB, REDB, POSE, CUPE, MART, KING, OKSR, WALK, ARIK, FLNT, BIGC, LECO, MCRA, MAYF, BLDE.\n                                    Forecasts are the raw forecasts that includes all ensemble members or distribution parameters. Due to the size of the raw forecasts, we recommend accessing the forecast summaries or scores to analyze forecasts (unless you need the individual ensemble members)",
     "datePublished": "2025-07-11",
     "datetime": "2025-07-11",
     "updated": "2025-07-11T00:00:00Z",
@@ -21,14 +21,10 @@
         "temperature",
         "Daily",
         "P1D",
-        "WALK",
-        "ARIK",
-        "FLNT",
-        "BIGC",
-        "LECO",
-        "MCRA",
-        "MAYF",
-        "BLDE",
+        "TOOK",
+        "LEWI",
+        "BLUE",
+        "PRPO",
         "COMO",
         "SYCA",
         "CARI",
@@ -51,10 +47,14 @@
         "MART",
         "KING",
         "OKSR",
-        "TOOK",
-        "LEWI",
-        "BLUE",
-        "PRPO"
+        "WALK",
+        "ARIK",
+        "FLNT",
+        "BIGC",
+        "LECO",
+        "MCRA",
+        "MAYF",
+        "BLDE"
     ],
     "providers": [
         {
@@ -193,7 +193,7 @@
             "@type": "DataDownload",
             "contentUrl": "https://raw.githubusercontent.com/eco4cast/neon4cast-ci/main/neon4cast_field_site_metadata.csv",
             "encodingFormat": "text/plain",
-            "description": "WALK, ARIK, FLNT, BIGC, LECO, MCRA, MAYF, BLDE, COMO, SYCA, CARI, PRLA, GUIL, BLWA, TECR, TOMB, LIRO, PRIN, MCDI, WLOU, BARC, SUGG, CRAM, HOPB, REDB, POSE, CUPE, MART, KING, OKSR, TOOK, LEWI, BLUE, PRPO",
+            "description": "TOOK, LEWI, BLUE, PRPO, COMO, SYCA, CARI, PRLA, GUIL, BLWA, TECR, TOMB, LIRO, PRIN, MCDI, WLOU, BARC, SUGG, CRAM, HOPB, REDB, POSE, CUPE, MART, KING, OKSR, WALK, ARIK, FLNT, BIGC, LECO, MCRA, MAYF, BLDE",
             "name": "Model Sites"
         },
         {
@@ -206,7 +206,7 @@
     ],
     "spatialCoverage": {
         "@type": "Place",
-        "name": "WALK, ARIK, FLNT, BIGC, LECO, MCRA, MAYF, BLDE, COMO, SYCA, CARI, PRLA, GUIL, BLWA, TECR, TOMB, LIRO, PRIN, MCDI, WLOU, BARC, SUGG, CRAM, HOPB, REDB, POSE, CUPE, MART, KING, OKSR, TOOK, LEWI, BLUE, PRPO",
+        "name": "TOOK, LEWI, BLUE, PRPO, COMO, SYCA, CARI, PRLA, GUIL, BLWA, TECR, TOMB, LIRO, PRIN, MCDI, WLOU, BARC, SUGG, CRAM, HOPB, REDB, POSE, CUPE, MART, KING, OKSR, WALK, ARIK, FLNT, BIGC, LECO, MCRA, MAYF, BLDE",
         "geo": [
             {
                 "@type": "GeoShape",
@@ -214,43 +214,23 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 35.9574,
-                "longitude": -84.2793
+                "latitude": 68.6307,
+                "longitude": -149.6106
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.7582,
-                "longitude": -102.4471
+                "latitude": 39.0956,
+                "longitude": -77.9832
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 31.1854,
-                "longitude": -84.4374
+                "latitude": 34.4442,
+                "longitude": -96.6242
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 37.0597,
-                "longitude": -119.2575
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 35.6904,
-                "longitude": -83.5038
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 44.2596,
-                "longitude": -122.1655
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 32.9604,
-                "longitude": -87.4077
-            },
-            {
-                "@type": "GeoCoordinates",
-                "latitude": 44.9501,
-                "longitude": -110.5871
+                "latitude": 47.1298,
+                "longitude": -99.2531
             },
             {
                 "@type": "GeoCoordinates",
@@ -364,23 +344,43 @@
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 68.6307,
-                "longitude": -149.6106
+                "latitude": 35.9574,
+                "longitude": -84.2793
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 39.0956,
-                "longitude": -77.9832
+                "latitude": 39.7582,
+                "longitude": -102.4471
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 34.4442,
-                "longitude": -96.6242
+                "latitude": 31.1854,
+                "longitude": -84.4374
             },
             {
                 "@type": "GeoCoordinates",
-                "latitude": 47.1298,
-                "longitude": -99.2531
+                "latitude": 37.0597,
+                "longitude": -119.2575
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 35.6904,
+                "longitude": -83.5038
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.2596,
+                "longitude": -122.1655
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 32.9604,
+                "longitude": -87.4077
+            },
+            {
+                "@type": "GeoCoordinates",
+                "latitude": 44.9501,
+                "longitude": -110.5871
             }
         ],
         "additionalProperty": [
