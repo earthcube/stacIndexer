@@ -32,33 +32,33 @@ This is a STAC (SpatioTemporal Asset Catalog) indexer that converts STAC catalog
 ### Running the Indexer
 ```bash
 # Process from local catalog file
-python main.py --configfile ./data/neon/catalog.json
+uv run main.py --configfile ./data/neon/catalog.json
 
 # Process from URL
-python main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json
+uv run main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json
 
 # Generate only sitemaps
-python main.py --configfile ./data/neon/catalog.json --sitemap_only
+uv run main.py --configfile ./data/neon/catalog.json --sitemap_only
 
 # Specify GitHub branch for output URLs
-python main.py --configfile ./data/neon/catalog.json --branch develop
+uv run main.py --configfile ./data/neon/catalog.json --branch develop
 ```
 
 ### Validating STAC Catalogs
 ```bash
 # Validate a URL-based STAC catalog and generate error report
-python main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json --validate
+uv run main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/stac/catalog.json --validate
 
 # Validate a local STAC catalog
-python main.py --configfile ./data/neon/catalog.json --validate
+uv run main.py --configfile ./data/neon/catalog.json --validate
 
 # Validation reports are saved to ./validation_reports/ directory
 ```
 
 ### Setup Environment
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies (creates .venv from uv.lock)
+uv sync
 
 # Set GitHub token for API access (required for downloading catalogs)
 export GITHUB_TOKEN=your_token_here
@@ -68,7 +68,7 @@ export GITHUB_TOKEN=your_token_here
 ```bash
 # Enable debug output
 export DEBUG=TRUE
-python main.py --configfile ./data/examples/catalog.json
+uv run main.py --configfile ./data/examples/catalog.json
 
 # Validate outputs
 ls data/output/  # Check generated JSON-LD files

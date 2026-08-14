@@ -17,15 +17,14 @@ jobs:
       with:
         ref: master  # Check out the `yl_dv` branch
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - name: Install uv
+      uses: astral-sh/setup-uv@v5
       with:
-        python-version: '3.11'  # Specify the Python version you need
+        enable-cache: true
+        python-version: '3.11'
 
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      run: uv sync --locked --no-dev
 
     - name: Clean up the target folder (if exists)
       run: |
@@ -39,8 +38,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-         python main.py --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
-        # python main.py --configfile ./data/challenge/catalog-yl.json
+         uv run main.py --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
+        # uv run main.py --configfile ./data/challenge/catalog-yl.json
 
     - name: Stage changes in the data folder
       run: |
