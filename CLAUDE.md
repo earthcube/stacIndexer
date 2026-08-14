@@ -55,6 +55,10 @@ uv run main.py --configfile ./data/neon/catalog.json --validate
 # Validation reports are saved to ./validation_reports/ directory
 ```
 
+`--validate` is exclusive: `main.py` runs *either* `walk_stac()` *or*
+`validate_stac_catalog()`, so no JSON-LD or sitemaps are generated on a
+validation run.
+
 ### Setup Environment
 ```bash
 # Install dependencies (creates .venv from uv.lock)
@@ -92,6 +96,29 @@ The system handles malformed STAC data by applying systematic replacements:
 - Converts bounding boxes to S2 spherical cells (level 13)
 - Generates schema.org Place objects with GeoShape and GeoCoordinates
 - Links to STKO knowledge graph ontology for S2 cells
+
+### Validation (`--validate`)
+`defs/walkstac.py:validate_stac_catalog()` walks the catalog with pystac's
+built-in `validate()` (JSON Schema via `jsonschema`) rather than the indexing
+path:
+- URL catalogs go through the same `fetch_and_clean_catalog_from_url()` cleanup
+  as indexing, so validation sees *cleaned* JSON — malformed source data that
+  the cleanup pipeline repairs will not be reported
+- Recurses root catalog → sub-catalogs → collections → items, counting each
+- Every failure is collected into `errors[]` and counted; the walk never stops
+  on a bad object
+- Console output details only the first 5 items per collection, then reports a
+  total; the saved report contains all errors
+- `overall_status` is `VALID` when no errors were collected, otherwise `INVALID`
+
+Reports are written to `./validation_reports/validation_report_{YYYYMMDD_HHMMSS}.json`
+with `catalog_url`, `overall_status`, `errors[]`, `warnings[]`, `timestamp`, and a
+`summary` of catalog/collection/item and error/warning counts.
+
+Note: the process exits 0 even when `overall_status` is `INVALID` — callers
+that need to gate on validity must read the report, not the exit code. The
+scheduled workflow runs `--validate` after the indexing pass and commits the
+resulting reports.
 
 ### Error Handling
 - Graceful handling of missing collections, items, or malformed data
