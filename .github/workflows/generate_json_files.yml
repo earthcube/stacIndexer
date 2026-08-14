@@ -61,7 +61,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Automated commit: Update data folder"
-          git push origin data
+          # force push: `data` is a regenerated snapshot of the output,
+          # not a branch with history worth preserving
+          git push --force origin HEAD:data
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
