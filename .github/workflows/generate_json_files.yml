@@ -54,7 +54,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Automated commit: Update data folder"
-          git push origin master
+          git push origin data
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
