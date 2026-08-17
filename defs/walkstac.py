@@ -789,8 +789,8 @@ def _save_validation_report(report: dict):
 
     report["timestamp"] = datetime.now().isoformat()
 
-    create_folder_if_not_exist("./validation_reports")
-    filename = f"./validation_reports/validation_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    create_folder_if_not_exist("./data/validation_reports")
+    filename = f"./data/validation_reports/validation_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
     with open(filename, 'w') as f:
         json.dump(report, f, indent=2)

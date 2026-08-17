@@ -36,9 +36,9 @@ jobs:
     - name: Clean up the target folder (if exists)
       run: |
         if [ -d "validation_reports" ]; then
-          rm -rf validation_reports/*
+          rm -rf data/validation_reports/*
         else
-          mkdir -p validation_reports
+          mkdir -p data/validation_reports
         fi
     - name: Run main.py with configfile
       env:
