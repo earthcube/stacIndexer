@@ -2,8 +2,14 @@
 
 ## About
 
-A testing repo for code to index STAC catalogs
-into RDF
+A  repo for code to index STAC catalogs into JSON-LD Schema.org Dataset and DatasetCatalog files
+
+A workflow validates the stac catalogs for [ecoforecast.org](https://ecoforecast.org) [catalog](https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json) and outputs the results to a directory.
+
+* The output is written to a directory of JSON-LD files [BRANCH data at data/output/](https://github.com/earthcube/stacIndexer/tree/data/data/output)
+* the validated catalogs are written to the [BRANCH data in the directory data/validation_reports/](https://github.com/earthcube/stacIndexer/tree/data/data/validation_reports)
+* The latest validation is available at [data/validation_reports/latest.md](https://github.com/earthcube/stacIndexer/blob/data/data/validation_reports/latest.md)
+
 
 ## Setup
 
