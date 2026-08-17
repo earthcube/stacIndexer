@@ -52,7 +52,7 @@ uv run main.py --configfile https://raw.githubusercontent.com/eco4cast/neon4cast
 # Validate a local STAC catalog
 uv run main.py --configfile ./data/neon/catalog.json --validate
 
-# Validation reports are saved to ./validation_reports/ directory
+# Reports are saved to ./data/validation_reports/ (timestamped JSON + latest.md/latest.html)
 ```
 
 `--validate` is exclusive: `main.py` runs *either* `walk_stac()` *or*
@@ -111,9 +111,37 @@ path:
   total; the saved report contains all errors
 - `overall_status` is `VALID` when no errors were collected, otherwise `INVALID`
 
-Reports are written to `./validation_reports/validation_report_{YYYYMMDD_HHMMSS}.json`
-with `catalog_url`, `overall_status`, `errors[]`, `warnings[]`, `timestamp`, and a
-`summary` of catalog/collection/item and error/warning counts.
+Each run writes three files to `./data/validation_reports/`:
+
+- `validation_report_{YYYYMMDD_HHMMSS}.json` — archival, one per run, with
+  `catalog_url`, `overall_status`, `errors[]`, `warnings[]`, `timestamp`, and a
+  `summary` of catalog/collection/item and error/warning counts
+- `latest.md` / `latest.html` — human-readable renderings, overwritten every run
+
+`defs/validation_report.py` produces the two `latest.*` files. It parses each raw
+pystac/jsonschema error string into structured fields (object type, id, parent
+collection, schema URL, failed keyword, property path, offending value) and
+**groups identical defects**, so 218 raw errors collapse into 2 issues. Each
+group gets a plain-language "what it means" and "suggested fix", sample
+offending values, and two collapsed `<details>` blocks — one "Example raw
+error" and one "All N raw errors".
+
+Affected object ids link to the object itself: remote catalogs link to the
+http(s) href, local catalogs to a path relative to `data/validation_reports/`
+(e.g. `../neon/aquatics/collection.json`), so links work in an editor and on
+GitHub.
+
+Groups are sorted by how structural the problem is — Catalog first, then
+Collection, then Item — and catalog/collection groups are visually flagged,
+since one bad Collection usually explains more than one bad Item.
+
+Known patterns get tailored explanations (RFC 3339 timestamp `pattern`
+failures; an extension schema asserting `type: Feature` against a Collection;
+`required`/`type` failures; traversal and load failures). Anything unrecognized
+still renders with the raw jsonschema message — errors are never dropped.
+
+The raw `errors[]` strings in the JSON are left untouched, so existing
+consumers of the JSON report keep working; parsing happens only at render time.
 
 Note: the process exits 0 even when `overall_status` is `INVALID` — callers
 that need to gate on validity must read the report, not the exit code. The
