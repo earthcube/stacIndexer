@@ -16,6 +16,7 @@ from pystac_client import Client
 # from convertas import convert_array_to_string
 from defs import convertas
 from defs import datacitation
+from defs import validation_report
 from pathlib import Path
 from sys import gettrace
 import re
@@ -797,4 +798,12 @@ def _save_validation_report(report: dict):
 
     print(f"\n📄 Detailed validation report saved to: {filename}")
 
+    md_path = "./data/validation_reports/latest.md"
+    with open(md_path, 'w') as f:
+        f.write(validation_report.render_markdown(report))
+    print(f"📄 Markdown report saved to: {md_path}")
 
+    html_path = "./data/validation_reports/latest.html"
+    with open(html_path, 'w') as f:
+        f.write(validation_report.render_html(report))
+    print(f"📄 HTML report saved to: {html_path}")
