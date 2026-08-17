@@ -8,7 +8,10 @@ A workflow validates the stac catalogs for [ecoforecast.org](https://ecoforecast
 
 * The output is written to a directory of JSON-LD files [BRANCH data at data/output/](https://github.com/earthcube/stacIndexer/tree/data/data/output)
 * the validated catalogs are written to the [BRANCH data in the directory data/validation_reports/](https://github.com/earthcube/stacIndexer/tree/data/data/validation_reports)
-* The latest validation is available at [data/validation_reports/latest.md](https://github.com/earthcube/stacIndexer/blob/data/data/validation_reports/latest.md)
+* The latest validation is available at
+    * html  https://earthcube.github.io/stacIndexer/data/validation_reports/latest.html
+    *  md [data/validation_reports/latest.md](https://github.com/earthcube/stacIndexer/blob/data/data/validation_reports/latest.md)
+
 
 
 ## Setup
