@@ -35,7 +35,7 @@ jobs:
         fi
     - name: Clean up the target folder (if exists)
       run: |
-        if [ -d "validation_reports" ]; then
+        if [ -d "data/validation_reports" ]; then
           rm -rf data/validation_reports/*
         else
           mkdir -p data/validation_reports
@@ -51,7 +51,7 @@ jobs:
     - name: Stage changes in the data folder
       run: |
         git add data  # Stage only the `data` folder
-        git add validation_reports  # Stage only the `validation_reports` folder
+        #git add validation_reports  # Stage only the `validation_reports` folder
 
     - name: Commit and push changes if any
       run: |
