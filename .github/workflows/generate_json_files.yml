@@ -44,7 +44,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-         uv run --no-dev main.py --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
+         uv run --no-dev main.py --branch data --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
          uv run --no-dev main.py --validate --configfile https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json
         # uv run --no-dev main.py --configfile ./data/challenge/catalog-yl.json
 
