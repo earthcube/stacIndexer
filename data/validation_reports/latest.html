@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STAC Validation Report</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         margin: 2rem auto; max-width: 62rem; padding: 0 1rem; line-height: 1.55; color: #1f2328; }
+  h1 { margin-bottom: 0.25rem; }
+  h3 { margin: 0 0 0.75rem; }
+  .meta { color: #57606a; font-size: 0.9rem; word-break: break-all; }
+  .status { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px;
+             font-weight: 600; color: #fff; }
+  .valid { background: #1a7f37; }
+  .invalid { background: #cf222e; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; }
+  th, td { border: 1px solid #d0d7de; padding: 0.4rem 0.8rem; text-align: left; }
+  td.num, th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  .badge { display: inline-block; padding: 0.05rem 0.45rem; border-radius: 999px;
+            font-size: 0.75rem; font-weight: 600; color: #fff; background: #57606a;
+            vertical-align: middle; }
+  .badge.collection { background: #bc4c00; }
+  .badge.catalog { background: #cf222e; }
+  .badge.item { background: #0969da; }
+  .issue { border: 1px solid #d0d7de; border-left: 4px solid #0969da; border-radius: 6px;
+            padding: 1rem 1.25rem; margin: 1rem 0; background: #f6f8fa; }
+  .issue.structural { border-left-color: #bc4c00; background: #fff8f2; }
+  .count { color: #57606a; font-weight: 400; font-size: 0.9rem; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.15rem 1rem; margin: 0 0 0.75rem; }
+  dt { color: #57606a; font-size: 0.85rem; }
+  dd { margin: 0; font-size: 0.9rem; word-break: break-word; }
+  code { background: #eaeef2; padding: 0.05rem 0.3rem; border-radius: 3px;
+          font-size: 0.85em; margin-right: 0.25rem; display: inline-block; }
+  .more { color: #57606a; font-size: 0.85rem; }
+  pre { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 0.75rem;
+         overflow-x: auto; font-size: 0.8rem; line-height: 1.4; }
+  summary { cursor: pointer; color: #57606a; font-size: 0.85rem; margin-top: 0.4rem; }
+  .raws { max-height: 32rem; overflow-y: auto; padding-left: 2rem; }
+  .raws li { margin: 0.4rem 0; }
+  .raws pre { margin: 0.25rem 0; }
+  a code { color: inherit; }
+  ol li { margin-bottom: 0.5rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+           font-size: 0.85rem; white-space: pre-wrap; word-break: break-word; }
+  .none { color: #57606a; }
+</style>
+</head>
+<body>
+<h1>STAC Validation Report</h1>
+<p class="meta">Catalog: https://raw.githubusercontent.com/eco4cast/challenge-catalogs/main/catalog.json<br>
+Generated: 2026-09-05T00:26:06.028986</p>
+<p><span class="status invalid">INVALID</span></p>
+<h2>Summary</h2>
+<table>
+  <tr><th>Metric</th><th>Count</th></tr>
+  <tr><td>Catalogs validated</td><td class="num">4</td></tr>
+  <tr><td>Collections validated</td><td class="num">17</td></tr>
+  <tr><td>Items validated</td><td class="num">395</td></tr>
+  <tr><td>Validation errors</td><td class="num">20</td></tr>
+  <tr><td>Validation warnings</td><td class="num">0</td></tr>
+  <tr><td>Distinct issues</td><td class="num">11</td></tr>
+</table>
+
+<h2>Issues (11 distinct, 20 errors)</h2>
+<table class="issues">
+  <tr><th>#</th><th>Scope</th><th>Issue</th><th>Errors</th></tr>
+  <tr><td class='num'>1</td><td><span class='badge catalog'>Catalog</span></td><td><a href='#issue-1'>Catalog children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>2</td><td><span class='badge catalog'>Catalog</span></td><td><a href='#issue-2'>Catalog children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>3</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-3'>Collection is being checked against an Item-only schema</a></td><td class='num'>2</td></tr><tr><td class='num'>4</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-4'>Collection children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>5</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-5'>Collection children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>6</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-6'>`assets.thumbnail.title` has the wrong type</a></td><td class='num'>1</td></tr><tr><td class='num'>7</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-7'>Collection children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>8</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-8'>Collection children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>9</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-9'>Collection children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>10</td><td><span class='badge collection'>Collection</span></td><td><a href='#issue-10'>Collection children could not be read</a></td><td class='num'>1</td></tr><tr><td class='num'>11</td><td><span class='badge item'>Item</span></td><td><a href='#issue-11'>`properties.providers.0.url` has the wrong type</a></td><td class='num'>9</td></tr>
+</table>
+
+<section class="issue structural" id="issue-1">
+  <h3><span class="badge catalog">Catalog</span>
+      1. Catalog children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 catalog</dd><dt>Objects</dt><dd><code>neon4cast-stac</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `neon4cast-stac` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get children for catalog &#x27;neon4cast-stac&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/sites/collection.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get children for catalog &#x27;neon4cast-stac&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/sites/collection.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-2">
+  <h3><span class="badge catalog">Catalog</span>
+      2. Catalog children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 catalog</dd><dt>Objects</dt><dd><code>vera4cast-stac</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `vera4cast-stac` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get children for catalog &#x27;vera4cast-stac&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/sites/collection.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get children for catalog &#x27;vera4cast-stac&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/sites/collection.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-3">
+  <h3><span class="badge collection">Collection</span>
+      3. Collection is being checked against an Item-only schema <span class="count">2×</span></h3>
+  <dl><dt>Affects</dt><dd>2 collections</dd><dt>Property</dt><dd><code>type</code></dd><dt>Schema keyword</dt><dd><code>const</code></dd><dt>Schema</dt><dd><a href='https://stac-extensions.github.io/scientific/v1.0.0/schema.json'>scientific extension v1.0.0</a></dd><dt>Offending values</dt><dd><code>&#x27;Collection&#x27;</code></dd><dt>Objects</dt><dd><a href='https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/catalog/inventory/collection.json'><code>inventory</code></a><a href='https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/catalog/sites/collection.json'><code>sites</code></a></dd></dl>
+  <p><strong>What it means:</strong> The `scientific extension v1.0.0` schema asserts `type: Feature`, which only Items have. A Collection can never satisfy it, so this fires for every collection that declares the extension. This usually means the extension URL or version in `stac_extensions` is wrong for this object type, rather than the metadata itself being bad.</p>
+  <p><strong>Suggested fix:</strong> Check the `stac_extensions` entry — use the version of the extension whose schema covers Collections, or drop it from Collection documents.</p>
+  <details><summary>Example raw error</summary>
+    <pre>Collection &#x27;inventory&#x27; validation failed: Validation failed for Collection at https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/catalog/inventory/collection.json with ID inventory against schema at https://stac-extensions.github.io/scientific/v1.0.0/schema.json
+&#x27;Feature&#x27; was expected
+
+Failed validating &#x27;const&#x27; in schema[0][&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;type&#x27;]:
+    {&#x27;const&#x27;: &#x27;Feature&#x27;}
+
+On instance[&#x27;type&#x27;]:
+    &#x27;Collection&#x27;</pre></details>
+  <details><summary>All 2 raw errors</summary>
+    <ol class="raws"><li><pre>Collection &#x27;inventory&#x27; validation failed: Validation failed for Collection at https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/catalog/inventory/collection.json with ID inventory against schema at https://stac-extensions.github.io/scientific/v1.0.0/schema.json
+&#x27;Feature&#x27; was expected
+
+Failed validating &#x27;const&#x27; in schema[0][&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;type&#x27;]:
+    {&#x27;const&#x27;: &#x27;Feature&#x27;}
+
+On instance[&#x27;type&#x27;]:
+    &#x27;Collection&#x27;</pre></li><li><pre>Collection &#x27;sites&#x27; validation failed: Validation failed for Collection at https://raw.githubusercontent.com/eco4cast/usgsrc4cast-ci/main/catalog/sites/collection.json with ID sites against schema at https://stac-extensions.github.io/scientific/v1.0.0/schema.json
+&#x27;Feature&#x27; was expected
+
+Failed validating &#x27;const&#x27; in schema[0][&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;type&#x27;]:
+    {&#x27;const&#x27;: &#x27;Feature&#x27;}
+
+On instance[&#x27;type&#x27;]:
+    &#x27;Collection&#x27;</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-4">
+  <h3><span class="badge collection">Collection</span>
+      4. Collection children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Objects</dt><dd><code>daily-scores</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `daily-scores` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get items for collection &#x27;daily-scores&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/GLEON_lm_lag_1day.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get items for collection &#x27;daily-scores&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/scores/Aquatics/Daily_Dissolved_oxygen/models/GLEON_lm_lag_1day.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-5">
+  <h3><span class="badge collection">Collection</span>
+      5. Collection children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Objects</dt><dd><code>noaa-forecasts</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `noaa-forecasts` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get items for collection &#x27;noaa-forecasts&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/noaa_forecasts/Pseudo/collection.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get items for collection &#x27;noaa-forecasts&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/noaa_forecasts/Pseudo/collection.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-6">
+  <h3><span class="badge collection">Collection</span>
+      6. `assets.thumbnail.title` has the wrong type <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Property</dt><dd><code>assets.thumbnail.title</code></dd><dt>Schema keyword</dt><dd><code>type</code></dd><dt>Schema</dt><dd><a href='https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json'>STAC v1.1.0 collection-spec</a></dd><dt>Offending values</dt><dd><code>{}</code></dd><dt>Objects</dt><dd><a href='https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/targets/collection.json'><code>targets</code></a></dd></dl>
+  <p><strong>What it means:</strong> {} is not of type &#x27;string&#x27;</p>
+  <p><strong>Suggested fix:</strong> Correct the value&#x27;s type.</p>
+  <details><summary>Example raw error</summary>
+    <pre>Collection &#x27;targets&#x27; validation failed: Validation failed for Collection at https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/targets/collection.json with ID targets against schema at https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json
+{} is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;assets&#x27;][&#x27;additionalProperties&#x27;][&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;title&#x27;]:
+    {&#x27;title&#x27;: &#x27;Asset title&#x27;, &#x27;type&#x27;: &#x27;string&#x27;}
+
+On instance[&#x27;assets&#x27;][&#x27;thumbnail&#x27;][&#x27;title&#x27;]:
+    {}</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Collection &#x27;targets&#x27; validation failed: Validation failed for Collection at https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/targets/collection.json with ID targets against schema at https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json
+{} is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;assets&#x27;][&#x27;additionalProperties&#x27;][&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;title&#x27;]:
+    {&#x27;title&#x27;: &#x27;Asset title&#x27;, &#x27;type&#x27;: &#x27;string&#x27;}
+
+On instance[&#x27;assets&#x27;][&#x27;thumbnail&#x27;][&#x27;title&#x27;]:
+    {}</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-7">
+  <h3><span class="badge collection">Collection</span>
+      7. Collection children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Objects</dt><dd><code>summaries</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `summaries` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get items for collection &#x27;summaries&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/summaries/Aquatics/Daily_Dissolved_oxygen/models/GLEON_lm_lag_1day.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get items for collection &#x27;summaries&#x27;: HREF: &#x27;https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/summaries/Aquatics/Daily_Dissolved_oxygen/models/GLEON_lm_lag_1day.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-8">
+  <h3><span class="badge collection">Collection</span>
+      8. Collection children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Objects</dt><dd><code>daily-scores</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `daily-scores` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get items for collection &#x27;daily-scores&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/scores/Biological/Daily_Chlorophyll-a/models/asl.persistence.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get items for collection &#x27;daily-scores&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/scores/Biological/Daily_Chlorophyll-a/models/asl.persistence.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-9">
+  <h3><span class="badge collection">Collection</span>
+      9. Collection children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Objects</dt><dd><code>noaa-forecasts</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `noaa-forecasts` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get items for collection &#x27;noaa-forecasts&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/noaa_forecasts/Pseudo/collection.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get items for collection &#x27;noaa-forecasts&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/noaa_forecasts/Pseudo/collection.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue structural" id="issue-10">
+  <h3><span class="badge collection">Collection</span>
+      10. Collection children could not be read <span class="count">1×</span></h3>
+  <dl><dt>Affects</dt><dd>1 collection</dd><dt>Objects</dt><dd><code>summaries</code></dd></dl>
+  <p><strong>What it means:</strong> Walking into `summaries` failed, so anything below it was never validated. The counts in the summary are therefore incomplete.</p>
+  <p><strong>Suggested fix:</strong> Check that the child links resolve (correct href, reachable network, valid JSON).</p>
+  <details><summary>Example raw error</summary>
+    <pre>Failed to get items for collection &#x27;summaries&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/summaries/Biological/Daily_Chlorophyll-a/models/asl.persistence.json&#x27; does not resolve to a STAC object</pre></details>
+  <details><summary>All 1 raw errors</summary>
+    <ol class="raws"><li><pre>Failed to get items for collection &#x27;summaries&#x27;: HREF: &#x27;https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/summaries/Biological/Daily_Chlorophyll-a/models/asl.persistence.json&#x27; does not resolve to a STAC object</pre></li></ol></details>
+</section>
+<section class="issue " id="issue-11">
+  <h3><span class="badge item">Item</span>
+      11. `properties.providers.0.url` has the wrong type <span class="count">9×</span></h3>
+  <dl><dt>Affects</dt><dd>9 items</dd><dt>Property</dt><dd><code>properties.providers.0.url</code></dd><dt>Schema keyword</dt><dd><code>type</code></dd><dt>Schema</dt><dd><a href='https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json'>STAC v1.1.0 item-spec</a></dd><dt>Offending values</dt><dd><code>None</code></dd><dt>Objects</dt><dd><a href='https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/forecasts/Aquatics/Daily_Water_temperature/models/bee_bake_RFModel_2024.json'><code>bee_bake_RFModel_2024_temperature_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Biological/Daily_Chlorophyll-a/models/asl.persistence.json'><code>asl.persistence_Chla_ugL_mean_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Biological/Daily_Chlorophyll-a/models/LSTM.json'><code>LSTM_Chla_ugL_mean_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Biological/Daily_Bloom_binary/models/asl.persistence.json'><code>asl.persistence_Bloom_binary_mean_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Water_temperature/models/persistenceFO.json'><code>persistenceFO_Temp_C_mean_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Water_temperature/models/flareGOTM.json'><code>flareGOTM_Temp_C_mean_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Water_temperature/models/asl.persistence.json'><code>asl.persistence_Temp_C_mean_P1D_forecast (daily-forecasts)</code></a><a href='https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Secchi/models/asl.persistence.json'><code>asl.persistence_Secchi_m_sample_P1D_forecast (daily-forecasts)</code></a><span class='more'>… and 1 more</span></dd></dl>
+  <p><strong>What it means:</strong> None is not of type &#x27;string&#x27;</p>
+  <p><strong>Suggested fix:</strong> Correct the value&#x27;s type.</p>
+  <details><summary>Example raw error</summary>
+    <pre>Item &#x27;bee_bake_RFModel_2024_temperature_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/forecasts/Aquatics/Daily_Water_temperature/models/bee_bake_RFModel_2024.json with ID bee_bake_RFModel_2024_temperature_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></details>
+  <details><summary>All 9 raw errors</summary>
+    <ol class="raws"><li><pre>Item &#x27;bee_bake_RFModel_2024_temperature_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/eco4cast/neon4cast-catalog/main/forecasts/Aquatics/Daily_Water_temperature/models/bee_bake_RFModel_2024.json with ID bee_bake_RFModel_2024_temperature_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;asl.persistence_Chla_ugL_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Biological/Daily_Chlorophyll-a/models/asl.persistence.json with ID asl.persistence_Chla_ugL_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;LSTM_Chla_ugL_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Biological/Daily_Chlorophyll-a/models/LSTM.json with ID LSTM_Chla_ugL_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;asl.persistence_Bloom_binary_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Biological/Daily_Bloom_binary/models/asl.persistence.json with ID asl.persistence_Bloom_binary_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;persistenceFO_Temp_C_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Water_temperature/models/persistenceFO.json with ID persistenceFO_Temp_C_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;flareGOTM_Temp_C_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Water_temperature/models/flareGOTM.json with ID flareGOTM_Temp_C_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;asl.persistence_Temp_C_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Water_temperature/models/asl.persistence.json with ID asl.persistence_Temp_C_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;asl.persistence_Secchi_m_sample_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Physical/Daily_Secchi/models/asl.persistence.json with ID asl.persistence_Secchi_m_sample_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li><li><pre>Item &#x27;asl.persistence_DO_mgL_mean_P1D_forecast&#x27; in collection &#x27;daily-forecasts&#x27; validation failed: Validation failed for Feature at https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast-catalog/main/forecasts/Chemical/Daily_oxygen_concentration/models/asl.persistence.json with ID asl.persistence_DO_mgL_mean_P1D_forecast against schema at https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json
+None is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][2][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][6][&#x27;properties&#x27;][&#x27;providers&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;url&#x27;]:
+    {&#x27;title&#x27;: &#x27;Organization homepage&#x27;, &#x27;type&#x27;: &#x27;string&#x27;, &#x27;format&#x27;: &#x27;iri&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;providers&#x27;][0][&#x27;url&#x27;]:
+    None</pre></li></ol></details>
+</section>
+<h2>Warnings (0)</h2><p class='none'>No warnings.</p>
+</body>
+</html>
