@@ -18,7 +18,8 @@
 
 
 def sdo_box(bbox, geometry, cells, name=None):
-    doc = {}
+    doc = []
+    place_coords = {}
     additional_property = []
     geo = []
 
@@ -42,10 +43,26 @@ def sdo_box(bbox, geometry, cells, name=None):
         geos2["value"] = c
         additional_property.append(geos2)
 
-    doc['@type'] = 'Place'
-    if name:
-        doc['name'] = name
-    doc['geo'] = geo
-    doc['additionalProperty'] = additional_property
+    place_coords['@type'] = 'Place'
+    if name and ','  in name: # if it's got commas
+        doc.append(build_place_list(name=name))
+    else:
+        place_coords['name'] = name
+    place_coords['geo'] = geo
+    place_coords['additionalProperty'] = additional_property
+    doc.append(place_coords)
 
     return doc
+
+# build place list
+# model sites are a comma separated list of place names. This function takes the name string and splits it into a list of place names, then creates a list of Place objects for each name. If the name string does not contain any commas, it returns None.
+def build_place_list(name=None):
+    place_list = []
+    if ','  in name:
+        place_names = name.split(',')
+        for place_name in place_names:
+            place = {}
+            place['@type'] = 'Place'
+            place['name'] = place_name.strip()
+            place_list.append(place)
+    return place_list or None
